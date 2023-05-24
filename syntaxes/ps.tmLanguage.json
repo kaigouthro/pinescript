@@ -2,369 +2,457 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Pine Script",
   "patterns": [
-    { "include": "#other" },
-    { "include": "#operators" },
-    { "include": "#numbers" },
+    { "include": "#annotations" },
+    {
+      "captures": {
+        "0": { "name": "comment.line.double-slash.ps" },
+        "1": { "name": "comment.line.double-slash.ps" },
+        "2": { "name": "comment.line.double-slash.ps" },
+        "3": { "name": "constant.numeric.ps" },
+        "4": { "name": "comment.line.double-slash.ps" }
+      },
+      "match": "(^//)\\s*(©)\\s*(\\w+)(.*)"
+    },
+    {
+      "captures": {
+        "0": { "name": "comment.line.double-slash.ps" },
+        "1": { "name": "comment.line.double-slash.ps" },
+        "2": { "name": "support.ps.ps" },
+        "3": { "name": "token.error-token.ps" },
+        "4": { "name": "support.ps.ps" },
+        "5": { "name": "constant.numeric.ps" }
+      },
+      "match": "(^//)(@)(version)(=)(5)"
+    },
+    {
+      "captures": {
+        "0": { "name": "comment.line.double-slash.ps" },
+        "1": { "name": "comment.line.double-slash.ps" },
+        "2": { "name": "constant.numeric.ps" },
+        "3": { "name": "support.ps.ps" },
+        "4": { "name": "support.ps.ps" },
+        "5": { "name": "support.ps.ps" }
+      },
+      "match": "(^//)\\s*(ⓘ)\\s*(https://www\\.tradingview\\.com)([\\w.,@?^=%&:/~+#-\\{]*[\\}\\w@?^=%&/~+#-])(\\w+)(.*)"
+    },
+    {
+      "captures": {
+        "0": { "name": "token.info-token.ps" },
+        "1": { "name": "support.ps.ps" },
+        "2": { "name": "storage.package.ps" },
+        "3": { "name": "constant.numeric.ps" },
+        "4": { "name": "storage.type.ps.ps" },
+        "5": { "name": "token.info-token.ps" }
+      },
+      "match": "^(import)\\s+(\\w+)(?:/)(\\w+)(?:/)(\\w+)\\s*((?:as)\\s*(?<name>\\w+))?"
+    },
     { "include": "#functions" },
-    { "include": "#constants" },
-    { "include": "#strings" },
-    { "include": "#storage" },
-    { "include": "#variables" },
     { "include": "#types" },
-    { "include": "#keywords" }
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#keywords" },
+    { "include": "#storage" },
+    { "include": "#constants" },
+    { "include": "#operators" },
+    { "include": "#variables" },
+    {
+      "match": "//(.+\\n)",
+      "captures": { "1": { "name": "comment.line.double-slash.ps" } }
+    }
   ],
   "repository": {
+    "annotations": {
+      "patterns": [
+        {
+          "match": "(^//\\s*)(@)(?:(type|description|function|returns)(?=\\s+\\S*))(\\N+)(?=\\n\\b|//\\s*@)",
+          "captures": {
+            "1": { "name": "comment.line.double-slash.ps" },
+            "2": { "name": "punctuation.section.embedded.begin.ps" },
+            "3": { "name": "entity.name.tag.ps.ps" },
+            "4": { "name": "comment.line.double-slash.ps" }
+          }
+        },
+        {
+          "begin": "(^//\\s*)(@)(?:(field|param)\\s+)",
+          "beginCaptures": {
+            "1": { "name": "comment.line.double-slash.ps" },
+            "2": { "name": "punctuation.section.embedded.begin.ps" },
+            "3": { "name": "entity.name.tag.ps.ps" },
+            "4": { "name": "comment.line.double-slash.ps" }
+          },
+          "patterns": [
+            {
+              "match": "(\\s+)([^\\s]+)",
+              "captures": {
+                "1": { "name": "meta.tag.ps" },
+                "2": { "name": "entity.name.tag.ps" }
+              }
+            },
+            {
+              "match": "(\\s+)([^\\s]+)",
+              "captures": {
+                "1": { "name": "meta.tag.ps" },
+                "2": { "name": "entity.name.tag.ps" }
+              }
+            }
+          ],
+          "end": "(\\r?\\n)?",
+          "endCaptures": { "1": { "name": "comment.line.double-slash.ps" } }
+        }
+      ]
+    },
     "constants": {
       "patterns": [
         {
           "begin": "\\b(adjustment)\\b(?!\\()(?=\\.)",
-          "beginCaptures": { "1": { "name": "constant.name.ps" } },
+          "beginCaptures": { "1": { "name": "constant.language.function.ps" } },
           "end": "\\b(dividends|none|splits)\\b",
-          "endCaptures": { "1": { "name": "constant.name.ps" } }
+          "endCaptures": { "1": { "name": "constant.language.function.ps" } }
         },
         {
           "begin": "\\b(alert)\\b(?!\\()(?=\\.)",
-          "beginCaptures": { "1": { "name": "constant.name.ps" } },
+          "beginCaptures": { "1": { "name": "constant.language.function.ps" } },
           "end": "\\b(freq_all|freq_once_per_bar|freq_once_per_bar_close)\\b",
-          "endCaptures": { "1": { "name": "constant.name.ps" } }
+          "endCaptures": { "1": { "name": "constant.language.function.ps" } }
         },
         {
           "begin": "\\b(barmerge)\\b(?!\\()(?=\\.)",
-          "beginCaptures": { "1": { "name": "constant.name.ps" } },
+          "beginCaptures": { "1": { "name": "constant.language.function.ps" } },
           "end": "\\b(gaps_off|gaps_on|lookahead_off|lookahead_on)\\b",
-          "endCaptures": { "1": { "name": "constant.name.ps" } }
+          "endCaptures": { "1": { "name": "constant.language.function.ps" } }
         },
         {
           "begin": "\\b(barstate)\\b(?!\\()(?=\\.)",
-          "beginCaptures": { "1": { "name": "constant.name.ps" } },
+          "beginCaptures": { "1": { "name": "constant.language.function.ps" } },
           "end": "\\b(isconfirmed|isfirst|ishistory|islast|islastconfirmedhistory|isnew|isrealtime)\\b",
-          "endCaptures": { "1": { "name": "constant.name.ps" } }
+          "endCaptures": { "1": { "name": "constant.language.function.ps" } }
         },
         {
           "match": "\\b(box.all)\\b",
-          "name": "constant.name.ps"
+          "name": "constant.language.function.ps"
         },
         {
           "begin": "\\b(chart)\\b(?!\\()(?=\\.)",
-          "beginCaptures": { "1": { "name": "constant.name.ps" } },
+          "beginCaptures": { "1": { "name": "constant.language.function.ps" } },
           "end": "\\b(bg_color|fg_color)\\b",
-          "endCaptures": { "1": { "name": "constant.name.ps" } }
+          "endCaptures": { "1": { "name": "constant.language.function.ps" } }
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(color)(\\.)(aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|white|yellow)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(currency)(\\.)(AUD|CAD|CHF|EUR|GBP|HKD|JPY|NOK|NONE|NZD|RUB|SEK|SGD|TRY|USD|ZAR)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(dayofweek)(\\.)(friday|monday|saturday|sunday|thursday|tuesday|wednesday)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(display)(\\.)(all|none)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(dividends)(\\.)(gross|net)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(earnings)(\\.)(actual|estimate|standardized)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(extend)(\\.)(both|left|none|right)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(format)(\\.)(inherit|mintick|percent|price|volume)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(hline)(\\.)(style_dashed|style_dotted|style_solid)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(label)(\\.)(all|style_arrowdown|style_arrowup|style_circle|style_cross|style_diamond|style_flag|style_label_center|style_label_down|style_label_left|style_label_lower_left|style_label_lower_right|style_label_right|style_label_upper_left|style_label_upper_right|style_label_up|style_none|style_square|style_triangledown|style_triangleup|style_xcross)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(line)(\\.)(all|style_arrow_both|style_arrow_left|style_arrow_right|style_dashed|style_dotted|style_solid|style_solidline|style_dottedline|style_dashedline|style_arrow_leftline|style_arrow_rightline|style_arrow_bothline)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(location)(\\.)(abovebar|absolute|belowbar|bottom|top)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(order)\\b(\\.)\\b(ascending|descending)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(plot)\\b(\\.)\\b(style_areabr|style_area|style_circles|style_columns|style_cross|style_histogram|style_line|style_linebr|style_stepline|style_stepline_diamond)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(position)\\b(\\.)\\b(bottom_center|bottom_left|bottom_right|middle_center|middle_left|middle_right|top_center|top_left|top_right)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(scale)\\b(\\.)\\b(left|none|right)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(session)\\b(\\.)\\b(extended|ismarket|ispostmarket|ispremarket|regular)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(shape)\\b(\\.)\\b(arrowdown|arrowup|circle|cross|diamond|flag|labeldown|labelup|square|triangledown|triangleup|xcross)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(size)\\b(\\.)\\b(auto|huge|large|normal|small|tiny)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(splits)\\b(\\.)\\b(denominator|numerator)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(strategy)\\b(\\.)\\b(account_currency|cash|equity|eventrades|fixed|grossloss|grossprofit|initial_capital|long|losstrades|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" },
-            "3": { "name": "constant.name.ps" },
-            "4": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" },
+            "4": { "name": "punctuation.section.embedded.ps" }
           },
           "match": "(strategy)(\\.)(commission)(\\.)(cash_per_contract|cash_per_order|percent)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" },
-            "3": { "name": "constant.name.ps" },
-            "4": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" },
+            "4": { "name": "punctuation.section.embedded.ps" }
           },
           "match": "(strategy)(\\.)(direction)(\\.)(all|long|short)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" },
-            "3": { "name": "constant.name.ps" },
-            "4": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" },
+            "4": { "name": "punctuation.section.embedded.ps" }
           },
           "match": "(strategy)(\\.)(oca)(\\.)(cancel|none|reduce)"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(syminfo)\\b(\\.)\\b(basecurrency|currency|description|mintick|pointvalue|prefix|root|session|ticker|tickerid|timezone|type)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(table)\\b(\\.)\\b(all)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(text)\\b(\\.)\\b(align_bottom|align_center|align_left|align_right|align_top)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(timeframe)\\b(\\.)\\b(isdaily|isdwm|isintraday|isminutes|ismonthly|isseconds|isweekly|multiplier|period)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(xloc)\\b(\\.)\\b(bar_index|bar_time)\\b"
         },
         {
           "captures": {
-            "0": { "name": "constant.name.ps" },
-            "1": { "name": "constant.name.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "\\b(yloc)\\b(\\.)\\b(abovebar|belowbar|price)\\b"
         }
       ]
     },
+    "escaped_char": {
+      "match": "\\\\[abfnrtvz\\\\\"'\\n]",
+      "name": "constant.character.escape.ps"
+    },
     "functions": {
       "patterns": [
         {
-          "match": "\\b(indicator|library|strategy)+?(?=\\()",
+          "match": "^(indicator|library|strategy|study)\\s*(?:\\()",
           "name": "variable.parameter.function.language.special.self.python.ps"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(array)(\\.)(avg|clear|concat|copy|covariance|fill|from|get|includes|indexof|insert|join|lastindexof|max|median|min|mode|new_bool|new_box|new_color|new_float|new_int|new_label|new_line|new_string|new_table|pop|push|range|remove|reverse|set|shift|size|slice|sort|standardize|stdev|sum|unshift|variance)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(box)(\\.)(delete|get_bottom|get_left|get_right|get_top|new|set_bgcolor|set_border_color|set_border_style|set_border_width|set_bottom|set_extend|set_left|set_lefttop|set_right|set_rightbottom|set_top)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(color)(\\.)(rgb|b|from_gradient|g|new|r|t)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(input)(\\.)(bool|color|float|int|price|session|source|string|symbol|time|timeframe)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(label)(\\.)(delete|get_text|get_x|get_y|new|set_color|set_size|set_style|set_text|set_textalign|set_textcolor|set_tooltip|set_x|set_xloc|set_xy|set_y|set_yloc)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(line)(\\.)(delete|get_price|get_x1|get_x2|get_y1|get_y2|new|set_color|set_extend|set_style|set_width|set_x1|set_x2|set_xloc|set_xy1|set_xy2|set_y1|set_y2)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(math)(\\.)(abs|acos|asin|atan|avg|ceil|cos|exp|floor|log|log10|max|min|pow|random|round|round_to_mintick|sign|sin|sqrt|sum|tan|todegrees|toradians)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(ta)(\\.)(tr|alma|atr|barssince|bb|bbw|cci|change|cagr|cmo|cog|correlation|cross|crossover|crossunder|cum|dev|dmi|ema|falling|highest|highestbars|hma|kc|kcw|linreg|lowest|lowestbars|macd|median|mfi|mode|mom|percentile_linear_interpolation|percentile_nearest_rank|percentrank|pivothigh|pivotlow|range|rising|rma|roc|rsi|sar|sma|stdev|stoch|supertrend|swma|tsi|valuewhen|variance|vwap|vwma|wma|wpr)(?=\\()"
         },
@@ -372,91 +460,88 @@
           "captures": {
             "0": { "name": "variable.other.ps" },
             "1": { "name": "variable.other.ps" },
-            "2": { "name": "invalid.illegal" }
+            "2": { "name": "punctuation.section.embedded.ps" }
           },
           "match": "(ta)(\\.)(wad|tr|vwap|obv|accdist|iii|nvi|pvi|pvt|wvad)"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(request)(\\.)(dividends|earnings|financial|quandl|security|splits|error)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" },
-            "3": { "name": "constant.language.ps" },
-            "4": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" },
+            "4": { "name": "punctuation.section.embedded.ps" }
           },
           "match": "(strategy)(\\.)(closedtrades)(\\.)(commission|entry_bar_index|entry_price|entry_time|exit_bar_index|exit_price|exit_time|max_drawdown|max_runup|profit|size)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" },
-            "3": { "name": "constant.language.ps" },
-            "4": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" },
+            "4": { "name": "punctuation.section.embedded.ps" }
           },
           "match": "(strategy)(\\.)(opentrades)(\\.)(commission|entry_bar_index|entry_price|entry_time|max_drawdown|max_runup|profit|size)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" },
-            "3": { "name": "constant.language.ps" },
-            "4": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" },
+            "4": { "name": "punctuation.section.embedded.ps" }
           },
           "match": "(strategy)(\\.)(risk)(\\.)(allow_entry_in|max_cons_loss_days|max_drawdown|max_intraday_filled_orders|max_intraday_loss|max_position_size)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(strategy)(\\.)(cancel|cancel_all|close|close_all|convert_to_account|convert_to_symbol|entry|exit|order|allow_entry_in|max_cons_loss_days|max_drawdown|max_intraday_filled_orders|max_intraday_loss|max_position_size)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(str)(\\.)(format|length|replace_all|split|tonumber|tostring)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(table)(\\.)(cell|cell_set_bgcolor|cell_set_height|cell_set_text|cell_set_text_color|cell_set_text_halign|cell_set_text_size|cell_set_text_valign|cell_set_width|clear|delete|new|set_bgcolor|set_border_color|set_border_width|set_frame_color|set_frame_width|set_position)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(ticker)(\\.)(heikinashi|kagi|linebreak|modify|new|pointfigure|renko)(?=\\()"
         },
         {
           "captures": {
-            "0": { "name": "constant.language.ps" },
-            "1": { "name": "constant.language.ps" },
-            "2": { "name": "invalid.illegal" }
+            "1": { "name": "constant.language.function.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" },
+            "3": { "name": "constant.language.function.ps" }
           },
           "match": "(runtime)(\\.)(error)(?=\\()"
         },
         {
           "match": "\\b(abovebar|belowbar|bar_index|close|high|hl2|hlc3|low|ohlc4|open|timenow|time_tradingday|volume)\\b",
-          "name": "variable.parameter.function.language.special.ps"
+          "name": "constant.language.ps"
         },
         {
           "match": "\\b(alert|alertcondition|barcolor|bgcolor|bool|box|color|dayofmonth|dayofweek|fill|fixnan|float|hline|hour|input|int|label|line|max_bars_back|minute|month|na|nz|plot|plotarrow|plotbar|plotcandle|plotchar|plotshape|second|string|table|time|time_close|timestamp|weekofyear|year)(?=\\()",
@@ -476,84 +561,109 @@
         },
         {
           "captures": {
-            "0": { "name": "variable.other.ps" },
-            "1": { "name": "variable.other.ps" },
-            "2": { "name": "invalid.illegal" }
+            "0": { "name": "variable.language.ps" },
+            "1": { "name": "variable.language.ps" },
+            "2": { "name": "punctuation.section.embedded.ps" }
           },
-          "match": "(math)(\\.)(e|phi|pi|rphi)"
-        },
-        { "include": "#strings" },
-        { "include": "#constants" },
-        {
-          "match": "\\b(indicator|library|strategy)+?(?=\\()",
-          "name": "variable.parameter.function.language.special.self.python.ps"
+          "match": "(math)(\\.)(e|phi|pi|rphi)",
+          "name": "variable.other.ps"
         },
         {
-          "captures": {
-            "0": { "name": "invalid.illegal.ps" },
-            "1": { "name": "token.error-token.ps" }
-          },
-          "match": "(\\w+*)\\("
-        },
-        {
-          "match": "(=>)",
-          "name": "invalid.illegal.non-null-typehinted.php.ps"
-        },
-        {
-          "captures": {
-            "0": { "name": "invalid.illegal.non-null-typehinted.php.ps" },
-            "1": { "name": "invalid.illegal.ps" }
-          },
-          "match": "(\\))\\s*(=>)\\s*"
-        },
-        {
-          "begin": "^(?:(?:export\\s+)?(?:method\\s+)?(\\w+)\\s*(?=\\())",
+          "begin": "^(export\\s+)?(method\\s+)?([a-zA-Z_][a-zA-Z0-9_]*\\s*)(?=\\()",
           "beginCaptures": {
-            "1": { "name": "storage.modifier.ps" },
-            "2": { "name": "storage.modifier.ps" },
-            "3": { "name": "entity.name.function.ps" },
-            "4": { "name": "entity.name.function.ps" }
+            "1": { "name": "storage.modifier.cs" },
+            "2": { "name": "storage.modifier.cs" },
+            "3": { "name": "entity.name.function.cs" }
           },
-          "end": "(\\))\\s*(?==>)",
-          "endCaptures": {
-            "1": { "name": "punctuation.definition.parameters.end.ps" },
-            "2": { "name": "punctuation.separator.ps" }
-          },
-          "name": "entity.name.function.ps",
+          "end": "=>",
           "patterns": [
             {
-              "captures": {
-                "1": { "name": "storage.type.ps" },
-                "10": { "name": "variable.other.readwrite.ps" },
-                "11": { "name": "string.quoted.single.ps" },
-                "12": { "name": "string.quoted.double.ps" },
-                "13": { "name": "constant.numeric.ps" },
-                "14": { "name": "constant.language.ps" },
-                "15": { "name": "variable.other.object.ps" },
-                "16": { "name": "variable.other.object.ps" },
-                "17": { "name": "variable.other.object.ps" },
-                "18": { "name": "variable.other.object.ps" },
-                "19": { "name": "variable.other.object.ps" },
-                "2": { "name": "variable.other.ps" },
-                "20": { "name": "variable.other.object.ps" },
-                "3": { "name": "meta.method.return-type.ps" },
-                "4": { "name": "storage.type.ps" },
-                "5": { "name": "entity.name.type.ps" },
-                "6": { "name": "storage.type.ps" },
-                "7": { "name": "entity.name.type.ps" },
-                "8": { "name": "storage.type.ps" },
-                "9": { "name": "entity.name.type.ps" }
+              "begin": "(?:\\()",
+              "beginCaptures": { "0": { "name": "punctuation.definition.parameters.begin.cs" } },
+              "end": "(?:\\))",
+              "endCaptures": {
+                "1": { "name": "punctuation.definition.parameters.end.cs" },
+                "2": { "name": "punctuation.separator.cs" }
               },
-              "match": "(?:\\s*((simple|series)?\\s+)?((?:(array|matrix)<(?:([a-zA-Z_]\\w*\\.)?([a-zA-Z_]\\w*))>|(?:([a-zA-Z_]\\w*\\.)?([a-zA-Z_]\\w*))\\[\\]|(?:([a-zA-Z_]\\w*\\.)?([a-zA-Z_]\\w*)))\\s+)?([a-zA-Z_]\\w*)(?:(?:\\s*=\\s*)(('.*')|(\".+\")|(\\d*(\\.?\\d+[eE]?\\d*))|(#?\\w+)|(?:([a-zA-Z_]\\w*)+?([a-zA-Z_]\\w*(?:\\.))*)?([a-zA-Z\\_]\\w*)))?)"
+              "patterns": [
+                {
+                  "captures": {
+                    "1": { "name": "storage.modifier.cs" },
+                    "2": { "name": "storage.type.cs" },
+                    "3": { "name": "storage.type.cs" },
+                    "4": { "name": "storage.type.cs" },
+                    "5": { "name": "entity.name.type.cs" },
+                    "6": { "name": "entity.name.type.cs" },
+                    "7": { "name": "entity.name.type.cs" },
+                    "8": { "name": "entity.name.variable.cs" },
+                    "9": { "name": "keyword.operator.cs" },
+                    "10": { "name": "string.quoted.single.cs" },
+                    "11": { "name": "string.quoted.double.cs" },
+                    "12": { "name": "constant.numeric.cs" },
+                    "13": { "name": "constant.numeric.float.cs" },
+                    "14": { "name": "constant.other.color.rgb-value.cs" },
+                    "15": { "name": "variable.other.object.cs" }
+                  },
+                  "match": "(?:\\s*(?:(simple|series)\\s+)?(?:(?:((array|matrix)<((?:[a-zA-Z_][a-zA-Z_0-9]*(\\.))?([a-zA-Z_][a-zA-Z_0-9]*))>)|(?:([a-zA-Z_][a-zA-Z_0-9]*\\.)?([a-zA-Z_][a-zA-Z_0-9]*)\\s*(\\[\\])?))\\s+)?([a-zA-Z_][a-zA-Z0-9_]*)(?:(\\s*=\\s*)(?:('.*')|(\\\".*\\\")|(\\d*(?:\\.(?:\\d+[eE]?\\d+)?\\d*|\\d+))|(#[a-fA-F0-9]{6,8})|(([a-zA-Z_][a-zA-Z0-9_]*\\.)*[a-zA-Z_][a-zA-Z0-9_]*)))?\\s*,?\\s*)"
+                },
+                {
+                  "match": "\\s*(,(?:\\n\\s+)?)",
+                  "name": "punctuation.separator.parameters.cs"
+                }
+              ]
             }
           ]
+        },
+        {
+          "captures": {
+            "1": { "name": "entity.name.namespace.ps" },
+            "2": { "name": "entity.name.section.ps" },
+            "3": { "name": "entity.name.function.ps" },
+            "4": { "name": "support.class.ps" },
+            "5": { "name": "entity.name.type.ps" },
+            "6": { "name": "support.ps" }
+          },
+          "match": "(?:([a-zA-Z_][a-zA-Z0-9_]*(?:\\.))?([a-zA-Z_][a-zA-Z0-9_]*(?:\\.))*)?([a-zA-Z_][a-zA-Z0-9_]*)(<([a-zA-Z_][a-zA-Z0-9_]*(?:\\.))?>)?(?=\\s*\\()",
+          "name": "support.function.ps"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "begin": "^(export\\s+)?(type\\s+)([a-zA-Z_]\\w+)(?:\n)",
+          "beginCaptures": {
+            "1": { "name": "keyword.control.import.ps" },
+            "2": { "name": "entity.name.type.ps" },
+            "3": { "name": "entity.name.tag.ps" }
+          },
+          "patterns": [
+            {
+              "match": "(?:^\\s+((?:(?:((array|matrix)<((?:[a-zA-Z_][a-zA-Z_0-9]*(\\.))?([a-zA-Z_][a-zA-Z_0-9]*))>)|(?:([a-zA-Z_][a-zA-Z_0-9]*\\.)?([a-zA-Z_][a-zA-Z_0-9]*)\\s*(\\[\\])?))\\s+)([a-zA-Z_][a-zA-Z0-9_]*)(?:(\\s*=\\s*)(?:('.*')|(\\\".*\\\")|(\\d*(?:\\.(?:\\d+[eE]?\\d+)?\\d*|\\d+))|(#[a-fA-F0-9]{6,8})|(([a-zA-Z_][a-zA-Z0-9_]*\\.)*[a-zA-Z_][a-zA-Z0-9_]*)))?)$)",
+              "captures": {
+                "3": { "name": "storage.type.ps" },
+                "4": { "name": "storage.type.parameter.ps" },
+                "7": { "name": "storage.type.ps" },
+                "8": { "name": "storage.type.parameter.ps" },
+                "9": { "name": "string.quoted.single.ps" },
+                "10": { "name": "variable.other.ps" },
+                "11": { "name": "constant.numeric.psne" },
+                "12": { "name": "constant.other.color.hex.psne" },
+                "13": { "name": "variable.other.readwrite.ps" },
+                "14": { "name": "constant.other.color.hex.ps" },
+                "15": { "name": "variable.other.readwrite.ps" }
+              }
+            }
+          ],
+          "end": "^(?:(?:\\b|//\\s*@))",
+          "endCaptures": { "0": { "name": "punctuation.definition.string.end.ps" } }
         }
       ]
     },
     "keywords": {
       "patterns": [
         {
-          "match": "\\b(by|if|in|else|else if|continue|break|for|var|varip|not|while|switch|series|simple)\\b",
+          "match": "\\b(by|if|in|else|continue|break|for|not|while|switch|series|simple)\\b",
           "name": "keyword.ps"
         }
       ]
@@ -569,7 +679,7 @@
     "operators": {
       "patterns": [
         {
-          "match": "(\\-\\=|\\+\\=|\\*\\=|/=|%=)",
+          "match": "(\\=|\\-\\=|\\+\\=|\\*\\=|/=|%=)",
           "name": "keyword.operator.assignment.ps"
         },
         {
@@ -582,157 +692,45 @@
         },
         {
           "match": "(\\?|\\:)",
-          "name": "keyword.operator.ternary.ps"
-        },
-        {
-          "match": "\\b(box|label|line|bool|float|int|string|color|table|linefill)\\b",
-          "name": "support.type.ps"
-        },
-        {
-          "match": "=",
-          "name": "keyword.operator.arithmetic.ps"
+          "name": "keyword.operator.comparison.ps"
         },
         {
           "captures": { "1": { "name": "keyword" } },
-          "match": "^\\s.+(\\s*=>)"
+          "match": "(?>=^\\s+.*)(=>)"
         }
       ]
     },
-    "other": {
+    "storage": {
       "patterns": [
         {
-          "captures": { "0": { "name": "comment.line.double-slash.ps" } },
-          "match": "//(\\s*[^@][^\\n]+)?\\n"
-        },
-        {
           "captures": {
-            "0": { "name": "comment.line.double-slash.ps" },
-            "1": { "name": "comment.line.double-slash.ps" },
-            "2": { "name": "comment.line.double-slash.ps" },
-            "3": { "name": "constant.numeric.ps" },
-            "4": { "name": "comment.line.double-slash.ps" }
-          },
-          "match": "(^//)\\s*(©)\\s*(\\w+)(.*)"
-        },
-        {
-          "captures": {
-            "0": { "name": "comment.line.double-slash.ps" },
-            "1": { "name": "comment.line.double-slash.ps" },
-            "2": { "name": "support.ps.ps" },
-            "3": { "name": "token.error-token.ps" },
-            "4": { "name": "support.ps.ps" },
-            "5": { "name": "constant.numeric.ps" }
-          },
-          "match": "(^//)(@)(version)(=)(5)"
-        },
-        {
-          "captures": {
-            "0": { "name": "comment.line.double-slash.ps" },
-            "1": { "name": "comment.line.double-slash.ps" },
-            "2": { "name": "constant.numeric.ps" },
-            "3": { "name": "support.ps.ps" },
-            "4": { "name": "support.ps.ps" },
-            "5": { "name": "support.ps.ps" }
-          },
-          "match": "(^//)\\s*(ⓘ)\\s*(https://www\\.tradingview\\.com)([\\w.,@?^=%&:/~+#-\\{]*[\\}\\w@?^=%&/~+#-])(\\w+)(.*)"
-        },
-        {
-          "captures": {
-            "0": { "name": "token.info-token.ps" },
-            "1": { "name": "support.ps.ps" },
+            "1": { "name": "storage.type.ps" },
             "2": { "name": "storage.package.ps" },
-            "3": { "name": "constant.numeric.ps" },
-            "4": { "name": "storage.type.ps.ps" },
-            "5": { "name": "token.info-token.ps" }
+            "3": { "name": "storage.type.parameter.ps" },
+            "4": { "name": "storage.type.ps" },
+            "5": { "name": "storage.type.ps" }
           },
-          "match": "^(?:import)\\s*(\\w+)(?:/)(\\w+)(?:/)(\\w+)\\s*((?:as)\\s*(?<name>\\w+))?"
-        },
-        {
-          "captures": {
-            "0": { "name": "comment.line.double-slash.pine" },
-            "1": { "name": "punctuation.section.embedded.begin.pine" },
-            "2": { "name": "entity.name.tag.pine.pine" },
-            "3": { "name": "comment.line.double-slash.pine" }
-          },
-          "match": "(^//)\\s*(@)(type|description|function|returns)\\s+(.*\\n)+?(?=\\w|//\\s*@)"
-        },
-        {
-          "begin": "(^\/\/)\\s*(@)(field|param)",
-          "beginCaptures": {
-            "1": { "name": "comment.line.double-slash.pine" },
-            "2": { "name": "punctuation.section.embedded.begin.pine" },
-            "3": { "name": "entity.name.tag.pine.pine" }
-          },
-          "end": "\\n",
-          "endCaptures": { "0": { "name": "comment.line.double-slash.pine" } },
-          "name": "source.pine",
-          "patterns": [
-            {
-              "captures": {
-                "1": { "name": "storage.type.parameter.pine" },
-                "2": { "name": "variable.parameter.pine" },
-                "3": { "name": "storage.type.parameter-type.pine" },
-                "4": { "name": "comment.line.double-slash.pine" }
-              },
-              "match": "\\s+(\\w+)\\s+(\\w+)\\s+(.*)"
-            }
-          ]
-        },
-        { "include": "#numbers" },
-        { "include": "#keywords" }
+          "match": "\\b(array|matrix)<([a-zA-Z_][a-zA-Z_0-9]*\\.)?([a-zA-Z_][a-zA-Z_0-9]*)>\\s+|\\b([a-zA-Z_][a-zA-Z_0-9]*\\.)?([a-zA-Z_][a-zA-Z_0-9]*)\\s*(\\[\\])?(?<=\\s*\\w+\\s*(?:,|\\=))"
+        }
       ]
     },
     "strings": {
       "patterns": [
         {
-          "begin": "\"",
+          "begin": "(\")(?=[^\\n}]*$\\n?)",
           "beginCaptures": { "1": { "name": "punctuation.definition.string.begin.ps" } },
-          "end": "\"",
+          "end": "(\")|(?=\\n)",
           "endCaptures": { "1": { "name": "punctuation.definition.string.end.ps" } },
-          "name": "string.quoted.double.ps",
-          "patterns": [
-            {
-              "match": "\\\\.",
-              "name": "constant.character.escaped.ps"
-            }
-          ]
+          "include": "#escaped_char",
+          "name": "string.quoted.double.ps"
         },
         {
-          "begin": "'",
+          "begin": "(')(?=[^\\n}]*$\\n?)",
           "beginCaptures": { "1": { "name": "punctuation.definition.string.begin.ps" } },
-          "end": "'",
+          "end": "(')|(?=\\n)",
           "endCaptures": { "1": { "name": "punctuation.definition.string.end.ps" } },
-          "name": "string.quoted.single.ps",
-          "patterns": [
-            {
-              "match": "\\\\.",
-              "name": "constant.character.escaped.ps"
-            }
-          ]
-        }
-      ]
-    },
-    "types": {
-      "patterns": [
-            { "include": "#storage" },
-        {
-          "captures": {
-            "1": { "name": "keyword.class.type.ps" },
-            "2": { "name": "entity.name.tag.ps" },
-            "3": { "name": "entity.name.type.ps" }
-          },
-          "begin": "(?:\\n|^)(export +)?(type +)([^\\n]+)\\n(?=\\n+(\\s+\\N+\\n)+)",
-          "patterns": [
-            {
-              "captures": {
-                "1": { "name": "entity.name.tag.ps" },
-                "2": { "name": "support.class.ps" },
-                "3": { "name": "support.class.type.ps" },
-                "4": { "name": "entity.name.type.ps" }
-              },
-              "match": "^((?:\\s{4}|\\t)+(\\w+|(array|matrix)(?:<(.+?)>)|\\w+\\[\\])?)\\s+(\\w+)"
-            }
-          ]
+          "include": "#escaped_char",
+          "name": "string.quoted.single.ps"
         }
       ]
     },
@@ -740,17 +738,11 @@
       "patterns": [
         {
           "captures": {
-            "0": { "name": "entity.other.object.ps" },
-            "1": { "name": "entity.name.namespace.ps" },
-            "2": { "name": "entity.name.section.ps" },
-            "3": { "name": "entity.name.function.ps" }
+            "1": { "name": "support.class.ps" },
+            "2": { "name": "support.class.ps" },
+            "3": { "name": "variable.other.readwrite.ps" }
           },
-          "match": "(?:([a-zA-Z_]\\w*(?:\\.))?([a-zA-Z_]\\w*(?:\\.))*)?([a-zA-Z_]\\w*)",
-          "name": "variable.other.ps"
-        },
-        {
-          "captures": { "1": { "name": "variable.other.readwrite.ps" } },
-          "match": "(\\b\\w+\\b)(?=\\s*\\=)"
+          "match": "(?:([a-zA-Z_]\\w*(?:\\.))+?([a-zA-Z_]\\w*(?:\\.))*)?([a-zA-Z_]\\w*)"
         }
       ]
     }
