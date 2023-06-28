@@ -1,8 +1,6 @@
 <p align="center"> <img src="https://github.com/jeyllani/pinescript/blob/main/images/pineicon.png?raw=true"> </p>
 <h2  align="center"> Pine Script V5 </h2> </center>
-⭐ Syntax Highlighting
-⭐ Snippets
-⭐ Hovers
+<h3 align="center">⭐ Syntax Highlighting | Snippets | Hovers ⭐ </h3> </center>
 
 ---
 
@@ -30,7 +28,6 @@
 
 | Supported File Extension |
 | :----------------------- |
-| `.help`                  |
 | `.ps`                    |
 | `.pine`                  | 
 | `.pinecode`              |
@@ -55,7 +52,7 @@
 
   * 1. Unistall the extension
   * 2. Open .vscode file from explorer or finder, or execute `open .vscode` in the terminal
-  * 3. Delete jeylaniB.pinescript folder
+  * 3. Delete `jeylaniB.pinescript` folder
   * 4. Reinstall the extension
 
 ---
@@ -64,20 +61,10 @@
 
 - Contributions are welcome, please check out the contribution checklist
 
-### Issue
-- If you want to report an error, snippet suggestion, script to add or anything else [fill an issue](https://github.com/jeyllani/pinescript/pulls)
-
 ---
 
-### Support The Extension
-
-- If you find this extension useful and want to support it
-
-  * **BTC**  *13tRgbSFSLEgNzdQt21THir8afuqYVi1pA*
-  * **ETH**  *0x768d0068989f68ccdabcbae8256e9d7d7a48ff98*
-  * **ADA**  *DdzFFzCqrhsxjjPrRKZtjayLJ9bCzbdCm82J2zbhE63EB1sGYJdp3R6mLkEyQSTmFhSJsHW6rNDHZx4M77p9LwmvrCLxMhwW2yxZ1Auw*
-  * **LTC**  *LMGsFqKo6rKXncEc3hb1Rxd2WWiHUJmf8E*
-  * **XMR**  *89GRBG7HrqSGMRjsPPo4W7HcEeqVpgB7UMttaGPEr9KJEwzDqq7vmxci9k7VmhcqUpWAvs2TE7qqgAMZVTX4pnAM97UAZi4*
+### Issue
+- If you want to report an error, snippet suggestion, script to add or anything else [fill an issue](https://github.com/jeyllani/pinescript/pulls)
 
 ---
 

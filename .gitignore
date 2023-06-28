@@ -1,4 +1,4 @@
-node_modules/
+node_modules/**
 .eslintrc.json
 .vscode/extensions.json
 .vscode/launch.json
@@ -9,5 +9,6 @@ dist/extension.js
 dist/extension.js.map
 tsconfig.json
 webpack.config.js
-
-
+vsc-extension-quickstart.md
+*.vsix
+.vscode/settings.json

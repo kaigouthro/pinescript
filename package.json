@@ -5,7 +5,7 @@
 	"icon": "images/pineicon.png",
 	"publisher": "JeylaniB",
 	"license": "MIT",
-	"version": "3.0.1",
+	"version": "4.0.0",
 	"engines": {
 		"vscode": "^1.63.0"
 	},

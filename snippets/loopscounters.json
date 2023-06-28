@@ -4,7 +4,7 @@
   "for i = | by | if | elsif | else": {
   "prefix": "forif",
   "body": [
-    "for i = ${1} to ${2} ${3:by = ${4}}",
+    "for i = ${1} to ${2} ${3:by ${4}}",
     "    ${5:if ${6}",
     "        ${7}",
     "    ${8:${9:else if ${10}",
@@ -20,7 +20,7 @@
 "for i = | by | continue | break": {
   "prefix": "fori",
   "body": [
-    "${1} = for i = ${2} to ${3} ${4:by = ${5}}",
+    "${1} = for i = ${2} to ${3} ${4:by ${5}}",
     "    ${6} ${7|:=,=,==,+=,*=,%=,//=,-=,*,/,+,-|} ${8}",
     "    ${9:${10:${11:continue}",
     "    ${12}",
@@ -34,7 +34,7 @@
 "for counter = from_num to to_num [by step_num]": {
   "prefix": "for",
   "body": [
-    "for i = ${1} to ${2} ${3:by = ${4}}",
+    "for i = ${1} to ${2} ${3:by ${4}}",
     "    ${0}"
   ],
   "description": "for counter = from_num to to_num [by step_num]"
