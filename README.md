@@ -1,5 +1,5 @@
 <p align="center"> <img src="https://github.com/jeyllani/pinescript/blob/main/images/pineicon.png?raw=true"> </p>
-<h2  align="center"> Pine Script V5 </h2> </center>
+<h2 align="center"> Pine Script V5 </h2> </center>
 <h3 align="center">⭐ Syntax Highlighting | Snippets | Hovers ⭐ </h3> </center>
 
 ---

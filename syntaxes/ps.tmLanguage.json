@@ -238,88 +238,74 @@
     "strings": {
       "patterns": [
         {
-          "match": "\\B(\")([^\"]*)(\")",
-          "captures": {
-            "0": {"name": "string.quoted.double.ps"},
-            "1": {"name": "punctuation.definition.string.begin.ps"},
-            "3": {"name": "punctuation.definition.string.end.ps"},
-            "2": {
-              "patterns": [
-                {
-                  "match": "\\\\.",
-                  "name": "constant.character.escaped.ps"
-                },
-                {
-                  "match": "(\\{)([^\\}]*)(\\})",
-                  "captures": {
-                    "0": {"name": "variable.parameter.ps"},
-                    "1": {"name": "constant.character.format.placeholder.other.ps"},
-                    "3": {"name": "constant.character.format.placeholder.other.ps"},
-                    "2": {"patterns": [
-                      {
-                        "match": "\\,",
-                        "name": "punctuation.separator.comma.ps"
-                      },
-                      {
-                        "match": "\\b([0-9]+)\\b",
-                        "name": "constant.numeric.decimal.ps"
-                      },
-                      {
-                        "match": "[^\\s,]+",
-                        "name": "variable.parameter.ps"
-                      }
-                    ]}
+          "begin": "\"",
+          "beginCaptures": {"0": {"name": "punctuation.definition.string.begin.ps"}},
+          "end": "\"",
+          "endCaptures": {"0": {"name": "punctuation.definition.string.end.ps"}},
+          "name": "string.quoted.double.ps",
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escaped.ps"
+            },
+            {
+              "match": "(\\{)([\\w\\s\\.,#]+)(\\})",
+              "captures": {
+                "0": {"name": "variable.parameter.ps"},
+                "1": {"name": "constant.character.format.placeholder.other.ps"},
+                "3": {"name": "constant.character.format.placeholder.other.ps"},
+                "2": {"patterns": [
+                  {
+                    "match": "\\,",
+                    "name": "punctuation.separator.comma.ps"
+                  },
+                  {
+                    "match": "\\b([0-9]+)\\b",
+                    "name": "constant.numeric.decimal.ps"
+                  },
+                  {
+                    "match": "[^\\s,]+",
+                    "name": "variable.parameter.ps"
                   }
-                },
-                {
-                  "match": "\\S+",
-                  "name": "string.quoted.double.ps"
-                }
-              ]
+                ]}
+              }
             }
-          }
+          ]
         },
         {
-          "match": "\\B(')([^']*)(')",
-          "captures": {
-            "0": {"name": "string.quoted.single.ps"},
-            "1": {"name": "punctuation.definition.string.begin.ps"},
-            "3": {"name": "punctuation.definition.string.end.ps"},
-            "2": {
-              "patterns": [
-                {
-                  "match": "\\\\.",
-                  "name": "constant.character.escaped.ps"
-                },
-                {
-                  "match": "(\\{)([^\\}]*)(\\})",
-                  "captures": {
-                    "0": {"name": "variable.parameter.ps"},
-                    "1": {"name": "constant.character.format.placeholder.other.ps"},
-                    "3": {"name": "constant.character.format.placeholder.other.ps"},
-                    "2": {"patterns": [
-                      {
-                        "match": "\\,",
-                        "name": "punctuation.separator.comma.ps"
-                      },
-                      {
-                        "match": "\\b([0-9]+)\\b",
-                        "name": "constant.numeric.decimal.ps"
-                      },
-                      {
-                        "match": "[^\\s,]+",
-                        "name": "variable.parameter.ps"
-                      }
-                    ]}
+          "begin": "'",
+          "beginCaptures": {"1": {"name": "punctuation.definition.string.begin.ps"}},
+          "end": "'",
+          "endCaptures": {"1": {"name": "punctuation.definition.string.end.ps"}},
+          "name": "string.quoted.single.ps",
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escaped.ps"
+            },
+            {
+              "match": "(\\{)([\\w\\s\\.,#]+)(\\})",
+              "captures": {
+                "0": {"name": "variable.parameter.ps"},
+                "1": {"name": "constant.character.format.placeholder.other.ps"},
+                "3": {"name": "constant.character.format.placeholder.other.ps"},
+                "2": {"patterns": [
+                  {
+                    "match": "\\,",
+                    "name": "punctuation.separator.comma.ps"
+                  },
+                  {
+                    "match": "\\b([0-9]+)\\b",
+                    "name": "constant.numeric.decimal.ps"
+                  },
+                  {
+                    "match": "[^\\s,]+",
+                    "name": "variable.parameter.ps"
                   }
-                },
-                {
-                  "match": "\\S+",
-                  "name": "string.quoted.single.ps"
-                }
-              ]
+                ]}
+              }
             }
-          }
+          ]
         }
       ]
     },
