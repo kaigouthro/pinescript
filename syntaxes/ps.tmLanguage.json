@@ -260,7 +260,7 @@
                     "name": "punctuation.separator.comma.ps"
                   },
                   {
-                    "match": "\\b([0-9]+)\\b",
+                    "match": "\\b[0-9]+\\b(?!\\.)",
                     "name": "constant.numeric.decimal.ps"
                   },
                   {
@@ -295,7 +295,7 @@
                     "name": "punctuation.separator.comma.ps"
                   },
                   {
-                    "match": "\\b([0-9]+)\\b",
+                    "match": "\\b([0-9]+)\\b(?!\\.)",
                     "name": "constant.numeric.decimal.ps"
                   },
                   {
