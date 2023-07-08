@@ -1294,13 +1294,16 @@
           "match": "\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(abs|avg|binary_search_leftmost|binary_search_rightmost|binary_search|clear|concat|copy|covariance|every|fill|first|from|get|includes|indexof|insert|join|lastindexof|last|max|median|min|mode|percentile_linear_interpolation|percentile_nearest_rank|percentrank|pop|push|range|remove|reverse|set|shift|size|slice|sort_indices|sort|standardize|stdev|sum|unshift|variance|add_col|add_row|avg|columns|col|concat|copy|det|diff|eigenvalues|eigenvectors|elements_count|fill|get|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|kron|max|median|min|mode|mult|pinv|pow|rank|remove_col|remove_row|reshape|reverse|rows|row|set|sort|submatrix|sum|swap_columns|swap_rows|trace|transpose)\\b(?=\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "variable.other.readwrite.ps"
             },
             "1": {
               "name": "variable.other.readwrite.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
+            },
+            "3":{
+              "name": "variable.other.object.property.ps"
             }
           }
         },
