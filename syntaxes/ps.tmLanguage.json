@@ -1281,7 +1281,7 @@
           }
         },
         {
-          "match": "\\b(alert|alertcondition|barcolor|bgcolor|bool|box|color|dayofmonth|dayofweek|fill|fixnan|float|hline|hour|input|int|label|line|linefill|max_bars_back|minute|month|na|nz|plot|plotarrow|plotbar|plotcandle|plotchar|plotshape|second|string|table|time|time_close|timestamp|weekofyear|year)(?=\\()",
+          "match": "\\b(alert|alertcondition|barcolor|bgcolor|bool|box|color|dayofmonth|dayofweek|fixnan|float|hline|hour|input|int|label|line|linefill|max_bars_back|minute|month|na|nz|plot|plotarrow|plotbar|plotcandle|plotchar|plotshape|second|string|table|time|time_close|timestamp|weekofyear|year)(?:\\()(?!\\s*\\))",
           "name": "variable.other.object.property.ps"
         },
         {
@@ -1291,7 +1291,7 @@
           "include": "#long_functions"
         },
         {
-          "match": "\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(abs|avg|binary_search_leftmost|binary_search_rightmost|binary_search|clear|concat|copy|covariance|every|fill|first|from|get|includes|indexof|insert|join|lastindexof|last|max|median|min|mode|percentile_linear_interpolation|percentile_nearest_rank|percentrank|pop|push|range|remove|reverse|set|shift|size|slice|sort_indices|sort|standardize|stdev|sum|unshift|variance|add_col|add_row|avg|columns|col|concat|copy|det|diff|eigenvalues|eigenvectors|elements_count|fill|get|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|kron|max|median|min|mode|mult|pinv|pow|rank|remove_col|remove_row|reshape|reverse|rows|row|set|sort|submatrix|sum|swap_columns|swap_rows|trace|transpose)\\b(?=\\()",
+          "match": "\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(binary_search_leftmost|binary_search_rightmost|binary_search|concat|covariance|get|max|min|percentile_linear_interpolation|percentile_nearest_rank|percentrank|remove|set|slice|sort_indices|sort|stdev|variance|add_col|add_row|col|concat|diff|get|kron|mult|pow|remove_col|remove_row|reshape|row|set|sort|submatrix|swap_columns|swap_rows)\\b(?:\\()(?!\\s*[\"'\\)])",
           "captures": {
             "0": {
               "name": "variable.other.readwrite.ps"
@@ -1308,7 +1308,41 @@
           }
         },
         {
-          "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(abs|avg|binary_search_leftmost|binary_search_rightmost|binary_search|clear|concat|copy|covariance|every|fill|first|from|get|includes|indexof|insert|join|lastindexof|last|max|median|min|mode|percentile_linear_interpolation|percentile_nearest_rank|percentrank|pop|push|range|remove|reverse|set|shift|size|slice|sort_indices|sort|standardize|stdev|sum|unshift|variance|add_col|add_row|avg|columns|col|concat|copy|det|diff|eigenvalues|eigenvectors|elements_count|fill|get|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|kron|max|median|min|mode|mult|pinv|pow|rank|remove_col|remove_row|reshape|reverse|rows|row|set|sort|submatrix|sum|swap_columns|swap_rows|trace|transpose)\\b(?=\\()",
+          "match": "\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(abs|avg|clear|copy|every|first|last|median|mode|pop|range|reverse|shift|size|some|standardize|sum|columns|det|eigenvalues|eigenvectors|elements_count|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|pinv|rank|rows|trace|transpose)\\b(?:\\(\\s*\\))",
+          "captures": {
+            "0": {
+              "name": "variable.other.readwrite.ps"
+            },
+            "1": {
+              "name": "variable.other.readwrite.ps"
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3":{
+              "name": "variable.other.object.property.ps"
+            }
+          }
+        },
+        {
+          "match": "\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(fill|from|includes|indexof|insert|join|lastindexof|push|unshift)\\b(?:\\()(?!\\s*\\))",
+          "captures": {
+            "0": {
+              "name": "variable.other.readwrite.ps"
+            },
+            "1": {
+              "name": "variable.other.readwrite.ps"
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3":{
+              "name": "variable.other.object.property.ps"
+            }
+          }
+        },
+        {
+          "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(binary_search_leftmost|binary_search_rightmost|binary_search|concat|covariance|get|max|min|percentile_linear_interpolation|percentile_nearest_rank|percentrank|remove|set|slice|sort_indices|sort|stdev|variance|add_col|add_row|col|concat|diff|get|kron|mult|pow|remove_col|remove_row|reshape|row|set|sort|submatrix|swap_columns|swap_rows)\\b(?:\\()(?!\\s*[\"'\\)])",
           "captures": {
             "1": {
               "patterns": [
@@ -1327,7 +1361,96 @@
             "4": {"name": "punctuation.accessor.ps"},
             "5": {"name": "variable.other.object.property.ps"}
           }
-        },        {
+        },
+        {
+          "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(abs|avg|clear|copy|every|first|last|median|mode|pop|range|reverse|shift|size|some|standardize|sum|columns|det|eigenvalues|eigenvectors|elements_count|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|pinv|rank|rows|trace|transpose)\\b(?:\\(\\s*\\))",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "match": "[a-zA-Z_]\\w*",
+                  "name":"variable.other.readwrite.ps"
+                },
+                {
+                  "match": "\\.",
+                  "name":"punctuation.accessor.ps"
+                }
+              ]
+            },
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "variable.other.readwrite.ps"},
+            "4": {"name": "punctuation.accessor.ps"},
+            "5": {"name": "variable.other.object.property.ps"}
+          }
+        },
+        {
+          "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(fill|from|includes|indexof|insert|join|lastindexof|push|unshift)\\b(?:\\()(?!\\s*\\))",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "match": "[a-zA-Z_]\\w*",
+                  "name":"variable.other.readwrite.ps"
+                },
+                {
+                  "match": "\\.",
+                  "name":"punctuation.accessor.ps"
+                }
+              ]
+            },
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "variable.other.readwrite.ps"},
+            "4": {"name": "punctuation.accessor.ps"},
+            "5": {"name": "variable.other.object.property.ps"}
+          }
+        },
+        {
+          "match": "(?<=\\))(\\.)\\b(binary_search_leftmost|binary_search_rightmost|binary_search|concat|covariance|get|max|min|percentile_linear_interpolation|percentile_nearest_rank|percentrank|remove|set|slice|sort_indices|sort|stdev|variance|add_col|add_row|col|concat|diff|get|kron|mult|pow|remove_col|remove_row|reshape|row|set|sort|submatrix|swap_columns|swap_rows)\\b(?:\\()(?!\\s*[\"'\\)])",
+          "captures": {
+            "0": {
+              "name": "variable.other.readwrite.ps"
+            },
+            "1": {
+              "name": "punctuation.accessor.ps"
+            },
+            "2":{
+              "name": "variable.other.object.property.ps"
+            }
+          }
+        },
+        {
+          "match": "(?<=\\))(\\.)\\b(abs|avg|clear|copy|every|first|last|median|mode|pop|range|reverse|shift|size|some|standardize|sum|columns|det|eigenvalues|eigenvectors|elements_count|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|pinv|rank|rows|trace|transpose)\\b(?:\\(\\s*\\))",
+          "captures": {
+            "0": {
+              "name": "variable.other.readwrite.ps"
+            },
+            "1": {
+              "name": "punctuation.accessor.ps"
+            },
+            "2":{
+              "name": "variable.other.object.property.ps"
+            }
+          }
+        },
+        {
+          "match": "(?<=\\))(\\.)\\b(fill|from|includes|indexof|insert|join|lastindexof|push|unshift)\\b(?:\\()(?!\\s*\\))",
+          "captures": {
+            "0": {
+              "name": "variable.other.readwrite.ps"
+            },
+            "1": {
+              "name": "punctuation.accessor.ps"
+            },
+            "2":{
+              "name": "variable.other.object.property.ps"
+            }
+          }
+        },
+        {
+          "match": "\\b(fill)(?:\\()(?!\\s*[\"'\\)])",
+          "name": "variable.other.object.property.ps"
+        },
+        {
           "match": "\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(new)\\b(?=\\()",
           "captures": {
             "0": {
