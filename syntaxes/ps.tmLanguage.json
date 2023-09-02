@@ -943,11 +943,8 @@
           }
         },
         {
-          "match": "\\b(array|matrix)\\b(\\.)\\b(new)\\b(?:<([a-zA-Z_][a-zA-Z0-9_\\.]*)>)",
+          "match": "\\b(array|matrix)\\b(\\.)\\b(new)\\b\\s*(<)\\s*([a-zA-Z_][a-zA-Z0-9_\\.]*)\\s*(>)",
           "captures": {
-            "0": {
-              "name": "punctuation.definition.typeparameters.begin.ps"
-            },
             "1": {
               "name": "variable.other.object.ps"
             },
@@ -958,7 +955,13 @@
               "name": "keyword.operator.new.ps"
             },
             "4": {
+              "name": "punctuation.definition.typeparameters.begin.ps"
+            },
+            "5": {
               "name": "support.type.primitive.ps"
+            },
+            "6": {
+              "name": "punctuation.definition.typeparameters.begin.ps"
             }
           }
         },
@@ -1109,11 +1112,8 @@
           }
         },
         {
-          "match": "\\b(map)\\b(\\.)\\b(new)\\b(?:<\\b(int|float|bool|string|color)\\b\\s*(\\,)\\s*\\b(int|float|bool|string|color)\\b>)",
+          "match": "\\b(map)\\b(\\.)\\b(new)\\b\\s*(<)\\s*\\b(int|float|bool|string|color)\\b\\s*(\\,)\\s*\\b(int|float|bool|string|color)\\b\\s*(>)",
           "captures": {
-            "0": {
-              "name": "punctuation.definition.typeparameters.begin.ps"
-            },
             "1": {
               "name": "variable.other.object.ps"
             },
@@ -1124,13 +1124,19 @@
               "name": "keyword.operator.new.ps"
             },
             "4": {
-              "name": "support.type.primitive.ps"
+              "name": "punctuation.definition.typeparameters.begin.ps"
             },
             "5": {
-              "name": "punctuation.separator.comma.ps"
+              "name": "support.type.primitive.ps"
             },
             "6": {
+              "name": "punctuation.separator.comma.ps"
+            },
+            "7": {
               "name": "support.type.primitive.ps"
+            },
+            "8": {
+              "name": "punctuation.definition.typeparameters.begin.ps"
             }
           }
         },
@@ -1494,10 +1500,11 @@
       "patterns": [
         {"include": "#keyword_control_words"},
         {
-          "match": "\\b([\\w\\.]+)\\s+([a-zA-Z_]\\w*)\\s*(?=\\=)(?!\\=\\=)",
+          "match": "\\b([\\w\\.]+)(\\s*\\[\\s*\\])?\\s+([a-zA-Z_]\\w*)\\s*(?=\\=)(?!\\=\\=)",
           "captures": {
             "1":{"name":"entity.name.type.class.ps"},
-            "2":{"name":"variable.other.readwrite.ps"}
+            "2":{"name":"meta.brace.square.ps"},
+            "3":{"name":"variable.other.readwrite.ps"}
           }
         },
         {
@@ -1505,10 +1512,11 @@
           "name": "variable.other.readwrite.ps"
         },
         {
-          "match": "^\\s*\\b([\\w\\.]+)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=(?:\\s*//.*)?$)",
+          "match": "^\\s*\\b([\\w\\.]+)(\\s*\\[\\s*\\])?\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=(?:\\s*//.*)?$)",
           "captures": {
             "1":{"name":"entity.name.type.class.ps"},
-            "2":{"name":"variable.other.readwrite.ps"}
+            "2":{"name":"meta.brace.square.ps"},
+            "3":{"name":"variable.other.readwrite.ps"}
           }
         }
       ]
@@ -1578,11 +1586,12 @@
     "array_matrix_new":{
       "patterns": [
         {
-          "match": "\\b(array|matrix)\\b<([a-zA-Z_][\\w\\.]*)\\b>",
+          "match": "\\b(array|matrix)\\b\\s*(<)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
           "captures": {
-            "0":{"name":"punctuation.definition.typeparameters.begin.ps"},
             "1":{"name":"support.type.primitive.ps"},
-            "2":{"name":"support.type.primitive.ps"}
+            "2":{"name":"punctuation.definition.typeparameters.begin.ps"},
+            "3":{"name":"support.type.primitive.ps"},
+            "4":{"name":"punctuation.definition.typeparameters.begin.ps"}
           }
         }
       ]
@@ -1590,7 +1599,7 @@
     "array_new":{
       "patterns": [
         {
-          "match": "\\b([a-zA-Z_][\\w\\.]*)(\\[\\])",
+          "match": "\\b([a-zA-Z_][\\w\\.]*)\\s*(\\[\\])",
           "captures": {
             "0":{"name":"support.type.primitive.ps"},
             "1":{"name":"support.type.primitive.ps"},
@@ -1612,13 +1621,7 @@
                 {"include": "#constants"},
                 {"include": "#support_type"},
                 {"include": "#built_in_constants"},
-                {
-                  "match": "\\b([\\w\\.]+)\\b\\s+([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1":{"name":"support.type.primitive.ps"},
-                    "2":{"name":"variable.parameter.ps"}
-                  }
-                },
+                {"include": "#user_define_types"},
                 {
                   "match": "\\b([a-zA-Z_]\\w*)\\b",
                   "name":"variable.parameter.ps"
@@ -1641,13 +1644,7 @@
                 {"include": "#constants"},
                 {"include": "#support_type"},
                 {"include": "#built_in_constants"},
-                {
-                  "match": "\\b([\\w\\.]+)\\b\\s+([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1":{"name":"support.type.primitive.ps"},
-                    "2":{"name":"variable.parameter.ps"}
-                  }
-                },
+                {"include": "#user_define_types"},
                 {
                   "match": "\\b([a-zA-Z_]\\w*)\\b",
                   "name":"variable.parameter.ps"
@@ -1670,13 +1667,7 @@
                 {"include": "#constants"},
                 {"include": "#support_type"},
                 {"include": "#built_in_constants"},
-                {
-                  "match": "\\b([\\w\\.]+)\\b\\s+([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1":{"name":"support.type.primitive.ps"},
-                    "2":{"name":"variable.parameter.ps"}
-                  }
-                },
+                {"include": "#user_define_types"},
                 {
                   "match": "\\b([a-zA-Z_]\\w*)\\b",
                   "name":"variable.parameter.ps"
@@ -1699,13 +1690,7 @@
                 {"include": "#constants"},
                 {"include": "#support_type"},
                 {"include": "#built_in_constants"},
-                {
-                  "match": "\\b([\\w\\.]+)\\b\\s+([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1":{"name":"support.type.primitive.ps"},
-                    "2":{"name":"variable.parameter.ps"}
-                  }
-                },
+                {"include": "#user_define_types"},
                 {
                   "match": "\\b([a-zA-Z_]\\w*)\\b",
                   "name":"variable.parameter.ps"
@@ -1716,6 +1701,17 @@
               ]
             }
           }
+        }
+      ]
+    },
+    "user_define_types":{
+      "patterns": [
+        {
+          "match": "\\b([\\w\\.]+)\\b\\s+([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1":{"name":"support.type.primitive.ps"},
+                    "2":{"name":"variable.parameter.ps"}
+                  }
         }
       ]
     },
