@@ -1112,7 +1112,7 @@
           }
         },
         {
-          "match": "\\b(map)\\b(\\.)\\b(new)\\b\\s*(<)\\s*\\b(int|float|bool|string|color)\\b\\s*(\\,)\\s*\\b(int|float|bool|string|color)\\b\\s*(>)",
+          "match": "\\b(map)\\b(\\.)\\b(new)\\b\\s*(<)\\s*\\b(int|float|bool|string|color)\\b\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
           "captures": {
             "1": {
               "name": "variable.other.object.ps"
