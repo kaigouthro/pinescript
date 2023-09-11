@@ -1,5 +1,12 @@
 # Change Log
 
+#### **3.1.2**
+
+*11.09.2023 **Update*** 
+- Grammars for user-defined types and functions fixed
+
+---
+
 #### **3.1.0**
 
 *08.09.2023 **Update*** 

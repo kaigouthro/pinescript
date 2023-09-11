@@ -1354,71 +1354,89 @@
         {"include": "#table_fuctions"},
         {"include": "#long_functions"},
         {
-          "match": "\\b(fill)(?:\\s*\\()(?!\\s*[\"'\\)])",
+          "match": "\\b(fill)(?=\\s*\\((?!\\s*[\"'\\)]))",
           "name": "variable.other.object.property.ps"
         },
         {
-          "match": "\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(new)\\b(?=\\s*\\()",
+          "match": "(?:([\\w\\.]*))(\\.)\\b(new)\\b(?=\\s*\\()",
           "captures": {
-            "0": {
-              "name": "keyword.operator.new.ps"
-            },
             "1": {
-              "name": "support.type.primitive.ps"
+              "patterns": [
+                {
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {
+                      "patterns": [
+                        {
+                          "match": "[a-zA-Z_]\\w*",
+                          "name": "support.type.primitive.ps"
+                        },
+                        {
+                          "match": "\\.",
+                          "name": "punctuation.accessor.ps"
+                        }
+                      ]
+                    },
+                    "2": {"name": "punctuation.accessor.ps"},
+                    "3": {"name": "support.type.primitive.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "support.type.primitive.ps"}
+                  }
+                }
+              ]
             },
             "2": {
               "name": "punctuation.accessor.ps"
+            },
+            "3":{
+              "name": "keyword.operator.new.ps"
             }
           }
         },
         {
-          "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b(\\.)\\b(new)\\b(?=\\s*\\()",
+          "match": "(?:([\\w\\.]*))(\\.)\\b([a-zA-Z_]\\w*)\\b(?=\\s*\\()",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "[a-zA-Z_]\\w*",
-                  "name":"support.type.primitive.ps"
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {
+                      "patterns": [
+                        {
+                          "match": "[a-zA-Z_]\\w*",
+                          "name": "variable.other.readwrite.ps"
+                        },
+                        {
+                          "match": "\\.",
+                          "name": "punctuation.accessor.ps"
+                        }
+                      ]
+                    },
+                    "2": {"name": "punctuation.accessor.ps"},
+                    "3": {"name": "variable.other.readwrite.ps"}
+                  }
                 },
                 {
-                  "match": "\\.",
-                  "name":"punctuation.accessor.ps"
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
+                  }
                 }
               ]
             },
-            "2": {"name": "punctuation.accessor.ps"},
-            "3": {"name": "support.type.primitive.ps"},
-            "4": {"name": "punctuation.accessor.ps"},
-            "5": {"name": "keyword.operator.new.ps"}
-          }
-        },
-        {
-          "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b(?=\\s*\\()",
-          "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "[a-zA-Z_]\\w*",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\.",
-                  "name":"punctuation.accessor.ps"
-                }
-              ]
+            "2": {
+              "name": "punctuation.accessor.ps"
             },
-            "2": {"name": "punctuation.accessor.ps"},
-            "3": {"name": "variable.other.readwrite.ps"},
-            "4": {"name": "punctuation.accessor.ps"},
-            "5": {"name": "entity.name.function.ps"}
-          }
-        },
-        {
-          "match": "\\b([a-zA-Z_]\\w*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b(?=\\s*\\()",
-          "captures": {
-            "1": {"name": "variable.other.readwrite.ps"},
-            "2": {"name": "punctuation.accessor.ps"},
-            "3": {"name": "entity.name.function.ps"}
+            "3":{
+              "name": "entity.name.function.ps"
+            }
           }
         },
         {
@@ -1736,11 +1754,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -1756,6 +1770,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -1774,11 +1795,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -1794,6 +1811,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -1812,11 +1836,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -1832,6 +1852,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -1850,11 +1877,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -1870,6 +1893,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -1892,11 +1922,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -1912,6 +1938,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -1930,11 +1963,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -1950,6 +1979,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -1968,11 +2004,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -1988,6 +2020,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2010,11 +2049,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2030,6 +2065,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2048,11 +2090,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2068,6 +2106,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2086,11 +2131,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2106,6 +2147,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2124,11 +2172,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2144,6 +2188,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2166,11 +2217,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2186,6 +2233,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2204,11 +2258,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2224,6 +2274,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2246,11 +2303,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2266,6 +2319,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2284,11 +2344,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2304,6 +2360,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2326,11 +2389,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2346,6 +2405,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2364,11 +2430,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2384,6 +2446,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2402,11 +2471,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2422,6 +2487,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2440,11 +2512,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2460,6 +2528,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2482,11 +2557,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2502,6 +2573,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2520,11 +2598,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2540,6 +2614,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
@@ -2558,11 +2639,7 @@
             "1": {
               "patterns": [
                 {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.other.readwrite.ps"
-                },
-                {
-                  "match": "\\b([a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2578,6 +2655,13 @@
                     },
                     "2": {"name": "punctuation.accessor.ps"},
                     "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
                   }
                 }
               ]
