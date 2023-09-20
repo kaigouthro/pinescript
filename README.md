@@ -29,7 +29,7 @@ PineScript is a domain-specific scripting language developed by TradingView. It 
 ---
 
 ### PineScript Color Themes
-PineScript Helper extension is best suited for use with [**PineScript Color Themes**](https://github.com/salbert11/pinethemes).  
+PineScript Helper extension is best suited for use with [**PineScript Color Themes**](https://marketplace.visualstudio.com/items?itemName=salbert11.pinescript-color-themes).  
 **PineScript Color Themes** provides a collection of editor themes tailored for PineScript development, offering a visually pleasing environment for writing PineScript code.
 
 *Note: If you prefer a different theme, you are free to use any other themes of your choice. PineScript Helper is compatible with most themes.*
@@ -88,21 +88,20 @@ The PineScript Helper extension supports the following file extensions:
 4. Hover over variables, functions, or keywords to view relevant reference manual information.
 
 ## Release Notes
-#### **3.1.3**
+#### **3.1.5**
 
-*19.09.2023 **Update*** 
-- Grammars and snippets for built-in variables, functions and constants updated to Pinescript release September 2023
-- Minor bug fixed
+*21.09.2023 **Update*** 
+- Textmate scopes fixed for Types
 
 ## Contribution
 Contributions are welcome! Please feel free to submit a [pull request](https://github.com/salbert11/pinescript/pulls) in the GitHub repository.
 
 ## Feedback and Support
-If you encounter any issues, have suggestions, or need support, please feel free to [open an issue](https://github.com/salbert11/pinescript/issues)  in the GitHub repository.
+If you encounter any issues, have suggestions, or need support, please feel free to [open an issue](https://github.com/salbert11/pinescript/issues) in the GitHub repository.
 
 ## License
-This extension is released under the [MIT License](./LICENSE.md) .
+This extension is released under the [MIT License](./LICENSE.md).
 
 ---
 
-*Version 3.1.3*
+*Version 3.1.5*

@@ -1,5 +1,20 @@
 # Change Log
 
+#### **3.1.5**
+
+*21.09.2023 **Update*** 
+- Textmate scopes fixed for Types
+
+---
+
+#### **3.1.4**
+
+*20.09.2023 **Update*** 
+- Readme updated
+- Minor fixed
+
+---
+
 #### **3.1.3**
 
 *19.09.2023 **Update*** 

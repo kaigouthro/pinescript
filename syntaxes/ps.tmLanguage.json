@@ -1529,7 +1529,7 @@
               {"include": "#keyword_control_words"},
               {
                 "match": ".*",
-                "name":"entity.name.type.class.ps"
+                "name":"support.type.primitive.ps"
               }
             ]},
             "2":{"name":"meta.brace.square.ps"},
@@ -1548,7 +1548,7 @@
               {"include": "#keyword_control_words"},
               {
                 "match": ".*",
-                "name":"entity.name.type.class.ps"
+                "name":"support.type.primitive.ps"
               }
             ]},
             "2":{"name":"meta.brace.square.ps"},
