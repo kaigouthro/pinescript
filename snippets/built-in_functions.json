@@ -717,7 +717,7 @@
   "matrix.new ⇨ 𝑓": {
      "prefix": "matrix.new",
      "body": [
-        "matrix.new<${1|bool,box,color,float,int,label,line,linefill,string,table|}>(rows = $2, columns = $3, initial_value = $4) $0"
+        "matrix.new<${1| ,bool,box,color,float,int,label,line,linefill,string,table|}>(rows = $2, columns = $3, initial_value = $4) $0"
      ],
      "description": "Create a new matrix object ⇨ 𝑓 | matrix.new<type>(rows = int, columns = int, initial_value = int) → matrix<type>"
   },
@@ -990,6 +990,13 @@
      ],
      "description": "Returns a chart.point object with `time` as its x-coordinate and `price` as its y-coordinate. ⇨ 𝑓 | chart.point.from_time(time = int, price = int|float) → chart.point"
   },
+  "chart.point.new ⇨ 𝑓": {
+   "prefix": "chart.point.new",
+   "body": [
+      "chart.point.new(time = $1, index = $2, price = $3) $0"
+   ],
+   "description": "Creates a new chart.point object with the specified `time`, `index`, and `price`. ⇨ 𝑓 | chart.point.new(time = int, index = int, price = int|float) → chart.point"
+},
   "chart.point.now ⇨ 𝑓": {
      "prefix": "chart.point.now",
      "body": [
@@ -2072,21 +2079,21 @@
   "request.currency_rate ⇨ 𝑓": {
      "prefix": "request.currency_rate",
      "body": [
-        "request.currency_rate(from = ${1| ,currency.AUD,currency.BTC,currency.CAD,currency.CHF,currency.ETH,currency.EUR,currency.GBP,currency.HKD,currency.INR,currency.JPY,currency.KRW,currency.MYR,currency.NOK,currency.NONE,currency.NZD,currency.RUB,currency.SEK,currency.SGD,currency.TRY,currency.USD,currency.USDT,currency.ZAR|}, to = ${2| ,currency.AUD,currency.BTC,currency.CAD,currency.CHF,currency.ETH,currency.EUR,currency.GBP,currency.HKD,currency.INR,currency.JPY,currency.KRW,currency.MYR,currency.NOK,currency.NONE,currency.NZD,currency.RUB,currency.SEK,currency.SGD,currency.TRY,currency.USD,currency.USDT,currency.ZAR|}${9:, ignore_invalid_currency = ${10| ,true,false|}}}) ${11}"
+        "request.currency_rate(from = ${1| ,currency.AUD,currency.BTC,currency.CAD,currency.CHF,currency.ETH,currency.EUR,currency.GBP,currency.HKD,currency.INR,currency.JPY,currency.KRW,currency.MYR,currency.NOK,currency.NONE,currency.NZD,currency.RUB,currency.SEK,currency.SGD,currency.TRY,currency.USD,currency.USDT,currency.ZAR|}, to = ${2| ,currency.AUD,currency.BTC,currency.CAD,currency.CHF,currency.ETH,currency.EUR,currency.GBP,currency.HKD,currency.INR,currency.JPY,currency.KRW,currency.MYR,currency.NOK,currency.NONE,currency.NZD,currency.RUB,currency.SEK,currency.SGD,currency.TRY,currency.USD,currency.USDT,currency.ZAR|}${9:, ignore_invalid_currency = ${10| ,true,false|}}) ${11}"
      ],
      "description": "Daily rate from A currency to B currency. ⇨ 𝑓 | request.currency_rate(from = simple string, to = simple string, ignore_invalid_currency = simple bool)   → series float"
   },
   "request.dividends ⇨ 𝑓": {
      "prefix": "request.dividends",
      "body": [
-        "request.dividends(ticker = ${1| ,syminfo.ticker,syminfo.tickerid|}${2:${3:, field = ${4| ,dividends.gross,divdends.net|}}${5:, gaps = ${6| ,barmerge.gaps_off,barmerge.gaps_on|}}${7:, lookahead =  ${8| ,barmerge.lookahead_off,barmerge.lookahead_on|}}${9:, ignore_invalid_symbol = ${10| ,true,false|}}}) ${11}"
+        "request.dividends(ticker = ${1| ,syminfo.ticker,syminfo.tickerid|}${2:${3:, field = ${4| ,dividends.gross,divdends.net|}}${5:, gaps = ${6| ,barmerge.gaps_off,barmerge.gaps_on|}}${7:, lookahead = ${8| ,barmerge.lookahead_off,barmerge.lookahead_on|}}${9:, ignore_invalid_symbol = ${10| ,true,false|}}}) ${11}"
      ],
      "description": "Dividends data for the specified symbol. ⇨ 𝑓 | request.dividends(ticker = string, field = string, gaps = barmerge_gaps, lookahead = barmerge_lookahead, ignore_invalid_symbol = bool) → series float"
   },
   "request.earnings ⇨ 𝑓": {
      "prefix": "request.earnings",
      "body": [
-        "request.earnings(ticker = ${1| ,syminfo.ticker,syminfo.tickerid|}${2:${3:, field = ${4| ,dividends.gross,divdends.net|}}${5:, gaps = ${6| ,barmerge.gaps_off,barmerge.gaps_on|}}${7:, lookahead =  ${8| ,barmerge.lookahead_off,barmerge.lookahead_on|}}${9:, ignore_invalid_symbol = ${10| ,true,false|}}}) ${11}"
+        "request.earnings(ticker = ${1| ,syminfo.ticker,syminfo.tickerid|}${2:${3:, field = ${4| ,dividends.gross,divdends.net|}}${5:, gaps = ${6| ,barmerge.gaps_off,barmerge.gaps_on|}}${7:, lookahead = ${8| ,barmerge.lookahead_off,barmerge.lookahead_on|}}${9:, ignore_invalid_symbol = ${10| ,true,false|}}}) ${11}"
      ],
      "description": "Earnings data for the specified symbol. ⇨ 𝑓 | request.earnings(ticker = string, field = string, gaps = barmerge_gaps, lookahead = barmerge_lookahead, ignore_invalid_symbol = bool) → series float"
   },
@@ -2100,7 +2107,7 @@
   "request.financial ⇨ 𝑓": {
      "prefix": "request.financial",
      "body": [
-        "request.financial(symbol = ${1| ,syminfo.ticker,syminfo.tickerid|}, financial_id = \"${2}\", gaps = ${3| ,barmerge.gaps_off,barmerge.gaps_on|}, period = ${3}${4:,ignore_invalid_symbol = ${5| ,true,false|}}) ${0}",
+        "request.financial(symbol = ${1| ,syminfo.ticker,syminfo.tickerid|}, financial_id = \"${2}\", gaps = ${3| ,barmerge.gaps_off,barmerge.gaps_on|}, period = ${3}${4:, ignore_invalid_symbol = ${5| ,true,false|}}) ${0}",
         "// Financial ID's https://www.tradingview.com/?solution=43000564727"
      ],
      "description": "Requests financial series for symbol. ⇨ 𝑓 | request.financial(symbol = string, financial_id = string, period = string, gaps = barmerge_gaps, ignore_invalid_symbol = bool, currency = input string) → series float"
@@ -2108,21 +2115,21 @@
   "request.quandl ⇨ 𝑓": {
      "prefix": "request.quandl",
      "body": [
-        "request.quandl(ticker = ${1| ,syminfo.ticker,syminfo.tickerid|}, gaps = ${2| ,barmerge.gaps_off,barmerge.gaps_on|}, index = ${3}${4:,ignore_invalid_symbol = ${5| ,true,false|}}) ${0}"
+        "request.quandl(ticker = ${1| ,syminfo.ticker,syminfo.tickerid|}, gaps = ${2| ,barmerge.gaps_off,barmerge.gaps_on|}, index = ${3}${4:, ignore_invalid_symbol = ${5| ,true,false|}}) ${0}"
      ],
      "description": "Requests Quandl data for a symbol. ⇨ 𝑓 | request.quandl(ticker = string, gaps = barmerge_gaps, index = int, ignore_invalid_symbol = bool) → series float"
   },
   "request.security ⇨ 𝑓": {
      "prefix": "request.security",
      "body": [
-        "request.security(symbol = ${1| ,syminfo.ticker,syminfo.tickerid|}, timeframe = \"${2}\", expression = ${3}${4:${5:, gaps = ${6| ,barmerge.gaps_off,barmerge.gaps_on|}}${7:,lookahead =  ${8| ,barmerge.lookahead_off,barmerge.lookahead_on|}}${9:,ignore_invalid_symbol = ${10| ,true,false|}}}) ${0}"
+        "request.security(symbol = ${1| ,syminfo.ticker,syminfo.tickerid|}, timeframe = \"${2}\", expression = ${3}${4:${5:, gaps = ${6| ,barmerge.gaps_off,barmerge.gaps_on|}}${7:, lookahead = ${8| ,barmerge.lookahead_off,barmerge.lookahead_on|}}${9:, ignore_invalid_symbol = ${10| ,true,false|}}}) ${0}"
      ],
      "description": "Request another symbol/resolution ⇨ 𝑓 | request.security(symbol = string, timeframe = string, expression = any, gaps = barmerge_gaps, lookahead = barmerge_lookahead, ignore_invalid_symbol = bool) → series float|int|bool|color"
   },
   "request.security_lower_tf ⇨ 𝑓": {
      "prefix": "request.security_lower_tf",
      "body": [
-        "request.security_lower_tf(symbol = ${1| ,syminfo.ticker,syminfo.tickerid|}, timeframe = ${2| ,timeframe.period,'1','2','3','5','7','10','15','30','60','90','120','180','240','360','480','D','2D','5D','W','2W','M','2M','6M','Y'|}, expression = ${3}${4:${5:,ignore_invalid_symbol = ${6| ,true,false|}}${7:, currency = ${8| ,syminfo.currency|}}}) ${0}"
+        "request.security_lower_tf(symbol = ${1| ,syminfo.ticker,syminfo.tickerid|}, timeframe = ${2| ,timeframe.period,'1','2','3','5','7','10','15','30','60','90','120','180','240','360','480','D','2D','5D','W','2W','M','2M','6M','Y'|}, expression = ${3}${4:${5:, ignore_invalid_symbol = ${6| ,true,false|}}${7:, currency = ${8| ,syminfo.currency|}}}) ${0}"
      ],
      "description": "Requests data from a specified symbol from a lower timeframe. ⇨ 𝑓 | security_lower_tf(symbol = string, timeframe = string, expression = any, ignore_invalid_symbol = bool, currency = string) → array<type>"
   },
@@ -2136,7 +2143,7 @@
   "request.splits ⇨ 𝑓": {
      "prefix": "request.splits",
      "body": [
-        "request.splits(ticker = ${1| ,syminfo.ticker,syminfo.tickerid|}, field = ${2|splits.denominator,splits.numerator|}${3:${4:,gaps = ${5| ,barmerge.gaps_off,barmerge.gaps_on|}}${6:,lookahead =  ${7| ,barmerge.lookahead_off,barmerge.lookahead_on|}}${8:,ignore_invalid_symbol = ${9| ,true,false|}}}) ${0}"
+        "request.splits(ticker = ${1| ,syminfo.ticker,syminfo.tickerid|}, field = ${2|splits.denominator,splits.numerator|}${3:${4:, gaps = ${5| ,barmerge.gaps_off,barmerge.gaps_on|}}${6:, lookahead = ${7| ,barmerge.lookahead_off,barmerge.lookahead_on|}}${8:, ignore_invalid_symbol = ${9| ,true,false|}}}) ${0}"
      ],
      "description": "Requests splits data for the specified symbol. ⇨ 𝑓 | request.splits(ticker = string, field = string, gaps = barmerge_gaps, lookahead = barmerge_lookahead, ignore_invalid_symbol = bool) → series float"
   },
@@ -3252,6 +3259,13 @@
      ],
      "description": "Ticker identifier for requesting Heikin Ashi bar values ⇨ 𝑓 | ticker.heikinashi(symbol = simple string) → simple string"
   },
+  "ticker.inherit ⇨ 𝑓": {
+   "prefix": "ticker.inherit",
+   "body": [
+      "ticker.inherit(from_tickerid = ${1| ,syminfo.tickerid|}, symbol = ${2| ,syminfo.tickerid|}) ${0}"
+   ],
+   "description": "Creates a ticker for the specified `symbol` with additional parameters inherited from the ticker ID passed into the function call. ⇨ 𝑓 | ticker.inherit(from_tickerid = string, symbol = string) → simple string"
+},
   "ticker.kagi ⇨ 𝑓": {
      "prefix": "ticker.kagi",
      "body": [
@@ -3322,6 +3336,13 @@
      ],
      "description": "Detects changes in the specified `timeframe`. ⇨ 𝑓 | timeframe.change(timeframe = string) → series bool"
   },
+  "timeframe.from_seconds ⇨ 𝑓": {
+   "prefix": "timeframe.from_seconds",
+   "body": [
+      "timeframe.from_seconds(seconds = ${1}) ${0}"
+   ],
+   "description": "Converts a number of seconds into a valid timeframe string. ⇨ 𝑓 | timeframe.from_seconds(seconds = int) → (simple|series) string"
+},
   "timeframe.in_seconds ⇨ 𝑓": {
      "prefix": "timeframe.in_seconds",
      "body": [

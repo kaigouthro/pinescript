@@ -160,6 +160,27 @@
         ],
         "description": "Day of week for current bar time in exchange timezone. | TYPE series int"
         },
+    "dividends.future_amount ⇨ 𝑥": {
+        "prefix": "dividends.future_amount",
+        "body": [
+            "dividends.future_amount$0"
+        ],
+        "description": "Payment amount of upcoming dividend in currency of current instrument. | TYPE series float"
+        },
+    "dividends.future_ex_date ⇨ 𝑥": {
+        "prefix": "dividends.future_ex_date",
+        "body": [
+            "dividends.future_ex_date$0"
+        ],
+        "description": "Ex-dividend date (Ex-date) of current instrument's next dividend payment. | TYPE series float"
+        },
+    "dividends.future_pay_date ⇨ 𝑥": {
+        "prefix": "dividends.future_pay_date",
+        "body": [
+            "dividends.future_pay_date$0"
+        ],
+        "description": "Payment date (Pay date) of current instrument's next dividend payment. | TYPE series float"
+        },
     "earnings.future_eps ⇨ 𝑥": {
         "prefix": "earnings.future_eps",
         "body": [

@@ -1,4 +1,4 @@
-*Version 3.1.0*
+*Version 3.1.3*
 # Snippet's Prefix's
 
 - [Snippet's Prefix's](#snippets-prefixs)
@@ -40,6 +40,9 @@
 |`close`                            |
 |`dayofmonth`                       |
 |`dayofweek`                        |
+|`dividends.future_amount` _**new!**_                    |
+|`dividends.future_ex_date` _**new!**_                   |
+|`dividends.future_pay_date` _**new!**_                  |
 |`earnings.future_eps`              |
 |`earnings.future_period_end_time`  |
 |`earnings.future_revenue`          |
@@ -281,6 +284,7 @@
 |`chart.point.copy`                        |
 |`chart.point.from_index`                  |
 |`chart.point.from_time`                   |
+|`chart.point.new` _**new!**_                                 |
 |`chart.point.now`                         |
 |`color.b`                                 |
 |`color.from_gradient`                     |
@@ -574,6 +578,7 @@
 |`table.set_frame_width`                   |
 |`table.set_position`                      |
 |`ticker.heikinashi`                       |
+|`ticker.inherit` _**new!**_                                 |
 |`ticker.kagi`                             |
 |`ticker.linebreak`                        |
 |`ticker.modify`                           |
@@ -584,6 +589,7 @@
 |`time`                                    |
 |`time_close`                              |
 |`timeframe.change`                        |
+|`timeframe.from_seconds` _**new!**_                         |
 |`timeframe.in_seconds`                    |
 |`timestamp`                               |
 |`timestamp.int`                           |
@@ -834,15 +840,19 @@
 |   `?:`       |
 |   `=`        |
 |   `and`      |
+|   `else`     |
+|   `else if`  |
 |   `export`   |
 |   `for`      |
 |   `if`       |
 |   `import`   |
+|   `method`   |
 |   `not`      |
 |   `or`       |
 |   `series`   |
 |   `simple`   |
 |   `switch`   |
+|   `type`     |
 |   `var`      |
 |   `varip`    |
 |   `while`    |

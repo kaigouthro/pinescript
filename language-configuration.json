@@ -21,6 +21,7 @@
         ["new<",">"],
         ["array<",">"],
         ["matrix<",">"],
+        ["map<",">"]
     ],
     // symbols that can be used to surround a selection
     "surroundingPairs": [
@@ -32,14 +33,22 @@
     ],
     "folding": {
         "markers": {
-          "start": "^\\s*//\\s*#?region\\b",
-          "end": "^\\s*//\\s*#?endregion\\b"
+            "start": "^\\s*//#region\\b",
+            "end": "^\\s*//#endregion\\b"
         }
     },
     "onEnterRules": [
         {
-          "beforeText": "^\\s*(?:type|for|if|else|while|switch)\\b.*?\\s*$",
-          "action": { "indent": "indent" }
+            "beforeText": "^(?:\\s*export\\s+)?\\s*(?:type)\\s+\\S+\\s*(?://.*)?$",
+            "action": { "indent": "indent" }
+        },
+        {
+            "beforeText": "^\\s*(?:for|if|while)\\s+\\S.*$",
+            "action": { "indent": "indent" }
+        },
+        {
+            "beforeText": "^\\s*(?:else|switch)(?:\\s+\\S.*)?\\s*(?://.*)?$",
+            "action": { "indent": "indent" }
         }
-      ]
+    ]
 }

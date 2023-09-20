@@ -452,7 +452,7 @@
           }
         },
         {
-          "match": "\\b(dividends)\\b(\\.)\\b(gross|net)\\b",
+          "match": "\\b(dividends)\\b(\\.)\\b(future_amount|future_ex_date|future_pay_date|gross|net)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -980,7 +980,7 @@
           }
         },
         {
-          "match": "\\b(box|color|label|line|linefill|table|ticker)\\b(\\.)\\b(new)\\b(?=\\s*\\()",
+          "match": "\\b(box|color|label|line|linefill|table|ticker|chart.point)\\b(\\.)\\b(new)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "keyword.operator.new.ps"
@@ -1313,7 +1313,7 @@
           }
         },
         {
-          "match": "\\b(ticker)\\b(\\.)\\b(heikinashi|kagi|linebreak|modify|pointfigure|renko|standard)\\b(?=\\s*\\()",
+          "match": "\\b(ticker)\\b(\\.)\\b(heikinashi|inherit|kagi|linebreak|modify|pointfigure|renko|standard)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "variable.other.object.property.ps"
@@ -1327,7 +1327,7 @@
           }
         },
         {
-          "match": "\\b(timeframe)\\b(\\.)\\b(change|in_seconds)\\b(?=\\s*\\()",
+          "match": "\\b(timeframe)\\b(\\.)\\b(change|from_seconds|in_seconds)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "variable.other.object.property.ps"
@@ -1350,6 +1350,7 @@
         {"include": "#label_fuctions"},
         {"include": "#line_fuctions"},
         {"include": "#linefill_fuctions"},
+        {"include": "#map_fuctions"},
         {"include": "#matrix_fuctions"},
         {"include": "#table_fuctions"},
         {"include": "#long_functions"},
@@ -1475,7 +1476,11 @@
           "name": "keyword.control.switch.ps"
         },
         {
-          "match": "\\b(in|continue|break|for|to|while|by)\\b",
+          "match": "\\b(in|continue|break|for|while|by)\\b",
+          "name": "keyword.control.loop.ps"
+        },
+        {
+          "match": "\\b(to)\\b(?!\\s*\\=)",
           "name": "keyword.control.loop.ps"
         },
         {
@@ -1491,7 +1496,7 @@
     "types":{
       "patterns": [
         {
-          "include": "#array_matrix_new"
+          "include": "#collection_new"
         },
         {
           "match": "\\b(export)\\b\\s+\\b(type)\\b\\s+\\b([a-zA-Z_]\\w*)\\b(?=\\s*(?:\\s*//.*)?$)",
@@ -1614,7 +1619,7 @@
         }
       ]
     },
-    "array_matrix_new":{
+    "collection_new":{
       "patterns": [
         {
           "match": "\\b(array|matrix)\\b\\s*(<)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
@@ -1623,6 +1628,17 @@
             "2":{"name":"punctuation.definition.typeparameters.begin.ps"},
             "3":{"name":"support.type.primitive.ps"},
             "4":{"name":"punctuation.definition.typeparameters.begin.ps"}
+          }
+        },
+        {
+          "match": "\\b(map)\\b\\s*(<)\\s*(int|float|bool|string|color)\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
+          "captures": {
+            "1":{"name":"support.type.primitive.ps"},
+            "2":{"name":"punctuation.definition.typeparameters.begin.ps"},
+            "3":{"name":"support.type.primitive.ps"},
+            "4":{"name":"punctuation.separator.comma.ps"},
+            "5":{"name":"support.type.primitive.ps"},
+            "6":{"name":"punctuation.definition.typeparameters.begin.ps"}
           }
         }
       ]
@@ -1647,7 +1663,7 @@
             "1":{
               "patterns": [
                 {"include": "#strings"},
-                {"include": "#array_matrix_new"},
+                {"include": "#collection_new"},
                 {"include": "#array_new"},
                 {"include": "#constants"},
                 {"include": "#support_type"},
@@ -1670,7 +1686,7 @@
             "1":{
               "patterns": [
                 {"include": "#strings"},
-                {"include": "#array_matrix_new"},
+                {"include": "#collection_new"},
                 {"include": "#array_new"},
                 {"include": "#constants"},
                 {"include": "#support_type"},
@@ -1693,7 +1709,7 @@
             "1":{
               "patterns": [
                 {"include": "#strings"},
-                {"include": "#array_matrix_new"},
+                {"include": "#collection_new"},
                 {"include": "#array_new"},
                 {"include": "#constants"},
                 {"include": "#support_type"},
@@ -1716,7 +1732,7 @@
             "1":{
               "patterns": [
                 {"include": "#strings"},
-                {"include": "#array_matrix_new"},
+                {"include": "#collection_new"},
                 {"include": "#array_new"},
                 {"include": "#constants"},
                 {"include": "#support_type"},
@@ -2381,6 +2397,133 @@
         }
       ]
     },
+    "map_fuctions":{
+      "patterns":[
+        {
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(put_all)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {
+                      "patterns": [
+                        {
+                          "match": "[a-zA-Z_]\\w*",
+                          "name":"variable.other.readwrite.ps"
+                        },
+                        {
+                          "match": "\\.",
+                          "name":"punctuation.accessor.ps"
+                        }
+                      ]
+                    },
+                    "2": {"name": "punctuation.accessor.ps"},
+                    "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
+                  }
+                }
+              ]
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3":{
+              "name": "variable.other.object.property.ps"
+            }
+          }
+        },
+        {
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(contains|get|put|remove)\\b(?=\\s*\\((?!\\s*\\)))",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {
+                      "patterns": [
+                        {
+                          "match": "[a-zA-Z_]\\w*",
+                          "name":"variable.other.readwrite.ps"
+                        },
+                        {
+                          "match": "\\.",
+                          "name":"punctuation.accessor.ps"
+                        }
+                      ]
+                    },
+                    "2": {"name": "punctuation.accessor.ps"},
+                    "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
+                  }
+                }
+              ]
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3":{
+              "name": "variable.other.object.property.ps"
+            }
+          }
+        },
+        {
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(clear|copy|keys|size|values)\\b(?=\\s*\\(\\s*\\))",
+          "captures": {
+            "1": {
+              "patterns": [
+                {
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {
+                      "patterns": [
+                        {
+                          "match": "[a-zA-Z_]\\w*",
+                          "name":"variable.other.readwrite.ps"
+                        },
+                        {
+                          "match": "\\.",
+                          "name":"punctuation.accessor.ps"
+                        }
+                      ]
+                    },
+                    "2": {"name": "punctuation.accessor.ps"},
+                    "3": {"name": "variable.other.readwrite.ps"}
+                  }
+                },
+                {
+                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+                  "captures": {
+                    "1": {"name": "punctuation.accessor.ps"},
+                    "2": {"name": "variable.other.readwrite.ps"}
+                  }
+                }
+              ]
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3":{
+              "name": "variable.other.object.property.ps"
+            }
+          }
+        }
+      ]
+    },
     "matrix_fuctions":{
       "patterns":[
         {
@@ -2678,8 +2821,17 @@
     },
     "support_type":{
       "patterns":[
+        {"include": "#primitive_type"},
         {
-          "match": "\\b(bool|box|float|int|string|label|line|linefill|table|simple|series|array|matrix)\\b",
+          "match": "\\b(box|color|label|line|linefill|table)\\b(?!\\s*\\=)",
+          "name": "support.type.primitive.ps"
+        }
+      ]
+    },
+    "primitive_type":{
+      "patterns":[
+        {
+          "match": "\\b(bool|float|int|string|simple|series|array|map|matrix|chart.point)\\b",
           "name": "support.type.primitive.ps"
         }
       ]
@@ -2721,7 +2873,11 @@
     "built_in_constants":{
       "patterns": [
         {
-          "match": "\\b(bar_index|close|dayofmonth|dayofweek|high|hl2|hlc3|hlcc4|hour|last_bar_index|last_bar_time|low|minute|month|na|ohlc4|open|second|time_close|time_tradingday|timenow|time|volume|weekofyear|year)\\b",
+          "match": "\\b(hour|minute|month|second|time|volume|year)\\b(?!\\s*\\=)",
+          "name": "support.constant.ps"
+        },
+        {
+          "match": "\\b(bar_index|close|dayofmonth|dayofweek|high|hl2|hlc3|hlcc4|last_bar_index|last_bar_time|low|na|ohlc4|open|time_close|time_tradingday|timenow|weekofyear)\\b",
           "name": "support.constant.ps"
         },
         {"include": "#strategy_openclose_trade"}

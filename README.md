@@ -88,10 +88,11 @@ The PineScript Helper extension supports the following file extensions:
 4. Hover over variables, functions, or keywords to view relevant reference manual information.
 
 ## Release Notes
-#### **3.1.2**
+#### **3.1.3**
 
-*11.09.2023 **Update*** 
-- Grammars for user-defined types and functions fixed
+*19.09.2023 **Update*** 
+- Grammars and snippets for built-in variables, functions and constants updated to Pinescript release September 2023
+- Minor bug fixed
 
 ## Contribution
 Contributions are welcome! Please feel free to submit a [pull request](https://github.com/salbert11/pinescript/pulls) in the GitHub repository.
@@ -104,4 +105,4 @@ This extension is released under the [MIT License](./LICENSE.md) .
 
 ---
 
-*Version 3.1.2*
+*Version 3.1.3*

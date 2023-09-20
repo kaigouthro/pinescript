@@ -1,5 +1,13 @@
 # Change Log
 
+#### **3.1.3**
+
+*19.09.2023 **Update*** 
+- Grammars and snippets for built-in variables, functions and constants updated to Pinescript release September 2023
+- Minor bug fixed
+
+---
+
 #### **3.1.2**
 
 *11.09.2023 **Update*** 

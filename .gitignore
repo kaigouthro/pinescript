@@ -12,3 +12,4 @@ webpack.config.js
 vsc-extension-quickstart.md
 *.vsix
 .vscode/settings.json
+*.orig
