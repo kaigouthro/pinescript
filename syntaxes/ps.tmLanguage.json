@@ -1345,14 +1345,14 @@
           "name": "variable.other.object.property.ps"
         },
         {"include": "#built_in_constants"},
-        {"include": "#array_fuctions"},
-        {"include": "#box_fuctions"},
-        {"include": "#label_fuctions"},
-        {"include": "#line_fuctions"},
-        {"include": "#linefill_fuctions"},
-        {"include": "#map_fuctions"},
-        {"include": "#matrix_fuctions"},
-        {"include": "#table_fuctions"},
+        {"include": "#array_methods"},
+        {"include": "#box_methods"},
+        {"include": "#label_methods"},
+        {"include": "#line_methods"},
+        {"include": "#linefill_methods"},
+        {"include": "#map_methods"},
+        {"include": "#matrix_methods"},
+        {"include": "#table_methods"},
         {"include": "#long_functions"},
         {
           "match": "\\b(fill)(?=\\s*\\((?!\\s*[\"'\\)]))",
@@ -1762,7 +1762,7 @@
         }
       ]
     },
-    "array_fuctions":{
+    "array_methods":{
       "patterns":[
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(max|min|sort_indices|sort|stdev)\\b(?=\\s*\\()",
@@ -1930,7 +1930,7 @@
         }
       ]
     },
-    "box_fuctions":{
+    "box_methods":{
       "patterns":[
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_bgcolor|set_border_color|set_border_style|set_border_width|set_bottom_right_point|set_bottom|set_extend|set_lefttop|set_left|set_rightbottom|set_right|set_text_color|set_text_font_family|set_text_halign|set_text_size|set_text_valign|set_text_wrap|set_top_left_point|set_top)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
@@ -2057,7 +2057,7 @@
         }
       ]
     },
-    "label_fuctions":{
+    "label_methods":{
       "patterns":[
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_size)\\b(?=\\s*\\()",
@@ -2225,7 +2225,7 @@
         }
       ]
     },
-    "line_fuctions":{
+    "line_methods":{
       "patterns":[
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(get_price|set_color|set_extend|set_first_point|set_second_point|set_style|set_width|set_x1|set_x2|set_xloc|set_xy1|set_xy2|set_y1|set_y2)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
@@ -2311,7 +2311,7 @@
         }
       ]
     },
-    "linefill_fuctions":{
+    "linefill_methods":{
       "patterns":[
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_color)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
@@ -2397,7 +2397,7 @@
         }
       ]
     },
-    "map_fuctions":{
+    "map_methods":{
       "patterns":[
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(put_all)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
@@ -2524,7 +2524,7 @@
         }
       ]
     },
-    "matrix_fuctions":{
+    "matrix_methods":{
       "patterns":[
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(add_col|add_row|remove_col|remove_row|sort|submatrix)\\b(?=\\s*\\()",
@@ -2692,7 +2692,7 @@
         }
       ]
     },
-    "table_fuctions":{
+    "table_methods":{
       "patterns":[
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_bgcolor|set_border_color|set_border_width|set_frame_color|set_frame_width)\\b(?=\\s*\\()",
