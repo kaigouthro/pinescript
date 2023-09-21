@@ -3,7 +3,7 @@
 #### **3.1.5**
 
 *21.09.2023 **Update*** 
-- Textmate scopes fixed for Types
+- Semantic token updated for matching scope naming general practices
 
 ---
 

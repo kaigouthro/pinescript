@@ -91,7 +91,7 @@ The PineScript Helper extension supports the following file extensions:
 #### **3.1.5**
 
 *21.09.2023 **Update*** 
-- Textmate scopes fixed for Types
+- Semantic token updated for matching scope naming general practices
 
 ## Contribution
 Contributions are welcome! Please feel free to submit a [pull request](https://github.com/salbert11/pinescript/pulls) in the GitHub repository.

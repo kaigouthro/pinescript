@@ -107,16 +107,16 @@
           "match": "(^\/\/)\\s(@)(description|function|param|returns|type|field)(.*)",
           "captures": {
             "0": {
-              "name": "variable.annotation.ps"
+              "name": "meta.annotation.ps"
             },
             "1": {
               "name": "comment.line.double-slash.ps"
             },
             "2": {
-              "name": "punctuation.section.embedded.begin.ps"
+              "name": "punctuation.definition.annotation.ps"
             },
             "3": {
-              "name": "token.package.ps"
+              "name": "meta.annotation.identifier.ps"
             },
             "4": {
               "name": "comment.line.double-slash.ps"
@@ -918,10 +918,10 @@
           "match": "\\b(array)\\b(\\.)\\b(abs|avg|binary_search_leftmost|binary_search_rightmost|binary_search|clear|concat|copy|covariance|every|fill|first|from|get|includes|indexof|insert|join|lastindexof|last|max|median|min|mode|new_bool|new_box|new_color|new_float|new_int|new_label|new_line|new_linefill|new_string|new_table|percentile_linear_interpolation|percentile_nearest_rank|percentrank|pop|push|range|remove|reverse|set|shift|size|slice|some|sort_indices|sort|standardize|stdev|sum|unshift|variance)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -932,10 +932,10 @@
           "match": "\\b(matrix)\\b(\\.)\\b(add_col|add_row|avg|columns|col|concat|copy|det|diff|eigenvalues|eigenvectors|elements_count|fill|get|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|kron|max|median|min|mode|mult|pinv|pow|rank|remove_col|remove_row|reshape|reverse|rows|row|set|sort|submatrix|sum|swap_columns|swap_rows|trace|transpose)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -946,7 +946,7 @@
           "match": "\\b(array|matrix)\\b(\\.)\\b(new)\\b\\s*(<)\\s*([a-zA-Z_][a-zA-Z0-9_\\.]*)\\s*(>)",
           "captures": {
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -955,13 +955,13 @@
               "name": "keyword.operator.new.ps"
             },
             "4": {
-              "name": "punctuation.definition.typeparameters.begin.ps"
+              "name": "punctuation.definition.generic.begin.ps"
             },
             "5": {
               "name": "support.type.primitive.ps"
             },
             "6": {
-              "name": "punctuation.definition.typeparameters.begin.ps"
+              "name": "punctuation.definition.generic.end.ps"
             }
           }
         },
@@ -969,10 +969,10 @@
           "match": "\\b(box)\\b(\\.)\\b(copy|delete|get_bottom|get_left|get_right|get_top|set_bgcolor|set_border_color|set_border_style|set_border_width|set_bottom_right_point|set_bottom|set_extend|set_lefttop|set_left|set_rightbottom|set_right|set_text_color|set_text_font_family|set_text_halign|set_text_size|set_text_valign|set_text_wrap|set_text|set_top_left_point|set_top)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -986,7 +986,7 @@
               "name": "keyword.operator.new.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -997,16 +997,16 @@
           "match": "\\b(chart)\\b(\\.)\\b(point)\\b(\\.)\\b(copy|from_index|from_time|now)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
             },
             "3": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "4": {
               "name": "punctuation.accessor.ps"
@@ -1017,10 +1017,10 @@
           "match": "\\b(color)\\b(\\.)\\b(rgb|b|from_gradient|g|r|t)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1031,10 +1031,10 @@
           "match": "\\b(input)\\b(\\.)\\b(bool|color|float|int|price|session|source|string|symbol|text_area|timeframe|time)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1045,10 +1045,10 @@
           "match": "\\b(label)\\b(\\.)\\b(copy|delete|get_text|get_x|get_y|set_color|set_point|set_size|set_style|set_text_font_family|set_textalign|set_textcolor|set_text|set_tooltip|set_xloc|set_xy|set_x|set_yloc|set_y)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1059,10 +1059,10 @@
           "match": "\\b(line)\\b(\\.)\\b(copy|delete|get_price|get_x1|get_x2|get_y1|get_y2|set_color|set_extend|set_first_point|set_second_point|set_style|set_width|set_x1|set_x2|set_xloc|set_xy1|set_xy2|set_y1|set_y2)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1073,10 +1073,10 @@
           "match": "\\b(linefill)\\b(\\.)\\b(delete|get_line1|get_line2|set_color)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1087,10 +1087,10 @@
           "match": "\\b(log)\\b(\\.)\\b(error|info|warning)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1101,10 +1101,10 @@
           "match": "\\b(map)\\b(\\.)\\b(clear|contains|copy|get|keys|put_all|put|remove|size|values)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1115,7 +1115,7 @@
           "match": "\\b(map)\\b(\\.)\\b(new)\\b\\s*(<)\\s*\\b(int|float|bool|string|color)\\b\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
           "captures": {
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1124,7 +1124,7 @@
               "name": "keyword.operator.new.ps"
             },
             "4": {
-              "name": "punctuation.definition.typeparameters.begin.ps"
+              "name": "punctuation.definition.generic.begin.ps"
             },
             "5": {
               "name": "support.type.primitive.ps"
@@ -1136,7 +1136,7 @@
               "name": "support.type.primitive.ps"
             },
             "8": {
-              "name": "punctuation.definition.typeparameters.begin.ps"
+              "name": "punctuation.definition.generic.end.ps"
             }
           }
         },
@@ -1144,10 +1144,10 @@
           "match": "\\b(math)\\b(\\.)\\b(abs|acos|asin|atan|avg|ceil|cos|exp|floor|log10|log|max|min|pow|random|round_to_mintick|round|sign|sin|sqrt|sum|tan|todegrees|toradians)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1158,10 +1158,10 @@
           "match": "\\b(request)\\b(\\.)\\b(currency_rate|dividends|earnings|economic|financial|quandl|security_lower_tf|security|seed|splits)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1172,10 +1172,10 @@
           "match": "\\b(runtime)\\b(\\.)\\b(error)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1186,10 +1186,10 @@
           "match": "\\b(str)\\b(\\.)\\b(contains|endswith|format_time|format|length|lower|match|pos|replace_all|replace|split|startswith|substring|tonumber|tostring|upper)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1200,16 +1200,16 @@
           "match": "\\b(strategy)\\b(\\.)\\b(closedtrades)\\b(\\.)\\b(commission|entry_bar_index|entry_comment|entry_id|entry_price|entry_time|exit_bar_index|exit_comment|exit_id|exit_price|exit_time|max_drawdown|max_runup|profit|size)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
             },
             "3": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "4": {
               "name": "punctuation.accessor.ps"
@@ -1220,16 +1220,16 @@
           "match": "\\b(strategy)\\b(\\.)\\b(opentrades)(\\.)\\b(commission|entry_bar_index|entry_comment|entry_id|entry_price|entry_time|max_drawdown|max_runup|profit|size)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
             },
             "3": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "4": {
               "name": "punctuation.accessor.ps"
@@ -1240,16 +1240,16 @@
           "match": "\\b(strategy)\\b(\\.)\\b(risk)\\b(\\.)\\b(allow_entry_in|max_cons_loss_days|max_drawdown|max_intraday_filled_orders|max_intraday_loss|max_position_size)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
             },
             "3": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "4": {
               "name": "punctuation.accessor.ps"
@@ -1260,10 +1260,10 @@
           "match": "\\b(strategy)\\b(\\.)\\b(cancel_all|cancel|close_all|close|convert_to_account|convert_to_symbol|entry|exit|order)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1274,10 +1274,10 @@
           "match": "\\b(syminfo)\\b(\\.)\\b(prefix|ticker)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1288,10 +1288,10 @@
           "match": "\\b(ta)\\b(\\.)\\b(alma|atr|barssince|bbw|bb|cci|change|cmo|cog|correlation|crossover|crossunder|cross|cum|dev|dmi|ema|falling|highestbars|highest|hma|kcw|kc|linreg|lowestbars|lowest|macd|max|median|mfi|min|mode|mom|percentile_linear_interpolation|percentile_nearest_rank|percentrank|pivot_point_levels|pivothigh|pivotlow|range|rising|rma|roc|rsi|sar|sma|stdev|stoch|supertrend|swma|tr|tsi|valuewhen|variance|vwap|vwma|wma|wpr)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1302,10 +1302,10 @@
           "match": "\\b(table)\\b(\\.)\\b(cell_set_bgcolor|cell_set_height|cell_set_text_color|cell_set_text_font_family|cell_set_text_halign|cell_set_text_size|cell_set_text_valign|cell_set_text|cell_set_tooltip|cell_set_width|cell|clear|delete|merge_cells|set_bgcolor|set_border_color|set_border_width|set_frame_color|set_frame_width|set_position)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1316,10 +1316,10 @@
           "match": "\\b(ticker)\\b(\\.)\\b(heikinashi|inherit|kagi|linebreak|modify|pointfigure|renko|standard)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1330,10 +1330,10 @@
           "match": "\\b(timeframe)\\b(\\.)\\b(change|from_seconds|in_seconds)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
-              "name": "variable.other.object.ps"
+              "name": "support.function.ps"
             },
             "2": {
               "name": "punctuation.accessor.ps"
@@ -1342,7 +1342,7 @@
         },
         {
           "match": "\\b(alert|alertcondition|barcolor|bgcolor|bool|box|color|dayofmonth|dayofweek|fixnan|float|hline|hour|input|int|label|line|linefill|max_bars_back|minute|month|na|nz|plot|plotarrow|plotbar|plotcandle|plotchar|plotshape|second|string|table|time_close|timestamp|time|weekofyear|year)(?=\\s*\\((?!\\s*\\)))",
-          "name": "variable.other.object.property.ps"
+          "name": "support.function.property.ps"
         },
         {"include": "#built_in_constants"},
         {"include": "#array_methods"},
@@ -1356,7 +1356,7 @@
         {"include": "#long_functions"},
         {
           "match": "\\b(fill)(?=\\s*\\((?!\\s*[\"'\\)]))",
-          "name": "variable.other.object.property.ps"
+          "name": "support.function.property.ps"
         },
         {
           "match": "(?:([\\w\\.]*))(\\.)\\b(new)\\b(?=\\s*\\()",
@@ -1625,20 +1625,20 @@
           "match": "\\b(array|matrix)\\b\\s*(<)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
           "captures": {
             "1":{"name":"support.type.primitive.ps"},
-            "2":{"name":"punctuation.definition.typeparameters.begin.ps"},
+            "2":{"name":"punctuation.definition.generic.begin.ps"},
             "3":{"name":"support.type.primitive.ps"},
-            "4":{"name":"punctuation.definition.typeparameters.begin.ps"}
+            "4":{"name":"punctuation.definition.generic.end.ps"}
           }
         },
         {
           "match": "\\b(map)\\b\\s*(<)\\s*(int|float|bool|string|color)\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
           "captures": {
             "1":{"name":"support.type.primitive.ps"},
-            "2":{"name":"punctuation.definition.typeparameters.begin.ps"},
+            "2":{"name":"punctuation.definition.generic.begin.ps"},
             "3":{"name":"support.type.primitive.ps"},
             "4":{"name":"punctuation.separator.comma.ps"},
             "5":{"name":"support.type.primitive.ps"},
-            "6":{"name":"punctuation.definition.typeparameters.begin.ps"}
+            "6":{"name":"punctuation.definition.generic.end.ps"}
           }
         }
       ]
@@ -1801,7 +1801,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -1842,7 +1842,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -1883,7 +1883,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -1924,7 +1924,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         }
@@ -1969,7 +1969,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2010,7 +2010,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2051,7 +2051,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         }
@@ -2096,7 +2096,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2137,7 +2137,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2178,7 +2178,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2219,7 +2219,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         }
@@ -2264,7 +2264,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2305,7 +2305,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         }
@@ -2350,7 +2350,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2391,7 +2391,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         }
@@ -2436,7 +2436,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2477,7 +2477,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2518,7 +2518,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         }
@@ -2563,7 +2563,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2604,7 +2604,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2645,7 +2645,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2686,7 +2686,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         }
@@ -2731,7 +2731,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2772,7 +2772,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         },
@@ -2813,7 +2813,7 @@
               "name": "punctuation.accessor.ps"
             },
             "3":{
-              "name": "variable.other.object.property.ps"
+              "name": "support.function.property.ps"
             }
           }
         }
