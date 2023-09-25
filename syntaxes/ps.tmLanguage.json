@@ -312,7 +312,7 @@
     "constants": {
       "patterns": [
         {
-          "match": "\\b(adjustment)\\b(\\.)\\b(dividends|none|splits)\\b",
+          "match": "(?<![\\.]\\s*)\\b(adjustment)\\b(\\.)\\b(dividends|none|splits)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -326,7 +326,7 @@
           }
         },
         {
-          "match": "\\b(alert)\\b(\\.)\\b(freq_all|freq_once_per_bar|freq_once_per_bar_close)\\b",
+          "match": "(?<![\\.]\\s*)\\b(alert)\\b(\\.)\\b(freq_all|freq_once_per_bar|freq_once_per_bar_close)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -340,7 +340,7 @@
           }
         },
         {
-          "match": "\\b(barmerge)\\b(\\.)\\b(gaps_off|gaps_on|lookahead_off|lookahead_on)\\b",
+          "match": "(?<![\\.]\\s*)\\b(barmerge)\\b(\\.)\\b(gaps_off|gaps_on|lookahead_off|lookahead_on)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -354,7 +354,7 @@
           }
         },
         {
-          "match": "\\b(barstate)\\b(\\.)\\b(islastconfirmedhistory|isconfirmed|isfirst|ishistory|islast|isnew|isrealtime)\\b",
+          "match": "(?<![\\.]\\s*)\\b(barstate)\\b(\\.)\\b(islastconfirmedhistory|isconfirmed|isfirst|ishistory|islast|isnew|isrealtime)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -368,7 +368,7 @@
           }
         },
         {
-          "match": "\\b(box)\\b(\\.)\\b(all)\\b",
+          "match": "(?<![\\.]\\s*)\\b(box)\\b(\\.)\\b(all)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -382,7 +382,7 @@
           }
         },
         {
-          "match": "\\b(chart)\\b(\\.)\\b(bg_color|fg_color|is_heikinashi|is_kagi|is_linebreak|is_pnf|is_range|is_renko|is_standard|left_visible_bar_time|right_visible_bar_time)\\b",
+          "match": "(?<![\\.]\\s*)\\b(chart)\\b(\\.)\\b(bg_color|fg_color|is_heikinashi|is_kagi|is_linebreak|is_pnf|is_range|is_renko|is_standard|left_visible_bar_time|right_visible_bar_time)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -396,7 +396,7 @@
           }
         },
         {
-          "match": "\\b(color)\\b(\\.)\\b(aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|white|yellow)\\b",
+          "match": "(?<![\\.]\\s*)\\b(color)\\b(\\.)\\b(aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|white|yellow)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -410,7 +410,7 @@
           }
         },
         {
-          "match": "\\b(currency)\\b(\\.)\\b(AUD|BTC|CAD|CHF|ETH|EUR|GBP|HKD|INR|JPY|KRW|MYR|NOK|NONE|NZD|RUB|SEK|SGD|TRY|USDT|USD|ZAR)\\b",
+          "match": "(?<![\\.]\\s*)\\b(currency)\\b(\\.)\\b(AUD|BTC|CAD|CHF|ETH|EUR|GBP|HKD|INR|JPY|KRW|MYR|NOK|NONE|NZD|RUB|SEK|SGD|TRY|USDT|USD|ZAR)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -424,7 +424,7 @@
           }
         },
         {
-          "match": "\\b(dayofweek)\\b(\\.)\\b(friday|monday|saturday|sunday|thursday|tuesday|wednesday)\\b",
+          "match": "(?<![\\.]\\s*)\\b(dayofweek)\\b(\\.)\\b(friday|monday|saturday|sunday|thursday|tuesday|wednesday)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -438,7 +438,7 @@
           }
         },
         {
-          "match": "\\b(display)\\b(\\.)\\b(all|data_window|none|pane|price_scale|status_line)\\b",
+          "match": "(?<![\\.]\\s*)\\b(display)\\b(\\.)\\b(all|data_window|none|pane|price_scale|status_line)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -452,7 +452,7 @@
           }
         },
         {
-          "match": "\\b(dividends)\\b(\\.)\\b(future_amount|future_ex_date|future_pay_date|gross|net)\\b",
+          "match": "(?<![\\.]\\s*)\\b(dividends)\\b(\\.)\\b(future_amount|future_ex_date|future_pay_date|gross|net)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -466,7 +466,7 @@
           }
         },
         {
-          "match": "\\b(earnings)\\b(\\.)\\b(actual|estimate|standardized|future_eps|future_period_end_time|future_revenue|future_time)\\b",
+          "match": "(?<![\\.]\\s*)\\b(earnings)\\b(\\.)\\b(actual|estimate|standardized|future_eps|future_period_end_time|future_revenue|future_time)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -480,7 +480,7 @@
           }
         },
         {
-          "match": "\\b(extend)\\b(\\.)\\b(both|left|none|right)\\b",
+          "match": "(?<![\\.]\\s*)\\b(extend)\\b(\\.)\\b(both|left|none|right)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -494,7 +494,7 @@
           }
         },
         {
-          "match": "\\b(font)\\b(\\.)\\b(family_default|family_monospace)\\b",
+          "match": "(?<![\\.]\\s*)\\b(font)\\b(\\.)\\b(family_default|family_monospace)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -508,7 +508,7 @@
           }
         },
         {
-          "match": "\\b(format)\\b(\\.)\\b(inherit|mintick|percent|price|volume)\\b",
+          "match": "(?<![\\.]\\s*)\\b(format)\\b(\\.)\\b(inherit|mintick|percent|price|volume)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -522,7 +522,7 @@
           }
         },
         {
-          "match": "\\b(hline)\\b(\\.)\\b(style_dashed|style_dotted|style_solid)\\b",
+          "match": "(?<![\\.]\\s*)\\b(hline)\\b(\\.)\\b(style_dashed|style_dotted|style_solid)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -536,7 +536,7 @@
           }
         },
         {
-          "match": "\\b(label)\\b(\\.)\\b(all|style_arrowdown|style_arrowup|style_circle|style_cross|style_diamond|style_flag|style_label_center|style_label_down|style_label_left|style_label_lower_left|style_label_lower_right|style_label_right|style_label_up|style_label_upper_left|style_label_upper_right|style_none|style_square|style_text_outline|style_triangledown|style_triangleup|style_xcross)\\b",
+          "match": "(?<![\\.]\\s*)\\b(label)\\b(\\.)\\b(all|style_arrowdown|style_arrowup|style_circle|style_cross|style_diamond|style_flag|style_label_center|style_label_down|style_label_left|style_label_lower_left|style_label_lower_right|style_label_right|style_label_up|style_label_upper_left|style_label_upper_right|style_none|style_square|style_text_outline|style_triangledown|style_triangleup|style_xcross)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -550,7 +550,7 @@
           }
         },
         {
-          "match": "\\b(line)\\b(\\.)\\b(all|style_arrow_both|style_arrow_left|style_arrow_right|style_dashed|style_dotted|style_solid)\\b",
+          "match": "(?<![\\.]\\s*)\\b(line)\\b(\\.)\\b(all|style_arrow_both|style_arrow_left|style_arrow_right|style_dashed|style_dotted|style_solid)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -564,7 +564,7 @@
           }
         },
         {
-          "match": "\\b(linefill)(\\.)(all)\\b",
+          "match": "(?<![\\.]\\s*)\\b(linefill)(\\.)(all)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -578,7 +578,7 @@
           }
         },
         {
-          "match": "\\b(location)\\b(\\.)\\b(abovebar|absolute|belowbar|bottom|top)\\b",
+          "match": "(?<![\\.]\\s*)\\b(location)\\b(\\.)\\b(abovebar|absolute|belowbar|bottom|top)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -592,7 +592,7 @@
           }
         },
         {
-          "match": "\\b(math)\\b(\\.)\\b(e|phi|pi|rphi)\\b",
+          "match": "(?<![\\.]\\s*)\\b(math)\\b(\\.)\\b(e|phi|pi|rphi)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -606,7 +606,7 @@
           }
         },
         {
-          "match": "\\b(order)\\b(\\.)\\b(ascending|descending)\\b",
+          "match": "(?<![\\.]\\s*)\\b(order)\\b(\\.)\\b(ascending|descending)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -620,7 +620,7 @@
           }
         },
         {
-          "match": "\\b(plot)\\b(\\.)\\b(style_areabr|style_area|style_circles|style_columns|style_cross|style_histogram|style_linebr|style_line|style_stepline_diamond|style_steplinebr|style_stepline)\\b",
+          "match": "(?<![\\.]\\s*)\\b(plot)\\b(\\.)\\b(style_areabr|style_area|style_circles|style_columns|style_cross|style_histogram|style_linebr|style_line|style_stepline_diamond|style_steplinebr|style_stepline)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -634,7 +634,7 @@
           }
         },
         {
-          "match": "\\b(position)\\b(\\.)\\b(bottom_center|bottom_left|bottom_right|middle_center|middle_left|middle_right|top_center|top_left|top_right)\\b",
+          "match": "(?<![\\.]\\s*)\\b(position)\\b(\\.)\\b(bottom_center|bottom_left|bottom_right|middle_center|middle_left|middle_right|top_center|top_left|top_right)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -648,7 +648,7 @@
           }
         },
         {
-          "match": "\\b(scale)\\b(\\.)\\b(left|none|right)\\b",
+          "match": "(?<![\\.]\\s*)\\b(scale)\\b(\\.)\\b(left|none|right)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -662,7 +662,7 @@
           }
         },
         {
-          "match": "\\b(session)\\b(\\.)\\b(extended|isfirstbar_regular|isfirstbar|islastbar_regular|islastbar|ismarket|ispostmarket|ispremarket|regular)\\b",
+          "match": "(?<![\\.]\\s*)\\b(session)\\b(\\.)\\b(extended|isfirstbar_regular|isfirstbar|islastbar_regular|islastbar|ismarket|ispostmarket|ispremarket|regular)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -676,7 +676,7 @@
           }
         },
         {
-          "match": "\\b(shape)\\b(\\.)\\b(arrowdown|arrowup|circle|cross|diamond|flag|labeldown|labelup|square|triangledown|triangleup|xcross)\\b",
+          "match": "(?<![\\.]\\s*)\\b(shape)\\b(\\.)\\b(arrowdown|arrowup|circle|cross|diamond|flag|labeldown|labelup|square|triangledown|triangleup|xcross)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -690,7 +690,7 @@
           }
         },
         {
-          "match": "\\b(size)\\b(\\.)\\b(auto|huge|large|normal|small|tiny)\\b",
+          "match": "(?<![\\.]\\s*)\\b(size)\\b(\\.)\\b(auto|huge|large|normal|small|tiny)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -704,7 +704,7 @@
           }
         },
         {
-          "match": "\\b(splits)\\b(\\.)\\b(denominator|numerator)\\b",
+          "match": "(?<![\\.]\\s*)\\b(splits)\\b(\\.)\\b(denominator|numerator)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -718,7 +718,7 @@
           }
         },
         {
-          "match": "\\b(strategy)\\b(\\.)\\b(account_currency|cash|equity|eventrades|fixed|grossloss|grossprofit|initial_capital|long|losstrades|margin_liquidation_price|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown|max_runup|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b",
+          "match": "(?<![\\.]\\s*)\\b(strategy)\\b(\\.)\\b(account_currency|cash|equity|eventrades|fixed|grossloss|grossprofit|initial_capital|long|losstrades|margin_liquidation_price|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown|max_runup|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -732,27 +732,7 @@
           }
         },
         {
-          "match": "\\b(strategy)\\b(\\.)\\b(commission)\\b(\\.)\\b(cash_per_contract|cash_per_order|percent)\\b",
-          "captures": {
-            "0": {
-              "name": "support.constant.property.ps"
-            },
-            "1": {
-              "name": "support.constant.ps"
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3": {
-              "name": "support.constant.ps"
-            },
-            "4": {
-              "name": "punctuation.accessor.ps"
-            }
-          }
-        },
-        {
-          "match": "\\b(strategy)\\b(\\.)\\b(direction)\\b(\\.)\\b(all|long|short)\\b",
+          "match": "(?<![\\.]\\s*)\\b(strategy)\\b(\\.)\\b(commission)\\b(\\.)\\b(cash_per_contract|cash_per_order|percent)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -772,7 +752,7 @@
           }
         },
         {
-          "match": "\\b(strategy)\\b(\\.)\\b(oca)(\\.)\\b(cancel|none|reduce)\\b",
+          "match": "(?<![\\.]\\s*)\\b(strategy)\\b(\\.)\\b(direction)\\b(\\.)\\b(all|long|short)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -792,7 +772,27 @@
           }
         },
         {
-          "match": "\\b(syminfo)\\b(\\.)\\b(basecurrency|country|currency|description|industry|minmove|mintick|pointvalue|prefix|pricescale|root|sector|session|tickerid|ticker|timezone|type|volumetype)\\b",
+          "match": "(?<![\\.]\\s*)\\b(strategy)\\b(\\.)\\b(oca)(\\.)\\b(cancel|none|reduce)\\b",
+          "captures": {
+            "0": {
+              "name": "support.constant.property.ps"
+            },
+            "1": {
+              "name": "support.constant.ps"
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3": {
+              "name": "support.constant.ps"
+            },
+            "4": {
+              "name": "punctuation.accessor.ps"
+            }
+          }
+        },
+        {
+          "match": "(?<![\\.]\\s*)\\b(syminfo)\\b(\\.)\\b(basecurrency|country|currency|description|industry|minmove|mintick|pointvalue|prefix|pricescale|root|sector|session|tickerid|ticker|timezone|type|volumetype)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -806,7 +806,7 @@
           }
         },
         {
-          "match": "\\b(ta)\\b(\\.)\\b(accdist|iii|nvi|obv|pvi|pvt|tr|vwap|wad|wvad)\\b",
+          "match": "(?<![\\.]\\s*)\\b(ta)\\b(\\.)\\b(accdist|iii|nvi|obv|pvi|pvt|tr|vwap|wad|wvad)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -820,7 +820,7 @@
           }
         },
         {
-          "match": "\\b(table)\\b(\\.)\\b(all)\\b",
+          "match": "(?<![\\.]\\s*)\\b(table)\\b(\\.)\\b(all)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -834,7 +834,7 @@
           }
         },
         {
-          "match": "\\b(text)\\b(\\.)\\b(align_bottom|align_center|align_left|align_right|align_top|wrap_auto|wrap_none)\\b",
+          "match": "(?<![\\.]\\s*)\\b(text)\\b(\\.)\\b(align_bottom|align_center|align_left|align_right|align_top|wrap_auto|wrap_none)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -848,7 +848,7 @@
           }
         },
         {
-          "match": "\\b(timeframe)\\b(\\.)\\b(isdaily|isdwm|isintraday|isminutes|ismonthly|isseconds|isweekly|multiplier|period)\\b",
+          "match": "(?<![\\.]\\s*)\\b(timeframe)\\b(\\.)\\b(isdaily|isdwm|isintraday|isminutes|ismonthly|isseconds|isweekly|multiplier|period)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -862,7 +862,7 @@
           }
         },
         {
-          "match": "\\b(xloc)\\b(\\.)\\b(bar_index|bar_time)\\b",
+          "match": "(?<![\\.]\\s*)\\b(xloc)\\b(\\.)\\b(bar_index|bar_time)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -876,7 +876,7 @@
           }
         },
         {
-          "match": "\\b(yloc)\\b(\\.)\\b(abovebar|belowbar|price)\\b",
+          "match": "(?<![\\.]\\s*)\\b(yloc)\\b(\\.)\\b(abovebar|belowbar|price)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -911,7 +911,7 @@
       "patterns": [
         {"include": "#keywords"},
         {
-          "match": "^\\b(indicator|library|strategy)?(?=\\s*\\()",
+          "match": "^\\s*\\b(indicator|library|strategy)(?=\\s*\\()",
           "name": "storage.type.class.ps"
         },
         {
@@ -943,7 +943,7 @@
           }
         },
         {
-          "match": "\\b(array|matrix)\\b(\\.)\\b(new)\\b\\s*(<)\\s*([a-zA-Z_][a-zA-Z0-9_\\.]*)\\s*(>)",
+          "match": "(?<![\\.]\\s*)\\b(array|matrix)\\b(\\.)\\b(new)\\b\\s*(<)\\s*([a-zA-Z_][a-zA-Z0-9_\\.]*)\\s*(>)(?=\\s*\\()",
           "captures": {
             "1": {
               "name": "support.function.ps"
@@ -1112,7 +1112,7 @@
           }
         },
         {
-          "match": "\\b(map)\\b(\\.)\\b(new)\\b\\s*(<)\\s*\\b(int|float|bool|string|color)\\b\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
+          "match": "(?<![\\.]\\s*)\\b(map)\\b(\\.)\\b(new)\\b\\s*(<)\\s*\\b(int|float|bool|string|color)\\b\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)(?=\\s*\\()",
           "captures": {
             "1": {
               "name": "support.function.ps"
@@ -1341,7 +1341,7 @@
           }
         },
         {
-          "match": "\\b(alert|alertcondition|barcolor|bgcolor|bool|box|color|dayofmonth|dayofweek|fixnan|float|hline|hour|input|int|label|line|linefill|max_bars_back|minute|month|na|nz|plot|plotarrow|plotbar|plotcandle|plotchar|plotshape|second|string|table|time_close|timestamp|time|weekofyear|year)(?=\\s*\\((?!\\s*\\)))",
+          "match": "(?<![\\.]\\s*)\\b(alert|alertcondition|barcolor|bgcolor|bool|box|color|dayofmonth|dayofweek|fixnan|float|hline|hour|input|int|label|line|linefill|max_bars_back|minute|month|na|nz|plot|plotarrow|plotbar|plotcandle|plotchar|plotshape|second|string|table|time_close|timestamp|time|weekofyear|year)(?=\\s*\\((?!\\s*\\)))",
           "name": "support.function.property.ps"
         },
         {"include": "#built_in_constants"},
@@ -1355,7 +1355,7 @@
         {"include": "#table_methods"},
         {"include": "#long_functions"},
         {
-          "match": "\\b(fill)(?=\\s*\\((?!\\s*[\"'\\)]))",
+          "match": "(?<![\\.]\\s*)\\b(fill)(?=\\s*\\((?!\\s*[\"'\\)]))",
           "name": "support.function.property.ps"
         },
         {
@@ -1522,7 +1522,7 @@
     "variables": {
       "patterns": [
         {
-          "match": "\\b([\\w\\.]+)(\\s*\\[\\s*\\])?\\s+([a-zA-Z_]\\w*)\\s*(?=\\=)(?!\\=\\=)",
+          "match": "\\b([\\w\\.]+)\\b(\\s*\\[\\s*\\])?\\s+([a-zA-Z_]\\w*)\\s*(?=\\=)(?!\\=\\=)",
           "captures": {
             "1":{"patterns": [
               {"include": "#keywords"},
@@ -1541,7 +1541,7 @@
           "name": "variable.other.readwrite.ps"
         },
         {
-          "match": "^\\s*\\b([\\w\\.]+)(\\s*\\[\\s*\\])?\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=(?:\\s*//.*)?$)",
+          "match": "^\\s*\\b([\\w\\.]+)\\b(\\s*\\[\\s*\\])?\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=(?:\\s*//.*)?$)",
           "captures": {
             "1":{"patterns": [
               {"include": "#keywords"},
@@ -1622,7 +1622,7 @@
     "collection_new":{
       "patterns": [
         {
-          "match": "\\b(array|matrix)\\b\\s*(<)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
+          "match": "(?<![\\.]\\s*)\\b(array|matrix)\\b\\s*(<)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
           "captures": {
             "1":{"name":"support.type.primitive.ps"},
             "2":{"name":"punctuation.definition.generic.begin.ps"},
@@ -1631,7 +1631,7 @@
           }
         },
         {
-          "match": "\\b(map)\\b\\s*(<)\\s*(int|float|bool|string|color)\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
+          "match": "(?<![\\.]\\s*)\\b(map)\\b\\s*(<)\\s*(int|float|bool|string|color)\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
           "captures": {
             "1":{"name":"support.type.primitive.ps"},
             "2":{"name":"punctuation.definition.generic.begin.ps"},
@@ -1646,7 +1646,7 @@
     "array_new":{
       "patterns": [
         {
-          "match": "\\b([a-zA-Z_][\\w\\.]*)\\s*(\\[\\])",
+          "match": "\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(\\[\\s*\\])",
           "captures": {
             "0":{"name":"support.type.primitive.ps"},
             "1":{"name":"support.type.primitive.ps"},
@@ -1681,7 +1681,7 @@
           }
         },
         {
-          "match": "(?<=^(?:\\s*export\\s*)?(?:\\s*method\\s*)?\\b\\w+\\s*\\()\\b((?:\\s*\\b[\\w][^\\(\\)]*\\s*\\,)*\\s*(?:\\b[\\w\\.\\<\\>\\[\\]]+\\s+\\b\\w+\\s*(?:\\=\\s*[^\\(\\)\\s]*)?)(?:\\s*\\,\\s*\\b[\\w][^\\(\\)]*)*)(?=\\,\\s*(?://.*)?$)",
+          "match": "(?<=^(?:\\s*export\\s*)?(?:\\s*method\\s*)?\\b\\w+\\s*\\()\\b((?:\\s*\\b[\\w][^\\(\\)]*\\s*\\,)*\\s*(?:\\b[\\w\\.]+(?:(?:\\s*\\<\\s*[\\w\\.]+\\s*\\>\\s*)|\\s*\\[\\s*\\]\\s*)?\\s+\\b\\w+\\s*(?:\\=\\s*[^\\(\\)\\s]*)?)(?:\\s*\\,\\s*\\b[\\w][^\\(\\)]*)*)(?=\\,\\s*(?://.*)?$)",
           "captures": {
             "1":{
               "patterns": [
@@ -1704,7 +1704,7 @@
           }
         },
         {
-          "match": "(?<=^\\s*)\\b((?:\\s*\\b[\\w][^\\(\\)]*\\s*\\,)*\\s*(?:\\b[\\w\\.\\<\\>\\[\\]]+\\s+\\b\\w+\\s*(?:\\=\\s*[^\\(\\)\\s]*)?)(?:\\s*\\,\\s*\\b[\\w][^\\(\\)]*)*)(?=\\,\\s*(?://.*)?$)",
+          "match": "(?<=^\\s*)\\b((?:\\s*\\b[\\w][^\\(\\)]*\\s*\\,)*\\s*(?:\\b[\\w\\.]+(?:(?:\\s*\\<\\s*[\\w\\.]+\\s*\\>\\s*)|\\s*\\[\\s*\\]\\s*)?\\s+\\b\\w+\\s*(?:\\=\\s*[^\\(\\)\\s]*)?)(?:\\s*\\,\\s*\\b[\\w][^\\(\\)]*)*)(?=\\,\\s*(?://.*)?$)",
           "captures": {
             "1":{
               "patterns": [
@@ -2855,7 +2855,7 @@
     "strategy_openclose_trade":{
       "patterns": [
         {
-          "match": "\\b(strategy)\\b(\\.)\\b(opentrades|closedtrades)\\b",
+          "match": "(?<![\\.]\\s*)\\b(strategy)\\b(\\.)\\b(opentrades|closedtrades)\\b",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -2873,11 +2873,11 @@
     "built_in_constants":{
       "patterns": [
         {
-          "match": "\\b(hour|minute|month|second|time|volume|year)\\b(?!\\s*\\=)",
+          "match": "(?<![\\.]\\s*)\\b(hour|minute|month|second|time|volume|year)\\b(?!\\s*\\=|\\()",
           "name": "support.constant.ps"
         },
         {
-          "match": "\\b(bar_index|close|dayofmonth|dayofweek|high|hl2|hlc3|hlcc4|last_bar_index|last_bar_time|low|na|ohlc4|open|time_close|time_tradingday|timenow|weekofyear)\\b",
+          "match": "(?<![\\.]\\s*)\\b(bar_index|close|dayofmonth|dayofweek|high|hl2|hlc3|hlcc4|last_bar_index|last_bar_time|low|na|ohlc4|open|time_close|time_tradingday|timenow|weekofyear)\\b(?!\\s*\\()",
           "name": "support.constant.ps"
         },
         {"include": "#strategy_openclose_trade"}
