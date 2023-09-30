@@ -5,10 +5,13 @@
     {"include": "#comments"},
     {"include": "#imports"},
     {"include": "#strings"},
+    {"include": "#hover_function_parameters"},
     {"include": "#constants"},
-    {"include": "#functions"},
-    {"include": "#types"},
     {"include": "#keywords"},
+    {"include": "#functions"},
+    {"include": "#long_functions"},
+    {"include": "#user_defined_functions"},
+    {"include": "#types"},
     {"include": "#variables"},
     {"include": "#operators"},
     {"include": "#parameters"}
@@ -913,7 +916,6 @@
     },
     "functions": {
       "patterns": [
-        {"include": "#keywords"},
         {
           "match": "^\\s*\\b(indicator|library|strategy)(?=\\s*\\()",
           "name": "storage.type.class.ps"
@@ -947,7 +949,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(array|matrix)\\b(\\.)\\b(new)\\b\\s*(<)\\s*([a-zA-Z_][a-zA-Z0-9_\\.]*)\\s*(>)(?=\\s*\\()",
+          "match": "(?<![\\.]\\s*)\\b(array|matrix)\\b(\\.)\\b(new)\\b\\s*(<)\\s*([a-zA-Z_][a-zA-Z0-9_\\.]*)\\b\\s*(>)(?=\\s*\\()",
           "captures": {
             "1": {
               "name": "support.function.ps"
@@ -1116,7 +1118,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(map)\\b(\\.)\\b(new)\\b\\s*(<)\\s*\\b(int|float|bool|string|color)\\b\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)(?=\\s*\\()",
+          "match": "(?<![\\.]\\s*)\\b(map)\\b(\\.)\\b(new)\\b\\s*(<)\\s*\\b([a-zA-Z_]+)\\b\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)(?=\\s*\\()",
           "captures": {
             "1": {
               "name": "support.function.ps"
@@ -1357,11 +1359,14 @@
         {"include": "#map_methods"},
         {"include": "#matrix_methods"},
         {"include": "#table_methods"},
-        {"include": "#long_functions"},
         {
           "match": "(?<![\\.]\\s*)\\b(fill)(?=\\s*\\((?!\\s*[\"'\\)]))",
           "name": "support.function.property.ps"
-        },
+        }      
+      ]
+    },
+    "user_defined_functions": {
+        "patterns": [
         {
           "match": "(?:([\\w\\.]*))(\\.)\\b(new)\\b(?=\\s*\\()",
           "captures": {
@@ -1449,7 +1454,7 @@
           "name": "entity.name.function.ps"
         },
         {
-          "match": "(\\()(\\))\\s*(=>)",
+          "match": "(\\()\\s*(\\))\\s*(=>)",
           "captures": {
             "1":{"name":"meta.brace.round.ps"},
             "2":{"name":"meta.brace.round.ps"},
@@ -1685,7 +1690,7 @@
           }
         },
         {
-          "match": "(?<=^(?:\\s*export\\s*)?(?:\\s*method\\s*)?\\b\\w+\\s*\\()\\b((?:\\s*\\b[\\w][^\\(\\)]*\\s*\\,)*\\s*(?:\\b[\\w\\.]+(?:(?:\\s*\\<\\s*[\\w\\.]+\\s*\\>\\s*)|\\s*\\[\\s*\\]\\s*)?\\s+\\b\\w+\\s*(?:\\=\\s*[^\\(\\)\\s]*)?)(?:\\s*\\,\\s*\\b[\\w][^\\(\\)]*)*)(?=\\,\\s*(?://.*)?$)",
+          "match": "(?<=^\\s*export\\s+(?:method\\s+)?\\b\\w+\\s*\\()\\b([\\w][^\\(\\)]*)(?=\\s*\\,\\s*(?://.*)?$)",
           "captures": {
             "1":{
               "patterns": [
@@ -1708,7 +1713,53 @@
           }
         },
         {
-          "match": "(?<=^\\s*)\\b((?:\\s*\\b[\\w][^\\(\\)]*\\s*\\,)*\\s*(?:\\b[\\w\\.]+(?:(?:\\s*\\<\\s*[\\w\\.]+\\s*\\>\\s*)|\\s*\\[\\s*\\]\\s*)?\\s+\\b\\w+\\s*(?:\\=\\s*[^\\(\\)\\s]*)?)(?:\\s*\\,\\s*\\b[\\w][^\\(\\)]*)*)(?=\\,\\s*(?://.*)?$)",
+          "match": "(?<=^\\s*(?:export\\s+)?method\\s+\\b\\w+\\s*\\()\\b([\\w][^\\(\\)]*)(?=\\s*\\,\\s*(?://.*)?$)",
+          "captures": {
+            "1":{
+              "patterns": [
+                {"include": "#strings"},
+                {"include": "#collection_new"},
+                {"include": "#array_new"},
+                {"include": "#constants"},
+                {"include": "#support_type"},
+                {"include": "#built_in_constants"},
+                {"include": "#user_define_types"},
+                {
+                  "match": "\\b([a-zA-Z_]\\w*)\\b",
+                  "name":"variable.parameter.ps"
+                },
+                {
+                  "include": "#operators"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "match": "(?<=^\\s*(?:export\\s+)?(?:method\\s+)?\\b\\w+\\s*\\()((?:\\s*(?:\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+)?\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*\\,)*(?:\\s*\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*)(?:\\,\\s*(?:\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+)?\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*)*)(?=\\s*\\,\\s*(?://.*)?$)",
+          "captures": {
+            "1":{
+              "patterns": [
+                {"include": "#strings"},
+                {"include": "#collection_new"},
+                {"include": "#array_new"},
+                {"include": "#constants"},
+                {"include": "#support_type"},
+                {"include": "#built_in_constants"},
+                {"include": "#user_define_types"},
+                {
+                  "match": "\\b([a-zA-Z_]\\w*)\\b",
+                  "name":"variable.parameter.ps"
+                },
+                {
+                  "include": "#operators"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "match": "(?<=^\\s*)((?:\\s*(?:\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+)?\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*\\,)*(?:\\s*\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*)(?:\\,\\s*(?:\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+)?\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*)*)(?=\\s*\\,\\s*(?://.*)?$)",
           "captures": {
             "1":{
               "patterns": [
@@ -1748,6 +1799,40 @@
                 },
                 {
                   "include": "#operators"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "hover_function_parameters":{
+      "patterns": [
+        {
+          "match": "(?<=^(?:(?:[a-zA-Z_]\\w*)|(?:\\b[\\w\\.]*\\.(?:(?:[a-zA-Z_]\\w*)|(?:new\\s*<\\s*[a-zA-Z_][^\\(\\)]*\\b\\s*>))))\\s*\\(\\s*)([^\\(\\)]*)\\)\\s*(→)(.+)",
+          "captures": {
+            "1":{
+              "patterns": [
+                {
+                  "match": "\\b([a-zA-Z_]\\w*)\\b",
+                  "name": "variable.parameter.ps"
+                },
+                {
+                  "include": "#operators"
+                }
+              ]
+            },
+            "2":{"name":"storage.type.function.arrow.ps"},
+            "3":{
+              "patterns": [
+                {"include": "#operators"},
+                {
+                  "match": "\\b(void|input|map|keyType|valueType|value_type)\\b",
+                  "name": "support.type.primitive.ps"
+                },
+                {
+                  "match": "\\b([a-zA-Z_]+)\\b",
+                  "name": "support.type.primitive.ps"
                 }
               ]
             }
@@ -2827,7 +2912,7 @@
       "patterns":[
         {"include": "#primitive_type"},
         {
-          "match": "\\b(box|color|label|line|linefill|table)\\b(?!\\s*[\\=\\(])",
+          "match": "\\b(box|color|label|line|linefill|table)\\b(?!\\s*[\\=\\(\\,])",
           "name": "support.type.primitive.ps"
         }
       ]
@@ -2835,7 +2920,7 @@
     "primitive_type":{
       "patterns":[
         {
-          "match": "\\b(bool|float|int|string|simple|series|array|map|matrix|chart.point)\\b",
+          "match": "\\b(bool|float|int|string|simple|series|array|map|matrix|chart.point)\\b(?!\\s*\\=\\()",
           "name": "support.type.primitive.ps"
         }
       ]
@@ -2877,11 +2962,11 @@
     "built_in_constants":{
       "patterns": [
         {
-          "match": "(?<![\\.]\\s*)\\b(hour|minute|month|second|time|volume|year)\\b(?!\\s*[\\.\\(\\=])",
+          "match": "(?<![\\.]\\s*)\\b(hour|minute|month|second|time|volume|year)\\b(?=(?!\\s*(?:[\\.\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
           "name": "support.constant.ps"
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(bar_index|close|dayofmonth|dayofweek|high|hl2|hlc3|hlcc4|last_bar_index|last_bar_time|low|na|ohlc4|open|time_close|time_tradingday|timenow|weekofyear)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(bar_index|close|dayofmonth|dayofweek|high|hl2|hlc3|hlcc4|last_bar_index|last_bar_time|low|na|ohlc4|open|time_close|time_tradingday|timenow|weekofyear)\\b(?=(?!\\s*(?:[\\.\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
           "name": "support.constant.ps"
         },
         {"include": "#strategy_openclose_trade"}
