@@ -252,7 +252,7 @@
               "name": "constant.character.escaped.ps"
             },
             {
-              "match": "(\\{)([\\w\\s\\.,#]+)(\\})",
+              "match": "(\\{)([^\"\\{\\}]+)(\\})",
               "captures": {
                 "0": {"name": "variable.parameter.ps"},
                 "1": {"name": "constant.character.format.placeholder.other.ps"},
@@ -287,7 +287,7 @@
               "name": "constant.character.escaped.ps"
             },
             {
-              "match": "(\\{)([\\w\\s\\.,#]+)(\\})",
+              "match": "(\\{)([^'\\{\\}]+)(\\})",
               "captures": {
                 "0": {"name": "variable.parameter.ps"},
                 "1": {"name": "constant.character.format.placeholder.other.ps"},
@@ -315,7 +315,7 @@
     "constants": {
       "patterns": [
         {
-          "match": "(?<![\\.]\\s*)\\b(adjustment)\\b(\\.)\\b(dividends|none|splits)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(adjustment)(\\.)(dividends|none|splits)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -329,7 +329,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(alert)\\b(\\.)\\b(freq_all|freq_once_per_bar|freq_once_per_bar_close)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(alert)(\\.)(freq_all|freq_once_per_bar|freq_once_per_bar_close)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -343,7 +343,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(barmerge)\\b(\\.)\\b(gaps_off|gaps_on|lookahead_off|lookahead_on)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(barmerge)(\\.)(gaps_off|gaps_on|lookahead_off|lookahead_on)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -357,7 +357,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(barstate)\\b(\\.)\\b(islastconfirmedhistory|isconfirmed|isfirst|ishistory|islast|isnew|isrealtime)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(barstate)(\\.)(islastconfirmedhistory|isconfirmed|isfirst|ishistory|islast|isnew|isrealtime)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -371,7 +371,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(box)\\b(\\.)\\b(all)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(box)(\\.)(all)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -385,7 +385,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(chart)\\b(\\.)\\b(bg_color|fg_color|is_heikinashi|is_kagi|is_linebreak|is_pnf|is_range|is_renko|is_standard|left_visible_bar_time|right_visible_bar_time)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(chart)(\\.)(bg_color|fg_color|is_heikinashi|is_kagi|is_linebreak|is_pnf|is_range|is_renko|is_standard|left_visible_bar_time|right_visible_bar_time)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -399,7 +399,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(color)\\b(\\.)\\b(aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|white|yellow)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(color)(\\.)(aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|white|yellow)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -413,7 +413,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(currency)\\b(\\.)\\b(AUD|BTC|CAD|CHF|ETH|EUR|GBP|HKD|INR|JPY|KRW|MYR|NOK|NONE|NZD|RUB|SEK|SGD|TRY|USDT|USD|ZAR)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(currency)(\\.)(AUD|BTC|CAD|CHF|ETH|EUR|GBP|HKD|INR|JPY|KRW|MYR|NOK|NONE|NZD|RUB|SEK|SGD|TRY|USDT|USD|ZAR)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -427,7 +427,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(dayofweek)\\b(\\.)\\b(friday|monday|saturday|sunday|thursday|tuesday|wednesday)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(dayofweek)(\\.)(friday|monday|saturday|sunday|thursday|tuesday|wednesday)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -441,7 +441,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(display)\\b(\\.)\\b(all|data_window|none|pane|price_scale|status_line)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(display)(\\.)(all|data_window|none|pane|price_scale|status_line)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -455,7 +455,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(dividends)\\b(\\.)\\b(future_amount|future_ex_date|future_pay_date|gross|net)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(dividends)(\\.)(future_amount|future_ex_date|future_pay_date|gross|net)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -469,7 +469,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(earnings)\\b(\\.)\\b(actual|estimate|standardized|future_eps|future_period_end_time|future_revenue|future_time)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(earnings)(\\.)(actual|estimate|standardized|future_eps|future_period_end_time|future_revenue|future_time)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -483,7 +483,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(extend)\\b(\\.)\\b(both|left|none|right)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(extend)(\\.)(both|left|none|right)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -497,7 +497,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(font)\\b(\\.)\\b(family_default|family_monospace)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(font)(\\.)(family_default|family_monospace)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -511,7 +511,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(format)\\b(\\.)\\b(inherit|mintick|percent|price|volume)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(format)(\\.)(inherit|mintick|percent|price|volume)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -525,7 +525,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(hline)\\b(\\.)\\b(style_dashed|style_dotted|style_solid)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(hline)(\\.)(style_dashed|style_dotted|style_solid)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -539,7 +539,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(label)\\b(\\.)\\b(all|style_arrowdown|style_arrowup|style_circle|style_cross|style_diamond|style_flag|style_label_center|style_label_down|style_label_left|style_label_lower_left|style_label_lower_right|style_label_right|style_label_up|style_label_upper_left|style_label_upper_right|style_none|style_square|style_text_outline|style_triangledown|style_triangleup|style_xcross)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(label)(\\.)(all|style_arrowdown|style_arrowup|style_circle|style_cross|style_diamond|style_flag|style_label_center|style_label_down|style_label_left|style_label_lower_left|style_label_lower_right|style_label_right|style_label_up|style_label_upper_left|style_label_upper_right|style_none|style_square|style_text_outline|style_triangledown|style_triangleup|style_xcross)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -553,7 +553,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(line)\\b(\\.)\\b(all|style_arrow_both|style_arrow_left|style_arrow_right|style_dashed|style_dotted|style_solid)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(line)(\\.)(all|style_arrow_both|style_arrow_left|style_arrow_right|style_dashed|style_dotted|style_solid)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -581,7 +581,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(location)\\b(\\.)\\b(abovebar|absolute|belowbar|bottom|top)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(location)(\\.)(abovebar|absolute|belowbar|bottom|top)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -595,7 +595,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(math)\\b(\\.)\\b(e|phi|pi|rphi)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(math)(\\.)(e|phi|pi|rphi)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -609,7 +609,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(order)\\b(\\.)\\b(ascending|descending)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(order)(\\.)(ascending|descending)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -623,7 +623,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(plot)\\b(\\.)\\b(style_areabr|style_area|style_circles|style_columns|style_cross|style_histogram|style_linebr|style_line|style_stepline_diamond|style_steplinebr|style_stepline)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(plot)(\\.)(style_areabr|style_area|style_circles|style_columns|style_cross|style_histogram|style_linebr|style_line|style_stepline_diamond|style_steplinebr|style_stepline)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -637,7 +637,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(position)\\b(\\.)\\b(bottom_center|bottom_left|bottom_right|middle_center|middle_left|middle_right|top_center|top_left|top_right)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(polyline)(\\.)(all)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -651,7 +651,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(scale)\\b(\\.)\\b(left|none|right)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(position)(\\.)(bottom_center|bottom_left|bottom_right|middle_center|middle_left|middle_right|top_center|top_left|top_right)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -665,7 +665,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(session)\\b(\\.)\\b(extended|isfirstbar_regular|isfirstbar|islastbar_regular|islastbar|ismarket|ispostmarket|ispremarket|regular)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(scale)(\\.)(left|none|right)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -679,7 +679,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(shape)\\b(\\.)\\b(arrowdown|arrowup|circle|cross|diamond|flag|labeldown|labelup|square|triangledown|triangleup|xcross)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(session)(\\.)(extended|isfirstbar_regular|isfirstbar|islastbar_regular|islastbar|ismarket|ispostmarket|ispremarket|regular)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -693,7 +693,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(size)\\b(\\.)\\b(auto|huge|large|normal|small|tiny)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(shape)(\\.)(arrowdown|arrowup|circle|cross|diamond|flag|labeldown|labelup|square|triangledown|triangleup|xcross)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -707,7 +707,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(splits)\\b(\\.)\\b(denominator|numerator)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(size)(\\.)(auto|huge|large|normal|small|tiny)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -721,7 +721,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(strategy)\\b(\\.)\\b(account_currency|cash|equity|eventrades|fixed|grossloss|grossprofit|initial_capital|long|losstrades|margin_liquidation_price|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown|max_runup|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(splits)(\\.)(denominator|numerator)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -735,7 +735,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(strategy)\\b(\\.)\\b(commission)\\b(\\.)\\b(cash_per_contract|cash_per_order|percent)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(account_currency|cash|equity|eventrades|fixed|grossloss|grossprofit|initial_capital|long|losstrades|margin_liquidation_price|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown|max_runup|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -745,37 +745,11 @@
             },
             "2": {
               "name": "punctuation.accessor.ps"
-            },
-            "3": {
-              "name": "support.constant.ps"
-            },
-            "4": {
-              "name": "punctuation.accessor.ps"
             }
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(strategy)\\b(\\.)\\b(direction)\\b(\\.)\\b(all|long|short)\\b(?!\\s*[\\.\\(])",
-          "captures": {
-            "0": {
-              "name": "support.constant.property.ps"
-            },
-            "1": {
-              "name": "support.constant.ps"
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3": {
-              "name": "support.constant.ps"
-            },
-            "4": {
-              "name": "punctuation.accessor.ps"
-            }
-          }
-        },
-        {
-          "match": "(?<![\\.]\\s*)\\b(strategy)\\b(\\.)\\b(oca)(\\.)\\b(cancel|none|reduce)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(commission)(\\.)(cash_per_contract|cash_per_order|percent)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -795,7 +769,47 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(syminfo)\\b(\\.)\\b(basecurrency|country|currency|description|industry|minmove|mintick|pointvalue|prefix|pricescale|root|sector|session|tickerid|ticker|timezone|type|volumetype)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(direction)(\\.)(all|long|short)\\b(?!\\s*[\\.\\(])",
+          "captures": {
+            "0": {
+              "name": "support.constant.property.ps"
+            },
+            "1": {
+              "name": "support.constant.ps"
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3": {
+              "name": "support.constant.ps"
+            },
+            "4": {
+              "name": "punctuation.accessor.ps"
+            }
+          }
+        },
+        {
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(oca)(\\.)(cancel|none|reduce)\\b(?!\\s*[\\.\\(])",
+          "captures": {
+            "0": {
+              "name": "support.constant.property.ps"
+            },
+            "1": {
+              "name": "support.constant.ps"
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3": {
+              "name": "support.constant.ps"
+            },
+            "4": {
+              "name": "punctuation.accessor.ps"
+            }
+          }
+        },
+        {
+          "match": "(?<![\\.]\\s*)\\b(syminfo)(\\.)(basecurrency|country|currency|description|industry|minmove|mintick|pointvalue|prefix|pricescale|root|sector|session|tickerid|ticker|timezone|type|volumetype)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -809,7 +823,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(ta)\\b(\\.)\\b(accdist|iii|nvi|obv|pvi|pvt|tr|vwap|wad|wvad)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(ta)(\\.)(accdist|iii|nvi|obv|pvi|pvt|tr|vwap|wad|wvad)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -823,7 +837,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(table)\\b(\\.)\\b(all)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(table)(\\.)(all)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -837,7 +851,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(text)\\b(\\.)\\b(align_bottom|align_center|align_left|align_right|align_top|wrap_auto|wrap_none)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(text)(\\.)(align_bottom|align_center|align_left|align_right|align_top|wrap_auto|wrap_none)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -851,7 +865,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(timeframe)\\b(\\.)\\b(isdaily|isdwm|isintraday|isminutes|ismonthly|isseconds|isweekly|multiplier|period)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(timeframe)(\\.)(isdaily|isdwm|isintraday|isminutes|ismonthly|isseconds|isweekly|multiplier|period)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -865,7 +879,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(xloc)\\b(\\.)\\b(bar_index|bar_time)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(xloc)(\\.)(bar_index|bar_time)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -879,7 +893,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(yloc)\\b(\\.)\\b(abovebar|belowbar|price)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(yloc)(\\.)(abovebar|belowbar|price)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -921,7 +935,7 @@
           "name": "storage.type.class.ps"
         },
         {
-          "match": "\\b(array)\\b(\\.)\\b(abs|avg|binary_search_leftmost|binary_search_rightmost|binary_search|clear|concat|copy|covariance|every|fill|first|from|get|includes|indexof|insert|join|lastindexof|last|max|median|min|mode|new_bool|new_box|new_color|new_float|new_int|new_label|new_line|new_linefill|new_string|new_table|percentile_linear_interpolation|percentile_nearest_rank|percentrank|pop|push|range|remove|reverse|set|shift|size|slice|some|sort_indices|sort|standardize|stdev|sum|unshift|variance)\\b(?=\\s*\\()",
+          "match": "\\b(array)(\\.)(abs|avg|binary_search_leftmost|binary_search_rightmost|binary_search|clear|concat|copy|covariance|every|fill|first|from|get|includes|indexof|insert|join|lastindexof|last|max|median|min|mode|new_bool|new_box|new_color|new_float|new_int|new_label|new_line|new_linefill|new_string|new_table|percentile_linear_interpolation|percentile_nearest_rank|percentrank|pop|push|range|remove|reverse|set|shift|size|slice|some|sort_indices|sort|standardize|stdev|sum|unshift|variance)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -935,7 +949,7 @@
           }
         },
         {
-          "match": "\\b(matrix)\\b(\\.)\\b(add_col|add_row|avg|columns|col|concat|copy|det|diff|eigenvalues|eigenvectors|elements_count|fill|get|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|kron|max|median|min|mode|mult|pinv|pow|rank|remove_col|remove_row|reshape|reverse|rows|row|set|sort|submatrix|sum|swap_columns|swap_rows|trace|transpose)\\b(?=\\s*\\()",
+          "match": "\\b(matrix)(\\.)(add_col|add_row|avg|columns|col|concat|copy|det|diff|eigenvalues|eigenvectors|elements_count|fill|get|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|kron|max|median|min|mode|mult|pinv|pow|rank|remove_col|remove_row|reshape|reverse|rows|row|set|sort|submatrix|sum|swap_columns|swap_rows|trace|transpose)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -949,7 +963,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(array|matrix)\\b(\\.)\\b(new)\\b\\s*(<)\\s*([a-zA-Z_][a-zA-Z0-9_\\.]*)\\b\\s*(>)(?=\\s*\\()",
+          "match": "(?<![\\.]\\s*)\\b(array|matrix)(\\.)(new)\\s*(<)\\s*([a-zA-Z_][a-zA-Z0-9_\\.]*)\\b\\s*(>)(?=\\s*\\()",
           "captures": {
             "1": {
               "name": "support.function.ps"
@@ -972,7 +986,7 @@
           }
         },
         {
-          "match": "\\b(box)\\b(\\.)\\b(copy|delete|get_bottom|get_left|get_right|get_top|set_bgcolor|set_border_color|set_border_style|set_border_width|set_bottom_right_point|set_bottom|set_extend|set_lefttop|set_left|set_rightbottom|set_right|set_text_color|set_text_font_family|set_text_halign|set_text_size|set_text_valign|set_text_wrap|set_text|set_top_left_point|set_top)\\b(?=\\s*\\()",
+          "match": "\\b(box)(\\.)(copy|delete|get_bottom|get_left|get_right|get_top|set_bgcolor|set_border_color|set_border_style|set_border_width|set_bottom_right_point|set_bottom|set_extend|set_lefttop|set_left|set_rightbottom|set_right|set_text_color|set_text_font_family|set_text_halign|set_text_size|set_text_valign|set_text_wrap|set_text|set_top_left_point|set_top)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -986,7 +1000,7 @@
           }
         },
         {
-          "match": "\\b(box|color|label|line|linefill|table|ticker|chart.point)\\b(\\.)\\b(new)\\b(?=\\s*\\()",
+          "match": "\\b(box|color|label|line|linefill|table|ticker|chart.point|polyline)(\\.)(new)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "keyword.operator.new.ps"
@@ -1000,7 +1014,7 @@
           }
         },
         {
-          "match": "\\b(chart)\\b(\\.)\\b(point)\\b(\\.)\\b(copy|from_index|from_time|now)\\b(?=\\s*\\()",
+          "match": "\\b(chart)(\\.)(point)(\\.)(copy|from_index|from_time|now)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1020,7 +1034,7 @@
           }
         },
         {
-          "match": "\\b(color)\\b(\\.)\\b(rgb|b|from_gradient|g|r|t)\\b(?=\\s*\\()",
+          "match": "\\b(color)(\\.)(rgb|b|from_gradient|g|r|t)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1034,7 +1048,7 @@
           }
         },
         {
-          "match": "\\b(input)\\b(\\.)\\b(bool|color|float|int|price|session|source|string|symbol|text_area|timeframe|time)\\b(?=\\s*\\()",
+          "match": "\\b(input)(\\.)(bool|color|float|int|price|session|source|string|symbol|text_area|timeframe|time)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1048,7 +1062,7 @@
           }
         },
         {
-          "match": "\\b(label)\\b(\\.)\\b(copy|delete|get_text|get_x|get_y|set_color|set_point|set_size|set_style|set_text_font_family|set_textalign|set_textcolor|set_text|set_tooltip|set_xloc|set_xy|set_x|set_yloc|set_y)\\b(?=\\s*\\()",
+          "match": "\\b(label)(\\.)(copy|delete|get_text|get_x|get_y|set_color|set_point|set_size|set_style|set_text_font_family|set_textalign|set_textcolor|set_text|set_tooltip|set_xloc|set_xy|set_x|set_yloc|set_y)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1062,7 +1076,7 @@
           }
         },
         {
-          "match": "\\b(line)\\b(\\.)\\b(copy|delete|get_price|get_x1|get_x2|get_y1|get_y2|set_color|set_extend|set_first_point|set_second_point|set_style|set_width|set_x1|set_x2|set_xloc|set_xy1|set_xy2|set_y1|set_y2)\\b(?=\\s*\\()",
+          "match": "\\b(line)(\\.)(copy|delete|get_price|get_x1|get_x2|get_y1|get_y2|set_color|set_extend|set_first_point|set_second_point|set_style|set_width|set_x1|set_x2|set_xloc|set_xy1|set_xy2|set_y1|set_y2)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1076,7 +1090,7 @@
           }
         },
         {
-          "match": "\\b(linefill)\\b(\\.)\\b(delete|get_line1|get_line2|set_color)\\b(?=\\s*\\()",
+          "match": "\\b(linefill)(\\.)(delete|get_line1|get_line2|set_color)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1090,7 +1104,7 @@
           }
         },
         {
-          "match": "\\b(log)\\b(\\.)\\b(error|info|warning)\\b(?=\\s*\\()",
+          "match": "\\b(log)(\\.)(error|info|warning)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1104,7 +1118,7 @@
           }
         },
         {
-          "match": "\\b(map)\\b(\\.)\\b(clear|contains|copy|get|keys|put_all|put|remove|size|values)\\b(?=\\s*\\()",
+          "match": "\\b(map)(\\.)(clear|contains|copy|get|keys|put_all|put|remove|size|values)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1118,7 +1132,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(map)\\b(\\.)\\b(new)\\b\\s*(<)\\s*\\b([a-zA-Z_]+)\\b\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)(?=\\s*\\()",
+          "match": "(?<![\\.]\\s*)\\b(map)(\\.)(new)\\s*(<)\\s*([a-zA-Z_]+)\\s*(\\,)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)(?=\\s*\\()",
           "captures": {
             "1": {
               "name": "support.function.ps"
@@ -1147,7 +1161,7 @@
           }
         },
         {
-          "match": "\\b(math)\\b(\\.)\\b(abs|acos|asin|atan|avg|ceil|cos|exp|floor|log10|log|max|min|pow|random|round_to_mintick|round|sign|sin|sqrt|sum|tan|todegrees|toradians)\\b(?=\\s*\\()",
+          "match": "\\b(math)(\\.)(abs|acos|asin|atan|avg|ceil|cos|exp|floor|log10|log|max|min|pow|random|round_to_mintick|round|sign|sin|sqrt|sum|tan|todegrees|toradians)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1161,7 +1175,7 @@
           }
         },
         {
-          "match": "\\b(request)\\b(\\.)\\b(currency_rate|dividends|earnings|economic|financial|quandl|security_lower_tf|security|seed|splits)\\b(?=\\s*\\()",
+          "match": "\\b(polyline)(\\.)(delete)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1175,7 +1189,7 @@
           }
         },
         {
-          "match": "\\b(runtime)\\b(\\.)\\b(error)\\b(?=\\s*\\()",
+          "match": "\\b(request)(\\.)(currency_rate|dividends|earnings|economic|financial|quandl|security_lower_tf|security|seed|splits)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1189,7 +1203,7 @@
           }
         },
         {
-          "match": "\\b(str)\\b(\\.)\\b(contains|endswith|format_time|format|length|lower|match|pos|replace_all|replace|split|startswith|substring|tonumber|tostring|upper)\\b(?=\\s*\\()",
+          "match": "\\b(runtime)(\\.)(error)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1203,7 +1217,7 @@
           }
         },
         {
-          "match": "\\b(strategy)\\b(\\.)\\b(closedtrades)\\b(\\.)\\b(commission|entry_bar_index|entry_comment|entry_id|entry_price|entry_time|exit_bar_index|exit_comment|exit_id|exit_price|exit_time|max_drawdown|max_runup|profit|size)\\b(?=\\s*\\()",
+          "match": "\\b(str)(\\.)(contains|endswith|format_time|format|length|lower|match|pos|replace_all|replace|split|startswith|substring|tonumber|tostring|upper)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1213,37 +1227,11 @@
             },
             "2": {
               "name": "punctuation.accessor.ps"
-            },
-            "3": {
-              "name": "support.function.ps"
-            },
-            "4": {
-              "name": "punctuation.accessor.ps"
             }
           }
         },
         {
-          "match": "\\b(strategy)\\b(\\.)\\b(opentrades)(\\.)\\b(commission|entry_bar_index|entry_comment|entry_id|entry_price|entry_time|max_drawdown|max_runup|profit|size)\\b(?=\\s*\\()",
-          "captures": {
-            "0": {
-              "name": "support.function.property.ps"
-            },
-            "1": {
-              "name": "support.function.ps"
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3": {
-              "name": "support.function.ps"
-            },
-            "4": {
-              "name": "punctuation.accessor.ps"
-            }
-          }
-        },
-        {
-          "match": "\\b(strategy)\\b(\\.)\\b(risk)\\b(\\.)\\b(allow_entry_in|max_cons_loss_days|max_drawdown|max_intraday_filled_orders|max_intraday_loss|max_position_size)\\b(?=\\s*\\()",
+          "match": "\\b(strategy)(\\.)(closedtrades)(\\.)(commission|entry_bar_index|entry_comment|entry_id|entry_price|entry_time|exit_bar_index|exit_comment|exit_id|exit_price|exit_time|max_drawdown|max_runup|profit|size)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1263,7 +1251,47 @@
           }
         },
         {
-          "match": "\\b(strategy)\\b(\\.)\\b(cancel_all|cancel|close_all|close|convert_to_account|convert_to_symbol|entry|exit|order)\\b(?=\\s*\\()",
+          "match": "\\b(strategy)(\\.)(opentrades)(\\.)(commission|entry_bar_index|entry_comment|entry_id|entry_price|entry_time|max_drawdown|max_runup|profit|size)\\b(?=\\s*\\()",
+          "captures": {
+            "0": {
+              "name": "support.function.property.ps"
+            },
+            "1": {
+              "name": "support.function.ps"
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3": {
+              "name": "support.function.ps"
+            },
+            "4": {
+              "name": "punctuation.accessor.ps"
+            }
+          }
+        },
+        {
+          "match": "\\b(strategy)(\\.)(risk)(\\.)(allow_entry_in|max_cons_loss_days|max_drawdown|max_intraday_filled_orders|max_intraday_loss|max_position_size)\\b(?=\\s*\\()",
+          "captures": {
+            "0": {
+              "name": "support.function.property.ps"
+            },
+            "1": {
+              "name": "support.function.ps"
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3": {
+              "name": "support.function.ps"
+            },
+            "4": {
+              "name": "punctuation.accessor.ps"
+            }
+          }
+        },
+        {
+          "match": "\\b(strategy)(\\.)(cancel_all|cancel|close_all|close|convert_to_account|convert_to_symbol|default_entry_qty|entry|exit|order)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1277,7 +1305,7 @@
           }
         },
         {
-          "match": "\\b(syminfo)\\b(\\.)\\b(prefix|ticker)\\b(?=\\s*\\()",
+          "match": "\\b(syminfo)(\\.)(prefix|ticker)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1291,7 +1319,7 @@
           }
         },
         {
-          "match": "\\b(ta)\\b(\\.)\\b(alma|atr|barssince|bbw|bb|cci|change|cmo|cog|correlation|crossover|crossunder|cross|cum|dev|dmi|ema|falling|highestbars|highest|hma|kcw|kc|linreg|lowestbars|lowest|macd|max|median|mfi|min|mode|mom|percentile_linear_interpolation|percentile_nearest_rank|percentrank|pivot_point_levels|pivothigh|pivotlow|range|rising|rma|roc|rsi|sar|sma|stdev|stoch|supertrend|swma|tr|tsi|valuewhen|variance|vwap|vwma|wma|wpr)\\b(?=\\s*\\()",
+          "match": "\\b(ta)(\\.)(alma|atr|barssince|bbw|bb|cci|change|cmo|cog|correlation|crossover|crossunder|cross|cum|dev|dmi|ema|falling|highestbars|highest|hma|kcw|kc|linreg|lowestbars|lowest|macd|max|median|mfi|min|mode|mom|percentile_linear_interpolation|percentile_nearest_rank|percentrank|pivot_point_levels|pivothigh|pivotlow|range|rising|rma|roc|rsi|sar|sma|stdev|stoch|supertrend|swma|tr|tsi|valuewhen|variance|vwap|vwma|wma|wpr)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1305,7 +1333,7 @@
           }
         },
         {
-          "match": "\\b(table)\\b(\\.)\\b(cell_set_bgcolor|cell_set_height|cell_set_text_color|cell_set_text_font_family|cell_set_text_halign|cell_set_text_size|cell_set_text_valign|cell_set_text|cell_set_tooltip|cell_set_width|cell|clear|delete|merge_cells|set_bgcolor|set_border_color|set_border_width|set_frame_color|set_frame_width|set_position)\\b(?=\\s*\\()",
+          "match": "\\b(table)(\\.)(cell_set_bgcolor|cell_set_height|cell_set_text_color|cell_set_text_font_family|cell_set_text_halign|cell_set_text_size|cell_set_text_valign|cell_set_text|cell_set_tooltip|cell_set_width|cell|clear|delete|merge_cells|set_bgcolor|set_border_color|set_border_width|set_frame_color|set_frame_width|set_position)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1319,7 +1347,7 @@
           }
         },
         {
-          "match": "\\b(ticker)\\b(\\.)\\b(heikinashi|inherit|kagi|linebreak|modify|pointfigure|renko|standard)\\b(?=\\s*\\()",
+          "match": "\\b(ticker)(\\.)(heikinashi|inherit|kagi|linebreak|modify|pointfigure|renko|standard)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1333,7 +1361,7 @@
           }
         },
         {
-          "match": "\\b(timeframe)\\b(\\.)\\b(change|from_seconds|in_seconds)\\b(?=\\s*\\()",
+          "match": "\\b(timeframe)(\\.)(change|from_seconds|in_seconds)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1368,17 +1396,17 @@
     "user_defined_functions": {
         "patterns": [
         {
-          "match": "(?:([\\w\\.]*))(\\.)\\b(new)\\b(?=\\s*\\()",
+          "match": "(?:([\\w\\.]*))(\\.)(new)\\b(?=\\s*\\()",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
                         {
-                          "match": "[a-zA-Z_]\\w*",
+                          "match": "\\b[a-zA-Z_]\\w*\\b",
                           "name": "support.type.primitive.ps"
                         },
                         {
@@ -1409,17 +1437,17 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*))(\\.)\\b([a-zA-Z_]\\w*)\\b(?=\\s*\\()",
+          "match": "(?:([\\w\\.]*))(\\.)([a-zA-Z_]\\w*)\\b(?=\\s*\\()",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
                         {
-                          "match": "[a-zA-Z_]\\w*",
+                          "match": "\\b[a-zA-Z_]\\w*\\b",
                           "name": "variable.other.readwrite.ps"
                         },
                         {
@@ -1493,7 +1521,7 @@
           "name": "keyword.control.loop.ps"
         },
         {
-          "match": "\\b(var|varip)\\b",
+          "match": "\\b(var|varip)\\b(?!\\s*\\=)",
           "name": "storage.type.ps"
         },
         {
@@ -1508,7 +1536,7 @@
           "include": "#collection_new"
         },
         {
-          "match": "\\b(export)\\b\\s+\\b(type)\\b\\s+\\b([a-zA-Z_]\\w*)\\b(?=\\s*(?:\\s*//.*)?$)",
+          "match": "\\b(export)\\s+(type)\\s+([a-zA-Z_]\\w*)\\b(?=\\s*(?:\\s*//.*)?$)",
           "captures": {
             "1": {"name": "keyword.control.export.ps"},
             "2": {"name": "storage.type.type.ps"},
@@ -1516,7 +1544,7 @@
           }
         },
         {
-          "match": "\\b(type)\\b\\s+\\b([a-zA-Z_]\\w*)\\b(?=\\s*(?:\\s*//.*)?$)",
+          "match": "\\b(type)\\s+([a-zA-Z_]\\w*)\\b(?=\\s*(?:\\s*//.*)?$)",
           "captures": {
             "1":{"name":"storage.type.type.ps"},
             "2": {"name": "support.type.primitive.ps"}
@@ -1631,7 +1659,7 @@
     "collection_new":{
       "patterns": [
         {
-          "match": "(?<![\\.]\\s*)\\b(array|matrix)\\b\\s*(<)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
+          "match": "(?<![\\.]\\s*)\\b(array|matrix)\\s*(<)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
           "captures": {
             "1":{"name":"support.type.primitive.ps"},
             "2":{"name":"punctuation.definition.generic.begin.ps"},
@@ -1640,7 +1668,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(map)\\b\\s*(<)\\s*(int|float|bool|string|color)\\s*(\\,)\\s*\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
+          "match": "(?<![\\.]\\s*)\\b(map)\\s*(<)\\s*(int|float|bool|string|color)\\s*(\\,)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
           "captures": {
             "1":{"name":"support.type.primitive.ps"},
             "2":{"name":"punctuation.definition.generic.begin.ps"},
@@ -1854,12 +1882,12 @@
     "array_methods":{
       "patterns":[
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(max|min|sort_indices|sort|stdev)\\b(?=\\s*\\()",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(max|min|sort_indices|sort|stdev)\\b(?=\\s*\\()",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -1895,12 +1923,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(binary_search_leftmost|binary_search_rightmost|binary_search|concat|covariance|get|percentile_linear_interpolation|percentile_nearest_rank|percentrank|remove|set|slice|variance)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(binary_search_leftmost|binary_search_rightmost|binary_search|concat|covariance|get|percentile_linear_interpolation|percentile_nearest_rank|percentrank|remove|set|slice|variance)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -1936,12 +1964,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(fill|from|includes|indexof|insert|join|lastindexof|push|unshift)\\b(?=\\s*\\((?!\\s*\\)))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(fill|from|includes|indexof|insert|join|lastindexof|push|unshift)\\b(?=\\s*\\((?!\\s*\\)))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -1977,12 +2005,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(abs|avg|clear|copy|every|first|last|median|mode|pop|range|reverse|shift|size|some|standardize|sum)\\b(?=\\s*\\(\\s*\\))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(abs|avg|clear|copy|every|first|last|median|mode|pop|range|reverse|shift|size|some|standardize|sum)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2022,12 +2050,12 @@
     "box_methods":{
       "patterns":[
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_bgcolor|set_border_color|set_border_style|set_border_width|set_bottom_right_point|set_bottom|set_extend|set_lefttop|set_left|set_rightbottom|set_right|set_text_color|set_text_font_family|set_text_halign|set_text_size|set_text_valign|set_text_wrap|set_top_left_point|set_top)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_bgcolor|set_border_color|set_border_style|set_border_width|set_bottom_right_point|set_bottom|set_extend|set_lefttop|set_left|set_rightbottom|set_right|set_text_color|set_text_font_family|set_text_halign|set_text_size|set_text_valign|set_text_wrap|set_top_left_point|set_top)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2063,12 +2091,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_text)\\b(?=\\s*\\((?!\\s*\\)))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_text)\\b(?=\\s*\\((?!\\s*\\)))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2104,12 +2132,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(copy|delete|get_bottom|get_left|get_right|get_top)\\b(?=\\s*\\(\\s*\\))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(copy|delete|get_bottom|get_left|get_right|get_top)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2149,12 +2177,12 @@
     "label_methods":{
       "patterns":[
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_size)\\b(?=\\s*\\()",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_size)\\b(?=\\s*\\()",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2190,12 +2218,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_color|set_point|set_style|set_text_font_family|set_textalign|set_textcolor|set_x|set_xloc|set_xy|set_y|set_yloc)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_color|set_point|set_style|set_text_font_family|set_textalign|set_textcolor|set_x|set_xloc|set_xy|set_y|set_yloc)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2231,12 +2259,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_text|set_tooltip)\\b(?=\\s*\\((?!\\s*\\)))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_text|set_tooltip)\\b(?=\\s*\\((?!\\s*\\)))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2272,12 +2300,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(copy|delete|get_text|get_x|get_y)\\b(?=\\s*\\(\\s*\\))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(copy|delete|get_text|get_x|get_y)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2317,12 +2345,12 @@
     "line_methods":{
       "patterns":[
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(get_price|set_color|set_extend|set_first_point|set_second_point|set_style|set_width|set_x1|set_x2|set_xloc|set_xy1|set_xy2|set_y1|set_y2)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(get_price|set_color|set_extend|set_first_point|set_second_point|set_style|set_width|set_x1|set_x2|set_xloc|set_xy1|set_xy2|set_y1|set_y2)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2358,12 +2386,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(copy|delete|get_x1|get_x2|get_y1|get_y2)\\b(?=\\s*\\(\\s*\\))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(copy|delete|get_x1|get_x2|get_y1|get_y2)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2403,12 +2431,12 @@
     "linefill_methods":{
       "patterns":[
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_color)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_color)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2444,12 +2472,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(delete|get_line1|get_line2)\\b(?=\\s*\\(\\s*\\))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(delete|get_line1|get_line2)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2489,12 +2517,12 @@
     "map_methods":{
       "patterns":[
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(put_all)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(put_all)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2530,12 +2558,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(contains|get|put|remove)\\b(?=\\s*\\((?!\\s*\\)))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(contains|get|put|remove)\\b(?=\\s*\\((?!\\s*\\)))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2571,12 +2599,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(clear|copy|keys|size|values)\\b(?=\\s*\\(\\s*\\))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(clear|copy|keys|size|values)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2616,12 +2644,12 @@
     "matrix_methods":{
       "patterns":[
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(add_col|add_row|remove_col|remove_row|sort|submatrix)\\b(?=\\s*\\()",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(add_col|add_row|remove_col|remove_row|sort|submatrix)\\b(?=\\s*\\()",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2657,12 +2685,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(col|concat|diff|get|kron|mult|pow|reshape|row|set|sum|swap_columns|swap_rows)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(col|concat|diff|get|kron|mult|pow|reshape|row|set|sum|swap_columns|swap_rows)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2698,12 +2726,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(fill)\\b(?=\\s*\\((?!\\s*\\)))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(fill)\\b(?=\\s*\\((?!\\s*\\)))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2739,12 +2767,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(avg|columns|copy|det|eigenvalues|eigenvectors|elements_count|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|max|median|min|mode|pinv|rank|reverse|rows|trace|transpose)\\b(?=\\s*\\(\\s*\\))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(avg|columns|copy|det|eigenvalues|eigenvectors|elements_count|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|max|median|min|mode|pinv|rank|reverse|rows|trace|transpose)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2784,12 +2812,12 @@
     "table_methods":{
       "patterns":[
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(set_bgcolor|set_border_color|set_border_width|set_frame_color|set_frame_width)\\b(?=\\s*\\()",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_bgcolor|set_border_color|set_border_width|set_frame_color|set_frame_width)\\b(?=\\s*\\()",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2825,12 +2853,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(cell_set_bgcolor|cell_set_height|cell_set_text_color|cell_set_text_font_family|cell_set_text_halign|cell_set_text_size|cell_set_text_valign|cell_set_text|cell_set_tooltip|cell_set_width|cell|clear|merge_cells|set_position)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(cell_set_bgcolor|cell_set_height|cell_set_text_color|cell_set_text_font_family|cell_set_text_halign|cell_set_text_size|cell_set_text_valign|cell_set_text|cell_set_tooltip|cell_set_width|cell|clear|merge_cells|set_position)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2866,12 +2894,12 @@
           }
         },
         {
-          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)\\b(delete)\\b(?=\\s*\\(\\s*\\))",
+          "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(delete)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)\\b([a-zA-Z_]\\w*)\\b",
+                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
                   "captures": {
                     "1": {
                       "patterns": [
@@ -2912,7 +2940,7 @@
       "patterns":[
         {"include": "#primitive_type"},
         {
-          "match": "\\b(box|color|label|line|linefill|table)\\b(?!\\s*[\\=\\(\\,])",
+          "match": "\\b(box|color|label|line|linefill|table|polyline)\\b(?!\\s*[\\=\\(\\,])",
           "name": "support.type.primitive.ps"
         }
       ]
@@ -2944,7 +2972,7 @@
     "strategy_openclose_trade":{
       "patterns": [
         {
-          "match": "(?<![\\.]\\s*)\\b(strategy)\\b(\\.)\\b(opentrades|closedtrades)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(opentrades|closedtrades)\\b(?!\\s*[\\.\\(])",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
