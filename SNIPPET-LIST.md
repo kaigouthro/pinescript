@@ -1,4 +1,4 @@
-*Version 3.1.3*
+*Version 3.2.0*
 # Snippet's Prefix's
 
 - [Snippet's Prefix's](#snippets-prefixs)
@@ -40,9 +40,9 @@
 |`close`                            |
 |`dayofmonth`                       |
 |`dayofweek`                        |
-|`dividends.future_amount` _**new!**_                    |
-|`dividends.future_ex_date` _**new!**_                   |
-|`dividends.future_pay_date` _**new!**_                  |
+|`dividends.future_amount`          |
+|`dividends.future_ex_date`         |
+|`dividends.future_pay_date`        |
 |`earnings.future_eps`              |
 |`earnings.future_period_end_time`  |
 |`earnings.future_revenue`          |
@@ -63,6 +63,7 @@
 |`na`                               |
 |`ohlc4`                            |
 |`open`                             |
+|`polyline.all` _**new!**_                                |
 |`second`                           |
 |`session.isfirstbar`               |
 |`session.isfirstbar_regular`       |
@@ -165,6 +166,7 @@
 |`array.indexof`                           |
 |`array.insert`                            |
 |`array.join`                              |
+|`array.last`                              |
 |`array.lastindexof`                       |
 |`array.max`                               |
 |`array.median`                            |
@@ -180,6 +182,7 @@
 |`array.new_linefill`                      |
 |`array.new_string`                        |
 |`array.new_table`                         |
+|`array.new`                               |
 |`array.percentile_linear_interpolation`   |
 |`array.percentile_nearest_rank`           |
 |`array.percentrank`                       |
@@ -192,6 +195,7 @@
 |`array.shift`                             |
 |`array.size`                              |
 |`array.slice`                             |
+|`array.some`                              |
 |`array.sort`                              |
 |`array.sort_indices`                      |
 |`array.standardize`                       |
@@ -284,7 +288,7 @@
 |`chart.point.copy`                        |
 |`chart.point.from_index`                  |
 |`chart.point.from_time`                   |
-|`chart.point.new` _**new!**_                                 |
+|`chart.point.new`                         |
 |`chart.point.now`                         |
 |`color.b`                                 |
 |`color.from_gradient`                     |
@@ -422,6 +426,8 @@
 |`plotchar`                                |
 |`plotshape.block`                         |
 |`plotshape`                               |
+|`polyline.delete` _**new!**_                                   |
+|`polyline.new` _**new!**_                                      |
 |`request.currency_rate`                   |
 |`request.dividends`                       |
 |`request.earnings`                        |
@@ -471,6 +477,7 @@
 |`strategy.closedtrades.size`              |
 |`strategy.convert_to_account`             |
 |`strategy.convert_to_symbol`              |
+|`strategy.default_entry_qty`              |
 |`strategy.entry`                          |
 |`strategy.entry.block`                    |
 |`strategy.exit`                           |
@@ -578,7 +585,7 @@
 |`table.set_frame_width`                   |
 |`table.set_position`                      |
 |`ticker.heikinashi`                       |
-|`ticker.inherit` _**new!**_                                 |
+|`ticker.inherit`                          |
 |`ticker.kagi`                             |
 |`ticker.linebreak`                        |
 |`ticker.modify`                           |
@@ -589,7 +596,7 @@
 |`time`                                    |
 |`time_close`                              |
 |`timeframe.change`                        |
-|`timeframe.from_seconds` _**new!**_                         |
+|`timeframe.from_seconds`                  |
 |`timeframe.in_seconds`                    |
 |`timestamp`                               |
 |`timestamp.int`                           |

@@ -5,7 +5,7 @@
 	"icon": "images/pineicon.png",
 	"publisher": "salbert11",
 	"license": "MIT",
-	"version": "3.1.5",
+	"version": "3.2.0-beta-1",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
@@ -151,6 +151,7 @@
 	"homepage": "https://github.com/salbert11/pinescript/blob/pinescript-helper/README.md",
 	"dependencies": {
 		"find-up": "^6.3.0",
+		"fs": "^0.0.1-security",
 		"import-local": "^3.1.0",
 		"locate-path": "^7.2.0",
 		"p-limit": "^4.0.0",

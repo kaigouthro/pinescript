@@ -9,6 +9,8 @@ PineScript Helper provides language support for PineScript, the scripting langua
 ### What is PineScript?
 PineScript is a domain-specific scripting language developed by TradingView. It is primarily used to create custom technical indicators, strategies, and alerts within the TradingView platform. PineScript is specifically designed for financial market analysis and allows traders to create their own indicators and strategies to automate trading decisions.
 
+---
+
 ## Features 
 - **Syntax Highlighting** : The extension provides syntax highlighting for PineScript V5, making your code more readable and easier to navigate. 
 
@@ -34,8 +36,19 @@ PineScript Helper extension is best suited for use with [**PineScript Color Them
 
 *Note: If you prefer a different theme, you are free to use any other themes of your choice. PineScript Helper is compatible with most themes.*
 
+---
+
 ## Installation
-### Method 1: Install from VSIX
+### Method 1: Install from VS Code Command Palette
+
+Launch VS Code Command Palette (Ctrl+P), paste the following command, and press enter.
+```
+ext install salbert11.pinescript-helper
+```
+
+---
+
+### Method 2: Install from VSIX
 1. Download the latest release of the extension from the [GitHub releases page](https://github.com/salbert11/pinescript/releases).
 2. Launch Visual Studio Code.
 3. Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window.
@@ -43,7 +56,9 @@ PineScript Helper extension is best suited for use with [**PineScript Color Them
 5. In the file dialog, select the downloaded VSIX file (`pinescript-helper.vsix`) and click "Open."
 6. Once installed, the PineScript Helper extension will be enabled automatically.
 
-### Method 2: Clone and Compile in Visual Studio Code 
+---
+
+### Method 3: Clone and Compile in Visual Studio Code 
 1. Clone the PineScript Helper repository to your local machine using the following command:
 
 ```bash
@@ -67,6 +82,8 @@ PineScript Helper extension is best suited for use with [**PineScript Color Them
 ```
 7. Once installed, the PineScript Helper extension will be enabled automatically.
 
+---
+
 ## Supported File Extensions
 
 The PineScript Helper extension supports the following file extensions:
@@ -81,27 +98,40 @@ The PineScript Helper extension supports the following file extensions:
 | `.trading`               |
 | `.tradingview`           |
 
+---
+
 ## Usage 
 1. Open a `.pine` or `.pinescript` file in Visual Studio Code.
 2. The PineScript Helper extension will automatically detect the file type and apply syntax highlighting accordingly.
 3. Use the available snippets to quickly insert commonly used PineScript code blocks.
 4. Hover over variables, functions, or keywords to view relevant reference manual information.
 
-## Release Notes
-#### **3.1.5**
+---
 
-*21.09.2023 **Update*** 
-- Semantic token updated for matching scope naming general practices
+## Release Notes
+#### **3.2.0**
+
+*08.10.2023 **Update***
+- Reworked hover functions. Now displays descriptions and arguments list.
+- Snippets for built-in functions and variables updated.
+- Grammars bug fixed.
+- Type `polyline` added.
+
+---
 
 ## Contribution
 Contributions are welcome! Please feel free to submit a [pull request](https://github.com/salbert11/pinescript/pulls) in the GitHub repository.
 
+---
+
 ## Feedback and Support
 If you encounter any issues, have suggestions, or need support, please feel free to [open an issue](https://github.com/salbert11/pinescript/issues) in the GitHub repository.
+
+---
 
 ## License
 This extension is released under the [MIT License](./LICENSE.md).
 
 ---
 
-*Version 3.1.5*
+*Version 3.2.0*
