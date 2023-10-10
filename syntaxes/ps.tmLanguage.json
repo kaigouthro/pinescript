@@ -6,202 +6,108 @@
     {"include": "#imports"},
     {"include": "#strings"},
     {"include": "#hover_function_parameters"},
-    {"include": "#constants"},
+    {"include": "#built_in_variables"},
     {"include": "#keywords"},
-    {"include": "#functions"},
-    {"include": "#long_functions"},
+    {"include": "#built_in_functions"},
+    {"include": "#multiline_functions"},
     {"include": "#user_defined_functions"},
-    {"include": "#types"},
-    {"include": "#variables"},
+    {"include": "#exports"},
+    {"include": "#variable_declarations"},
     {"include": "#operators"},
-    {"include": "#parameters"}
+    {"include": "#local_variables"}
   ],
   "repository": {
     "comments":{
       "patterns": [
         {
-          "match": "(<parameter_name>|<default_value>|<series>|<simple>|<function_code>|<source>)",
+          "match": "(<function_name>|<parameter_name>|<default_value>|<series>|<simple>|<function_code>|<source>)",
           "name": "comment.line.double-slash.ps"
         },
         {
           "match": "(^\/\/)\\s*(©)\\s*(\\w.*)",
           "captures": {
-            "0": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "1": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "2": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "3": {
-              "name": "constant.numeric.ps"
-            },
-            "4": {
-              "name": "comment.line.double-slash.ps"
-            }
+            "0": {"name": "comment.line.double-slash.ps"},
+            "1": {"name": "comment.line.double-slash.ps"},
+            "2": {"name": "comment.line.double-slash.ps"},
+            "3": {"name": "constant.numeric.ps"},
+            "4": {"name": "comment.line.double-slash.ps"}
           }
         },
         {
           "match": "(^\/\/)\\s*(ⓘ)\\s*(https:\/\/www\\.tradingview\\.com)([\\w.,@?^=%&:\/~+#-\\{]*[\\}\\w@?^=%&\/~+#-])(\\w+)(.*)",
           "captures": {
-            "0": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "1": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "2": {
-              "name": "constant.numeric.ps"
-            },
-            "3": {
-              "name": "keyword.operator.logical.ps"
-            },
-            "4": {
-              "name": "keyword.operator.logical.ps"
-            },
-            "5": {
-              "name": "keyword.operator.logical.ps"
-            }
+            "0": {"name": "comment.line.double-slash.ps"},
+            "1": {"name": "comment.line.double-slash.ps"},
+            "2": {"name": "constant.numeric.ps"},
+            "3": {"name": "keyword.operator.logical.ps"},
+            "4": {"name": "keyword.operator.logical.ps"},
+            "5": {"name": "keyword.operator.logical.ps"}
           }
         },
         {
           "match": "(^\/\/)(@)(version)(=)(5)(.*)",
           "captures": {
-            "0": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "1": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "2": {
-              "name": "punctuation.section.embedded.other.ps"
-            },
-            "3": {
-              "name": "keyword.other.ps"
-            },
-            "4": {
-              "name": "keyword.operator.assignment.ps"
-            },
-            "5": {
-              "name": "constant.numeric.ps"
-            }
+            "0": {"name": "comment.line.double-slash.ps"},
+            "1": {"name": "comment.line.double-slash.ps"},
+            "2": {"name": "punctuation.section.embedded.other.ps"},
+            "3": {"name": "keyword.other.ps"},
+            "4": {"name": "keyword.operator.assignment.ps"},
+            "5": {"name": "constant.numeric.ps"}
           }
         },
         {
           "match": "(^\/\/).*(\\d{10})(.*)(#)",
           "captures": {
-            "0": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "1": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "2": {
-              "name": "punctuation.definition.list.markdown.ps"
-            },
-            "3": {
-              "name": "comment.line.double-slash.ps"
-            }
+            "0": {"name": "comment.line.double-slash.ps"},
+            "1": {"name": "comment.line.double-slash.ps"},
+            "2": {"name": "punctuation.definition.list.markdown.ps"},
+            "3": {"name": "comment.line.double-slash.ps"}
           }
         },
         {
           "match": "(^\/\/)\\s(@)(description|function|param|returns|type|field)(.*)",
           "captures": {
-            "0": {
-              "name": "meta.annotation.ps"
-            },
-            "1": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "2": {
-              "name": "punctuation.definition.annotation.ps"
-            },
-            "3": {
-              "name": "meta.annotation.identifier.ps"
-            },
-            "4": {
-              "name": "comment.line.double-slash.ps"
-            }
+            "0": {"name": "meta.annotation.ps"},
+            "1": {"name": "comment.line.double-slash.ps"},
+            "2": {"name": "punctuation.definition.annotation.ps"},
+            "3": {"name": "meta.annotation.identifier.ps"},
+            "4": {"name": "comment.line.double-slash.ps"}
           }
         },
         {
           "match": "(^\/\/).*(\\d{4}\\s\\w{3,10}\\s\\w{3,10}).*(\\|)\\s(\\d{2}:\\d{2}:\\d{2})(.*)(#)",
           "captures": {
-            "0": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "1": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "2": {
-              "name": "markup.italic.markdown.ps"
-            },
-            "3": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "4": {
-              "name": "punctuation.definition.list.markdown.ps"
-            },
-            "5": {
-              "name": "invalid.illegal.ps"
-            },
-            "6": {
-              "name": "comment.line.double-slash.ps"
-            }
+            "0": {"name": "comment.line.double-slash.ps"},
+            "1": {"name": "comment.line.double-slash.ps"},
+            "2": {"name": "markup.italic.markdown.ps"},
+            "3": {"name": "comment.line.double-slash.ps"},
+            "4": {"name": "punctuation.definition.list.markdown.ps"},
+            "5": {"name": "invalid.illegal.ps"},
+            "6": {"name": "comment.line.double-slash.ps"}
           }
         },
         {
           "match": "(^\/\/).*(\\d{2}-\\d{2}-\\d{2}).*(\\|)\\s(\\d{2}:\\d{2}:\\d{2})(.*)(#)",
           "captures": {
-            "0": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "1": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "2": {
-              "name": "markup.italic.markdown.ps"
-            },
-            "3": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "4": {
-              "name": "punctuation.definition.list.markdown.ps"
-            },
-            "5": {
-              "name": "invalid.illegal.ps"
-            },
-            "6": {
-              "name": "comment.line.double-slash.ps"
-            }
+            "0": {"name": "comment.line.double-slash.ps"},
+            "1": {"name": "comment.line.double-slash.ps"},
+            "2": {"name": "markup.italic.markdown.ps"},
+            "3": {"name": "comment.line.double-slash.ps"},
+            "4": {"name": "punctuation.definition.list.markdown.ps"},
+            "5": {"name": "invalid.illegal.ps"},
+            "6": {"name": "comment.line.double-slash.ps"}
           }
         },
         {
           "match": "(^\/\/).*(##)(.*)(\\|)\\s*(>)\\s*(.*)(#)",
           "captures": {
-            "0": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "1": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "2": {
-              "name": "markup.italic.markdown.ps"
-            },
-            "3": {
-              "name": "token.info-token.ps"
-            },
-            "4": {
-              "name": "comment.line.double-slash.ps"
-            },
-            "5": {
-              "name": "invalid.illegal.ps"
-            },
-            "6": {
-              "name": "punctuation.definition.list.markdown.ps"
-            }
+            "0": {"name": "comment.line.double-slash.ps"},
+            "1": {"name": "comment.line.double-slash.ps"},
+            "2": {"name": "markup.italic.markdown.ps"},
+            "3": {"name": "token.info-token.ps"},
+            "4": {"name": "comment.line.double-slash.ps"},
+            "5": {"name": "invalid.illegal.ps"},
+            "6": {"name": "punctuation.definition.list.markdown.ps"}
           }
         },
         {
@@ -257,20 +163,7 @@
                 "0": {"name": "variable.parameter.ps"},
                 "1": {"name": "constant.character.format.placeholder.other.ps"},
                 "3": {"name": "constant.character.format.placeholder.other.ps"},
-                "2": {"patterns": [
-                  {
-                    "match": "\\,",
-                    "name": "punctuation.separator.comma.ps"
-                  },
-                  {
-                    "match": "\\b[0-9]+\\b(?!\\.)",
-                    "name": "constant.numeric.decimal.ps"
-                  },
-                  {
-                    "match": "[^\\s,]+",
-                    "name": "variable.parameter.ps"
-                  }
-                ]}
+                "2": {"patterns": [{"include": "#format_placeholders"}]}
               }
             }
           ]
@@ -292,27 +185,30 @@
                 "0": {"name": "variable.parameter.ps"},
                 "1": {"name": "constant.character.format.placeholder.other.ps"},
                 "3": {"name": "constant.character.format.placeholder.other.ps"},
-                "2": {"patterns": [
-                  {
-                    "match": "\\,",
-                    "name": "punctuation.separator.comma.ps"
-                  },
-                  {
-                    "match": "\\b([0-9]+)\\b(?!\\.)",
-                    "name": "constant.numeric.decimal.ps"
-                  },
-                  {
-                    "match": "[^\\s,]+",
-                    "name": "variable.parameter.ps"
-                  }
-                ]}
+                "2": {"patterns": [{"include": "#format_placeholders"}]}
               }
             }
           ]
         }
       ]
     },
-    "constants": {
+    "format_placeholders": {
+      "patterns": [
+        {
+          "match": "\\,",
+          "name": "punctuation.separator.comma.ps"
+        },
+        {
+          "match": "\\b([0-9]+)\\b(?!\\.)",
+          "name": "constant.numeric.decimal.ps"
+        },
+        {
+          "match": "[^\\s,]+",
+          "name": "variable.parameter.ps"
+        }
+      ]
+    },
+    "built_in_variables": {
       "patterns": [
         {
           "match": "(?<![\\.]\\s*)\\b(adjustment)(\\.)(dividends|none|splits)\\b(?!\\s*[\\.\\(])",
@@ -928,7 +824,7 @@
         }
       ]
     },
-    "functions": {
+    "built_in_functions": {
       "patterns": [
         {
           "match": "^\\s*\\b(indicator|library|strategy)(?=\\s*\\()",
@@ -1378,7 +1274,7 @@
           "match": "(?<![\\.]\\s*)\\b(alert|alertcondition|barcolor|bgcolor|bool|box|color|dayofmonth|dayofweek|fixnan|float|hline|hour|input|int|label|line|linefill|max_bars_back|minute|month|na|nz|plot|plotarrow|plotbar|plotcandle|plotchar|plotshape|second|string|table|time_close|timestamp|time|weekofyear|year)(?=\\s*\\((?!\\s*\\)))",
           "name": "support.function.property.ps"
         },
-        {"include": "#built_in_constants"},
+        {"include": "#built_in_var_extend"},
         {"include": "#array_methods"},
         {"include": "#box_methods"},
         {"include": "#label_methods"},
@@ -1398,83 +1294,17 @@
         {
           "match": "(?:([\\w\\.]*))(\\.)(new)\\b(?=\\s*\\()",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "\\b[a-zA-Z_]\\w*\\b",
-                          "name": "support.type.primitive.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name": "punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "support.type.primitive.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "support.type.primitive.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "keyword.operator.new.ps"
-            }
+            "1": {"name": "support.type.primitive.ps"},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "keyword.operator.new.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*))(\\.)([a-zA-Z_]\\w*)\\b(?=\\s*\\()",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "\\b[a-zA-Z_]\\w*\\b",
-                          "name": "variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name": "punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "entity.name.function.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "entity.name.function.ps"}
           }
         },
         {
@@ -1530,13 +1360,13 @@
         }
       ]
     },
-    "types":{
+    "exports":{
       "patterns": [
         {
           "include": "#collection_new"
         },
         {
-          "match": "\\b(export)\\s+(type)\\s+([a-zA-Z_]\\w*)\\b(?=\\s*(?:\\s*//.*)?$)",
+          "match": "(?<![\\.]\\s*)(?:\\b(export)\\s+)?\\b(type)\\s+([a-zA-Z_]\\w*)\\b(?=\\s*(?:\\s*//.*)?$)",
           "captures": {
             "1": {"name": "keyword.control.export.ps"},
             "2": {"name": "storage.type.type.ps"},
@@ -1544,10 +1374,17 @@
           }
         },
         {
-          "match": "\\b(type)\\s+([a-zA-Z_]\\w*)\\b(?=\\s*(?:\\s*//.*)?$)",
+          "match": "(?<![\\.]\\s*)\\b(export)\\s+(type)\\b",
           "captures": {
-            "1":{"name":"storage.type.type.ps"},
-            "2": {"name": "support.type.primitive.ps"}
+            "1": {"name": "keyword.control.export.ps"},
+            "2": {"name": "storage.type.type.ps"}
+          }
+        },
+        {
+          "match": "(?<![\\.]\\s*)\\b(export)\\s+(method)\\b",
+          "captures": {
+            "1": {"name": "keyword.control.export.ps"},
+            "2": {"name": "storage.type.function.ps"}
           }
         },
         {
@@ -1556,7 +1393,7 @@
         }
       ]
     },
-    "variables": {
+    "variable_declarations": {
       "patterns": [
         {
           "match": "\\b([\\w\\.]+)\\b(\\s*\\[\\s*\\])?\\s+([a-zA-Z_]\\w*)\\s*(?=\\=)(?!\\=\\=)",
@@ -1648,7 +1485,7 @@
         {"include": "#support_type"}
       ]
     },
-    "parameters":{
+    "local_variables":{
       "patterns": [
         {
           "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
@@ -1677,11 +1514,7 @@
             "5":{"name":"support.type.primitive.ps"},
             "6":{"name":"punctuation.definition.generic.end.ps"}
           }
-        }
-      ]
-    },
-    "array_new":{
-      "patterns": [
+        },
         {
           "match": "\\b([a-zA-Z_][\\w\\.]*)\\b\\s*(\\[\\s*\\])",
           "captures": {
@@ -1692,145 +1525,48 @@
         }
       ]
     },
-    "long_functions":{
+    "multiline_functions":{
       "patterns": [
         {
           "match": "(?<=^(?:\\s*export\\s*)?(?:\\s*method\\s*)?\\s*\\b\\w+\\s*\\()([\\s\\S]*)(?=\\)\\s*\\=>)",
-          "captures": {
-            "1":{
-              "patterns": [
-                {"include": "#strings"},
-                {"include": "#collection_new"},
-                {"include": "#array_new"},
-                {"include": "#constants"},
-                {"include": "#support_type"},
-                {"include": "#built_in_constants"},
-                {"include": "#user_define_types"},
-                {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.parameter.ps"
-                },
-                {
-                  "include": "#operators"
-                }
-              ]
-            }
-          }
+          "captures": {"1":{"patterns":[{"include": "#functions_parameters_capture"}]}}
         },
         {
           "match": "(?<=^\\s*export\\s+(?:method\\s+)?\\b\\w+\\s*\\()\\b([\\w][^\\(\\)]*)(?=\\s*\\,\\s*(?://.*)?$)",
-          "captures": {
-            "1":{
-              "patterns": [
-                {"include": "#strings"},
-                {"include": "#collection_new"},
-                {"include": "#array_new"},
-                {"include": "#constants"},
-                {"include": "#support_type"},
-                {"include": "#built_in_constants"},
-                {"include": "#user_define_types"},
-                {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.parameter.ps"
-                },
-                {
-                  "include": "#operators"
-                }
-              ]
-            }
-          }
+          "captures": {"1":{"patterns":[{"include": "#functions_parameters_capture"}]}}
         },
         {
           "match": "(?<=^\\s*(?:export\\s+)?method\\s+\\b\\w+\\s*\\()\\b([\\w][^\\(\\)]*)(?=\\s*\\,\\s*(?://.*)?$)",
-          "captures": {
-            "1":{
-              "patterns": [
-                {"include": "#strings"},
-                {"include": "#collection_new"},
-                {"include": "#array_new"},
-                {"include": "#constants"},
-                {"include": "#support_type"},
-                {"include": "#built_in_constants"},
-                {"include": "#user_define_types"},
-                {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.parameter.ps"
-                },
-                {
-                  "include": "#operators"
-                }
-              ]
-            }
-          }
+          "captures": {"1":{"patterns":[{"include": "#functions_parameters_capture"}]}}
         },
         {
           "match": "(?<=^\\s*(?:export\\s+)?(?:method\\s+)?\\b\\w+\\s*\\()((?:\\s*(?:\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+)?\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*\\,)*(?:\\s*\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*)(?:\\,\\s*(?:\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+)?\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*)*)(?=\\s*\\,\\s*(?://.*)?$)",
-          "captures": {
-            "1":{
-              "patterns": [
-                {"include": "#strings"},
-                {"include": "#collection_new"},
-                {"include": "#array_new"},
-                {"include": "#constants"},
-                {"include": "#support_type"},
-                {"include": "#built_in_constants"},
-                {"include": "#user_define_types"},
-                {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.parameter.ps"
-                },
-                {
-                  "include": "#operators"
-                }
-              ]
-            }
-          }
+          "captures": {"1":{"patterns":[{"include": "#functions_parameters_capture"}]}}
         },
         {
           "match": "(?<=^\\s*)((?:\\s*(?:\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+)?\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*\\,)*(?:\\s*\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*)(?:\\,\\s*(?:\\b[\\w\\.]+\\s*(?:(?:\\<\\s*(?:(?:[\\w\\.]+)|(?:[\\w]+\\s*\\,\\s*[\\w\\.]+))\\s*\\>)|(?:\\[\\s*\\]))?\\s+)?\\b\\w+\\s*(?:\\=\\s*[\\w\\.\\#]+)?\\s*)*)(?=\\s*\\,\\s*(?://.*)?$)",
-          "captures": {
-            "1":{
-              "patterns": [
-                {"include": "#strings"},
-                {"include": "#collection_new"},
-                {"include": "#array_new"},
-                {"include": "#constants"},
-                {"include": "#support_type"},
-                {"include": "#built_in_constants"},
-                {"include": "#user_define_types"},
-                {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.parameter.ps"
-                },
-                {
-                  "include": "#operators"
-                }
-              ]
-            }
-          }
+          "captures": {"1":{"patterns":[{"include": "#functions_parameters_capture"}]}}
         },
         {
           "match": "(?<=^\\s*)\\b([\\w][^\\(\\)]*)(?=\\)\\s*\\=>)",
-          "captures": {
-            "1":{
-              "patterns": [
-                {"include": "#strings"},
-                {"include": "#collection_new"},
-                {"include": "#array_new"},
-                {"include": "#constants"},
-                {"include": "#support_type"},
-                {"include": "#built_in_constants"},
-                {"include": "#user_define_types"},
-                {
-                  "match": "\\b([a-zA-Z_]\\w*)\\b",
-                  "name":"variable.parameter.ps"
-                },
-                {
-                  "include": "#operators"
-                }
-              ]
-            }
-          }
+          "captures": {"1":{"patterns":[{"include": "#functions_parameters_capture"}]}}
+        }
+      ]
+    },
+    "functions_parameters_capture":{
+      "patterns": [
+        {"include": "#strings"},
+        {"include": "#collection_new"},
+        {"include": "#built_in_variables"},
+        {"include": "#support_type"},
+        {"include": "#built_in_var_extend"},
+        {"include": "#user_define_types"},
+        {
+          "match": "\\b([a-zA-Z_]\\w*)\\b",
+          "name":"variable.parameter.ps"
+        },
+        {
+          "include": "#operators"
         }
       ]
     },
@@ -1884,165 +1620,33 @@
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(max|min|sort_indices|sort|stdev)\\b(?=\\s*\\()",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(binary_search_leftmost|binary_search_rightmost|binary_search|concat|covariance|get|percentile_linear_interpolation|percentile_nearest_rank|percentrank|remove|set|slice|variance)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(fill|from|includes|indexof|insert|join|lastindexof|push|unshift)\\b(?=\\s*\\((?!\\s*\\)))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(abs|avg|clear|copy|every|first|last|median|mode|pop|range|reverse|shift|size|some|standardize|sum)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         }
       ]
@@ -2052,124 +1656,25 @@
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_bgcolor|set_border_color|set_border_style|set_border_width|set_bottom_right_point|set_bottom|set_extend|set_lefttop|set_left|set_rightbottom|set_right|set_text_color|set_text_font_family|set_text_halign|set_text_size|set_text_valign|set_text_wrap|set_top_left_point|set_top)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_text)\\b(?=\\s*\\((?!\\s*\\)))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(copy|delete|get_bottom|get_left|get_right|get_top)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         }
       ]
@@ -2179,165 +1684,33 @@
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_size)\\b(?=\\s*\\()",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_color|set_point|set_style|set_text_font_family|set_textalign|set_textcolor|set_x|set_xloc|set_xy|set_y|set_yloc)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_text|set_tooltip)\\b(?=\\s*\\((?!\\s*\\)))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(copy|delete|get_text|get_x|get_y)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         }
       ]
@@ -2347,83 +1720,17 @@
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(get_price|set_color|set_extend|set_first_point|set_second_point|set_style|set_width|set_x1|set_x2|set_xloc|set_xy1|set_xy2|set_y1|set_y2)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(copy|delete|get_x1|get_x2|get_y1|get_y2)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         }
       ]
@@ -2433,83 +1740,17 @@
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_color)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(delete|get_line1|get_line2)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         }
       ]
@@ -2519,124 +1760,25 @@
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(put_all)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(contains|get|put|remove)\\b(?=\\s*\\((?!\\s*\\)))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(clear|copy|keys|size|values)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         }
       ]
@@ -2646,165 +1788,33 @@
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(add_col|add_row|remove_col|remove_row|sort|submatrix)\\b(?=\\s*\\()",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(col|concat|diff|get|kron|mult|pow|reshape|row|set|sum|swap_columns|swap_rows)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(fill)\\b(?=\\s*\\((?!\\s*\\)))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(avg|columns|copy|det|eigenvalues|eigenvectors|elements_count|inv|is_antidiagonal|is_antisymmetric|is_binary|is_diagonal|is_identity|is_square|is_stochastic|is_symmetric|is_triangular|is_zero|max|median|min|mode|pinv|rank|reverse|rows|trace|transpose)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         }
       ]
@@ -2814,124 +1824,55 @@
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(set_bgcolor|set_border_color|set_border_width|set_frame_color|set_frame_width)\\b(?=\\s*\\()",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(cell_set_bgcolor|cell_set_height|cell_set_text_color|cell_set_text_font_family|cell_set_text_halign|cell_set_text_size|cell_set_text_valign|cell_set_text|cell_set_tooltip|cell_set_width|cell|clear|merge_cells|set_position)\\b(?=\\s*\\((?!\\s*[\"'\\)]))",
           "captures": {
-            "1": {
-              "patterns": [
-                {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
-                },
-                {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
-                }
-              ]
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
           }
         },
         {
           "match": "(?:([\\w\\.]*)|(?<=\\)))(\\.)(delete)\\b(?=\\s*\\(\\s*\\))",
           "captures": {
+            "1": {"patterns": [{"include": "#method_namespace"}]},
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "support.function.property.ps"}
+          }
+        }
+      ]
+    },
+    "method_namespace":{
+      "patterns": [
+        {
+          "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
+          "captures": {
             "1": {
               "patterns": [
                 {
-                  "match": "([\\.]?\\b[a-zA-Z_][\\w\\.]*)\\b(\\.)([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {
-                      "patterns": [
-                        {
-                          "match": "[a-zA-Z_]\\w*",
-                          "name":"variable.other.readwrite.ps"
-                        },
-                        {
-                          "match": "\\.",
-                          "name":"punctuation.accessor.ps"
-                        }
-                      ]
-                    },
-                    "2": {"name": "punctuation.accessor.ps"},
-                    "3": {"name": "variable.other.readwrite.ps"}
-                  }
+                  "match": "\\b[a-zA-Z_]\\w*\\b",
+                  "name": "variable.other.readwrite.ps"
                 },
                 {
-                  "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
-                  "captures": {
-                    "1": {"name": "punctuation.accessor.ps"},
-                    "2": {"name": "variable.other.readwrite.ps"}
-                  }
+                  "match": "\\.",
+                  "name": "punctuation.accessor.ps"
                 }
               ]
             },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            },
-            "3":{
-              "name": "support.function.property.ps"
-            }
+            "2": {"name": "punctuation.accessor.ps"},
+            "3": {"name": "variable.other.readwrite.ps"}
+          }
+        },
+        {
+          "match": "([\\.]?)\\b([a-zA-Z_]\\w*)\\b",
+          "captures": {
+            "1": {"name": "punctuation.accessor.ps"},
+            "2": {"name": "variable.other.readwrite.ps"}
           }
         }
       ]
@@ -2940,7 +1881,7 @@
       "patterns":[
         {"include": "#primitive_type"},
         {
-          "match": "\\b(box|color|label|line|linefill|table|polyline)\\b(?!\\s*[\\=\\(\\,])",
+          "match": "(?<![\\.]\\s*)\\b(box|color|label|line|linefill|table|polyline)\\b(?!\\s*[\\=\\(\\,])",
           "name": "support.type.primitive.ps"
         }
       ]
@@ -2948,7 +1889,7 @@
     "primitive_type":{
       "patterns":[
         {
-          "match": "\\b(bool|float|int|string|simple|series|array|map|matrix|chart.point)\\b(?!\\s*\\=\\()",
+          "match": "(?<![\\.]\\s*)\\b(bool|float|int|string|simple|series|array|map|matrix|chart.point)\\b(?!\\s*\\=\\()",
           "name": "support.type.primitive.ps"
         }
       ]
@@ -2956,15 +1897,15 @@
     "keyword_control_words":{
       "patterns": [
         {
-          "match": "\\b(method|type)\\b",
+          "match": "(?<![\\.]\\s*)\\b(method|type)\\b",
           "name": "storage.type.function.ps"
         },
         {
-          "match": "\\bimport\\b",
+          "match": "(?<![\\.]\\s*)\\bimport\\b",
           "name": "keyword.control.import.ps"
         },
         {
-          "match": "\\bexport\\b",
+          "match": "(?<![\\.]\\s*)\\bexport\\b",
           "name": "keyword.control.export.ps"
         }
       ]
@@ -2987,7 +1928,7 @@
         }
       ]
     },
-    "built_in_constants":{
+    "built_in_var_extend":{
       "patterns": [
         {
           "match": "(?<![\\.]\\s*)\\b(hour|minute|month|second|time|volume|year)\\b(?=(?!\\s*(?:[\\.\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
