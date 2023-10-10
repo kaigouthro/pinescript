@@ -132,8 +132,8 @@
   "export 𝑓 ⇨ 𝑥": {
     "prefix": ["export", "library.function"],
     "body": [
-      "export ${1/ /_/g} (${2:<series|simple>} ${3| ,int,float,bool,table,color|} ${4:<parameter_name>} = ${5:[<default_value>]}${6:, ${7:[𝑥]}}) =>",
-      " ${8:<function_code>}"
+      "export ${1:method }${2:<function_name>}(${3|<type>,int,float,bool,color,string,box,label,line,linefill,table,polyline,chart.point|} ${4:<parameter_name>}${5: = ${6:<default_value>}}${7:, ${8:<parameter_name>}})=>",
+      "    ${9:<function_code>}"
     ],
     "description": "export function_name() => \\n\\t "
   },

@@ -947,7 +947,7 @@
     "id": 118,
     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.period)\\b(?!\\s*[\\.\\(])",
     "codeblock": "timeframe.period",
-    "markdown": "A string representation of the chart's timeframe. The returned string's format is '[<quantity>][<units>]', where <quantity> and <units> are in some cases absent. <quantity> is the number of units, but it is absent if that number is 1. <unit> is 'S' for seconds, 'D' for days, 'W' for weeks, 'M' for months, but it is absent for minutes. No <unit> exists for hours. The variable will return: '10S' for 10 seconds, '60' for 60 minutes, 'D' for one day, '2W' for two weeks, '3M' for one quarter. Can be used as an argument with any function containing a `timeframe` parameter.",
+    "markdown": "A string representation of the chart's timeframe. The returned string's format is `[<quantity>][<units>]`, where `<quantity>` and `<units>` are in some cases absent. `<quantity>` is the number of units, but it is absent if that number is 1. `<unit>` is 'S' for seconds, 'D' for days, 'W' for weeks, 'M' for months, but it is absent for minutes. No `<unit>` exists for hours. The variable will return: '10S' for 10 seconds, '60' for 60 minutes, 'D' for one day, '2W' for two weeks, '3M' for one quarter. Can be used as an argument with any function containing a `timeframe` parameter.",
     "type": "simple string",
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.period"
   },

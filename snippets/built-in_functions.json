@@ -2741,7 +2741,7 @@
    "strategy.order ⇨ 𝑓": {
       "prefix": "strategy.order",
       "body": [
-         "strategy.order(id = \"${1}\", direction = ${2| ,strategy.long,strategy.short|}${3:${4:, qty = ${5| ,0.01,0.05,0.1,0.5,1,2,3,4,5,10|}}${6:,limit = ${7}}${8:, stop = ${9}}${10:,oca_name = ${11:\"${12}\"}}${13:, oca_type = ${14| ,strategy.oca.none,strategy.oca.cancel,strategy.oca.reduce|}}${15:,comment = ${16:\"${17}\"}}${18:,alert_message = ${19:\"${20}\"}}${21:, disable_alert = ${22| ,false,true|}}})"
+         "strategy.order(id = \"${1}\", direction = ${2| ,strategy.long,strategy.short|}${3:${4:, qty = ${5| ,0.01,0.05,0.1,0.5,1,2,3,4,5,10|}}${6:, limit = ${7}}${8:, stop = ${9}}${10:, oca_name = ${11:\"${12}\"}}${13:, oca_type = ${14| ,strategy.oca.none,strategy.oca.cancel,strategy.oca.reduce|}}${15:, comment = ${16:\"${17}\"}}${18:, alert_message = ${19:\"${20}\"}}${21:, disable_alert = ${22| ,false,true|}}})"
       ],
       "description": "Command to place order ⇨ 𝑓 | strategy.order(id = string, direction = strategy_direction, qty = int|float, limit = int|float, stop = int|float, oca_name = string, oca_type = string, comment = string, alert_message = string, disable_alert = bool) → void"
    },
