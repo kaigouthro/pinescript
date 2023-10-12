@@ -5,7 +5,7 @@
 	"icon": "images/pineicon.png",
 	"publisher": "salbert11",
 	"license": "MIT",
-	"version": "3.2.0",
+	"version": "3.2.1-beta-2",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
@@ -54,6 +54,10 @@
 			{
 				"language": "pine",
 				"path": "./snippets/built-in_scripts.json"
+			},
+			{
+				"language": "pine",
+				"path": "./snippets/built-in_types.json"
 			},
 			{
 				"language": "pine",

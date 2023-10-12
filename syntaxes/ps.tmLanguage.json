@@ -119,7 +119,7 @@
     "imports":{
       "patterns": [
         {
-          "match": "^(import)\\s+(\\w+)(\/)(\\w+)(\/)(\\w+)\\s+(as)\\s+(\\w+)",
+          "match": "^(import)\\s+([\\w-]+)(\/)(\\w+)(\/)(\\w+)\\s+(as)\\s+(\\w+)",
           "captures": {
             "1": {"name": "keyword.control.import.ps"},
             "2": {"name": "entity.name.type.class.ps"},
@@ -132,7 +132,7 @@
           }
         },
         {
-          "match": "^(import)\\s+(\\w+)(\/)(\\w+)(\/)(\\w+)",
+          "match": "^(import)\\s+([\\w-]+)(\/)(\\w+)(\/)(\\w+)",
           "captures": {
             "1": {"name": "keyword.control.import.ps"},
             "2": {"name": "entity.name.type.class.ps"},

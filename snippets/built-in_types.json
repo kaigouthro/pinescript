@@ -1,0 +1,110 @@
+{
+
+    "int ⇨ Ⓣ" : {
+        "prefix" : "int",
+        "body" : [
+            "int$0"
+        ],
+        "description" : "int | Built-in Type"
+    },
+    "float ⇨ Ⓣ" : {
+        "prefix" : "float",
+        "body" : [
+            "float$0"
+        ],
+        "description" : "float | Built-in Type"
+    },
+    "bool ⇨ Ⓣ" : {
+        "prefix" : "bool",
+        "body" : [
+            "bool$0"
+        ],
+        "description" : "bool | Built-in Type"
+    },
+    "color ⇨ Ⓣ" : {
+        "prefix" : "color",
+        "body" : [
+            "color$0"
+        ],
+        "description" : "color | Built-in Type"
+    },
+    "string ⇨ Ⓣ" : {
+        "prefix" : "string",
+        "body" : [
+            "string$0"
+        ],
+        "description" : "string | Built-in Type"
+    },
+    "line ⇨ Ⓣ" : {
+        "prefix" : "line",
+        "body" : [
+            "line$0"
+        ],
+        "description" : "line | Built-in Type"
+    },
+    "linefill ⇨ Ⓣ" : {
+        "prefix" : "linefill",
+        "body" : [
+            "linefill$0"
+        ],
+        "description" : "linefill | Built-in Type"
+    },
+    "label ⇨ Ⓣ" : {
+        "prefix" : "label",
+        "body" : [
+            "label$0"
+        ],
+        "description" : "label | Built-in Type"
+    },
+    "box ⇨ Ⓣ" : {
+        "prefix" : "box",
+        "body" : [
+            "box$0"
+        ],
+        "description" : "box | Built-in Type"
+    },
+    "table ⇨ Ⓣ" : {
+        "prefix" : "table",
+        "body" : [
+            "table$0"
+        ],
+        "description" : "table | Built-in Type"
+    },
+    "array ⇨ Ⓣ" : {
+        "prefix" : "array",
+        "body" : [
+            "array<$1> "
+        ],
+        "description" : "array | Built-in Type"
+    },
+    "matrix ⇨ Ⓣ" : {
+        "prefix" : "matrix",
+        "body" : [
+            "matrix<$1> "
+        ],
+        "description" : "matrix | Built-in Type"
+    },
+    "map ⇨ Ⓣ" : {
+        "prefix" : "map",
+        "body" : [
+            "map<$1> "
+        ],
+        "description" : "map | Built-in Type"
+    },
+    "polyline ⇨ Ⓣ" : {
+        "prefix" : "polyline",
+        "body" : [
+            "polyline$0"
+        ],
+        "description" : "polyline | Built-in Type"
+    },
+    "chart.point ⇨ Ⓣ" : {
+        "prefix" : "chart.point",
+        "body" : [
+            "chart.point$0"
+        ],
+        "description" : "chart.point | Built-in Type"
+    }
+    }
+    
+    

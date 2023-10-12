@@ -244,6 +244,20 @@
         "while$0"
     ],
     "description" : "while | Language Operator"
+},
+"true ⇨ ⟗" : {
+    "prefix" : "true",
+    "body" : [
+        "true$0"
+    ],
+    "description" : "true | Language Operator"
+},
+"false ⇨ ⟗" : {
+    "prefix" : "false",
+    "body" : [
+        "false$0"
+    ],
+    "description" : "false | Language Operator"
 }
 }
 

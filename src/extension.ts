@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as hover_func from './hover_built-in_functions.json';
-import * as var_func from './hover_built-in_variables.json';
-import * as const_func from './hover_built-in_constants.json';
+import * as hover_var from './hover_built-in_variables.json';
+import * as hover_const from './hover_built-in_constants.json';
 
 type Params = {
 	field: string;
@@ -28,8 +28,8 @@ type ConstPopupBlock = {
 };
 
 const BUILT_IN_FUNC = hover_func as FuncPopupBlock[];
-const BUILT_IN_VAR = var_func as ConstPopupBlock[];
-const BUILT_IN_CONST = const_func as ConstPopupBlock[];
+const BUILT_IN_VAR = hover_var as ConstPopupBlock[];
+const BUILT_IN_CONST = hover_const as ConstPopupBlock[];
 
 export function activate(context: vscode.ExtensionContext) {
 
