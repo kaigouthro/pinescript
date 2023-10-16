@@ -211,7 +211,7 @@
     "built_in_variables": {
       "patterns": [
         {
-          "match": "(?<![\\.]\\s*)\\b(adjustment)(\\.)(dividends|none|splits)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(adjustment)(\\.)(dividends|none|splits)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -225,7 +225,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(alert)(\\.)(freq_all|freq_once_per_bar|freq_once_per_bar_close)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(alert)(\\.)(freq_all|freq_once_per_bar|freq_once_per_bar_close)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -239,7 +239,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(barmerge)(\\.)(gaps_off|gaps_on|lookahead_off|lookahead_on)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(barmerge)(\\.)(gaps_off|gaps_on|lookahead_off|lookahead_on)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -253,7 +253,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(barstate)(\\.)(islastconfirmedhistory|isconfirmed|isfirst|ishistory|islast|isnew|isrealtime)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(barstate)(\\.)(islastconfirmedhistory|isconfirmed|isfirst|ishistory|islast|isnew|isrealtime)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -267,7 +267,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(box)(\\.)(all)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(chart)(\\.)(bg_color|fg_color|is_heikinashi|is_kagi|is_linebreak|is_pnf|is_range|is_renko|is_standard|left_visible_bar_time|right_visible_bar_time)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -281,7 +281,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(chart)(\\.)(bg_color|fg_color|is_heikinashi|is_kagi|is_linebreak|is_pnf|is_range|is_renko|is_standard|left_visible_bar_time|right_visible_bar_time)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(color)(\\.)(aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|white|yellow)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -295,7 +295,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(color)(\\.)(aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|white|yellow)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(currency)(\\.)(AUD|BTC|CAD|CHF|ETH|EUR|GBP|HKD|INR|JPY|KRW|MYR|NOK|NONE|NZD|RUB|SEK|SGD|TRY|USDT|USD|ZAR)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -309,7 +309,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(currency)(\\.)(AUD|BTC|CAD|CHF|ETH|EUR|GBP|HKD|INR|JPY|KRW|MYR|NOK|NONE|NZD|RUB|SEK|SGD|TRY|USDT|USD|ZAR)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(dayofweek)(\\.)(friday|monday|saturday|sunday|thursday|tuesday|wednesday)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -323,7 +323,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(dayofweek)(\\.)(friday|monday|saturday|sunday|thursday|tuesday|wednesday)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(display)(\\.)(all|data_window|none|pane|price_scale|status_line)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -337,7 +337,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(display)(\\.)(all|data_window|none|pane|price_scale|status_line)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(dividends)(\\.)(future_amount|future_ex_date|future_pay_date|gross|net)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -351,7 +351,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(dividends)(\\.)(future_amount|future_ex_date|future_pay_date|gross|net)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(earnings)(\\.)(actual|estimate|standardized|future_eps|future_period_end_time|future_revenue|future_time)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -365,7 +365,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(earnings)(\\.)(actual|estimate|standardized|future_eps|future_period_end_time|future_revenue|future_time)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(extend)(\\.)(both|left|none|right)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -379,7 +379,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(extend)(\\.)(both|left|none|right)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(font)(\\.)(family_default|family_monospace)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -393,7 +393,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(font)(\\.)(family_default|family_monospace)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(format)(\\.)(inherit|mintick|percent|price|volume)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -407,7 +407,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(format)(\\.)(inherit|mintick|percent|price|volume)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(hline)(\\.)(style_dashed|style_dotted|style_solid)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -421,7 +421,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(hline)(\\.)(style_dashed|style_dotted|style_solid)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(label)(\\.)(style_arrowdown|style_arrowup|style_circle|style_cross|style_diamond|style_flag|style_label_center|style_label_down|style_label_left|style_label_lower_left|style_label_lower_right|style_label_right|style_label_up|style_label_upper_left|style_label_upper_right|style_none|style_square|style_text_outline|style_triangledown|style_triangleup|style_xcross)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -435,7 +435,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(label)(\\.)(all|style_arrowdown|style_arrowup|style_circle|style_cross|style_diamond|style_flag|style_label_center|style_label_down|style_label_left|style_label_lower_left|style_label_lower_right|style_label_right|style_label_up|style_label_upper_left|style_label_upper_right|style_none|style_square|style_text_outline|style_triangledown|style_triangleup|style_xcross)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(line)(\\.)(style_arrow_both|style_arrow_left|style_arrow_right|style_dashed|style_dotted|style_solid)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -449,7 +449,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(line)(\\.)(all|style_arrow_both|style_arrow_left|style_arrow_right|style_dashed|style_dotted|style_solid)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(location)(\\.)(abovebar|absolute|belowbar|bottom|top)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -463,7 +463,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(linefill)(\\.)(all)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(math)(\\.)(e|phi|pi|rphi)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -477,7 +477,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(location)(\\.)(abovebar|absolute|belowbar|bottom|top)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(order)(\\.)(ascending|descending)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -491,7 +491,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(math)(\\.)(e|phi|pi|rphi)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(plot)(\\.)(style_areabr|style_area|style_circles|style_columns|style_cross|style_histogram|style_linebr|style_line|style_stepline_diamond|style_steplinebr|style_stepline)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -505,7 +505,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(order)(\\.)(ascending|descending)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(position)(\\.)(bottom_center|bottom_left|bottom_right|middle_center|middle_left|middle_right|top_center|top_left|top_right)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -519,7 +519,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(plot)(\\.)(style_areabr|style_area|style_circles|style_columns|style_cross|style_histogram|style_linebr|style_line|style_stepline_diamond|style_steplinebr|style_stepline)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(scale)(\\.)(left|none|right)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -533,7 +533,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(polyline)(\\.)(all)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(session)(\\.)(extended|isfirstbar_regular|isfirstbar|islastbar_regular|islastbar|ismarket|ispostmarket|ispremarket|regular)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -547,7 +547,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(position)(\\.)(bottom_center|bottom_left|bottom_right|middle_center|middle_left|middle_right|top_center|top_left|top_right)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(shape)(\\.)(arrowdown|arrowup|circle|cross|diamond|flag|labeldown|labelup|square|triangledown|triangleup|xcross)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -561,7 +561,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(scale)(\\.)(left|none|right)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(size)(\\.)(auto|huge|large|normal|small|tiny)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -575,7 +575,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(session)(\\.)(extended|isfirstbar_regular|isfirstbar|islastbar_regular|islastbar|ismarket|ispostmarket|ispremarket|regular)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(splits)(\\.)(denominator|numerator)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -589,7 +589,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(shape)(\\.)(arrowdown|arrowup|circle|cross|diamond|flag|labeldown|labelup|square|triangledown|triangleup|xcross)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(account_currency|cash|equity|eventrades|fixed|grossloss|grossprofit|initial_capital|long|losstrades|margin_liquidation_price|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown|max_runup|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -603,49 +603,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(size)(\\.)(auto|huge|large|normal|small|tiny)\\b(?!\\s*[\\.\\(])",
-          "captures": {
-            "0": {
-              "name": "support.constant.property.ps"
-            },
-            "1": {
-              "name": "support.constant.ps"
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            }
-          }
-        },
-        {
-          "match": "(?<![\\.]\\s*)\\b(splits)(\\.)(denominator|numerator)\\b(?!\\s*[\\.\\(])",
-          "captures": {
-            "0": {
-              "name": "support.constant.property.ps"
-            },
-            "1": {
-              "name": "support.constant.ps"
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            }
-          }
-        },
-        {
-          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(account_currency|cash|equity|eventrades|fixed|grossloss|grossprofit|initial_capital|long|losstrades|margin_liquidation_price|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown|max_runup|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b(?!\\s*[\\.\\(])",
-          "captures": {
-            "0": {
-              "name": "support.constant.property.ps"
-            },
-            "1": {
-              "name": "support.constant.ps"
-            },
-            "2": {
-              "name": "punctuation.accessor.ps"
-            }
-          }
-        },
-        {
-          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(commission)(\\.)(cash_per_contract|cash_per_order|percent)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(commission)(\\.)(cash_per_contract|cash_per_order|percent)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -665,7 +623,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(direction)(\\.)(all|long|short)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(direction)(\\.)(all|long|short)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -685,7 +643,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(oca)(\\.)(cancel|none|reduce)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(oca)(\\.)(cancel|none|reduce)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -705,7 +663,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(syminfo)(\\.)(basecurrency|country|currency|description|industry|minmove|mintick|pointvalue|prefix|pricescale|root|sector|session|tickerid|ticker|timezone|type|volumetype)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(syminfo)(\\.)(basecurrency|country|currency|description|industry|minmove|mintick|pointvalue|prefix|pricescale|root|sector|session|tickerid|ticker|timezone|type|volumetype)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -719,7 +677,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(ta)(\\.)(accdist|iii|nvi|obv|pvi|pvt|tr|vwap|wad|wvad)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(ta)(\\.)(accdist|iii|nvi|obv|pvi|pvt|tr|vwap|wad|wvad)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -733,7 +691,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(table)(\\.)(all)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(box|line|linefill|label|polyline|table)(\\.)(all)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -747,7 +705,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(text)(\\.)(align_bottom|align_center|align_left|align_right|align_top|wrap_auto|wrap_none)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(text)(\\.)(align_bottom|align_center|align_left|align_right|align_top|wrap_auto|wrap_none)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -761,7 +719,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(timeframe)(\\.)(isdaily|isdwm|isintraday|isminutes|ismonthly|isseconds|isweekly|multiplier|period)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(timeframe)(\\.)(isdaily|isdwm|isintraday|isminutes|ismonthly|isseconds|isweekly|multiplier|period)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -775,7 +733,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(xloc)(\\.)(bar_index|bar_time)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(xloc)(\\.)(bar_index|bar_time)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -789,7 +747,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(yloc)(\\.)(abovebar|belowbar|price)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(yloc)(\\.)(abovebar|belowbar|price)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -1913,7 +1871,7 @@
     "strategy_openclose_trade":{
       "patterns": [
         {
-          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(opentrades|closedtrades)\\b(?!\\s*[\\.\\(])",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(opentrades|closedtrades)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -1931,11 +1889,11 @@
     "built_in_var_extend":{
       "patterns": [
         {
-          "match": "(?<![\\.]\\s*)\\b(hour|minute|month|second|time|volume|year)\\b(?=(?!\\s*(?:[\\.\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+          "match": "(?<![\\.]\\s*)\\b(hour|minute|month|second|time|volume|year)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
           "name": "support.constant.ps"
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(bar_index|close|dayofmonth|dayofweek|high|hl2|hlc3|hlcc4|last_bar_index|last_bar_time|low|na|ohlc4|open|time_close|time_tradingday|timenow|weekofyear)\\b(?=(?!\\s*(?:[\\.\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+          "match": "(?<![\\.]\\s*)\\b(bar_index|close|dayofmonth|dayofweek|high|hl2|hlc3|hlcc4|last_bar_index|last_bar_time|low|na|ohlc4|open|time_close|time_tradingday|timenow|weekofyear)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
           "name": "support.constant.ps"
         },
         {"include": "#strategy_openclose_trade"}
