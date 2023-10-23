@@ -196,6 +196,13 @@
     ],
     "description" : "or | Language Operator"
 },
+"const ⇨ ⟗" : {
+    "prefix" : "const",
+    "body" : [
+        "const$0"
+    ],
+    "description" : "const | Language Operator"
+},
 "series ⇨ ⟗" : {
     "prefix" : "series",
     "body" : [

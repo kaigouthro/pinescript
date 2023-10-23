@@ -1289,7 +1289,7 @@
     "keywords": {
       "patterns": [
         {
-          "match": "\\b(if|elseif|else|return)\\b",
+          "match": "\\b(if|else|return)\\b",
           "name": "keyword.control.conditional.ps"
         },
         {
@@ -1847,7 +1847,7 @@
     "primitive_type":{
       "patterns":[
         {
-          "match": "(?<![\\.]\\s*)\\b(bool|float|int|string|simple|series|array|map|matrix|chart.point)\\b(?!\\s*\\=\\()",
+          "match": "(?<![\\.]\\s*)\\b(const|bool|float|int|string|simple|series|array|map|matrix|chart.point)\\b(?!\\s*\\=\\()",
           "name": "support.type.primitive.ps"
         }
       ]

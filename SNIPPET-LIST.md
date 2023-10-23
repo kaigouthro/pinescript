@@ -856,6 +856,7 @@
 |   `method`   |
 |   `not`      |
 |   `or`       |
+|   `const`    |
 |   `series`   |
 |   `simple`   |
 |   `switch`   |
@@ -863,6 +864,8 @@
 |   `var`      |
 |   `varip`    |
 |   `while`    |
+|   `true`     |
+|   `false`    |
 
 -----
 
