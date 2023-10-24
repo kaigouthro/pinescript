@@ -1,5 +1,13 @@
 # Change Log
 
+#### **3.2.1**
+
+*24.10.2023 **Update***
+- Snippets fixed.
+- Grammars bug fixed.
+
+---
+
 #### **3.2.0**
 
 *08.10.2023 **Update***

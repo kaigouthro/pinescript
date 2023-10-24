@@ -109,13 +109,11 @@ The PineScript Helper extension supports the following file extensions:
 ---
 
 ## Release Notes
-#### **3.2.0**
+#### **3.2.1**
 
-*08.10.2023 **Update***
-- Reworked hover functions. Now displays descriptions and arguments list.
-- Snippets for built-in functions and variables updated.
+*24.10.2023 **Update***
+- Snippets fixed.
 - Grammars bug fixed.
-- Type `polyline` added.
 
 ---
 
@@ -134,4 +132,4 @@ This extension is released under the [MIT License](./LICENSE.md).
 
 ---
 
-*Version 3.2.0*
+*Version 3.2.1*
