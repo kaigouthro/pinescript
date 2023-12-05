@@ -419,12 +419,26 @@
       ],
       "description": "Total currency value of all completed losing trades. | TYPE series float"
    },
+   "strategy.grossloss_percent ⇨ 𝑥": {
+      "prefix": "strategy.grossloss_percent",
+      "body": [
+         "strategy.grossloss_percent$0"
+      ],
+      "description": "The total value of all completed losing trades, expressed as a percentage of the initial capital. | TYPE series float"
+   },
    "strategy.grossprofit ⇨ 𝑥": {
       "prefix": "strategy.grossprofit",
       "body": [
          "strategy.grossprofit$0"
       ],
       "description": "Total currency value of all completed winning trades. | TYPE series float"
+   },
+   "strategy.grossprofit_percent ⇨ 𝑥": {
+      "prefix": "strategy.grossprofit_percent",
+      "body": [
+         "strategy.grossprofit_percent$0"
+      ],
+      "description": "The total currency value of all completed winning trades, expressed as a percentage of the initial capital. | TYPE series float"
    },
    "strategy.initial_capital ⇨ 𝑥": {
       "prefix": "strategy.initial_capital",
@@ -482,12 +496,26 @@
       ],
       "description": "Maximum equity drawdown value for the whole trading interval. | TYPE series float"
    },
+   "strategy.max_drawdown_percent ⇨ 𝑥": {
+      "prefix": "strategy.max_drawdown_percent",
+      "body": [
+         "strategy.max_drawdown_percent$0"
+      ],
+      "description": "The maximum equity drawdown value for the whole trading interval, expressed as a percentage and calculated by formula: Lowest Value During Trade / (Entry Price x Quantity) * 100. | TYPE series float"
+   },
    "strategy.max_runup ⇨ 𝑥": {
       "prefix": "strategy.max_runup",
       "body": [
          "strategy.max_runup$0"
       ],
       "description": "Maximum equity run-up value for the whole trading interval. | TYPE series float"
+   },
+   "strategy.max_runup_percent ⇨ 𝑥": {
+      "prefix": "strategy.max_runup_percent",
+      "body": [
+         "strategy.max_runup_percent$0"
+      ],
+      "description": "The maximum equity run-up value for the whole trading interval, expressed as a percentage and calculated by formula: Highest Value During Trade / (Entry Price x Quantity) * 100. | TYPE series float"
    },
    "strategy.netprofit ⇨ 𝑥": {
       "prefix": "strategy.netprofit",
@@ -496,12 +524,26 @@
       ],
       "description": "Total currency value of all completed trades. | TYPE series float"
    },
+   "strategy.netprofit_percent ⇨ 𝑥": {
+      "prefix": "strategy.netprofit_percent",
+      "body": [
+         "strategy.netprofit_percent$0"
+      ],
+      "description": "The total value of all completed trades, expressed as a percentage of the initial capital. | TYPE series float"
+   },
    "strategy.openprofit ⇨ 𝑥": {
       "prefix": "strategy.openprofit",
       "body": [
          "strategy.openprofit$0"
       ],
       "description": "Current unrealized profit or loss for all open positions. | TYPE series float"
+   },
+   "strategy.openprofit_percent ⇨ 𝑥": {
+      "prefix": "strategy.openprofit_percent",
+      "body": [
+         "strategy.openprofit_percent$0"
+      ],
+      "description": "The current unrealized profit or loss for all open positions, expressed as a percentage and calculated by formula: openPL / realizedEquity * 100. | TYPE series float"
    },
    "strategy.opentrades ⇨ 𝑥": {
       "prefix": "strategy.opentrades",
@@ -573,6 +615,13 @@
       ],
       "description": "Description for the current symbol. | TYPE simple string"
    },
+   "syminfo.employees ⇨ 𝑥": {
+      "prefix": "syminfo.employees",
+      "body": [
+         "syminfo.employees$0"
+      ],
+      "description": "The number of employees the company has. | TYPE simple int"
+   },
    "syminfo.industry ⇨ 𝑥": {
       "prefix": "syminfo.industry",
       "body": [
@@ -615,6 +664,55 @@
       ],
       "description": "Returns a whole number used to calculate the smallest increment between a symbol's price movements (syminfo.mintick). It is the denominator in the syminfo.mintick formula. | TYPE simple int"
    },
+   "syminfo.recommendations_buy ⇨ 𝑥": {
+      "prefix": "syminfo.recommendations_buy",
+      "body": [
+         "syminfo.recommendations_buy$0"
+      ],
+      "description": "The number of analysts who gave the current symbol a \"Buy\" rating. | TYPE series int"
+   },
+   "syminfo.recommendations_buy_strong ⇨ 𝑥": {
+      "prefix": "syminfo.recommendations_buy_strong",
+      "body": [
+         "syminfo.recommendations_buy_strong$0"
+      ],
+      "description": "The number of analysts who gave the current symbol a \"Strong Buy\" rating. | TYPE series int"
+   },
+   "syminfo.recommendations_date ⇨ 𝑥": {
+      "prefix": "syminfo.recommendations_date",
+      "body": [
+         "syminfo.recommendations_date$0"
+      ],
+      "description": "The starting date of the last set of recommendations for the current symbol. | TYPE series int"
+   },
+   "syminfo.recommendations_hold ⇨ 𝑥": {
+      "prefix": "syminfo.recommendations_hold",
+      "body": [
+         "syminfo.recommendations_hold$0"
+      ],
+      "description": "The number of analysts who gave the current symbol a \"Hold\" rating. | TYPE series int"
+   },
+   "syminfo.recommendations_sell ⇨ 𝑥": {
+      "prefix": "syminfo.recommendations_sell",
+      "body": [
+         "syminfo.recommendations_sell$0"
+      ],
+      "description": "The number of analysts who gave the current symbol a \"Sell\" rating. | TYPE series int"
+   },
+   "syminfo.recommendations_sell_strong ⇨ 𝑥": {
+      "prefix": "syminfo.recommendations_sell_strong",
+      "body": [
+         "syminfo.recommendations_sell_strong$0"
+      ],
+      "description": "The number of analysts who gave the current symbol a \"Strong Sell\" rating. | TYPE series int"
+   },
+   "syminfo.recommendations_total ⇨ 𝑥": {
+      "prefix": "syminfo.recommendations_total",
+      "body": [
+         "syminfo.recommendations_total$0"
+      ],
+      "description": "The total number of recommendations for the current symbol. | TYPE series int"
+   },
    "syminfo.root ⇨ 𝑥": {
       "prefix": "syminfo.root",
       "body": [
@@ -635,6 +733,69 @@
          "syminfo.session$0"
       ],
       "description": "Session type of the chart main series. Possible values are session.regular, session.extended. | TYPE simple string"
+   },
+   "syminfo.shareholders ⇨ 𝑥": {
+      "prefix": "syminfo.shareholders",
+      "body": [
+         "syminfo.shareholders$0"
+      ],
+      "description": "The number of shareholders the company has. | TYPE simple int"
+   },
+   "syminfo.shares_outstanding_float ⇨ 𝑥": {
+      "prefix": "syminfo.shares_outstanding_float",
+      "body": [
+         "syminfo.shares_outstanding_float$0"
+      ],
+      "description": "The total number of shares outstanding a company has available, excluding any of its restricted shares. | TYPE simple float"
+   },
+   "syminfo.shares_outstanding_total ⇨ 𝑥": {
+      "prefix": "syminfo.shares_outstanding_total",
+      "body": [
+         "syminfo.shares_outstanding_total$0"
+      ],
+      "description": "The total number of shares outstanding a company has available, including restricted shares held by insiders, major shareholders, and employees. | TYPE simple int"
+   },
+   "syminfo.target_price_average ⇨ 𝑥": {
+      "prefix": "syminfo.target_price_average",
+      "body": [
+         "syminfo.target_price_average$0"
+      ],
+      "description": "The average of the last yearly price targets for the symbol predicted by analysts. | TYPE series float"
+   },
+   "syminfo.target_price_date ⇨ 𝑥": {
+      "prefix": "syminfo.target_price_date",
+      "body": [
+         "syminfo.target_price_date$0"
+      ],
+      "description": "The starting date of the last price target prediction for the current symbol. | TYPE series int"
+   },
+   "syminfo.target_price_estimates ⇨ 𝑥": {
+      "prefix": "syminfo.target_price_estimates",
+      "body": [
+         "syminfo.target_price_estimates$0"
+      ],
+      "description": "The latest total number of price target predictions for the current symbol. | TYPE series float"
+   },
+   "syminfo.target_price_high ⇨ 𝑥": {
+      "prefix": "syminfo.target_price_high",
+      "body": [
+         "syminfo.target_price_high$0"
+      ],
+      "description": "The last highest yearly price target for the symbol predicted by analysts. | TYPE series float"
+   },
+   "syminfo.target_price_low ⇨ 𝑥": {
+      "prefix": "syminfo.target_price_low",
+      "body": [
+         "syminfo.target_price_low$0"
+      ],
+      "description": "The last lowest yearly price target for the symbol predicted by analysts. | TYPE series float"
+   },
+   "syminfo.target_price_median ⇨ 𝑥": {
+      "prefix": "syminfo.target_price_median",
+      "body": [
+         "syminfo.target_price_median$0"
+      ],
+      "description": "The median of the last yearly price targets for the symbol predicted by analysts. | TYPE series float"
    },
    "syminfo.ticker ⇨ 𝑥": {
       "prefix": "syminfo.ticker",
@@ -860,4 +1021,4 @@
       ],
       "description": "Current bar year in exchange timezone. | TYPE series int"
    }
- }
+}

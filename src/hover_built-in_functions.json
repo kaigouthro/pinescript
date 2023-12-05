@@ -6397,6 +6397,48 @@
   },
    {
      "id": 317,
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades\\.max_drawdown_percent)(?=\\s*\\()",
+     "codeblock": "strategy.closedtrades.max_drawdown_percent(trade_num) → series float",
+     "markdown": "Returns the maximum drawdown of the closed trade, i.e., the maximum possible loss during the trade, expressed as a percentage and calculated by formula: `Lowest Value During Trade / (Entry Price x Quantity) * 100`.",
+     "returns": "The maximum drawdown of the closed trade in percentage.",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy.closedtrades.max_drawdown_percent",
+     "param": [
+        {
+           "field": "trade_num (series int)",
+           "description": "The trade number of the closed trade. The number of the first trade is zero."
+        }
+     ]
+  },
+   {
+     "id": 318,
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades\\.max_runup_percent)(?=\\s*\\()",
+     "codeblock": "strategy.closedtrades.max_runup_percent(trade_num) → series float",
+     "markdown": "Returns the maximum run-up of the closed trade, i.e., the maximum possible profit during the trade, expressed as a percentage and calculated by formula: `Highest Value During Trade / (Entry Price x Quantity) * 100`.",
+     "returns": "The maximum run-up of the closed trade in percentage.",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy.closedtrades.max_runup_percent",
+     "param": [
+        {
+           "field": "trade_num (series int)",
+           "description": "The trade number of the closed trade. The number of the first trade is zero."
+        }
+     ]
+  },
+   {
+     "id": 319,
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades\\.profit_percent)(?=\\s*\\()",
+     "codeblock": "strategy.closedtrades.profit_percent(trade_num) → series float",
+     "markdown": "Returns the profit/loss value of the closed trade, expressed as a percentage. Losses are expressed as negative values.",
+     "returns": "The profit/loss value of the closed trade in percentage.",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy.closedtrades.profit_percent",
+     "param": [
+        {
+           "field": "trade_num (series int)",
+           "description": "The trade number of the closed trade. The number of the first trade is zero."
+        }
+     ]
+  },
+   {
+     "id": 320,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades\\.max_drawdown)(?=\\s*\\()",
      "codeblock": "strategy.closedtrades.max_drawdown(trade_num) → series float",
      "markdown": "Returns the maximum drawdown of the closed trade, i.e., the maximum possible loss during the trade, expressed in strategy.account_currency.",
@@ -6410,7 +6452,7 @@
      ]
   },
    {
-     "id": 318,
+     "id": 321,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades\\.max_runup)(?=\\s*\\()",
      "codeblock": "strategy.closedtrades.max_runup(trade_num) → series float",
      "markdown": "Returns the maximum run up of the closed trade, i.e., the maximum possible profit during the trade, expressed in strategy.account_currency.",
@@ -6424,7 +6466,7 @@
      ]
   },
    {
-     "id": 319,
+     "id": 322,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades\\.profit)(?=\\s*\\()",
      "codeblock": "strategy.closedtrades.profit(trade_num) → series float",
      "markdown": "Returns the profit or loss of the closed trade. Losses are expressed as negative values.",
@@ -6438,7 +6480,7 @@
      ]
   },
    {
-     "id": 320,
+     "id": 323,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades\\.size)(?=\\s*\\()",
      "codeblock": "strategy.closedtrades.size(trade_num) → series float",
      "markdown": "Returns the direction and the number of contracts traded in the closed trade. If the value is > 0, the market position was long. If the value is < 0, the market position was short.",
@@ -6452,7 +6494,7 @@
      ]
   },
    {
-     "id": 321,
+     "id": 324,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.convert_to_account)(?=\\s*\\()",
      "codeblock": "strategy.convert_to_account(value) → series float",
      "markdown": "Converts the value from the currency that the symbol on the chart is traded in (syminfo.currency) to the currency used by the strategy (strategy.account_currency).",
@@ -6466,7 +6508,7 @@
      ]
   },
    {
-     "id": 322,
+     "id": 325,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.convert_to_symbol)(?=\\s*\\()",
      "codeblock": "strategy.convert_to_symbol(value) → series float",
      "markdown": "Converts the value from the currency used by the strategy (strategy.account_currency) to the currency that the symbol on the chart is traded in (syminfo.currency).",
@@ -6480,7 +6522,7 @@
      ]
   },
    {
-     "id": 323,
+     "id": 326,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.default_entry_qty)(?=\\s*\\()",
      "codeblock": "strategy.default_entry_qty(fill_price) → series float",
      "markdown": "Calculates the default quantity, in units, of an entry order from strategy.entry or strategy.order if it were to fill at the specified `fill_price` value.",
@@ -6494,7 +6536,7 @@
      ]
   },
    {
-     "id": 324,
+     "id": 327,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.entry)(?=\\s*\\()",
      "codeblock": "strategy.entry(id, direction, qty, limit, stop, oca_name, oca_type, comment, alert_message, disable_alert) → void",
      "markdown": "It is a command to enter market position. If an order with the same ID is already pending, it is possible to modify the order. If there is no order with the specified ID, a new order is placed.",
@@ -6544,7 +6586,7 @@
      ]
   },
    {
-     "id": 325,
+     "id": 328,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.exit)(?=\\s*\\()",
      "codeblock": "strategy.exit(id, from_entry, qty, qty_percent, profit, limit, loss, stop, trail_price, trail_points, trail_offset, oca_name, comment, comment_profit, comment_loss, comment_trailing, alert_message, alert_profit, alert_loss, alert_trailing, disable_alert) → void",
      "markdown": "It is a command to exit either a specific entry, or whole market position. If an order with the same ID is already pending, it is possible to modify the order. If an entry order was not filled, but an exit order is generated, the exit order will wait till entry order is filled and then the exit order is placed.",
@@ -6638,7 +6680,7 @@
      ]
   },
    {
-     "id": 326,
+     "id": 329,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.commission)(?=\\s*\\()",
      "codeblock": "strategy.opentrades.commission(trade_num) → series float",
      "markdown": "Returns the sum of entry and exit fees paid in the open trade, expressed in strategy.account_currency.",
@@ -6652,7 +6694,7 @@
      ]
   },
    {
-     "id": 327,
+     "id": 330,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.entry_bar_index)(?=\\s*\\()",
      "codeblock": "strategy.opentrades.entry_bar_index(trade_num) → series int",
      "markdown": "Returns the bar_index of the open trade's entry.",
@@ -6666,7 +6708,7 @@
      ]
   },
    {
-     "id": 328,
+     "id": 331,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.entry_comment)(?=\\s*\\()",
      "codeblock": "strategy.opentrades.entry_comment(trade_num) → series string",
      "markdown": "Returns the comment message of the open trade's entry, or na if there is no entry with this `trade_num`.",
@@ -6680,7 +6722,7 @@
      ]
   },
    {
-     "id": 329,
+     "id": 332,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.entry_id)(?=\\s*\\()",
      "codeblock": "strategy.opentrades.entry_id(trade_num) → series string",
      "markdown": "Returns the id of the open trade's entry.",
@@ -6694,7 +6736,7 @@
      ]
   },
    {
-     "id": 330,
+     "id": 333,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.entry_price)(?=\\s*\\()",
      "codeblock": "strategy.opentrades.entry_price(trade_num) → series float",
      "markdown": "Returns the price of the open trade's entry.",
@@ -6708,7 +6750,7 @@
      ]
   },
    {
-     "id": 331,
+     "id": 334,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.entry_time)(?=\\s*\\()",
      "codeblock": "strategy.opentrades.entry_time(trade_num) → series int",
      "markdown": "Returns the UNIX time of the open trade's entry.",
@@ -6722,7 +6764,49 @@
      ]
   },
    {
-     "id": 332,
+     "id": 335,
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.max_drawdown_percent)(?=\\s*\\()",
+     "codeblock": "strategy.opentrades.max_drawdown_percent(trade_num) → series float",
+     "markdown": "Returns the maximum drawdown of the open trade, i.e., the maximum possible loss during the trade, expressed as a percentage and calculated by formula: `Lowest Value During Trade / (Entry Price x Quantity) * 100`.",
+     "returns": "The maximum drawdown of the open trade in percentage.",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy.opentrades.max_drawdown_percent",
+     "param": [
+        {
+           "field": "trade_num (series int)",
+           "description": "The trade number of the open trade. The number of the first trade is zero."
+        }
+     ]
+  },
+   {
+     "id": 336,
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.max_runup_percent)(?=\\s*\\()",
+     "codeblock": "strategy.opentrades.max_runup_percent(trade_num) → series float",
+     "markdown": "Returns the maximum run-up of the open trade, i.e., the maximum possible profit during the trade, expressed as a percentage and calculated by formula: `Highest Value During Trade / (Entry Price x Quantity) * 100`.",
+     "returns": "The maximum run-up of the open trade in percentage.",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy.opentrades.max_runup_percent",
+     "param": [
+        {
+           "field": "trade_num (series int)",
+           "description": "The trade number of the open trade. The number of the first trade is zero."
+        }
+     ]
+  },
+   {
+     "id": 337,
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.profit_percent)(?=\\s*\\()",
+     "codeblock": "strategy.opentrades.profit_percent(trade_num) → series float",
+     "markdown": "Returns the profit/loss of the open trade, expressed as a percentage. Losses are expressed as negative values.",
+     "returns": "The profit/loss value of the open trade in percentage.",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy.opentrades.profit_percent",
+     "param": [
+        {
+           "field": "trade_num (series int)",
+           "description": "The trade number of the open trade. The number of the first trade is zero."
+        }
+     ]
+  },
+   {
+     "id": 338,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.max_drawdown)(?=\\s*\\()",
      "codeblock": "strategy.opentrades.max_drawdown(trade_num) → series float",
      "markdown": "Returns the maximum drawdown of the open trade, i.e., the maximum possible loss during the trade, expressed in strategy.account_currency.",
@@ -6736,7 +6820,7 @@
      ]
   },
    {
-     "id": 333,
+     "id": 339,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.max_runup)(?=\\s*\\()",
      "codeblock": "strategy.opentrades.max_runup(trade_num) → series float",
      "markdown": "Returns the maximum run up of the open trade, i.e., the maximum possible profit during the trade, expressed in strategy.account_currency.",
@@ -6750,7 +6834,7 @@
      ]
   },
    {
-     "id": 334,
+     "id": 340,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.profit)(?=\\s*\\()",
      "codeblock": "strategy.opentrades.profit(trade_num) → series float",
      "markdown": "Returns the profit or loss of the open trade, expressed in strategy.account_currency. Losses are expressed as negative values.",
@@ -6764,7 +6848,7 @@
      ]
   },
    {
-     "id": 335,
+     "id": 341,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades\\.size)(?=\\s*\\()",
      "codeblock": "strategy.opentrades.size(trade_num) → series float",
      "markdown": "Returns the direction and the number of contracts traded in the open trade. If the value is > 0, the market position was long. If the value is < 0, the market position was short.",
@@ -6778,7 +6862,7 @@
      ]
   },
    {
-     "id": 336,
+     "id": 342,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.order)(?=\\s*\\()",
      "codeblock": "strategy.order(id, direction, qty, limit, stop, oca_name, oca_type, comment, alert_message, disable_alert) → void",
      "markdown": "It is a command to place order. If an order with the same ID is already pending, it is possible to modify the order. If there is no order with the specified ID, a new order is placed.",
@@ -6828,7 +6912,7 @@
      ]
   },
    {
-     "id": 337,
+     "id": 343,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.risk\\.allow_entry_in)(?=\\s*\\()",
      "codeblock": "strategy.risk.allow_entry_in(value) → void",
      "markdown": "Used to specify in which market direction the strategy.entry function is allowed to open positions.",
@@ -6842,7 +6926,7 @@
      ]
   },
    {
-     "id": 338,
+     "id": 344,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.risk\\.max_cons_loss_days)(?=\\s*\\()",
      "codeblock": "strategy.risk.max_cons_loss_days(count, alert_message) → void",
      "markdown": "The purpose of this rule is to cancel all pending orders, close all open positions and stop placing orders after a specified number of consecutive days with losses. The rule affects the whole strategy.",
@@ -6860,7 +6944,7 @@
      ]
   },
    {
-     "id": 339,
+     "id": 345,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.risk\\.max_drawdown)(?=\\s*\\()",
      "codeblock": "strategy.risk.max_drawdown(value, type, alert_message) → void",
      "markdown": "The purpose of this rule is to determine maximum drawdown. The rule affects the whole strategy. Once the maximum drawdown value is reached, all pending orders are cancelled, all open positions are closed and no new orders can be placed.",
@@ -6882,7 +6966,7 @@
      ]
   },
    {
-     "id": 340,
+     "id": 346,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.risk\\.max_intraday_filled_orders)(?=\\s*\\()",
      "codeblock": "strategy.risk.max_intraday_filled_orders(count, alert_message) → void",
      "markdown": "The purpose of this rule is to determine maximum number of filled orders per 1 day (per 1 bar, if chart resolution is higher than 1 day). The rule affects the whole strategy. Once the maximum number of filled orders is reached, all pending orders are cancelled, all open positions are closed and no new orders can be placed till the end of the current trading session.",
@@ -6900,7 +6984,7 @@
      ]
   },
    {
-     "id": 341,
+     "id": 347,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.risk\\.max_intraday_loss)(?=\\s*\\()",
      "codeblock": "strategy.risk.max_intraday_loss(value, type, alert_message) → void",
      "markdown": "The maximum loss value allowed during a day. It is specified either in money (base currency), or in percentage of maximum intraday equity (0 -100).",
@@ -6922,7 +7006,7 @@
      ]
   },
    {
-     "id": 342,
+     "id": 348,
      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.risk\\.max_position_size)(?=\\s*\\()",
      "codeblock": "strategy.risk.max_position_size(contracts) → void",
      "markdown": "The purpose of this rule is to determine maximum size of a market position. The rule affects the following function: strategy.entry. The 'entry' quantity can be reduced (if needed) to such number of contracts/shares/lots/units, so the total position size doesn't exceed the value specified in 'strategy.risk.max_position_size'. If minimum possible quantity still violates the rule, the order will not be placed.",
@@ -6936,7 +7020,7 @@
      ]
   },
    {
-     "id": 343,
+     "id": 349,
      "pattern": "(?<![\\.]\\s*)\\b(string)(?=\\s*\\()",
      "codeblock": "string(x) → string",
      "markdown": "Casts na to string.",
@@ -6950,7 +7034,7 @@
      ]
   },
    {
-     "id": 344,
+     "id": 350,
      "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.prefix)(?=\\s*\\()",
      "codeblock": "syminfo.prefix(symbol) → string",
      "markdown": "Returns exchange prefix of the `symbol`, e.g. \"NASDAQ\".",
@@ -6964,7 +7048,7 @@
      ]
   },
    {
-     "id": 345,
+     "id": 351,
      "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.ticker)(?=\\s*\\()",
      "codeblock": "syminfo.ticker(symbol) → string",
      "markdown": "Returns `symbol` name without exchange prefix, e.g. \"AAPL\".",
@@ -6978,7 +7062,7 @@
      ]
   },
    {
-     "id": 346,
+     "id": 352,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.alma)(?=\\s*\\()",
      "codeblock": "ta.alma(series, length, offset, sigma, floor) → float",
      "markdown": "Arnaud Legoux Moving Average. It uses Gaussian distribution as weights for moving average.",
@@ -7008,7 +7092,7 @@
      ]
   },
    {
-     "id": 347,
+     "id": 353,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.atr)(?=\\s*\\()",
      "codeblock": "ta.atr(length) → series float",
      "markdown": "Function atr (average true range) returns the RMA of true range. True range is max(high - low, abs(high - close[1]), abs(low – close[1])).",
@@ -7022,7 +7106,7 @@
      ]
   },
    {
-     "id": 348,
+     "id": 354,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.barssince)(?=\\s*\\()",
      "codeblock": "ta.barssince(condition) → series int",
      "markdown": "Counts the number of bars since the last time the condition was true.",
@@ -7036,7 +7120,7 @@
      ]
   },
    {
-     "id": 349,
+     "id": 355,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.bb)(?=\\s*\\()",
      "codeblock": "ta.bb(series, length, mult) → [series float, series float, series float]",
      "markdown": "Bollinger Bands. A Bollinger Band is a technical analysis tool defined by a set of lines plotted two standard deviations (positively and negatively) away from a simple moving average (SMA) of the security's price, but can be adjusted to user preferences.",
@@ -7058,7 +7142,7 @@
      ]
   },
    {
-     "id": 350,
+     "id": 356,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.bbw)(?=\\s*\\()",
      "codeblock": "ta.bbw(series, length, mult) → series float",
      "markdown": "Bollinger Bands Width. The Bollinger Band Width is the difference between the upper and the lower Bollinger Bands divided by the middle band.",
@@ -7080,7 +7164,7 @@
      ]
   },
    {
-     "id": 351,
+     "id": 357,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.cci)(?=\\s*\\()",
      "codeblock": "ta.cci(source, length) → series float",
      "markdown": "The CCI (commodity channel index) is calculated as the difference between the typical price of a commodity and its simple moving average, divided by the mean absolute deviation of the typical price. The index is scaled by an inverse factor of 0.015 to provide more readable numbers.",
@@ -7098,7 +7182,7 @@
      ]
   },
    {
-     "id": 352,
+     "id": 358,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.change)(?=\\s*\\()",
      "codeblock": "ta.change(source, length) → series int|float|bool",
      "markdown": "Compares the current `source` value to its value `length` bars ago and returns the difference.",
@@ -7116,7 +7200,7 @@
      ]
   },
    {
-     "id": 353,
+     "id": 359,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.cmo)(?=\\s*\\()",
      "codeblock": "ta.cmo(series, length) → series float",
      "markdown": "Chande Momentum Oscillator. Calculates the difference between the sum of recent gains and the sum of recent losses and then divides the result by the sum of all price movement over the same period.",
@@ -7134,7 +7218,7 @@
      ]
   },
    {
-     "id": 354,
+     "id": 360,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.cog)(?=\\s*\\()",
      "codeblock": "ta.cog(source, length) → series float",
      "markdown": "The cog (center of gravity) is an indicator based on statistics and the Fibonacci golden ratio.",
@@ -7152,7 +7236,7 @@
      ]
   },
    {
-     "id": 355,
+     "id": 361,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.correlation)(?=\\s*\\()",
      "codeblock": "ta.correlation(source1, source2, length) → series float",
      "markdown": "Correlation coefficient. Describes the degree to which two series tend to deviate from their ta.sma values.",
@@ -7174,7 +7258,7 @@
      ]
   },
    {
-     "id": 356,
+     "id": 362,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.cross)(?=\\s*\\()",
      "codeblock": "ta.cross(source1, source2) → series bool",
      "markdown": "Returns true if two series have crossed each other, otherwise false.",
@@ -7192,7 +7276,7 @@
      ]
   },
    {
-     "id": 357,
+     "id": 363,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.crossover)(?=\\s*\\()",
      "codeblock": "ta.crossover(source1, source2) → series bool",
      "markdown": "The `source1`-series is defined as having crossed over `source2`-series if, on the current bar, the value of `source1` is greater than the value of `source2`, and on the previous bar, the value of `source1` was less than or equal to the value of `source2`.",
@@ -7210,7 +7294,7 @@
      ]
   },
    {
-     "id": 358,
+     "id": 364,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.crossunder)(?=\\s*\\()",
      "codeblock": "ta.crossunder(source1, source2) → series bool",
      "markdown": "The `source1`-series is defined as having crossed under `source2`-series if, on the current bar, the value of `source1` is less than the value of `source2`, and on the previous bar, the value of `source1` was greater than or equal to the value of `source2`.",
@@ -7228,7 +7312,7 @@
      ]
   },
    {
-     "id": 359,
+     "id": 365,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.cum)(?=\\s*\\()",
      "codeblock": "ta.cum(source) → series float",
      "markdown": "Cumulative (total) sum of `source`. In other words it's a sum of all elements of `source`.",
@@ -7242,7 +7326,7 @@
      ]
   },
    {
-     "id": 360,
+     "id": 366,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.dev)(?=\\s*\\()",
      "codeblock": "ta.dev(source, length) → series float",
      "markdown": "Measure of difference between the series and it's ta.sma.",
@@ -7260,7 +7344,7 @@
      ]
   },
    {
-     "id": 361,
+     "id": 367,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.dmi)(?=\\s*\\()",
      "codeblock": "ta.dmi(diLength, adxSmoothing) → [series float, series float, series float]",
      "markdown": "The dmi function returns the directional movement index.",
@@ -7278,7 +7362,7 @@
      ]
   },
    {
-     "id": 362,
+     "id": 368,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.ema)(?=\\s*\\()",
      "codeblock": "ta.ema(source, length) → series float",
      "markdown": "The ema function returns the exponentially weighted moving average. In ema weighting factors decrease exponentially. It calculates by using a formula: EMA = alpha * source + (1 - alpha) * EMA[1], where alpha = 2 / (length + 1).",
@@ -7296,7 +7380,7 @@
      ]
   },
    {
-     "id": 363,
+     "id": 369,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.falling)(?=\\s*\\()",
      "codeblock": "ta.falling(source, length) → series bool",
      "markdown": "Test if the `source` series is now falling for `length` bars long.",
@@ -7314,7 +7398,7 @@
      ]
   },
    {
-     "id": 364,
+     "id": 370,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.highest)(?=\\s*\\()",
      "codeblock": "ta.highest(source, length) → series float",
      "markdown": "Highest value for a given number of bars back.",
@@ -7332,7 +7416,7 @@
      ]
   },
    {
-     "id": 365,
+     "id": 371,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.highestbars)(?=\\s*\\()",
      "codeblock": "ta.highestbars(source, length) → series int",
      "markdown": "Highest value offset for a given number of bars back.",
@@ -7350,7 +7434,7 @@
      ]
   },
    {
-     "id": 366,
+     "id": 372,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.hma)(?=\\s*\\()",
      "codeblock": "ta.hma(source, length) → series float",
      "markdown": "The hma function returns the Hull Moving Average.",
@@ -7368,7 +7452,7 @@
      ]
   },
    {
-     "id": 367,
+     "id": 373,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.kc)(?=\\s*\\()",
      "codeblock": "ta.kc(series, length, mult, useTrueRange) → [series float, series float, series float]",
      "markdown": "Keltner Channels. Keltner channel is a technical analysis indicator showing a central moving average line plus channel lines at a distance above and below.",
@@ -7394,7 +7478,7 @@
      ]
   },
    {
-     "id": 368,
+     "id": 374,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.kcw)(?=\\s*\\()",
      "codeblock": "ta.kcw(series, length, mult, useTrueRange) → series float",
      "markdown": "Keltner Channels Width. The Keltner Channels Width is the difference between the upper and the lower Keltner Channels divided by the middle channel.",
@@ -7420,7 +7504,7 @@
      ]
   },
    {
-     "id": 369,
+     "id": 375,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.linreg)(?=\\s*\\()",
      "codeblock": "ta.linreg(source, length, offset) → series float",
      "markdown": "Linear regression curve. A line that best fits the prices specified over a user-defined time period. It is calculated using the least squares method. The result of this function is calculated using the formula: linreg = intercept + slope * (length - 1 - offset), where intercept and slope are the values calculated with the least squares method on `source` series.",
@@ -7442,7 +7526,7 @@
      ]
   },
    {
-     "id": 370,
+     "id": 376,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.lowest)(?=\\s*\\()",
      "codeblock": "ta.lowest(source, length) → series float",
      "markdown": "Lowest value for a given number of bars back.",
@@ -7460,7 +7544,7 @@
      ]
   },
    {
-     "id": 371,
+     "id": 377,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.lowestbars)(?=\\s*\\()",
      "codeblock": "ta.lowestbars(source, length) → series int",
      "markdown": "Lowest value offset for a given number of bars back.",
@@ -7478,7 +7562,7 @@
      ]
   },
    {
-     "id": 372,
+     "id": 378,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.macd)(?=\\s*\\()",
      "codeblock": "ta.macd(source, fastlen, slowlen, siglen) → [series float, series float, series float]",
      "markdown": "MACD (moving average convergence/divergence). It is supposed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price.",
@@ -7504,7 +7588,7 @@
      ]
   },
    {
-     "id": 373,
+     "id": 379,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.max)(?=\\s*\\()",
      "codeblock": "ta.max(source) → series float",
      "markdown": "Returns the all-time high value of `source` from the beginning of the chart up to the current bar.",
@@ -7518,7 +7602,7 @@
      ]
   },
    {
-     "id": 374,
+     "id": 380,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.median)(?=\\s*\\()",
      "codeblock": "ta.median(source, length) → series int|float",
      "markdown": "Returns the median of the series.",
@@ -7536,7 +7620,7 @@
      ]
   },
    {
-     "id": 375,
+     "id": 381,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.mfi)(?=\\s*\\()",
      "codeblock": "ta.mfi(series, length) → series float",
      "markdown": "Money Flow Index. The Money Flow Index (MFI) is a technical oscillator that uses price and volume for identifying overbought or oversold conditions in an asset.",
@@ -7554,7 +7638,7 @@
      ]
   },
    {
-     "id": 376,
+     "id": 382,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.min)(?=\\s*\\()",
      "codeblock": "ta.min(source) → series float",
      "markdown": "Returns the all-time low value of `source` from the beginning of the chart up to the current bar.",
@@ -7568,7 +7652,7 @@
      ]
   },
    {
-     "id": 377,
+     "id": 383,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.mode)(?=\\s*\\()",
      "codeblock": "ta.mode(source, length) → series int|float",
      "markdown": "Returns the mode of the series. If there are several values with the same frequency, it returns the smallest value.",
@@ -7586,7 +7670,7 @@
      ]
   },
    {
-     "id": 378,
+     "id": 384,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.mom)(?=\\s*\\()",
      "codeblock": "ta.mom(source, length) → series float",
      "markdown": "Momentum of `source` price and `source` price `length` bars ago. This is simply a difference: source – source[length].",
@@ -7604,7 +7688,7 @@
      ]
   },
    {
-     "id": 379,
+     "id": 385,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.percentile_linear_interpolation)(?=\\s*\\()",
      "codeblock": "ta.percentile_linear_interpolation(source, length, percentage) → series float",
      "markdown": "Calculates percentile using method of linear interpolation between the two nearest ranks.",
@@ -7626,7 +7710,7 @@
      ]
   },
    {
-     "id": 380,
+     "id": 386,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.percentile_nearest_rank)(?=\\s*\\()",
      "codeblock": "ta.percentile_nearest_rank(source, length, percentage) → series float",
      "markdown": "Calculates percentile using method of Nearest Rank.",
@@ -7648,7 +7732,7 @@
      ]
   },
    {
-     "id": 381,
+     "id": 387,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.percentrank)(?=\\s*\\()",
      "codeblock": "ta.percentrank(source, length) → series float",
      "markdown": "Percent rank is the percents of how many previous values was less than or equal to the current value of given series.",
@@ -7666,7 +7750,7 @@
      ]
   },
    {
-     "id": 382,
+     "id": 388,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.pivot_point_levels)(?=\\s*\\()",
      "codeblock": "ta.pivot_point_levels(type, anchor, developing) → float[]",
      "markdown": "Calculates the pivot point levels using the specified `type` and `anchor`.",
@@ -7688,7 +7772,7 @@
      ]
   },
    {
-     "id": 383,
+     "id": 389,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.pivothigh)(?=\\s*\\()",
      "codeblock": "ta.pivothigh(source, leftbars, rightbars) → series float",
      "markdown": "Returns price of the pivot high point. It returns 'NaN', if there was no pivot high point.",
@@ -7710,7 +7794,7 @@
      ]
   },
    {
-     "id": 384,
+     "id": 390,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.pivotlow)(?=\\s*\\()",
      "codeblock": "ta.pivotlow(source, leftbars, rightbars) → series float",
      "markdown": "Returns price of the pivot low point. It returns 'NaN', if there was no pivot low point.",
@@ -7732,7 +7816,7 @@
      ]
   },
    {
-     "id": 385,
+     "id": 391,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.range)(?=\\s*\\()",
      "codeblock": "ta.range(source, length) → series float",
      "markdown": "Returns the difference between the min and max values in a series.",
@@ -7750,7 +7834,7 @@
      ]
   },
    {
-     "id": 386,
+     "id": 392,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.rising)(?=\\s*\\()",
      "codeblock": "ta.rising(source, length) → series bool",
      "markdown": "Test if the `source` series is now rising for `length` bars long.",
@@ -7768,7 +7852,7 @@
      ]
   },
    {
-     "id": 387,
+     "id": 393,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.rma)(?=\\s*\\()",
      "codeblock": "ta.rma(source, length) → series float",
      "markdown": "Moving average used in RSI. It is the exponentially weighted moving average with alpha = 1 / length.",
@@ -7786,7 +7870,7 @@
      ]
   },
    {
-     "id": 388,
+     "id": 394,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.roc)(?=\\s*\\()",
      "codeblock": "ta.roc(source, length) → series float",
      "markdown": "Calculates the percentage of change (rate of change) between the current value of `source` and its value `length` bars ago.<p/>It is calculated by the formula: 100 * change(src, length) / src[length].",
@@ -7804,7 +7888,7 @@
      ]
   },
    {
-     "id": 389,
+     "id": 395,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.rsi)(?=\\s*\\()",
      "codeblock": "ta.rsi(source, length) → series float",
      "markdown": "Relative strength index. It is calculated using the `ta.rma()` of upward and downward changes of `source` over the last `length` bars.",
@@ -7822,7 +7906,7 @@
      ]
   },
    {
-     "id": 390,
+     "id": 396,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.sar)(?=\\s*\\()",
      "codeblock": "ta.sar(start, inc, max) → series float",
      "markdown": "Parabolic SAR (parabolic stop and reverse) is a method devised by J. Welles Wilder, Jr., to find potential reversals in the market price direction of traded goods.",
@@ -7844,7 +7928,7 @@
      ]
   },
    {
-     "id": 391,
+     "id": 397,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.sma)(?=\\s*\\()",
      "codeblock": "ta.sma(source, length) → series float",
      "markdown": "The sma function returns the moving average, that is the sum of last y values of x, divided by y.",
@@ -7862,7 +7946,7 @@
      ]
   },
    {
-     "id": 392,
+     "id": 398,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.stdev)(?=\\s*\\()",
      "codeblock": "ta.stdev(source, length, biased) → series float",
      "markdown": "Returns standard deviation.<p/>If `biased` is true, function will calculate using a biased estimate of the entire population, if false - unbiased estimate of a sample.<p/>`na` values in the `source` series are ignored; the function calculates on the `length` quantity of non-`na` values.",
@@ -7884,7 +7968,7 @@
      ]
   },
    {
-     "id": 393,
+     "id": 399,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.stoch)(?=\\s*\\()",
      "codeblock": "ta.stoch(source, high, low, length) → series float",
      "markdown": "Stochastic. It is calculated by a formula: 100 * (close - lowest(low, length)) / (highest(high, length) - lowest(low, length)).",
@@ -7910,7 +7994,7 @@
      ]
   },
    {
-     "id": 394,
+     "id": 400,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.supertrend)(?=\\s*\\()",
      "codeblock": "ta.supertrend(factor, atrPeriod) → [series float, series float]",
      "markdown": "The Supertrend Indicator. The Supertrend is a trend following indicator.",
@@ -7928,7 +8012,7 @@
      ]
   },
    {
-     "id": 395,
+     "id": 401,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.swma)(?=\\s*\\()",
      "codeblock": "ta.swma(source) → series float",
      "markdown": "Symmetrically weighted moving average with fixed length: 4. Weights: [1/6, 2/6, 2/6, 1/6].",
@@ -7942,7 +8026,7 @@
      ]
   },
    {
-     "id": 396,
+     "id": 402,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.tr)(?=\\s*\\()",
      "codeblock": "ta.tr(handle_na) → series float",
      "markdown": "Returns true range. It is math.max(high - low, math.abs(high - close[1]), math.abs(low - close[1])).",
@@ -7956,7 +8040,7 @@
      ]
   },
    {
-     "id": 397,
+     "id": 403,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.tsi)(?=\\s*\\()",
      "codeblock": "ta.tsi(source, short_length, long_length) → series float",
      "markdown": "True strength index. It uses moving averages of the underlying momentum of a financial instrument.",
@@ -7978,7 +8062,7 @@
      ]
   },
    {
-     "id": 398,
+     "id": 404,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.valuewhen)(?=\\s*\\()",
      "codeblock": "ta.valuewhen(condition, source, occurrence) → series bool|color|float|int",
      "markdown": "Returns the value of the `source` series on the bar where the `condition` was true on the nth most recent occurrence.",
@@ -8000,7 +8084,7 @@
      ]
   },
    {
-     "id": 399,
+     "id": 405,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.variance)(?=\\s*\\()",
      "codeblock": "ta.variance(source, length, biased) → series float",
      "markdown": "Variance is the expectation of the squared deviation of a series from its mean (ta.sma), and it informally measures how far a set of numbers are spread out from their mean.<p/>If `biased` is true, function will calculate using a biased estimate of the entire population, if false - unbiased estimate of a sample.<p/>`na` values in the `source` series are ignored; the function calculates on the `length` quantity of non-`na` values.",
@@ -8022,7 +8106,7 @@
      ]
   },
    {
-     "id": 400,
+     "id": 406,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.vwap)(?=\\s*\\()",
      "codeblock": "ta.vwap(source, anchor, stdev_mult) → [series float, series float, series float]",
      "markdown": "Volume weighted average price.",
@@ -8044,7 +8128,7 @@
      ]
   },
    {
-     "id": 401,
+     "id": 407,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.vwma)(?=\\s*\\()",
      "codeblock": "ta.vwma(source, length) → series float",
      "markdown": "The vwma function returns volume-weighted moving average of `source` for `length` bars back. It is the same as: sma(source * volume, length) / sma(volume, length).",
@@ -8062,7 +8146,7 @@
      ]
   },
    {
-     "id": 402,
+     "id": 408,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.wma)(?=\\s*\\()",
      "codeblock": "ta.wma(source, length) → series float",
      "markdown": "The wma function returns weighted moving average of `source` for `length` bars back. In wma weighting factors decrease in arithmetical progression.",
@@ -8080,7 +8164,7 @@
      ]
   },
    {
-     "id": 403,
+     "id": 409,
      "pattern": "(?<![\\.]\\s*)\\b(ta\\.wpr)(?=\\s*\\()",
      "codeblock": "ta.wpr(length) → series float",
      "markdown": "Williams %R. The oscillator shows the current closing price in relation to the high and low of the past 'length' bars.",
@@ -8094,7 +8178,7 @@
      ]
   },
    {
-     "id": 404,
+     "id": 410,
      "pattern": "(?<![\\.]\\s*)\\b(table)(?=\\s*\\()",
      "codeblock": "table(x) → series table",
      "markdown": "Casts na to table.",
@@ -8108,7 +8192,7 @@
      ]
   },
    {
-     "id": 405,
+     "id": 411,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell)(?=\\s*\\()",
      "codeblock": "table.cell(table_id, column, row, text, width, height, text_color, text_halign, text_valign, text_size, bgcolor, tooltip, text_font_family) → void",
      "markdown": "Defines a cell in the table and sets its attributes.",
@@ -8170,7 +8254,7 @@
      ]
   },
    {
-     "id": 406,
+     "id": 412,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell_set_bgcolor)(?=\\s*\\()",
      "codeblock": "table.cell_set_bgcolor(table_id, column, row, bgcolor) → void",
      "markdown": "Sets the background color of the table cell.",
@@ -8196,7 +8280,7 @@
      ]
   },
    {
-     "id": 407,
+     "id": 413,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell_set_height)(?=\\s*\\()",
      "codeblock": "table.cell_set_height(table_id, column, row, height) → void",
      "markdown": "Sets the height of table cell.",
@@ -8222,7 +8306,7 @@
      ]
   },
    {
-     "id": 408,
+     "id": 414,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell_set_text)(?=\\s*\\()",
      "codeblock": "table.cell_set_text(table_id, column, row, text) → void",
      "markdown": "Sets the text in the specified table cell.",
@@ -8248,7 +8332,7 @@
      ]
   },
    {
-     "id": 409,
+     "id": 415,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell_set_text_color)(?=\\s*\\()",
      "codeblock": "table.cell_set_text_color(table_id, column, row, text_color) → void",
      "markdown": "Sets the color of the text inside the table cell.",
@@ -8274,7 +8358,7 @@
      ]
   },
    {
-     "id": 410,
+     "id": 416,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell_set_text_font_family)(?=\\s*\\()",
      "codeblock": "table.cell_set_text_font_family(table_id, column, row, text_font_family) → void",
      "markdown": "Sets the font family of the text inside the table cell.",
@@ -8300,7 +8384,7 @@
      ]
   },
    {
-     "id": 411,
+     "id": 417,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell_set_text_halign)(?=\\s*\\()",
      "codeblock": "table.cell_set_text_halign(table_id, column, row, text_halign) → void",
      "markdown": "Sets the horizontal alignment of the table cell's text.",
@@ -8326,7 +8410,7 @@
      ]
   },
    {
-     "id": 412,
+     "id": 418,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell_set_text_size)(?=\\s*\\()",
      "codeblock": "table.cell_set_text_size(table_id, column, row, text_size) → void",
      "markdown": "Sets the size of the table cell's text.",
@@ -8352,7 +8436,7 @@
      ]
   },
    {
-     "id": 413,
+     "id": 419,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell_set_text_valign)(?=\\s*\\()",
      "codeblock": "table.cell_set_text_valign(table_id, column, row, text_valign) → void",
      "markdown": "Sets the vertical alignment of a table cell's text.",
@@ -8378,7 +8462,7 @@
      ]
   },
    {
-     "id": 414,
+     "id": 420,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell_set_tooltip)(?=\\s*\\()",
      "codeblock": "table.cell_set_tooltip(table_id, column, row, tooltip) → void",
      "markdown": "Sets the tooltip in the specified table cell.",
@@ -8404,7 +8488,7 @@
      ]
   },
    {
-     "id": 415,
+     "id": 421,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.cell_set_width)(?=\\s*\\()",
      "codeblock": "table.cell_set_width(table_id, column, row, width) → void",
      "markdown": "Sets the width of the table cell.",
@@ -8430,7 +8514,7 @@
      ]
   },
    {
-     "id": 416,
+     "id": 422,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.clear)(?=\\s*\\()",
      "codeblock": "table.clear(table_id, start_column, start_row, end_column, end_row) → void",
      "markdown": "Removes a cell or a sequence of cells from the table. The cells are removed in a rectangle shape where the start_column and start_row specify the top-left corner, and end_column and end_row specify the bottom-right corner.",
@@ -8460,7 +8544,7 @@
      ]
   },
    {
-     "id": 417,
+     "id": 423,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.delete)(?=\\s*\\()",
      "codeblock": "table.delete(table_id) → void",
      "markdown": "Deletes a table.",
@@ -8474,7 +8558,7 @@
      ]
   },
    {
-     "id": 418,
+     "id": 424,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.merge_cells)(?=\\s*\\()",
      "codeblock": "table.merge_cells(table_id, start_column, start_row, end_column, end_row) → void",
      "markdown": "Merges a sequence of cells in the table into one cell. The cells are merged in a rectangle shape where the start_column and start_row specify the top-left corner, and end_column and end_row specify the bottom-right corner.",
@@ -8504,7 +8588,7 @@
      ]
   },
    {
-     "id": 419,
+     "id": 425,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.new)(?=\\s*\\()",
      "codeblock": "table.new(position, columns, rows, bgcolor, frame_color, frame_width, border_color, border_width) → series table",
      "markdown": "Creates a new table.",
@@ -8546,7 +8630,7 @@
      ]
   },
    {
-     "id": 420,
+     "id": 426,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.set_bgcolor)(?=\\s*\\()",
      "codeblock": "table.set_bgcolor(table_id, bgcolor) → void",
      "markdown": "Sets the background color of a table.",
@@ -8564,7 +8648,7 @@
      ]
   },
    {
-     "id": 421,
+     "id": 427,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.set_border_color)(?=\\s*\\()",
      "codeblock": "table.set_border_color(table_id, border_color) → void",
      "markdown": "Sets the color of the borders (excluding the outer frame) of the table's cells.",
@@ -8582,7 +8666,7 @@
      ]
   },
    {
-     "id": 422,
+     "id": 428,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.set_border_width)(?=\\s*\\()",
      "codeblock": "table.set_border_width(table_id, border_width) → void",
      "markdown": "Sets the width of the borders (excluding the outer frame) of the table's cells.",
@@ -8600,7 +8684,7 @@
      ]
   },
    {
-     "id": 423,
+     "id": 429,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.set_frame_color)(?=\\s*\\()",
      "codeblock": "table.set_frame_color(table_id, frame_color) → void",
      "markdown": "Sets the color of the outer frame of a table.",
@@ -8618,7 +8702,7 @@
      ]
   },
    {
-     "id": 424,
+     "id": 430,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.set_frame_width)(?=\\s*\\()",
      "codeblock": "table.set_frame_width(table_id, frame_width) → void",
      "markdown": "Set the width of the outer frame of a table.",
@@ -8636,7 +8720,7 @@
      ]
   },
    {
-     "id": 425,
+     "id": 431,
      "pattern": "(?<![\\.]\\s*)\\b(table\\.set_position)(?=\\s*\\()",
      "codeblock": "table.set_position(table_id, position) → void",
      "markdown": "Sets the position of a table.",
@@ -8654,7 +8738,7 @@
      ]
   },
    {
-     "id": 426,
+     "id": 432,
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.heikinashi)(?=\\s*\\()",
      "codeblock": "ticker.heikinashi(symbol) → simple string",
      "markdown": "Creates a ticker identifier for requesting Heikin Ashi bar values.",
@@ -8668,7 +8752,7 @@
      ]
   },
    {
-     "id": 427,
+     "id": 433,
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.inherit)(?=\\s*\\()",
      "codeblock": "ticker.inherit(from_tickerid, symbol) → simple string",
      "markdown": "Constructs a ticker ID for the specified `symbol` with additional parameters inherited from the ticker ID passed into the function call, allowing the script to request a symbol's data using the same modifiers that the `from_tickerid` has, including extended session, dividend adjustment, currency conversion, non-standard chart types, back-adjustment, settlement-as-close, etc.",
@@ -8686,7 +8770,7 @@
      ]
   },
    {
-     "id": 428,
+     "id": 434,
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.kagi)(?=\\s*\\()",
      "codeblock": "ticker.kagi(symbol, reversal) → simple string",
      "markdown": "Creates a ticker identifier for requesting Kagi values.",
@@ -8704,7 +8788,7 @@
      ]
   },
    {
-     "id": 429,
+     "id": 435,
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.linebreak)(?=\\s*\\()",
      "codeblock": "ticker.linebreak(symbol, number_of_lines) → simple string",
      "markdown": "Creates a ticker identifier for requesting Line Break values.",
@@ -8722,7 +8806,7 @@
      ]
   },
    {
-     "id": 430,
+     "id": 436,
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.modify)(?=\\s*\\()",
      "codeblock": "ticker.modify(tickerid, session, adjustment) → simple string",
      "markdown": "Creates a ticker identifier for requesting additional data for the script.",
@@ -8744,7 +8828,7 @@
      ]
   },
    {
-     "id": 431,
+     "id": 437,
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.new)(?=\\s*\\()",
      "codeblock": "ticker.new(prefix, ticker, session, adjustment) → simple string",
      "markdown": "Creates a ticker identifier for requesting additional data for the script.",
@@ -8770,7 +8854,7 @@
      ]
   },
    {
-     "id": 432,
+     "id": 438,
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.pointfigure)(?=\\s*\\()",
      "codeblock": "ticker.pointfigure(symbol, source, style, param, reversal) → simple string",
      "markdown": "Creates a ticker identifier for requesting Point & Figure values.",
@@ -8800,7 +8884,7 @@
      ]
   },
    {
-     "id": 433,
+     "id": 439,
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.renko)(?=\\s*\\()",
      "codeblock": "ticker.renko(symbol, style, param, request_wicks, source) → simple string",
      "markdown": "Creates a ticker identifier for requesting Renko values.",
@@ -8830,7 +8914,7 @@
      ]
   },
    {
-     "id": 434,
+     "id": 440,
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.standard)(?=\\s*\\()",
      "codeblock": "ticker.standard(symbol) → simple string",
      "markdown": "Creates a ticker to request data from a standard chart that is unaffected by modifiers like extended session, dividend adjustment, currency conversion, and the calculations of non-standard chart types: Heikin Ashi, Renko, etc. Among other things, this makes it possible to retrieve standard chart values when the script is running on a non-standard chart.",
@@ -8844,7 +8928,7 @@
      ]
   },
    {
-     "id": 435,
+     "id": 441,
      "pattern": "(?<![\\.]\\s*)\\b(time)(?=\\s*\\()",
      "codeblock": "time(timeframe, session, timezone) → series int",
      "markdown": "Returns the UNIX time of the current bar for the specified timeframe and session or NaN if the time point is out of session.",
@@ -8866,7 +8950,7 @@
      ]
   },
    {
-     "id": 436,
+     "id": 442,
      "pattern": "(?<![\\.]\\s*)\\b(time_close)(?=\\s*\\()",
      "codeblock": "time_close(timeframe, session, timezone) → series int",
      "markdown": "Returns the UNIX time of the current bar's close for the specified timeframe and session, or na if the time point is outside the session. On non-standard price-based chart types (Renko, Line break, Kagi, Point & Figure, and Range), this function returns na on the chart's realtime bars.",
@@ -8888,7 +8972,7 @@
      ]
   },
    {
-     "id": 437,
+     "id": 443,
      "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.change)(?=\\s*\\()",
      "codeblock": "timeframe.change(timeframe) → series bool",
      "markdown": "Detects changes in the specified `timeframe`. Returns true on the first bar of a new `timeframe`, false otherwise.",
@@ -8902,7 +8986,7 @@
      ]
   },
    {
-     "id": 438,
+     "id": 444,
      "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.from_seconds)(?=\\s*\\()",
      "codeblock": "timeframe.from_seconds(seconds) → string",
      "markdown": "Converts a number of seconds into a valid timeframe string.",
@@ -8916,7 +9000,7 @@
      ]
   },
    {
-     "id": 439,
+     "id": 445,
      "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.in_seconds)(?=\\s*\\()",
      "codeblock": "timeframe.in_seconds(timeframe) → int",
      "markdown": "Converts a timeframe string into seconds.",
@@ -8930,7 +9014,7 @@
      ]
   },
    {
-     "id": 440,
+     "id": 446,
      "pattern": "(?<![\\.]\\s*)\\b(timestamp)(?=\\s*\\()",
      "codeblock": "timestamp(timezone, year, month, day, hour, minute, second) → int",
      "markdown": "Returns UNIX time of specified date and time.",
@@ -8968,7 +9052,7 @@
      ]
   },
    {
-     "id": 441,
+     "id": 447,
      "pattern": "(?<![\\.]\\s*)\\b(weekofyear)(?=\\s*\\()",
      "codeblock": "weekofyear(time, timezone) → series int",
      "markdown": "Returns week of year (in exchange timezone) for provided UNIX time.",
@@ -8986,7 +9070,7 @@
      ]
   },
    {
-     "id": 442,
+     "id": 448,
      "pattern": "(?<![\\.]\\s*)\\b(year)(?=\\s*\\()",
      "codeblock": "year(time, timezone) → series int",
      "markdown": "Returns year (in exchange timezone) for provided UNIX time.",

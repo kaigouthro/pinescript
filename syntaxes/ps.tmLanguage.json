@@ -45,7 +45,7 @@
           }
         },
         {
-          "match": "(^\/\/)(@)(version)(=)(5)(.*)",
+          "match": "(^\/\/)\\s*(@)(version)(=)(5)(.*)",
           "captures": {
             "0": {"name": "comment.line.double-slash.ps"},
             "1": {"name": "comment.line.double-slash.ps"},
@@ -65,7 +65,7 @@
           }
         },
         {
-          "match": "(^\/\/)\\s(@)(description|function|param|returns|type|field)(.*)",
+          "match": "(^\/\/)\\s*(@)(description|function|param|returns|type|field|strategy_alert_message|variable)(.*)",
           "captures": {
             "0": {"name": "meta.annotation.ps"},
             "1": {"name": "comment.line.double-slash.ps"},
@@ -589,7 +589,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(account_currency|cash|equity|eventrades|fixed|grossloss|grossprofit|initial_capital|long|losstrades|margin_liquidation_price|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown|max_runup|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b(?!\\s*\\()",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(account_currency|cash|equity|eventrades|fixed|grossloss_percent|grossprofit_percent|grossloss|grossprofit|initial_capital|long|losstrades|margin_liquidation_price|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown_percent|max_runup_percent|netprofit_percent|openprofit_percent|max_drawdown|max_runup|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -663,7 +663,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(syminfo)(\\.)(basecurrency|country|currency|description|industry|minmove|mintick|pointvalue|prefix|pricescale|root|sector|session|tickerid|ticker|timezone|type|volumetype)\\b(?!\\s*\\()",
+          "match": "(?<![\\.]\\s*)\\b(syminfo)(\\.)(basecurrency|country|currency|description|employees|industry|minmove|mintick|pointvalue|prefix|pricescale|recommendations_buy_strong|recommendations_buy|recommendations_date|recommendations_hold|recommendations_sell_strong|recommendations_sell|recommendations_total|root|sector|session|shareholders|shares_outstanding_float|shares_outstanding_total|target_price_average|target_price_date|target_price_estimates|target_price_high|target_price_low|target_price_median|tickerid|ticker|timezone|type|volumetype)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -1085,7 +1085,7 @@
           }
         },
         {
-          "match": "\\b(strategy)(\\.)(closedtrades)(\\.)(commission|entry_bar_index|entry_comment|entry_id|entry_price|entry_time|exit_bar_index|exit_comment|exit_id|exit_price|exit_time|max_drawdown|max_runup|profit|size)\\b(?=\\s*\\()",
+          "match": "\\b(strategy)(\\.)(closedtrades)(\\.)(commission|entry_bar_index|entry_comment|entry_id|entry_price|entry_time|exit_bar_index|exit_comment|exit_id|exit_price|exit_time|max_drawdown_percent|max_runup_percent|profit_percent|max_drawdown|max_runup|profit|size)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1105,7 +1105,7 @@
           }
         },
         {
-          "match": "\\b(strategy)(\\.)(opentrades)(\\.)(commission|entry_bar_index|entry_comment|entry_id|entry_price|entry_time|max_drawdown|max_runup|profit|size)\\b(?=\\s*\\()",
+          "match": "\\b(strategy)(\\.)(opentrades)(\\.)(commission|entry_bar_index|entry_comment|entry_id|entry_price|entry_time|max_drawdown_percent|max_runup_percent|profit_percent|max_drawdown|max_runup|profit|size)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"

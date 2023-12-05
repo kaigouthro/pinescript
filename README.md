@@ -109,11 +109,10 @@ The PineScript Helper extension supports the following file extensions:
 ---
 
 ## Release Notes
-#### **3.2.1**
+#### **3.2.2**
 
-*24.10.2023 **Update***
-- Snippets fixed.
-- Grammars bug fixed.
+*05.12.2023 **Update***
+- Grammars and snippets for built-in variables, functions and constants updated to Pinescript release November 2023.
 
 ---
 
@@ -132,4 +131,4 @@ This extension is released under the [MIT License](./LICENSE.md).
 
 ---
 
-*Version 3.2.1*
+*Version 3.2.2*

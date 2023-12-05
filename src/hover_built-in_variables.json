@@ -473,6 +473,22 @@
   },
   {
     "id": 59,
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossloss_percent)\\b(?!\\s*\\()",
+    "codeblock": "strategy.grossloss_percent",
+    "markdown": "The total value of all completed losing trades, expressed as a percentage of the initial capital.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossloss_percent"
+  },
+  {
+    "id": 60,
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossprofit_percent)\\b(?!\\s*\\()",
+    "codeblock": "strategy.grossprofit_percent",
+    "markdown": "The total currency value of all completed winning trades, expressed as a percentage of the initial capital.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossprofit_percent"
+  },
+  {
+    "id": 61,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossloss)\\b(?!\\s*\\()",
     "codeblock": "strategy.grossloss",
     "markdown": "Total currency value of all completed losing trades.",
@@ -480,7 +496,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossloss"
   },
   {
-    "id": 60,
+    "id": 62,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossprofit)\\b(?!\\s*\\()",
     "codeblock": "strategy.grossprofit",
     "markdown": "Total currency value of all completed winning trades.",
@@ -488,7 +504,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossprofit"
   },
   {
-    "id": 61,
+    "id": 63,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.initial_capital)\\b(?!\\s*\\()",
     "codeblock": "strategy.initial_capital",
     "markdown": "The amount of initial capital set in the strategy properties.",
@@ -496,7 +512,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.initial_capital"
   },
   {
-    "id": 62,
+    "id": 64,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.long)\\b(?!\\s*\\()",
     "codeblock": "strategy.long",
     "markdown": "Long position entry.",
@@ -504,7 +520,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.long"
   },
   {
-    "id": 63,
+    "id": 65,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.losstrades)\\b(?!\\s*\\()",
     "codeblock": "strategy.losstrades",
     "markdown": "Number of unprofitable trades for the whole trading interval.",
@@ -512,7 +528,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.losstrades"
   },
   {
-    "id": 64,
+    "id": 66,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.margin_liquidation_price)\\b(?!\\s*\\()",
     "codeblock": "strategy.margin_liquidation_price",
     "markdown": "When margin is used in a strategy, returns the price point where a simulated margin call will occur and liquidate enough of the position to meet the margin requirements.",
@@ -520,7 +536,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.margin_liquidation_price"
   },
   {
-    "id": 65,
+    "id": 67,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_contracts_held_all)\\b(?!\\s*\\()",
     "codeblock": "strategy.max_contracts_held_all",
     "markdown": "Maximum number of contracts/shares/lots/units in one trade for the whole trading interval.",
@@ -528,7 +544,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_contracts_held_all"
   },
   {
-    "id": 66,
+    "id": 68,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_contracts_held_long)\\b(?!\\s*\\()",
     "codeblock": "strategy.max_contracts_held_long",
     "markdown": "Maximum number of contracts/shares/lots/units in one long trade for the whole trading interval.",
@@ -536,7 +552,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_contracts_held_long"
   },
   {
-    "id": 67,
+    "id": 69,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_contracts_held_short)\\b(?!\\s*\\()",
     "codeblock": "strategy.max_contracts_held_short",
     "markdown": "Maximum number of contracts/shares/lots/units in one short trade for the whole trading interval.",
@@ -544,7 +560,39 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_contracts_held_short"
   },
   {
-    "id": 68,
+    "id": 70,
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_drawdown_percent)\\b(?!\\s*\\()",
+    "codeblock": "strategy.max_drawdown_percent",
+    "markdown": "The maximum equity drawdown value for the whole trading interval, expressed as a percentage and calculated by formula: `Lowest Value During Trade / (Entry Price x Quantity) * 100`.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_drawdown_percent"
+  },
+  {
+    "id": 71,
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_runup_percent)\\b(?!\\s*\\()",
+    "codeblock": "strategy.max_runup_percent",
+    "markdown": "The maximum equity run-up value for the whole trading interval, expressed as a percentage and calculated by formula: `Highest Value During Trade / (Entry Price x Quantity) * 100`.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_runup_percent"
+  },
+  {
+    "id": 72,
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.netprofit_percent)\\b(?!\\s*\\()",
+    "codeblock": "strategy.netprofit_percent",
+    "markdown": "The total value of all completed trades, expressed as a percentage of the initial capital.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.netprofit_percent"
+  },
+  {
+    "id": 73,
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.openprofit_percent)\\b(?!\\s*\\()",
+    "codeblock": "strategy.openprofit_percent",
+    "markdown": "The current unrealized profit or loss for all open positions, expressed as a percentage and calculated by formula: `openPL / realizedEquity * 100`.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.openprofit_percent"
+  },
+  {
+    "id": 74,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_drawdown)\\b(?!\\s*\\()",
     "codeblock": "strategy.max_drawdown",
     "markdown": "Maximum equity drawdown value for the whole trading interval.",
@@ -552,7 +600,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_drawdown"
   },
   {
-    "id": 69,
+    "id": 75,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_runup)\\b(?!\\s*\\()",
     "codeblock": "strategy.max_runup",
     "markdown": "Maximum equity run-up value for the whole trading interval.",
@@ -560,7 +608,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_runup"
   },
   {
-    "id": 70,
+    "id": 76,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.netprofit)\\b(?!\\s*\\()",
     "codeblock": "strategy.netprofit",
     "markdown": "Total currency value of all completed trades.",
@@ -568,7 +616,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.netprofit"
   },
   {
-    "id": 71,
+    "id": 77,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.openprofit)\\b(?!\\s*\\()",
     "codeblock": "strategy.openprofit",
     "markdown": "Current unrealized profit or loss for all open positions.",
@@ -576,7 +624,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.openprofit"
   },
   {
-    "id": 72,
+    "id": 78,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades)\\b(?!\\s*\\()",
     "codeblock": "strategy.opentrades",
     "markdown": "Number of market position entries, which were not closed and remain opened. If there is no open market position, 0 is returned.",
@@ -584,7 +632,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.opentrades"
   },
   {
-    "id": 73,
+    "id": 79,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.position_avg_price)\\b(?!\\s*\\()",
     "codeblock": "strategy.position_avg_price",
     "markdown": "Average entry price of current market position. If the market position is flat, 'NaN' is returned.",
@@ -592,7 +640,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.position_avg_price"
   },
   {
-    "id": 74,
+    "id": 80,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.position_entry_name)\\b(?!\\s*\\()",
     "codeblock": "strategy.position_entry_name",
     "markdown": "Name of the order that initially opened current market position.",
@@ -600,7 +648,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.position_entry_name"
   },
   {
-    "id": 75,
+    "id": 81,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.position_size)\\b(?!\\s*\\()",
     "codeblock": "strategy.position_size",
     "markdown": "Direction and size of the current market position. If the value is > 0, the market position is long. If the value is < 0, the market position is short. The absolute value is the number of contracts/shares/lots/units in trade (position size).",
@@ -608,7 +656,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.position_size"
   },
   {
-    "id": 76,
+    "id": 82,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.short)\\b(?!\\s*\\()",
     "codeblock": "strategy.short",
     "markdown": "Short position entry.",
@@ -616,7 +664,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.short"
   },
   {
-    "id": 77,
+    "id": 83,
     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.wintrades)\\b(?!\\s*\\()",
     "codeblock": "strategy.wintrades",
     "markdown": "Number of profitable trades for the whole trading interval.",
@@ -624,7 +672,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.wintrades"
   },
   {
-    "id": 78,
+    "id": 84,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.basecurrency)\\b(?!\\s*\\()",
     "codeblock": "syminfo.basecurrency",
     "markdown": "Base currency for the symbol. For the symbol 'BTCUSD' returns 'BTC'.",
@@ -632,7 +680,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.basecurrency"
   },
   {
-    "id": 79,
+    "id": 85,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.country)\\b(?!\\s*\\()",
     "codeblock": "syminfo.country",
     "markdown": "Returns the two-letter code of the country where the symbol is traded, in the ISO 3166-1 alpha-2 format, or na if the exchange is not directly tied to a specific country. For example, on 'NASDAQ:AAPL' it will return 'US', on 'LSE:AAPL' it will return 'GB', and on 'BITSTAMP:BTCUSD' it will return na.",
@@ -640,7 +688,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.country"
   },
   {
-    "id": 80,
+    "id": 86,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.currency)\\b(?!\\s*\\()",
     "codeblock": "syminfo.currency",
     "markdown": "Currency for the current symbol. Returns currency code: 'USD', 'EUR', etc.",
@@ -648,7 +696,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.currency"
   },
   {
-    "id": 81,
+    "id": 87,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.description)\\b(?!\\s*\\()",
     "codeblock": "syminfo.description",
     "markdown": "Description for the current symbol.",
@@ -656,7 +704,15 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.description"
   },
   {
-    "id": 82,
+    "id": 88,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.employees)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.employees",
+    "markdown": "The number of employees the company has.",
+    "type": "simple int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.employees"
+  },
+  {
+    "id": 89,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.industry)\\b(?!\\s*\\()",
     "codeblock": "syminfo.industry",
     "markdown": "Returns the industry of the symbol, or na if the symbol has no industry. Example: 'Internet Software/Services', 'Packaged software', 'Integrated Oil', 'Motor Vehicles', etc. These are the same values one can see in the chart's 'Symbol info' window.",
@@ -664,7 +720,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.industry"
   },
   {
-    "id": 83,
+    "id": 90,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.minmove)\\b(?!\\s*\\()",
     "codeblock": "syminfo.minmove",
     "markdown": "Returns a whole number used to calculate the smallest increment between a symbol's price movements (syminfo.mintick). It is the numerator in the syminfo.mintick formula.",
@@ -672,7 +728,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.minmove"
   },
   {
-    "id": 84,
+    "id": 91,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.mintick)\\b(?!\\s*\\()",
     "codeblock": "syminfo.mintick",
     "markdown": "Min tick value for the current symbol.",
@@ -680,7 +736,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick"
   },
   {
-    "id": 85,
+    "id": 92,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.pointvalue)\\b(?!\\s*\\()",
     "codeblock": "syminfo.pointvalue",
     "markdown": "Point value for the current symbol.",
@@ -688,7 +744,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.pointvalue"
   },
   {
-    "id": 86,
+    "id": 93,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.prefix)\\b(?!\\s*\\()",
     "codeblock": "syminfo.prefix",
     "markdown": "Prefix of current symbol name (i.e. for 'CME_EOD:TICKER' prefix is 'CME_EOD').",
@@ -696,7 +752,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.prefix"
   },
   {
-    "id": 87,
+    "id": 94,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.pricescale)\\b(?!\\s*\\()",
     "codeblock": "syminfo.pricescale",
     "markdown": "Returns a whole number used to calculate the smallest increment between a symbol's price movements (syminfo.mintick). It is the denominator in the syminfo.mintick formula.",
@@ -704,7 +760,63 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.pricescale"
   },
   {
-    "id": 88,
+    "id": 95,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_buy_strong)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.recommendations_buy_strong",
+    "markdown": "The number of analysts who gave the current symbol a \"Strong Buy\" rating.",
+    "type": "series int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_buy_strong"
+  },
+  {
+    "id": 96,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_buy)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.recommendations_buy",
+    "markdown": "The number of analysts who gave the current symbol a \"Buy\" rating.",
+    "type": "series int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_buy"
+  },
+  {
+    "id": 97,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_date)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.recommendations_date",
+    "markdown": "The starting date of the last set of recommendations for the current symbol.",
+    "type": "series int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_date"
+  },
+  {
+    "id": 98,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_hold)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.recommendations_hold",
+    "markdown": "The number of analysts who gave the current symbol a \"Hold\" rating.",
+    "type": "series int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_hold"
+  },
+  {
+    "id": 99,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_sell_strong)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.recommendations_sell_strong",
+    "markdown": "The number of analysts who gave the current symbol a \"Strong Sell\" rating.",
+    "type": "series int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_sell_strong"
+  },
+  {
+    "id": 100,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_sell)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.recommendations_sell",
+    "markdown": "The number of analysts who gave the current symbol a \"Sell\" rating.",
+    "type": "series int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_sell"
+  },
+  {
+    "id": 101,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_total)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.recommendations_total",
+    "markdown": "The total number of recommendations for the current symbol.",
+    "type": "series int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_total"
+  },
+  {
+    "id": 102,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.root)\\b(?!\\s*\\()",
     "codeblock": "syminfo.root",
     "markdown": "Root for derivatives like futures contract. For other symbols returns the same value as syminfo.ticker.",
@@ -712,7 +824,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.root"
   },
   {
-    "id": 89,
+    "id": 103,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.sector)\\b(?!\\s*\\()",
     "codeblock": "syminfo.sector",
     "markdown": "Returns the sector of the symbol, or na if the symbol has no sector. Example: 'Electronic Technology', 'Technology services', 'Energy Minerals', 'Consumer Durables', etc. These are the same values one can see in the chart's 'Symbol info' window.",
@@ -720,7 +832,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.sector"
   },
   {
-    "id": 90,
+    "id": 104,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.session)\\b(?!\\s*\\()",
     "codeblock": "syminfo.session",
     "markdown": "Session type of the chart main series. Possible values are session.regular, session.extended.",
@@ -728,7 +840,79 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.session"
   },
   {
-    "id": 91,
+    "id": 105,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.shareholders)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.shareholders",
+    "markdown": "The number of shareholders the company has.",
+    "type": "simple int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.shareholders"
+  },
+  {
+    "id": 106,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.shares_outstanding_float)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.shares_outstanding_float",
+    "markdown": "The total number of shares outstanding a company has available, excluding any of its restricted shares.",
+    "type": "simple float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.shares_outstanding_float"
+  },
+  {
+    "id": 107,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.shares_outstanding_total)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.shares_outstanding_total",
+    "markdown": "The total number of shares outstanding a company has available, including restricted shares held by insiders, major shareholders, and employees.",
+    "type": "simple int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.shares_outstanding_total"
+  },
+  {
+    "id": 108,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_average)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.target_price_average",
+    "markdown": "The average of the last yearly price targets for the symbol predicted by analysts.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_average"
+  },
+  {
+    "id": 109,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_date)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.target_price_date",
+    "markdown": "The starting date of the last price target prediction for the current symbol.",
+    "type": "series int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_date"
+  },
+  {
+    "id": 110,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_estimates)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.target_price_estimates",
+    "markdown": "The latest total number of price target predictions for the current symbol.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_estimates"
+  },
+  {
+    "id": 111,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_high)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.target_price_high",
+    "markdown": "The last highest yearly price target for the symbol predicted by analysts.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_high"
+  },
+  {
+    "id": 112,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_low)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.target_price_low",
+    "markdown": "The last lowest yearly price target for the symbol predicted by analysts.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_low"
+  },
+  {
+    "id": 113,
+    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_median)\\b(?!\\s*\\()",
+    "codeblock": "syminfo.target_price_median",
+    "markdown": "The median of the last yearly price targets for the symbol predicted by analysts.",
+    "type": "series float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_median"
+  },
+  {
+    "id": 114,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.ticker)\\b(?!\\s*\\()",
     "codeblock": "syminfo.ticker",
     "markdown": "Symbol name without exchange prefix, e.g. 'MSFT'.",
@@ -736,7 +920,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.ticker"
   },
   {
-    "id": 92,
+    "id": 115,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.tickerid)\\b(?!\\s*\\()",
     "codeblock": "syminfo.tickerid",
     "markdown": "Returns the full form of the ticker ID representing a symbol, for use as an argument in functions with a `ticker` or `symbol` parameter. It always includes the prefix (exchange) and ticker separated by a colon ('NASDAQ:AAPL'), but it can also include other symbol data such as dividend adjustment, chart type, currency conversion, etc.",
@@ -744,7 +928,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.tickerid"
   },
   {
-    "id": 93,
+    "id": 116,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.timezone)\\b(?!\\s*\\()",
     "codeblock": "syminfo.timezone",
     "markdown": "Timezone of the exchange of the chart main series. Possible values see in timestamp.",
@@ -752,7 +936,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.timezone"
   },
   {
-    "id": 94,
+    "id": 117,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.type)\\b(?!\\s*\\()",
     "codeblock": "syminfo.type",
     "markdown": "Type of the current symbol. Possible values are stock, futures, index, forex, crypto, fund, dr.",
@@ -760,7 +944,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.type"
   },
   {
-    "id": 95,
+    "id": 118,
     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.volumetype)\\b(?!\\s*\\()",
     "codeblock": "syminfo.volumetype",
     "markdown": "Volume type of the current symbol. Possible values are: 'base' for base currency, 'quote' for quote currency, 'tick' for the number of transactions, and 'n/a' when there is no volume or its type is not specified.",
@@ -768,7 +952,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.volumetype"
   },
   {
-    "id": 96,
+    "id": 119,
     "pattern": "(?<![\\.]\\s*)\\b(ta\\.accdist)\\b(?!\\s*\\()",
     "codeblock": "ta.accdist",
     "markdown": "Accumulation/distribution index.",
@@ -776,7 +960,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.accdist"
   },
   {
-    "id": 97,
+    "id": 120,
     "pattern": "(?<![\\.]\\s*)\\b(ta\\.iii)\\b(?!\\s*\\()",
     "codeblock": "ta.iii",
     "markdown": "Intraday Intensity Index.",
@@ -784,7 +968,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.iii"
   },
   {
-    "id": 98,
+    "id": 121,
     "pattern": "(?<![\\.]\\s*)\\b(ta\\.nvi)\\b(?!\\s*\\()",
     "codeblock": "ta.nvi",
     "markdown": "Negative Volume Index.",
@@ -792,7 +976,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.nvi"
   },
   {
-    "id": 99,
+    "id": 122,
     "pattern": "(?<![\\.]\\s*)\\b(ta\\.obv)\\b(?!\\s*\\()",
     "codeblock": "ta.obv",
     "markdown": "On Balance Volume.",
@@ -800,7 +984,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.obv"
   },
   {
-    "id": 100,
+    "id": 123,
     "pattern": "(?<![\\.]\\s*)\\b(ta\\.pvi)\\b(?!\\s*\\()",
     "codeblock": "ta.pvi",
     "markdown": "Positive Volume Index.",
@@ -808,7 +992,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.pvi"
   },
   {
-    "id": 101,
+    "id": 124,
     "pattern": "(?<![\\.]\\s*)\\b(ta\\.pvt)\\b(?!\\s*\\()",
     "codeblock": "ta.pvt",
     "markdown": "Price-Volume Trend.",
@@ -816,7 +1000,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.pvt"
   },
   {
-    "id": 102,
+    "id": 125,
     "pattern": "(?<![\\.]\\s*)\\b(ta\\.tr)\\b(?!\\s*\\()",
     "codeblock": "ta.tr",
     "markdown": "True range. Same as tr(false). It is max(high - low, abs(high - close[1]), abs(low - close[1]))",
@@ -824,7 +1008,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.tr"
   },
   {
-    "id": 103,
+    "id": 126,
     "pattern": "(?<![\\.]\\s*)\\b(ta\\.vwap)\\b(?!\\s*\\()",
     "codeblock": "ta.vwap",
     "markdown": "Volume Weighted Average Price. It uses hlc3 as its source series.",
@@ -832,7 +1016,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.vwap"
   },
   {
-    "id": 104,
+    "id": 127,
     "pattern": "(?<![\\.]\\s*)\\b(ta\\.wad)\\b(?!\\s*\\()",
     "codeblock": "ta.wad",
     "markdown": "Williams Accumulation/Distribution.",
@@ -840,7 +1024,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.wad"
   },
   {
-    "id": 105,
+    "id": 128,
     "pattern": "(?<![\\.]\\s*)\\b(ta\\.wvad)\\b(?!\\s*\\()",
     "codeblock": "ta.wvad",
     "markdown": "Williams Variable Accumulation/Distribution.",
@@ -848,7 +1032,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.wvad"
   },
   {
-    "id": 106,
+    "id": 129,
     "pattern": "(?<![\\.]\\s*)\\b(table\\.all)\\b(?!\\s*\\()",
     "codeblock": "table.all",
     "markdown": "Returns an array filled with all the current tables drawn by the script.",
@@ -856,7 +1040,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_table.all"
   },
   {
-    "id": 107,
+    "id": 130,
     "pattern": "(?<![\\.]\\s*)\\b(time)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
     "codeblock": "time",
     "markdown": "Current bar time in UNIX format. It is the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970.",
@@ -864,7 +1048,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_time"
   },
   {
-    "id": 108,
+    "id": 131,
     "pattern": "(?<![\\.]\\s*)\\b(time_close)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
     "codeblock": "time_close",
     "markdown": "Current bar close time in UNIX format. It is the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970. On price-based charts this variable value is na.",
@@ -872,7 +1056,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_time_close"
   },
   {
-    "id": 109,
+    "id": 132,
     "pattern": "(?<![\\.]\\s*)\\b(time_tradingday)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
     "codeblock": "time_tradingday",
     "markdown": "The beginning time of the trading day the current bar belongs to, in UNIX format (the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970).",
@@ -880,7 +1064,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_time_tradingday"
   },
   {
-    "id": 110,
+    "id": 133,
     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isdaily)\\b(?!\\s*\\()",
     "codeblock": "timeframe.isdaily",
     "markdown": "Returns true if current resolution is a daily resolution, false otherwise.",
@@ -888,7 +1072,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isdaily"
   },
   {
-    "id": 111,
+    "id": 134,
     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isdwm)\\b(?!\\s*\\()",
     "codeblock": "timeframe.isdwm",
     "markdown": "Returns true if current resolution is a daily or weekly or monthly resolution, false otherwise.",
@@ -896,7 +1080,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isdwm"
   },
   {
-    "id": 112,
+    "id": 135,
     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isintraday)\\b(?!\\s*\\()",
     "codeblock": "timeframe.isintraday",
     "markdown": "Returns true if current resolution is an intraday (minutes or seconds) resolution, false otherwise.",
@@ -904,7 +1088,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isintraday"
   },
   {
-    "id": 113,
+    "id": 136,
     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isminutes)\\b(?!\\s*\\()",
     "codeblock": "timeframe.isminutes",
     "markdown": "Returns true if current resolution is a minutes resolution, false otherwise.",
@@ -912,7 +1096,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isminutes"
   },
   {
-    "id": 114,
+    "id": 137,
     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.ismonthly)\\b(?!\\s*\\()",
     "codeblock": "timeframe.ismonthly",
     "markdown": "Returns true if current resolution is a monthly resolution, false otherwise.",
@@ -920,7 +1104,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.ismonthly"
   },
   {
-    "id": 115,
+    "id": 138,
     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isseconds)\\b(?!\\s*\\()",
     "codeblock": "timeframe.isseconds",
     "markdown": "Returns true if current resolution is a seconds resolution, false otherwise.",
@@ -928,7 +1112,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isseconds"
   },
   {
-    "id": 116,
+    "id": 139,
     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isweekly)\\b(?!\\s*\\()",
     "codeblock": "timeframe.isweekly",
     "markdown": "Returns true if current resolution is a weekly resolution, false otherwise.",
@@ -936,7 +1120,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isweekly"
   },
   {
-    "id": 117,
+    "id": 140,
     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.multiplier)\\b(?!\\s*\\()",
     "codeblock": "timeframe.multiplier",
     "markdown": "Multiplier of resolution, e.g. '60' - 60, 'D' - 1, '5D' - 5, '12M' - 12.",
@@ -944,7 +1128,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.multiplier"
   },
   {
-    "id": 118,
+    "id": 141,
     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.period)\\b(?!\\s*\\()",
     "codeblock": "timeframe.period",
     "markdown": "A string representation of the chart's timeframe. The returned string's format is `[<quantity>][<units>]`, where `<quantity>` and `<units>` are in some cases absent. `<quantity>` is the number of units, but it is absent if that number is 1. `<unit>` is 'S' for seconds, 'D' for days, 'W' for weeks, 'M' for months, but it is absent for minutes. No `<unit>` exists for hours. The variable will return: '10S' for 10 seconds, '60' for 60 minutes, 'D' for one day, '2W' for two weeks, '3M' for one quarter. Can be used as an argument with any function containing a `timeframe` parameter.",
@@ -952,7 +1136,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.period"
   },
   {
-    "id": 119,
+    "id": 142,
     "pattern": "(?<![\\.]\\s*)\\b(timenow)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
     "codeblock": "timenow",
     "markdown": "Current time in UNIX format. It is the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970.",
@@ -960,7 +1144,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timenow"
   },
   {
-    "id": 120,
+    "id": 143,
     "pattern": "(?<![\\.]\\s*)\\b(volume)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
     "codeblock": "volume",
     "markdown": "Current bar volume.",
@@ -968,7 +1152,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_volume"
   },
   {
-    "id": 121,
+    "id": 144,
     "pattern": "(?<![\\.]\\s*)\\b(weekofyear)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
     "codeblock": "weekofyear",
     "markdown": "Week number of current bar time in exchange timezone.",
@@ -976,7 +1160,7 @@
     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_weekofyear"
   },
   {
-    "id": 122,
+    "id": 145,
     "pattern": "(?<![\\.]\\s*)\\b(year)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
     "codeblock": "year",
     "markdown": "Current bar year in exchange timezone.",

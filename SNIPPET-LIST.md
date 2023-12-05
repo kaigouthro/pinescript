@@ -1,4 +1,4 @@
-*Version 3.2.1*
+*Version 3.2.2*
 # Snippet's Prefix's
 
 - [Snippet's Prefix's](#snippets-prefixs)
@@ -63,7 +63,7 @@
 |`na`                               |
 |`ohlc4`                            |
 |`open`                             |
-|`polyline.all` _**new!**_                                |
+|`polyline.all`                     |
 |`second`                           |
 |`session.isfirstbar`               |
 |`session.isfirstbar_regular`       |
@@ -78,6 +78,8 @@
 |`strategy.eventrades`              |
 |`strategy.grossloss`               |
 |`strategy.grossprofit`             |
+|`strategy.grossloss_percent` _**new!**_                                  |
+|`strategy.grossprofit_percent` _**new!**_                                |
 |`strategy.initial_capital`         |
 |`strategy.long`                    |
 |`strategy.losstrades`              |
@@ -89,6 +91,10 @@
 |`strategy.max_runup`               |
 |`strategy.netprofit`               |
 |`strategy.openprofit`              |
+|`strategy.max_drawdown_percent` _**new!**_                                |
+|`strategy.max_runup_percent` _**new!**_                                   |
+|`strategy.netprofit_percent` _**new!**_                                   |
+|`strategy.openprofit_percent` _**new!**_                                  |
 |`strategy.opentrades`              |
 |`strategy.position_avg_price`      |
 |`strategy.position_entry_name`     |
@@ -99,15 +105,32 @@
 |`syminfo.country`                  |
 |`syminfo.currency`                 |
 |`syminfo.description`              |
+|`syminfo.employees` _**new!**_                                            |
 |`syminfo.industry`                 |
 |`syminfo.minmove`                  |
 |`syminfo.mintick`                  |
 |`syminfo.pointvalue`               |
 |`syminfo.prefix`                   |
 |`syminfo.pricescale`               |
+|`syminfo.recommendations_buy` _**new!**_                                  |
+|`syminfo.recommendations_buy_strong` _**new!**_                           |
+|`syminfo.recommendations_date` _**new!**_                                 |
+|`syminfo.recommendations_hold` _**new!**_                                 |
+|`syminfo.recommendations_sell` _**new!**_                                 |
+|`syminfo.recommendations_sell_strong` _**new!**_                          |
+|`syminfo.recommendations_total` _**new!**_                                |
 |`syminfo.root`                     |
 |`syminfo.sector`                   |
 |`syminfo.session`                  |
+|`syminfo.shareholders` _**new!**_                                         |
+|`syminfo.shares_outstanding_float` _**new!**_                             |
+|`syminfo.shares_outstanding_total` _**new!**_                             |
+|`syminfo.target_price_average` _**new!**_                                 |
+|`syminfo.target_price_date` _**new!**_                                    |
+|`syminfo.target_price_estimates` _**new!**_                               |
+|`syminfo.target_price_high` _**new!**_                                    |
+|`syminfo.target_price_low` _**new!**_                                     |
+|`syminfo.target_price_median` _**new!**_                                  |
 |`syminfo.ticker`                   |
 |`syminfo.tickerid`                 |
 |`syminfo.timezone`                 |
@@ -426,8 +449,8 @@
 |`plotchar`                                |
 |`plotshape.block`                         |
 |`plotshape`                               |
-|`polyline.delete` _**new!**_                                   |
-|`polyline.new` _**new!**_                                      |
+|`polyline.delete`                         |
+|`polyline.new`                            |
 |`request.currency_rate`                   |
 |`request.dividends`                       |
 |`request.earnings`                        |
@@ -474,6 +497,9 @@
 |`strategy.closedtrades.max_drawdown`      |
 |`strategy.closedtrades.max_runup`         |
 |`strategy.closedtrades.profit`            |
+|`strategy.closedtrades.max_drawdown_percent` _**new!**_                                      |
+|`strategy.closedtrades.max_runup_percent` _**new!**_                                         |
+|`strategy.closedtrades.profit_percent` _**new!**_                                            |
 |`strategy.closedtrades.size`              |
 |`strategy.convert_to_account`             |
 |`strategy.convert_to_symbol`              |
@@ -491,6 +517,9 @@
 |`strategy.opentrades.max_drawdown`        |
 |`strategy.opentrades.max_runup`           |
 |`strategy.opentrades.profit`              |
+|`strategy.opentrades.max_drawdown_percent` _**new!**_                                        |
+|`strategy.opentrades.max_runup_percent` _**new!**_                                           |
+|`strategy.opentrades.profit_percent` _**new!**_                                              |
 |`strategy.opentrades.size`                |
 |`strategy.order.block`                    |
 |`strategy.order`                          |
@@ -866,6 +895,8 @@
 |   `while`    |
 |   `true`     |
 |   `false`    |
+|   `continue` |
+|   `break`    |
 
 -----
 

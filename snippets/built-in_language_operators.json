@@ -265,6 +265,19 @@
         "false$0"
     ],
     "description" : "false | Language Operator"
+},
+"continue ⇨ ⟗" : {
+    "prefix" : "continue",
+    "body" : [
+        "continue$0"
+    ],
+    "description" : "continue | Language Operator"
+},
+"break ⇨ ⟗" : {
+    "prefix" : "break",
+    "body" : [
+        "break$0"
+    ],
+    "description" : "break | Language Operator"
 }
 }
-
