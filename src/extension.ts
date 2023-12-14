@@ -41,6 +41,14 @@ export function activate(context: vscode.ExtensionContext) {
 			let hoverRange;
 			const hoverLineText = document.lineAt(position.line).text;
 
+			let testCommentPattern = new RegExp("//.*");
+			if (testCommentPattern.test(hoverLineText)){
+				hoverRange = document.getWordRangeAtPosition(position, testCommentPattern);
+				if (hoverRange){
+					return null;
+				}
+			}
+
 			for (let index = 0; index < BUILT_IN_FUNC.length; index++) {
 				let testPattern = new RegExp(BUILT_IN_FUNC[index].pattern);
 				if (testPattern.test(hoverLineText)) {
@@ -80,6 +88,14 @@ export function activate(context: vscode.ExtensionContext) {
 			let hoverRange;
 			const hoverLineText = document.lineAt(position.line).text;
 
+			let testCommentPattern = new RegExp("//.*");
+			if (testCommentPattern.test(hoverLineText)){
+				hoverRange = document.getWordRangeAtPosition(position, testCommentPattern);
+				if (hoverRange){
+					return null;
+				}
+			}
+
 			for (let index = 0; index < BUILT_IN_VAR.length; index++) {
 				let testPattern = new RegExp(BUILT_IN_VAR[index].pattern);
 				if (testPattern.test(hoverLineText)) {
@@ -113,6 +129,14 @@ export function activate(context: vscode.ExtensionContext) {
 		provideHover(document, position, token) {
 			let hoverRange;
 			const hoverLineText = document.lineAt(position.line).text;
+
+			let testCommentPattern = new RegExp("//.*");
+			if (testCommentPattern.test(hoverLineText)){
+				hoverRange = document.getWordRangeAtPosition(position, testCommentPattern);
+				if (hoverRange){
+					return null;
+				}
+			}
 
 			for (let index = 0; index < BUILT_IN_CONST.length; index++) {
 				let testPattern = new RegExp(BUILT_IN_CONST[index].pattern);

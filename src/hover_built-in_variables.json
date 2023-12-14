@@ -177,7 +177,7 @@
   },
   {
     "id": 22,
-    "pattern": "(?<![\\.]\\s*)\\b(dayofweek)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+    "pattern": "(?<![\\.]\\s*)\\b(dayofweek)\\b(?=(?!(?:(?:\\.friday\\b)|(?:\\.monday\\b)|(?:\\.sunday\\b)|(?:\\.tuesday\\b)|(?:\\.saturday\\b)|(?:\\.thursday\\b)|(?:\\.wednesday\\b)|(?:\\s*[\\(\\=])|(?:\\s*\\:\\=)))|(?:\\s*\\=\\=))",
     "codeblock": "dayofweek",
     "markdown": "Day of week for current bar time in exchange timezone.",
     "type": "series int",
@@ -449,7 +449,7 @@
   },
   {
     "id": 56,
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades)\\b(?!\\s*\\()",
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades)\\b(?!(?:(?:\\s*\\()|(?:\\.size\\b)|(?:\\.profit\\b)|(?:\\.exit_id\\b)|(?:\\.entry_id\\b)|(?:\\.exit_time\\b)|(?:\\.max_runup\\b)|(?:\\.commission\\b)|(?:\\.entry_time\\b)|(?:\\.exit_price\\b)|(?:\\.entry_price\\b)|(?:\\.exit_comment\\b)|(?:\\.max_drawdown\\b)|(?:\\.entry_comment\\b)|(?:\\.exit_bar_index\\b)|(?:\\.profit_percent\\b)|(?:\\.entry_bar_index\\b)|(?:\\.max_drawdown_percent\\b)|(?:\\.max_runup_percent\\b)|(?:\\.max_drawdown\\b)))",
     "codeblock": "strategy.closedtrades",
     "markdown": "Number of trades, which were closed for the whole trading interval.",
     "type": "series int",
@@ -625,7 +625,7 @@
   },
   {
     "id": 78,
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades)\\b(?!\\s*\\()",
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades)\\b(?!(?:(?:\\s*\\()|(?:\\.size\\b)|(?:\\.profit\\b)|(?:\\.entry_id\\b)|(?:\\.max_runup\\b)|(?:\\.commission\\b)|(?:\\.entry_time\\b)|(?:\\.entry_price\\b)|(?:\\.max_drawdown\\b)|(?:\\.entry_comment\\b)|(?:\\.profit_percent\\b)|(?:\\.entry_bar_index\\b)|(?:\\.max_drawdown_percent\\b)|(?:\\.max_runup_percent\\b)|(?:\\.exit_id\\b)))",
     "codeblock": "strategy.opentrades",
     "markdown": "Number of market position entries, which were not closed and remain opened. If there is no open market position, 0 is returned.",
     "type": "series int",
