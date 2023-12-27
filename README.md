@@ -2,12 +2,32 @@
 
 # PineScript V5 Helper
 ## Language support for Pine Script V5 with Syntax Highlighting & Snippets
+
+## Release Notes
+#### **3.2.3**
+
+*27.12.2023 **Update***
+- Snippets for built-in variables, functions and constants updated to Pinescript release December 2023.
+- Hover popup fixed.
+- Grammars fixed.
+
+---
+
+## Introduction
 **Note: This is a forked project from JeylaniB's [Pine Script](https://marketplace.visualstudio.com/items?itemName=JeylaniB.pinescript) extension.**
 
 PineScript Helper provides language support for PineScript, the scripting language used in TradingView. This extension enhances the coding experience by offering syntax highlighting, snippets, and hovers to provide reference manual information for PineScript scripts.
 
 ### What is PineScript?
 PineScript is a domain-specific scripting language developed by TradingView. It is primarily used to create custom technical indicators, strategies, and alerts within the TradingView platform. PineScript is specifically designed for financial market analysis and allows traders to create their own indicators and strategies to automate trading decisions.
+
+---
+
+### PineScript Color Themes
+PineScript Helper extension is best suited for use with [**PineScript Color Themes**](https://marketplace.visualstudio.com/items?itemName=salbert11.pinescript-color-themes).  
+**PineScript Color Themes** provides a collection of editor themes tailored for PineScript development, offering a visually pleasing environment for writing PineScript code.
+
+*Note: If you prefer a different theme, you are free to use any other themes of your choice. PineScript Helper is compatible with most themes.*
 
 ---
 
@@ -27,14 +47,6 @@ PineScript is a domain-specific scripting language developed by TradingView. It 
 - **Hovers** : Hover over variables, functions, or keywords to view relevant reference manual information directly in the editor. Get quick access to documentation without leaving your code.
 
   ![](https://github.com/salbert11/pinescript/blob/pinescript-helper/images/hover.png?raw=true)
-
----
-
-### PineScript Color Themes
-PineScript Helper extension is best suited for use with [**PineScript Color Themes**](https://marketplace.visualstudio.com/items?itemName=salbert11.pinescript-color-themes).  
-**PineScript Color Themes** provides a collection of editor themes tailored for PineScript development, offering a visually pleasing environment for writing PineScript code.
-
-*Note: If you prefer a different theme, you are free to use any other themes of your choice. PineScript Helper is compatible with most themes.*
 
 ---
 
@@ -108,14 +120,6 @@ The PineScript Helper extension supports the following file extensions:
 
 ---
 
-## Release Notes
-#### **3.2.2**
-
-*05.12.2023 **Update***
-- Grammars and snippets for built-in variables, functions and constants updated to Pinescript release November 2023.
-
----
-
 ## Contribution
 Contributions are welcome! Please feel free to submit a [pull request](https://github.com/salbert11/pinescript/pulls) in the GitHub repository.
 
@@ -131,4 +135,4 @@ This extension is released under the [MIT License](./LICENSE.md).
 
 ---
 
-*Version 3.2.2*
+*Version 3.2.3*
