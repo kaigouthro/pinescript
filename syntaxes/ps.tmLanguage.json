@@ -1250,7 +1250,7 @@
     "user_defined_functions": {
         "patterns": [
         {
-          "match": "(?:([\\w\\.]*))(\\.)(new)\\b(?=\\s*\\()",
+          "match": "(?:([\\w\\.]*))(\\.)(new|copy)\\b(?=\\s*\\()",
           "captures": {
             "1": {"name": "support.type.primitive.ps"},
             "2": {"name": "punctuation.accessor.ps"},

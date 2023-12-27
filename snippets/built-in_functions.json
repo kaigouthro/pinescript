@@ -2038,98 +2038,104 @@
    "plot ⇨ 𝑓": {
       "prefix": "plot",
       "body": [
-         "plot(series = ${1}, title = \"${2}\", color = color.new(color = ${3| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${4:0})${5:${6:, linewidth = ${7:1}}${8:, style = ${9| ,plot.style_line,plot.style_stepline,plot.style_stepline_diamond,plot.style_histogram,plot.style_cross,plot.style_area,plot.style_columns,plot.style_circles,plot.style_linebr,plot.style_areabr,plot.style_steplinebr|}}${10:, trackprice = ${11| ,true,false|}}${12:, histbase = ${13:0}}${14:, offset = ${15}}${16:, join = ${17| ,true,false|}}${18:, editable = ${19| ,true,false|}}${20:, show_last = ${21}}${22:, display = ${23| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}})",
+         "plot(series = ${1}, title = \"${2}\", color = color.new(color = ${3| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${4:0})${5:${6:, linewidth = ${7:1}}${8:, style = ${9| ,plot.style_line,plot.style_stepline,plot.style_stepline_diamond,plot.style_histogram,plot.style_cross,plot.style_area,plot.style_columns,plot.style_circles,plot.style_linebr,plot.style_areabr,plot.style_steplinebr|}}${10:, trackprice = ${11| ,true,false|}}${12:, histbase = ${13:0}}${14:, offset = ${15}}${16:, join = ${17| ,true,false|}}${18:, editable = ${19| ,true,false|}}${20:, show_last = ${21}}${22:, display = ${23| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${24:, format = ${25| ,format.price,format.percent,format.volume|}}${26:, precision = ${27| ,0,1,2,3,4,5,6,7,8,9|}}})",
          "${0}"
       ],
-      "description": "Plots a series of data on the chart ⇨ 𝑓 | plot(series = int|float, title = string, color = color, linewidth = input int, trackprice = bool, histbase = int|float, offset = int, join = bool, editable = bool, show_last = int, display = plot_display) → plot"
+      "description": "Plots a series of data on the chart ⇨ 𝑓 | plot(series = int|float, title = string, color = color, linewidth = input int, trackprice = bool, histbase = int|float, offset = int, join = bool, editable = bool, show_last = int, display = plot_display, format = string, precision = int) → plot"
    },
    "{b} plot ⇨ 𝑓": {
       "prefix": "plot",
       "body": [
          "plot(",
-         " series       = ${1},",
-         " title        = \"${2}\",",
-         " color        = color.new(color = ${3| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${4:0})${5:${6:,",
-         " linewidth    = ${7:1}}${8:,",
-         " style        = ${9| ,plot.style_line,plot.style_stepline,plot.style_stepline_diamond,plot.style_histogram,plot.style_cross,plot.style_area,plot.style_columns,plot.style_circles,plot.style_linebr,plot.style_areabr,plot.style_steplinebr|}}${10:,",
-         " trackprice   = ${11| ,true,false|}}${12:,",
-         " histbase     = ${13:0}}${14:,",
-         " offset       = ${15}}${16:,",
-         " join         = ${17| ,true,false|}}${18:,",
-         " editable     = ${19| ,true,false|}}${20:,",
-         " show_last    = ${21}}${22:,",
-         " display      = ${23| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}}",
+         " series     = ${1},",
+         " title      = \"${2}\",",
+         " color      = color.new(color = ${3| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${4:0})${5:${6:,",
+         " linewidth  = ${7:1}}${8:,",
+         " style      = ${9| ,plot.style_line,plot.style_stepline,plot.style_stepline_diamond,plot.style_histogram,plot.style_cross,plot.style_area,plot.style_columns,plot.style_circles,plot.style_linebr,plot.style_areabr,plot.style_steplinebr|}}${10:,",
+         " trackprice = ${11| ,true,false|}}${12:,",
+         " histbase   = ${13:0}}${14:,",
+         " offset     = ${15}}${16:,",
+         " join       = ${17| ,true,false|}}${18:,",
+         " editable   = ${19| ,true,false|}}${20:,",
+         " show_last  = ${21}}${22:,",
+         " display    = ${23| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${24:,",
+         " format     = ${25| ,format.price,format.percent,format.volume|}}${26:,",
+         " precision  = ${27| ,0,1,2,3,4,5,6,7,8,9|}}}",
          " )",
          "${0}"
       ],
-      "description": "Plots a series of data on the chart | Block ⇨ 𝑓 | plot(series = int|float, title = string, color = color, linewidth = input int, trackprice = bool, histbase = int|float, offset = int, join = bool, editable = bool, show_last = int, display = plot_display) → plot"
+      "description": "Plots a series of data on the chart | Block ⇨ 𝑓 | plot(series = int|float, title = string, color = color, linewidth = input int, trackprice = bool, histbase = int|float, offset = int, join = bool, editable = bool, show_last = int, display = plot_display, format = string, precision = int) → plot"
    },
    "plotarrow ⇨ 𝑓": {
       "prefix": "plotarrow",
       "body": [
-         "plotarrow(series = ${1}, title = \"${2}\"${3:${4:, colorup = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})}${7:, colordown = color.new(color = ${8| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${9:0})}${10:, offset = ${11}}${12:, minheight = ${13}}${14:, maxheight = ${15}}${16:, editable = ${17| ,true,false|}}${18:, show_last = ${19}}${20:, display = ${21| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}})",
+         "plotarrow(series = ${1}, title = \"${2}\"${3:${4:, colorup = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})}${7:, colordown = color.new(color = ${8| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${9:0})}${10:, offset = ${11}}${12:, minheight = ${13}}${14:, maxheight = ${15}}${16:, editable = ${17| ,true,false|}}${18:, show_last = ${19}}${20:, display = ${21| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${22:, format = ${23| ,format.price,format.percent,format.volume|}}${24:, precision = ${25| ,0,1,2,3,4,5,6,7,8,9|}}})",
          "${0}"
       ],
-      "description": "Plots up and down arrows on the chart ⇨ 𝑓 | plotarrow(series = any, title = string, colorup = color, colordown = color, offset = int, minheight = int, maxheight = int, editable = bool, show_last = int, display = plot_display) → void"
+      "description": "Plots up and down arrows on the chart ⇨ 𝑓 | plotarrow(series = any, title = string, colorup = color, colordown = color, offset = int, minheight = int, maxheight = int, editable = bool, show_last = int, display = plot_display, format = string, precision = int) → void"
    },
    "{b} plotarrow ⇨ 𝑓": {
       "prefix": "plotarrow",
       "body": [
          "plotarrow(",
-         " series       = ${1},",
-         " title        = \"${2}\"${3:${4:,",
-         " colorup      = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})}${7:,",
-         " colordown    = color.new(color = ${8| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${9:0})}${10:,",
-         " offset       = ${11}}${12:,",
-         " minheight    = ${13}}${14:,",
-         " maxheight    = ${15}}${16:,",
-         " editable     = ${17| ,true,false|}}${18:,",
-         " show_last    = ${19}}${20:,",
-         " display      = ${21| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}}",
+         " series    = ${1},",
+         " title     = \"${2}\"${3:${4:,",
+         " colorup   = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})}${7:,",
+         " colordown = color.new(color = ${8| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${9:0})}${10:,",
+         " offset    = ${11}}${12:,",
+         " minheight = ${13}}${14:,",
+         " maxheight = ${15}}${16:,",
+         " editable  = ${17| ,true,false|}}${18:,",
+         " show_last = ${19}}${20:,",
+         " display   = ${21| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${22:,",
+         " format    = ${23| ,format.price,format.percent,format.volume|}}${24:,",
+         " precision = ${25| ,0,1,2,3,4,5,6,7,8,9|}}}",
          " )",
          "${0}"
       ],
-      "description": "Plots up and down arrows on the chart | Block ⇨ 𝑓 | plotarrow(series = any, title = string, colorup = color, colordown = color, offset = int, minheight = int, maxheight = int, editable = bool, show_last = int, display = plot_display) → void"
+      "description": "Plots up and down arrows on the chart | Block ⇨ 𝑓 | plotarrow(series = any, title = string, colorup = color, colordown = color, offset = int, minheight = int, maxheight = int, editable = bool, show_last = int, display = plot_display, format = string, precision = int) → void"
    },
    "plotbar ⇨ 𝑓": {
       "prefix": "plotbar",
       "body": [
-         "plotbar(open = ${1}, high = ${2}, low = ${3}, close = ${4}, title = \"${5}\", color = color.new(color = ${6| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${7:0})${8:${9:, editable = ${10| ,true,false|}}${11:, show_last = ${12}}${13:, display = ${14| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}})",
+         "plotbar(open = ${1}, high = ${2}, low = ${3}, close = ${4}, title = \"${5}\", color = color.new(color = ${6| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${7:0})${8:${9:, editable = ${10| ,true,false|}}${11:, show_last = ${12}}${13:, display = ${14| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${15:, format = ${16| ,format.price,format.percent,format.volume|}}${17:, precision = ${18| ,0,1,2,3,4,5,6,7,8,9|}}})",
          "${0}"
       ],
-      "description": "Plots ohlc bars on the chart ⇨ 𝑓 | plotbar(open = int|float, high = int|float, low = int|float, close = int|float, title = string, color = color, editable = bool, show_last = input int, display = plot_display) → void"
+      "description": "Plots ohlc bars on the chart ⇨ 𝑓 | plotbar(open = int|float, high = int|float, low = int|float, close = int|float, title = string, color = color, editable = bool, show_last = input int, display = plot_display, format = string, precision = int) → void"
    },
    "{b} plotbar ⇨ 𝑓": {
       "prefix": "plotbar",
       "body": [
          "plotbar(",
-         " open        = ${1},",
-         " high        = ${2},",
-         " low         = ${3},",
-         " close       = ${4},",
-         " title       = \"${5}\",",
-         " color       = color.new(color = ${6| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${7:0})${8:${9:,",
-         " editable    = ${10| ,true,false|}}${11:,",
-         " show_last   = ${12}}${13:,",
-         " display     = ${14| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}}",
+         " open      = ${1},",
+         " high      = ${2},",
+         " low       = ${3},",
+         " close     = ${4},",
+         " title     = \"${5}\",",
+         " color     = color.new(color = ${6| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${7:0})${8:${9:,",
+         " editable  = ${10| ,true,false|}}${11:,",
+         " show_last = ${12}}${13:,",
+         " display   = ${14| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${15:,",
+         " format    = ${16| ,format.price,format.percent,format.volume|}}${17:,",
+         " precision = ${18| ,0,1,2,3,4,5,6,7,8,9|}}}",
          " )",
          "${0}"
       ],
-      "description": "Plots ohlc bars on the chart | Block ⇨ 𝑓 | plotbar(open = int|float, high = int|float, low = int|float, close = int|float, title = string, color = color, editable = bool, show_last = input int, display = plot_display) → void"
+      "description": "Plots ohlc bars on the chart | Block ⇨ 𝑓 | plotbar(open = int|float, high = int|float, low = int|float, close = int|float, title = string, color = color, editable = bool, show_last = input int, display = plot_display, format = string, precision = int) → void"
    },
    "plotcandle ⇨ 𝑓": {
       "prefix": "plotcandle",
       "body": [
-         "plotcandle(open = $1, high = $2, low = $3, close = $4, title = \"$5\", color = color.new(color = ${6| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${7:0}), wickcolor = color.new(color = ${8| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${9:0})${10:${11:, editable = ${12| ,true,false|}}${13:, show_last = ${14}}${15:, bordercolor = color.new(color = ${16| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${17:0})}${18:, display = ${19| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}})",
+         "plotcandle(open = $1, high = $2, low = $3, close = $4, title = \"$5\", color = color.new(color = ${6| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${7:0}), wickcolor = color.new(color = ${8| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${9:0})${10:${11:, editable = ${12| ,true,false|}}${13:, show_last = ${14}}${15:, bordercolor = color.new(color = ${16| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${17:0})}${18:, display = ${19| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${20:, format = ${21| ,format.price,format.percent,format.volume|}}${22:, precision = ${23| ,0,1,2,3,4,5,6,7,8,9|}}})",
          "${0}"
       ],
-      "description": "Plots candles on the chart ⇨ 𝑓 | plotcandle(open = int|float, high = int|float, low = int|float, close = int|float, title = string, color = color, wickcolor = color, editable = bool, show_last = input int, bordercolor = color, display = plot_display) → void"
+      "description": "Plots candles on the chart ⇨ 𝑓 | plotcandle(open = int|float, high = int|float, low = int|float, close = int|float, title = string, color = color, wickcolor = color, editable = bool, show_last = input int, bordercolor = color, display = plot_display, format = string, precision = int) → void"
    },
    "{b} plotcandle ⇨ 𝑓": {
       "prefix": "plotcandle",
       "body": [
          "plotcandle(",
-         " open        = ${1},",
+         " open        = $1,",
          " high        = $2,",
          " low         = $3,",
          " close       = $4,",
@@ -2137,71 +2143,77 @@
          " color       = color.new(color = ${6| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${7:0}),",
          " wickcolor   = color.new(color = ${8| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${9:0})${10:${11:,",
          " editable    = ${12| ,true,false|}}${13:,",
-         " show_last   = $14}${15:,",
+         " show_last   = ${14}}${15:,",
          " bordercolor = color.new(color = ${16| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${17:0})}${18:,",
-         " display     = ${19| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}}",
+         " display     = ${19| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${20:,",
+         " format      = ${21| ,format.price,format.percent,format.volume|}}${22:,",
+         " precision   = ${23| ,0,1,2,3,4,5,6,7,8,9|}}}",
          " )",
          "${0}"
       ],
-      "description": "Plots candles on the chart | Block ⇨ 𝑓 | plotcandle(open = int|float, high = int|float, low = int|float, close = int|float, title = string, color = color, wickcolor = color, editable = bool, show_last = input int, bordercolor = color, display = plot_display) → void"
+      "description": "Plots candles on the chart | Block ⇨ 𝑓 | plotcandle(open = int|float, high = int|float, low = int|float, close = int|float, title = string, color = color, wickcolor = color, editable = bool, show_last = input int, bordercolor = color, display = plot_display, format = string, precision = int) → void"
    },
    "{b} plotchar ⇨ 𝑓": {
       "prefix": "plotchar",
       "body": [
          "plotchar(",
-         " series     = ${1},",
-         " title      = \"${2}\",",
-         " char       = \"${3| ,♯,☉,☼,☀,✗,✓,🠐,🠒 ,🠑,🠓,🡔,🡕,🡖,🡗,⇦,⇨,⇧,⇩,⤺,⤻,⤹,⤸,⇤,⇥,⤒,⤓,↨,⇆,⇄,⇅,⇵,➢,➣,➤,↚,↛,↮,↯,⭍,↞,↠,↟,↡,⯬,⯭,⯮,⯯,➳,➵,➴,➶,➸,➷|}\",",
-         " location   = ${4| ,location.abovebar,location.belowbar,location.top,location.bottom,location.absolute|},",
-         " color      = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})${7:${8:,",
-         " offset     = ${9}}${10:,",
-         " text       = \"${11}\"}${12:,",
-         " textcolor  = color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}${15:,",
-         " editable   = ${16| ,true,false|}}${17:,",
-         " size       = ${18| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${19:,",
-         " show_last  = ${20}}${21:,",
-         " display    = ${22| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}}",
+         " series    = ${1},",
+         " title     = \"${2}\",",
+         " char      = \"${3| ,♯,☉,☼,☀,✗,✓,🠐,🠒 ,🠑,🠓,🡔,🡕,🡖,🡗,⇦,⇨,⇧,⇩,⤺,⤻,⤹,⤸,⇤,⇥,⤒,⤓,↨,⇆,⇄,⇅,⇵,➢,➣,➤,↚,↛,↮,↯,⭍,↞,↠,↟,↡,⯬,⯭,⯮,⯯,➳,➵,➴,➶,➸,➷|}\",",
+         " location  = ${4| ,location.abovebar,location.belowbar,location.top,location.bottom,location.absolute|},",
+         " color     = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})${7:${8:,",
+         " offset    = ${9}}${10:,",
+         " text      = \"${11}\"}${12:,",
+         " textcolor = color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}${15:,",
+         " editable  = ${16| ,true,false|}}${17:,",
+         " size      = ${18| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${19:,",
+         " show_last = ${20}}${21:,",
+         " display   = ${22| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${23:,",
+         " format    = ${24| ,format.price,format.percent,format.volume|}}${25:,",
+         " precision = ${26| ,0,1,2,3,4,5,6,7,8,9|}}}",
          " )",
          "${0}"
       ],
-      "description": "Plots visual Unicode Char | Block ⇨ 𝑓 | plotchar(series = bool, title = string, char = string, location = string, color = color, offset = int, text = string, textcolor = color, editable = bool, size = int, show_last = input int, display = plot_display) → void"
+      "description": "Plots visual Unicode Char | Block ⇨ 𝑓 | plotchar(series = bool, title = string, char = string, location = string, color = color, offset = int, text = string, textcolor = color, editable = bool, size = int, show_last = input int, display = plot_display, format = string, precision = int) → void"
    },
    "plotchar ⇨ 𝑓": {
       "prefix": "plotchar",
       "body": [
-         "plotchar(series = ${1}, title = \"${2}\", char = \"${3| ,♯,☉,☼,☀,✗,✓,🠐,🠒 ,🠑,🠓,🡔,🡕,🡖,🡗,⇦,⇨,⇧,⇩,⤺,⤻,⤹,⤸,⇤,⇥,⤒,⤓,↨,⇆,⇄,⇅,⇵,➢,➣,➤,↚,↛,↮,↯,⭍,↞,↠,↟,↡,⯬,⯭,⯮,⯯,➳,➵,➴,➶,➸,➷|}\", location = ${4| ,location.abovebar,location.belowbar,location.top,location.bottom,location.absolute|}, color = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})${7:${8:, offset = ${9}}${10:, text = \"${11}\"}${12:, textcolor = color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}${15:, editable = ${16| ,true,false|}}${17:, size = ${18| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${19:, show_last = ${20}}${21:, display = ${22| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}})",
+         "plotchar(series = ${1}, title = \"${2}\", char = \"${3| ,♯,☉,☼,☀,✗,✓,🠐,🠒 ,🠑,🠓,🡔,🡕,🡖,🡗,⇦,⇨,⇧,⇩,⤺,⤻,⤹,⤸,⇤,⇥,⤒,⤓,↨,⇆,⇄,⇅,⇵,➢,➣,➤,↚,↛,↮,↯,⭍,↞,↠,↟,↡,⯬,⯭,⯮,⯯,➳,➵,➴,➶,➸,➷|}\", location = ${4| ,location.abovebar,location.belowbar,location.top,location.bottom,location.absolute|}, color = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})${7:${8:, offset = ${9}}${10:, text = \"${11}\"}${12:, textcolor = color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}${15:, editable = ${16| ,true,false|}}${17:, size = ${18| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${19:, show_last = ${20}}${21:, display = ${22| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${23:, format = ${24| ,format.price,format.percent,format.volume|}}${25:, precision = ${26| ,0,1,2,3,4,5,6,7,8,9|}}})",
          "${0}"
       ],
-      "description": "Plots visual shapes using any given one Unicode char ⇨ 𝑓 | plotchar(series = bool, title = string, char = string, location = string, color = color, offset = int, text = string, textcolor = color, editable = bool, size = int, show_last = input int, display = plot_display) → void"
+      "description": "Plots visual shapes using any given one Unicode char ⇨ 𝑓 | plotchar(series = bool, title = string, char = string, location = string, color = color, offset = int, text = string, textcolor = color, editable = bool, size = int, show_last = input int, display = plot_display, format = string, precision = int) → void"
    },
    "{b} plotshape ⇨ 𝑓": {
       "prefix": "plotshape",
       "body": [
          "plotshape(",
-         " series     = ${1},",
-         " title      = \"${2}\",",
-         " style      = ${3| ,shape.xcross,shape.cross,shape.triangleup,shape.triangledown,shape.flag,shape.circle,shape.arrowup,shape.arrowdown,shape.labelup,shape.labeldown,shape.square,shape.diamond|},",
-         " location   = ${4| ,location.abovebar,location.belowbar,location.top,location.bottom,location.absolute|},",
-         " color      = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})${7:${8:,",
-         " offset     = ${9}}${10:,",
-         " text       = \"${11}\"}${12:,",
-         " textcolor  = color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}${15:,",
-         " editable   = ${16| ,true,false|}}${17:,",
-         " size       = ${18| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${19:,",
-         " show_last  = ${20}}${21:,",
-         " display    = ${22| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}}",
+         " series    = ${1},",
+         " title     = \"${2}\",",
+         " style     = ${3| ,shape.xcross,shape.cross,shape.triangleup,shape.triangledown,shape.flag,shape.circle,shape.arrowup,shape.arrowdown,shape.labelup,shape.labeldown,shape.square,shape.diamond|},",
+         " location  = ${4| ,location.abovebar,location.belowbar,location.top,location.bottom,location.absolute|},",
+         " color     = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})${7:${8:,",
+         " offset    = ${9}}${10:,",
+         " text      = \"${11}\"}${12:,",
+         " textcolor = color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}${15:,",
+         " editable  = ${16| ,true,false|}}${17:,",
+         " size      = ${18| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${19:,",
+         " show_last = ${20}}${21:,",
+         " display   = ${22| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${23:,",
+         " format    = ${24| ,format.price,format.percent,format.volume|}}${25:,",
+         " precision = ${26| ,0,1,2,3,4,5,6,7,8,9|}}}",
          " )",
          "${0}"
       ],
-      "description": "Plots visual shapes on the chart | Block ⇨ 𝑓 | plotshape(series = bool, title = string, style = string, location = string, color = color, offset = int, text = string, textcolor = color, editable = bool, size = int, show_last = input int, display = plot_display) → void"
+      "description": "Plots visual shapes on the chart | Block ⇨ 𝑓 | plotshape(series = bool, title = string, style = string, location = string, color = color, offset = int, text = string, textcolor = color, editable = bool, size = int, show_last = input int, display = plot_display, format = string, precision = int) → void"
    },
    "plotshape ⇨ 𝑓": {
       "prefix": "plotshape",
       "body": [
-         "plotshape(series = ${1}, title = \"${2}\", style = ${3| ,shape.xcross,shape.cross,shape.triangleup,shape.triangledown,shape.flag,shape.circle,shape.arrowup,shape.arrowdown,shape.labelup,shape.labeldown,shape.square,shape.diamond|}, location = ${4| ,location.abovebar,location.belowbar,location.top,location.bottom,location.absolute|}, color = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})${7:${8:, offset = ${9}}${10:, text = \"${11}\"}${12:, textcolor = color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}${15:, editable = ${16| ,true,false|}}${17:, size = ${18| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${19:, show_last = ${20}}${21:, display = ${22| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}})",
+         "plotshape(series = ${1}, title = \"${2}\", style = ${3| ,shape.xcross,shape.cross,shape.triangleup,shape.triangledown,shape.flag,shape.circle,shape.arrowup,shape.arrowdown,shape.labelup,shape.labeldown,shape.square,shape.diamond|}, location = ${4| ,location.abovebar,location.belowbar,location.top,location.bottom,location.absolute|}, color = color.new(color = ${5| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${6:0})${7:${8:, offset = ${9}}${10:, text = \"${11}\"}${12:, textcolor = color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}${15:, editable = ${16| ,true,false|}}${17:, size = ${18| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${19:, show_last = ${20}}${21:, display = ${22| ,display.all,display.none,display.pane,display.data_window,display.price_scale,display.status_line|}}${23:, format = ${24| ,format.price,format.percent,format.volume|}}${25:, precision = ${26| ,0,1,2,3,4,5,6,7,8,9|}}})",
          "${0}"
       ],
-      "description": "Plots visual shapes on the chart ⇨ 𝑓 | plotshape(series = bool, title = string, style = string, location = string, color = color, offset = int, text = string, textcolor = color, editable = bool, size = int, show_last = input int, display = plot_display) → void"
+      "description": "Plots visual shapes on the chart ⇨ 𝑓 | plotshape(series = bool, title = string, style = string, location = string, color = color, offset = int, text = string, textcolor = color, editable = bool, size = int, show_last = input int, display = plot_display, format = string, precision = int) → void"
    },
    "polyline.delete ⇨ 𝑓": {
       "prefix": "polyline.delete",

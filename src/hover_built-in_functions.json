@@ -5023,7 +5023,7 @@
    {
      "id": 265,
      "pattern": "(?<![\\.]\\s*)\\b(plot)(?=\\s*\\()",
-     "codeblock": "plot(series, title, color, linewidth, style, trackprice, histbase, offset, join, editable, show_last, display) → plot",
+     "codeblock": "plot(series, title, color, linewidth, style, trackprice, histbase, offset, join, editable, show_last, display, format, precision) → plot",
      "markdown": "Plots a series of data on the chart.",
      "returns": "A plot object.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_plot",
@@ -5075,13 +5075,21 @@
         {
            "field": "display (input plot_display)",
            "description": "Controls where the plot's information is displayed. Optional. The default is display.all."
+        },
+        {
+           "field": "format (input string)",
+           "description": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function."
+        },
+        {
+           "field": "precision (input int)",
+           "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
         }
      ]
   },
    {
      "id": 266,
      "pattern": "(?<![\\.]\\s*)\\b(plotarrow)(?=\\s*\\()",
-     "codeblock": "plotarrow(series, title, colorup, colordown, offset, minheight, maxheight, editable, show_last, display) → void",
+     "codeblock": "plotarrow(series, title, colorup, colordown, offset, minheight, maxheight, editable, show_last, display, format, precision) → void",
      "markdown": "Plots up and down arrows on the chart. Up arrow is drawn at every indicator positive value, down arrow is drawn at every negative value. If indicator returns na then no arrow is drawn. Arrows has different height, the more absolute indicator value the longer arrow is drawn.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_plotarrow",
@@ -5125,13 +5133,21 @@
         {
            "field": "display (input plot_display)",
            "description": "Controls where the plot's information is displayed. Optional. The default is display.all."
+        },
+        {
+           "field": "format (input string)",
+           "description": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function."
+        },
+        {
+           "field": "precision (input int)",
+           "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
         }
      ]
   },
    {
      "id": 267,
      "pattern": "(?<![\\.]\\s*)\\b(plotbar)(?=\\s*\\()",
-     "codeblock": "plotbar(open, high, low, close, title, color, editable, show_last, display) → void",
+     "codeblock": "plotbar(open, high, low, close, title, color, editable, show_last, display, format, precision) → void",
      "markdown": "Plots ohlc bars on the chart.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_plotbar",
@@ -5171,13 +5187,21 @@
         {
            "field": "display (input plot_display)",
            "description": "Controls where the plot's information is displayed. Optional. The default is display.all."
+        },
+        {
+           "field": "format (input string)",
+           "description": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function."
+        },
+        {
+           "field": "precision (input int)",
+           "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
         }
      ]
   },
    {
      "id": 268,
      "pattern": "(?<![\\.]\\s*)\\b(plotcandle)(?=\\s*\\()",
-     "codeblock": "plotcandle(open, high, low, close, title, color, wickcolor, editable, show_last, bordercolor, display) → void",
+     "codeblock": "plotcandle(open, high, low, close, title, color, wickcolor, editable, show_last, bordercolor, display, format, precision) → void",
      "markdown": "Plots candles on the chart.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_plotcandle",
@@ -5225,13 +5249,21 @@
         {
            "field": "display (input plot_display)",
            "description": "Controls where the plot's information is displayed. Optional. The default is display.all."
+        },
+        {
+           "field": "format (input string)",
+           "description": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function."
+        },
+        {
+           "field": "precision (input int)",
+           "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
         }
      ]
   },
    {
      "id": 269,
      "pattern": "(?<![\\.]\\s*)\\b(plotchar)(?=\\s*\\()",
-     "codeblock": "plotchar(series, title, char, location, color, offset, text, textcolor, editable, size, show_last, display) → void",
+     "codeblock": "plotchar(series, title, char, location, color, offset, text, textcolor, editable, size, show_last, display, format, precision) → void",
      "markdown": "Plots visual shapes using any given one Unicode character on the chart.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_plotchar",
@@ -5283,13 +5315,21 @@
         {
            "field": "display (input plot_display)",
            "description": "Controls where the plot's information is displayed. Optional. The default is display.all."
+        },
+        {
+           "field": "format (input string)",
+           "description": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function."
+        },
+        {
+           "field": "precision (input int)",
+           "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
         }
      ]
   },
    {
      "id": 270,
      "pattern": "(?<![\\.]\\s*)\\b(plotshape)(?=\\s*\\()",
-     "codeblock": "plotshape(series, title, style, location, color, offset, text, textcolor, editable, size, show_last, display) → void",
+     "codeblock": "plotshape(series, title, style, location, color, offset, text, textcolor, editable, size, show_last, display, format, precision) → void",
      "markdown": "Plots visual shapes on the chart.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_plotshape",
@@ -5341,6 +5381,14 @@
         {
            "field": "display (input plot_display)",
            "description": "Controls where the plot's information is displayed. Optional. The default is display.all."
+        },
+        {
+           "field": "format (input string)",
+           "description": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function."
+        },
+        {
+           "field": "precision (input int)",
+           "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
         }
      ]
   },
