@@ -31,6 +31,32 @@ const BUILT_IN_FUNC = hover_func as FuncPopupBlock[];
 const BUILT_IN_VAR = hover_var as ConstPopupBlock[];
 const BUILT_IN_CONST = hover_const as ConstPopupBlock[];
 
+function testComment(document: vscode.TextDocument, position: vscode.Position, hoverLineText: string){
+	let testCommentPattern = new RegExp("//.*");
+		if (testCommentPattern.test(hoverLineText)){
+			let hoverRange = document.getWordRangeAtPosition(position, testCommentPattern);
+			if (hoverRange){
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+}
+
+function testString(document: vscode.TextDocument, position: vscode.Position, hoverLineText: string){
+	let testStringPattern = new RegExp("(?:\".*?\")|(?:\'.*?\')");
+		if (testStringPattern.test(hoverLineText)){
+			let hoverRange = document.getWordRangeAtPosition(position, testStringPattern);
+			if (hoverRange){
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+}
+
 export function activate(context: vscode.ExtensionContext) {
 
 	console.log('Pinescript-helper activated');
@@ -41,12 +67,8 @@ export function activate(context: vscode.ExtensionContext) {
 			let hoverRange;
 			const hoverLineText = document.lineAt(position.line).text;
 
-			let testCommentPattern = new RegExp("//.*");
-			if (testCommentPattern.test(hoverLineText)){
-				hoverRange = document.getWordRangeAtPosition(position, testCommentPattern);
-				if (hoverRange){
-					return null;
-				}
+			if (testComment(document, position, hoverLineText) || testString(document, position, hoverLineText)){
+				return null;
 			}
 
 			for (let index = 0; index < BUILT_IN_FUNC.length; index++) {
@@ -88,12 +110,8 @@ export function activate(context: vscode.ExtensionContext) {
 			let hoverRange;
 			const hoverLineText = document.lineAt(position.line).text;
 
-			let testCommentPattern = new RegExp("//.*");
-			if (testCommentPattern.test(hoverLineText)){
-				hoverRange = document.getWordRangeAtPosition(position, testCommentPattern);
-				if (hoverRange){
-					return null;
-				}
+			if (testComment(document, position, hoverLineText) || testString(document, position, hoverLineText)){
+				return null;
 			}
 
 			for (let index = 0; index < BUILT_IN_VAR.length; index++) {
@@ -130,12 +148,8 @@ export function activate(context: vscode.ExtensionContext) {
 			let hoverRange;
 			const hoverLineText = document.lineAt(position.line).text;
 
-			let testCommentPattern = new RegExp("//.*");
-			if (testCommentPattern.test(hoverLineText)){
-				hoverRange = document.getWordRangeAtPosition(position, testCommentPattern);
-				if (hoverRange){
-					return null;
-				}
+			if (testComment(document, position, hoverLineText) || testString(document, position, hoverLineText)){
+				return null;
 			}
 
 			for (let index = 0; index < BUILT_IN_CONST.length; index++) {
