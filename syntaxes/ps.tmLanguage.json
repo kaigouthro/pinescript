@@ -1250,7 +1250,7 @@
     "user_defined_functions": {
         "patterns": [
         {
-          "match": "(?:([\\w\\.]*))(\\.)(new|copy)\\b(?=\\s*\\()",
+          "match": "(?<=^|[^\\w])(?!array\\.new|matrix\\.new|map\\.new)([\\w\\.]*)(\\.)(new|copy)\\b(?=\\s*\\()",
           "captures": {
             "1": {"name": "support.type.primitive.ps"},
             "2": {"name": "punctuation.accessor.ps"},
@@ -1840,7 +1840,7 @@
     "primitive_type":{
       "patterns":[
         {
-          "match": "(?<![\\.]\\s*)\\b(const|bool|float|int|string|simple|series|array|map|matrix|chart.point)\\b(?!\\s*\\=\\()",
+          "match": "(?<![\\.]\\s*)\\b(const|bool|float|int|string|simple|series|array|map|matrix|chart.point)\\b(?!\\s*[\\=\\(\\)])",
           "name": "support.type.primitive.ps"
         }
       ]

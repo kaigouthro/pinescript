@@ -45,7 +45,7 @@ function testComment(document: vscode.TextDocument, position: vscode.Position, h
 }
 
 function testString(document: vscode.TextDocument, position: vscode.Position, hoverLineText: string){
-	let testStringPattern = new RegExp("(?:\".*?\")|(?:\'.*?\')");
+	let testStringPattern = new RegExp("(?:[^\\s\\w\\)\\}\\.\\-\\~\\`]\\s*\".*?\"\\s*(?:[^\\s\\w\\(\\{\\-\\~\\`]|$))|(?:[^\\s\\w\\)\\}\\.\\-\\~\\`]\\s*\'.*?\'\\s*(?:[^\\s\\w\\(\\{\\-\\~\\`]|$))");
 		if (testStringPattern.test(hoverLineText)){
 			let hoverRange = document.getWordRangeAtPosition(position, testStringPattern);
 			if (hoverRange){
