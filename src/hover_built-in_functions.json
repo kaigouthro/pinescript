@@ -1164,7 +1164,7 @@
    {
      "id": 67,
      "pattern": "(?<![\\.]\\s*)\\b(box\\.new)(?=\\s*\\()",
-     "codeblock": "box.new(left, top, right, bottom, border_color, border_width, border_style, extend, xloc, bgcolor, text, text_size, text_color, text_halign, text_valign, text_wrap, text_font_family) → series box",
+     "codeblock": "box.new(left, top, right, bottom, border_color, border_width, border_style, extend, xloc, bgcolor, text, text_size, text_color, text_halign, text_valign, text_wrap, text_font_family) → series box \nbox.new(top_left, bottom_right, border_color, border_width, border_style, extend, xloc, bgcolor, text, text_size, text_color, text_halign, text_valign, text_wrap, text_font_family) → series box",
      "markdown": "Creates a new box object.",
      "returns": "The ID of a box object.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_box.new",
@@ -1236,6 +1236,14 @@
         {
            "field": "text_font_family (series string)",
            "description": "The font family of the text. Optional. The default value is font.family_default."
+        },
+        {
+           "field": "top_left (chart.point)",
+           "description": "A chart.point object that specifies the top-left corner location of the box."
+        },
+        {
+           "field": "bottom_right (chart.point)",
+           "description": "A chart.point object that specifies the bottom-right corner location of the box."
         }
      ]
   },
@@ -1876,7 +1884,7 @@
    {
      "id": 103,
      "pattern": "(?<![\\.]\\s*)\\b(fill)(?=\\s*\\()",
-     "codeblock": "fill(plot1, plot2, color, title, editable, show_last, fillgaps, display) → void",
+     "codeblock": "fill(plot1, plot2, color, title, editable, show_last, fillgaps, display) → void \nfill(plot1, plot2, top_value, bottom_value, top_color, bottom_color, title, display, fillgaps, editable) → void \nfill(hline1, hline2, color, title, editable, fillgaps, display) → void",
      "markdown": "Fills background between two plots or hlines with a given color.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_fill",
@@ -1912,6 +1920,30 @@
         {
            "field": "display (input plot_simple_display)",
            "description": "Controls where the fill is displayed. Optional. Default is display.all."
+        },
+        {
+           "field": "top_value (series int|float)",
+           "description": "Value where the gradient uses the `top_color`."
+        },
+        {
+           "field": "bottom_value (series int|float)",
+           "description": "Value where the gradient uses the `bottom_color`."
+        },
+        {
+           "field": "top_color (series color)",
+           "description": "Color of the gradient at the topmost value."
+        },
+        {
+           "field": "bottom_color (series color)",
+           "description": "Color of the gradient at the bottommost value."
+        },
+        {
+           "field": "hline1 (hline)",
+           "description": "The first hline object. Required argument."
+        },
+        {
+           "field": "hline2 (hline)",
+           "description": "The second hline object. Required argument."
         }
      ]
   },
@@ -2178,7 +2210,7 @@
    {
      "id": 112,
      "pattern": "(?<![\\.]\\s*)\\b(input\\.float)(?=\\s*\\()",
-     "codeblock": "input.float(defval, title, minval, maxval, step, tooltip, inline, group, confirm, display) → input float",
+     "codeblock": "input.float(defval, title, minval, maxval, step, tooltip, inline, group, confirm, display) → input float \ninput.float(defval, title, options, tooltip, inline, group, confirm, display) → input float",
      "markdown": "Adds an input to the Inputs tab of your script's Settings, which allows you to provide configuration options to script users. This function adds a field for a float input to the script's inputs.",
      "returns": "Value of input variable.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_input.float",
@@ -2222,13 +2254,17 @@
         {
            "field": "display (const plot_display)",
            "description": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all."
+        },
+        {
+           "field": "options (tuple of const int|float values: [val1, val2, ...])",
+           "description": "A list of options to choose from a dropdown menu, separated by commas and enclosed in square brackets: [val1, val2, ...]. When using this parameter, the `minval`, `maxval` and `step` parameters cannot be used."
         }
      ]
   },
    {
      "id": 113,
      "pattern": "(?<![\\.]\\s*)\\b(input\\.int)(?=\\s*\\()",
-     "codeblock": "input.int(defval, title, minval, maxval, step, tooltip, inline, group, confirm, display) → input int",
+     "codeblock": "input.int(defval, title, minval, maxval, step, tooltip, inline, group, confirm, display) → input int \ninput.int(defval, title, options, tooltip, inline, group, confirm, display) → input int",
      "markdown": "Adds an input to the Inputs tab of your script's Settings, which allows you to provide configuration options to script users. This function adds a field for an integer input to the script's inputs.",
      "returns": "Value of input variable.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_input.int",
@@ -2272,6 +2308,10 @@
         {
            "field": "display (const plot_display)",
            "description": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all."
+        },
+        {
+           "field": "options (tuple of const int values: [val1, val2, ...])",
+           "description": "A list of options to choose from a dropdown menu, separated by commas and enclosed in square brackets: [val1, val2, ...]. When using this parameter, the `minval`, `maxval` and `step` parameters cannot be used."
         }
      ]
   },
@@ -2684,7 +2724,7 @@
    {
      "id": 129,
      "pattern": "(?<![\\.]\\s*)\\b(label\\.new)(?=\\s*\\()",
-     "codeblock": "label.new(x, y, text, xloc, yloc, color, style, textcolor, size, textalign, tooltip, text_font_family) → series label",
+     "codeblock": "label.new(x, y, text, xloc, yloc, color, style, textcolor, size, textalign, tooltip, text_font_family) → series label \nlabel.new(point, text, xloc, yloc, color, style, textcolor, size, textalign, tooltip, text_font_family) → series label",
      "markdown": "Creates new label object.",
      "returns": "The ID of a label object.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_label.new",
@@ -2736,6 +2776,10 @@
         {
            "field": "text_font_family (series string)",
            "description": "The font family of the text. Optional. The default value is font.family_default."
+        },
+        {
+           "field": "point (chart.point)",
+           "description": "A chart.point object that specifies the label's location."
         }
      ]
   },
@@ -3136,7 +3180,7 @@
    {
      "id": 153,
      "pattern": "(?<![\\.]\\s*)\\b(line\\.new)(?=\\s*\\()",
-     "codeblock": "line.new(x1, y1, x2, y2, xloc, extend, color, style, width) → series line",
+     "codeblock": "line.new(x1, y1, x2, y2, xloc, extend, color, style, width) → series line \nline.new(first_point, second_point, xloc, extend, color, style, width) → series line",
      "markdown": "Creates new line object.",
      "returns": "The ID of a line object.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_line.new",
@@ -3176,6 +3220,14 @@
         {
            "field": "width (series int)",
            "description": "Line width in pixels."
+        },
+        {
+           "field": "first_point (chart.point)",
+           "description": "A chart.point object that specifies the line's starting coordinate."
+        },
+        {
+           "field": "second_point (chart.point)",
+           "description": "A chart.point object that specifies the line's ending coordinate."
         }
      ]
   },
@@ -3528,7 +3580,7 @@
    {
      "id": 173,
      "pattern": "(?<![\\.]\\s*)\\b(log\\.error)(?=\\s*\\()",
-     "codeblock": "log.error(message) → void",
+     "codeblock": "log.error(message) → void \nlog.error(formatString, arg0, arg1, ...) → void",
      "markdown": "Converts the formatting string and value(s) into a formatted string, and sends the result to the 'Pine Logs' menu tagged with the 'error' debug level. <p/>The formatting string can contain literal text and one placeholder in curly braces `{}` for each value to be formatted. Each placeholder consists of the index of the required argument (beginning at 0) that will replace it, and an optional format specifier. The index represents the position of that argument in the function's argument list.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_log.error",
@@ -3536,13 +3588,21 @@
         {
            "field": "message (series string)",
            "description": "Log message."
+        },
+        {
+         "field": "formatString (series string)",
+         "description": "Format string."
+        },
+        {
+         "field": "arg0, arg1, ... (any primitive types)",
+         "description": "Values to format."
         }
      ]
   },
    {
      "id": 174,
      "pattern": "(?<![\\.]\\s*)\\b(log\\.info)(?=\\s*\\()",
-     "codeblock": "log.info(message) → void",
+     "codeblock": "log.info(message) → void \nlog.info(formatString, arg0, arg1, ...) → void",
      "markdown": "Converts the formatting string and value(s) into a formatted string, and sends the result to the 'Pine Logs' menu tagged with the 'info' debug level. <p/>The formatting string can contain literal text and one placeholder in curly braces `{}` for each value to be formatted. Each placeholder consists of the index of the required argument (beginning at 0) that will replace it, and an optional format specifier. The index represents the position of that argument in the function's argument list.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_log.info",
@@ -3550,13 +3610,21 @@
         {
            "field": "message (series string)",
            "description": "Log message."
+        },
+        {
+         "field": "formatString (series string)",
+         "description": "Format string."
+        },
+        {
+         "field": "arg0, arg1, ... (any primitive types)",
+         "description": "Values to format."
         }
      ]
   },
    {
      "id": 175,
      "pattern": "(?<![\\.]\\s*)\\b(log\\.warning)(?=\\s*\\()",
-     "codeblock": "log.warning(message) → void",
+     "codeblock": "log.warning(message) → void \nlog.warning(formatString, arg0, arg1, ...) → void",
      "markdown": "Converts the formatting string and value(s) into a formatted string, and sends the result to the 'Pine Logs' menu tagged with the 'warning' debug level. <p/>The formatting string can contain literal text and one placeholder in curly braces `{}` for each value to be formatted. Each placeholder consists of the index of the required argument (beginning at 0) that will replace it, and an optional format specifier. The index represents the position of that argument in the function's argument list.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_log.warning",
@@ -3564,6 +3632,14 @@
         {
            "field": "message (series string)",
            "description": "Log message."
+        },
+        {
+         "field": "formatString (series string)",
+         "description": "Format string."
+        },
+        {
+         "field": "arg0, arg1, ... (any primitive types)",
+         "description": "Values to format."
         }
      ]
   },
@@ -9064,7 +9140,7 @@
    {
      "id": 446,
      "pattern": "(?<![\\.]\\s*)\\b(timestamp)(?=\\s*\\()",
-     "codeblock": "timestamp(timezone, year, month, day, hour, minute, second) → int",
+     "codeblock": "timestamp(timezone, year, month, day, hour, minute, second) → int \ntimestamp(dateString) → int",
      "markdown": "Returns UNIX time of specified date and time.",
      "returns": "UNIX time.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_timestamp",
@@ -9096,6 +9172,10 @@
         {
            "field": "second (series int)",
            "description": "Second. Optional. Default is 0."
+        },
+        {
+           "field": "dateString (const string)",
+           "description": "A string containing the date and, optionally, the time and time zone. Its format must comply with either the IETF RFC 2822 or ISO 8601 standards (\"DD MMM YYYY hh:mm:ss ±hhmm\" or \"YYYY-MM-DDThh:mm:ss±hh:mm\", so \"20 Feb 2020\" or \"2020-02-20\"). If no time is supplied, \"00:00\" is used. If no time zone is supplied, GMT+0 will be used."
         }
      ]
   },

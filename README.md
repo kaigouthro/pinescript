@@ -4,10 +4,10 @@
 ## Language support for Pine Script V5 with Syntax Highlighting & Snippets
 
 ## Release Notes
-#### **3.2.3**
+#### **3.3.0**
 
-*27.12.2023 **Update***
-- Snippets for built-in variables, functions and constants updated to Pinescript release December 2023.
+*18.02.2024 **Update***
+- Integrated with PineScript Color Themes extension.
 - Hover popup fixed.
 - Grammars fixed.
 
@@ -20,14 +20,6 @@ PineScript Helper provides language support for PineScript, the scripting langua
 
 ### What is PineScript?
 PineScript is a domain-specific scripting language developed by TradingView. It is primarily used to create custom technical indicators, strategies, and alerts within the TradingView platform. PineScript is specifically designed for financial market analysis and allows traders to create their own indicators and strategies to automate trading decisions.
-
----
-
-### PineScript Color Themes
-PineScript Helper extension is best suited for use with [**PineScript Color Themes**](https://marketplace.visualstudio.com/items?itemName=salbert11.pinescript-color-themes).  
-**PineScript Color Themes** provides a collection of editor themes tailored for PineScript development, offering a visually pleasing environment for writing PineScript code.
-
-*Note: If you prefer a different theme, you are free to use any other themes of your choice. PineScript Helper is compatible with most themes.*
 
 ---
 
@@ -47,6 +39,29 @@ PineScript Helper extension is best suited for use with [**PineScript Color Them
 - **Hovers** : Hover over variables, functions, or keywords to view relevant reference manual information directly in the editor. Get quick access to documentation without leaving your code.
 
   ![](https://github.com/salbert11/pinescript/blob/pinescript-helper/images/hover.png?raw=true)
+
+---
+
+- ***PineScript Color Themes** : The extension provides a collection of editor themes tailored for PineScript development, offering a visually pleasing environment for writing PineScript code.
+  - Pine Theme Original Dark
+  - Pine Theme Dark Pro
+  - Pine Theme Dark Pro Bold
+  - Pine Theme Monokai Dark
+  - Pine Theme Monokai Dark Bold
+  - Pine Theme Blue
+  - Pine Theme Blue Bold
+  - Pine Theme Dark Low Contrast
+  - Pine Theme Dark Low Contrast Bold
+  - Pine Theme Grey
+  - Pine Theme Grey Bold
+  - Pine Theme Grey Candy
+  - Pine Theme Light
+  - Pine Theme Light Bold
+
+*Note: If you prefer a different theme, you are free to use any other themes of your choice. PineScript Helper is compatible with most themes.*
+
+  ![](https://github.com/salbert11/pinethemes/raw/pinescript-color-themes/images/pine-themes.gif?raw=true)
+
 
 ---
 
@@ -135,4 +150,4 @@ This extension is released under the [MIT License](./LICENSE.md).
 
 ---
 
-*Version 3.2.3*
+*Version 3.3.0*

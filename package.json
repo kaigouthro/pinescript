@@ -5,7 +5,7 @@
 	"icon": "images/pineicon.png",
 	"publisher": "salbert11",
 	"license": "MIT",
-	"version": "3.2.4-beta-8",
+	"version": "3.3.0-beta-1",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
@@ -14,7 +14,8 @@
 	},
 	"categories": [
 		"Programming Languages",
-		"Snippets"
+		"Snippets",
+		"Themes"
 	],
 	"keywords": [
 		"pine",
@@ -118,6 +119,78 @@
 				"language": "pine",
 				"scopeName": "source.ps",
 				"path": "./syntaxes/ps.tmLanguage.json"
+			}
+		],
+		"themes": [
+			{
+				"label": "Pine Theme Original Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-original-dark.json"
+			},
+			{
+				"label": "Pine Theme Dark Pro Bold",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-dark-pro-bold.json"
+			},
+			{
+				"label": "Pine Theme Dark Pro",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-dark-pro.json"
+			},
+			{
+				"label": "Pine Theme Monokai Dark Bold",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-monokai-dark-bold.json"
+			},
+			{
+				"label": "Pine Theme Monokai Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-monokai-dark.json"
+			},
+			{
+				"label": "Pine Theme Blue Bold",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-blue-bold.json"
+			},
+			{
+				"label": "Pine Theme Blue",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-blue.json"
+			},
+			{
+				"label": "Pine Theme Dark Low Contrast Bold",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-editor-dark-bold.json"
+			},
+			{
+				"label": "Pine Theme Dark Low Contrast",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-editor-dark.json"
+			},
+			{
+				"label": "Pine Theme Light Bold",
+				"uiTheme": "vs",
+				"path": "./themes/pine-editor-light-bold.json"
+			},
+			{
+				"label": "Pine Theme Light",
+				"uiTheme": "vs",
+				"path": "./themes/pine-editor-light.json"
+			},
+			{
+				"label": "Pine Theme Grey Bold",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-grey-bold.json"
+			},
+			{
+				"label": "Pine Theme Grey Candy",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-grey-fun.json"
+			},
+			{
+				"label": "Pine Theme Grey",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-grey.json"
 			}
 		]
 	},

@@ -29,7 +29,7 @@
             "0": {"name": "comment.line.double-slash.ps"},
             "1": {"name": "comment.line.double-slash.ps"},
             "2": {"name": "comment.line.double-slash.ps"},
-            "3": {"name": "constant.numeric.ps"},
+            "3": {"name": "meta.numeric.ps"},
             "4": {"name": "comment.line.double-slash.ps"}
           }
         },
@@ -38,7 +38,7 @@
           "captures": {
             "0": {"name": "comment.line.double-slash.ps"},
             "1": {"name": "comment.line.double-slash.ps"},
-            "2": {"name": "constant.numeric.ps"},
+            "2": {"name": "meta.numeric.ps"},
             "3": {"name": "keyword.operator.logical.ps"},
             "4": {"name": "keyword.operator.logical.ps"},
             "5": {"name": "keyword.operator.logical.ps"}
@@ -49,10 +49,10 @@
           "captures": {
             "0": {"name": "comment.line.double-slash.ps"},
             "1": {"name": "comment.line.double-slash.ps"},
-            "2": {"name": "punctuation.section.embedded.other.ps"},
-            "3": {"name": "keyword.other.ps"},
-            "4": {"name": "keyword.operator.assignment.ps"},
-            "5": {"name": "constant.numeric.ps"}
+            "2": {"name": "meta.section.embedded.other.ps"},
+            "3": {"name": "meta.other.ps"},
+            "4": {"name": "meta.assignment.ps"},
+            "5": {"name": "meta.numeric.ps"}
           }
         },
         {

@@ -1,5 +1,14 @@
 # Change Log
 
+#### **3.3.0**
+
+*18.02.2024 **Update***
+- Integrated with PineScript Color Themes extensions.
+- Hover popup fixed.
+- Grammars fixed.
+
+---
+
 #### **3.2.3**
 
 *27.12.2023 **Update***
