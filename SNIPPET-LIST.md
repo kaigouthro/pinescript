@@ -1,4 +1,4 @@
-*Version 3.2.2*
+*Version 3.3.1*
 # Snippet's Prefix's
 
 - [Snippet's Prefix's](#snippets-prefixs)
@@ -78,8 +78,8 @@
 |`strategy.eventrades`              |
 |`strategy.grossloss`               |
 |`strategy.grossprofit`             |
-|`strategy.grossloss_percent` _**new!**_                                  |
-|`strategy.grossprofit_percent` _**new!**_                                |
+|`strategy.grossloss_percent`       |
+|`strategy.grossprofit_percent`     |
 |`strategy.initial_capital`         |
 |`strategy.long`                    |
 |`strategy.losstrades`              |
@@ -91,11 +91,12 @@
 |`strategy.max_runup`               |
 |`strategy.netprofit`               |
 |`strategy.openprofit`              |
-|`strategy.max_drawdown_percent` _**new!**_                                |
-|`strategy.max_runup_percent` _**new!**_                                   |
-|`strategy.netprofit_percent` _**new!**_                                   |
-|`strategy.openprofit_percent` _**new!**_                                  |
+|`strategy.max_drawdown_percent`    |
+|`strategy.max_runup_percent`       |
+|`strategy.netprofit_percent`       |
+|`strategy.openprofit_percent`      |
 |`strategy.opentrades`              |
+|`strategy.opentrades.capital_held` _**new!**_              |
 |`strategy.position_avg_price`      |
 |`strategy.position_entry_name`     |
 |`strategy.position_size`           |
@@ -105,32 +106,33 @@
 |`syminfo.country`                  |
 |`syminfo.currency`                 |
 |`syminfo.description`              |
-|`syminfo.employees` _**new!**_                                            |
+|`syminfo.employees`                |
+|`syminfo.expiration_date`  _**new!**_                       |
 |`syminfo.industry`                 |
 |`syminfo.minmove`                  |
 |`syminfo.mintick`                  |
 |`syminfo.pointvalue`               |
 |`syminfo.prefix`                   |
 |`syminfo.pricescale`               |
-|`syminfo.recommendations_buy` _**new!**_                                  |
-|`syminfo.recommendations_buy_strong` _**new!**_                           |
-|`syminfo.recommendations_date` _**new!**_                                 |
-|`syminfo.recommendations_hold` _**new!**_                                 |
-|`syminfo.recommendations_sell` _**new!**_                                 |
-|`syminfo.recommendations_sell_strong` _**new!**_                          |
-|`syminfo.recommendations_total` _**new!**_                                |
+|`syminfo.recommendations_buy`      |
+|`syminfo.recommendations_buy_strong`|
+|`syminfo.recommendations_date`     |
+|`syminfo.recommendations_hold`     |
+|`syminfo.recommendations_sell`     |
+|`syminfo.recommendations_sell_strong`|
+|`syminfo.recommendations_total`    |
 |`syminfo.root`                     |
 |`syminfo.sector`                   |
 |`syminfo.session`                  |
-|`syminfo.shareholders` _**new!**_                                         |
-|`syminfo.shares_outstanding_float` _**new!**_                             |
-|`syminfo.shares_outstanding_total` _**new!**_                             |
-|`syminfo.target_price_average` _**new!**_                                 |
-|`syminfo.target_price_date` _**new!**_                                    |
-|`syminfo.target_price_estimates` _**new!**_                               |
-|`syminfo.target_price_high` _**new!**_                                    |
-|`syminfo.target_price_low` _**new!**_                                     |
-|`syminfo.target_price_median` _**new!**_                                  |
+|`syminfo.shareholders`             |
+|`syminfo.shares_outstanding_float` |
+|`syminfo.shares_outstanding_total` |
+|`syminfo.target_price_average`     |
+|`syminfo.target_price_date`        |
+|`syminfo.target_price_estimates`   |
+|`syminfo.target_price_high`        |
+|`syminfo.target_price_low`         |
+|`syminfo.target_price_median`      |
 |`syminfo.ticker`                   |
 |`syminfo.tickerid`                 |
 |`syminfo.timezone`                 |
@@ -472,12 +474,14 @@
 |`str.match`                               |
 |`str.pos`                                 |
 |`str.replace`                             |
+|`str.repeat` _**new!**_                                 |
 |`str.replace_all`                         |
 |`str.split`                               |
 |`str.startswith`                          |
 |`str.substring`                           |
 |`str.tonumber`                            |
 |`str.tostring`                            |
+|`str.trim`   _**new!**_                                 |
 |`str.upper`                               |
 |`strategy.cancel`                         |
 |`strategy.cancel_all`                     |
@@ -497,9 +501,9 @@
 |`strategy.closedtrades.max_drawdown`      |
 |`strategy.closedtrades.max_runup`         |
 |`strategy.closedtrades.profit`            |
-|`strategy.closedtrades.max_drawdown_percent` _**new!**_                                      |
-|`strategy.closedtrades.max_runup_percent` _**new!**_                                         |
-|`strategy.closedtrades.profit_percent` _**new!**_                                            |
+|`strategy.closedtrades.max_drawdown_percent`|
+|`strategy.closedtrades.max_runup_percent` |
+|`strategy.closedtrades.profit_percent`    |
 |`strategy.closedtrades.size`              |
 |`strategy.convert_to_account`             |
 |`strategy.convert_to_symbol`              |
@@ -517,9 +521,9 @@
 |`strategy.opentrades.max_drawdown`        |
 |`strategy.opentrades.max_runup`           |
 |`strategy.opentrades.profit`              |
-|`strategy.opentrades.max_drawdown_percent` _**new!**_                                        |
-|`strategy.opentrades.max_runup_percent` _**new!**_                                           |
-|`strategy.opentrades.profit_percent` _**new!**_                                              |
+|`strategy.opentrades.max_drawdown_percent`|
+|`strategy.opentrades.max_runup_percent`   |
+|`strategy.opentrades.profit_percent`      |
 |`strategy.opentrades.size`                |
 |`strategy.order.block`                    |
 |`strategy.order`                          |

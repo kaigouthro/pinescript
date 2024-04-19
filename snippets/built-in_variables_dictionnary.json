@@ -552,6 +552,13 @@
       ],
       "description": "Number of market position entries, which were not closed and remain opened. If there is no open market position, 0 is returned. | TYPE series int"
    },
+   "strategy.opentrades.capital_held ⇨ 𝑥": {
+      "prefix": "strategy.opentrades.capital_held",
+      "body": [
+         "strategy.opentrades.capital_held$0"
+      ],
+      "description": "The capital amount currently held by open trades. | TYPE series float"
+   },
    "strategy.position_avg_price ⇨ 𝑥": {
       "prefix": "strategy.position_avg_price",
       "body": [
@@ -621,6 +628,13 @@
          "syminfo.employees$0"
       ],
       "description": "The number of employees the company has. | TYPE simple int"
+   },
+   "syminfo.expiration_date ⇨ 𝑥": {
+      "prefix": "syminfo.expiration_date",
+      "body": [
+         "syminfo.expiration_date$0"
+      ],
+      "description": "A UNIX timestamp representing the start of the last day of the current futures contract. This variable is only compatible with non-continuous futures symbols. On other symbols, it returns na. | TYPE simple int"
    },
    "syminfo.industry ⇨ 𝑥": {
       "prefix": "syminfo.industry",

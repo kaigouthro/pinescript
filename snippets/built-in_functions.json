@@ -2277,7 +2277,7 @@
    "request.financial ⇨ 𝑓": {
       "prefix": "request.financial",
       "body": [
-         "request.financial(symbol = ${1| ,syminfo.tickerid|}, financial_id = \"${2}\", period = ${3| ,\"TTM\",\"FY\",\"FQ\",\"FH\"|}${4:${5:, gaps = ${6| ,barmerge.gaps_off,barmerge.gaps_on|}}${7:, ignore_invalid_symbol = ${8| ,false,true|}}${9:, currency = ${10| ,syminfo.currency,currency.NONE,currency.AUD,currency.BTC,currency.CAD,currency.CHF,currency.ETH,currency.EUR,currency.GBP,currency.HKD,currency.INR,currency.JPY,currency.KRW,currency.MYR,currency.NOK,currency.NZD,currency.RUB,currency.SEK,currency.SGD,currency.TRY,currency.USD,currency.USDT,currency.ZAR|}}})"
+         "request.financial(symbol = ${1| ,syminfo.tickerid|}, financial_id = \"${2}\", period = ${3| ,\"TTM\",\"FY\",\"FQ\",\"FH\",\"D\"|}${4:${5:, gaps = ${6| ,barmerge.gaps_off,barmerge.gaps_on|}}${7:, ignore_invalid_symbol = ${8| ,false,true|}}${9:, currency = ${10| ,syminfo.currency,currency.NONE,currency.AUD,currency.BTC,currency.CAD,currency.CHF,currency.ETH,currency.EUR,currency.GBP,currency.HKD,currency.INR,currency.JPY,currency.KRW,currency.MYR,currency.NOK,currency.NZD,currency.RUB,currency.SEK,currency.SGD,currency.TRY,currency.USD,currency.USDT,currency.ZAR|}}})"
       ],
       "description": "Requests financial series for symbol ⇨ 𝑓 | request.financial(symbol = string, financial_id = string, period = string, gaps = barmerge_gaps, ignore_invalid_symbol = bool, currency = string) → series float"
    },
@@ -2387,6 +2387,13 @@
       ],
       "description": "Position of 1st occurrence of string ⇨ 𝑓 | str.pos(source = string, str = string) → int"
    },
+   "str.repeat ⇨ 𝑓": {
+      "prefix": "str.repeat",
+      "body": [
+         "str.repeat(source = ${1:\"${2}\"}, repeat = ${3}${4:, separator = ${5:\"${6}\"}})"
+      ],
+      "description": "Constructs a new string containing the `source` string repeated `repeat` times with the `separator` injected between each repeated instance. ⇨ 𝑓 | str.repeat(source = string, repeat = int, separator = string) → string"
+   },
    "str.replace ⇨ 𝑓": {
       "prefix": "str.replace",
       "body": [
@@ -2435,6 +2442,13 @@
          "str.tostring(value = \"${1}\"${2:, format = ${3| ,format.mintick,format.percent,format.volume,#.00000,#.000,#.00,#|}})"
       ],
       "description": "String representation of the `value` argument else NaN ⇨ 𝑓 | str.tostring(value = any series, format = string) → string"
+   },
+   "str.trim ⇨ 𝑓": {
+      "prefix": "str.trim",
+      "body": [
+         "str.trim(source = ${1:\"${2}\"})"
+      ],
+      "description": "Constructs a new string with all consecutive whitespaces and other control characters removed from the left and right of the `source`. ⇨ 𝑓 | str.trim(source = string) → string"
    },
    "str.upper ⇨ 𝑓": {
       "prefix": "str.upper",
@@ -3527,16 +3541,16 @@
    "time ⇨ 𝑓": {
       "prefix": "time",
       "body": [
-         "time(timeframe = ${1| ,timeframe.period,'1','2','3','5','7','10','15','30','60','90','120','180','240','360','480','D','2D','5D','W','2W','M','2M','6M','Y'|}${2:, session = \"${3| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}-${4| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}\"${5:, timezone = ${6| ,syminfo.timezone,\"GMT-12\",\"GMT-11\",\"GMT-10\",\"GMT-9\",\"GMT-8\",\"GMT-7\",\"GMT-6\",\"GMT-5\",\"GMT-4\",\"GMT-3\",\"GMT-2\",\"GMT-1\",\"GMT+0\",\"GMT+1\",\"GMT+2\",\"GMT+3\",\"GMT+4\",\"GMT+5\",\"GMT+6\",\"GMT+7\",\"GMT+8\",\"GMT+9\",\"GMT+10\",\"GMT+11\",\"GMT+12\"|}}})"
+         "time(timeframe = ${1| ,timeframe.period,'1','2','3','5','7','10','15','30','60','90','120','180','240','360','480','D','2D','5D','W','2W','M','2M','6M','Y'|}${2:, session = \"${3| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}-${4| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}\"${5:, timezone = ${6| ,syminfo.timezone,\"GMT-12\",\"GMT-11\",\"GMT-10\",\"GMT-9\",\"GMT-8\",\"GMT-7\",\"GMT-6\",\"GMT-5\",\"GMT-4\",\"GMT-3\",\"GMT-2\",\"GMT-1\",\"GMT+0\",\"GMT+1\",\"GMT+2\",\"GMT+3\",\"GMT+4\",\"GMT+5\",\"GMT+6\",\"GMT+7\",\"GMT+8\",\"GMT+9\",\"GMT+10\",\"GMT+11\",\"GMT+12\"|}}${7:, bars_back = ${8}}})"
       ],
-      "description": "UNIX time of the current bar for the specified timeframe and session or NaN ⇨ 𝑓 | time(timeframe = string, session = string, timezone = string) → series int"
+      "description": "UNIX time of the current bar for the specified timeframe and session or NaN ⇨ 𝑓 | time(timeframe = string, session = string, timezone = string, bars_back = int) → series int"
    },
    "time_close ⇨ 𝑓": {
       "prefix": "time_close",
       "body": [
-         "time_close(timeframe = ${1| ,timeframe.period,'1','2','3','5','7','10','15','30','60','90','120','180','240','360','480','D','2D','5D','W','2W','M','2M','6M','Y'|}${2:, session = \"${3| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}-${4| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}\"${5:, timezone = ${6| ,syminfo.timezone,\"GMT-12\",\"GMT-11\",\"GMT-10\",\"GMT-9\",\"GMT-8\",\"GMT-7\",\"GMT-6\",\"GMT-5\",\"GMT-4\",\"GMT-3\",\"GMT-2\",\"GMT-1\",\"GMT+0\",\"GMT+1\",\"GMT+2\",\"GMT+3\",\"GMT+4\",\"GMT+5\",\"GMT+6\",\"GMT+7\",\"GMT+8\",\"GMT+9\",\"GMT+10\",\"GMT+11\",\"GMT+12\"|}}})"
+         "time_close(timeframe = ${1| ,timeframe.period,'1','2','3','5','7','10','15','30','60','90','120','180','240','360','480','D','2D','5D','W','2W','M','2M','6M','Y'|}${2:, session = \"${3| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}-${4| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}\"${5:, timezone = ${6| ,syminfo.timezone,\"GMT-12\",\"GMT-11\",\"GMT-10\",\"GMT-9\",\"GMT-8\",\"GMT-7\",\"GMT-6\",\"GMT-5\",\"GMT-4\",\"GMT-3\",\"GMT-2\",\"GMT-1\",\"GMT+0\",\"GMT+1\",\"GMT+2\",\"GMT+3\",\"GMT+4\",\"GMT+5\",\"GMT+6\",\"GMT+7\",\"GMT+8\",\"GMT+9\",\"GMT+10\",\"GMT+11\",\"GMT+12\"|}}${7:, bars_back = ${8}}})"
       ],
-      "description": "UNIX time of the close of the current bar for the specified resolution and session or NaN ⇨ 𝑓 | time_close(timeframe = string, session = string, timezone = string) → series int"
+      "description": "UNIX time of the close of the current bar for the specified resolution and session or NaN ⇨ 𝑓 | time_close(timeframe = string, session = string, timezone = string, bars_back = int) → series int"
    },
    "timeframe.change ⇨ 𝑓": {
       "prefix": "timeframe.change",

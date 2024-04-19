@@ -1,1506 +1,1318 @@
 [
-    {
-      "id": 0,
-      "pattern": "(?<![\\.]\\s*)\\b(adjustment\\.dividends)\\b(?!\\s*\\()",
-      "codeblock": "adjustment.dividends",
-      "markdown": "Constant for dividends adjustment type (dividends adjustment is applied).",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_adjustment.dividends"
-    },
-    {
-      "id": 1,
-      "pattern": "(?<![\\.]\\s*)\\b(adjustment\\.none)\\b(?!\\s*\\()",
-      "codeblock": "adjustment.none",
-      "markdown": "Constant for none adjustment type (no adjustment is applied).",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_adjustment.none"
-    },
-    {
-      "id": 2,
-      "pattern": "(?<![\\.]\\s*)\\b(adjustment\\.splits)\\b(?!\\s*\\()",
-      "codeblock": "adjustment.splits",
-      "markdown": "Constant for splits adjustment type (splits adjustment is applied).",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_adjustment.splits"
-    },
-    {
-      "id": 3,
-      "pattern": "(?<![\\.]\\s*)\\b(alert\\.freq_all)\\b(?!\\s*\\()",
-      "codeblock": "alert.freq_all",
-      "markdown": "A named constant for use with the `freq` parameter of the alert() function. All function calls trigger the alert.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_alert.freq_all"
-    },
-    {
-      "id": 4,
-      "pattern": "(?<![\\.]\\s*)\\b(alert\\.freq_once_per_bar)\\b(?!\\s*\\()",
-      "codeblock": "alert.freq_once_per_bar",
-      "markdown": "A named constant for use with the `freq` parameter of the alert() function. The first function call during the bar triggers the alert.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_alert.freq_once_per_bar"
-    },
-    {
-      "id": 5,
-      "pattern": "(?<![\\.]\\s*)\\b(alert\\.freq_once_per_bar_close)\\b(?!\\s*\\()",
-      "codeblock": "alert.freq_once_per_bar_close",
-      "markdown": "A named constant for use with the `freq` parameter of the alert() function. The function call triggers the alert only when it occurs during the last script iteration of the real-time bar, when it closes.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_alert.freq_once_per_bar_close"
-    },
-    {
-      "id": 6,
-      "pattern": "(?<![\\.]\\s*)\\b(barmerge\\.gaps_off)\\b(?!\\s*\\()",
-      "codeblock": "barmerge.gaps_off",
-      "markdown": "Merge strategy for requested data. Data is merged continuously without gaps, all the gaps are filled with the previous nearest existing value.",
-      "type": "const barmerge_gaps",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barmerge.gaps_off"
-    },
-    {
-      "id": 7,
-      "pattern": "(?<![\\.]\\s*)\\b(barmerge\\.gaps_on)\\b(?!\\s*\\()",
-      "codeblock": "barmerge.gaps_on",
-      "markdown": "Merge strategy for requested data. Data is merged with possible gaps (na values).",
-      "type": "const barmerge_gaps",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barmerge.gaps_on"
-    },
-    {
-      "id": 8,
-      "pattern": "(?<![\\.]\\s*)\\b(barmerge\\.lookahead_off)\\b(?!\\s*\\()",
-      "codeblock": "barmerge.lookahead_off",
-      "markdown": "Merge strategy for the requested data position. Requested barset is merged with current barset in the order of sorting bars by their close time. This merge strategy disables effect of getting data from 'future' on calculation on history.",
-      "type": "const barmerge_lookahead",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barmerge.lookahead_off"
-    },
-    {
-      "id": 9,
-      "pattern": "(?<![\\.]\\s*)\\b(barmerge\\.lookahead_on)\\b(?!\\s*\\()",
-      "codeblock": "barmerge.lookahead_on",
-      "markdown": "Merge strategy for the requested data position. Requested barset is merged with current barset in the order of sorting bars by their opening time. This merge strategy can lead to undesirable effect of getting data from 'future' on calculation on history. This is unacceptable in backtesting strategies, but can be useful in indicators.",
-      "type": "const barmerge_lookahead",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barmerge.lookahead_on"
-    },
-    {
-      "id": 10,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.aqua)\\b(?!\\s*\\()",
-      "codeblock": "color.aqua",
-      "markdown": "Is a named constant for <span style='color:#00BCD4;'>▣</span> #00BCD4 color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.aqua"
-    },
-    {
-      "id": 11,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.black)\\b(?!\\s*\\()",
-      "codeblock": "color.black",
-      "markdown": "Is a named constant for <span style='color:#363A45;'>▣</span> #363A45 color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.black"
-    },
-    {
-      "id": 12,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.blue)\\b(?!\\s*\\()",
-      "codeblock": "color.blue",
-      "markdown": "Is a named constant for <span style='color:#2962ff;'>▣</span> #2962ff color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.blue"
-    },
-    {
-      "id": 13,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.fuchsia)\\b(?!\\s*\\()",
-      "codeblock": "color.fuchsia",
-      "markdown": "Is a named constant for <span style='color:#E040FB;'>▣</span> #E040FB color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.fuchsia"
-    },
-    {
-      "id": 14,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.gray)\\b(?!\\s*\\()",
-      "codeblock": "color.gray",
-      "markdown": "Is a named constant for <span style='color:#787B86;'>▣</span> #787B86 color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.gray"
-    },
-    {
-      "id": 15,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.green)\\b(?!\\s*\\()",
-      "codeblock": "color.green",
-      "markdown": "Is a named constant for <span style='color:#4CAF50;'>▣</span> #4CAF50 color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.green"
-    },
-    {
-      "id": 16,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.lime)\\b(?!\\s*\\()",
-      "codeblock": "color.lime",
-      "markdown": "Is a named constant for <span style='color:#00E676;'>▣</span> #00E676 color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.lime"
-    },
-    {
-      "id": 17,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.maroon)\\b(?!\\s*\\()",
-      "codeblock": "color.maroon",
-      "markdown": "Is a named constant for <span style='color:#880E4F;'>▣</span> #880E4F color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.maroon"
-    },
-    {
-      "id": 18,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.navy)\\b(?!\\s*\\()",
-      "codeblock": "color.navy",
-      "markdown": "Is a named constant for <span style='color:#311B92;'>▣</span> #311B92 color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.navy"
-    },
-    {
-      "id": 19,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.olive)\\b(?!\\s*\\()",
-      "codeblock": "color.olive",
-      "markdown": "Is a named constant for <span style='color:#808000;'>▣</span> #808000 color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.olive"
-    },
-    {
-      "id": 20,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.orange)\\b(?!\\s*\\()",
-      "codeblock": "color.orange",
-      "markdown": "Is a named constant for <span style='color:#FF9800;'>▣</span> #FF9800 color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.orange"
-    },
-    {
-      "id": 21,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.purple)\\b(?!\\s*\\()",
-      "codeblock": "color.purple",
-      "markdown": "Is a named constant for <span style='color:#9C27B0;'>▣</span> #9C27B0 color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.purple"
-    },
-    {
-      "id": 22,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.red)\\b(?!\\s*\\()",
-      "codeblock": "color.red",
-      "markdown": "Is a named constant for <span style='color:#FF5252;'>▣</span> #FF5252 color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.red"
-    },
-    {
-      "id": 23,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.silver)\\b(?!\\s*\\()",
-      "codeblock": "color.silver",
-      "markdown": "Is a named constant for <span style='color:#B2B5BE;'>▣</span> #B2B5BE color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.silver"
-    },
-    {
-      "id": 24,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.teal)\\b(?!\\s*\\()",
-      "codeblock": "color.teal",
-      "markdown": "Is a named constant for <span style='color:#00897B;'>▣</span> #00897B color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.teal"
-    },
-    {
-      "id": 25,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.white)\\b(?!\\s*\\()",
-      "codeblock": "color.white",
-      "markdown": "Is a named constant for <span style='color:#FFFFFF;'>▣</span> #FFFFFF color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.white"
-    },
-    {
-      "id": 26,
-      "pattern": "(?<![\\.]\\s*)\\b(color\\.yellow)\\b(?!\\s*\\()",
-      "codeblock": "color.yellow",
-      "markdown": "Is a named constant for <span style='color:#FFEB3B;'>▣</span> #FFEB3B color.",
-      "type": "const color",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.yellow"
-    },
-    {
-      "id": 27,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.AUD)\\b(?!\\s*\\()",
-      "codeblock": "currency.AUD",
-      "markdown": "Australian dollar.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.AUD"
-    },
-    {
-      "id": 28,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.BTC)\\b(?!\\s*\\()",
-      "codeblock": "currency.BTC",
-      "markdown": "Bitcoin.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.BTC"
-    },
-    {
-      "id": 29,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.CAD)\\b(?!\\s*\\()",
-      "codeblock": "currency.CAD",
-      "markdown": "Canadian dollar.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.CAD"
-    },
-    {
-      "id": 30,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.CHF)\\b(?!\\s*\\()",
-      "codeblock": "currency.CHF",
-      "markdown": "Swiss franc.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.CHF"
-    },
-    {
-      "id": 31,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.ETH)\\b(?!\\s*\\()",
-      "codeblock": "currency.ETH",
-      "markdown": "Ethereum.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.ETH"
-    },
-    {
-      "id": 32,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.EUR)\\b(?!\\s*\\()",
-      "codeblock": "currency.EUR",
-      "markdown": "Euro.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.EUR"
-    },
-    {
-      "id": 33,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.GBP)\\b(?!\\s*\\()",
-      "codeblock": "currency.GBP",
-      "markdown": "Pound sterling.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.GBP"
-    },
-    {
-      "id": 34,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.HKD)\\b(?!\\s*\\()",
-      "codeblock": "currency.HKD",
-      "markdown": "Hong Kong dollar.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.HKD"
-    },
-    {
-      "id": 35,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.INR)\\b(?!\\s*\\()",
-      "codeblock": "currency.INR",
-      "markdown": "Indian rupee.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.INR"
-    },
-    {
-      "id": 36,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.JPY)\\b(?!\\s*\\()",
-      "codeblock": "currency.JPY",
-      "markdown": "Japanese yen.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.JPY"
-    },
-    {
-      "id": 37,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.KRW)\\b(?!\\s*\\()",
-      "codeblock": "currency.KRW",
-      "markdown": "South Korean won.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.KRW"
-    },
-    {
-      "id": 38,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.MYR)\\b(?!\\s*\\()",
-      "codeblock": "currency.MYR",
-      "markdown": "Malaysian ringgit.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.MYR"
-    },
-    {
-      "id": 39,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.NOK)\\b(?!\\s*\\()",
-      "codeblock": "currency.NOK",
-      "markdown": "Norwegian krone.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.NOK"
-    },
-    {
-      "id": 40,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.NONE)\\b(?!\\s*\\()",
-      "codeblock": "currency.NONE",
-      "markdown": "Unspecified currency.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.NONE"
-    },
-    {
-      "id": 41,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.NZD)\\b(?!\\s*\\()",
-      "codeblock": "currency.NZD",
-      "markdown": "New Zealand dollar.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.NZD"
-    },
-    {
-      "id": 42,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.RUB)\\b(?!\\s*\\()",
-      "codeblock": "currency.RUB",
-      "markdown": "Russian ruble.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.RUB"
-    },
-    {
-      "id": 43,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.SEK)\\b(?!\\s*\\()",
-      "codeblock": "currency.SEK",
-      "markdown": "Swedish krona.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.SEK"
-    },
-    {
-      "id": 44,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.SGD)\\b(?!\\s*\\()",
-      "codeblock": "currency.SGD",
-      "markdown": "Singapore dollar.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.SGD"
-    },
-    {
-      "id": 45,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.TRY)\\b(?!\\s*\\()",
-      "codeblock": "currency.TRY",
-      "markdown": "Turkish lira.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.TRY"
-    },
-    {
-      "id": 46,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.USD)\\b(?!\\s*\\()",
-      "codeblock": "currency.USD",
-      "markdown": "United States dollar.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.USD"
-    },
-    {
-      "id": 47,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.USDT)\\b(?!\\s*\\()",
-      "codeblock": "currency.USDT",
-      "markdown": "Tether.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.USDT"
-    },
-    {
-      "id": 48,
-      "pattern": "(?<![\\.]\\s*)\\b(currency\\.ZAR)\\b(?!\\s*\\()",
-      "codeblock": "currency.ZAR",
-      "markdown": "South African rand.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.ZAR"
-    },
-    {
-      "id": 49,
-      "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.friday)\\b(?!\\s*\\()",
-      "codeblock": "dayofweek.friday",
-      "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
-      "type": "const int",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.friday"
-    },
-    {
-      "id": 50,
-      "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.monday)\\b(?!\\s*\\()",
-      "codeblock": "dayofweek.monday",
-      "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
-      "type": "const int",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.monday"
-    },
-    {
-      "id": 51,
-      "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.saturday)\\b(?!\\s*\\()",
-      "codeblock": "dayofweek.saturday",
-      "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
-      "type": "const int",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.saturday"
-    },
-    {
-      "id": 52,
-      "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.sunday)\\b(?!\\s*\\()",
-      "codeblock": "dayofweek.sunday",
-      "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
-      "type": "const int",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.sunday"
-    },
-    {
-      "id": 53,
-      "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.thursday)\\b(?!\\s*\\()",
-      "codeblock": "dayofweek.thursday",
-      "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
-      "type": "const int",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.thursday"
-    },
-    {
-      "id": 54,
-      "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.tuesday)\\b(?!\\s*\\()",
-      "codeblock": "dayofweek.tuesday",
-      "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
-      "type": "const int",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.tuesday"
-    },
-    {
-      "id": 55,
-      "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.wednesday)\\b(?!\\s*\\()",
-      "codeblock": "dayofweek.wednesday",
-      "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
-      "type": "const int",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.wednesday"
-    },
-    {
-      "id": 56,
-      "pattern": "(?<![\\.]\\s*)\\b(display\\.all)\\b(?!\\s*\\()",
-      "codeblock": "display.all",
-      "markdown": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in all possible locations.",
-      "type": "const plot_simple_display",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.all"
-    },
-    {
-      "id": 57,
-      "pattern": "(?<![\\.]\\s*)\\b(display\\.data_window)\\b(?!\\s*\\()",
-      "codeblock": "display.data_window",
-      "markdown": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in the Data Window, a menu accessible from the chart's right sidebar.",
-      "type": "const plot_display",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.data_window"
-    },
-    {
-      "id": 58,
-      "pattern": "(?<![\\.]\\s*)\\b(display\\.none)\\b(?!\\s*\\()",
-      "codeblock": "display.none",
-      "markdown": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. `plot*()` functions using this will not display their plotted values anywhere. However, alert template messages and fill functions can still use the values, and they will appear in exported chart data. `input*()` functions using this constant will only display their values within the script's settings.",
-      "type": "const plot_simple_display",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.none"
-    },
-    {
-      "id": 59,
-      "pattern": "(?<![\\.]\\s*)\\b(display\\.pane)\\b(?!\\s*\\()",
-      "codeblock": "display.pane",
-      "markdown": "A named constant for use with the `display` parameter of `plot*()` functions. Displays plotted values in the chart pane used by the script.",
-      "type": "const plot_display",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.pane"
-    },
-    {
-      "id": 60,
-      "pattern": "(?<![\\.]\\s*)\\b(display\\.price_scale)\\b(?!\\s*\\()",
-      "codeblock": "display.price_scale",
-      "markdown": "A named constant for use with the `display` parameter of `plot*()` functions. Displays the plot’s label and value on the price scale if the chart's settings allow it.",
-      "type": "const plot_display",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.price_scale"
-    },
-    {
-      "id": 61,
-      "pattern": "(?<![\\.]\\s*)\\b(display\\.status_line)\\b(?!\\s*\\()",
-      "codeblock": "display.status_line",
-      "markdown": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in the status line next to the script's name on the chart if the chart's settings allow it.",
-      "type": "const plot_display",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.status_line"
-    },
-    {
-      "id": 62,
-      "pattern": "(?<![\\.]\\s*)\\b(dividends\\.gross)\\b(?!\\s*\\()",
-      "codeblock": "dividends.gross",
-      "markdown": "A named constant for the request.dividends function. Is used to request the dividends return on a stock before deductions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dividends.gross"
-    },
-    {
-      "id": 63,
-      "pattern": "(?<![\\.]\\s*)\\b(dividends\\.net)\\b(?!\\s*\\()",
-      "codeblock": "dividends.net",
-      "markdown": "A named constant for the request.dividends function. Is used to request the dividends return on a stock after deductions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dividends.net"
-    },
-    {
-      "id": 64,
-      "pattern": "(?<![\\.]\\s*)\\b(earnings\\.actual)\\b(?!\\s*\\()",
-      "codeblock": "earnings.actual",
-      "markdown": "A named constant for the request.earnings function. Is used to request the earnings value as it was reported.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.actual"
-    },
-    {
-      "id": 65,
-      "pattern": "(?<![\\.]\\s*)\\b(earnings\\.estimate)\\b(?!\\s*\\()",
-      "codeblock": "earnings.estimate",
-      "markdown": "A named constant for the request.earnings function. Is used to request the estimated earnings value.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.estimate"
-    },
-    {
-      "id": 66,
-      "pattern": "(?<![\\.]\\s*)\\b(earnings\\.standardized)\\b(?!\\s*\\()",
-      "codeblock": "earnings.standardized",
-      "markdown": "A named constant for the request.earnings function. Is used to request the standardized earnings value.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.standardized"
-    },
-    {
-      "id": 67,
-      "pattern": "(?<![\\.]\\s*)\\b(extend\\.both)\\b(?!\\s*\\()",
-      "codeblock": "extend.both",
-      "markdown": "A named constant for line.new and line.set_extend functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_extend.both"
-    },
-    {
-      "id": 68,
-      "pattern": "(?<![\\.]\\s*)\\b(extend\\.left)\\b(?!\\s*\\()",
-      "codeblock": "extend.left",
-      "markdown": "A named constant for line.new and line.set_extend functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_extend.left"
-    },
-    {
-      "id": 69,
-      "pattern": "(?<![\\.]\\s*)\\b(extend\\.none)\\b(?!\\s*\\()",
-      "codeblock": "extend.none",
-      "markdown": "A named constant for line.new and line.set_extend functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_extend.none"
-    },
-    {
-      "id": 70,
-      "pattern": "(?<![\\.]\\s*)\\b(extend\\.right)\\b(?!\\s*\\()",
-      "codeblock": "extend.right",
-      "markdown": "A named constant for line.new and line.set_extend functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_extend.right"
-    },
-    {
-      "id": 71,
-      "pattern": "(?<![\\.]\\s*)\\b(font\\.family_default)\\b(?!\\s*\\()",
-      "codeblock": "font.family_default",
-      "markdown": "Default text font for box.new, box.set_text_font_family, label.new, label.set_text_font_family, table.cell and table.cell_set_text_font_family functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_font.family_default"
-    },
-    {
-      "id": 72,
-      "pattern": "(?<![\\.]\\s*)\\b(font\\.family_monospace)\\b(?!\\s*\\()",
-      "codeblock": "font.family_monospace",
-      "markdown": "Monospace text font for box.new, box.set_text_font_family, label.new, label.set_text_font_family, table.cell and table.cell_set_text_font_family functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_font.family_monospace"
-    },
-    {
-      "id": 73,
-      "pattern": "(?<![\\.]\\s*)\\b(format\\.inherit)\\b(?!\\s*\\()",
-      "codeblock": "format.inherit",
-      "markdown": "Is a named constant for selecting the formatting of the script output values from the parent series in the indicator function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_format.inherit"
-    },
-    {
-      "id": 74,
-      "pattern": "(?<![\\.]\\s*)\\b(format\\.mintick)\\b(?!\\s*\\()",
-      "codeblock": "format.mintick",
-      "markdown": "Is a named constant to use with the str.tostring function. Passing a number to str.tostring with this argument rounds the number to the nearest value that can be divided by syminfo.mintick, without the remainder, with ties rounding up, and returns the string version of said value with trailing zeroes.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_format.mintick"
-    },
-    {
-      "id": 75,
-      "pattern": "(?<![\\.]\\s*)\\b(format\\.percent)\\b(?!\\s*\\()",
-      "codeblock": "format.percent",
-      "markdown": "Is a named constant for selecting the formatting of the script output values as a percentage in the indicator function. It adds a percent sign after values.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_format.percent"
-    },
-    {
-      "id": 76,
-      "pattern": "(?<![\\.]\\s*)\\b(format\\.price)\\b(?!\\s*\\()",
-      "codeblock": "format.price",
-      "markdown": "Is a named constant for selecting the formatting of the script output values as prices in the indicator function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_format.price"
-    },
-    {
-      "id": 77,
-      "pattern": "(?<![\\.]\\s*)\\b(format\\.volume)\\b(?!\\s*\\()",
-      "codeblock": "format.volume",
-      "markdown": "Is a named constant for selecting the formatting of the script output values as volume in the indicator function, e.g. '5183' will be formatted as '5.183K'.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_format.volume"
-    },
-    {
-      "id": 78,
-      "pattern": "(?<![\\.]\\s*)\\b(hline\\.style_dashed)\\b(?!\\s*\\()",
-      "codeblock": "hline.style_dashed",
-      "markdown": "Is a named constant for dashed linestyle of hline function.",
-      "type": "const hline_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hline.style_dashed"
-    },
-    {
-      "id": 79,
-      "pattern": "(?<![\\.]\\s*)\\b(hline\\.style_dotted)\\b(?!\\s*\\()",
-      "codeblock": "hline.style_dotted",
-      "markdown": "Is a named constant for dotted linestyle of hline function.",
-      "type": "const hline_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hline.style_dotted"
-    },
-    {
-      "id": 80,
-      "pattern": "(?<![\\.]\\s*)\\b(hline\\.style_solid)\\b(?!\\s*\\()",
-      "codeblock": "hline.style_solid",
-      "markdown": "Is a named constant for solid linestyle of hline function.",
-      "type": "const hline_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hline.style_solid"
-    },
-    {
-      "id": 81,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_arrowdown)\\b(?!\\s*\\()",
-      "codeblock": "label.style_arrowdown",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_arrowdown"
-    },
-    {
-      "id": 82,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_arrowup)\\b(?!\\s*\\()",
-      "codeblock": "label.style_arrowup",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_arrowup"
-    },
-    {
-      "id": 83,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_circle)\\b(?!\\s*\\()",
-      "codeblock": "label.style_circle",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_circle"
-    },
-    {
-      "id": 84,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_cross)\\b(?!\\s*\\()",
-      "codeblock": "label.style_cross",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_cross"
-    },
-    {
-      "id": 85,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_diamond)\\b(?!\\s*\\()",
-      "codeblock": "label.style_diamond",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_diamond"
-    },
-    {
-      "id": 86,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_flag)\\b(?!\\s*\\()",
-      "codeblock": "label.style_flag",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_flag"
-    },
-    {
-      "id": 87,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_center)\\b(?!\\s*\\()",
-      "codeblock": "label.style_label_center",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_center"
-    },
-    {
-      "id": 88,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_down)\\b(?!\\s*\\()",
-      "codeblock": "label.style_label_down",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_down"
-    },
-    {
-      "id": 89,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_left)\\b(?!\\s*\\()",
-      "codeblock": "label.style_label_left",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_left"
-    },
-    {
-      "id": 90,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_lower_left)\\b(?!\\s*\\()",
-      "codeblock": "label.style_label_lower_left",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_lower_left"
-    },
-    {
-      "id": 91,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_lower_right)\\b(?!\\s*\\()",
-      "codeblock": "label.style_label_lower_right",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_lower_right"
-    },
-    {
-      "id": 92,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_right)\\b(?!\\s*\\()",
-      "codeblock": "label.style_label_right",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_right"
-    },
-    {
-      "id": 93,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_up)\\b(?!\\s*\\()",
-      "codeblock": "label.style_label_up",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_up"
-    },
-    {
-      "id": 94,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_upper_left)\\b(?!\\s*\\()",
-      "codeblock": "label.style_label_upper_left",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_upper_left"
-    },
-    {
-      "id": 95,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_upper_right)\\b(?!\\s*\\()",
-      "codeblock": "label.style_label_upper_right",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_upper_right"
-    },
-    {
-      "id": 96,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_none)\\b(?!\\s*\\()",
-      "codeblock": "label.style_none",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_none"
-    },
-    {
-      "id": 97,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_square)\\b(?!\\s*\\()",
-      "codeblock": "label.style_square",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_square"
-    },
-    {
-      "id": 98,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_text_outline)\\b(?!\\s*\\()",
-      "codeblock": "label.style_text_outline",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_text_outline"
-    },
-    {
-      "id": 99,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_triangledown)\\b(?!\\s*\\()",
-      "codeblock": "label.style_triangledown",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_triangledown"
-    },
-    {
-      "id": 100,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_triangleup)\\b(?!\\s*\\()",
-      "codeblock": "label.style_triangleup",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_triangleup"
-    },
-    {
-      "id": 101,
-      "pattern": "(?<![\\.]\\s*)\\b(label\\.style_xcross)\\b(?!\\s*\\()",
-      "codeblock": "label.style_xcross",
-      "markdown": "Label style for label.new and label.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_xcross"
-    },
-    {
-      "id": 102,
-      "pattern": "(?<![\\.]\\s*)\\b(line\\.style_arrow_both)\\b(?!\\s*\\()",
-      "codeblock": "line.style_arrow_both",
-      "markdown": "Line style for line.new and line.set_style functions. Solid line with arrows on both points.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_arrow_both"
-    },
-    {
-      "id": 103,
-      "pattern": "(?<![\\.]\\s*)\\b(line\\.style_arrow_left)\\b(?!\\s*\\()",
-      "codeblock": "line.style_arrow_left",
-      "markdown": "Line style for line.new and line.set_style functions. Solid line with arrow on the first point.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_arrow_left"
-    },
-    {
-      "id": 104,
-      "pattern": "(?<![\\.]\\s*)\\b(line\\.style_arrow_right)\\b(?!\\s*\\()",
-      "codeblock": "line.style_arrow_right",
-      "markdown": "Line style for line.new and line.set_style functions. Solid line with arrow on the second point.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_arrow_right"
-    },
-    {
-      "id": 105,
-      "pattern": "(?<![\\.]\\s*)\\b(line\\.style_dashed)\\b(?!\\s*\\()",
-      "codeblock": "line.style_dashed",
-      "markdown": "Line style for line.new and line.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_dashed"
-    },
-    {
-      "id": 106,
-      "pattern": "(?<![\\.]\\s*)\\b(line\\.style_dotted)\\b(?!\\s*\\()",
-      "codeblock": "line.style_dotted",
-      "markdown": "Line style for line.new and line.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_dotted"
-    },
-    {
-      "id": 107,
-      "pattern": "(?<![\\.]\\s*)\\b(line\\.style_solid)\\b(?!\\s*\\()",
-      "codeblock": "line.style_solid",
-      "markdown": "Line style for line.new and line.set_style functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_solid"
-    },
-    {
-      "id": 108,
-      "pattern": "(?<![\\.]\\s*)\\b(location\\.abovebar)\\b(?!\\s*\\()",
-      "codeblock": "location.abovebar",
-      "markdown": "Location value for plotshape, plotchar functions. Shape is plotted above main series bars.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_location.abovebar"
-    },
-    {
-      "id": 109,
-      "pattern": "(?<![\\.]\\s*)\\b(location\\.absolute)\\b(?!\\s*\\()",
-      "codeblock": "location.absolute",
-      "markdown": "Location value for plotshape, plotchar functions. Shape is plotted on chart using indicator value as a price coordinate.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_location.absolute"
-    },
-    {
-      "id": 110,
-      "pattern": "(?<![\\.]\\s*)\\b(location\\.belowbar)\\b(?!\\s*\\()",
-      "codeblock": "location.belowbar",
-      "markdown": "Location value for plotshape, plotchar functions. Shape is plotted below main series bars.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_location.belowbar"
-    },
-    {
-      "id": 111,
-      "pattern": "(?<![\\.]\\s*)\\b(location\\.bottom)\\b(?!\\s*\\()",
-      "codeblock": "location.bottom",
-      "markdown": "Location value for plotshape, plotchar functions. Shape is plotted near the bottom chart border.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_location.bottom"
-    },
-    {
-      "id": 112,
-      "pattern": "(?<![\\.]\\s*)\\b(location\\.top)\\b(?!\\s*\\()",
-      "codeblock": "location.top",
-      "markdown": "Location value for plotshape, plotchar functions. Shape is plotted near the top chart border.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_location.top"
-    },
-    {
-      "id": 113,
-      "pattern": "(?<![\\.]\\s*)\\b(math\\.e)\\b(?!\\s*\\()",
-      "codeblock": "math.e",
-      "markdown": "Is a named constant for Euler's number. It is equal to 2.7182818284590452.",
-      "type": "const float",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_math.e"
-    },
-    {
-      "id": 114,
-      "pattern": "(?<![\\.]\\s*)\\b(math\\.phi)\\b(?!\\s*\\()",
-      "codeblock": "math.phi",
-      "markdown": "Is a named constant for the golden ratio. It is equal to 1.6180339887498948.",
-      "type": "const float",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_math.phi"
-    },
-    {
-      "id": 115,
-      "pattern": "(?<![\\.]\\s*)\\b(math\\.pi)\\b(?!\\s*\\()",
-      "codeblock": "math.pi",
-      "markdown": "Is a named constant for Archimedes' constant. It is equal to 3.1415926535897932.",
-      "type": "const float",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_math.pi"
-    },
-    {
-      "id": 116,
-      "pattern": "(?<![\\.]\\s*)\\b(math\\.rphi)\\b(?!\\s*\\()",
-      "codeblock": "math.rphi",
-      "markdown": "Is a named constant for the golden ratio conjugate. It is equal to 0.6180339887498948.",
-      "type": "const float",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_math.rphi"
-    },
-    {
-      "id": 117,
-      "pattern": "(?<![\\.]\\s*)\\b(order\\.ascending)\\b(?!\\s*\\()",
-      "codeblock": "order.ascending",
-      "markdown": "Determines the sort order of the array from the smallest to the largest value.",
-      "type": "const sort_order",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_order.ascending"
-    },
-    {
-      "id": 118,
-      "pattern": "(?<![\\.]\\s*)\\b(order\\.descending)\\b(?!\\s*\\()",
-      "codeblock": "order.descending",
-      "markdown": "Determines the sort order of the array from the largest to the smallest value.",
-      "type": "const sort_order",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_order.descending"
-    },
-    {
-      "id": 119,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_area)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_area",
-      "markdown": "A named constant for the 'Area' style, to be used as an argument for the `style` parameter in the plot function.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_area"
-    },
-    {
-      "id": 120,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_areabr)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_areabr",
-      "markdown": "A named constant for the 'Area With Breaks' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_area, except the gaps in the data are not filled.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_areabr"
-    },
-    {
-      "id": 121,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_circles)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_circles",
-      "markdown": "A named constant for the 'Circles' style, to be used as an argument for the `style` parameter in the plot function.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_circles"
-    },
-    {
-      "id": 122,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_columns)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_columns",
-      "markdown": "A named constant for the 'Columns' style, to be used as an argument for the `style` parameter in the plot function.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_columns"
-    },
-    {
-      "id": 123,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_cross)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_cross",
-      "markdown": "A named constant for the 'Cross' style, to be used as an argument for the `style` parameter in the plot function.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_cross"
-    },
-    {
-      "id": 124,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_histogram)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_histogram",
-      "markdown": "A named constant for the 'Histogram' style, to be used as an argument for the `style` parameter in the plot function.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_histogram"
-    },
-    {
-      "id": 125,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_line)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_line",
-      "markdown": "A named constant for the 'Line' style, to be used as an argument for the `style` parameter in the plot function.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_line"
-    },
-    {
-      "id": 126,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_linebr)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_linebr",
-      "markdown": "A named constant for the 'Line With Breaks' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_line, except the gaps in the data are not filled.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_linebr"
-    },
-    {
-      "id": 127,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_stepline)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_stepline",
-      "markdown": "A named constant for the 'Step Line' style, to be used as an argument for the `style` parameter in the plot function.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_stepline"
-    },
-    {
-      "id": 128,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_stepline_diamond)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_stepline_diamond",
-      "markdown": "A named constant for the 'Step Line With Diamonds' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_stepline, except the data changes are also marked with the Diamond shapes.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_stepline_diamond"
-    },
-    {
-      "id": 129,
-      "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_steplinebr)\\b(?!\\s*\\()",
-      "codeblock": "plot.style_steplinebr",
-      "markdown": "A named constant for the 'Step line with Breaks' style, to be used as an argument for the `style` parameter in the plot function.",
-      "type": "const plot_style",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_steplinebr"
-    },
-    {
-      "id": 130,
-      "pattern": "(?<![\\.]\\s*)\\b(position\\.bottom_center)\\b(?!\\s*\\()",
-      "codeblock": "position.bottom_center",
-      "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the bottom edge in the center.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.bottom_center"
-    },
-    {
-      "id": 131,
-      "pattern": "(?<![\\.]\\s*)\\b(position\\.bottom_left)\\b(?!\\s*\\()",
-      "codeblock": "position.bottom_left",
-      "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the bottom left of the screen.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.bottom_left"
-    },
-    {
-      "id": 132,
-      "pattern": "(?<![\\.]\\s*)\\b(position\\.bottom_right)\\b(?!\\s*\\()",
-      "codeblock": "position.bottom_right",
-      "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the bottom right of the screen.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.bottom_right"
-    },
-    {
-      "id": 133,
-      "pattern": "(?<![\\.]\\s*)\\b(position\\.middle_center)\\b(?!\\s*\\()",
-      "codeblock": "position.middle_center",
-      "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the center of the screen.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.middle_center"
-    },
-    {
-      "id": 134,
-      "pattern": "(?<![\\.]\\s*)\\b(position\\.middle_left)\\b(?!\\s*\\()",
-      "codeblock": "position.middle_left",
-      "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the left side of the screen.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.middle_left"
-    },
-    {
-      "id": 135,
-      "pattern": "(?<![\\.]\\s*)\\b(position\\.middle_right)\\b(?!\\s*\\()",
-      "codeblock": "position.middle_right",
-      "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the right side of the screen.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.middle_right"
-    },
-    {
-      "id": 136,
-      "pattern": "(?<![\\.]\\s*)\\b(position\\.top_center)\\b(?!\\s*\\()",
-      "codeblock": "position.top_center",
-      "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the top edge in the center.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.top_center"
-    },
-    {
-      "id": 137,
-      "pattern": "(?<![\\.]\\s*)\\b(position\\.top_left)\\b(?!\\s*\\()",
-      "codeblock": "position.top_left",
-      "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the upper-left edge.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.top_left"
-    },
-    {
-      "id": 138,
-      "pattern": "(?<![\\.]\\s*)\\b(position\\.top_right)\\b(?!\\s*\\()",
-      "codeblock": "position.top_right",
-      "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the upper-right edge.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.top_right"
-    },
-    {
-      "id": 139,
-      "pattern": "(?<![\\.]\\s*)\\b(scale\\.left)\\b(?!\\s*\\()",
-      "codeblock": "scale.left",
-      "markdown": "Scale value for indicator function. Indicator is added to the left price scale.",
-      "type": "const scale_type",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_scale.left"
-    },
-    {
-      "id": 140,
-      "pattern": "(?<![\\.]\\s*)\\b(scale\\.none)\\b(?!\\s*\\()",
-      "codeblock": "scale.none",
-      "markdown": "Scale value for indicator function. Indicator is added in 'No Scale' mode. Can be used only with 'overlay=true'.",
-      "type": "const scale_type",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_scale.none"
-    },
-    {
-      "id": 141,
-      "pattern": "(?<![\\.]\\s*)\\b(scale\\.right)\\b(?!\\s*\\()",
-      "codeblock": "scale.right",
-      "markdown": "Scale value for indicator function. Indicator is added to the right price scale.",
-      "type": "const scale_type",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_scale.right"
-    },
-    {
-      "id": 142,
-      "pattern": "(?<![\\.]\\s*)\\b(session\\.extended)\\b(?!\\s*\\()",
-      "codeblock": "session.extended",
-      "markdown": "Constant for extended session type (with extended hours data).",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.extended"
-    },
-    {
-      "id": 143,
-      "pattern": "(?<![\\.]\\s*)\\b(session\\.regular)\\b(?!\\s*\\()",
-      "codeblock": "session.regular",
-      "markdown": "Constant for regular session type (no extended hours data).",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.regular"
-    },
-    {
-      "id": 144,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.arrowdown)\\b(?!\\s*\\()",
-      "codeblock": "shape.arrowdown",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.arrowdown"
-    },
-    {
-      "id": 145,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.arrowup)\\b(?!\\s*\\()",
-      "codeblock": "shape.arrowup",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.arrowup"
-    },
-    {
-      "id": 146,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.circle)\\b(?!\\s*\\()",
-      "codeblock": "shape.circle",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.circle"
-    },
-    {
-      "id": 147,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.cross)\\b(?!\\s*\\()",
-      "codeblock": "shape.cross",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.cross"
-    },
-    {
-      "id": 148,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.diamond)\\b(?!\\s*\\()",
-      "codeblock": "shape.diamond",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.diamond"
-    },
-    {
-      "id": 149,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.flag)\\b(?!\\s*\\()",
-      "codeblock": "shape.flag",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.flag"
-    },
-    {
-      "id": 150,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.labeldown)\\b(?!\\s*\\()",
-      "codeblock": "shape.labeldown",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.labeldown"
-    },
-    {
-      "id": 151,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.labelup)\\b(?!\\s*\\()",
-      "codeblock": "shape.labelup",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.labelup"
-    },
-    {
-      "id": 152,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.square)\\b(?!\\s*\\()",
-      "codeblock": "shape.square",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.square"
-    },
-    {
-      "id": 153,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.triangledown)\\b(?!\\s*\\()",
-      "codeblock": "shape.triangledown",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.triangledown"
-    },
-    {
-      "id": 154,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.triangleup)\\b(?!\\s*\\()",
-      "codeblock": "shape.triangleup",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.triangleup"
-    },
-    {
-      "id": 155,
-      "pattern": "(?<![\\.]\\s*)\\b(shape\\.xcross)\\b(?!\\s*\\()",
-      "codeblock": "shape.xcross",
-      "markdown": "Shape style for plotshape function.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.xcross"
-    },
-    {
-      "id": 156,
-      "pattern": "(?<![\\.]\\s*)\\b(size\\.auto)\\b(?!\\s*\\()",
-      "codeblock": "size.auto",
-      "markdown": "Size value for plotshape, plotchar functions. The size of the shape automatically adapts to the size of the bars.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.auto"
-    },
-    {
-      "id": 157,
-      "pattern": "(?<![\\.]\\s*)\\b(size\\.huge)\\b(?!\\s*\\()",
-      "codeblock": "size.huge",
-      "markdown": "Size value for plotshape, plotchar functions. The size of the shape constantly huge.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.huge"
-    },
-    {
-      "id": 158,
-      "pattern": "(?<![\\.]\\s*)\\b(size\\.large)\\b(?!\\s*\\()",
-      "codeblock": "size.large",
-      "markdown": "Size value for plotshape, plotchar functions. The size of the shape constantly large.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.large"
-    },
-    {
-      "id": 159,
-      "pattern": "(?<![\\.]\\s*)\\b(size\\.normal)\\b(?!\\s*\\()",
-      "codeblock": "size.normal",
-      "markdown": "Size value for plotshape, plotchar functions. The size of the shape constantly normal.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.normal"
-    },
-    {
-      "id": 160,
-      "pattern": "(?<![\\.]\\s*)\\b(size\\.small)\\b(?!\\s*\\()",
-      "codeblock": "size.small",
-      "markdown": "Size value for plotshape, plotchar functions. The size of the shape constantly small.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.small"
-    },
-    {
-      "id": 161,
-      "pattern": "(?<![\\.]\\s*)\\b(size\\.tiny)\\b(?!\\s*\\()",
-      "codeblock": "size.tiny",
-      "markdown": "Size value for plotshape, plotchar functions. The size of the shape constantly tiny.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.tiny"
-    },
-    {
-      "id": 162,
-      "pattern": "(?<![\\.]\\s*)\\b(splits\\.denominator)\\b(?!\\s*\\()",
-      "codeblock": "splits.denominator",
-      "markdown": "A named constant for the request.splits function. Is used to request the denominator (the number below the line in a fraction) of a splits.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_splits.denominator"
-    },
-    {
-      "id": 163,
-      "pattern": "(?<![\\.]\\s*)\\b(splits\\.numerator)\\b(?!\\s*\\()",
-      "codeblock": "splits.numerator",
-      "markdown": "A named constant for the request.splits function. Is used to request the numerator (the number above the line in a fraction) of a splits.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_splits.numerator"
-    },
-    {
-      "id": 164,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.cash)\\b(?!\\s*\\()",
-      "codeblock": "strategy.cash",
-      "markdown": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the `qty` parameter in strategy.entry or strategy.order function calls. It specifies that an amount of cash in the `strategy.account_currency` will be used to enter trades.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.cash"
-    },
-    {
-      "id": 165,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.commission\\.cash_per_contract)\\b(?!\\s*\\()",
-      "codeblock": "strategy.commission.cash_per_contract",
-      "markdown": "Commission type for an order. Money displayed in the account currency per contract.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.commission.cash_per_contract"
-    },
-    {
-      "id": 166,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.commission\\.cash_per_order)\\b(?!\\s*\\()",
-      "codeblock": "strategy.commission.cash_per_order",
-      "markdown": "Commission type for an order. Money displayed in the account currency per order.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.commission.cash_per_order"
-    },
-    {
-      "id": 167,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.commission\\.percent)\\b(?!\\s*\\()",
-      "codeblock": "strategy.commission.percent",
-      "markdown": "Commission type for an order. A percentage of the cash volume of order.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.commission.percent"
-    },
-    {
-      "id": 168,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.direction\\.all)\\b(?!\\s*\\()",
-      "codeblock": "strategy.direction.all",
-      "markdown": "It allows strategy to open both long and short positions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.direction.all"
-    },
-    {
-      "id": 169,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.direction\\.long)\\b(?!\\s*\\()",
-      "codeblock": "strategy.direction.long",
-      "markdown": "It allows strategy to open only long positions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.direction.long"
-    },
-    {
-      "id": 170,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.direction\\.short)\\b(?!\\s*\\()",
-      "codeblock": "strategy.direction.short",
-      "markdown": "It allows strategy to open only short positions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.direction.short"
-    },
-    {
-      "id": 171,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.fixed)\\b(?!\\s*\\()",
-      "codeblock": "strategy.fixed",
-      "markdown": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the `qty` parameter in strategy.entry or strategy.order function calls. It specifies that a number of contracts/shares/lots will be used to enter trades.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.fixed"
-    },
-    {
-      "id": 172,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.oca\\.cancel)\\b(?!\\s*\\()",
-      "codeblock": "strategy.oca.cancel",
-      "markdown": "OCA type value for strategy's functions. The parameter determines that an order should belong to an OCO group, where as soon as an order is filled, all other orders of the same group are cancelled. Note: if more than 1 guaranteed-to-be-executed orders of the same OCA group are placed at once, all those orders are filled.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.oca.cancel"
-    },
-    {
-      "id": 173,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.oca\\.none)\\b(?!\\s*\\()",
-      "codeblock": "strategy.oca.none",
-      "markdown": "OCA type value for strategy's functions. The parameter determines that an order should not belong to any particular OCO group.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.oca.none"
-    },
-    {
-      "id": 174,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.oca\\.reduce)\\b(?!\\s*\\()",
-      "codeblock": "strategy.oca.reduce",
-      "markdown": "OCA type value for strategy's functions. The parameter determines that an order should belong to an OCO group, where if X number of contracts of an order is filled, number of contracts for each other order of the same OCO group is decreased by X. Note: if more than 1 guaranteed-to-be-executed orders of the same OCA group are placed at once, all those orders are filled.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.oca.reduce"
-    },
-    {
-      "id": 175,
-      "pattern": "(?<![\\.]\\s*)\\b(strategy\\.percent_of_equity)\\b(?!\\s*\\()",
-      "codeblock": "strategy.percent_of_equity",
-      "markdown": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the `qty` parameter in strategy.entry or strategy.order function calls. It specifies that a percentage (0-100) of equity will be used to enter trades.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.percent_of_equity"
-    },
-    {
-      "id": 176,
-      "pattern": "(?<![\\.]\\s*)\\b(text\\.align_bottom)\\b(?!\\s*\\()",
-      "codeblock": "text.align_bottom",
-      "markdown": "Vertical text alignment for box.new, box.set_text_valign, table.cell and table.cell_set_text_valign functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.align_bottom"
-    },
-    {
-      "id": 177,
-      "pattern": "(?<![\\.]\\s*)\\b(text\\.align_center)\\b(?!\\s*\\()",
-      "codeblock": "text.align_center",
-      "markdown": "Text alignment for box.new, box.set_text_halign, box.set_text_valign, label.new and label.set_textalign functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.align_center"
-    },
-    {
-      "id": 178,
-      "pattern": "(?<![\\.]\\s*)\\b(text\\.align_left)\\b(?!\\s*\\()",
-      "codeblock": "text.align_left",
-      "markdown": "Horizontal text alignment for box.new, box.set_text_halign, label.new and label.set_textalign functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.align_left"
-    },
-    {
-      "id": 179,
-      "pattern": "(?<![\\.]\\s*)\\b(text\\.align_right)\\b(?!\\s*\\()",
-      "codeblock": "text.align_right",
-      "markdown": "Horizontal text alignment for box.new, box.set_text_halign, label.new and label.set_textalign functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.align_right"
-    },
-    {
-      "id": 180,
-      "pattern": "(?<![\\.]\\s*)\\b(text\\.align_top)\\b(?!\\s*\\()",
-      "codeblock": "text.align_top",
-      "markdown": "Vertical text alignment for box.new, box.set_text_valign, table.cell and table.cell_set_text_valign functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.align_top"
-    },
-    {
-      "id": 181,
-      "pattern": "(?<![\\.]\\s*)\\b(text\\.wrap_auto)\\b(?!\\s*\\()",
-      "codeblock": "text.wrap_auto",
-      "markdown": "Automatic wrapping mode for box.new and box.set_text_wrap functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.wrap_auto"
-    },
-    {
-      "id": 182,
-      "pattern": "(?<![\\.]\\s*)\\b(text\\.wrap_none)\\b(?!\\s*\\()",
-      "codeblock": "text.wrap_none",
-      "markdown": "Disabled wrapping mode for box.new and box.set_text_wrap functions.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.wrap_none"
-    },
-    {
-      "id": 183,
-      "pattern": "(?<![\\.]\\s*)\\b(xloc\\.bar_index)\\b(?!\\s*\\()",
-      "codeblock": "xloc.bar_index",
-      "markdown": "A named constant that specifies the algorithm of interpretation of x-value in functions line.new and label.new. If xloc = xloc.bar_index, value of x is a bar index.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_xloc.bar_index"
-    },
-    {
-      "id": 184,
-      "pattern": "(?<![\\.]\\s*)\\b(xloc\\.bar_time)\\b(?!\\s*\\()",
-      "codeblock": "xloc.bar_time",
-      "markdown": "A named constant that specifies the algorithm of interpretation of x-value in functions line.new and label.new. If xloc = xloc.bar_time, value of x is a bar UNIX time.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_xloc.bar_time"
-    },
-    {
-      "id": 185,
-      "pattern": "(?<![\\.]\\s*)\\b(yloc\\.abovebar)\\b(?!\\s*\\()",
-      "codeblock": "yloc.abovebar",
-      "markdown": "A named constant that specifies the algorithm of interpretation of y-value in function label.new.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_yloc.abovebar"
-    },
-    {
-      "id": 186,
-      "pattern": "(?<![\\.]\\s*)\\b(yloc\\.belowbar)\\b(?!\\s*\\()",
-      "codeblock": "yloc.belowbar",
-      "markdown": "A named constant that specifies the algorithm of interpretation of y-value in function label.new.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_yloc.belowbar"
-    },
-    {
-      "id": 187,
-      "pattern": "(?<![\\.]\\s*)\\b(yloc\\.price)\\b(?!\\s*\\()",
-      "codeblock": "yloc.price",
-      "markdown": "A named constant that specifies the algorithm of interpretation of y-value in function label.new.",
-      "type": "const string",
-      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_yloc.price"
-    }
-   ]
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(adjustment\\.dividends)\\b(?!\\s*\\()",
+    "codeblock": "adjustment.dividends",
+    "markdown": "Constant for dividends adjustment type (dividends adjustment is applied).",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_adjustment.dividends"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(adjustment\\.none)\\b(?!\\s*\\()",
+    "codeblock": "adjustment.none",
+    "markdown": "Constant for none adjustment type (no adjustment is applied).",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_adjustment.none"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(adjustment\\.splits)\\b(?!\\s*\\()",
+    "codeblock": "adjustment.splits",
+    "markdown": "Constant for splits adjustment type (splits adjustment is applied).",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_adjustment.splits"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(alert\\.freq_all)\\b(?!\\s*\\()",
+    "codeblock": "alert.freq_all",
+    "markdown": "A named constant for use with the `freq` parameter of the alert() function. All function calls trigger the alert.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_alert.freq_all"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(alert\\.freq_once_per_bar)\\b(?!\\s*\\()",
+    "codeblock": "alert.freq_once_per_bar",
+    "markdown": "A named constant for use with the `freq` parameter of the alert() function. The first function call during the bar triggers the alert.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_alert.freq_once_per_bar"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(alert\\.freq_once_per_bar_close)\\b(?!\\s*\\()",
+    "codeblock": "alert.freq_once_per_bar_close",
+    "markdown": "A named constant for use with the `freq` parameter of the alert() function. The function call triggers the alert only when it occurs during the last script iteration of the real-time bar, when it closes.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_alert.freq_once_per_bar_close"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(barmerge\\.gaps_off)\\b(?!\\s*\\()",
+    "codeblock": "barmerge.gaps_off",
+    "markdown": "Merge strategy for requested data. Data is merged continuously without gaps, all the gaps are filled with the previous nearest existing value.",
+    "type": "const barmerge_gaps",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barmerge.gaps_off"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(barmerge\\.gaps_on)\\b(?!\\s*\\()",
+    "codeblock": "barmerge.gaps_on",
+    "markdown": "Merge strategy for requested data. Data is merged with possible gaps (na values).",
+    "type": "const barmerge_gaps",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barmerge.gaps_on"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(barmerge\\.lookahead_off)\\b(?!\\s*\\()",
+    "codeblock": "barmerge.lookahead_off",
+    "markdown": "Merge strategy for the requested data position. Requested barset is merged with current barset in the order of sorting bars by their close time. This merge strategy disables effect of getting data from 'future' on calculation on history.",
+    "type": "const barmerge_lookahead",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barmerge.lookahead_off"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(barmerge\\.lookahead_on)\\b(?!\\s*\\()",
+    "codeblock": "barmerge.lookahead_on",
+    "markdown": "Merge strategy for the requested data position. Requested barset is merged with current barset in the order of sorting bars by their opening time. This merge strategy can lead to undesirable effect of getting data from 'future' on calculation on history. This is unacceptable in backtesting strategies, but can be useful in indicators.",
+    "type": "const barmerge_lookahead",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barmerge.lookahead_on"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.aqua)\\b(?!\\s*\\()",
+    "codeblock": "color.aqua",
+    "markdown": "Is a named constant for <span style='color:#00BCD4;'>▣</span> #00BCD4 color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.aqua"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.black)\\b(?!\\s*\\()",
+    "codeblock": "color.black",
+    "markdown": "Is a named constant for <span style='color:#363A45;'>▣</span> #363A45 color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.black"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.blue)\\b(?!\\s*\\()",
+    "codeblock": "color.blue",
+    "markdown": "Is a named constant for <span style='color:#2962ff;'>▣</span> #2962ff color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.blue"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.fuchsia)\\b(?!\\s*\\()",
+    "codeblock": "color.fuchsia",
+    "markdown": "Is a named constant for <span style='color:#E040FB;'>▣</span> #E040FB color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.fuchsia"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.gray)\\b(?!\\s*\\()",
+    "codeblock": "color.gray",
+    "markdown": "Is a named constant for <span style='color:#787B86;'>▣</span> #787B86 color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.gray"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.green)\\b(?!\\s*\\()",
+    "codeblock": "color.green",
+    "markdown": "Is a named constant for <span style='color:#4CAF50;'>▣</span> #4CAF50 color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.green"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.lime)\\b(?!\\s*\\()",
+    "codeblock": "color.lime",
+    "markdown": "Is a named constant for <span style='color:#00E676;'>▣</span> #00E676 color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.lime"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.maroon)\\b(?!\\s*\\()",
+    "codeblock": "color.maroon",
+    "markdown": "Is a named constant for <span style='color:#880E4F;'>▣</span> #880E4F color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.maroon"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.navy)\\b(?!\\s*\\()",
+    "codeblock": "color.navy",
+    "markdown": "Is a named constant for <span style='color:#311B92;'>▣</span> #311B92 color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.navy"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.olive)\\b(?!\\s*\\()",
+    "codeblock": "color.olive",
+    "markdown": "Is a named constant for <span style='color:#808000;'>▣</span> #808000 color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.olive"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.orange)\\b(?!\\s*\\()",
+    "codeblock": "color.orange",
+    "markdown": "Is a named constant for <span style='color:#FF9800;'>▣</span> #FF9800 color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.orange"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.purple)\\b(?!\\s*\\()",
+    "codeblock": "color.purple",
+    "markdown": "Is a named constant for <span style='color:#9C27B0;'>▣</span> #9C27B0 color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.purple"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.red)\\b(?!\\s*\\()",
+    "codeblock": "color.red",
+    "markdown": "Is a named constant for <span style='color:#FF5252;'>▣</span> #FF5252 color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.red"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.silver)\\b(?!\\s*\\()",
+    "codeblock": "color.silver",
+    "markdown": "Is a named constant for <span style='color:#B2B5BE;'>▣</span> #B2B5BE color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.silver"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.teal)\\b(?!\\s*\\()",
+    "codeblock": "color.teal",
+    "markdown": "Is a named constant for <span style='color:#00897B;'>▣</span> #00897B color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.teal"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.white)\\b(?!\\s*\\()",
+    "codeblock": "color.white",
+    "markdown": "Is a named constant for <span style='color:#FFFFFF;'>▣</span> #FFFFFF color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.white"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(color\\.yellow)\\b(?!\\s*\\()",
+    "codeblock": "color.yellow",
+    "markdown": "Is a named constant for <span style='color:#FFEB3B;'>▣</span> #FFEB3B color.",
+    "type": "const color",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_color.yellow"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.AUD)\\b(?!\\s*\\()",
+    "codeblock": "currency.AUD",
+    "markdown": "Australian dollar.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.AUD"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.BTC)\\b(?!\\s*\\()",
+    "codeblock": "currency.BTC",
+    "markdown": "Bitcoin.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.BTC"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.CAD)\\b(?!\\s*\\()",
+    "codeblock": "currency.CAD",
+    "markdown": "Canadian dollar.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.CAD"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.CHF)\\b(?!\\s*\\()",
+    "codeblock": "currency.CHF",
+    "markdown": "Swiss franc.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.CHF"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.ETH)\\b(?!\\s*\\()",
+    "codeblock": "currency.ETH",
+    "markdown": "Ethereum.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.ETH"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.EUR)\\b(?!\\s*\\()",
+    "codeblock": "currency.EUR",
+    "markdown": "Euro.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.EUR"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.GBP)\\b(?!\\s*\\()",
+    "codeblock": "currency.GBP",
+    "markdown": "Pound sterling.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.GBP"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.HKD)\\b(?!\\s*\\()",
+    "codeblock": "currency.HKD",
+    "markdown": "Hong Kong dollar.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.HKD"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.INR)\\b(?!\\s*\\()",
+    "codeblock": "currency.INR",
+    "markdown": "Indian rupee.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.INR"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.JPY)\\b(?!\\s*\\()",
+    "codeblock": "currency.JPY",
+    "markdown": "Japanese yen.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.JPY"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.KRW)\\b(?!\\s*\\()",
+    "codeblock": "currency.KRW",
+    "markdown": "South Korean won.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.KRW"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.MYR)\\b(?!\\s*\\()",
+    "codeblock": "currency.MYR",
+    "markdown": "Malaysian ringgit.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.MYR"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.NOK)\\b(?!\\s*\\()",
+    "codeblock": "currency.NOK",
+    "markdown": "Norwegian krone.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.NOK"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.NONE)\\b(?!\\s*\\()",
+    "codeblock": "currency.NONE",
+    "markdown": "Unspecified currency.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.NONE"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.NZD)\\b(?!\\s*\\()",
+    "codeblock": "currency.NZD",
+    "markdown": "New Zealand dollar.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.NZD"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.RUB)\\b(?!\\s*\\()",
+    "codeblock": "currency.RUB",
+    "markdown": "Russian ruble.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.RUB"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.SEK)\\b(?!\\s*\\()",
+    "codeblock": "currency.SEK",
+    "markdown": "Swedish krona.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.SEK"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.SGD)\\b(?!\\s*\\()",
+    "codeblock": "currency.SGD",
+    "markdown": "Singapore dollar.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.SGD"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.TRY)\\b(?!\\s*\\()",
+    "codeblock": "currency.TRY",
+    "markdown": "Turkish lira.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.TRY"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.USD)\\b(?!\\s*\\()",
+    "codeblock": "currency.USD",
+    "markdown": "United States dollar.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.USD"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.USDT)\\b(?!\\s*\\()",
+    "codeblock": "currency.USDT",
+    "markdown": "Tether.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.USDT"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(currency\\.ZAR)\\b(?!\\s*\\()",
+    "codeblock": "currency.ZAR",
+    "markdown": "South African rand.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_currency.ZAR"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.friday)\\b(?!\\s*\\()",
+    "codeblock": "dayofweek.friday",
+    "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
+    "type": "const int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.friday"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.monday)\\b(?!\\s*\\()",
+    "codeblock": "dayofweek.monday",
+    "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
+    "type": "const int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.monday"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.saturday)\\b(?!\\s*\\()",
+    "codeblock": "dayofweek.saturday",
+    "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
+    "type": "const int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.saturday"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.sunday)\\b(?!\\s*\\()",
+    "codeblock": "dayofweek.sunday",
+    "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
+    "type": "const int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.sunday"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.thursday)\\b(?!\\s*\\()",
+    "codeblock": "dayofweek.thursday",
+    "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
+    "type": "const int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.thursday"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.tuesday)\\b(?!\\s*\\()",
+    "codeblock": "dayofweek.tuesday",
+    "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
+    "type": "const int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.tuesday"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(dayofweek\\.wednesday)\\b(?!\\s*\\()",
+    "codeblock": "dayofweek.wednesday",
+    "markdown": "Is a named constant for return value of dayofweek function and value of dayofweek variable.",
+    "type": "const int",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek.wednesday"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(display\\.all)\\b(?!\\s*\\()",
+    "codeblock": "display.all",
+    "markdown": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in all possible locations.",
+    "type": "const plot_simple_display",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.all"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(display\\.data_window)\\b(?!\\s*\\()",
+    "codeblock": "display.data_window",
+    "markdown": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in the Data Window, a menu accessible from the chart's right sidebar.",
+    "type": "const plot_display",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.data_window"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(display\\.none)\\b(?!\\s*\\()",
+    "codeblock": "display.none",
+    "markdown": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. `plot*()` functions using this will not display their plotted values anywhere. However, alert template messages and fill functions can still use the values, and they will appear in exported chart data. `input*()` functions using this constant will only display their values within the script's settings.",
+    "type": "const plot_simple_display",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.none"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(display\\.pane)\\b(?!\\s*\\()",
+    "codeblock": "display.pane",
+    "markdown": "A named constant for use with the `display` parameter of `plot*()` functions. Displays plotted values in the chart pane used by the script.",
+    "type": "const plot_display",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.pane"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(display\\.price_scale)\\b(?!\\s*\\()",
+    "codeblock": "display.price_scale",
+    "markdown": "A named constant for use with the `display` parameter of `plot*()` functions. Displays the plot’s label and value on the price scale if the chart's settings allow it.",
+    "type": "const plot_display",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.price_scale"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(display\\.status_line)\\b(?!\\s*\\()",
+    "codeblock": "display.status_line",
+    "markdown": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in the status line next to the script's name on the chart if the chart's settings allow it.",
+    "type": "const plot_display",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_display.status_line"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(dividends\\.gross)\\b(?!\\s*\\()",
+    "codeblock": "dividends.gross",
+    "markdown": "A named constant for the request.dividends function. Is used to request the dividends return on a stock before deductions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dividends.gross"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(dividends\\.net)\\b(?!\\s*\\()",
+    "codeblock": "dividends.net",
+    "markdown": "A named constant for the request.dividends function. Is used to request the dividends return on a stock after deductions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dividends.net"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(earnings\\.actual)\\b(?!\\s*\\()",
+    "codeblock": "earnings.actual",
+    "markdown": "A named constant for the request.earnings function. Is used to request the earnings value as it was reported.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.actual"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(earnings\\.estimate)\\b(?!\\s*\\()",
+    "codeblock": "earnings.estimate",
+    "markdown": "A named constant for the request.earnings function. Is used to request the estimated earnings value.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.estimate"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(earnings\\.standardized)\\b(?!\\s*\\()",
+    "codeblock": "earnings.standardized",
+    "markdown": "A named constant for the request.earnings function. Is used to request the standardized earnings value.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.standardized"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(extend\\.both)\\b(?!\\s*\\()",
+    "codeblock": "extend.both",
+    "markdown": "A named constant for line.new and line.set_extend functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_extend.both"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(extend\\.left)\\b(?!\\s*\\()",
+    "codeblock": "extend.left",
+    "markdown": "A named constant for line.new and line.set_extend functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_extend.left"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(extend\\.none)\\b(?!\\s*\\()",
+    "codeblock": "extend.none",
+    "markdown": "A named constant for line.new and line.set_extend functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_extend.none"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(extend\\.right)\\b(?!\\s*\\()",
+    "codeblock": "extend.right",
+    "markdown": "A named constant for line.new and line.set_extend functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_extend.right"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(font\\.family_default)\\b(?!\\s*\\()",
+    "codeblock": "font.family_default",
+    "markdown": "Default text font for box.new, box.set_text_font_family, label.new, label.set_text_font_family, table.cell and table.cell_set_text_font_family functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_font.family_default"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(font\\.family_monospace)\\b(?!\\s*\\()",
+    "codeblock": "font.family_monospace",
+    "markdown": "Monospace text font for box.new, box.set_text_font_family, label.new, label.set_text_font_family, table.cell and table.cell_set_text_font_family functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_font.family_monospace"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(format\\.inherit)\\b(?!\\s*\\()",
+    "codeblock": "format.inherit",
+    "markdown": "Is a named constant for selecting the formatting of the script output values from the parent series in the indicator function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_format.inherit"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(format\\.mintick)\\b(?!\\s*\\()",
+    "codeblock": "format.mintick",
+    "markdown": "Is a named constant to use with the str.tostring function. Passing a number to str.tostring with this argument rounds the number to the nearest value that can be divided by syminfo.mintick, without the remainder, with ties rounding up, and returns the string version of said value with trailing zeroes.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_format.mintick"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(format\\.percent)\\b(?!\\s*\\()",
+    "codeblock": "format.percent",
+    "markdown": "Is a named constant for selecting the formatting of the script output values as a percentage in the indicator function. It adds a percent sign after values.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_format.percent"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(format\\.price)\\b(?!\\s*\\()",
+    "codeblock": "format.price",
+    "markdown": "Is a named constant for selecting the formatting of the script output values as prices in the indicator function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_format.price"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(format\\.volume)\\b(?!\\s*\\()",
+    "codeblock": "format.volume",
+    "markdown": "Is a named constant for selecting the formatting of the script output values as volume in the indicator function, e.g. '5183' will be formatted as '5.183K'.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_format.volume"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(hline\\.style_dashed)\\b(?!\\s*\\()",
+    "codeblock": "hline.style_dashed",
+    "markdown": "Is a named constant for dashed linestyle of hline function.",
+    "type": "const hline_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hline.style_dashed"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(hline\\.style_dotted)\\b(?!\\s*\\()",
+    "codeblock": "hline.style_dotted",
+    "markdown": "Is a named constant for dotted linestyle of hline function.",
+    "type": "const hline_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hline.style_dotted"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(hline\\.style_solid)\\b(?!\\s*\\()",
+    "codeblock": "hline.style_solid",
+    "markdown": "Is a named constant for solid linestyle of hline function.",
+    "type": "const hline_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hline.style_solid"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_arrowdown)\\b(?!\\s*\\()",
+    "codeblock": "label.style_arrowdown",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_arrowdown"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_arrowup)\\b(?!\\s*\\()",
+    "codeblock": "label.style_arrowup",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_arrowup"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_circle)\\b(?!\\s*\\()",
+    "codeblock": "label.style_circle",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_circle"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_cross)\\b(?!\\s*\\()",
+    "codeblock": "label.style_cross",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_cross"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_diamond)\\b(?!\\s*\\()",
+    "codeblock": "label.style_diamond",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_diamond"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_flag)\\b(?!\\s*\\()",
+    "codeblock": "label.style_flag",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_flag"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_center)\\b(?!\\s*\\()",
+    "codeblock": "label.style_label_center",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_center"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_down)\\b(?!\\s*\\()",
+    "codeblock": "label.style_label_down",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_down"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_left)\\b(?!\\s*\\()",
+    "codeblock": "label.style_label_left",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_left"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_lower_left)\\b(?!\\s*\\()",
+    "codeblock": "label.style_label_lower_left",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_lower_left"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_lower_right)\\b(?!\\s*\\()",
+    "codeblock": "label.style_label_lower_right",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_lower_right"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_right)\\b(?!\\s*\\()",
+    "codeblock": "label.style_label_right",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_right"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_up)\\b(?!\\s*\\()",
+    "codeblock": "label.style_label_up",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_up"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_upper_left)\\b(?!\\s*\\()",
+    "codeblock": "label.style_label_upper_left",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_upper_left"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_label_upper_right)\\b(?!\\s*\\()",
+    "codeblock": "label.style_label_upper_right",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_label_upper_right"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_none)\\b(?!\\s*\\()",
+    "codeblock": "label.style_none",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_none"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_square)\\b(?!\\s*\\()",
+    "codeblock": "label.style_square",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_square"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_text_outline)\\b(?!\\s*\\()",
+    "codeblock": "label.style_text_outline",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_text_outline"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_triangledown)\\b(?!\\s*\\()",
+    "codeblock": "label.style_triangledown",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_triangledown"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_triangleup)\\b(?!\\s*\\()",
+    "codeblock": "label.style_triangleup",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_triangleup"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(label\\.style_xcross)\\b(?!\\s*\\()",
+    "codeblock": "label.style_xcross",
+    "markdown": "Label style for label.new and label.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.style_xcross"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(line\\.style_arrow_both)\\b(?!\\s*\\()",
+    "codeblock": "line.style_arrow_both",
+    "markdown": "Line style for line.new and line.set_style functions. Solid line with arrows on both points.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_arrow_both"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(line\\.style_arrow_left)\\b(?!\\s*\\()",
+    "codeblock": "line.style_arrow_left",
+    "markdown": "Line style for line.new and line.set_style functions. Solid line with arrow on the first point.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_arrow_left"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(line\\.style_arrow_right)\\b(?!\\s*\\()",
+    "codeblock": "line.style_arrow_right",
+    "markdown": "Line style for line.new and line.set_style functions. Solid line with arrow on the second point.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_arrow_right"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(line\\.style_dashed)\\b(?!\\s*\\()",
+    "codeblock": "line.style_dashed",
+    "markdown": "Line style for line.new and line.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_dashed"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(line\\.style_dotted)\\b(?!\\s*\\()",
+    "codeblock": "line.style_dotted",
+    "markdown": "Line style for line.new and line.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_dotted"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(line\\.style_solid)\\b(?!\\s*\\()",
+    "codeblock": "line.style_solid",
+    "markdown": "Line style for line.new and line.set_style functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.style_solid"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(location\\.abovebar)\\b(?!\\s*\\()",
+    "codeblock": "location.abovebar",
+    "markdown": "Location value for plotshape, plotchar functions. Shape is plotted above main series bars.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_location.abovebar"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(location\\.absolute)\\b(?!\\s*\\()",
+    "codeblock": "location.absolute",
+    "markdown": "Location value for plotshape, plotchar functions. Shape is plotted on chart using indicator value as a price coordinate.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_location.absolute"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(location\\.belowbar)\\b(?!\\s*\\()",
+    "codeblock": "location.belowbar",
+    "markdown": "Location value for plotshape, plotchar functions. Shape is plotted below main series bars.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_location.belowbar"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(location\\.bottom)\\b(?!\\s*\\()",
+    "codeblock": "location.bottom",
+    "markdown": "Location value for plotshape, plotchar functions. Shape is plotted near the bottom chart border.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_location.bottom"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(location\\.top)\\b(?!\\s*\\()",
+    "codeblock": "location.top",
+    "markdown": "Location value for plotshape, plotchar functions. Shape is plotted near the top chart border.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_location.top"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(math\\.e)\\b(?!\\s*\\()",
+    "codeblock": "math.e",
+    "markdown": "Is a named constant for Euler's number. It is equal to 2.7182818284590452.",
+    "type": "const float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_math.e"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(math\\.phi)\\b(?!\\s*\\()",
+    "codeblock": "math.phi",
+    "markdown": "Is a named constant for the golden ratio. It is equal to 1.6180339887498948.",
+    "type": "const float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_math.phi"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(math\\.pi)\\b(?!\\s*\\()",
+    "codeblock": "math.pi",
+    "markdown": "Is a named constant for Archimedes' constant. It is equal to 3.1415926535897932.",
+    "type": "const float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_math.pi"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(math\\.rphi)\\b(?!\\s*\\()",
+    "codeblock": "math.rphi",
+    "markdown": "Is a named constant for the golden ratio conjugate. It is equal to 0.6180339887498948.",
+    "type": "const float",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_math.rphi"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(order\\.ascending)\\b(?!\\s*\\()",
+    "codeblock": "order.ascending",
+    "markdown": "Determines the sort order of the array from the smallest to the largest value.",
+    "type": "const sort_order",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_order.ascending"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(order\\.descending)\\b(?!\\s*\\()",
+    "codeblock": "order.descending",
+    "markdown": "Determines the sort order of the array from the largest to the smallest value.",
+    "type": "const sort_order",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_order.descending"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_area)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_area",
+    "markdown": "A named constant for the 'Area' style, to be used as an argument for the `style` parameter in the plot function.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_area"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_areabr)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_areabr",
+    "markdown": "A named constant for the 'Area With Breaks' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_area, except the gaps in the data are not filled.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_areabr"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_circles)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_circles",
+    "markdown": "A named constant for the 'Circles' style, to be used as an argument for the `style` parameter in the plot function.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_circles"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_columns)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_columns",
+    "markdown": "A named constant for the 'Columns' style, to be used as an argument for the `style` parameter in the plot function.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_columns"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_cross)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_cross",
+    "markdown": "A named constant for the 'Cross' style, to be used as an argument for the `style` parameter in the plot function.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_cross"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_histogram)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_histogram",
+    "markdown": "A named constant for the 'Histogram' style, to be used as an argument for the `style` parameter in the plot function.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_histogram"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_line)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_line",
+    "markdown": "A named constant for the 'Line' style, to be used as an argument for the `style` parameter in the plot function.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_line"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_linebr)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_linebr",
+    "markdown": "A named constant for the 'Line With Breaks' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_line, except the gaps in the data are not filled.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_linebr"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_stepline)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_stepline",
+    "markdown": "A named constant for the 'Step Line' style, to be used as an argument for the `style` parameter in the plot function.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_stepline"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_stepline_diamond)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_stepline_diamond",
+    "markdown": "A named constant for the 'Step Line With Diamonds' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_stepline, except the data changes are also marked with the Diamond shapes.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_stepline_diamond"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(plot\\.style_steplinebr)\\b(?!\\s*\\()",
+    "codeblock": "plot.style_steplinebr",
+    "markdown": "A named constant for the 'Step line with Breaks' style, to be used as an argument for the `style` parameter in the plot function.",
+    "type": "const plot_style",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_plot.style_steplinebr"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(position\\.bottom_center)\\b(?!\\s*\\()",
+    "codeblock": "position.bottom_center",
+    "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the bottom edge in the center.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.bottom_center"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(position\\.bottom_left)\\b(?!\\s*\\()",
+    "codeblock": "position.bottom_left",
+    "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the bottom left of the screen.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.bottom_left"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(position\\.bottom_right)\\b(?!\\s*\\()",
+    "codeblock": "position.bottom_right",
+    "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the bottom right of the screen.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.bottom_right"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(position\\.middle_center)\\b(?!\\s*\\()",
+    "codeblock": "position.middle_center",
+    "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the center of the screen.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.middle_center"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(position\\.middle_left)\\b(?!\\s*\\()",
+    "codeblock": "position.middle_left",
+    "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the left side of the screen.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.middle_left"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(position\\.middle_right)\\b(?!\\s*\\()",
+    "codeblock": "position.middle_right",
+    "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the right side of the screen.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.middle_right"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(position\\.top_center)\\b(?!\\s*\\()",
+    "codeblock": "position.top_center",
+    "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the top edge in the center.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.top_center"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(position\\.top_left)\\b(?!\\s*\\()",
+    "codeblock": "position.top_left",
+    "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the upper-left edge.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.top_left"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(position\\.top_right)\\b(?!\\s*\\()",
+    "codeblock": "position.top_right",
+    "markdown": "Table position is used in table.new, table.cell functions. Binds the table to the upper-right edge.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_position.top_right"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(scale\\.left)\\b(?!\\s*\\()",
+    "codeblock": "scale.left",
+    "markdown": "Scale value for indicator function. Indicator is added to the left price scale.",
+    "type": "const scale_type",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_scale.left"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(scale\\.none)\\b(?!\\s*\\()",
+    "codeblock": "scale.none",
+    "markdown": "Scale value for indicator function. Indicator is added in 'No Scale' mode. Can be used only with 'overlay=true'.",
+    "type": "const scale_type",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_scale.none"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(scale\\.right)\\b(?!\\s*\\()",
+    "codeblock": "scale.right",
+    "markdown": "Scale value for indicator function. Indicator is added to the right price scale.",
+    "type": "const scale_type",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_scale.right"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(session\\.extended)\\b(?!\\s*\\()",
+    "codeblock": "session.extended",
+    "markdown": "Constant for extended session type (with extended hours data).",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.extended"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(session\\.regular)\\b(?!\\s*\\()",
+    "codeblock": "session.regular",
+    "markdown": "Constant for regular session type (no extended hours data).",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.regular"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.arrowdown)\\b(?!\\s*\\()",
+    "codeblock": "shape.arrowdown",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.arrowdown"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.arrowup)\\b(?!\\s*\\()",
+    "codeblock": "shape.arrowup",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.arrowup"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.circle)\\b(?!\\s*\\()",
+    "codeblock": "shape.circle",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.circle"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.cross)\\b(?!\\s*\\()",
+    "codeblock": "shape.cross",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.cross"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.diamond)\\b(?!\\s*\\()",
+    "codeblock": "shape.diamond",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.diamond"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.flag)\\b(?!\\s*\\()",
+    "codeblock": "shape.flag",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.flag"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.labeldown)\\b(?!\\s*\\()",
+    "codeblock": "shape.labeldown",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.labeldown"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.labelup)\\b(?!\\s*\\()",
+    "codeblock": "shape.labelup",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.labelup"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.square)\\b(?!\\s*\\()",
+    "codeblock": "shape.square",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.square"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.triangledown)\\b(?!\\s*\\()",
+    "codeblock": "shape.triangledown",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.triangledown"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.triangleup)\\b(?!\\s*\\()",
+    "codeblock": "shape.triangleup",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.triangleup"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(shape\\.xcross)\\b(?!\\s*\\()",
+    "codeblock": "shape.xcross",
+    "markdown": "Shape style for plotshape function.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_shape.xcross"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(size\\.auto)\\b(?!\\s*\\()",
+    "codeblock": "size.auto",
+    "markdown": "Size value for plotshape, plotchar functions. The size of the shape automatically adapts to the size of the bars.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.auto"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(size\\.huge)\\b(?!\\s*\\()",
+    "codeblock": "size.huge",
+    "markdown": "Size value for plotshape, plotchar functions. The size of the shape constantly huge.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.huge"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(size\\.large)\\b(?!\\s*\\()",
+    "codeblock": "size.large",
+    "markdown": "Size value for plotshape, plotchar functions. The size of the shape constantly large.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.large"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(size\\.normal)\\b(?!\\s*\\()",
+    "codeblock": "size.normal",
+    "markdown": "Size value for plotshape, plotchar functions. The size of the shape constantly normal.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.normal"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(size\\.small)\\b(?!\\s*\\()",
+    "codeblock": "size.small",
+    "markdown": "Size value for plotshape, plotchar functions. The size of the shape constantly small.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.small"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(size\\.tiny)\\b(?!\\s*\\()",
+    "codeblock": "size.tiny",
+    "markdown": "Size value for plotshape, plotchar functions. The size of the shape constantly tiny.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_size.tiny"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(splits\\.denominator)\\b(?!\\s*\\()",
+    "codeblock": "splits.denominator",
+    "markdown": "A named constant for the request.splits function. Is used to request the denominator (the number below the line in a fraction) of a splits.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_splits.denominator"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(splits\\.numerator)\\b(?!\\s*\\()",
+    "codeblock": "splits.numerator",
+    "markdown": "A named constant for the request.splits function. Is used to request the numerator (the number above the line in a fraction) of a splits.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_splits.numerator"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.cash)\\b(?!\\s*\\()",
+    "codeblock": "strategy.cash",
+    "markdown": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the `qty` parameter in strategy.entry or strategy.order function calls. It specifies that an amount of cash in the `strategy.account_currency` will be used to enter trades.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.cash"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.commission\\.cash_per_contract)\\b(?!\\s*\\()",
+    "codeblock": "strategy.commission.cash_per_contract",
+    "markdown": "Commission type for an order. Money displayed in the account currency per contract.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.commission.cash_per_contract"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.commission\\.cash_per_order)\\b(?!\\s*\\()",
+    "codeblock": "strategy.commission.cash_per_order",
+    "markdown": "Commission type for an order. Money displayed in the account currency per order.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.commission.cash_per_order"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.commission\\.percent)\\b(?!\\s*\\()",
+    "codeblock": "strategy.commission.percent",
+    "markdown": "Commission type for an order. A percentage of the cash volume of order.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.commission.percent"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.direction\\.all)\\b(?!\\s*\\()",
+    "codeblock": "strategy.direction.all",
+    "markdown": "It allows strategy to open both long and short positions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.direction.all"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.direction\\.long)\\b(?!\\s*\\()",
+    "codeblock": "strategy.direction.long",
+    "markdown": "It allows strategy to open only long positions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.direction.long"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.direction\\.short)\\b(?!\\s*\\()",
+    "codeblock": "strategy.direction.short",
+    "markdown": "It allows strategy to open only short positions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.direction.short"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.fixed)\\b(?!\\s*\\()",
+    "codeblock": "strategy.fixed",
+    "markdown": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the `qty` parameter in strategy.entry or strategy.order function calls. It specifies that a number of contracts/shares/lots will be used to enter trades.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.fixed"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.oca\\.cancel)\\b(?!\\s*\\()",
+    "codeblock": "strategy.oca.cancel",
+    "markdown": "OCA type value for strategy's functions. The parameter determines that an order should belong to an OCO group, where as soon as an order is filled, all other orders of the same group are cancelled. Note: if more than 1 guaranteed-to-be-executed orders of the same OCA group are placed at once, all those orders are filled.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.oca.cancel"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.oca\\.none)\\b(?!\\s*\\()",
+    "codeblock": "strategy.oca.none",
+    "markdown": "OCA type value for strategy's functions. The parameter determines that an order should not belong to any particular OCO group.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.oca.none"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.oca\\.reduce)\\b(?!\\s*\\()",
+    "codeblock": "strategy.oca.reduce",
+    "markdown": "OCA type value for strategy's functions. The parameter determines that an order should belong to an OCO group, where if X number of contracts of an order is filled, number of contracts for each other order of the same OCO group is decreased by X. Note: if more than 1 guaranteed-to-be-executed orders of the same OCA group are placed at once, all those orders are filled.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.oca.reduce"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.percent_of_equity)\\b(?!\\s*\\()",
+    "codeblock": "strategy.percent_of_equity",
+    "markdown": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the `qty` parameter in strategy.entry or strategy.order function calls. It specifies that a percentage (0-100) of equity will be used to enter trades.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.percent_of_equity"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(text\\.align_bottom)\\b(?!\\s*\\()",
+    "codeblock": "text.align_bottom",
+    "markdown": "Vertical text alignment for box.new, box.set_text_valign, table.cell and table.cell_set_text_valign functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.align_bottom"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(text\\.align_center)\\b(?!\\s*\\()",
+    "codeblock": "text.align_center",
+    "markdown": "Text alignment for box.new, box.set_text_halign, box.set_text_valign, label.new and label.set_textalign functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.align_center"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(text\\.align_left)\\b(?!\\s*\\()",
+    "codeblock": "text.align_left",
+    "markdown": "Horizontal text alignment for box.new, box.set_text_halign, label.new and label.set_textalign functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.align_left"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(text\\.align_right)\\b(?!\\s*\\()",
+    "codeblock": "text.align_right",
+    "markdown": "Horizontal text alignment for box.new, box.set_text_halign, label.new and label.set_textalign functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.align_right"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(text\\.align_top)\\b(?!\\s*\\()",
+    "codeblock": "text.align_top",
+    "markdown": "Vertical text alignment for box.new, box.set_text_valign, table.cell and table.cell_set_text_valign functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.align_top"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(text\\.wrap_auto)\\b(?!\\s*\\()",
+    "codeblock": "text.wrap_auto",
+    "markdown": "Automatic wrapping mode for box.new and box.set_text_wrap functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.wrap_auto"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(text\\.wrap_none)\\b(?!\\s*\\()",
+    "codeblock": "text.wrap_none",
+    "markdown": "Disabled wrapping mode for box.new and box.set_text_wrap functions.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_text.wrap_none"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(xloc\\.bar_index)\\b(?!\\s*\\()",
+    "codeblock": "xloc.bar_index",
+    "markdown": "A named constant that specifies the algorithm of interpretation of x-value in functions line.new and label.new. If xloc = xloc.bar_index, value of x is a bar index.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_xloc.bar_index"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(xloc\\.bar_time)\\b(?!\\s*\\()",
+    "codeblock": "xloc.bar_time",
+    "markdown": "A named constant that specifies the algorithm of interpretation of x-value in functions line.new and label.new. If xloc = xloc.bar_time, value of x is a bar UNIX time.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_xloc.bar_time"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(yloc\\.abovebar)\\b(?!\\s*\\()",
+    "codeblock": "yloc.abovebar",
+    "markdown": "A named constant that specifies the algorithm of interpretation of y-value in function label.new.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_yloc.abovebar"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(yloc\\.belowbar)\\b(?!\\s*\\()",
+    "codeblock": "yloc.belowbar",
+    "markdown": "A named constant that specifies the algorithm of interpretation of y-value in function label.new.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_yloc.belowbar"
+  },
+  {
+    "pattern": "(?<![\\.]\\s*)\\b(yloc\\.price)\\b(?!\\s*\\()",
+    "codeblock": "yloc.price",
+    "markdown": "A named constant that specifies the algorithm of interpretation of y-value in function label.new.",
+    "type": "const string",
+    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_yloc.price"
+  }
+ ]

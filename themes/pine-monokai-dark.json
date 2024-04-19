@@ -721,6 +721,14 @@
 			}
 		},
 		{
+			"name": "keyword operator ternary ps",
+			"scope": "keyword.operator.ternary.ps",
+			"settings": {
+			"fontStyle" :"",
+			"foreground": "#00FF0F"
+			}
+		},
+		{
 			"name": "punctuation ps",
 			"scope": [
 			"punctuation.separator.comma.ps",

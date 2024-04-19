@@ -663,7 +663,27 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(syminfo)(\\.)(basecurrency|country|currency|description|employees|industry|minmove|mintick|pointvalue|prefix|pricescale|recommendations_buy_strong|recommendations_buy|recommendations_date|recommendations_hold|recommendations_sell_strong|recommendations_sell|recommendations_total|root|sector|session|shareholders|shares_outstanding_float|shares_outstanding_total|target_price_average|target_price_date|target_price_estimates|target_price_high|target_price_low|target_price_median|tickerid|ticker|timezone|type|volumetype)\\b(?!\\s*\\()",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(opentrades)(\\.)(capital_held)\\b(?!\\s*\\()",
+          "captures": {
+            "0": {
+              "name": "support.constant.property.ps"
+            },
+            "1": {
+              "name": "support.constant.ps"
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            },
+            "3": {
+              "name": "support.constant.ps"
+            },
+            "4": {
+              "name": "punctuation.accessor.ps"
+            }
+          }
+        },
+        {
+          "match": "(?<![\\.]\\s*)\\b(syminfo)(\\.)(basecurrency|country|currency|description|employees|expiration_date|industry|minmove|mintick|pointvalue|prefix|pricescale|recommendations_buy_strong|recommendations_buy|recommendations_date|recommendations_hold|recommendations_sell_strong|recommendations_sell|recommendations_total|root|sector|session|shareholders|shares_outstanding_float|shares_outstanding_total|target_price_average|target_price_date|target_price_estimates|target_price_high|target_price_low|target_price_median|tickerid|ticker|timezone|type|volumetype)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -1071,7 +1091,7 @@
           }
         },
         {
-          "match": "\\b(str)(\\.)(contains|endswith|format_time|format|length|lower|match|pos|replace_all|replace|split|startswith|substring|tonumber|tostring|upper)\\b(?=\\s*\\()",
+          "match": "\\b(str)(\\.)(contains|endswith|format_time|format|length|lower|match|pos|repeat|replace_all|replace|split|startswith|substring|tonumber|tostring|trim|upper)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"

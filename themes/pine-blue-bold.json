@@ -218,7 +218,6 @@
       "pickerGroup.border": "#01101c",
 
       "terminal.foreground":  "#22da6e",
-      "terminalCursor.foreground": "",
       "terminal.ansiWhite": "#ffffff",
       "terminal.ansiBlack": "#01101c",
       "terminal.ansiBlue": "#82AAFF",
@@ -237,6 +236,7 @@
       "terminal.ansiBrightYellow": "#ffeb95",
       "terminal.selectionBackground": "#1b90dd4d",
       "terminalCursor.background": "#234d70",
+      "terminalCursor.foreground": "#d1d4d2",
       "textCodeBlock.background": "#4f4f4f",
       "debugToolBar.background": "#01101c",
       "welcomePage.buttonBackground": "#01101c",

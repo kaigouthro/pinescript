@@ -9,9 +9,8 @@ type Params = {
 };
 
 type FuncPopupBlock = {
-	id: number;
 	pattern: string;
-	codeblock: string;
+	codeblock: string[];
 	markdown: string;
 	returns: string;
 	manual: string;
@@ -19,7 +18,6 @@ type FuncPopupBlock = {
 };
 
 type ConstPopupBlock = {
-	id: number;
 	pattern: string;
 	codeblock: string;
 	markdown: string;
@@ -77,7 +75,11 @@ export function activate(context: vscode.ExtensionContext) {
 					hoverRange = document.getWordRangeAtPosition(position, testPattern);
 					if (hoverRange) {
 						let popup = new vscode.MarkdownString('');
-						popup.appendCodeblock(BUILT_IN_FUNC[index].codeblock);
+						let codeBlockStr = BUILT_IN_FUNC[index].codeblock[0];
+						for (let codeBlockCounter = 1; codeBlockCounter < BUILT_IN_FUNC[index].codeblock.length; codeBlockCounter++){
+							codeBlockStr = codeBlockStr + "\n" + BUILT_IN_FUNC[index].codeblock[codeBlockCounter];
+						}
+						popup.appendCodeblock(codeBlockStr);
 						if (BUILT_IN_FUNC[index].markdown !== ''){
 							popup.appendMarkdown(BUILT_IN_FUNC[index].markdown);
 						}

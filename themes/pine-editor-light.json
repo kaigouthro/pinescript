@@ -177,6 +177,7 @@
       "terminal.ansiYellow": "#E0AF02",
       "terminal.background": "#F6F6F6",
       "terminal.foreground": "#403f53",
+      "terminalCursor.foreground": "#d1d4d2",
 
       "symbolIcon.snippetForeground": "#F0F0F0"
 

@@ -19,9 +19,9 @@
 		"breadcrumb.foreground": "#d1d4d280",
 		"breadcrumbPicker.background": "#383b423f",
 	
-		"button.background": "#252831",
+		"button.background": "#2862fe",
 		"button.foreground": "#D1D4DC",
-		"button.hoverBackground": "#1E2129",
+		"button.hoverBackground": "#1f53e4",
 	
 		"debugExceptionWidget.background": "#191d2e",
 		"debugExceptionWidget.border": "#2a2e39",
@@ -197,13 +197,6 @@
 		"minimapSlider.hoverBackground": "#5a637580",
 	
 	
-		"notificationCenter.border": "#2a2e39",
-		"notificationLink.foreground": "#1e53e5",
-		"notifications.background": "#01111d",
-		"notifications.border": "#2a2e39",
-		"notifications.foreground": "#1e53e5",
-		"notificationToast.border": "#2a2e39",
-	
 		"panel.background": "#191d2e",
 		"panel.border": "#2a2e39",
 		"panelSectionHeader.background": "#2a2e39",
@@ -287,10 +280,10 @@
 		"terminal.ansiRed": "#ef5350",
 		"terminal.ansiWhite": "#e17518",
 		"terminal.ansiYellow": "#c5e478",
-		"terminal.foreground": "#79b5e0",
+		"terminal.foreground": "#d1d4d2",
 		"terminal.selectionBackground": "#1b90dd4d",
 		"terminalCursor.background": "#234d70",
-		"terminalCursor.foreground": "#1e53e5",
+		"terminalCursor.foreground": "#d1d4d2",
 		
 		"textCodeBlock.background": "#6e6e6e",
 		"menu.background": "#1e222d",
@@ -972,6 +965,14 @@
 			"settings": {
 			"foreground": "#34C1D9",
 			"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "keyword operator ternary ps",
+			"scope": "keyword.operator.ternary.ps",
+			"settings": {
+			"fontStyle" :"",
+			"foreground": "#00FF0F"
 			}
 		},
 		{

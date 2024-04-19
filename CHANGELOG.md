@@ -1,5 +1,13 @@
 # Change Log
 
+#### **3.3.1**
+
+*18.04.2024 **Update***
+- Snippets for built-in variables, functions and constants updated to Pinescript release March 2024.
+- Hover popup descriptions for overloaded functions added.
+- Theme color minor fixed.
+
+---
 #### **3.3.0**
 
 *18.02.2024 **Update***
