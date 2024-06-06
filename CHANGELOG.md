@@ -1,5 +1,15 @@
 # Change Log
+#### **3.4.0**
 
+*06.06.2024 **Update***
+- Snippets for built-in variables, functions and constants updated to Pinescript release June 2024.
+- Rework of hover popup presentation.
+- Built-in types for hover popup added.
+- Popup window border become more visible in several dark themes.
+- Choices and default values for snippets updated.
+- Typo and bug fixes for snippets and hover popups.
+
+---
 #### **3.3.1**
 
 *18.04.2024 **Update***

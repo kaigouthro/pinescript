@@ -84,7 +84,7 @@
 		"editorGutter.modifiedBackground": "#1e53e5",
 	
 		"editorHoverWidget.background": "#1e232c",
-		"editorHoverWidget.border": "#000000",
+		"editorHoverWidget.border": "#3b4048",
 		"editorHoverWidget.foreground": "#dedededf",
 		"editorHoverWidget.highlightForeground": "#42bda8",
 		"editorHoverWidget.statusBarBackground": "#01fdba00",

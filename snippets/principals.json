@@ -10,7 +10,7 @@
       " title                = \"${1}\"${2:,",
       " shorttitle           = \"${3}\"}${4:,",
       " overlay              = ${5| ,true,false|}}${6:,",
-      " format               = ${7| ,format.inherit,format.price,format.volume,format.value|}}${8:,",
+      " format               = ${7| ,format.inherit,format.price,format.volume,format.percent|}}${8:,",
       " precision            = ${9| ,1,2,3,4,5|}}${10:,",
       " scale                = ${11| ,scale.right,scale.left,scale.none|}}${12:,",
       " max_bars_back        = ${13| ,0,500,1000,2000,3000,4000,5000|}}${14:,",
@@ -20,7 +20,8 @@
       " max_lines_count      = ${21| ,5,10,50,100,200,300,500|}}${22:,",
       " max_labels_count     = ${23| ,5,10,50,100,200,300,500|}}${24:,",
       " max_boxes_count      = ${25| ,5,10,50,100,200,300,500|}}${26:,",
-      " max_polylines_count  = ${27| ,5,10,50,100,200,300,500|}}",
+      " calc_bars_count      = ${27| ,0,5,10,50,100,200,300,500|}}${28:,",
+      " max_polylines_count  = ${29| ,5,10,50,100|}}",
       " )",
       "// # ========================================================================= #",
       "// #                   |  $1 Indicator  |",
@@ -28,7 +29,7 @@
       "",
       "$0"
     ],
-    "description": "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, max_polylines_count) → void"
+    "description": "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count) → void"
   },
   
   "Indicator ⇨ 𝑓": {
@@ -62,7 +63,7 @@
       " title                = \"${2}\"${3:,",
       " shorttitle           = \"${4}\"}${5:,",
       " overlay              = ${6| ,true,false|}}${7:,",
-      " format               = ${8| ,format.inherit,format.price,format.volume,format.value|}}${9:,",
+      " format               = ${8| ,format.inherit,format.price,format.volume,format.percent|}}${9:,",
       " precision            = ${10| ,1,2,3,4,5|}}${11:,",
       " scale                = ${12| ,scale.right,scale.left,scale.none|}}${13:,",
       " max_bars_back        = ${14| ,0,500,1000,2000,3000,4000,5000|}}${15:,",
@@ -72,7 +73,8 @@
       " max_lines_count      = ${22| ,5,10,50,100,200,300,500|}}${23:,",
       " max_labels_count     = ${24| ,5,10,50,100,200,300,500|}}${25:,",
       " max_boxes_count      = ${26| ,5,10,50,100,200,300,500|}}${27:,",
-      " max_polylines_count  = ${28| ,5,10,50,100,200,300,500|}}",
+      " calc_bars_count      = ${28| ,0,5,10,50,100,200,300,500|}}${29:,",
+      " max_polylines_count  = ${30| ,5,10,50,100|}}",
       " )",
       "// # ========================================================================= #",
       "// #                   |  $2 Indicator  |",
@@ -80,7 +82,7 @@
       "",
       "$0"
     ],
-    "description": "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, max_polylines_count) → void"
+    "description": "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count) → void"
   },
   
   "New Library ⇨ 𝑓": {
@@ -124,7 +126,7 @@
       " title                           = \"${1}\"${2:,",
       " shorttitle                      = \"${3}\"}${4:,",
       " overlay                         = ${5| ,true,false|}}${6:,",
-      " format                          = ${7| ,format.inherit,format.price,format.value|}}${8:,",
+      " format                          = ${7| ,format.inherit,format.price,format.volume,format.percent|}}${8:,",
       " precision                       = ${9| ,1,2,3,4,5|}}${10:,",
       " scale                           = ${11| ,scale.right,scale.left,scale.none|}}${12:,",
       " pyramiding                      = ${13| ,0,1,2,3,4,5,6,7,8,9,10|}}${14:,",
@@ -147,9 +149,11 @@
       " max_lines_count                 = ${47| ,5,10,50,100,200,300,500|}}${48:,",
       " max_labels_count                = ${49| ,5,10,50,100,200,300,500|}}${50:,",
       " max_boxes_count                 = ${51| ,5,10,50,100,200,300,500|}}${52:,",
-      " risk_free_rate                  = ${53| ,0,1,1.5,2,2.5,3,3.5,4,4.5,5|}}${54:,",
-      " use_bar_magnifier               = ${55| ,false,true|}}${56:,",
-      " max_polylines_count             = ${57| ,5,10,50,100,200,300,500|}}",
+      " calc_bars_count                 = ${53| ,0,5,10,50,100,200,300,500|}}${54:,",
+      " risk_free_rate                  = ${55| ,0,1,1.5,2,2.5,3,3.5,4,4.5,5|}}${56:,",
+      " use_bar_magnifier               = ${57| ,false,true|}}${58:,",
+      " fill_orders_on_standard_ohlc    = ${59| ,false,true|}}${60:,",
+      " max_polylines_count             = ${61| ,5,10,50,100|}}",
       " )",
       "// # ========================================================================= #",
       "// #                   |  $1 STRATEGY  |",
@@ -157,7 +161,7 @@
       "",
       "$0"
     ],
-    "description": "strategy(title, shorttitle, overlay, format, precision, scale, pyramiding, calc_on_order_fills, calc_on_every_tick, max_bars_back, backtest_fill_limits_assumption, default_qty_type, default_qty_value, initial_capital, currency, slippage, commission_type, commission_value, process_orders_on_close, close_entries_rule, margin_long, margin_short, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, risk_free_rate, use_bar_magnifier, max_polylines_count) → void"
+    "description": "strategy(title, shorttitle, overlay, format, precision, scale, pyramiding, calc_on_order_fills, calc_on_every_tick, max_bars_back, backtest_fill_limits_assumption, default_qty_type, default_qty_value, initial_capital, currency, slippage, commission_type, commission_value, process_orders_on_close, close_entries_rule, margin_long, margin_short, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, risk_free_rate, use_bar_magnifier, fill_orders_on_standard_ohlc, max_polylines_count) → void"
   },
   
   "Strategy ⇨ 𝑓": {

@@ -391,6 +391,48 @@
       ],
       "description": "Returns the currency used to calculate results, which can be set in the strategy's properties. | TYPE simple string"
    },
+   "strategy.avg_losing_trade ⇨ 𝑥": {
+      "prefix": "strategy.avg_losing_trade",
+      "body": [
+         "strategy.avg_losing_trade$0"
+      ],
+      "description": "Returns the average amount of money lost per losing trade. Calculated as the sum of losses divided by the number of losing trades. | TYPE series float"
+   },
+   "strategy.avg_losing_trade_percent ⇨ 𝑥": {
+      "prefix": "strategy.avg_losing_trade_percent",
+      "body": [
+         "strategy.avg_losing_trade_percent$0"
+      ],
+      "description": "Returns the average percentage loss per losing trade. Calculated as the sum of loss percentages divided by the number of losing trades. | TYPE series float"
+   },
+   "strategy.avg_trade ⇨ 𝑥": {
+      "prefix": "strategy.avg_trade",
+      "body": [
+         "strategy.avg_trade$0"
+      ],
+      "description": "Returns the average amount of money gained or lost per trade. Calculated as the sum of all profits and losses divided by the number of closed trades. | TYPE series float"
+   },
+   "strategy.avg_trade_percent ⇨ 𝑥": {
+      "prefix": "strategy.avg_trade_percent",
+      "body": [
+         "strategy.avg_trade_percent$0"
+      ],
+      "description": "Returns the average percentage gain or loss per trade. Calculated as the sum of all profit and loss percentages divided by the number of closed trades. | TYPE series float"
+   },
+   "strategy.avg_winning_trade ⇨ 𝑥": {
+      "prefix": "strategy.avg_winning_trade",
+      "body": [
+         "strategy.avg_winning_trade$0"
+      ],
+      "description": "Returns the average amount of money gained per winning trade. Calculated as the sum of profits divided by the number of winning trades. | TYPE series float"
+   },
+   "strategy.avg_winning_trade_percent ⇨ 𝑥": {
+      "prefix": "strategy.avg_winning_trade_percent",
+      "body": [
+         "strategy.avg_winning_trade_percent$0"
+      ],
+      "description": "Returns the average percentage gain per winning trade. Calculated as the sum of profit percentages divided by the number of winning trades. | TYPE series float"
+   },
    "strategy.closedtrades ⇨ 𝑥": {
       "prefix": "strategy.closedtrades",
       "body": [

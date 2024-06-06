@@ -1,0 +1,281 @@
+[
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(array)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "array",
+     "description": "Keyword used to explicitly declare the \"array\" type of a variable or a parameter. Array objects (or IDs) can be created with the [array.new\\<type\\>]{0}, [array.from]{1} function.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_array.new%3Ctype%3E",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_array.from"
+     ],
+     "remark": [
+        "Array objects are always of [series]{0} form."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#series"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_array",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(bool)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "bool",
+     "description": "Keyword used to explicitly declare the \"bool\" (boolean) type of a variable or a parameter. \"Bool\" variables can have values [true]{0}, [false]{1} or [na]{2}.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "remark": [
+        "Explicitly mentioning the type in a variable declaration is optional, except when it is initialized with [na]{0}. Learn more about Pine Script® types in the User Manual page on the [Type System]{1}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_bool",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(box)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "box",
+     "description": "Keyword used to explicitly declare the \"box\" type of a variable or a parameter. Box objects (or IDs) can be created with the [box.new]{0} function.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_box.new"
+     ],
+     "remark": [
+        "Box objects are always of [series]{0} form."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#series"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_box",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.point)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "chart.point",
+     "description": "Keyword to explicitly declare the type of a variable or parameter as `chart.point`. Scripts can produce `chart.point` instances using the [chart.point.from_time]{0}, [chart.point.from_index]{1}, [chart.point.now]{2}, and [chart.point.new]{3} functions. ",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_chart.point.from_time",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_chart.point.from_index",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_chart.point.now",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_chart.point.new"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_chart.point",
+     "fields": [
+        {
+           "field": "index (series int)",
+           "description": "The x-coordinate of the point, expressed as a bar index value."
+        },
+        {
+           "field": "time (series float)",
+           "description": "The x-coordinate of the point, expressed as a UNIX time value, in milliseconds."
+        },
+        {
+           "field": "price (series float)",
+           "description": "The y-coordinate of the point."
+        }
+     ]
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(color)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "color",
+     "description": "Keyword used to explicitly declare the \"color\" type of a variable or a parameter.",
+     "remark": [
+        "Color literals have the following format: #RRGGBB or #RRGGBBAA. The letter pairs represent 00 to FF hexadecimal values (0 to 255 in decimal) where RR, GG and BB pairs are the values for the color's red, green and blue components. AA is an optional value for the color's transparency (or alpha component) where 00 is invisible and FF opaque. When no AA pair is supplied, FF is used. The hexadecimal letters can be upper or lower case. <p/>Explicitly mentioning the type in a variable declaration is optional, except when it is initialized with [na]{0}. Learn more about Pine Script® types in the User Manual page on the [Type System]{1}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_color",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(const)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "const",
+     "description": "The `const` keyword explicitly assigns the \"const\" type qualifier to variables and the parameters of non-exported functions. Variables and parameters with the \"const\" qualifier reference values established at compile time that never change in the script's execution. <p/>In variable declarations, the compiler can usually infer the qualified type automatically based on the values assigned to a variable, and it can automatically change a variable's qualifier to a stronger one when necessary. The type qualifier hierarchy is \"const\" < \"input\" < \"simple\" < \"series\", where \"const\" is the weakest. <p/>Explicitly declaring a variable with the `const` keyword restricts the type qualifier to \"const\", meaning the variable cannot accept a value with a stronger qualifier (e.g., \"input\"), nor can the value assigned to the variable change at any point in the script's execution. <p/>When using this keyword to specify the type qualifier, one must also use a type keyword to declare the allowed type.",
+     "remark": [
+        "To learn more, see our User Manual's section on [type qualifiers]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#qualifiers"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_const",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(float)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "float",
+     "description": "Keyword used to explicitly declare the \"float\" (floating point) type of a variable or a parameter.",
+     "remark": [
+        "Explicitly mentioning the type in a variable declaration is optional, except when it is initialized with [na]{0}. Learn more about Pine Script® types in the User Manual page on the [Type System]{1}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_float",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(int)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "int",
+     "description": "Keyword used to explicitly declare the \"int\" (integer) type of a variable or a parameter.",
+     "remark": [
+        "Explicitly mentioning the type in a variable declaration is optional, except when it is initialized with [na]{0}. Learn more about Pine Script® types in the User Manual page on the [Type System]{1}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_int",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(label)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "label",
+     "description": "Keyword used to explicitly declare the \"label\" type of a variable or a parameter. Label objects (or IDs) can be created with the [label.new]{0} function.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_label.new"
+     ],
+     "remark": [
+        "Label objects are always of [series]{0} form."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#series"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_label",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(line)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "line",
+     "description": "Keyword used to explicitly declare the \"line\" type of a variable or a parameter. Line objects (or IDs) can be created with the [line.new]{0} function.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_line.new"
+     ],
+     "remark": [
+        "Line objects are always of [series]{0} form."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#series"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_line",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(linefill)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "linefill",
+     "description": "Keyword used to explicitly declare the \"linefill\" type of a variable or a parameter. Linefill objects (or IDs) can be created with the [linefill.new]{0} function.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_linefill.new"
+     ],
+     "remark": [
+        "Linefill objects are always of [series]{0} form."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#series"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_linefill",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(map)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "map",
+     "description": "Keyword used to explicitly declare the \"map\" type of a variable or a parameter. Map objects (or IDs) can be created with the [map.new\\<type,type\\>]{0} function.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_map.new%3Ctype,type%3E"
+     ],
+     "remark": [
+        "Map objects are always of [series]{0} form."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#series"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_map",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(matrix)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "matrix",
+     "description": "Keyword used to explicitly declare the \"matrix\" type of a variable or a parameter. Matrix objects (or IDs) can be created with the [matrix.new\\<type\\>]{0} function.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_matrix.new%3Ctype%3E"
+     ],
+     "remark": [
+        "Matrix objects are always of [series]{0} form."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#series"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_matrix",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(polyline)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "polyline",
+     "description": "Keyword to explicitly declare the type of a variable or parameter as `polyline`. Scripts can produce `polyline` instances using the [polyline.new]{0} function.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_polyline.new"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_polyline",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(series)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "series",
+     "description": "The `series` keyword explicitly assigns the \"series\" type qualifier to variables and function parameters. Variables and parameters that use the \"series\" qualifier can reference values that change throughout a script's execution. <p/>Explicit use of the `series` keyword when declaring the parameters of a library's exported functions is typically unnecessary, as the compiler can usually automatically detect whether a parameter is compatible with \"series\" or \"simple\" qualified values. By default, all exported function parameters are qualified as \"series\" wherever possible. <p/>In variable declarations, the compiler can usually infer the qualified type automatically based on the values assigned to a variable, and it can automatically change a variable's qualifier to a stronger one when necessary. The type qualifier hierarchy is \"const\" < \"input\" < \"simple\" < \"series\", where \"series\" is the strongest. <p/>Explicitly declaring a variable with the `series` keyword restricts the type qualifier to \"series\", meaning the script cannot pass its value to any variable or function parameter that requires a value with a weaker qualifier (\"const\", \"input\", or \"simple\"). <p/>When using this keyword to specify the type qualifier, one must also use a type keyword to declare the allowed type.",
+     "remark": [
+        "To learn more, see our User Manual's section on [type qualifiers]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#qualifiers"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_series",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(simple)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "simple",
+     "description": "The `simple` keyword explicitly assigns the \"simple\" type qualifier to variables and function parameters. Variables and parameters that use the \"simple\" qualifier can reference values established at the beginning of a script's execution that do not change later. <p/>To restrict the parameters in a library's exported functions to only allow values with a \"simple\" or weaker type qualifier, using the `simple` keyword when declaring parameters is often necessary, as libraries automatically qualify all parameters as \"series\" wherever possible by default. Explicitly restricting functions to accept \"simple\" arguments also allows them to return \"simple\" values in some cases, depending on the operations they execute, making them usable with the parameters of built-in functions that do not allow \"series\" arguments. <p/>In variable declarations, the compiler can usually infer the qualified type automatically based on the values assigned to a variable, and it can automatically change a variable's qualifier to a stronger one when necessary. The type qualifier hierarchy is \"const\" < \"input\" < \"simple\" < \"series\", where \"simple\" is stronger than \"input\" and \"const\". <p/>Explicitly declaring a variable with the `simple` keyword restricts the type qualifier to \"simple\", meaning the script cannot pass its value to any variable or function parameter that requires a value with a weaker qualifier (\"const\" or \"input\"). Additionally, one cannot assign a \"series\" value to a variable explicitly declared with the `simple` keyword. <p/>When using this keyword to specify the type qualifier, one must also use a type keyword to declare the allowed type.",
+     "remark": [
+        "To learn more, see our User Manual's section on [type qualifiers]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#qualifiers"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_simple",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(string)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "string",
+     "description": "Keyword used to explicitly declare the \"string\" type of a variable or a parameter.",
+     "remark": [
+        "Explicitly mentioning the type in a variable declaration is optional, except when it is initialized with [na]{0}. Learn more about Pine Script® types in the User Manual page on the [Type System]{1}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_string",
+     "fields": []
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(table)\\b(?=(?!\\s*[\\(\\.\\=\\?\\:\\+\\-\\*\\/])|(?=\\s*\\/\\/))",
+     "codeblock": "table",
+     "description": "Keyword used to explicitly declare the \"table\" type of a variable or a parameter. Table objects (or IDs) can be created with the [table.new]{0} function.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_table.new"
+     ],
+     "remark": [
+        "Table objects are always of [series]{0} form."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Type_system.html#series"
+     ],
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#type_table",
+     "fields": []
+  }
+  ]

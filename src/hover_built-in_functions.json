@@ -362,7 +362,7 @@
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_array.join",
      "param": [
         {
-           "field": "id (float[])",
+           "field": "id (float[]|int[]|string[])",
            "description": "An array object."
         },
         {
@@ -1076,7 +1076,7 @@
    {
      "pattern": "(?<![\\.]\\s*)\\b(bgcolor)(?=\\s*\\()",
      "codeblock": [
-        "bgcolor(color, offset, editable, show_last, title, display) → void"
+        "bgcolor(color, offset, editable, show_last, title, display, force_overlay) → void"
      ],
      "markdown": "Fill background of bars with specified color.",
      "returns": "void",
@@ -1105,6 +1105,10 @@
         {
            "field": "display (input plot_simple_display)",
            "description": "Controls where the bgcolor is displayed. Default is display.all."
+        },
+        {
+           "field": "force_overlay (const bool)",
+           "description": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. Default is false."
         }
      ]
   },
@@ -2145,7 +2149,7 @@
    {
      "pattern": "(?<![\\.]\\s*)\\b(indicator)(?=\\s*\\()",
      "codeblock": [
-        "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, max_polylines_count) → void"
+        "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count) → void"
      ],
      "markdown": "This declaration statement designates the script as an indicator and sets a number of indicator-related properties.",
      "returns": "void",
@@ -2202,6 +2206,10 @@
         {
            "field": "max_boxes_count (const int)",
            "description": "The number of last box drawings displayed. Optional. The default is 50."
+        },
+        {
+           "field": "calc_bars_count (const int)",
+           "description": "Limits the initial calculation of a script to the last number of bars specified. When specified, a \"Calculated bars\" field will be included in the \"Calculation\" section of the script's \"Settings/Inputs\" tab. Optional. The default is 0, in which case the script executes on all available bars."
         },
         {
            "field": "max_polylines_count (const int)",
@@ -2519,7 +2527,7 @@
    {
      "pattern": "(?<![\\.]\\s*)\\b(input\\.source)(?=\\s*\\()",
      "codeblock": [
-        "input.source(defval, title, tooltip, inline, group, display) → series float"
+        "input.source(defval, title, tooltip, inline, group, display, confirm) → series float"
      ],
      "markdown": "Adds an input to the Inputs tab of your script's Settings, which allows you to provide configuration options to script users. This function adds a dropdown that allows the user to select a source for the calculation, e.g. close, hl2, etc. The user can also select an output from another indicator on their chart as the source.",
      "returns": "Value of input variable.",
@@ -2548,6 +2556,10 @@
         {
            "field": "display (const plot_display)",
            "description": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all."
+        },
+        {
+           "field": "confirm (const bool)",
+           "description": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false."
         }
      ]
   },
@@ -5374,7 +5386,7 @@
    {
      "pattern": "(?<![\\.]\\s*)\\b(plot)(?=\\s*\\()",
      "codeblock": [
-        "plot(series, title, color, linewidth, style, trackprice, histbase, offset, join, editable, show_last, display, format, precision) → plot"
+        "plot(series, title, color, linewidth, style, trackprice, histbase, offset, join, editable, show_last, display, format, precision, force_overlay) → plot"
      ],
      "markdown": "Plots a series of data on the chart.",
      "returns": "A plot object.",
@@ -5435,13 +5447,17 @@
         {
            "field": "precision (input int)",
            "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
+        },
+        {
+           "field": "force_overlay (const bool)",
+           "description": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false."
         }
      ]
   },
    {
      "pattern": "(?<![\\.]\\s*)\\b(plotarrow)(?=\\s*\\()",
      "codeblock": [
-        "plotarrow(series, title, colorup, colordown, offset, minheight, maxheight, editable, show_last, display, format, precision) → void"
+        "plotarrow(series, title, colorup, colordown, offset, minheight, maxheight, editable, show_last, display, format, precision, force_overlay) → void"
      ],
      "markdown": "Plots up and down arrows on the chart. Up arrow is drawn at every indicator positive value, down arrow is drawn at every negative value. If indicator returns na then no arrow is drawn. Arrows has different height, the more absolute indicator value the longer arrow is drawn.",
      "returns": "void",
@@ -5494,13 +5510,17 @@
         {
            "field": "precision (input int)",
            "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
+        },
+        {
+           "field": "force_overlay (const bool)",
+           "description": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false."
         }
      ]
   },
    {
      "pattern": "(?<![\\.]\\s*)\\b(plotbar)(?=\\s*\\()",
      "codeblock": [
-        "plotbar(open, high, low, close, title, color, editable, show_last, display, format, precision) → void"
+        "plotbar(open, high, low, close, title, color, editable, show_last, display, format, precision, force_overlay) → void"
      ],
      "markdown": "Plots ohlc bars on the chart.",
      "returns": "void",
@@ -5549,13 +5569,17 @@
         {
            "field": "precision (input int)",
            "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
+        },
+        {
+           "field": "force_overlay (const bool)",
+           "description": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false."
         }
      ]
   },
    {
      "pattern": "(?<![\\.]\\s*)\\b(plotcandle)(?=\\s*\\()",
      "codeblock": [
-        "plotcandle(open, high, low, close, title, color, wickcolor, editable, show_last, bordercolor, display, format, precision) → void"
+        "plotcandle(open, high, low, close, title, color, wickcolor, editable, show_last, bordercolor, display, format, precision, force_overlay) → void"
      ],
      "markdown": "Plots candles on the chart.",
      "returns": "void",
@@ -5612,20 +5636,24 @@
         {
            "field": "precision (input int)",
            "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
+        },
+        {
+           "field": "force_overlay (const bool)",
+           "description": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false."
         }
      ]
   },
    {
      "pattern": "(?<![\\.]\\s*)\\b(plotchar)(?=\\s*\\()",
      "codeblock": [
-        "plotchar(series, title, char, location, color, offset, text, textcolor, editable, size, show_last, display, format, precision) → void"
+        "plotchar(series, title, char, location, color, offset, text, textcolor, editable, size, show_last, display, format, precision, force_overlay) → void"
      ],
      "markdown": "Plots visual shapes using any given one Unicode character on the chart.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_plotchar",
      "param": [
         {
-           "field": "series (series int|float)",
+           "field": "series (series int|float|bool)",
            "description": "Series of data to be plotted as shapes. Series is treated as a series of boolean values for all location values except location.absolute. Required argument."
         },
         {
@@ -5679,20 +5707,24 @@
         {
            "field": "precision (input int)",
            "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
+        },
+        {
+           "field": "force_overlay (const bool)",
+           "description": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false."
         }
      ]
   },
    {
      "pattern": "(?<![\\.]\\s*)\\b(plotshape)(?=\\s*\\()",
      "codeblock": [
-        "plotshape(series, title, style, location, color, offset, text, textcolor, editable, size, show_last, display, format, precision) → void"
+        "plotshape(series, title, style, location, color, offset, text, textcolor, editable, size, show_last, display, format, precision, force_overlay) → void"
      ],
      "markdown": "Plots visual shapes on the chart.",
      "returns": "void",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_plotshape",
      "param": [
         {
-           "field": "series (series int|float)",
+           "field": "series (series int|float|bool)",
            "description": "Series of data to be plotted as shapes. Series is treated as a series of boolean values for all location values except location.absolute. Required argument."
         },
         {
@@ -5746,6 +5778,10 @@
         {
            "field": "precision (input int)",
            "description": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function."
+        },
+        {
+           "field": "force_overlay (const bool)",
+           "description": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false."
         }
      ]
   },
@@ -5992,7 +6028,7 @@
    {
      "pattern": "(?<![\\.]\\s*)\\b(request\\.security)(?=\\s*\\()",
      "codeblock": [
-        "request.security(symbol, timeframe, expression, gaps, lookahead, ignore_invalid_symbol, currency) → series <type>"
+        "request.security(symbol, timeframe, expression, gaps, lookahead, ignore_invalid_symbol, currency, calc_bars_count) → series <type>"
      ],
      "markdown": "Requests data from another symbol and/or timeframe.",
      "returns": "A result determined by `expression`.",
@@ -6025,13 +6061,17 @@
         {
            "field": "currency (simple string)",
            "description": "Currency into which values expressed in currency units are to be converted. The conversion rates used are based on the FX_IDC pairs' daily rates of the previous day. Optional. The default is syminfo.currency."
+        },
+        {
+           "field": "calc_bars_count (simple int)",
+           "description": "If specified, the function will only request this number of values from the end of the symbol's history and calculate `expression` as if these values are the only available data, which might improve calculation speed in some cases. Optional. The default is na."
         }
      ]
   },
    {
      "pattern": "(?<![\\.]\\s*)\\b(request\\.security_lower_tf)(?=\\s*\\()",
      "codeblock": [
-        "request.security_lower_tf(symbol, timeframe, expression, ignore_invalid_symbol, currency, ignore_invalid_timeframe) → array<type>"
+        "request.security_lower_tf(symbol, timeframe, expression, ignore_invalid_symbol, currency, ignore_invalid_timeframe, calc_bars_count) → array<type>"
      ],
      "markdown": "Requests data from a specified symbol from a lower timeframe than the chart's. The function returns an array containing one element for each closed lower timeframe intrabar inside the current chart's bar.",
      "returns": "An array of a type determined by `expression`, or a tuple of these.",
@@ -6060,13 +6100,17 @@
         {
            "field": "ignore_invalid_timeframe (const bool)",
            "description": "Determines the behavior of the function when the chart's timeframe is smaller than the `timeframe` used in the function call. If false, the script will halt and throw a runtime error. If true, the function will return na and execution will continue. Optional. The default is false."
+        },
+        {
+           "field": "calc_bars_count (simple int)",
+           "description": "If specified, the function will only request this number of values from the end of the symbol's history and calculate `expression` as if these values are the only available data, which might improve calculation speed in some cases. Optional. The default is na."
         }
      ]
   },
    {
      "pattern": "(?<![\\.]\\s*)\\b(request\\.seed)(?=\\s*\\()",
      "codeblock": [
-        "request.seed(source, symbol, expression, ignore_invalid_symbol) → series <type>"
+        "request.seed(source, symbol, expression, ignore_invalid_symbol, calc_bars_count) → series <type>"
      ],
      "markdown": "Requests data from a user-maintained GitHub repository and returns it as a series.",
      "returns": "Requested series or tuple of series, which may include array/matrix Ids.",
@@ -6081,12 +6125,16 @@
            "description": "Name of the file in the GitHub repository containing the data. The \".csv\" file extension must not be included."
         },
         {
-           "field": "expression (<arg_expr_type>)",
+           "field": "expression (\\<arg_expr_type\\>)",
            "description": "An expression to be calculated and returned from the requested symbol's context."
         },
         {
            "field": "ignore_invalid_symbol (input bool)",
            "description": "Determines the behavior of the function if the specified symbol is not found: if false, the script will halt and throw a runtime error; if true, the function will return na and execution will continue. Optional. The default is false."
+        },
+        {
+           "field": "calc_bars_count (simple int)",
+           "description": "If specified, the function will only request this number of values from the end of the symbol's history and calculate `expression` as if these values are the only available data, which might improve calculation speed in some cases. Optional. The default is na."
         }
      ]
   },
@@ -6504,7 +6552,7 @@
    {
      "pattern": "(?<![\\.]\\s*)\\b(strategy)(?=\\s*\\()",
      "codeblock": [
-        "strategy(title, shorttitle, overlay, format, precision, scale, pyramiding, calc_on_order_fills, calc_on_every_tick, max_bars_back, backtest_fill_limits_assumption, default_qty_type, default_qty_value, initial_capital, currency, slippage, commission_type, commission_value, process_orders_on_close, close_entries_rule, margin_long, margin_short, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, risk_free_rate, use_bar_magnifier, max_polylines_count) → void"
+        "strategy(title, shorttitle, overlay, format, precision, scale, pyramiding, calc_on_order_fills, calc_on_every_tick, max_bars_back, backtest_fill_limits_assumption, default_qty_type, default_qty_value, initial_capital, currency, slippage, commission_type, commission_value, process_orders_on_close, close_entries_rule, margin_long, margin_short, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, risk_free_rate, use_bar_magnifier, fill_orders_on_standard_ohlc, max_polylines_count) → void"
      ],
      "markdown": "This declaration statement designates the script as a strategy and sets a number of strategy-related properties.",
      "returns": "void",
@@ -6615,12 +6663,20 @@
            "description": "The number of last box drawings displayed. Optional. The default is 50."
         },
         {
+           "field": "calc_bars_count (const int)",
+           "description": "Limits the initial calculation of a script to the last number of bars specified. When specified, a \"Calculated bars\" field will be included in the \"Calculation\" section of the script's \"Settings/Inputs\" tab. Optional. The default is 0, in which case the script executes on all available bars."
+        },
+        {
            "field": "risk_free_rate (const int|float)",
            "description": "The risk-free rate of return is the annual percentage change in the value of an investment with minimal or zero risk. Optional. The default is 2."
         },
         {
            "field": "use_bar_magnifier (const bool)",
            "description": "When true, the Broker Emulator uses lower timeframe data during history backtesting to achieve more realistic results. Optional. The default is false."
+        },
+        {
+           "field": "fill_orders_on_standard_ohlc (const bool)",
+           "description": "When true, forces strategies running on Heikin Ashi charts to fill orders using actual OHLC prices, for more realistic results. Optional. The default is false."
         },
         {
            "field": "max_polylines_count (const int)",

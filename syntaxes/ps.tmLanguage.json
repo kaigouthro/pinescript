@@ -6,6 +6,7 @@
     {"include": "#imports"},
     {"include": "#strings"},
     {"include": "#hover_function_parameters"},
+    {"include": "#hover_variable_constant_type"},
     {"include": "#built_in_variables"},
     {"include": "#keywords"},
     {"include": "#built_in_functions"},
@@ -589,7 +590,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(account_currency|cash|equity|eventrades|fixed|grossloss_percent|grossprofit_percent|grossloss|grossprofit|initial_capital|long|losstrades|margin_liquidation_price|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown_percent|max_runup_percent|netprofit_percent|openprofit_percent|max_drawdown|max_runup|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b(?!\\s*\\()",
+          "match": "(?<![\\.]\\s*)\\b(strategy)(\\.)(account_currency|avg_losing_trade_percent|avg_losing_trade|avg_trade_percent|avg_trade|avg_winning_trade_percent|avg_winning_trade|cash|equity|eventrades|fixed|grossloss_percent|grossprofit_percent|grossloss|grossprofit|initial_capital|long|losstrades|margin_liquidation_price|max_contracts_held_all|max_contracts_held_long|max_contracts_held_short|max_drawdown_percent|max_runup_percent|netprofit_percent|openprofit_percent|max_drawdown|max_runup|netprofit|openprofit|percent_of_equity|position_avg_price|position_entry_name|position_size|short|wintrades)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -1544,7 +1545,7 @@
     "hover_function_parameters":{
       "patterns": [
         {
-          "match": "(?<=^(?:(?:[a-zA-Z_]\\w*)|(?:\\b[\\w\\.]*\\.(?:(?:[a-zA-Z_]\\w*)|(?:new\\s*<\\s*[a-zA-Z_][^\\(\\)]*\\b\\s*>))))\\s*\\(\\s*)([^\\(\\)]*)\\)\\s*(→)(.+)",
+          "match": "(?<=^\\s\\((?:function|variable|constant)\\)\\s(?:(?:[a-zA-Z_]\\w*)|(?:\\b[\\w\\.]*\\b\\.(?:(?:[a-zA-Z_]\\w*)|(?:new\\s*<\\s*[a-zA-Z_][^\\(\\)]*\\b\\s*>))))\\s*\\(\\s*)([^\\(\\)]*)\\)\\s*(→)(.+)",
           "captures": {
             "1":{
               "patterns": [
@@ -1571,6 +1572,22 @@
                 }
               ]
             }
+          }
+        },
+        {
+          "match": "^\\s(\\(function\\))\\s(?=(?:(?:[a-zA-Z_]\\w*)|(?:\\b[\\w\\.]*\\b\\.(?:(?:[a-zA-Z_]\\w*)|(?:new\\s*<\\s*[a-zA-Z_][^\\(\\)]*\\b\\s*>))))\\s*\\(\\s*[^\\(\\)]*\\)\\s*→.+)",
+          "captures": {
+            "1":{"name":"support.type.primitive.ps"}
+          }
+        }
+      ]
+    },
+    "hover_variable_constant_type":{
+      "patterns": [
+        {
+          "match": "^\\s(\\((?:variable|constant|type)\\))\\s(?=(?:(?:\\b[\\w\\.]*\\b\\.[a-zA-Z_]\\w*)|(?:[a-zA-Z_]\\w*))\\b(?!\\s*[\\(\\.]))",
+          "captures": {
+            "1":{"name":"support.type.primitive.ps"}
           }
         }
       ]

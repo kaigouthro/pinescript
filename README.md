@@ -4,12 +4,15 @@
 ## Language support for Pine Script V5 with Syntax Highlighting & Snippets
 
 ## Release Notes
-#### **3.3.1**
+#### **3.4.0**
 
-*18.04.2024 **Update***
-- Snippets for built-in variables, functions and constants updated to Pinescript release March 2024.
-- Hover popup descriptions for overloaded functions added.
-- Theme color minor fixed.
+*06.06.2024 **Update***
+- Snippets for built-in variables, functions and constants updated to Pinescript release June 2024.
+- Rework of hover popup presentation.
+- Built-in types for hover popup added.
+- Popup window border become more visible in several dark themes.
+- Choices and default values for snippets updated.
+- Typo and bug fixes for snippets and hover popups.
 
 ---
 
@@ -17,9 +20,6 @@
 **Note: This is a forked project from JeylaniB's [Pine Script](https://marketplace.visualstudio.com/items?itemName=JeylaniB.pinescript) extension.**
 
 PineScript Helper provides language support for PineScript, the scripting language used in TradingView. This extension enhances the coding experience by offering syntax highlighting, snippets, and hovers to provide reference manual information for PineScript scripts.
-
-### What is PineScript?
-PineScript is a domain-specific scripting language developed by TradingView. It is primarily used to create custom technical indicators, strategies, and alerts within the TradingView platform. PineScript is specifically designed for financial market analysis and allows traders to create their own indicators and strategies to automate trading decisions.
 
 ---
 
@@ -150,4 +150,4 @@ This extension is released under the [MIT License](./LICENSE.md).
 
 ---
 
-*Version 3.3.1*
+*Version 3.4.0*

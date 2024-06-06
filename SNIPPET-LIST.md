@@ -1,4 +1,4 @@
-*Version 3.3.1*
+*Version 3.4.0*
 # Snippet's Prefix's
 
 - [Snippet's Prefix's](#snippets-prefixs)
@@ -73,6 +73,12 @@
 |`session.ispostmarket`             |
 |`session.ispremarket`              |
 |`strategy.account_currency`        |
+|`strategy.avg_losing_trade`  _**new!**_                                |
+|`strategy.avg_losing_trade_percent`  _**new!**_                        |
+|`strategy.avg_trade`  _**new!**_                                       |
+|`strategy.avg_trade_percent`  _**new!**_                               |
+|`strategy.avg_winning_trade`  _**new!**_                               |
+|`strategy.avg_winning_trade_percent`  _**new!**_                       |
 |`strategy.closedtrades`            |
 |`strategy.equity`                  |
 |`strategy.eventrades`              |
@@ -96,7 +102,7 @@
 |`strategy.netprofit_percent`       |
 |`strategy.openprofit_percent`      |
 |`strategy.opentrades`              |
-|`strategy.opentrades.capital_held` _**new!**_              |
+|`strategy.opentrades.capital_held` |
 |`strategy.position_avg_price`      |
 |`strategy.position_entry_name`     |
 |`strategy.position_size`           |
@@ -107,7 +113,7 @@
 |`syminfo.currency`                 |
 |`syminfo.description`              |
 |`syminfo.employees`                |
-|`syminfo.expiration_date`  _**new!**_                       |
+|`syminfo.expiration_date`          |
 |`syminfo.industry`                 |
 |`syminfo.minmove`                  |
 |`syminfo.mintick`                  |
@@ -474,14 +480,14 @@
 |`str.match`                               |
 |`str.pos`                                 |
 |`str.replace`                             |
-|`str.repeat` _**new!**_                                 |
+|`str.repeat`                              |
 |`str.replace_all`                         |
 |`str.split`                               |
 |`str.startswith`                          |
 |`str.substring`                           |
 |`str.tonumber`                            |
 |`str.tostring`                            |
-|`str.trim`   _**new!**_                                 |
+|`str.trim`                                |
 |`str.upper`                               |
 |`strategy.cancel`                         |
 |`strategy.cancel_all`                     |
