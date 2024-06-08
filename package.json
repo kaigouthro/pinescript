@@ -5,7 +5,7 @@
 	"icon": "images/pineicon.png",
 	"publisher": "salbert11",
 	"license": "MIT",
-	"version": "3.4.0-beta-2",
+	"version": "3.4.0",
 	"engines": {
 		"vscode": "^1.62.0"
 	},

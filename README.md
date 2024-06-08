@@ -60,7 +60,7 @@ PineScript Helper provides language support for PineScript, the scripting langua
 
 *Note: If you prefer a different theme, you are free to use any other themes of your choice. PineScript Helper is compatible with most themes.*
 
-  ![](https://github.com/salbert11/pinethemes/raw/pinescript-color-themes/images/pine-themes.gif?raw=true)
+  ![](https://github.com/salbert11/pinescript/blob/pinescript-helper/images/pine-themes.gif?raw=true)
 
 
 ---
