@@ -131,153 +131,160 @@
     "body" : [
         "and$0"
     ],
-    "description" : "and | Language Operator"
+    "description" : "and | Language Keyword"
 },
 "else ⇨ ⟗" : {
     "prefix" : "else",
     "body" : [
         "else$0"
     ],
-    "description" : "else | Language Operator"
+    "description" : "else | Language Keyword"
 },
 "else if ⇨ ⟗" : {
     "prefix" : "else if",
     "body" : [
         "else if$0"
     ],
-    "description" : "else if | Language Operator"
+    "description" : "else if | Language Keyword"
 },
 "export ⇨ ⟗" : {
     "prefix" : "export",
     "body" : [
         "export$0"
     ],
-    "description" : "export | Language Operator"
+    "description" : "export | Language Keyword"
 },
 "for ⇨ ⟗" : {
     "prefix" : "for",
     "body" : [
         "for$0"
     ],
-    "description" : "for | Language Operator"
+    "description" : "for | Language Keyword"
 },
 "if ⇨ ⟗" : {
     "prefix" : "if",
     "body" : [
         "if$0"
     ],
-    "description" : "if | Language Operator"
+    "description" : "if | Language Keyword"
 },
 "import ⇨ ⟗" : {
     "prefix" : "import",
     "body" : [
         "import$0"
     ],
-    "description" : "import | Language Operator"
+    "description" : "import | Language Keyword"
 },
 "method ⇨ ⟗" : {
     "prefix" : "method",
     "body" : [
         "method$0"
     ],
-    "description" : "method | Language Operator"
+    "description" : "method | Language Keyword"
 },
 "not ⇨ ⟗" : {
     "prefix" : "not",
     "body" : [
         "not$0"
     ],
-    "description" : "not | Language Operator"
+    "description" : "not | Language Keyword"
 },
 "or ⇨ ⟗" : {
     "prefix" : "or",
     "body" : [
         "or$0"
     ],
-    "description" : "or | Language Operator"
+    "description" : "or | Language Keyword"
 },
 "const ⇨ ⟗" : {
     "prefix" : "const",
     "body" : [
         "const$0"
     ],
-    "description" : "const | Language Operator"
+    "description" : "const | Language Keyword"
 },
 "series ⇨ ⟗" : {
     "prefix" : "series",
     "body" : [
         "series$0"
     ],
-    "description" : "series | Language Operator"
+    "description" : "series | Language Keyword"
 },
 "simple ⇨ ⟗" : {
     "prefix" : "simple",
     "body" : [
         "simple$0"
     ],
-    "description" : "simple | Language Operator"
+    "description" : "simple | Language Keyword"
 },
 "switch ⇨ ⟗" : {
     "prefix" : "switch",
     "body" : [
         "switch$0"
     ],
-    "description" : "switch | Language Operator"
+    "description" : "switch | Language Keyword"
 },
 "type ⇨ ⟗" : {
     "prefix" : "type",
     "body" : [
         "type$0"
     ],
-    "description" : "type | Language Operator"
+    "description" : "type | Language Keyword"
 },
 "var ⇨ ⟗" : {
     "prefix" : "var",
     "body" : [
         "var$0"
     ],
-    "description" : "var | Language Operator"
+    "description" : "var | Language Keyword"
 },
 "varip ⇨ ⟗" : {
     "prefix" : "varip",
     "body" : [
         "varip$0"
     ],
-    "description" : "varip | Language Operator"
+    "description" : "varip | Language Keyword"
 },
 "while ⇨ ⟗" : {
     "prefix" : "while",
     "body" : [
         "while$0"
     ],
-    "description" : "while | Language Operator"
+    "description" : "while | Language Keyword"
 },
 "true ⇨ ⟗" : {
     "prefix" : "true",
     "body" : [
         "true$0"
     ],
-    "description" : "true | Language Operator"
+    "description" : "true | Constant Boolean"
 },
 "false ⇨ ⟗" : {
     "prefix" : "false",
     "body" : [
         "false$0"
     ],
-    "description" : "false | Language Operator"
+    "description" : "false | Constant Boolean"
 },
 "continue ⇨ ⟗" : {
     "prefix" : "continue",
     "body" : [
         "continue$0"
     ],
-    "description" : "continue | Language Operator"
+    "description" : "continue | Language Keyword"
 },
 "break ⇨ ⟗" : {
     "prefix" : "break",
     "body" : [
         "break$0"
     ],
-    "description" : "break | Language Operator"
+    "description" : "break | Language Keyword"
+},
+"enum ⇨ ⟗" : {
+    "prefix" : "enum",
+    "body" : [
+        "enum$0"
+    ],
+    "description" : "enum | Language Keyword"
 }
 }

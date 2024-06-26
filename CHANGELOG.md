@@ -1,4 +1,11 @@
 # Change Log
+#### **3.4.1**
+
+*27.06.2024 **Update***
+- Grammars for `enum` types added.
+- Typo fixed in built-in function snippets.
+
+---
 #### **3.4.0**
 
 *06.06.2024 **Update***

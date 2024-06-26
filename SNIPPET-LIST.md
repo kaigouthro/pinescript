@@ -1,4 +1,4 @@
-*Version 3.4.0*
+*Version 3.4.1*
 # Snippet's Prefix's
 
 - [Snippet's Prefix's](#snippets-prefixs)
@@ -7,6 +7,7 @@
   - [Built-In\_Constants](#built-in_constants)
   - [Built-In\_Scripts](#built-in_scripts)
   - [Operators](#operators)
+  - [Keywords](#keywords)
   - [Comments](#comments)
   - [Added\_Functions\_|\_scripts](#added_functions__scripts)
   - [Unicode](#unicode)
@@ -73,12 +74,12 @@
 |`session.ispostmarket`             |
 |`session.ispremarket`              |
 |`strategy.account_currency`        |
-|`strategy.avg_losing_trade`  _**new!**_                                |
-|`strategy.avg_losing_trade_percent`  _**new!**_                        |
-|`strategy.avg_trade`  _**new!**_                                       |
-|`strategy.avg_trade_percent`  _**new!**_                               |
-|`strategy.avg_winning_trade`  _**new!**_                               |
-|`strategy.avg_winning_trade_percent`  _**new!**_                       |
+|`strategy.avg_losing_trade`        |
+|`strategy.avg_losing_trade_percent`|
+|`strategy.avg_trade`               |
+|`strategy.avg_trade_percent`       |
+|`strategy.avg_winning_trade`       |
+|`strategy.avg_winning_trade_percent`|
 |`strategy.closedtrades`            |
 |`strategy.equity`                  |
 |`strategy.eventrades`              |
@@ -339,6 +340,7 @@
 |`input`                                   |
 |`input.bool`                              |
 |`input.color`                             |
+|`input.enum` _**new!**_                                                 |
 |`input.float`                             |
 |`input.float.options`                     |
 |`input.int`                               |
@@ -885,6 +887,12 @@
 |   `>=`       |
 |   `?:`       |
 |   `=`        |
+
+-----
+
+## Keywords
+|              |
+|     ---      |
 |   `and`      |
 |   `else`     |
 |   `else if`  |
@@ -907,6 +915,7 @@
 |   `false`    |
 |   `continue` |
 |   `break`    |
+|   `enum` _**new!**_                                                 |
 
 -----
 

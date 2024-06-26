@@ -4,15 +4,11 @@
 ## Language support for Pine Script V5 with Syntax Highlighting & Snippets
 
 ## Release Notes
-#### **3.4.0**
+#### **3.4.1**
 
-*06.06.2024 **Update***
-- Snippets for built-in variables, functions and constants updated to Pinescript release June 2024.
-- Rework of hover popup presentation.
-- Built-in types for hover popup added.
-- Popup window border become more visible in several dark themes.
-- Choices and default values for snippets updated.
-- Typo and bug fixes for snippets and hover popups.
+*27.06.2024 **Update***
+- Grammars for `enum` types added.
+- Typo fixed in built-in function snippets.
 
 ---
 
@@ -150,4 +146,4 @@ This extension is released under the [MIT License](./LICENSE.md).
 
 ---
 
-*Version 3.4.0*
+*Version 3.4.1*

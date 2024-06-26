@@ -66,7 +66,7 @@
           }
         },
         {
-          "match": "(^\/\/)\\s*(@)(description|function|param|returns|type|field|strategy_alert_message|variable)(.*)",
+          "match": "(^\/\/)\\s*(@)(description|enum|function|param|returns|type|field|strategy_alert_message|variable)(.*)",
           "captures": {
             "0": {"name": "meta.annotation.ps"},
             "1": {"name": "comment.line.double-slash.ps"},
@@ -923,7 +923,7 @@
           }
         },
         {
-          "match": "\\b(input)(\\.)(bool|color|float|int|price|session|source|string|symbol|text_area|timeframe|time)\\b(?=\\s*\\()",
+          "match": "\\b(input)(\\.)(bool|color|enum|float|int|price|session|source|string|symbol|text_area|timeframe|time)\\b(?=\\s*\\()",
           "captures": {
             "0": {
               "name": "support.function.property.ps"
@@ -1338,7 +1338,7 @@
           }
         },
         {
-          "match": "^(export)\\s+(type)\\b",
+          "match": "^(export)\\s+(enum|type)\\b",
           "captures": {
             "1": {"name": "keyword.control.export.ps"},
             "2": {"name": "storage.type.type.ps"}
@@ -1352,7 +1352,7 @@
           }
         },
         {
-          "match": "^\\btype\\b",
+          "match": "^\\b(enum|type)\\b",
           "name": "storage.type.type.ps"
         }
       ]
@@ -1885,7 +1885,7 @@
     "keyword_control_words":{
       "patterns": [
         {
-          "match": "(?<![\\.]\\s*)\\b(method|type)\\b",
+          "match": "(?<![\\.]\\s*)\\b(enum|method|type)\\b",
           "name": "storage.type.function.ps"
         },
         {

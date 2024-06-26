@@ -33,21 +33,21 @@
       "body": [
          "array.binary_search(${1:id = $2, val = $3})${0}"
       ],
-      "description": "Returns the index of the value else -1. Array must be sorted in ascending order. ⇨ 𝑓 | array.binary_search(id = any array object, val = series int|float) → series int"
+      "description": "Returns the index of the value else -1. Array must be sorted in ascending order. ⇨ 𝑓 | array.binary_search(id = int[]|float[], val = int|float) → int"
    },
    "array.binary_search_leftmost ⇨ 𝑓": {
       "prefix": "array.binary_search_leftmost",
       "body": [
          "array.binary_search_leftmost(${1:id = $2, val = $3})${0}"
       ],
-      "description": "Returns the index of the value. If value not found, returns the index of the next smallest element to the left of where the value would lie if it was in the array. Array must be sorted in ascending order. ⇨ 𝑓 | array.binary_search_leftmost(id = any array object, val = series int|float) → series int"
+      "description": "Returns the index of the value. If value not found, returns the index of the next smallest element to the left of where the value would lie if it was in the array. Array must be sorted in ascending order. ⇨ 𝑓 | array.binary_search_leftmost(id = int[]|float[], val = int|float) → int"
    },
    "array.binary_search_rightmost ⇨ 𝑓": {
       "prefix": "array.binary_search_rightmost",
       "body": [
          "array.binary_search_rightmost(${1:id = $2, val = $3})${0}"
       ],
-      "description": "Returns the index of the value. If value not found, returns the index of the element to the right of where the value would lie if it was in the array. Array must be sorted in ascending order. ⇨ 𝑓 | array.binary_search_rightmost(id = any array object, val = series int|float) → series int"
+      "description": "Returns the index of the value. If value not found, returns the index of the element to the right of where the value would lie if it was in the array. Array must be sorted in ascending order. ⇨ 𝑓 | array.binary_search_rightmost(id = int[]|float[], val = int|float) → int"
    },
    "array.clear ⇨ 𝑓": {
       "prefix": "array.clear",
@@ -82,21 +82,21 @@
       "body": [
          "array.every(${1:id = $2})${0}"
       ],
-      "description": "True if all elements are true else false ⇨ 𝑓 | array.every(id = int|float|bool) → series bool"
+      "description": "True if all elements are true else false ⇨ 𝑓 | array.every(id = int[]|float[]|bool[]) → bool"
    },
    "array.fill ⇨ 𝑓": {
       "prefix": "array.fill",
       "body": [
          "array.fill(${1:id = $2, value = $3${4:, index_from = ${5:0}${6:, index_to = ${7:0}}}})${0}"
       ],
-      "description": "Sets elements of an array to a single value ⇨ 𝑓 | array.fill(id = any array type, value = series <type>, index_from = int, index_to = int) → bool[]"
+      "description": "Sets elements of an array to a single value ⇨ 𝑓 | array.fill(id = any array type, value = series <type>, index_from = int, index_to = int) → void"
    },
    "array.first ⇨ 𝑓": {
       "prefix": "array.first",
       "body": [
          "array.first(${1:id = $2})${0}"
       ],
-      "description": "Returns the array's first element. ⇨ 𝑓 | array.first(id = any array object) → series any type"
+      "description": "Returns the array's first element. ⇨ 𝑓 | array.first(id = any array type) → series <type>"
    },
    "array.from ⇨ 𝑓": {
       "prefix": "array.from",
@@ -117,7 +117,7 @@
       "body": [
          "array.includes(${1:id = $2, value = $3})${0}"
       ],
-      "description": "True if the value was found in an array else false ⇨ 𝑓 | array.includes(id = any array type, value = series <type>) → series bool"
+      "description": "True if the value was found in an array else false ⇨ 𝑓 | array.includes(id = any array type, value = series <type>) → bool"
    },
    "array.indexof ⇨ 𝑓": {
       "prefix": "array.indexof",
@@ -138,7 +138,7 @@
       "body": [
          "array.join(${1:id = $2, separator = ${3:\"${4| ,\\,,\\|,;,.,-|}\"}})${0}"
       ],
-      "description": "Concatenating all the elements of an array, separated by `separator ⇨ 𝑓 | array.join(id = int[]|float[]|string[], separator = series string) → series string"
+      "description": "Concatenating all the elements of an array, separated by `separator ⇨ 𝑓 | array.join(id = int[]|float[]|string[], separator = string) → string"
    },
    "array.last ⇨ 𝑓": {
       "prefix": "array.last",
@@ -159,98 +159,98 @@
       "body": [
          "array.max(${1:id = $2${3:, nth = ${4:0}}})${0}"
       ],
-      "description": "Largest value from a given array ⇨ 𝑓 | array.max(id = int[]|float[], nth = int) → series int|float"
+      "description": "Largest value from a given array ⇨ 𝑓 | array.max(id = int[]|float[], nth = int) → int|float"
    },
    "array.median ⇨ 𝑓": {
       "prefix": "array.median",
       "body": [
          "array.median(${1:id = $2})${0}"
       ],
-      "description": "Median of an array's elements ⇨ 𝑓 | array.median(id = int[]|float[]) → series int|float"
+      "description": "Median of an array's elements ⇨ 𝑓 | array.median(id = int[]|float[]) → int|float"
    },
    "array.min ⇨ 𝑓": {
       "prefix": "array.min",
       "body": [
          "array.min(${1:id = $2${3:, nth = ${4:0}}})${0}"
       ],
-      "description": "Lowest value of an array's elements ⇨ 𝑓 | array.min(id = int[]|float[], nth = int) → series int|float"
+      "description": "Lowest value of an array's elements ⇨ 𝑓 | array.min(id = int[]|float[], nth = int) → int|float"
    },
    "array.mode ⇨ 𝑓": {
       "prefix": "array.mode",
       "body": [
          "array.mode(${1:id = $2})${0}"
       ],
-      "description": "Mode of an array's elements ⇨ 𝑓 | array.mode(id = int[]|float[]) → series int|float"
+      "description": "Mode of an array's elements ⇨ 𝑓 | array.mode(id = int[]|float[]) → int|float"
    },
    "array.new_bool ⇨ 𝑓": {
       "prefix": "array.new_bool",
       "body": [
          "array.new_bool(${1:size = ${2:0}${3:, initial_value = ${4:na}}})${0}"
       ],
-      "description": "Creates a new array object of bool ⇨ 𝑓 | array.new_bool(size = int, initial_value = series bool) → bool[]"
+      "description": "Creates a new array object of bool ⇨ 𝑓 | array.new_bool(size = int, initial_value = bool) → bool[]"
    },
    "array.new_box ⇨ 𝑓": {
       "prefix": "array.new_box",
       "body": [
          "array.new_box(${1:size = ${2:0}${3:, initial_value = ${4:na}}})${0}"
       ],
-      "description": "Creates a new array object of box ⇨ 𝑓 | array.new_box(size = int, initial_value = series box) → box[]"
+      "description": "Creates a new array object of box ⇨ 𝑓 | array.new_box(size = int, initial_value = box) → box[]"
    },
    "array.new_color ⇨ 𝑓": {
       "prefix": "array.new_color",
       "body": [
          "array.new_color(${1:size = ${2:0}${3:, initial_value = ${4:na}}})${0}"
       ],
-      "description": "Creates a new array object of color ⇨ 𝑓 | array.new_color(size = int, initial_value = series color) → color[]"
+      "description": "Creates a new array object of color ⇨ 𝑓 | array.new_color(size = int, initial_value = color) → color[]"
    },
    "array.new_float ⇨ 𝑓": {
       "prefix": "array.new_float",
       "body": [
          "array.new_float(${1:size = ${2:0}${3:, initial_value = ${4:na}}})${0}"
       ],
-      "description": "Creates a new array object of float ⇨ 𝑓 | array.new_float(size = int, initial_value = series float) → float[]"
+      "description": "Creates a new array object of float ⇨ 𝑓 | array.new_float(size = int, initial_value = float) → float[]"
    },
    "array.new_int ⇨ 𝑓": {
       "prefix": "array.new_int",
       "body": [
          "array.new_int(${1:size = ${2:0}${3:, initial_value = ${4:na}}})${0}"
       ],
-      "description": "Creates a new array object of int ⇨ 𝑓 | array.new_int(size = int, initial_value = series int) → int[]"
+      "description": "Creates a new array object of int ⇨ 𝑓 | array.new_int(size = int, initial_value = int) → int[]"
    },
    "array.new_label ⇨ 𝑓": {
       "prefix": "array.new_label",
       "body": [
          "array.new_label(${1:size = ${2:0}${3:, initial_value = ${4:na}}})${0}"
       ],
-      "description": "Creates a new array object of label ⇨ 𝑓 | array.new_label(size = int, initial_value = series label) → label[]"
+      "description": "Creates a new array object of label ⇨ 𝑓 | array.new_label(size = int, initial_value = label) → label[]"
    },
    "array.new_line ⇨ 𝑓": {
       "prefix": "array.new_line",
       "body": [
          "array.new_line(${1:size = ${2:0}${3:, initial_value = ${4:na}}})${0}"
       ],
-      "description": "Creates a new array object of line ⇨ 𝑓 | array.new_line(size = int, initial_value = series line) → line[]"
+      "description": "Creates a new array object of line ⇨ 𝑓 | array.new_line(size = int, initial_value = line) → line[]"
    },
    "array.new_linefill ⇨ 𝑓": {
       "prefix": "array.new_linefill",
       "body": [
          "array.new_linefill(${1:size = ${2:0}${3:, initial_value = ${4:na}}})${0}"
       ],
-      "description": "Creates a new array object of linefill ⇨ 𝑓 | array.new_linefill(size = int, initial_value = series linefill) → linefill[]"
+      "description": "Creates a new array object of linefill ⇨ 𝑓 | array.new_linefill(size = int, initial_value = linefill) → linefill[]"
    },
    "array.new_string ⇨ 𝑓": {
       "prefix": "array.new_string",
       "body": [
          "array.new_string(${1:size = ${2:0}${3:, initial_value = ${4:na}}})${0}"
       ],
-      "description": "Creates a new array object of string ⇨ 𝑓 | array.new_string(size = int, initial_value = series string) → string[]"
+      "description": "Creates a new array object of string ⇨ 𝑓 | array.new_string(size = int, initial_value = string) → string[]"
    },
    "array.new_table ⇨ 𝑓": {
       "prefix": "array.new_table",
       "body": [
          "array.new_table(${1:size = ${2:0}${3:, initial_value = ${4:na}}})${0}"
       ],
-      "description": "Creates a new array object of table ⇨ 𝑓 | array.new_table(size = int, initial_value = series table) → table[]"
+      "description": "Creates a new array object of table ⇨ 𝑓 | array.new_table(size = int, initial_value = table) → table[]"
    },
    "array.new ⇨ 𝑓": {
       "prefix": "array.new",
@@ -264,21 +264,21 @@
       "body": [
          "array.percentile_linear_interpolation(${1:id = $2, percentage = ${3| ,0,25,50,75,100|}})${0}"
       ],
-      "description": "Returns the value for which percentile are less than or equal to it, using linear interpolation. ⇨ 𝑓 | array.percentile_linear_interpolation(id = int[]|float[], percentage = series int|float) → series int|float"
+      "description": "Returns the value for which percentile are less than or equal to it, using linear interpolation. ⇨ 𝑓 | array.percentile_linear_interpolation(id = int[]|float[], percentage = int|float) → int|float"
    },
    "array.percentile_nearest_rank ⇨ 𝑓": {
       "prefix": "array.percentile_nearest_rank",
       "body": [
          "array.percentile_nearest_rank(${1:id = $2, percentage = ${3| ,0,25,50,75,100|}})${0}"
       ],
-      "description": "Returns the value for which percentile are less than or equal to it, using the nearest-rank method. ⇨ 𝑓 | array.percentile_nearest_rank(id = int[]|float[], percentage = series int|float) → series int|float"
+      "description": "Returns the value for which percentile are less than or equal to it, using the nearest-rank method. ⇨ 𝑓 | array.percentile_nearest_rank(id = int[]|float[], percentage = int|float) → int|float"
    },
    "array.percentrank ⇨ 𝑓": {
       "prefix": "array.percentrank",
       "body": [
          "array.percentrank(${1:id = $2, index = ${3:0}})${0}"
       ],
-      "description": "Returns the percentile rank of the element at the specified `index`. ⇨ 𝑓 | array.percentrank(id = int[]|float[], index = series int) → series int|float"
+      "description": "Returns the percentile rank of the element at the specified `index`. ⇨ 𝑓 | array.percentrank(id = int[]|float[], index = int) → int|float"
    },
    "array.pop ⇨ 𝑓": {
       "prefix": "array.pop",
@@ -334,7 +334,7 @@
       "body": [
          "array.size(${1:id = $2})${0}"
       ],
-      "description": "Number of elements in an array ⇨ 𝑓 | array.size(id = any array type) → series int"
+      "description": "Number of elements in an array ⇨ 𝑓 | array.size(id = any array type) → int"
    },
    "array.slice ⇨ 𝑓": {
       "prefix": "array.slice",
@@ -348,7 +348,7 @@
       "body": [
          "array.some(${1:id = $2})${0}"
       ],
-      "description": "Returns true if at least one element of the `id` array is true, false otherwise. ⇨ 𝑓 | array.some(id = bool[]) → series bool"
+      "description": "Returns true if at least one element of the `id` array is true, false otherwise. ⇨ 𝑓 | array.some(id = bool[]) → bool"
    },
    "array.sort ⇨ 𝑓": {
       "prefix": "array.sort",
@@ -362,7 +362,7 @@
       "body": [
          "array.sort_indices(${1:id = $2, order = ${3| ,order.ascending,order.descending|}})${0}"
       ],
-      "description": "Returns an array of indices which, when used to index the original array, will access its elements in their sorted order. ⇨ 𝑓 | array.sort_indices(id = float[], order = sort_order) → int[]"
+      "description": "Returns an array of indices which, when used to index the original array, will access its elements in their sorted order. ⇨ 𝑓 | array.sort_indices(id = int[]|float[]|string[], order = sort_order) → int[]"
    },
    "array.standardize ⇨ 𝑓": {
       "prefix": "array.standardize",
@@ -390,7 +390,7 @@
       "body": [
          "array.unshift(${1:id = $2, value = $3})${0}"
       ],
-      "description": "Inserts the value at the beginning of the array ⇨ 𝑓 | array.unshift(id = any array type, value = series <type>) → int|float"
+      "description": "Inserts the value at the beginning of the array ⇨ 𝑓 | array.unshift(id = any array type, value = series <type>) → void"
    },
    "array.variance ⇨ 𝑓": {
       "prefix": "array.variance",
@@ -420,21 +420,21 @@
       "body": [
          "bool(${1:x = $2})${0}"
       ],
-      "description": "Casts na to bool ⇨ 𝑓 | bool(x = int) → int"
+      "description": "Casts na to bool ⇨ 𝑓 | bool(x = int|float|bool) → bool"
    },
    "box ⇨ 𝑓": {
       "prefix": "box",
       "body": [
          "box(${1:x = $2})${0}"
       ],
-      "description": "Casts na to box ⇨ 𝑓 | box(x = box) → series box"
+      "description": "Casts na to box ⇨ 𝑓 | box(x = box) → box"
    },
    "box.copy ⇨ 𝑓": {
       "prefix": "box.copy",
       "body": [
          "box.copy(${1:id = $2})${0}"
       ],
-      "description": "Clones the box object. ⇨ 𝑓 | box.copy(id = box) → series box"
+      "description": "Clones the box object. ⇨ 𝑓 | box.copy(id = box) → box"
    },
    "box.delete ⇨ 𝑓": {
       "prefix": "box.delete",
@@ -448,7 +448,7 @@
       "body": [
          "box.get_bottom(${1:id = $2})${0}"
       ],
-      "description": "Price value of the bottom border of the box ⇨ 𝑓 | box.get_bottom(id = box) → series float"
+      "description": "Price value of the bottom border of the box ⇨ 𝑓 | box.get_bottom(id = box) → float"
    },
    "box.get_left ⇨ 𝑓": {
       "prefix": "box.get_left",
@@ -495,14 +495,14 @@
          " )",
          "${0}"
       ],
-      "description": "Creates new box object | Block ⇨ 𝑓 | box.new(left = int, top = int|float, right = int, bottom = int|float, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = string, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → series box"
+      "description": "Creates new box object | Block ⇨ 𝑓 | box.new(left = int, top = int|float, right = int, bottom = int|float, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → box"
    },
    "box.new ⇨ 𝑓": {
       "prefix": "box.new",
       "body": [
          "box.new(${1:left = ${2| ,bar_index,last_bar_index,time,last_bar_time|}, top = ${3| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, right = ${4| ,bar_index,last_bar_index,time,last_bar_time|}, bottom = ${5| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}${6:${7:, border_color = ${8:color.new(color = ${9| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${10:0})}}${11:, border_width = ${12| ,1,2,3,4,5|}}${13:, border_style = ${14| ,line.style_solid,line.style_dotted,line.style_dashed|}}${15:, extend = ${16| ,extend.none,extend.right,extend.left,extend.both|}}${17:, xloc = ${18| ,xloc.bar_index,xloc.bar_time|}}${19:, bgcolor = ${20:color.new(color = ${21| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${22:0})}}${23:, text = ${24:\"${25}\"}}${26:, text_size = ${27| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${28:, text_color = ${29:color.new(color = ${30| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${31:0})}}${32:, text_halign = ${33| ,text.align_center,text.align_left,text.align_right|}}${34:, text_valign = ${35| ,text.align_center,text.align_top,text.align_bottom|}}${36:, text_wrap = ${37| ,text.wrap_none,text.wrap_auto|}}${38:, text_font_family = ${39| ,font.family_default,font.family_monospace|}}}})${0}"
       ],
-      "description": "Creates new box object ⇨ 𝑓 | box.new(left = int, top = int|float, right = int, bottom = int|float, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = string, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → series box"
+      "description": "Creates new box object ⇨ 𝑓 | box.new(left = int, top = int|float, right = int, bottom = int|float, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → box"
    },
    "{b} box.new.point ⇨ 𝑓": {
       "prefix": "box.new.point",
@@ -526,14 +526,14 @@
          " )",
          "${0}"
       ],
-      "description": "Creates new box object by chart.point | Block ⇨ 𝑓 | box.new(top_left = chart.point, bottom_right = chart.point, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = string, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → series box"
+      "description": "Creates new box object by chart.point | Block ⇨ 𝑓 | box.new(top_left = chart.point, bottom_right = chart.point, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → box"
    },
    "box.new.point ⇨ 𝑓": {
       "prefix": "box.new.point",
       "body": [
          "box.new(${1:top_left = ${2:<chart.point>}, bottom_right = ${3:<chart.point>}${4:${5:, border_color = ${6:color.new(color = ${7| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${8:0})}}${9:, border_width = ${10| ,1,2,3,4,5|}}${11:, border_style = ${12| ,line.style_solid,line.style_dotted,line.style_dashed|}}${13:, extend = ${14| ,extend.none,extend.right,extend.left,extend.both|}}${15:, xloc = ${16| ,xloc.bar_index,xloc.bar_time|}}${17:, bgcolor = ${18:color.new(color = ${19| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${20:0})}}${21:, text = ${22:\"${23}\"}}${24:, text_size = ${25| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${26:, text_color = ${27:color.new(color = ${28| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${29:0})}}${30:, text_halign = ${31| ,text.align_center,text.align_left,text.align_right|}}${32:, text_valign = ${33| ,text.align_center,text.align_top,text.align_bottom|}}${34:, text_wrap = ${35| ,text.wrap_none,text.wrap_auto|}}${36:, text_font_family = ${37| ,font.family_default,font.family_monospace|}}}})${0}"
       ],
-      "description": "Creates new box object by chart.point ⇨ 𝑓 | box.new(top_left = chart.point, bottom_right = chart.point, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = string, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → series box"
+      "description": "Creates new box object by chart.point ⇨ 𝑓 | box.new(top_left = chart.point, bottom_right = chart.point, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → box"
    },
    "box.set_bgcolor ⇨ 𝑓": {
       "prefix": "box.set_bgcolor",
@@ -729,7 +729,7 @@
       "body": [
          "color.from_gradient(${1:value = ${2| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, bottom_value = ${3| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, top_value = ${4| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, bottom_color = ${5:color.new(color = ${6| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lsime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${7:0})}, top_color = ${8:color.new(color = ${9| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${10:0})}})${0}"
       ],
-      "description": "Linear gradient between bottom_color to top_color ⇨ 𝑓 | color.from_gradient(value = int|float, bottom_value = int|float, top_value = int|float, bottom_color = color, top_color = color) → series color"
+      "description": "Linear gradient between bottom_color to top_color ⇨ 𝑓 | color.from_gradient(value = int|float, bottom_value = int|float, top_value = int|float, bottom_color = color, top_color = color) → color"
    },
    "color.g ⇨ 𝑓": {
       "prefix": "color.g",
@@ -743,7 +743,7 @@
       "body": [
          "color.new(${1:color = ${2| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${3:0}})${0}"
       ],
-      "description": "Color with specified transparency. ⇨ 𝑓 | color.new(color = color, transp = int|float) → const color"
+      "description": "Color with specified transparency. ⇨ 𝑓 | color.new(color = color, transp = int|float) → color"
    },
    "color.r ⇨ 𝑓": {
       "prefix": "color.r",
@@ -771,14 +771,14 @@
       "body": [
          "dayofmonth(${1:time = ${2| ,time,timenow,time_close,last_bar_time|}${3:, timezone = ${4| ,syminfo.timezone,\"GMT-12\",\"GMT-11\",\"GMT-10\",\"GMT-9\",\"GMT-8\",\"GMT-7\",\"GMT-6\",\"GMT-5\",\"GMT-4\",\"GMT-3\",\"GMT-2\",\"GMT-1\",\"GMT+0\",\"GMT+1\",\"GMT+2\",\"GMT+3\",\"GMT+4\",\"GMT+5\",\"GMT+6\",\"GMT+7\",\"GMT+8\",\"GMT+9\",\"GMT+10\",\"GMT+11\",\"GMT+12\"|}}})${0}"
       ],
-      "description": "Day of month (in exchange timezone) for provided UNIX time ⇨ 𝑓 | dayofmonth(time = int, timezone = series string) → series int"
+      "description": "Day of month (in exchange timezone) for provided UNIX time ⇨ 𝑓 | dayofmonth(time = int, timezone = series string) → int"
    },
    "dayofweek ⇨ 𝑓": {
       "prefix": "dayofweek",
       "body": [
          "dayofweek(${1:time = ${2| ,time,timenow,time_close,last_bar_time|}${3:, timezone = ${4| ,syminfo.timezone,\"GMT-12\",\"GMT-11\",\"GMT-10\",\"GMT-9\",\"GMT-8\",\"GMT-7\",\"GMT-6\",\"GMT-5\",\"GMT-4\",\"GMT-3\",\"GMT-2\",\"GMT-1\",\"GMT+0\",\"GMT+1\",\"GMT+2\",\"GMT+3\",\"GMT+4\",\"GMT+5\",\"GMT+6\",\"GMT+7\",\"GMT+8\",\"GMT+9\",\"GMT+10\",\"GMT+11\",\"GMT+12\"|}}})${0}"
       ],
-      "description": "Day of week (in exchange timezone) for provided UNIX time ⇨ 𝑓 | dayofweek(time = int, timezone = series string) → series int"
+      "description": "Day of week (in exchange timezone) for provided UNIX time ⇨ 𝑓 | dayofweek(time = int, timezone = series string) → int"
    },
    "fill.hline ⇨ 𝑓": {
       "prefix": "fill.hline",
@@ -809,7 +809,7 @@
       "body": [
          "fixnan(${1:source = $2})${0}"
       ],
-      "description": "Replaces NaN values with previous nearest non-NaN value ⇨ 𝑓 | fixnan(source = int|float|bool|color) → series int|float|bool|color"
+      "description": "Replaces NaN values with previous nearest non-NaN value ⇨ 𝑓 | fixnan(source = int|float|bool|color) → int|float|bool|color"
    },
    "float ⇨ 𝑓": {
       "prefix": "float",
@@ -824,14 +824,14 @@
          "hline(${1:price = ${2| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, title = ${3:\"${4}\"}${5:${6:, color = ${7:color.new(color = ${8| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${9:0})}}${10:, linestyle = ${11| ,hline.style_solid,hline.style_dotted,hline.style_dashed|}}${12:, linewidth = ${13| ,1,2,3,4,5|}}${14:, editable = ${15| ,true,false|}}${16:, display = ${17| ,display.all,display.none|}}}})",
          "${0}"
       ],
-      "description": "Renders a horizontal line at a given fixed price level ⇨ 𝑓 | hline(price = int|float, title = const string, color = color, linestyle = hline_style, linewidth = int, editable = bool, display = plot_simple_display) → hline"
+      "description": "Renders a horizontal line at a given fixed price level ⇨ 𝑓 | hline(price = int|float, title = string, color = color, linestyle = hline_style, linewidth = int, editable = bool, display = plot_simple_display) → hline"
    },
    "hour ⇨ 𝑓": {
       "prefix": "hour",
       "body": [
          "hour(${1:time = ${2| ,time,timenow,time_close,last_bar_time|}${3:, timezone = ${4| ,syminfo.timezone,\"GMT-12\",\"GMT-11\",\"GMT-10\",\"GMT-9\",\"GMT-8\",\"GMT-7\",\"GMT-6\",\"GMT-5\",\"GMT-4\",\"GMT-3\",\"GMT-2\",\"GMT-1\",\"GMT+0\",\"GMT+1\",\"GMT+2\",\"GMT+3\",\"GMT+4\",\"GMT+5\",\"GMT+6\",\"GMT+7\",\"GMT+8\",\"GMT+9\",\"GMT+10\",\"GMT+11\",\"GMT+12\"|}}})${0}"
       ],
-      "description": "Hour (in exchange timezone) for provided UNIX time ⇨ 𝑓 | hour(time = int, timezone = string) → series int"
+      "description": "Hour (in exchange timezone) for provided UNIX time ⇨ 𝑓 | hour(time = int, timezone = string) → int"
    },
    "input ⇨ 𝑓": {
       "prefix": "input",
@@ -839,7 +839,7 @@
          "input(defval = ${1}, title = ${2:\"${3}\"}${4:${5:, tooltip = ${6:\"${7}\"}}${8:, inline = \"${9| ,01,02,03,04,05,06,07,08,09,10|}\"}${10:, group = ${11| ,\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${12:, display = ${13|display.all,display.none,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Input ⇨ 𝑓 | input(defval = any, title = string, tooltip = string, inline = string, group = string, display = plot_display) → input int|float|bool|string|color"
+      "description": "Input ⇨ 𝑓 | input(defval = any, title = string, tooltip = string, inline = string, group = string, display = plot_display) → int|float|bool|string|color"
    },
    "input.bool ⇨ 𝑓": {
       "prefix": "input.bool",
@@ -847,7 +847,7 @@
          "input.bool(defval = ${1| ,true,false|}, title = ${2:\"${3}\"}${4:${5:, tooltip = ${6:\"${7:}\"}}${8:, inline = \"${9| ,01,02,03,04,05,06,07,08,09,10|}\"}${10:, group = ${11| ,\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${12:, confirm = ${13| ,false,true|}}${14:, display = ${15|display.none,display.all,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Boolean input ⇨ 𝑓 | input.bool(defval = bool, title = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input bool"
+      "description": "Boolean input ⇨ 𝑓 | input.bool(defval = bool, title = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → bool"
    },
    "input.color ⇨ 𝑓": {
       "prefix": "input.color",
@@ -855,7 +855,15 @@
          "input.color(defval = ${1| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, title = ${2:\"${3}\"}${4:${5:, tooltip = ${6:\"${7}\"}}${8:, inline = \"${9| ,01,02,03,04,05,06,07,08,09,10|}\"}${10:, group = ${11| ,\"🔵 Colors 🔵\",\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${12:, confirm = ${13| ,false,true|}}${14:, display = ${15|display.none,display.all,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Color input ⇨ 𝑓 | input.color(defval = const color, title = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input color"
+      "description": "Color input ⇨ 𝑓 | input.color(defval = color, title = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → color"
+   },
+   "input.enum ⇨ 𝑓": {
+      "prefix": "input.enum",
+      "body": [
+         "input.enum(defval = ${1}, title = ${2:\"${3}\"}${4:${5:, options = [${6}${7:, ${8}}]}${15:, tooltip = ${16:\"${17}\"}}${18:, inline = \"${19| ,01,02,03,04,05,06,07,08,09,10|}\"}${20:, group = ${21| ,\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${22:, confirm = ${23| ,false,true|}}${24:, display = ${25|display.all,display.none,display.data_window,display.status_line|}}})",
+         "${0}"
+      ],
+      "description": "Enum input ⇨ 𝑓 | input.enum(defval = enum, title = string, options = tuple of enum fields, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → enum"
    },
    "input.float ⇨ 𝑓": {
       "prefix": "input.float",
@@ -863,7 +871,7 @@
          "input.float(defval = ${1| ,0.00,0.005,0.01,0.02,0.025,0.03,0.05,0.075,0.1,0.15,0.25,0.50,0.75,1.00,1.41421356237,1.61803398875,1.73205080757,2.2360679775,2.64575131106,3.14159265359|}, title = ${2:\"${3}\"}${4:${5:, minval = ${6| ,0.00,0.005,0.01,0.02,0.025,0.03,0.05,0.075,0.1,0.15,0.25,0.50,0.75,1.00,1.41421356237,1.61803398875,1.73205080757,2.2360679775,2.64575131106,3.14159265359|}}${7:, maxval = ${8| ,0.00,0.005,0.01,0.02,0.025,0.03,0.05,0.075,0.1,0.15,0.25,0.50,0.75,1.00,1.41421356237,1.61803398875,1.73205080757,2.2360679775,2.64575131106,3.14159265359|}}${9:, step = ${10| ,0.00,0.005,0.01,0.02,0.025,0.03,0.05,0.075,0.1,0.15,0.25,0.50,0.75,1.00,1.41421356237,1.61803398875,1.73205080757,2.2360679775,2.64575131106,3.14159265359|}}${11:, tooltip = ${12:\"${13}\"}}${14:, inline = \"${15| ,01,02,03,04,05,06,07,08,09,10|}\"}${16:, group = ${17| ,\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${18:, confirm = ${19| ,false,true|}}${20:, display = ${21|display.all,display.none,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Float input ⇨ 𝑓 | input.float(defval = float, title = string, minval = float, maxval = float, step = float, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input float"
+      "description": "Float input ⇨ 𝑓 | input.float(defval = int|float, title = string, minval = int|float, maxval = int|float, step = int|float, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → float"
    },
    "input.float.options ⇨ 𝑓": {
       "prefix": "input.float.options",
@@ -871,7 +879,7 @@
          "input.float(defval = ${1| ,0.00,0.005,0.01,0.02,0.025,0.03,0.05,0.075,0.1,0.15,0.25,0.50,0.75,1.00,1.41421356237,1.61803398875,1.73205080757,2.2360679775,2.64575131106,3.14159265359|}, title = ${2:\"${3}\"}${4:${5:, options = [${6| ,0.00,0.005,0.01,0.02,0.025,0.03,0.05,0.075,0.1,0.15,0.25,0.50,0.75,1.00,1.41421356237,1.61803398875,1.73205080757,2.2360679775,2.64575131106,3.14159265359|}${7:, ${8| ,0.00,0.005,0.01,0.02,0.025,0.03,0.05,0.075,0.1,0.15,0.25,0.50,0.75,1.00,1.41421356237,1.61803398875,1.73205080757,2.2360679775,2.64575131106,3.14159265359|}}${9:, ${10| ,0.00,0.005,0.01,0.02,0.025,0.03,0.05,0.075,0.1,0.15,0.25,0.50,0.75,1.00,1.41421356237,1.61803398875,1.73205080757,2.2360679775,2.64575131106,3.14159265359|}}${11:, ${12| ,0.00,0.005,0.01,0.02,0.025,0.03,0.05,0.075,0.1,0.15,0.25,0.50,0.75,1.00,1.41421356237,1.61803398875,1.73205080757,2.2360679775,2.64575131106,3.14159265359|}}]}${13:, tooltip = ${14:\"${15}\"}}${16:, inline = \"${17| ,01,02,03,04,05,06,07,08,09,10|}\"}${18:, group = ${19| ,\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${20:, confirm = ${21| ,false,true|}}${22:, display = ${23|display.all,display.none,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Float input options ⇨ 𝑓 | input.float(defval = float, title = string, options = tuple, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input float"
+      "description": "Float input options ⇨ 𝑓 | input.float(defval = int|float, title = string, options = tuple of int|float, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → float"
    },
    "input.int ⇨ 𝑓": {
       "prefix": "input.int",
@@ -879,7 +887,7 @@
          "input.int(defval = ${1| ,0,1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,75,90,100,200,300,400,500,600,700,1000|}, title = ${2:\"${3}\"}${4:${5:, minval = ${6| ,0,1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,75,90,100,200,300,400,500,600,700,1000|}}${7:, maxval = ${8| ,0,1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,75,90,100,200,300,400,500,600,700,1000|}}${9:, step = ${10| ,0,1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,75,90,100,200,300,400,500,600,700,1000|}}${11:, tooltip = ${12:\"${13}\"}}${14:, inline = \"${15| ,01,02,03,04,05,06,07,08,09,10|}\"}${16:, group = ${17| ,\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${18:, confirm = ${19| ,false,true|}}${20:, display = ${21|display.all,display.none,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Int input ⇨ 𝑓 | input.int(defval = int, title = string, minval = int, maxval = int, step = int, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input int"
+      "description": "Int input ⇨ 𝑓 | input.int(defval = int, title = string, minval = int, maxval = int, step = int, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → int"
    },
    "input.int.options ⇨ 𝑓": {
       "prefix": "input.int.options",
@@ -887,7 +895,7 @@
          "input.int(defval = ${1| ,0,1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,75,90,100,200,300,400,500,600,700,1000|}, title = ${2:\"${3}\"}${4:${5:, options = [${6| ,0,1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,75,90,100,200,300,400,500,600,700,1000|}${7:, ${8| ,0,1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,75,90,100,200,300,400,500,600,700,1000|}}${9:, ${10| ,0,1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,75,90,100,200,300,400,500,600,700,1000|}}${11:, ${12| ,0,1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,75,90,100,200,300,400,500,600,700,1000|}}]}${13:, tooltip = ${14:\"${15}\"}}${16:, inline = \"${17| ,01,02,03,04,05,06,07,08,09,10|}\"}${18:, group = ${19| ,\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${20:, confirm = ${21| ,false,true|}}${22:, display = ${23|display.all,display.none,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Int input | options ⇨ 𝑓 | input.int(defval = int, title = string, options = tuple, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input int"
+      "description": "Int input | options ⇨ 𝑓 | input.int(defval = int, title = string, options = tuple of int, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → int"
    },
    "input.price ⇨ 𝑓": {
       "prefix": "input.price",
@@ -895,7 +903,7 @@
          "input.price(defval = ${1:${2| ,0,1,2,3,4,5,6,7,8,9,10,15,20,25,30,40,50,60,75,90,100,200,300,400,500,600,700,1000|}${3:.${4| ,00,01,02,03,04,05,06,07,08,09,10,15,20,25,30,40,50,60,75,99|}}}, title = ${5:\"${6}\"}${7:${8:, tooltip = ${9:\"${10}\"}}${11:, inline = \"${12| ,01,02,03,04,05,06,07,08,09,10|}\"}${13:, group = ${14| ,\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${15:, confirm = ${16| ,false,true|}}${17:, display = ${18|display.all,display.none,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Price input ⇨ 𝑓 | input.price(defval = int|float, title = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input float"
+      "description": "Price input ⇨ 𝑓 | input.price(defval = int|float, title = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → float"
    },
    "input.session ⇨ 𝑓": {
       "prefix": "input.session",
@@ -903,7 +911,7 @@
          "input.session(defval = \"${1| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}-${2| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}\", title = ${3:\"${4| ,Session|}\"}${5:${6:, options = [\"${7| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}-${8| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}\"${9:, \"${10| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}-${11| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}\"}${12:, \"${13| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}-${14| ,0000,0001,0015,0030,0045,0100,0115,0130,0145,0200,0215,0230,0245,0300,0315,0330,0345,0400,0415,0430,0445,0500,0515,0530,0545,0600,0615,0630,0645,0700,0715,0730,0745,0800,0815,0830,0845,0900,0915,0930,0945,1000,1015,1030,1045,1100,1115,1130,1145,1200,1215,1230,1245,1300,1315,1330,1345,1400,1415,1430,1445,1500,1515,1530,1545,1600,1615,1630,1645,1700,1715,1730,1745,1800,1815,1830,1845,1900,1915,1930,1945,2000,2015,2030,2045,2100,2115,2130,2145,2200,2215,2230,2245,2300,2315,2330,2345,2359,2400|}\"}]}${15:, tooltip = ${16:\"${17}\"}}${18:, inline = \"${19| ,01,02,03,04,05,06,07,08,09,10|}\"}${20:, group = ${21| ,\"⏱ Session ⏱\",\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${22:, confirm = ${23| ,false,true|}}${24:, display = ${25|display.all,display.none,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Session input ⇨ 𝑓 | input.session(defval = string, title = string, options = tuple, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input string"
+      "description": "Session input ⇨ 𝑓 | input.session(defval = string, title = string, options = tuple of string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → string"
    },
    "input.source ⇨ 𝑓": {
       "prefix": "input.source",
@@ -911,7 +919,7 @@
          "input.source(defval = ${1| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, title = ${2:\"${3| ,Source|}\"}${4:${5:, tooltip = ${6:\"${7:}\"}}${8:, inline = \"${9| ,01,02,03,04,05,06,07,08,09,10|}\"}${10:, group = ${11| ,\"🌲 Source 🌲\",\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${12:, display = ${13|display.all,display.none,display.data_window,display.status_line|}}${14:, confirm = ${15| ,false,true|}}})",
          "${0}"
       ],
-      "description": "Source input ⇨ 𝑓 | input.source(defval = int|float, title = string, tooltip = string, inline = string, group = string, display = plot_display, confirm = bool) → series float"
+      "description": "Source input ⇨ 𝑓 | input.source(defval = int|float, title = string, tooltip = string, inline = string, group = string, display = plot_display, confirm = bool) → float"
    },
    "input.string ⇨ 𝑓": {
       "prefix": "input.string",
@@ -919,7 +927,7 @@
          "input.string(defval = \"${1}\", title = ${2:\"${3}\"}${4:${5:, options = [\"${6}\"${7:, \"${8}\"}${9:, \"${10}\"}${11:, \"${12}\"}${13:, \"${14}\"}]}${15:, tooltip = ${16:\"${17}\"}}${18:, inline = \"${19| ,01,02,03,04,05,06,07,08,09,10|}\"}${20:, group = ${21| ,\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${22:, confirm = ${23| ,false,true|}}${24:, display = ${25|display.all,display.none,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "String input ⇨ 𝑓 | input.string(defval = string, title = string, options = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input string"
+      "description": "String input ⇨ 𝑓 | input.string(defval = string, title = string, options = tuple of string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → string"
    },
    "input.symbol ⇨ 𝑓": {
       "prefix": "input.symbol",
@@ -927,7 +935,7 @@
          "input.symbol(defval = \"${1}\", title = ${2:\"${3}\"}${4:${5:, tooltip = ${6:\"${7}\"}}${8:, inline = \"${9| ,01,02,03,04,05,06,07,08,09,10|}\"}${10:, group = ${11| ,\"🔱 Symbol 🔱\",\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${12:, confirm = ${13| ,false,true|}}${14:, display = ${15|display.all,display.none,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Symbol input ⇨ 𝑓 | input.symbol(defval = string, title = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input string"
+      "description": "Symbol input ⇨ 𝑓 | input.symbol(defval = string, title = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → string"
    },
    "input.text_area ⇨ 𝑓": {
       "prefix": "input.text_area",
@@ -935,7 +943,7 @@
          "input.text_area(defval = \"${1}\", title = ${2:\"${3}\"}${4:${5:, tooltip = ${6:\"${7}\"}}${8:, group = ${9| ,\"🔱 Symbol 🔱\",\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${10:, confirm = ${11| ,false,true|}}${12:, display = ${13|display.none,display.all,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Text area input ⇨ 𝑓 | input.text_area(defval = string, title = string, tooltip = string, group = string, confirm = bool, display = plot_display) → input string"
+      "description": "Text area input ⇨ 𝑓 | input.text_area(defval = string, title = string, tooltip = string, group = string, confirm = bool, display = plot_display) → string"
    },
    "input.time ⇨ 𝑓": {
       "prefix": "input.time",
@@ -943,7 +951,7 @@
          "input.time(defval = timestamp(\"${1|Y,2025,2024,2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001,2000|}-${2|M,01,02,03,04,05,06,07,08,09,10,11,12|}-${3|D,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31|} ${4|h,00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23|}:${5|m,00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59|}${6::${7|s,00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59|}}${8: ${9|TZ,GMT-12,GMT-11,GMT-10,GMT-9,GMT-8,GMT-7,GMT-6,GMT-5,GMT-4,GMT-3,GMT-2,GMT-1,GMT+0,GMT+1,GMT+2,GMT+3,GMT+4,GMT+5,GMT+6,GMT+7,GMT+8,GMT+9,GMT+10,GMT+11,GMT+12|}}\"), title = ${10:\"${11| ,Time|}\"}${12:${13:, tooltip = ${14:\"${15}\"}}${16:, inline = \"${17| ,01,02,03,04,05,06,07,08,09,10|}\"}${18:, group = ${19| ,\"🌲 Source 🌲\",\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"⏱ Timeframe ⏱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${20:, confirm = ${21| ,false,true|}}${22:, display = ${23|display.none,display.all,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Time input ⇨ 𝑓 | input.time(defval = const int, title = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input int"
+      "description": "Time input ⇨ 𝑓 | input.time(defval = int, title = string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → int"
    },
    "input.timeframe ⇨ 𝑓": {
       "prefix": "input.timeframe",
@@ -951,7 +959,7 @@
          "input.timeframe(defval = \"${1| ,1,2,3,5,7,10,15,30,60,90,120,180,240,360,480,D,2D,5D,W,2W,M,2M,6M,Y|}\", title = ${2:\"${3}\"}${4:${5:, options = [\"${6| ,1,2,3,5,7,10,15,30,60,90,120,180,240,360,480,D,2D,5D,W,2W,M,2M,6M,Y|}\"${7:, \"${8| ,1,2,3,5,7,10,15,30,60,90,120,180,240,360,480,D,2D,5D,W,2W,M,2M,6M,Y|}\"}${9:, \"${10| ,1,2,3,5,7,10,15,30,60,90,120,180,240,360,480,D,2D,5D,W,2W,M,2M,6M,Y|}\"}${11:, \"${12| ,1,2,3,5,7,10,15,30,60,90,120,180,240,360,480,D,2D,5D,W,2W,M,2M,6M,Y|}\"}${13:, \"${14| ,1,2,3,5,7,10,15,30,60,90,120,180,240,360,480,D,2D,5D,W,2W,M,2M,6M,Y|}\"}]}${15:, tooltip = ${16:\"${17}\"}}${18:, inline = \"${19| ,01,02,03,04,05,06,07,08,09,10|}\"}${20:, group = ${21| ,\"⏱ Timeframe ⏱\",\"🟣 Backtesting Start 🟢\",\"🟣 Backtesting End ❎\",\"🟢 Entry 🟢\",\"❎ Exit ❎\",\"⛔ Exit ⛔\",\"🔵 Colors 🔵\",\"💬 Comments 💬\",\"🎨 Drawings 🎨\",\"🟤 Length 🟤\",\"🟢 Long 🟢\",\"⚪ Options ⚪\",\"⏱ Session ⏱\",\"🟠 Settings 🟠\",\"🔴 Short 🔴\",\"🌲 Source 🌲\",\"🔶 Statistics 🔶\",\"🟤 Strategy 🟤\",\"🔱 Symbol 🔱\",\"🌲  🌲\",\"⛔  ⛔\",\"💬  💬\",\"🎨  🎨\",\"⏱  ⏱\",\"🔴  🔴\",\"🟠  🟠\",\"🟡  🟡\",\"🟢  🟢\",\"🔵  🔵\",\"🟣  🟣\",\"🟤  🟤\",\"⚫  ⚫\",\"⚪  ⚪\",\"🟥  🟥\",\"🟧  🟧\",\"🟨  🟨\",\"🟩  🟩\",\"🟦  🟦\",\"🟪  🟪\",\"🟫  🟫\",\"⬛  ⬛\",\"⬜  ⬜\",\"🔶  🔶\",\"🔷  🔷\",\"🔸  🔸\",\"🔹  🔹\",\"🔺  🔺\",\"🔻  🔻\",\"💠  💠\",\"🔱  🔱\",\"🔘  🔘\",\"🔳  🔳\",\"🔲  🔲\",\"🏁  🏁\",\"🚩  🚩\",\"🎌  🎌\",\"🏴  🏴\",\"🏳️‍🌈  🏳️‍🌈\",\"🏴‍☠️  🏴‍☠️\",\"📍  📍\",\"📌  📌\",\"📊  📊\",\"📉  📉\",\"📈  📈\",\"🌎  🌎\",\"🌐  🌐\",\"🧭  🧭\",\"🌋  🌋\",\"🚀  🚀\",\"⌛  ⌛\",\"🌑  🌑\",\"🌗  🌗\",\"🌕  🌕\",\"🌙  🌙\",\"⭐  ⭐\",\"🌟  🌟\",\"🌞  🌞\",\"🪐  🪐\",\"🌈  🌈\",\"🌀  🌀\",\"🧨  🧨\",\"🎈  🎈\",\"🔊  🔊\",\"📢  📢\",\"📣  📣\",\"📯  📯\",\"🔔  🔔\",\"🔋  🔋\",\"🔍  🔍\",\"💾  💾\",\"💰  💰\",\"💴  💴\",\"💸  💸\",\"📐  📐\",\"📏  📏\",\"🔒  🔒\",\"🔓  🔓\",\"🔑  🔑\",\"🔐  🔐\",\"🔨  🔨\",\"⛓  ⛓\",\"🧲  🧲\",\"📡  📡\",\"🩸  🩸\",\"🗿  🗿\",\"🛂  🛂\",\"⛔  ⛔\",\"🚫  🚫\",\"☢  ☢\",\"☣  ☣\",\"▶  ▶\",\"⏯  ⏯\",\"🔂  🔂\",\"🔀  🔀\",\"📶  📶\",\"🔅  🔅\",\"✖  ✖\",\"➕  ➕\",\"➖  ➖\",\"➗  ➗\",\"💲  💲\",\"💱  💱\",\"♻  ♻\",\"📛  📛\",\"🔰  🔰\",\"⭕  ⭕\",\"✅  ✅\",\"✔  ✔\",\"❌  ❌\",\"❎  ❎\",\"➰  ➰\",\"™  ™\",\"#️⃣  #️⃣\",\"*️⃣  *️⃣\",\"0️⃣  0️⃣\",\"1️⃣  1️⃣\",\"2️⃣  2️⃣\",\"3️⃣  3️⃣\",\"4️⃣  4️⃣\",\"5️⃣  5️⃣\",\"6️⃣  6️⃣\",\"7️⃣  7️⃣\",\"8️⃣  8️⃣\",\"9️⃣  9️⃣\",\"🔟  🔟\",\"🅰  🅰\",\"🆎  🆎\",\"🅱  🅱\",\"🆑  🆑\",\"🆗  🆗\",\"🆙  🆙\"|}}${22:, confirm = ${23| ,false,true|}}${24:, display = ${25|display.all,display.none,display.data_window,display.status_line|}}})",
          "${0}"
       ],
-      "description": "Timeframe input ⇨ 𝑓 | input.timeframe(defval = string, title = string, options = tuple, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → input string"
+      "description": "Timeframe input ⇨ 𝑓 | input.timeframe(defval = string, title = string, options = tuple of string, tooltip = string, inline = string, group = string, confirm = bool, display = plot_display) → string"
    },
    "int ⇨ 𝑓": {
       "prefix": "int",
@@ -972,7 +980,7 @@
       "body": [
          "label.copy(${1:id = $2})${0}"
       ],
-      "description": "Clones the label object. ⇨ 𝑓 | label.copy(id = label) → series label"
+      "description": "Clones the label object. ⇨ 𝑓 | label.copy(id = label) → label"
    },
    "label.delete ⇨ 𝑓": {
       "prefix": "label.delete",
@@ -1007,7 +1015,7 @@
       "body": [
          "label.new(${1:x = ${2| ,bar_index,last_bar_index,time,last_bar_time|}, y = ${3| ,na,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, text = ${4:\"${5}\"}${6:${7:, xloc = ${8| ,xloc.bar_index,xloc.bar_time|}}${9:, yloc = ${10| ,yloc.price,yloc.abovebar,yloc.belowbar|}}${11:, color = ${12:color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}}${15:, style = ${16| ,label.style_none,label.style_xcross,label.style_cross,label.style_triangleup,label.style_triangledown,label.style_flag,label.style_circle,label.style_arrowup,label.style_arrowdown,label.style_label_up,label.style_label_down,label.style_label_left,label.style_label_right,label.style_label_lower_left,label.style_label_lower_right,label.style_label_upper_left,label.style_label_upper_right,label.style_label_center,label.style_square,label.style_diamond,label.style_text_outline|}}${17:, textcolor = ${18:color.new(color = ${19| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${20:0})}}${21:, size = ${22| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${23:, textalign = ${24| ,text.align_center,text.align_left,text.align_right|}}${25:, tooltip = ${26:\"${27}\"}}${28:, text_font_family = ${29| ,font.family_default,font.family_monospace|}}}})${0}"
       ],
-      "description": "Creates new label object ⇨ 𝑓 | label.new(x = int, y = int|float, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string) → series label"
+      "description": "Creates new label object ⇨ 𝑓 | label.new(x = int, y = int|float, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string) → label"
    },
    "{b} label.new ⇨ 𝑓": {
       "prefix": "label.new",
@@ -1028,7 +1036,7 @@
          " )",
          "${0}"
       ],
-      "description": "Creates new label object | Block ⇨ 𝑓 | label.new(x = int, y = int|float, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string) → series label"
+      "description": "Creates new label object | Block ⇨ 𝑓 | label.new(x = int, y = int|float, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string) → label"
    },
    "label.new.point ⇨ 𝑓": {
       "prefix": "label.new.point",
