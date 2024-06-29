@@ -1466,7 +1466,7 @@
    "map.new ⇨ 𝑓": {
       "prefix": "map.new",
       "body": [
-         "map.new<${1|int,float,bool,string,color|}, ${2:valueType}>()${0}"
+         "map.new<${1|keyType,int,float,bool,string,color|}, ${2|valueType,int,float,bool,string,color|}>()${0}"
       ],
       "description": "Creates a new map object. ⇨ 𝑓 | map.new<keyType, valueType>() → map<keyType, valueType>"
    },

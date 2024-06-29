@@ -1007,7 +1007,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(map)(\\.)(new)\\s*(<)\\s*([a-zA-Z_]+)\\s*(\\,)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)(?=\\s*\\()",
+          "match": "(?<![\\.]\\s*)\\b(map)(\\.)(new)\\s*(<)\\s*([a-zA-Z_][\\w\\.]*)\\s*(\\,)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)(?=\\s*\\()",
           "captures": {
             "1": {
               "name": "support.function.ps"
@@ -1330,7 +1330,7 @@
           "include": "#collection_new"
         },
         {
-          "match": "^(?:(export)\\s+)?\\b(type)\\s+([a-zA-Z_]\\w*)\\b(?=\\s*(?:\\s*//.*)?$)",
+          "match": "^(?:(export)\\s+)?\\b(enum|type)\\s+([a-zA-Z_]\\w*)\\b(?=\\s*(?:\\s*//.*)?$)",
           "captures": {
             "1": {"name": "keyword.control.export.ps"},
             "2": {"name": "storage.type.type.ps"},
@@ -1469,7 +1469,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(map)\\s*(<)\\s*(int|float|bool|string|color)\\s*(\\,)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
+          "match": "(?<![\\.]\\s*)\\b(map)\\s*(<)\\s*([a-zA-Z_][\\w\\.]*)\\s*(\\,)\\s*([a-zA-Z_][\\w\\.]*)\\b\\s*(>)",
           "captures": {
             "1":{"name":"support.type.primitive.ps"},
             "2":{"name":"punctuation.definition.generic.begin.ps"},

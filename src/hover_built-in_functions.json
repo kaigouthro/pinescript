@@ -3968,7 +3968,7 @@
      ]
   },
    {
-     "pattern": "(?<![\\.]\\s*)\\b(map\\.new)(?=\\s*<\\s*[a-zA-Z_]+\\s*\\,\\s*\\b[a-zA-Z_][\\w\\.]*\\b\\s*>\\s*\\()",
+     "pattern": "(?<![\\.]\\s*)\\b(map\\.new)(?=\\s*<\\s*\\b[a-zA-Z_][\\w\\.]*\\b\\s*\\,\\s*\\b[a-zA-Z_][\\w\\.]*\\b\\s*>\\s*\\()",
      "codeblock": [
         "map.new<keyType, valueType>() → map<keyType, valueType>"
      ],
