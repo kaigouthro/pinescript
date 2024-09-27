@@ -240,6 +240,20 @@
           }
         },
         {
+          "match": "(?<![\\.]\\s*)\\b(backadjustment)(\\.)(inherit|off|on)\\b(?!\\s*\\()",
+          "captures": {
+            "0": {
+              "name": "support.constant.property.ps"
+            },
+            "1": {
+              "name": "support.constant.ps"
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            }
+          }
+        },
+        {
           "match": "(?<![\\.]\\s*)\\b(barmerge)(\\.)(gaps_off|gaps_on|lookahead_off|lookahead_on)\\b(?!\\s*\\()",
           "captures": {
             "0": {
@@ -548,6 +562,20 @@
           }
         },
         {
+          "match": "(?<![\\.]\\s*)\\b(settlement_as_close)(\\.)(inherit|off|on)\\b(?!\\s*\\()",
+          "captures": {
+            "0": {
+              "name": "support.constant.property.ps"
+            },
+            "1": {
+              "name": "support.constant.ps"
+            },
+            "2": {
+              "name": "punctuation.accessor.ps"
+            }
+          }
+        },
+        {
           "match": "(?<![\\.]\\s*)\\b(shape)(\\.)(arrowdown|arrowup|circle|cross|diamond|flag|labeldown|labelup|square|triangledown|triangleup|xcross)\\b(?!\\s*\\()",
           "captures": {
             "0": {
@@ -740,7 +768,7 @@
           }
         },
         {
-          "match": "(?<![\\.]\\s*)\\b(timeframe)(\\.)(isdaily|isdwm|isintraday|isminutes|ismonthly|isseconds|isweekly|multiplier|period)\\b(?!\\s*\\()",
+          "match": "(?<![\\.]\\s*)\\b(timeframe)(\\.)(isdaily|isdwm|isintraday|isminutes|ismonthly|isseconds|isticks|isweekly|multiplier|period)\\b(?!\\s*\\()",
           "captures": {
             "0": {
               "name": "support.constant.property.ps"
@@ -806,7 +834,7 @@
     "built_in_functions": {
       "patterns": [
         {
-          "match": "^\\s*\\b(indicator|library|strategy)(?=\\s*\\()",
+          "match": "\\b(indicator|library|strategy)(?=\\s*\\()",
           "name": "storage.type.class.ps"
         },
         {
@@ -1371,7 +1399,16 @@
               }
             ]},
             "2":{"name":"meta.brace.square.ps"},
-            "3":{"name":"variable.other.readwrite.ps"}
+            "3":{"patterns": [
+              {"include": "#keywords"},
+              {"include": "#keyword_control_words"},
+              {"include": "#built_in_var_extend"},
+              {"include": "#built_in_variables"},
+              {
+                "match": ".*",
+                "name":"variable.other.readwrite.ps"
+              }
+            ]}
           }
         },
         {
@@ -1390,7 +1427,16 @@
               }
             ]},
             "2":{"name":"meta.brace.square.ps"},
-            "3":{"name":"variable.other.readwrite.ps"}
+            "3":{"patterns": [
+              {"include": "#keywords"},
+              {"include": "#keyword_control_words"},
+              {"include": "#built_in_var_extend"},
+              {"include": "#built_in_variables"},
+              {
+                "match": ".*",
+                "name":"variable.other.readwrite.ps"
+              }
+            ]}
           }
         }
       ]

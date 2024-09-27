@@ -1173,9 +1173,9 @@
    "library ⇨ 𝑓": {
       "prefix": "library",
       "body": [
-         "library(title = \"${1}\", overlay = ${2| ,true,false|})${0}"
+         "library(title = \"${1}\", overlay = ${2| ,true,false|}${3:, dynamic_requests = ${4| ,false,true|}})${0}"
       ],
-      "description": "Declaration statement identifying a script as a library ⇨ 𝑓 | library(title = string, overlay = bool) → void"
+      "description": "Declaration statement identifying a script as a library ⇨ 𝑓 | library(title = string, overlay = bool, dynamic_requests = bool) → void"
    },
    "line.copy ⇨ 𝑓": {
       "prefix": "line.copy",
@@ -1410,21 +1410,21 @@
    "log.error ⇨ 𝑓": {
       "prefix": "log.error",
       "body": [
-         "log.error(${1:message = ${2:\"${3}\"}})${0}"
+         "log.error(${1:\"${2}\"})${0}"
       ],
       "description": "Sends result to 'Pine Logs' menu tagged with 'error' debug level. ⇨ 𝑓 | log.error(message = string) → void"
    },
    "log.info ⇨ 𝑓": {
       "prefix": "log.info",
       "body": [
-         "log.info(${1:message = ${2:\"${3}\"}})${0}"
+         "log.info(${1:\"${2}\"})${0}"
       ],
       "description": "Sends result to 'Pine Logs' menu tagged with 'info' debug level. ⇨ 𝑓 | log.info(message = string) → void"
    },
    "log.warning ⇨ 𝑓": {
       "prefix": "log.warning",
       "body": [
-         "log.warning(${1:message = ${2:\"${3}\"}})${0}"
+         "log.warning(${1:\"${2}\"})${0}"
       ],
       "description": "Sends result to 'Pine Logs' menu tagged with 'warning' debug level. ⇨ 𝑓 | log.warning(message = string) → void"
    },
@@ -3528,16 +3528,16 @@
    "ticker.modify ⇨ 𝑓": {
       "prefix": "ticker.modify",
       "body": [
-         "ticker.modify(${1:tickerid = ${2| ,syminfo.tickerid|}${3:${4:, session = ${5| ,syminfo.session,session.regular,session.extended|}}${6:, adjustment = ${7| ,adjustment.none,adjustment.splits,adjustment.dividends|}}}})${0}"
+         "ticker.modify(${1:tickerid = ${2| ,syminfo.tickerid|}${3:${4:, session = ${5| ,syminfo.session,session.regular,session.extended|}}${6:, adjustment = ${7| ,adjustment.none,adjustment.splits,adjustment.dividends|}}${8:, backadjustment = ${9| ,backadjustment.inherit,backadjustment.on,backadjustment.off|}}${10:, settlement_as_close = ${11| ,settlement_as_close.inherit,settlement_as_close.on,settlement_as_close.off|}}}})${0}"
       ],
-      "description": "Modify called ticker ⇨ 𝑓 | ticker.modify(tickerid = string, session = string, adjustment = string) → simple string"
+      "description": "Modify called ticker ⇨ 𝑓 | ticker.modify(tickerid = string, session = string, adjustment = string, backadjustment = backadjustment, settlement_as_close = settlement) → simple string"
    },
    "ticker.new ⇨ 𝑓": {
       "prefix": "ticker.new",
       "body": [
-         "ticker.new(${1:prefix = ${2| ,syminfo.prefix|}, ticker = ${3| ,syminfo.ticker|}${4:${5:, session = ${6| ,syminfo.session,session.regular,session.extended|}}${7:, adjustment = ${8| ,adjustment.none,adjustment.splits,adjustment.dividends|}}}})${0}"
+         "ticker.new(${1:prefix = ${2| ,syminfo.prefix|}, ticker = ${3| ,syminfo.ticker|}${4:${5:, session = ${6| ,syminfo.session,session.regular,session.extended|}}${7:, adjustment = ${8| ,adjustment.none,adjustment.splits,adjustment.dividends|}}${9:, backadjustment = ${10| ,backadjustment.inherit,backadjustment.on,backadjustment.off|}}${11:, settlement_as_close = ${12| ,settlement_as_close.inherit,settlement_as_close.on,settlement_as_close.off|}}}})${0}"
       ],
-      "description": "Creates a ticker identifier ⇨ 𝑓 | ticker.new(prefix = string, ticker = string, session = string, adjustment = string) → simple string"
+      "description": "Creates a ticker identifier ⇨ 𝑓 | ticker.new(prefix = string, ticker = string, session = string, adjustment = string, backadjustment = backadjustment, settlement_as_close = settlement) → simple string"
    },
    "ticker.pointfigure ⇨ 𝑓": {
       "prefix": "ticker.pointfigure",

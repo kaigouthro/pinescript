@@ -21,7 +21,8 @@
       " max_labels_count     = ${23| ,5,10,50,100,200,300,500|}}${24:,",
       " max_boxes_count      = ${25| ,5,10,50,100,200,300,500|}}${26:,",
       " calc_bars_count      = ${27| ,0,5,10,50,100,200,300,500|}}${28:,",
-      " max_polylines_count  = ${29| ,5,10,50,100|}}",
+      " max_polylines_count  = ${29| ,5,10,50,100|}}${30:,",
+      " dynamic_requests     = ${31| ,false,true|}}",
       " )",
       "// # ========================================================================= #",
       "// #                   |  $1 Indicator  |",
@@ -29,7 +30,7 @@
       "",
       "$0"
     ],
-    "description": "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count) → void"
+    "description": "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count, dynamic_requests) → void"
   },
   
   "Indicator ⇨ 𝑓": {
@@ -74,7 +75,8 @@
       " max_labels_count     = ${24| ,5,10,50,100,200,300,500|}}${25:,",
       " max_boxes_count      = ${26| ,5,10,50,100,200,300,500|}}${27:,",
       " calc_bars_count      = ${28| ,0,5,10,50,100,200,300,500|}}${29:,",
-      " max_polylines_count  = ${30| ,5,10,50,100|}}",
+      " max_polylines_count  = ${30| ,5,10,50,100|}}${31:,",
+      " dynamic_requests     = ${32| ,false,true|}}",
       " )",
       "// # ========================================================================= #",
       "// #                   |  $2 Indicator  |",
@@ -82,7 +84,7 @@
       "",
       "$0"
     ],
-    "description": "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count) → void"
+    "description": "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count, dynamic_requests) → void"
   },
   
   "New Library ⇨ 𝑓": {
@@ -92,28 +94,21 @@
       "",
       "// @description ${1:<library_description>}",
       "",
-      "library(title = \"${2/ /_/g}\", overlay = ${3| ,true,false|})",
+      "library(title = \"${2/ /_/g}\", overlay = ${3| ,true,false|}${4:, dynamic_requests = ${5| ,false,true|}})",
       "",
-      "",
-      "export ${4:function_name}(${5:<parameter_name>} = ${6:[<default_value>]}${7:${8:[...]}}) =>",
-      " ${9:<function_code>}",
       "",
       "// ===========================================================================*",
-      "// *    >* The $4 Function *<",
+      "// *    >* The $6 Function *<",
       "// *==========================================================================*",
-      "// @function ${10:<function_description>}",
-      "// @param ${11:<parameter> <parameter_description>}",
-      "// @returns ${12:<return_value_description>}${13:",
-      "// *==========================================================================*",
-      "// *   > 1. ${14:+info}${15:",
-      "// *   > 2. ${16:+info}}${17:",
-      "// *   > 3. ${18:+info}}${19:",
-      "// *   > 4. ${20:+info}}${21:",
-      "// *   > 5. ${22:+info}}}",
-      "// *==========================================================================*",
+      "// @function ${7:<function_description>}",
+      "// @param ${8:<parameter> <parameter_description>}",
+      "// @returns ${9:<return_value_description>}",
+      "export ${6:function_name}(${10:<parameter_name>} = ${11:[<default_value>]}${12:${13:[...]}}) =>",
+      "    ${14:<function_code>}",
+      "",
       "$0"
     ],
-    "description": "library(title = string, overlay = bool) → void"
+    "description": "library(title = string, overlay = bool, dynamic_requests = bool) → void"
   },
   
   "{b} Strategy ⇨ 𝑓": {
@@ -153,7 +148,8 @@
       " risk_free_rate                  = ${55| ,0,1,1.5,2,2.5,3,3.5,4,4.5,5|}}${56:,",
       " use_bar_magnifier               = ${57| ,false,true|}}${58:,",
       " fill_orders_on_standard_ohlc    = ${59| ,false,true|}}${60:,",
-      " max_polylines_count             = ${61| ,5,10,50,100|}}",
+      " max_polylines_count             = ${61| ,5,10,50,100|}}${62:,",
+      " dynamic_requests                = ${63| ,false,true|}}",
       " )",
       "// # ========================================================================= #",
       "// #                   |  $1 STRATEGY  |",
@@ -161,7 +157,7 @@
       "",
       "$0"
     ],
-    "description": "strategy(title, shorttitle, overlay, format, precision, scale, pyramiding, calc_on_order_fills, calc_on_every_tick, max_bars_back, backtest_fill_limits_assumption, default_qty_type, default_qty_value, initial_capital, currency, slippage, commission_type, commission_value, process_orders_on_close, close_entries_rule, margin_long, margin_short, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, risk_free_rate, use_bar_magnifier, fill_orders_on_standard_ohlc, max_polylines_count) → void"
+    "description": "strategy(title, shorttitle, overlay, format, precision, scale, pyramiding, calc_on_order_fills, calc_on_every_tick, max_bars_back, backtest_fill_limits_assumption, default_qty_type, default_qty_value, initial_capital, currency, slippage, commission_type, commission_value, process_orders_on_close, close_entries_rule, margin_long, margin_short, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, risk_free_rate, use_bar_magnifier, fill_orders_on_standard_ohlc, max_polylines_count, dynamic_requests) → void"
   },
   
   "Strategy ⇨ 𝑓": {

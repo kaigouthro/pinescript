@@ -1,1318 +1,1360 @@
 {
     "adjustment.dividends ⇨ 𝑥": {
-        "prefix": "adjustment.dividends",
-        "body": [
-            "adjustment.dividends$0"
-        ],
-        "description": "Constant for dividends adjustment type (dividends adjustment is applied). | TYPE const string"
+       "prefix": "adjustment.dividends",
+       "body": [
+          "adjustment.dividends$0"
+       ],
+       "description": "Constant for dividends adjustment type (dividends adjustment is applied). | TYPE const string"
     },
     "adjustment.none ⇨ 𝑥": {
-        "prefix": "adjustment.none",
-        "body": [
-            "adjustment.none$0"
-        ],
-        "description": "Constant for none adjustment type (no adjustment is applied). | TYPE const string"
+       "prefix": "adjustment.none",
+       "body": [
+          "adjustment.none$0"
+       ],
+       "description": "Constant for none adjustment type (no adjustment is applied). | TYPE const string"
     },
     "adjustment.splits ⇨ 𝑥": {
-        "prefix": "adjustment.splits",
-        "body": [
-            "adjustment.splits$0"
-        ],
-        "description": "Constant for splits adjustment type (splits adjustment is applied). | TYPE const string"
+       "prefix": "adjustment.splits",
+       "body": [
+          "adjustment.splits$0"
+       ],
+       "description": "Constant for splits adjustment type (splits adjustment is applied). | TYPE const string"
     },
     "alert.freq_all ⇨ 𝑥": {
-        "prefix": "alert.freq_all",
-        "body": [
-            "alert.freq_all$0"
-        ],
-        "description": "A named constant for use with the `freq` parameter of the alert() function. All function calls trigger the alert. | TYPE const string"
+       "prefix": "alert.freq_all",
+       "body": [
+          "alert.freq_all$0"
+       ],
+       "description": "A named constant for use with the `freq` parameter of the alert() function. All function calls trigger the alert. | TYPE const string"
     },
     "alert.freq_once_per_bar ⇨ 𝑥": {
-        "prefix": "alert.freq_once_per_bar",
-        "body": [
-            "alert.freq_once_per_bar$0"
-        ],
-        "description": "A named constant for use with the `freq` parameter of the alert() function. The first function call during the bar triggers the alert. | TYPE const string"
+       "prefix": "alert.freq_once_per_bar",
+       "body": [
+          "alert.freq_once_per_bar$0"
+       ],
+       "description": "A named constant for use with the `freq` parameter of the alert() function. The first function call during the bar triggers the alert. | TYPE const string"
     },
     "alert.freq_once_per_bar_close ⇨ 𝑥": {
-        "prefix": "alert.freq_once_per_bar_close",
-        "body": [
-            "alert.freq_once_per_bar_close$0"
-        ],
-        "description": "A named constant for use with the `freq` parameter of the alert() function. The function call triggers the alert only when it occurs during the last script iteration of the real-time bar, when it closes. | TYPE const string"
+       "prefix": "alert.freq_once_per_bar_close",
+       "body": [
+          "alert.freq_once_per_bar_close$0"
+       ],
+       "description": "A named constant for use with the `freq` parameter of the alert() function. The function call triggers the alert only when it occurs during the last script iteration of the real-time bar, when it closes. | TYPE const string"
+    },
+    "backadjustment.inherit ⇨ 𝑥": {
+       "prefix": "backadjustment.inherit",
+       "body": [
+          "backadjustment.inherit$0"
+       ],
+       "description": "A constant to specify the value of the backadjustment parameter in ticker.new and ticker.modify functions. | TYPE const backadjustment"
+    },
+    "backadjustment.off ⇨ 𝑥": {
+       "prefix": "backadjustment.off",
+       "body": [
+          "backadjustment.off$0"
+       ],
+       "description": "A constant to specify the value of the backadjustment parameter in ticker.new and ticker.modify functions. | TYPE const backadjustment"
+    },
+    "backadjustment.on ⇨ 𝑥": {
+       "prefix": "backadjustment.on",
+       "body": [
+          "backadjustment.on$0"
+       ],
+       "description": "A constant to specify the value of the backadjustment parameter in ticker.new and ticker.modify functions. | TYPE const backadjustment"
     },
     "barmerge.gaps_off ⇨ 𝑥": {
-        "prefix": "barmerge.gaps_off",
-        "body": [
-            "barmerge.gaps_off$0"
-        ],
-        "description": "Merge strategy for requested data. Data is merged continuously without gaps, all the gaps are filled with the previous nearest existing value. | TYPE barmerge_gaps"
+       "prefix": "barmerge.gaps_off",
+       "body": [
+          "barmerge.gaps_off$0"
+       ],
+       "description": "Merge strategy for requested data. Data is merged continuously without gaps, all the gaps are filled with the previous nearest existing value. | TYPE barmerge_gaps"
     },
     "barmerge.gaps_on ⇨ 𝑥": {
-        "prefix": "barmerge.gaps_on",
-        "body": [
-            "barmerge.gaps_on$0"
-        ],
-        "description": "Merge strategy for requested data. Data is merged with possible gaps (na values). | TYPE barmerge_gaps"
+       "prefix": "barmerge.gaps_on",
+       "body": [
+          "barmerge.gaps_on$0"
+       ],
+       "description": "Merge strategy for requested data. Data is merged with possible gaps (na values). | TYPE barmerge_gaps"
     },
     "barmerge.lookahead_off ⇨ 𝑥": {
-        "prefix": "barmerge.lookahead_off",
-        "body": [
-            "barmerge.lookahead_off$0"
-        ],
-        "description": "Merge strategy for the requested data position. Requested barset is merged with current barset in the order of sorting bars by their close time. This merge strategy disables effect of getting data from 'future' on calculation on history. | TYPE barmerge_lookahead"
+       "prefix": "barmerge.lookahead_off",
+       "body": [
+          "barmerge.lookahead_off$0"
+       ],
+       "description": "Merge strategy for the requested data position. Requested barset is merged with current barset in the order of sorting bars by their close time. This merge strategy disables effect of getting data from 'future' on calculation on history. | TYPE barmerge_lookahead"
     },
     "barmerge.lookahead_on ⇨ 𝑥": {
-        "prefix": "barmerge.lookahead_on",
-        "body": [
-            "barmerge.lookahead_on$0"
-        ],
-        "description": "Merge strategy for the requested data position. Requested barset is merged with current barset in the order of sorting bars by their opening time. This merge strategy can lead to undesirable effect of getting data from 'future' on calculation on history. This is unacceptable in backtesting strategies, but can be useful in indicators. | TYPE barmerge_lookahead"
+       "prefix": "barmerge.lookahead_on",
+       "body": [
+          "barmerge.lookahead_on$0"
+       ],
+       "description": "Merge strategy for the requested data position. Requested barset is merged with current barset in the order of sorting bars by their opening time. This merge strategy can lead to undesirable effect of getting data from 'future' on calculation on history. This is unacceptable in backtesting strategies, but can be useful in indicators. | TYPE barmerge_lookahead"
     },
     "color.aqua ⇨ 𝑥": {
-        "prefix": "color.aqua",
-        "body": [
-            "color.aqua$0"
-        ],
-        "description": "Is a named constant for #00BCD4 color. | TYPE const color"
+       "prefix": "color.aqua",
+       "body": [
+          "color.aqua$0"
+       ],
+       "description": "Is a named constant for #00BCD4 color. | TYPE const color"
     },
     "color.black ⇨ 𝑥": {
-        "prefix": "color.black",
-        "body": [
-            "color.black$0"
-        ],
-        "description": "Is a named constant for #363A45 color. | TYPE const color"
+       "prefix": "color.black",
+       "body": [
+          "color.black$0"
+       ],
+       "description": "Is a named constant for #363A45 color. | TYPE const color"
     },
     "color.blue ⇨ 𝑥": {
-        "prefix": "color.blue",
-        "body": [
-            "color.blue$0"
-        ],
-        "description": "Is a named constant for #2962ff color. | TYPE const color"
+       "prefix": "color.blue",
+       "body": [
+          "color.blue$0"
+       ],
+       "description": "Is a named constant for #2962ff color. | TYPE const color"
     },
     "color.fuchsia ⇨ 𝑥": {
-        "prefix": "color.fuchsia",
-        "body": [
-            "color.fuchsia$0"
-        ],
-        "description": "Is a named constant for #E040FB color. | TYPE const color"
+       "prefix": "color.fuchsia",
+       "body": [
+          "color.fuchsia$0"
+       ],
+       "description": "Is a named constant for #E040FB color. | TYPE const color"
     },
     "color.gray ⇨ 𝑥": {
-        "prefix": "color.gray",
-        "body": [
-            "color.gray$0"
-        ],
-        "description": "Is a named constant for #787B86 color. | TYPE const color"
+       "prefix": "color.gray",
+       "body": [
+          "color.gray$0"
+       ],
+       "description": "Is a named constant for #787B86 color. | TYPE const color"
     },
     "color.green ⇨ 𝑥": {
-        "prefix": "color.green",
-        "body": [
-            "color.green$0"
-        ],
-        "description": "Is a named constant for #4CAF50 color. | TYPE const color"
+       "prefix": "color.green",
+       "body": [
+          "color.green$0"
+       ],
+       "description": "Is a named constant for #4CAF50 color. | TYPE const color"
     },
     "color.lime ⇨ 𝑥": {
-        "prefix": "color.lime",
-        "body": [
-            "color.lime$0"
-        ],
-        "description": "Is a named constant for #00E676 color. | TYPE const color"
+       "prefix": "color.lime",
+       "body": [
+          "color.lime$0"
+       ],
+       "description": "Is a named constant for #00E676 color. | TYPE const color"
     },
     "color.maroon ⇨ 𝑥": {
-        "prefix": "color.maroon",
-        "body": [
-            "color.maroon$0"
-        ],
-        "description": "Is a named constant for #880E4F color. | TYPE const color"
+       "prefix": "color.maroon",
+       "body": [
+          "color.maroon$0"
+       ],
+       "description": "Is a named constant for #880E4F color. | TYPE const color"
     },
     "color.navy ⇨ 𝑥": {
-        "prefix": "color.navy",
-        "body": [
-            "color.navy$0"
-        ],
-        "description": "Is a named constant for #311B92 color. | TYPE const color"
+       "prefix": "color.navy",
+       "body": [
+          "color.navy$0"
+       ],
+       "description": "Is a named constant for #311B92 color. | TYPE const color"
     },
     "color.olive ⇨ 𝑥": {
-        "prefix": "color.olive",
-        "body": [
-            "color.olive$0"
-        ],
-        "description": "Is a named constant for #808000 color. | TYPE const color"
+       "prefix": "color.olive",
+       "body": [
+          "color.olive$0"
+       ],
+       "description": "Is a named constant for #808000 color. | TYPE const color"
     },
     "color.orange ⇨ 𝑥": {
-        "prefix": "color.orange",
-        "body": [
-            "color.orange$0"
-        ],
-        "description": "Is a named constant for #FF9800 color. | TYPE const color"
+       "prefix": "color.orange",
+       "body": [
+          "color.orange$0"
+       ],
+       "description": "Is a named constant for #FF9800 color. | TYPE const color"
     },
     "color.purple ⇨ 𝑥": {
-        "prefix": "color.purple",
-        "body": [
-            "color.purple$0"
-        ],
-        "description": "Is a named constant for #9C27B0 color. | TYPE const color"
+       "prefix": "color.purple",
+       "body": [
+          "color.purple$0"
+       ],
+       "description": "Is a named constant for #9C27B0 color. | TYPE const color"
     },
     "color.red ⇨ 𝑥": {
-        "prefix": "color.red",
-        "body": [
-            "color.red$0"
-        ],
-        "description": "Is a named constant for #FF5252 color. | TYPE const color"
+       "prefix": "color.red",
+       "body": [
+          "color.red$0"
+       ],
+       "description": "Is a named constant for #FF5252 color. | TYPE const color"
     },
     "color.silver ⇨ 𝑥": {
-        "prefix": "color.silver",
-        "body": [
-            "color.silver$0"
-        ],
-        "description": "Is a named constant for #B2B5BE color. | TYPE const color"
+       "prefix": "color.silver",
+       "body": [
+          "color.silver$0"
+       ],
+       "description": "Is a named constant for #B2B5BE color. | TYPE const color"
     },
     "color.teal ⇨ 𝑥": {
-        "prefix": "color.teal",
-        "body": [
-            "color.teal$0"
-        ],
-        "description": "Is a named constant for #00897B color. | TYPE const color"
+       "prefix": "color.teal",
+       "body": [
+          "color.teal$0"
+       ],
+       "description": "Is a named constant for #00897B color. | TYPE const color"
     },
     "color.white ⇨ 𝑥": {
-        "prefix": "color.white",
-        "body": [
-            "color.white$0"
-        ],
-        "description": "Is a named constant for #FFFFFF color. | TYPE const color"
+       "prefix": "color.white",
+       "body": [
+          "color.white$0"
+       ],
+       "description": "Is a named constant for #FFFFFF color. | TYPE const color"
     },
     "color.yellow ⇨ 𝑥": {
-        "prefix": "color.yellow",
-        "body": [
-            "color.yellow$0"
-        ],
-        "description": "Is a named constant for #FFEB3B color. | TYPE const color"
+       "prefix": "color.yellow",
+       "body": [
+          "color.yellow$0"
+       ],
+       "description": "Is a named constant for #FFEB3B color. | TYPE const color"
     },
     "currency.AUD ⇨ 𝑥": {
-        "prefix": "currency.AUD",
-        "body": [
-            "currency.AUD$0"
-        ],
-        "description": "Australian dollar. | TYPE const string"
+       "prefix": "currency.AUD",
+       "body": [
+          "currency.AUD$0"
+       ],
+       "description": "Australian dollar. | TYPE const string"
     },
     "currency.BTC ⇨ 𝑥": {
-        "prefix": "currency.BTC",
-        "body": [
-            "currency.BTC$0"
-        ],
-        "description": "Bitcoin. | TYPE const string"
+       "prefix": "currency.BTC",
+       "body": [
+          "currency.BTC$0"
+       ],
+       "description": "Bitcoin. | TYPE const string"
     },
     "currency.CAD ⇨ 𝑥": {
-        "prefix": "currency.CAD",
-        "body": [
-            "currency.CAD$0"
-        ],
-        "description": "Canadian dollar. | TYPE const string"
+       "prefix": "currency.CAD",
+       "body": [
+          "currency.CAD$0"
+       ],
+       "description": "Canadian dollar. | TYPE const string"
     },
     "currency.CHF ⇨ 𝑥": {
-        "prefix": "currency.CHF",
-        "body": [
-            "currency.CHF$0"
-        ],
-        "description": "Swiss franc. | TYPE const string"
+       "prefix": "currency.CHF",
+       "body": [
+          "currency.CHF$0"
+       ],
+       "description": "Swiss franc. | TYPE const string"
     },
     "currency.ETH ⇨ 𝑥": {
-        "prefix": "currency.ETH",
-        "body": [
-            "currency.ETH$0"
-        ],
-        "description": "Ethereum. | TYPE const string"
+       "prefix": "currency.ETH",
+       "body": [
+          "currency.ETH$0"
+       ],
+       "description": "Ethereum. | TYPE const string"
     },
     "currency.EUR ⇨ 𝑥": {
-        "prefix": "currency.EUR",
-        "body": [
-            "currency.EUR$0"
-        ],
-        "description": "Euro. | TYPE const string"
+       "prefix": "currency.EUR",
+       "body": [
+          "currency.EUR$0"
+       ],
+       "description": "Euro. | TYPE const string"
     },
     "currency.GBP ⇨ 𝑥": {
-        "prefix": "currency.GBP",
-        "body": [
-            "currency.GBP$0"
-        ],
-        "description": "Pound sterling. | TYPE const string"
+       "prefix": "currency.GBP",
+       "body": [
+          "currency.GBP$0"
+       ],
+       "description": "Pound sterling. | TYPE const string"
     },
     "currency.HKD ⇨ 𝑥": {
-        "prefix": "currency.HKD",
-        "body": [
-            "currency.HKD$0"
-        ],
-        "description": "Hong Kong dollar. | TYPE const string"
+       "prefix": "currency.HKD",
+       "body": [
+          "currency.HKD$0"
+       ],
+       "description": "Hong Kong dollar. | TYPE const string"
     },
     "currency.INR ⇨ 𝑥": {
-        "prefix": "currency.INR",
-        "body": [
-            "currency.INR$0"
-        ],
-        "description": "Indian rupee. | TYPE const string"
+       "prefix": "currency.INR",
+       "body": [
+          "currency.INR$0"
+       ],
+       "description": "Indian rupee. | TYPE const string"
     },
     "currency.JPY ⇨ 𝑥": {
-        "prefix": "currency.JPY",
-        "body": [
-            "currency.JPY$0"
-        ],
-        "description": "Japanese yen. | TYPE const string"
+       "prefix": "currency.JPY",
+       "body": [
+          "currency.JPY$0"
+       ],
+       "description": "Japanese yen. | TYPE const string"
     },
     "currency.KRW ⇨ 𝑥": {
-        "prefix": "currency.KRW",
-        "body": [
-            "currency.KRW$0"
-        ],
-        "description": "South Korean won. | TYPE const string"
+       "prefix": "currency.KRW",
+       "body": [
+          "currency.KRW$0"
+       ],
+       "description": "South Korean won. | TYPE const string"
     },
     "currency.MYR ⇨ 𝑥": {
-        "prefix": "currency.MYR",
-        "body": [
-            "currency.MYR$0"
-        ],
-        "description": "Malaysian ringgit. | TYPE const string"
+       "prefix": "currency.MYR",
+       "body": [
+          "currency.MYR$0"
+       ],
+       "description": "Malaysian ringgit. | TYPE const string"
     },
     "currency.NOK ⇨ 𝑥": {
-        "prefix": "currency.NOK",
-        "body": [
-            "currency.NOK$0"
-        ],
-        "description": "Norwegian krone. | TYPE const string"
+       "prefix": "currency.NOK",
+       "body": [
+          "currency.NOK$0"
+       ],
+       "description": "Norwegian krone. | TYPE const string"
     },
     "currency.NONE ⇨ 𝑥": {
-        "prefix": "currency.NONE",
-        "body": [
-            "currency.NONE$0"
-        ],
-        "description": "Unspecified currency. | TYPE const string"
+       "prefix": "currency.NONE",
+       "body": [
+          "currency.NONE$0"
+       ],
+       "description": "Unspecified currency. | TYPE const string"
     },
     "currency.NZD ⇨ 𝑥": {
-        "prefix": "currency.NZD",
-        "body": [
-            "currency.NZD$0"
-        ],
-        "description": "New Zealand dollar. | TYPE const string"
+       "prefix": "currency.NZD",
+       "body": [
+          "currency.NZD$0"
+       ],
+       "description": "New Zealand dollar. | TYPE const string"
     },
     "currency.RUB ⇨ 𝑥": {
-        "prefix": "currency.RUB",
-        "body": [
-            "currency.RUB$0"
-        ],
-        "description": "Russian ruble. | TYPE const string"
+       "prefix": "currency.RUB",
+       "body": [
+          "currency.RUB$0"
+       ],
+       "description": "Russian ruble. | TYPE const string"
     },
     "currency.SEK ⇨ 𝑥": {
-        "prefix": "currency.SEK",
-        "body": [
-            "currency.SEK$0"
-        ],
-        "description": "Swedish krona. | TYPE const string"
+       "prefix": "currency.SEK",
+       "body": [
+          "currency.SEK$0"
+       ],
+       "description": "Swedish krona. | TYPE const string"
     },
     "currency.SGD ⇨ 𝑥": {
-        "prefix": "currency.SGD",
-        "body": [
-            "currency.SGD$0"
-        ],
-        "description": "Singapore dollar. | TYPE const string"
+       "prefix": "currency.SGD",
+       "body": [
+          "currency.SGD$0"
+       ],
+       "description": "Singapore dollar. | TYPE const string"
     },
     "currency.TRY ⇨ 𝑥": {
-        "prefix": "currency.TRY",
-        "body": [
-            "currency.TRY$0"
-        ],
-        "description": "Turkish lira. | TYPE const string"
+       "prefix": "currency.TRY",
+       "body": [
+          "currency.TRY$0"
+       ],
+       "description": "Turkish lira. | TYPE const string"
     },
     "currency.USD ⇨ 𝑥": {
-        "prefix": "currency.USD",
-        "body": [
-            "currency.USD$0"
-        ],
-        "description": "United States dollar. | TYPE const string"
+       "prefix": "currency.USD",
+       "body": [
+          "currency.USD$0"
+       ],
+       "description": "United States dollar. | TYPE const string"
     },
     "currency.USDT ⇨ 𝑥": {
-        "prefix": "currency.USDT",
-        "body": [
-            "currency.USDT$0"
-        ],
-        "description": "Tether. | TYPE const string"
+       "prefix": "currency.USDT",
+       "body": [
+          "currency.USDT$0"
+       ],
+       "description": "Tether. | TYPE const string"
     },
     "currency.ZAR ⇨ 𝑥": {
-        "prefix": "currency.ZAR",
-        "body": [
-            "currency.ZAR$0"
-        ],
-        "description": "South African rand. | TYPE const string"
+       "prefix": "currency.ZAR",
+       "body": [
+          "currency.ZAR$0"
+       ],
+       "description": "South African rand. | TYPE const string"
     },
     "dayofweek.friday ⇨ 𝑥": {
-        "prefix": "dayofweek.friday",
-        "body": [
-            "dayofweek.friday$0"
-        ],
-        "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
+       "prefix": "dayofweek.friday",
+       "body": [
+          "dayofweek.friday$0"
+       ],
+       "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
     },
     "dayofweek.monday ⇨ 𝑥": {
-        "prefix": "dayofweek.monday",
-        "body": [
-            "dayofweek.monday$0"
-        ],
-        "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
+       "prefix": "dayofweek.monday",
+       "body": [
+          "dayofweek.monday$0"
+       ],
+       "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
     },
     "dayofweek.saturday ⇨ 𝑥": {
-        "prefix": "dayofweek.saturday",
-        "body": [
-            "dayofweek.saturday$0"
-        ],
-        "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
+       "prefix": "dayofweek.saturday",
+       "body": [
+          "dayofweek.saturday$0"
+       ],
+       "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
     },
     "dayofweek.sunday ⇨ 𝑥": {
-        "prefix": "dayofweek.sunday",
-        "body": [
-            "dayofweek.sunday$0"
-        ],
-        "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
+       "prefix": "dayofweek.sunday",
+       "body": [
+          "dayofweek.sunday$0"
+       ],
+       "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
     },
     "dayofweek.thursday ⇨ 𝑥": {
-        "prefix": "dayofweek.thursday",
-        "body": [
-            "dayofweek.thursday$0"
-        ],
-        "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
+       "prefix": "dayofweek.thursday",
+       "body": [
+          "dayofweek.thursday$0"
+       ],
+       "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
     },
     "dayofweek.tuesday ⇨ 𝑥": {
-        "prefix": "dayofweek.tuesday",
-        "body": [
-            "dayofweek.tuesday$0"
-        ],
-        "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
+       "prefix": "dayofweek.tuesday",
+       "body": [
+          "dayofweek.tuesday$0"
+       ],
+       "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
     },
     "dayofweek.wednesday ⇨ 𝑥": {
-        "prefix": "dayofweek.wednesday",
-        "body": [
-            "dayofweek.wednesday$0"
-        ],
-        "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
+       "prefix": "dayofweek.wednesday",
+       "body": [
+          "dayofweek.wednesday$0"
+       ],
+       "description": "Is a named constant for return value of dayofweek function and value of dayofweek variable. | TYPE const int"
     },
     "display.all ⇨ 𝑥": {
-        "prefix": "display.all",
-        "body": [
-            "display.all$0"
-        ],
-        "description": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in all possible locations. | TYPE plot_simple_display"
+       "prefix": "display.all",
+       "body": [
+          "display.all$0"
+       ],
+       "description": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in all possible locations. | TYPE plot_simple_display"
     },
     "display.data_window ⇨ 𝑥": {
-        "prefix": "display.data_window",
-        "body": [
-            "display.data_window$0"
-        ],
-        "description": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in the Data Window, a menu accessible from the chart's right sidebar. | TYPE plot_display"
+       "prefix": "display.data_window",
+       "body": [
+          "display.data_window$0"
+       ],
+       "description": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in the Data Window, a menu accessible from the chart's right sidebar. | TYPE plot_display"
     },
     "display.none ⇨ 𝑥": {
-        "prefix": "display.none",
-        "body": [
-            "display.none$0"
-        ],
-        "description": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. `plot*()` functions using this will not display their plotted values anywhere. However, alert template messages and fill functions can still use the values, and they will appear in exported chart data. `input*()` functions using this constant will only display their values within the script's settings. | TYPE plot_simple_display"
+       "prefix": "display.none",
+       "body": [
+          "display.none$0"
+       ],
+       "description": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. `plot*()` functions using this will not display their plotted values anywhere. However, alert template messages and fill functions can still use the values, and they will appear in exported chart data. `input*()` functions using this constant will only display their values within the script's settings. | TYPE plot_simple_display"
     },
     "display.pane ⇨ 𝑥": {
-        "prefix": "display.pane",
-        "body": [
-            "display.pane$0"
-        ],
-        "description": "A named constant for use with the `display` parameter of `plot*()` functions. Displays plotted values in the chart pane used by the script. | TYPE plot_display"
+       "prefix": "display.pane",
+       "body": [
+          "display.pane$0"
+       ],
+       "description": "A named constant for use with the `display` parameter of `plot*()` functions. Displays plotted values in the chart pane used by the script. | TYPE plot_display"
     },
     "display.price_scale ⇨ 𝑥": {
-        "prefix": "display.price_scale",
-        "body": [
-            "display.price_scale$0"
-        ],
-        "description": "A named constant for use with the `display` parameter of `plot*()` functions. Displays the plot’s label and value on the price scale if the chart's settings allow it. | TYPE plot_display"
+       "prefix": "display.price_scale",
+       "body": [
+          "display.price_scale$0"
+       ],
+       "description": "A named constant for use with the `display` parameter of `plot*()` functions. Displays the plot’s label and value on the price scale if the chart's settings allow it. | TYPE plot_display"
     },
     "display.status_line ⇨ 𝑥": {
-        "prefix": "display.status_line",
-        "body": [
-            "display.status_line$0"
-        ],
-        "description": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in the status line next to the script's name on the chart if the chart's settings allow it. | TYPE plot_display"
+       "prefix": "display.status_line",
+       "body": [
+          "display.status_line$0"
+       ],
+       "description": "A named constant for use with the `display` parameter of `plot*()` and `input*()` functions. Displays plotted or input values in the status line next to the script's name on the chart if the chart's settings allow it. | TYPE plot_display"
     },
     "dividends.gross ⇨ 𝑥": {
-        "prefix": "dividends.gross",
-        "body": [
-            "dividends.gross$0"
-        ],
-        "description": "A named constant for the request.dividends function. Is used to request the dividends return on a stock before deductions. | TYPE const string"
+       "prefix": "dividends.gross",
+       "body": [
+          "dividends.gross$0"
+       ],
+       "description": "A named constant for the request.dividends function. Is used to request the dividends return on a stock before deductions. | TYPE const string"
     },
     "dividends.net ⇨ 𝑥": {
-        "prefix": "dividends.net",
-        "body": [
-            "dividends.net$0"
-        ],
-        "description": "A named constant for the request.dividends function. Is used to request the dividends return on a stock after deductions. | TYPE const string"
+       "prefix": "dividends.net",
+       "body": [
+          "dividends.net$0"
+       ],
+       "description": "A named constant for the request.dividends function. Is used to request the dividends return on a stock after deductions. | TYPE const string"
     },
     "earnings.actual ⇨ 𝑥": {
-        "prefix": "earnings.actual",
-        "body": [
-            "earnings.actual$0"
-        ],
-        "description": "A named constant for the request.earnings function. Is used to request the earnings value as it was reported. | TYPE const string"
+       "prefix": "earnings.actual",
+       "body": [
+          "earnings.actual$0"
+       ],
+       "description": "A named constant for the request.earnings function. Is used to request the earnings value as it was reported. | TYPE const string"
     },
     "earnings.estimate ⇨ 𝑥": {
-        "prefix": "earnings.estimate",
-        "body": [
-            "earnings.estimate$0"
-        ],
-        "description": "A named constant for the request.earnings function. Is used to request the estimated earnings value. | TYPE const string"
+       "prefix": "earnings.estimate",
+       "body": [
+          "earnings.estimate$0"
+       ],
+       "description": "A named constant for the request.earnings function. Is used to request the estimated earnings value. | TYPE const string"
     },
     "earnings.standardized ⇨ 𝑥": {
-        "prefix": "earnings.standardized",
-        "body": [
-            "earnings.standardized$0"
-        ],
-        "description": "A named constant for the request.earnings function. Is used to request the standardized earnings value. | TYPE const string"
+       "prefix": "earnings.standardized",
+       "body": [
+          "earnings.standardized$0"
+       ],
+       "description": "A named constant for the request.earnings function. Is used to request the standardized earnings value. | TYPE const string"
     },
     "extend.both ⇨ 𝑥": {
-        "prefix": "extend.both",
-        "body": [
-            "extend.both$0"
-        ],
-        "description": "A named constant for line.new and line.set_extend functions. | TYPE const string"
+       "prefix": "extend.both",
+       "body": [
+          "extend.both$0"
+       ],
+       "description": "A named constant for line.new and line.set_extend functions. | TYPE const string"
     },
     "extend.left ⇨ 𝑥": {
-        "prefix": "extend.left",
-        "body": [
-            "extend.left$0"
-        ],
-        "description": "A named constant for line.new and line.set_extend functions. | TYPE const string"
+       "prefix": "extend.left",
+       "body": [
+          "extend.left$0"
+       ],
+       "description": "A named constant for line.new and line.set_extend functions. | TYPE const string"
     },
     "extend.none ⇨ 𝑥": {
-        "prefix": "extend.none",
-        "body": [
-            "extend.none$0"
-        ],
-        "description": "A named constant for line.new and line.set_extend functions. | TYPE const string"
+       "prefix": "extend.none",
+       "body": [
+          "extend.none$0"
+       ],
+       "description": "A named constant for line.new and line.set_extend functions. | TYPE const string"
     },
     "extend.right ⇨ 𝑥": {
-        "prefix": "extend.right",
-        "body": [
-            "extend.right$0"
-        ],
-        "description": "A named constant for line.new and line.set_extend functions. | TYPE const string"
+       "prefix": "extend.right",
+       "body": [
+          "extend.right$0"
+       ],
+       "description": "A named constant for line.new and line.set_extend functions. | TYPE const string"
     },
     "font.family_default ⇨ 𝑥": {
-        "prefix": "font.family_default",
-        "body": [
-            "font.family_default$0"
-        ],
-        "description": "Default text font for box.new, box.set_text_font_family, label.new, label.set_text_font_family, table.cell and table.cell_set_text_font_family functions. | TYPE const string"
+       "prefix": "font.family_default",
+       "body": [
+          "font.family_default$0"
+       ],
+       "description": "Default text font for box.new, box.set_text_font_family, label.new, label.set_text_font_family, table.cell and table.cell_set_text_font_family functions. | TYPE const string"
     },
     "font.family_monospace ⇨ 𝑥": {
-        "prefix": "font.family_monospace",
-        "body": [
-            "font.family_monospace$0"
-        ],
-        "description": "Monospace text font for box.new, box.set_text_font_family, label.new, label.set_text_font_family, table.cell and table.cell_set_text_font_family functions. | TYPE const string"
+       "prefix": "font.family_monospace",
+       "body": [
+          "font.family_monospace$0"
+       ],
+       "description": "Monospace text font for box.new, box.set_text_font_family, label.new, label.set_text_font_family, table.cell and table.cell_set_text_font_family functions. | TYPE const string"
     },
     "format.inherit ⇨ 𝑥": {
-        "prefix": "format.inherit",
-        "body": [
-            "format.inherit$0"
-        ],
-        "description": "Is a named constant for selecting the formatting of the script output values from the parent series in the indicator function. | TYPE const string"
+       "prefix": "format.inherit",
+       "body": [
+          "format.inherit$0"
+       ],
+       "description": "Is a named constant for selecting the formatting of the script output values from the parent series in the indicator function. | TYPE const string"
     },
     "format.mintick ⇨ 𝑥": {
-        "prefix": "format.mintick",
-        "body": [
-            "format.mintick$0"
-        ],
-        "description": "Is a named constant to use with the str.tostring function. Passing a number to str.tostring with this argument rounds the number to the nearest value that can be divided by syminfo.mintick, without the remainder, with ties rounding up, and returns the string version of said value with trailing zeroes. | TYPE const string"
+       "prefix": "format.mintick",
+       "body": [
+          "format.mintick$0"
+       ],
+       "description": "Is a named constant to use with the str.tostring function. Passing a number to str.tostring with this argument rounds the number to the nearest value that can be divided by syminfo.mintick, without the remainder, with ties rounding up, and returns the string version of said value with trailing zeroes. | TYPE const string"
     },
     "format.percent ⇨ 𝑥": {
-        "prefix": "format.percent",
-        "body": [
-            "format.percent$0"
-        ],
-        "description": "Is a named constant for selecting the formatting of the script output values as a percentage in the indicator function. It adds a percent sign after values. | TYPE const string"
+       "prefix": "format.percent",
+       "body": [
+          "format.percent$0"
+       ],
+       "description": "Is a named constant for selecting the formatting of the script output values as a percentage in the indicator function. It adds a percent sign after values. | TYPE const string"
     },
     "format.price ⇨ 𝑥": {
-        "prefix": "format.price",
-        "body": [
-            "format.price$0"
-        ],
-        "description": "Is a named constant for selecting the formatting of the script output values as prices in the indicator function. | TYPE const string"
+       "prefix": "format.price",
+       "body": [
+          "format.price$0"
+       ],
+       "description": "Is a named constant for selecting the formatting of the script output values as prices in the indicator function. | TYPE const string"
     },
     "format.volume ⇨ 𝑥": {
-        "prefix": "format.volume",
-        "body": [
-            "format.volume$0"
-        ],
-        "description": "Is a named constant for selecting the formatting of the script output values as volume in the indicator function, e.g. '5183' will be formatted as '5.183K'. | TYPE const string"
+       "prefix": "format.volume",
+       "body": [
+          "format.volume$0"
+       ],
+       "description": "Is a named constant for selecting the formatting of the script output values as volume in the indicator function, e.g. '5183' will be formatted as '5.183K'. | TYPE const string"
     },
     "hline.style_dashed ⇨ 𝑥": {
-        "prefix": "hline.style_dashed",
-        "body": [
-            "hline.style_dashed$0"
-        ],
-        "description": "Is a named constant for dashed linestyle of hline function. | TYPE hline_style"
+       "prefix": "hline.style_dashed",
+       "body": [
+          "hline.style_dashed$0"
+       ],
+       "description": "Is a named constant for dashed linestyle of hline function. | TYPE hline_style"
     },
     "hline.style_dotted ⇨ 𝑥": {
-        "prefix": "hline.style_dotted",
-        "body": [
-            "hline.style_dotted$0"
-        ],
-        "description": "Is a named constant for dotted linestyle of hline function. | TYPE hline_style"
+       "prefix": "hline.style_dotted",
+       "body": [
+          "hline.style_dotted$0"
+       ],
+       "description": "Is a named constant for dotted linestyle of hline function. | TYPE hline_style"
     },
     "hline.style_solid ⇨ 𝑥": {
-        "prefix": "hline.style_solid",
-        "body": [
-            "hline.style_solid$0"
-        ],
-        "description": "Is a named constant for solid linestyle of hline function. | TYPE hline_style"
+       "prefix": "hline.style_solid",
+       "body": [
+          "hline.style_solid$0"
+       ],
+       "description": "Is a named constant for solid linestyle of hline function. | TYPE hline_style"
     },
     "label.style_arrowdown ⇨ 𝑥": {
-        "prefix": "label.style_arrowdown",
-        "body": [
-            "label.style_arrowdown$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_arrowdown",
+       "body": [
+          "label.style_arrowdown$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_arrowup ⇨ 𝑥": {
-        "prefix": "label.style_arrowup",
-        "body": [
-            "label.style_arrowup$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_arrowup",
+       "body": [
+          "label.style_arrowup$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_circle ⇨ 𝑥": {
-        "prefix": "label.style_circle",
-        "body": [
-            "label.style_circle$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_circle",
+       "body": [
+          "label.style_circle$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_cross ⇨ 𝑥": {
-        "prefix": "label.style_cross",
-        "body": [
-            "label.style_cross$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_cross",
+       "body": [
+          "label.style_cross$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_diamond ⇨ 𝑥": {
-        "prefix": "label.style_diamond",
-        "body": [
-            "label.style_diamond$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_diamond",
+       "body": [
+          "label.style_diamond$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_flag ⇨ 𝑥": {
-        "prefix": "label.style_flag",
-        "body": [
-            "label.style_flag$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_flag",
+       "body": [
+          "label.style_flag$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_label_center ⇨ 𝑥": {
-        "prefix": "label.style_label_center",
-        "body": [
-            "label.style_label_center$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_label_center",
+       "body": [
+          "label.style_label_center$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_label_down ⇨ 𝑥": {
-        "prefix": "label.style_label_down",
-        "body": [
-            "label.style_label_down$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_label_down",
+       "body": [
+          "label.style_label_down$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_label_left ⇨ 𝑥": {
-        "prefix": "label.style_label_left",
-        "body": [
-            "label.style_label_left$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_label_left",
+       "body": [
+          "label.style_label_left$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_label_lower_left ⇨ 𝑥": {
-        "prefix": "label.style_label_lower_left",
-        "body": [
-            "label.style_label_lower_left$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_label_lower_left",
+       "body": [
+          "label.style_label_lower_left$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_label_lower_right ⇨ 𝑥": {
-        "prefix": "label.style_label_lower_right",
-        "body": [
-            "label.style_label_lower_right$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_label_lower_right",
+       "body": [
+          "label.style_label_lower_right$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_label_right ⇨ 𝑥": {
-        "prefix": "label.style_label_right",
-        "body": [
-            "label.style_label_right$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_label_right",
+       "body": [
+          "label.style_label_right$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_label_up ⇨ 𝑥": {
-        "prefix": "label.style_label_up",
-        "body": [
-            "label.style_label_up$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_label_up",
+       "body": [
+          "label.style_label_up$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_label_upper_left ⇨ 𝑥": {
-        "prefix": "label.style_label_upper_left",
-        "body": [
-            "label.style_label_upper_left$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_label_upper_left",
+       "body": [
+          "label.style_label_upper_left$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_label_upper_right ⇨ 𝑥": {
-        "prefix": "label.style_label_upper_right",
-        "body": [
-            "label.style_label_upper_right$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_label_upper_right",
+       "body": [
+          "label.style_label_upper_right$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_none ⇨ 𝑥": {
-        "prefix": "label.style_none",
-        "body": [
-            "label.style_none$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_none",
+       "body": [
+          "label.style_none$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_square ⇨ 𝑥": {
-        "prefix": "label.style_square",
-        "body": [
-            "label.style_square$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_square",
+       "body": [
+          "label.style_square$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_text_outline ⇨ 𝑥": {
-        "prefix": "label.style_text_outline",
-        "body": [
-            "label.style_text_outline$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_text_outline",
+       "body": [
+          "label.style_text_outline$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_triangledown ⇨ 𝑥": {
-        "prefix": "label.style_triangledown",
-        "body": [
-            "label.style_triangledown$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_triangledown",
+       "body": [
+          "label.style_triangledown$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_triangleup ⇨ 𝑥": {
-        "prefix": "label.style_triangleup",
-        "body": [
-            "label.style_triangleup$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_triangleup",
+       "body": [
+          "label.style_triangleup$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "label.style_xcross ⇨ 𝑥": {
-        "prefix": "label.style_xcross",
-        "body": [
-            "label.style_xcross$0"
-        ],
-        "description": "Label style for label.new and label.set_style functions. | TYPE const string"
+       "prefix": "label.style_xcross",
+       "body": [
+          "label.style_xcross$0"
+       ],
+       "description": "Label style for label.new and label.set_style functions. | TYPE const string"
     },
     "line.style_arrow_both ⇨ 𝑥": {
-        "prefix": "line.style_arrow_both",
-        "body": [
-            "line.style_arrow_both$0"
-        ],
-        "description": "Line style for line.new and line.set_style functions. Solid line with arrows on both points. | TYPE const string"
+       "prefix": "line.style_arrow_both",
+       "body": [
+          "line.style_arrow_both$0"
+       ],
+       "description": "Line style for line.new and line.set_style functions. Solid line with arrows on both points. | TYPE const string"
     },
     "line.style_arrow_left ⇨ 𝑥": {
-        "prefix": "line.style_arrow_left",
-        "body": [
-            "line.style_arrow_left$0"
-        ],
-        "description": "Line style for line.new and line.set_style functions. Solid line with arrow on the first point. | TYPE const string"
+       "prefix": "line.style_arrow_left",
+       "body": [
+          "line.style_arrow_left$0"
+       ],
+       "description": "Line style for line.new and line.set_style functions. Solid line with arrow on the first point. | TYPE const string"
     },
     "line.style_arrow_right ⇨ 𝑥": {
-        "prefix": "line.style_arrow_right",
-        "body": [
-            "line.style_arrow_right$0"
-        ],
-        "description": "Line style for line.new and line.set_style functions. Solid line with arrow on the second point. | TYPE const string"
+       "prefix": "line.style_arrow_right",
+       "body": [
+          "line.style_arrow_right$0"
+       ],
+       "description": "Line style for line.new and line.set_style functions. Solid line with arrow on the second point. | TYPE const string"
     },
     "line.style_dashed ⇨ 𝑥": {
-        "prefix": "line.style_dashed",
-        "body": [
-            "line.style_dashed$0"
-        ],
-        "description": "Line style for line.new and line.set_style functions. | TYPE const string"
+       "prefix": "line.style_dashed",
+       "body": [
+          "line.style_dashed$0"
+       ],
+       "description": "Line style for line.new and line.set_style functions. | TYPE const string"
     },
     "line.style_dotted ⇨ 𝑥": {
-        "prefix": "line.style_dotted",
-        "body": [
-            "line.style_dotted$0"
-        ],
-        "description": "Line style for line.new and line.set_style functions. | TYPE const string"
+       "prefix": "line.style_dotted",
+       "body": [
+          "line.style_dotted$0"
+       ],
+       "description": "Line style for line.new and line.set_style functions. | TYPE const string"
     },
     "line.style_solid ⇨ 𝑥": {
-        "prefix": "line.style_solid",
-        "body": [
-            "line.style_solid$0"
-        ],
-        "description": "Line style for line.new and line.set_style functions. | TYPE const string"
+       "prefix": "line.style_solid",
+       "body": [
+          "line.style_solid$0"
+       ],
+       "description": "Line style for line.new and line.set_style functions. | TYPE const string"
     },
     "location.abovebar ⇨ 𝑥": {
-        "prefix": "location.abovebar",
-        "body": [
-            "location.abovebar$0"
-        ],
-        "description": "Location value for plotshape, plotchar functions. Shape is plotted above main series bars. | TYPE const string"
+       "prefix": "location.abovebar",
+       "body": [
+          "location.abovebar$0"
+       ],
+       "description": "Location value for plotshape, plotchar functions. Shape is plotted above main series bars. | TYPE const string"
     },
     "location.absolute ⇨ 𝑥": {
-        "prefix": "location.absolute",
-        "body": [
-            "location.absolute$0"
-        ],
-        "description": "Location value for plotshape, plotchar functions. Shape is plotted on chart using indicator value as a price coordinate. | TYPE const string"
+       "prefix": "location.absolute",
+       "body": [
+          "location.absolute$0"
+       ],
+       "description": "Location value for plotshape, plotchar functions. Shape is plotted on chart using indicator value as a price coordinate. | TYPE const string"
     },
     "location.belowbar ⇨ 𝑥": {
-        "prefix": "location.belowbar",
-        "body": [
-            "location.belowbar$0"
-        ],
-        "description": "Location value for plotshape, plotchar functions. Shape is plotted below main series bars. | TYPE const string"
+       "prefix": "location.belowbar",
+       "body": [
+          "location.belowbar$0"
+       ],
+       "description": "Location value for plotshape, plotchar functions. Shape is plotted below main series bars. | TYPE const string"
     },
     "location.bottom ⇨ 𝑥": {
-        "prefix": "location.bottom",
-        "body": [
-            "location.bottom$0"
-        ],
-        "description": "Location value for plotshape, plotchar functions. Shape is plotted near the bottom chart border. | TYPE const string"
+       "prefix": "location.bottom",
+       "body": [
+          "location.bottom$0"
+       ],
+       "description": "Location value for plotshape, plotchar functions. Shape is plotted near the bottom chart border. | TYPE const string"
     },
     "location.top ⇨ 𝑥": {
-        "prefix": "location.top",
-        "body": [
-            "location.top$0"
-        ],
-        "description": "Location value for plotshape, plotchar functions. Shape is plotted near the top chart border. | TYPE const string"
+       "prefix": "location.top",
+       "body": [
+          "location.top$0"
+       ],
+       "description": "Location value for plotshape, plotchar functions. Shape is plotted near the top chart border. | TYPE const string"
     },
     "math.e ⇨ 𝑥": {
-        "prefix": "math.e",
-        "body": [
-            "math.e$0"
-        ],
-        "description": "Is a named constant for Euler's number. It is equal to 2.7182818284590452. | TYPE const float"
+       "prefix": "math.e",
+       "body": [
+          "math.e$0"
+       ],
+       "description": "Is a named constant for Euler's number. It is equal to 2.7182818284590452. | TYPE const float"
     },
     "math.phi ⇨ 𝑥": {
-        "prefix": "math.phi",
-        "body": [
-            "math.phi$0"
-        ],
-        "description": "Is a named constant for the golden ratio. It is equal to 1.6180339887498948. | TYPE const float"
+       "prefix": "math.phi",
+       "body": [
+          "math.phi$0"
+       ],
+       "description": "Is a named constant for the golden ratio. It is equal to 1.6180339887498948. | TYPE const float"
     },
     "math.pi ⇨ 𝑥": {
-        "prefix": "math.pi",
-        "body": [
-            "math.pi$0"
-        ],
-        "description": "Is a named constant for Archimedes' constant. It is equal to 3.1415926535897932. | TYPE const float"
+       "prefix": "math.pi",
+       "body": [
+          "math.pi$0"
+       ],
+       "description": "Is a named constant for Archimedes' constant. It is equal to 3.1415926535897932. | TYPE const float"
     },
     "math.rphi ⇨ 𝑥": {
-        "prefix": "math.rphi",
-        "body": [
-            "math.rphi$0"
-        ],
-        "description": "Is a named constant for the golden ratio conjugate. It is equal to 0.6180339887498948. | TYPE const float"
+       "prefix": "math.rphi",
+       "body": [
+          "math.rphi$0"
+       ],
+       "description": "Is a named constant for the golden ratio conjugate. It is equal to 0.6180339887498948. | TYPE const float"
     },
     "order.ascending ⇨ 𝑥": {
-        "prefix": "order.ascending",
-        "body": [
-            "order.ascending$0"
-        ],
-        "description": "Determines the sort order of the array from the smallest to the largest value. | TYPE sort_order"
+       "prefix": "order.ascending",
+       "body": [
+          "order.ascending$0"
+       ],
+       "description": "Determines the sort order of the array from the smallest to the largest value. | TYPE sort_order"
     },
     "order.descending ⇨ 𝑥": {
-        "prefix": "order.descending",
-        "body": [
-            "order.descending$0"
-        ],
-        "description": "Determines the sort order of the array from the largest to the smallest value. | TYPE sort_order"
+       "prefix": "order.descending",
+       "body": [
+          "order.descending$0"
+       ],
+       "description": "Determines the sort order of the array from the largest to the smallest value. | TYPE sort_order"
     },
     "plot.style_area ⇨ 𝑥": {
-        "prefix": "plot.style_area",
-        "body": [
-            "plot.style_area$0"
-        ],
-        "description": "A named constant for the 'Area' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
+       "prefix": "plot.style_area",
+       "body": [
+          "plot.style_area$0"
+       ],
+       "description": "A named constant for the 'Area' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
     },
     "plot.style_areabr ⇨ 𝑥": {
-        "prefix": "plot.style_areabr",
-        "body": [
-            "plot.style_areabr$0"
-        ],
-        "description": "A named constant for the 'Area With Breaks' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_area, except the gaps in the data are not filled. | TYPE plot_style"
+       "prefix": "plot.style_areabr",
+       "body": [
+          "plot.style_areabr$0"
+       ],
+       "description": "A named constant for the 'Area With Breaks' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_area, except the gaps in the data are not filled. | TYPE plot_style"
     },
     "plot.style_circles ⇨ 𝑥": {
-        "prefix": "plot.style_circles",
-        "body": [
-            "plot.style_circles$0"
-        ],
-        "description": "A named constant for the 'Circles' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
+       "prefix": "plot.style_circles",
+       "body": [
+          "plot.style_circles$0"
+       ],
+       "description": "A named constant for the 'Circles' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
     },
     "plot.style_columns ⇨ 𝑥": {
-        "prefix": "plot.style_columns",
-        "body": [
-            "plot.style_columns$0"
-        ],
-        "description": "A named constant for the 'Columns' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
+       "prefix": "plot.style_columns",
+       "body": [
+          "plot.style_columns$0"
+       ],
+       "description": "A named constant for the 'Columns' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
     },
     "plot.style_cross ⇨ 𝑥": {
-        "prefix": "plot.style_cross",
-        "body": [
-            "plot.style_cross$0"
-        ],
-        "description": "A named constant for the 'Cross' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
+       "prefix": "plot.style_cross",
+       "body": [
+          "plot.style_cross$0"
+       ],
+       "description": "A named constant for the 'Cross' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
     },
     "plot.style_histogram ⇨ 𝑥": {
-        "prefix": "plot.style_histogram",
-        "body": [
-            "plot.style_histogram$0"
-        ],
-        "description": "A named constant for the 'Histogram' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
+       "prefix": "plot.style_histogram",
+       "body": [
+          "plot.style_histogram$0"
+       ],
+       "description": "A named constant for the 'Histogram' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
     },
     "plot.style_line ⇨ 𝑥": {
-        "prefix": "plot.style_line",
-        "body": [
-            "plot.style_line$0"
-        ],
-        "description": "A named constant for the 'Line' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
+       "prefix": "plot.style_line",
+       "body": [
+          "plot.style_line$0"
+       ],
+       "description": "A named constant for the 'Line' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
     },
     "plot.style_linebr ⇨ 𝑥": {
-        "prefix": "plot.style_linebr",
-        "body": [
-            "plot.style_linebr$0"
-        ],
-        "description": "A named constant for the 'Line With Breaks' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_line, except the gaps in the data are not filled. | TYPE plot_style"
+       "prefix": "plot.style_linebr",
+       "body": [
+          "plot.style_linebr$0"
+       ],
+       "description": "A named constant for the 'Line With Breaks' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_line, except the gaps in the data are not filled. | TYPE plot_style"
     },
     "plot.style_stepline ⇨ 𝑥": {
-        "prefix": "plot.style_stepline",
-        "body": [
-            "plot.style_stepline$0"
-        ],
-        "description": "A named constant for the 'Step Line' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
+       "prefix": "plot.style_stepline",
+       "body": [
+          "plot.style_stepline$0"
+       ],
+       "description": "A named constant for the 'Step Line' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
     },
     "plot.style_stepline_diamond ⇨ 𝑥": {
-        "prefix": "plot.style_stepline_diamond",
-        "body": [
-            "plot.style_stepline_diamond$0"
-        ],
-        "description": "A named constant for the 'Step Line With Diamonds' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_stepline, except the data changes are also marked with the Diamond shapes. | TYPE plot_style"
+       "prefix": "plot.style_stepline_diamond",
+       "body": [
+          "plot.style_stepline_diamond$0"
+       ],
+       "description": "A named constant for the 'Step Line With Diamonds' style, to be used as an argument for the `style` parameter in the plot function. Similar to plot.style_stepline, except the data changes are also marked with the Diamond shapes. | TYPE plot_style"
     },
     "plot.style_steplinebr ⇨ 𝑥": {
-        "prefix": "plot.style_steplinebr",
-        "body": [
-            "plot.style_steplinebr$0"
-        ],
-        "description": "A named constant for the 'Step line with Breaks' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
+       "prefix": "plot.style_steplinebr",
+       "body": [
+          "plot.style_steplinebr$0"
+       ],
+       "description": "A named constant for the 'Step line with Breaks' style, to be used as an argument for the `style` parameter in the plot function. | TYPE plot_style"
     },
     "position.bottom_center ⇨ 𝑥": {
-        "prefix": "position.bottom_center",
-        "body": [
-            "position.bottom_center$0"
-        ],
-        "description": "Table position is used in table.new, table.cell functions. Binds the table to the bottom edge in the center. | TYPE const string"
+       "prefix": "position.bottom_center",
+       "body": [
+          "position.bottom_center$0"
+       ],
+       "description": "Table position is used in table.new, table.cell functions. Binds the table to the bottom edge in the center. | TYPE const string"
     },
     "position.bottom_left ⇨ 𝑥": {
-        "prefix": "position.bottom_left",
-        "body": [
-            "position.bottom_left$0"
-        ],
-        "description": "Table position is used in table.new, table.cell functions. Binds the table to the bottom left of the screen. | TYPE const string"
+       "prefix": "position.bottom_left",
+       "body": [
+          "position.bottom_left$0"
+       ],
+       "description": "Table position is used in table.new, table.cell functions. Binds the table to the bottom left of the screen. | TYPE const string"
     },
     "position.bottom_right ⇨ 𝑥": {
-        "prefix": "position.bottom_right",
-        "body": [
-            "position.bottom_right$0"
-        ],
-        "description": "Table position is used in table.new, table.cell functions. Binds the table to the bottom right of the screen. | TYPE const string"
+       "prefix": "position.bottom_right",
+       "body": [
+          "position.bottom_right$0"
+       ],
+       "description": "Table position is used in table.new, table.cell functions. Binds the table to the bottom right of the screen. | TYPE const string"
     },
     "position.middle_center ⇨ 𝑥": {
-        "prefix": "position.middle_center",
-        "body": [
-            "position.middle_center$0"
-        ],
-        "description": "Table position is used in table.new, table.cell functions. Binds the table to the center of the screen. | TYPE const string"
+       "prefix": "position.middle_center",
+       "body": [
+          "position.middle_center$0"
+       ],
+       "description": "Table position is used in table.new, table.cell functions. Binds the table to the center of the screen. | TYPE const string"
     },
     "position.middle_left ⇨ 𝑥": {
-        "prefix": "position.middle_left",
-        "body": [
-            "position.middle_left$0"
-        ],
-        "description": "Table position is used in table.new, table.cell functions. Binds the table to the left side of the screen. | TYPE const string"
+       "prefix": "position.middle_left",
+       "body": [
+          "position.middle_left$0"
+       ],
+       "description": "Table position is used in table.new, table.cell functions. Binds the table to the left side of the screen. | TYPE const string"
     },
     "position.middle_right ⇨ 𝑥": {
-        "prefix": "position.middle_right",
-        "body": [
-            "position.middle_right$0"
-        ],
-        "description": "Table position is used in table.new, table.cell functions. Binds the table to the right side of the screen. | TYPE const string"
+       "prefix": "position.middle_right",
+       "body": [
+          "position.middle_right$0"
+       ],
+       "description": "Table position is used in table.new, table.cell functions. Binds the table to the right side of the screen. | TYPE const string"
     },
     "position.top_center ⇨ 𝑥": {
-        "prefix": "position.top_center",
-        "body": [
-            "position.top_center$0"
-        ],
-        "description": "Table position is used in table.new, table.cell functions. Binds the table to the top edge in the center. | TYPE const string"
+       "prefix": "position.top_center",
+       "body": [
+          "position.top_center$0"
+       ],
+       "description": "Table position is used in table.new, table.cell functions. Binds the table to the top edge in the center. | TYPE const string"
     },
     "position.top_left ⇨ 𝑥": {
-        "prefix": "position.top_left",
-        "body": [
-            "position.top_left$0"
-        ],
-        "description": "Table position is used in table.new, table.cell functions. Binds the table to the upper-left edge. | TYPE const string"
+       "prefix": "position.top_left",
+       "body": [
+          "position.top_left$0"
+       ],
+       "description": "Table position is used in table.new, table.cell functions. Binds the table to the upper-left edge. | TYPE const string"
     },
     "position.top_right ⇨ 𝑥": {
-        "prefix": "position.top_right",
-        "body": [
-            "position.top_right$0"
-        ],
-        "description": "Table position is used in table.new, table.cell functions. Binds the table to the upper-right edge. | TYPE const string"
+       "prefix": "position.top_right",
+       "body": [
+          "position.top_right$0"
+       ],
+       "description": "Table position is used in table.new, table.cell functions. Binds the table to the upper-right edge. | TYPE const string"
     },
     "scale.left ⇨ 𝑥": {
-        "prefix": "scale.left",
-        "body": [
-            "scale.left$0"
-        ],
-        "description": "Scale value for indicator function. Indicator is added to the left price scale. | TYPE scale_type"
+       "prefix": "scale.left",
+       "body": [
+          "scale.left$0"
+       ],
+       "description": "Scale value for indicator function. Indicator is added to the left price scale. | TYPE scale_type"
     },
     "scale.none ⇨ 𝑥": {
-        "prefix": "scale.none",
-        "body": [
-            "scale.none$0"
-        ],
-        "description": "Scale value for indicator function. Indicator is added in 'No Scale' mode. Can be used only with 'overlay=true'. | TYPE scale_type"
+       "prefix": "scale.none",
+       "body": [
+          "scale.none$0"
+       ],
+       "description": "Scale value for indicator function. Indicator is added in 'No Scale' mode. Can be used only with 'overlay=true'. | TYPE scale_type"
     },
     "scale.right ⇨ 𝑥": {
-        "prefix": "scale.right",
-        "body": [
-            "scale.right$0"
-        ],
-        "description": "Scale value for indicator function. Indicator is added to the right price scale. | TYPE scale_type"
+       "prefix": "scale.right",
+       "body": [
+          "scale.right$0"
+       ],
+       "description": "Scale value for indicator function. Indicator is added to the right price scale. | TYPE scale_type"
     },
     "session.extended ⇨ 𝑥": {
-        "prefix": "session.extended",
-        "body": [
-            "session.extended$0"
-        ],
-        "description": "Constant for extended session type (with extended hours data). | TYPE const string"
+       "prefix": "session.extended",
+       "body": [
+          "session.extended$0"
+       ],
+       "description": "Constant for extended session type (with extended hours data). | TYPE const string"
     },
     "session.regular ⇨ 𝑥": {
-        "prefix": "session.regular",
-        "body": [
-            "session.regular$0"
-        ],
-        "description": "Constant for regular session type (no extended hours data). | TYPE const string"
+       "prefix": "session.regular",
+       "body": [
+          "session.regular$0"
+       ],
+       "description": "Constant for regular session type (no extended hours data). | TYPE const string"
+    },
+    "settlement_as_close.inherit ⇨ 𝑥": {
+       "prefix": "settlement_as_close.inherit",
+       "body": [
+          "settlement_as_close.inherit$0"
+       ],
+       "description": "A constant to specify the value of the settlement_as_close parameter in ticker.new and ticker.modify functions. | TYPE const settlement"
+    },
+    "settlement_as_close.off ⇨ 𝑥": {
+       "prefix": "settlement_as_close.off",
+       "body": [
+          "settlement_as_close.off$0"
+       ],
+       "description": "A constant to specify the value of the settlement_as_close parameter in ticker.new and ticker.modify functions. | TYPE const settlement"
+    },
+    "settlement_as_close.on ⇨ 𝑥": {
+       "prefix": "settlement_as_close.on",
+       "body": [
+          "settlement_as_close.on$0"
+       ],
+       "description": "A constant to specify the value of the settlement_as_close parameter in ticker.new and ticker.modify functions. | TYPE const settlement"
     },
     "shape.arrowdown ⇨ 𝑥": {
-        "prefix": "shape.arrowdown",
-        "body": [
-            "shape.arrowdown$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.arrowdown",
+       "body": [
+          "shape.arrowdown$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.arrowup ⇨ 𝑥": {
-        "prefix": "shape.arrowup",
-        "body": [
-            "shape.arrowup$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.arrowup",
+       "body": [
+          "shape.arrowup$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.circle ⇨ 𝑥": {
-        "prefix": "shape.circle",
-        "body": [
-            "shape.circle$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.circle",
+       "body": [
+          "shape.circle$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.cross ⇨ 𝑥": {
-        "prefix": "shape.cross",
-        "body": [
-            "shape.cross$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.cross",
+       "body": [
+          "shape.cross$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.diamond ⇨ 𝑥": {
-        "prefix": "shape.diamond",
-        "body": [
-            "shape.diamond$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.diamond",
+       "body": [
+          "shape.diamond$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.flag ⇨ 𝑥": {
-        "prefix": "shape.flag",
-        "body": [
-            "shape.flag$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.flag",
+       "body": [
+          "shape.flag$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.labeldown ⇨ 𝑥": {
-        "prefix": "shape.labeldown",
-        "body": [
-            "shape.labeldown$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.labeldown",
+       "body": [
+          "shape.labeldown$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.labelup ⇨ 𝑥": {
-        "prefix": "shape.labelup",
-        "body": [
-            "shape.labelup$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.labelup",
+       "body": [
+          "shape.labelup$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.square ⇨ 𝑥": {
-        "prefix": "shape.square",
-        "body": [
-            "shape.square$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.square",
+       "body": [
+          "shape.square$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.triangledown ⇨ 𝑥": {
-        "prefix": "shape.triangledown",
-        "body": [
-            "shape.triangledown$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.triangledown",
+       "body": [
+          "shape.triangledown$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.triangleup ⇨ 𝑥": {
-        "prefix": "shape.triangleup",
-        "body": [
-            "shape.triangleup$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.triangleup",
+       "body": [
+          "shape.triangleup$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "shape.xcross ⇨ 𝑥": {
-        "prefix": "shape.xcross",
-        "body": [
-            "shape.xcross$0"
-        ],
-        "description": "Shape style for plotshape function. | TYPE const string"
+       "prefix": "shape.xcross",
+       "body": [
+          "shape.xcross$0"
+       ],
+       "description": "Shape style for plotshape function. | TYPE const string"
     },
     "size.auto ⇨ 𝑥": {
-        "prefix": "size.auto",
-        "body": [
-            "size.auto$0"
-        ],
-        "description": "Size value for plotshape, plotchar functions. The size of the shape automatically adapts to the size of the bars. | TYPE const string"
+       "prefix": "size.auto",
+       "body": [
+          "size.auto$0"
+       ],
+       "description": "Size value for plotshape, plotchar functions. The size of the shape automatically adapts to the size of the bars. | TYPE const string"
     },
     "size.huge ⇨ 𝑥": {
-        "prefix": "size.huge",
-        "body": [
-            "size.huge$0"
-        ],
-        "description": "Size value for plotshape, plotchar functions. The size of the shape constantly huge. | TYPE const string"
+       "prefix": "size.huge",
+       "body": [
+          "size.huge$0"
+       ],
+       "description": "Size value for plotshape, plotchar functions. The size of the shape constantly huge. | TYPE const string"
     },
     "size.large ⇨ 𝑥": {
-        "prefix": "size.large",
-        "body": [
-            "size.large$0"
-        ],
-        "description": "Size value for plotshape, plotchar functions. The size of the shape constantly large. | TYPE const string"
+       "prefix": "size.large",
+       "body": [
+          "size.large$0"
+       ],
+       "description": "Size value for plotshape, plotchar functions. The size of the shape constantly large. | TYPE const string"
     },
     "size.normal ⇨ 𝑥": {
-        "prefix": "size.normal",
-        "body": [
-            "size.normal$0"
-        ],
-        "description": "Size value for plotshape, plotchar functions. The size of the shape constantly normal. | TYPE const string"
+       "prefix": "size.normal",
+       "body": [
+          "size.normal$0"
+       ],
+       "description": "Size value for plotshape, plotchar functions. The size of the shape constantly normal. | TYPE const string"
     },
     "size.small ⇨ 𝑥": {
-        "prefix": "size.small",
-        "body": [
-            "size.small$0"
-        ],
-        "description": "Size value for plotshape, plotchar functions. The size of the shape constantly small. | TYPE const string"
+       "prefix": "size.small",
+       "body": [
+          "size.small$0"
+       ],
+       "description": "Size value for plotshape, plotchar functions. The size of the shape constantly small. | TYPE const string"
     },
     "size.tiny ⇨ 𝑥": {
-        "prefix": "size.tiny",
-        "body": [
-            "size.tiny$0"
-        ],
-        "description": "Size value for plotshape, plotchar functions. The size of the shape constantly tiny. | TYPE const string"
+       "prefix": "size.tiny",
+       "body": [
+          "size.tiny$0"
+       ],
+       "description": "Size value for plotshape, plotchar functions. The size of the shape constantly tiny. | TYPE const string"
     },
     "splits.denominator ⇨ 𝑥": {
-        "prefix": "splits.denominator",
-        "body": [
-            "splits.denominator$0"
-        ],
-        "description": "A named constant for the request.splits function. Is used to request the denominator (the number below the line in a fraction) of a splits. | TYPE const string"
+       "prefix": "splits.denominator",
+       "body": [
+          "splits.denominator$0"
+       ],
+       "description": "A named constant for the request.splits function. Is used to request the denominator (the number below the line in a fraction) of a splits. | TYPE const string"
     },
     "splits.numerator ⇨ 𝑥": {
-        "prefix": "splits.numerator",
-        "body": [
-            "splits.numerator$0"
-        ],
-        "description": "A named constant for the request.splits function. Is used to request the numerator (the number above the line in a fraction) of a splits. | TYPE const string"
+       "prefix": "splits.numerator",
+       "body": [
+          "splits.numerator$0"
+       ],
+       "description": "A named constant for the request.splits function. Is used to request the numerator (the number above the line in a fraction) of a splits. | TYPE const string"
     },
     "strategy.cash ⇨ 𝑥": {
-        "prefix": "strategy.cash",
-        "body": [
-            "strategy.cash$0"
-        ],
-        "description": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the ‘qty’ parameter in strategy.entry or strategy.order function calls. It specifies that an amount of cash in the `strategy.account_currency` will be used to enter trades. | TYPE const string"
+       "prefix": "strategy.cash",
+       "body": [
+          "strategy.cash$0"
+       ],
+       "description": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the ‘qty’ parameter in strategy.entry or strategy.order function calls. It specifies that an amount of cash in the `strategy.account_currency` will be used to enter trades. | TYPE const string"
     },
     "strategy.commission.cash_per_contract ⇨ 𝑥": {
-        "prefix": "strategy.commission.cash_per_contract",
-        "body": [
-            "strategy.commission.cash_per_contract$0"
-        ],
-        "description": "Commission type for an order. Money displayed in the account currency per contract. | TYPE const string"
+       "prefix": "strategy.commission.cash_per_contract",
+       "body": [
+          "strategy.commission.cash_per_contract$0"
+       ],
+       "description": "Commission type for an order. Money displayed in the account currency per contract. | TYPE const string"
     },
     "strategy.commission.cash_per_order ⇨ 𝑥": {
-        "prefix": "strategy.commission.cash_per_order",
-        "body": [
-            "strategy.commission.cash_per_order$0"
-        ],
-        "description": "Commission type for an order. Money displayed in the account currency per order. | TYPE const string"
+       "prefix": "strategy.commission.cash_per_order",
+       "body": [
+          "strategy.commission.cash_per_order$0"
+       ],
+       "description": "Commission type for an order. Money displayed in the account currency per order. | TYPE const string"
     },
     "strategy.commission.percent ⇨ 𝑥": {
-        "prefix": "strategy.commission.percent",
-        "body": [
-            "strategy.commission.percent$0"
-        ],
-        "description": "Commission type for an order. A percentage of the cash volume of order. | TYPE const string"
+       "prefix": "strategy.commission.percent",
+       "body": [
+          "strategy.commission.percent$0"
+       ],
+       "description": "Commission type for an order. A percentage of the cash volume of order. | TYPE const string"
     },
     "strategy.direction.all ⇨ 𝑥": {
-        "prefix": "strategy.direction.all",
-        "body": [
-            "strategy.direction.all$0"
-        ],
-        "description": "It allows strategy to open both long and short positions. | TYPE const string"
+       "prefix": "strategy.direction.all",
+       "body": [
+          "strategy.direction.all$0"
+       ],
+       "description": "It allows strategy to open both long and short positions. | TYPE const string"
     },
     "strategy.direction.long ⇨ 𝑥": {
-        "prefix": "strategy.direction.long",
-        "body": [
-            "strategy.direction.long$0"
-        ],
-        "description": "It allows strategy to open only long positions. | TYPE const string"
+       "prefix": "strategy.direction.long",
+       "body": [
+          "strategy.direction.long$0"
+       ],
+       "description": "It allows strategy to open only long positions. | TYPE const string"
     },
     "strategy.direction.short ⇨ 𝑥": {
-        "prefix": "strategy.direction.short",
-        "body": [
-            "strategy.direction.short$0"
-        ],
-        "description": "It allows strategy to open only short positions. | TYPE const string"
+       "prefix": "strategy.direction.short",
+       "body": [
+          "strategy.direction.short$0"
+       ],
+       "description": "It allows strategy to open only short positions. | TYPE const string"
     },
     "strategy.fixed ⇨ 𝑥": {
-        "prefix": "strategy.fixed",
-        "body": [
-            "strategy.fixed$0"
-        ],
-        "description": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the ‘qty’ parameter in strategy.entry or strategy.order function calls. It specifies that a number of contracts/shares/lots will be used to enter trades. | TYPE const string"
+       "prefix": "strategy.fixed",
+       "body": [
+          "strategy.fixed$0"
+       ],
+       "description": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the ‘qty’ parameter in strategy.entry or strategy.order function calls. It specifies that a number of contracts/shares/lots will be used to enter trades. | TYPE const string"
     },
     "strategy.oca.cancel ⇨ 𝑥": {
-        "prefix": "strategy.oca.cancel",
-        "body": [
-            "strategy.oca.cancel$0"
-        ],
-        "description": "OCA type value for strategy's functions. The parameter determines that an order should belong to an OCO group, where as soon as an order is filled, all other orders of the same group are cancelled. Note: if more than 1 guaranteed-to-be-executed orders of the same OCA group are placed at once, all those orders are filled. | TYPE const string"
+       "prefix": "strategy.oca.cancel",
+       "body": [
+          "strategy.oca.cancel$0"
+       ],
+       "description": "OCA type value for strategy's functions. The parameter determines that an order should belong to an OCO group, where as soon as an order is filled, all other orders of the same group are cancelled. Note: if more than 1 guaranteed-to-be-executed orders of the same OCA group are placed at once, all those orders are filled. | TYPE const string"
     },
     "strategy.oca.none ⇨ 𝑥": {
-        "prefix": "strategy.oca.none",
-        "body": [
-            "strategy.oca.none$0"
-        ],
-        "description": "OCA type value for strategy's functions. The parameter determines that an order should not belong to any particular OCO group. | TYPE const string"
+       "prefix": "strategy.oca.none",
+       "body": [
+          "strategy.oca.none$0"
+       ],
+       "description": "OCA type value for strategy's functions. The parameter determines that an order should not belong to any particular OCO group. | TYPE const string"
     },
     "strategy.oca.reduce ⇨ 𝑥": {
-        "prefix": "strategy.oca.reduce",
-        "body": [
-            "strategy.oca.reduce$0"
-        ],
-        "description": "OCA type value for strategy's functions. The parameter determines that an order should belong to an OCO group, where if X number of contracts of an order is filled, number of contracts for each other order of the same OCO group is decreased by X. Note: if more than 1 guaranteed-to-be-executed orders of the same OCA group are placed at once, all those orders are filled. | TYPE const string"
+       "prefix": "strategy.oca.reduce",
+       "body": [
+          "strategy.oca.reduce$0"
+       ],
+       "description": "OCA type value for strategy's functions. The parameter determines that an order should belong to an OCO group, where if X number of contracts of an order is filled, number of contracts for each other order of the same OCO group is decreased by X. Note: if more than 1 guaranteed-to-be-executed orders of the same OCA group are placed at once, all those orders are filled. | TYPE const string"
     },
     "strategy.percent_of_equity ⇨ 𝑥": {
-        "prefix": "strategy.percent_of_equity",
-        "body": [
-            "strategy.percent_of_equity$0"
-        ],
-        "description": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the ‘qty’ parameter in strategy.entry or strategy.order function calls. It specifies that a percentage (0-100) of equity will be used to enter trades. | TYPE const string"
+       "prefix": "strategy.percent_of_equity",
+       "body": [
+          "strategy.percent_of_equity$0"
+       ],
+       "description": "This is one of the arguments that can be supplied to the `default_qty_type` parameter in the strategy declaration statement. It is only relevant when no value is used for the ‘qty’ parameter in strategy.entry or strategy.order function calls. It specifies that a percentage (0-100) of equity will be used to enter trades. | TYPE const string"
     },
     "text.align_bottom ⇨ 𝑥": {
-        "prefix": "text.align_bottom",
-        "body": [
-            "text.align_bottom$0"
-        ],
-        "description": "Vertical text alignment for box.new, box.set_text_valign, table.cell and table.cell_set_text_valign functions. | TYPE const string"
+       "prefix": "text.align_bottom",
+       "body": [
+          "text.align_bottom$0"
+       ],
+       "description": "Vertical text alignment for box.new, box.set_text_valign, table.cell and table.cell_set_text_valign functions. | TYPE const string"
     },
     "text.align_center ⇨ 𝑥": {
-        "prefix": "text.align_center",
-        "body": [
-            "text.align_center$0"
-        ],
-        "description": "Text alignment for box.new, box.set_text_halign, box.set_text_valign, label.new and label.set_textalign functions. | TYPE const string"
+       "prefix": "text.align_center",
+       "body": [
+          "text.align_center$0"
+       ],
+       "description": "Text alignment for box.new, box.set_text_halign, box.set_text_valign, label.new and label.set_textalign functions. | TYPE const string"
     },
     "text.align_left ⇨ 𝑥": {
-        "prefix": "text.align_left",
-        "body": [
-            "text.align_left$0"
-        ],
-        "description": "Horizontal text alignment for box.new, box.set_text_halign, label.new and label.set_textalign functions. | TYPE const string"
+       "prefix": "text.align_left",
+       "body": [
+          "text.align_left$0"
+       ],
+       "description": "Horizontal text alignment for box.new, box.set_text_halign, label.new and label.set_textalign functions. | TYPE const string"
     },
     "text.align_right ⇨ 𝑥": {
-        "prefix": "text.align_right",
-        "body": [
-            "text.align_right$0"
-        ],
-        "description": "Horizontal text alignment for box.new, box.set_text_halign, label.new and label.set_textalign functions. | TYPE const string"
+       "prefix": "text.align_right",
+       "body": [
+          "text.align_right$0"
+       ],
+       "description": "Horizontal text alignment for box.new, box.set_text_halign, label.new and label.set_textalign functions. | TYPE const string"
     },
     "text.align_top ⇨ 𝑥": {
-        "prefix": "text.align_top",
-        "body": [
-            "text.align_top$0"
-        ],
-        "description": "Vertical text alignment for box.new, box.set_text_valign, table.cell and table.cell_set_text_valign functions. | TYPE const string"
+       "prefix": "text.align_top",
+       "body": [
+          "text.align_top$0"
+       ],
+       "description": "Vertical text alignment for box.new, box.set_text_valign, table.cell and table.cell_set_text_valign functions. | TYPE const string"
     },
     "text.wrap_auto ⇨ 𝑥": {
-        "prefix": "text.wrap_auto",
-        "body": [
-            "text.wrap_auto$0"
-        ],
-        "description": "Automatic wrapping mode for box.new and box.set_text_wrap functions. | TYPE const string"
+       "prefix": "text.wrap_auto",
+       "body": [
+          "text.wrap_auto$0"
+       ],
+       "description": "Automatic wrapping mode for box.new and box.set_text_wrap functions. | TYPE const string"
     },
     "text.wrap_none ⇨ 𝑥": {
-        "prefix": "text.wrap_none",
-        "body": [
-            "text.wrap_none$0"
-        ],
-        "description": "Disabled wrapping mode for box.new and box.set_text_wrap functions. | TYPE const string"
+       "prefix": "text.wrap_none",
+       "body": [
+          "text.wrap_none$0"
+       ],
+       "description": "Disabled wrapping mode for box.new and box.set_text_wrap functions. | TYPE const string"
     },
     "xloc.bar_index ⇨ 𝑥": {
-        "prefix": "xloc.bar_index",
-        "body": [
-            "xloc.bar_index$0"
-        ],
-        "description": "A named constant that specifies the algorithm of interpretation of x-value in functions line.new and label.new. If xloc = xloc.bar_index, value of x is a bar index. | TYPE const string"
+       "prefix": "xloc.bar_index",
+       "body": [
+          "xloc.bar_index$0"
+       ],
+       "description": "A named constant that specifies the algorithm of interpretation of x-value in functions line.new and label.new. If xloc = xloc.bar_index, value of x is a bar index. | TYPE const string"
     },
     "xloc.bar_time ⇨ 𝑥": {
-        "prefix": "xloc.bar_time",
-        "body": [
-            "xloc.bar_time$0"
-        ],
-        "description": "A named constant that specifies the algorithm of interpretation of x-value in functions line.new and label.new. If xloc = xloc.bar_time, value of x is a bar UNIX time. | TYPE const string"
+       "prefix": "xloc.bar_time",
+       "body": [
+          "xloc.bar_time$0"
+       ],
+       "description": "A named constant that specifies the algorithm of interpretation of x-value in functions line.new and label.new. If xloc = xloc.bar_time, value of x is a bar UNIX time. | TYPE const string"
     },
     "yloc.abovebar ⇨ 𝑥": {
-        "prefix": "yloc.abovebar",
-        "body": [
-            "yloc.abovebar$0"
-        ],
-        "description": "A named constant that specifies the algorithm of interpretation of y-value in function label.new. | TYPE const string"
+       "prefix": "yloc.abovebar",
+       "body": [
+          "yloc.abovebar$0"
+       ],
+       "description": "A named constant that specifies the algorithm of interpretation of y-value in function label.new. | TYPE const string"
     },
     "yloc.belowbar ⇨ 𝑥": {
-        "prefix": "yloc.belowbar",
-        "body": [
-            "yloc.belowbar$0"
-        ],
-        "description": "A named constant that specifies the algorithm of interpretation of y-value in function label.new. | TYPE const string"
+       "prefix": "yloc.belowbar",
+       "body": [
+          "yloc.belowbar$0"
+       ],
+       "description": "A named constant that specifies the algorithm of interpretation of y-value in function label.new. | TYPE const string"
     },
     "yloc.price ⇨ 𝑥": {
-        "prefix": "yloc.price",
-        "body": [
-            "yloc.price$0"
-        ],
-        "description": "A named constant that specifies the algorithm of interpretation of y-value in function label.new. | TYPE const string"
+       "prefix": "yloc.price",
+       "body": [
+          "yloc.price$0"
+       ],
+       "description": "A named constant that specifies the algorithm of interpretation of y-value in function label.new. | TYPE const string"
     }
-}
+ }

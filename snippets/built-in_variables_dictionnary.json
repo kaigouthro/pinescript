@@ -1028,6 +1028,13 @@
       ],
       "description": "Returns true if current resolution is a seconds resolution, false otherwise. | TYPE simple bool"
    },
+   "timeframe.isticks ⇨ 𝑥": {
+      "prefix": "timeframe.isticks",
+      "body": [
+         "timeframe.isticks$0"
+      ],
+      "description": "Returns true if current resolution is a ticks resolution, false otherwise. | TYPE simple bool"
+   },
    "timeframe.isweekly ⇨ 𝑥": {
       "prefix": "timeframe.isweekly",
       "body": [

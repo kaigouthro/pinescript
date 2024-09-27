@@ -42,6 +42,39 @@
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_alert.freq_once_per_bar_close"
   },
    {
+     "pattern": "(?<![\\.]\\s*)\\b(backadjustment\\.inherit)\\b(?!\\s*\\()",
+     "codeblock": "backadjustment.inherit",
+     "markdown": "A constant to specify the value of the `backadjustment` parameter in [ticker.new]{0} and [ticker.modify]{1} functions.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.new",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.modify"
+     ],
+     "type": "const backadjustment",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#const_backadjustment.inherit"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(backadjustment\\.off)\\b(?!\\s*\\()",
+     "codeblock": "backadjustment.off",
+     "markdown": "A constant to specify the value of the `backadjustment` parameter in [ticker.new]{0} and [ticker.modify]{1} functions.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.new",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.modify"
+     ],
+     "type": "const backadjustment",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#const_backadjustment.off"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(backadjustment\\.on)\\b(?!\\s*\\()",
+     "codeblock": "backadjustment.on",
+     "markdown": "A constant to specify the value of the `backadjustment` parameter in [ticker.new]{0} and [ticker.modify]{1} functions.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.new",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.modify"
+     ],
+     "type": "const backadjustment",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#const_backadjustment.on"
+  },
+   {
      "pattern": "(?<![\\.]\\s*)\\b(barmerge\\.gaps_off)\\b(?!\\s*\\()",
      "codeblock": "barmerge.gaps_off",
      "markdown": "Merge strategy for requested data. Data is merged continuously without gaps, all the gaps are filled with the previous nearest existing value.",
@@ -1359,6 +1392,39 @@
      "markdown": "Constant for regular session type (no extended hours data).",
      "type": "const string",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.regular"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(settlement_as_close\\.inherit)\\b(?!\\s*\\()",
+     "codeblock": "settlement_as_close.inherit",
+     "markdown": "A constant to specify the value of the `settlement_as_close` parameter in [ticker.new]{0} and [ticker.modify]{1} functions.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.new",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.modify"
+     ],
+     "type": "const settlement",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#const_settlement_as_close.inherit"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(settlement_as_close\\.off)\\b(?!\\s*\\()",
+     "codeblock": "settlement_as_close.off",
+     "markdown": "A constant to specify the value of the `settlement_as_close` parameter in [ticker.new]{0} and [ticker.modify]{1} functions.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.new",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.modify"
+     ],
+     "type": "const settlement",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#const_settlement_as_close.off"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(settlement_as_close\\.on)\\b(?!\\s*\\()",
+     "codeblock": "settlement_as_close.on",
+     "markdown": "A constant to specify the value of the `settlement_as_close` parameter in [ticker.new]{0} and [ticker.modify]{1} functions.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.new",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.modify"
+     ],
+     "type": "const settlement",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#const_settlement_as_close.on"
   },
    {
      "pattern": "(?<![\\.]\\s*)\\b(shape\\.arrowdown)\\b(?!\\s*\\()",

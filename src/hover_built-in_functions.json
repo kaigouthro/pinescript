@@ -2149,7 +2149,7 @@
    {
      "pattern": "(?<![\\.]\\s*)\\b(indicator)(?=\\s*\\()",
      "codeblock": [
-        "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count) → void"
+        "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count, dynamic_requests) → void"
      ],
      "markdown": "This declaration statement designates the script as an indicator and sets a number of indicator-related properties.",
      "returns": "void",
@@ -2214,6 +2214,10 @@
         {
            "field": "max_polylines_count (const int)",
            "description": "The number of last polyline drawings displayed. Optional. The default is 50."
+        },
+        {
+           "field": "dynamic_requests (const bool)",
+           "description": "Specifies whether the script can dynamically call functions from the `request.*()` namespace. Dynamic `request.*()` calls are allowed within the local scopes of conditional structures (e.g., [if](https://www.tradingview.com/pine-script-reference/v5/#kw_if)), loops (e.g., [for](https://www.tradingview.com/pine-script-reference/v5/#kw_for)), and exported functions. Additionally, such calls allow \"series\" arguments for many of their parameters. Optional. The default is [false](https://www.tradingview.com/pine-script-reference/v5/#const_false). See the User Manual's [Dynamic requests](https://www.tradingview.com/pine-script-docs/concepts/other-timeframes-and-data/#dynamic-requests) section for more information."
         }
      ]
   },
@@ -3251,7 +3255,7 @@
    {
      "pattern": "(?<![\\.]\\s*)\\b(library)(?=\\s*\\()",
      "codeblock": [
-        "library(title, overlay) → void"
+        "library(title, overlay, dynamic_requests) → void"
      ],
      "markdown": "Declaration statement identifying a script as a library.",
      "returns": "void",
@@ -3264,6 +3268,10 @@
         {
            "field": "overlay (const bool)",
            "description": "If true, the library will be added over the chart. If false, it will be added in a separate pane. Optional. The default is false."
+        },
+        {
+           "field": "dynamic_requests (const bool)",
+           "description": "Specifies whether the script can dynamically call functions from the `request.*()` namespace. Dynamic `request.*()` calls are allowed within the local scopes of conditional structures (e.g., [if](https://www.tradingview.com/pine-script-reference/v5/#kw_if)), loops (e.g., [for](https://www.tradingview.com/pine-script-reference/v5/#kw_for)), and exported functions. Additionally, such calls allow \"series\" arguments for many of their parameters. Optional. The default is [false](https://www.tradingview.com/pine-script-reference/v5/#const_false). See the User Manual's [Dynamic requests](https://www.tradingview.com/pine-script-docs/concepts/other-timeframes-and-data/#dynamic-requests) section for more information."
         }
      ]
   },
@@ -6595,7 +6603,7 @@
    {
      "pattern": "(?<![\\.]\\s*)\\b(strategy)(?=\\s*\\()",
      "codeblock": [
-        "strategy(title, shorttitle, overlay, format, precision, scale, pyramiding, calc_on_order_fills, calc_on_every_tick, max_bars_back, backtest_fill_limits_assumption, default_qty_type, default_qty_value, initial_capital, currency, slippage, commission_type, commission_value, process_orders_on_close, close_entries_rule, margin_long, margin_short, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, risk_free_rate, use_bar_magnifier, fill_orders_on_standard_ohlc, max_polylines_count) → void"
+        "strategy(title, shorttitle, overlay, format, precision, scale, pyramiding, calc_on_order_fills, calc_on_every_tick, max_bars_back, backtest_fill_limits_assumption, default_qty_type, default_qty_value, initial_capital, currency, slippage, commission_type, commission_value, process_orders_on_close, close_entries_rule, margin_long, margin_short, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, risk_free_rate, use_bar_magnifier, fill_orders_on_standard_ohlc, max_polylines_count, dynamic_requests) → void"
      ],
      "markdown": "This declaration statement designates the script as a strategy and sets a number of strategy-related properties.",
      "returns": "void",
@@ -6724,6 +6732,10 @@
         {
            "field": "max_polylines_count (const int)",
            "description": "The number of last polyline drawings displayed. Optional. The default is 50."
+        },
+        {
+           "field": "dynamic_requests (const bool)",
+           "description": "Specifies whether the script can dynamically call functions from the `request.*()` namespace. Dynamic `request.*()` calls are allowed within the local scopes of conditional structures (e.g., [if](https://www.tradingview.com/pine-script-reference/v5/#kw_if)), loops (e.g., [for](https://www.tradingview.com/pine-script-reference/v5/#kw_for)), and exported functions. Additionally, such calls allow \"series\" arguments for many of their parameters. Optional. The default is [false](https://www.tradingview.com/pine-script-reference/v5/#const_false). See the User Manual's [Dynamic requests](https://www.tradingview.com/pine-script-docs/concepts/other-timeframes-and-data/#dynamic-requests) section for more information."
         }
      ]
   },
@@ -9515,7 +9527,7 @@
    {
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.modify)(?=\\s*\\()",
      "codeblock": [
-        "ticker.modify(tickerid, session, adjustment) → simple string"
+        "ticker.modify(tickerid, session, adjustment, backadjustment, settlement_as_close) → simple string"
      ],
      "markdown": "Creates a ticker identifier for requesting additional data for the script.",
      "returns": "String value of ticker id.",
@@ -9532,13 +9544,21 @@
         {
            "field": "adjustment (simple string)",
            "description": "Adjustment type. Optional. The default adjustment value is different depending on particular instrument."
+        },
+        {
+           "field": "backadjustment (simple backadjustment)",
+           "description": "Specifies whether past contract data on continuous futures symbols is back-adjusted. This setting only affects the data from symbols with this option available on their charts. Optional. The default is [backadjustment.inherit](https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.inherit), meaning that the modified ticker ID inherits the setting from the ticker ID passed to the `tickerid` parameter, or it inherits the symbol's default if the `tickerid` does not specify this setting. Possible values: [backadjustment.inherit](https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.inherit), [backadjustment.on](https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.on), [backadjustment.off](https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.off)."
+        },
+        {
+           "field": "settlement_as_close (simple settlement)",
+           "description": "Specifies whether a futures symbol's [close](https://www.tradingview.com/pine-script-reference/v5/#var_close) value represents the actual closing price or the settlement price on \"1D\" and higher timeframes. This setting only affects the data from symbols with this option available on their charts. Optional. The default is [settlement_as_close.inherit](https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.inherit), meaning that the modified ticker ID inherits the setting from the `tickerid` passed into the function, or it inherits the chart symbol's default if the `tickerid` does not specify this setting. Possible values: [settlement_as_close.inherit](https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.inherit), [settlement_as_close.on](https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.on), [settlement_as_close.off](https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.off)."
         }
      ]
   },
    {
      "pattern": "(?<![\\.]\\s*)\\b(ticker\\.new)(?=\\s*\\()",
      "codeblock": [
-        "ticker.new(prefix, ticker, session, adjustment) → simple string"
+        "ticker.new(prefix, ticker, session, adjustment, backadjustment, settlement_as_close) → simple string"
      ],
      "markdown": "Creates a ticker identifier for requesting additional data for the script.",
      "returns": "String value of ticker id.",
@@ -9559,6 +9579,14 @@
         {
            "field": "adjustment (simple string)",
            "description": "Adjustment type. Optional. The default adjustment value is different depending on particular instrument."
+        },
+        {
+           "field": "backadjustment (simple backadjustment)",
+           "description": "Specifies whether past contract data on continuous futures symbols is back-adjusted. This setting only affects the data from symbols with this option available on their charts. Optional. The default is [backadjustment.inherit](https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.inherit), meaning that the new ticker ID inherits the symbol's default setting. Possible values: [backadjustment.inherit](https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.inherit), [backadjustment.on](https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.on), [backadjustment.off](https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.off)."
+        },
+        {
+           "field": "settlement_as_close (simple settlement)",
+           "description": "Specifies whether a futures symbol's [close](https://www.tradingview.com/pine-script-reference/v5/#var_close) value represents the actual closing price or the settlement price on \"1D\" and higher timeframes. This setting only affects the data from symbols with this option available on their charts. Optional. The default is [settlement_as_close.inherit](https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.inherit), meaning that the new ticker ID inherits the chart symbol's default setting. Possible values: [settlement_as_close.inherit](https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.inherit), [settlement_as_close.on](https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.on), [settlement_as_close.off](https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.off)."
         }
      ]
   },

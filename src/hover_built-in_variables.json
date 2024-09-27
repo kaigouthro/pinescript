@@ -1,1448 +1,1459 @@
 [
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(bar_index)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "bar_index",
-    "markdown": "Current bar index. Numbering is zero-based, index of the first bar is 0.",
-    "remark": [
-       "Note that __bar_index__ has replaced __n__ variable in version 4. <p/>Note that bar indexing starts from 0 on the first historical bar. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_bar_index"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(barstate\\.isconfirmed)\\b(?!\\s*\\()",
-    "codeblock": "barstate.isconfirmed",
-    "markdown": "Returns true if the script is calculating the last (closing) update of the current bar. The next script calculation will be on the new bar data.",
-    "remark": [
-       "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>It is NOT recommended to use [barstate.isconfirmed]{0} in [request.security]{1} expression. Its value requested from [request.security]{2} is unpredictable. <p/>Please note that using this variable/function can cause [indicator repainting]{3}."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.isconfirmed",
-       "https://www.tradingview.com/pine-script-reference/v5/#fun_request.security",
-       "https://www.tradingview.com/pine-script-reference/v5/#fun_request.security",
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.isconfirmed"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(barstate\\.isfirst)\\b(?!\\s*\\()",
-    "codeblock": "barstate.isfirst",
-    "markdown": "Returns true if current bar is first bar in barset, false otherwise.",
-    "remark": [
-       "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.isfirst"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(barstate\\.ishistory)\\b(?!\\s*\\()",
-    "codeblock": "barstate.ishistory",
-    "markdown": "Returns true if current bar is a historical bar, false otherwise.",
-    "remark": [
-       "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.ishistory"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(barstate\\.islast)\\b(?!\\s*\\()",
-    "codeblock": "barstate.islast",
-    "markdown": "Returns true if current bar is the last bar in barset, false otherwise. This condition is true for all real-time bars in barset.",
-    "remark": [
-       "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.islast"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(barstate\\.islastconfirmedhistory)\\b(?!\\s*\\()",
-    "codeblock": "barstate.islastconfirmedhistory",
-    "markdown": "Returns true if script is executing on the dataset's last bar when market is closed, or script is executing on the bar immediately preceding the real-time bar, if market is open. Returns false otherwise.",
-    "remark": [
-       "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.islastconfirmedhistory"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(barstate\\.isnew)\\b(?!\\s*\\()",
-    "codeblock": "barstate.isnew",
-    "markdown": "Returns true if script is currently calculating on new bar, false otherwise. This variable is true when calculating on historical bars or on first update of a newly generated real-time bar.",
-    "remark": [
-       "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.isnew"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(barstate\\.isrealtime)\\b(?!\\s*\\()",
-    "codeblock": "barstate.isrealtime",
-    "markdown": "Returns true if current bar is a real-time bar, false otherwise.",
-    "remark": [
-       "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.isrealtime"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(box\\.all)\\b(?!\\s*\\()",
-    "codeblock": "box.all",
-    "markdown": "Returns an array filled with all the current [box]{0} objects drawn by the script.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#type_box"
-    ],
-    "remark": [
-       "The array is read-only. Index zero of the array is the ID of the oldest object on the chart."
-    ],
-    "type": "box[]",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_box.all"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.bg_color)\\b(?!\\s*\\()",
-    "codeblock": "chart.bg_color",
-    "markdown": "Returns the color of the chart's background from the 'Chart settings/Appearance/Background' field. When a gradient is selected, the middle point of the gradient is returned.",
-    "type": "input color",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.bg_color"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.fg_color)\\b(?!\\s*\\()",
-    "codeblock": "chart.fg_color",
-    "markdown": "Returns a color providing optimal contrast with [chart.bg_color]{0}.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_chart.bg_color"
-    ],
-    "type": "input color",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.fg_color"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_heikinashi)\\b(?!\\s*\\()",
-    "codeblock": "chart.is_heikinashi",
-    "markdown": "Returns [true]{0} if the chart type is Heikin Ashi, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_heikinashi"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_kagi)\\b(?!\\s*\\()",
-    "codeblock": "chart.is_kagi",
-    "markdown": "Returns [true]{0} if the chart type is Kagi, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_kagi"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_linebreak)\\b(?!\\s*\\()",
-    "codeblock": "chart.is_linebreak",
-    "markdown": "Returns [true]{0} if the chart type is Line break, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_linebreak"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_pnf)\\b(?!\\s*\\()",
-    "codeblock": "chart.is_pnf",
-    "markdown": "Returns [true]{0} if the chart type is Point & figure, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_pnf"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_range)\\b(?!\\s*\\()",
-    "codeblock": "chart.is_range",
-    "markdown": "Returns [true]{0} if the chart type is Range, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_range"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_renko)\\b(?!\\s*\\()",
-    "codeblock": "chart.is_renko",
-    "markdown": "Returns [true]{0} if the chart type is Renko, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_renko"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_standard)\\b(?!\\s*\\()",
-    "codeblock": "chart.is_standard",
-    "markdown": "Returns [true]{0} if the chart type is bars, candles, hollow candles, line, area or baseline, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_standard"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.left_visible_bar_time)\\b(?!\\s*\\()",
-    "codeblock": "chart.left_visible_bar_time",
-    "markdown": "The [time]{0} of the leftmost bar currently visible on the chart.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_time"
-    ],
-    "remark": [
-       "Scripts using this variable will automatically re-execute when its value updates to reflect changes in the chart, which can be caused by users scrolling the chart, or new real-time bars. <p/>Alerts created on a script that includes this variable will only use the value assigned to the variable at the moment of the alert's creation, regardless of whether the value changes afterward, which may lead to repainting."
-    ],
-    "type": "input int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.left_visible_bar_time"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(chart\\.right_visible_bar_time)\\b(?!\\s*\\()",
-    "codeblock": "chart.right_visible_bar_time",
-    "markdown": "The [time]{0} of the rightmost bar currently visible on the chart.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_time"
-    ],
-    "remark": [
-       "Scripts using this variable will automatically re-execute when its value updates to reflect changes in the chart, which can be caused by users scrolling the chart, or new real-time bars. <p/>Alerts created on a script that includes this variable will only use the value assigned to the variable at the moment of the alert's creation, regardless of whether the value changes afterward, which may lead to repainting."
-    ],
-    "type": "input int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.right_visible_bar_time"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(close)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "close",
-    "markdown": "Close price of the current bar when it has closed, or last traded price of a yet incomplete, realtime bar.",
-    "remark": [
-       "Previous values may be accessed with square brackets operator `[]`, e.g. `close[1]`, `close[2]`."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_close"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(dayofmonth)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "dayofmonth",
-    "markdown": "Date of current bar time in exchange timezone.",
-    "remark": [
-       "Note that this variable returns the day based on the time of the bar's open. For overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this value can be lower by 1 than the day of the trading day."
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofmonth"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(dayofweek)\\b(?=(?!(?:(?:\\.friday\\b)|(?:\\.monday\\b)|(?:\\.sunday\\b)|(?:\\.tuesday\\b)|(?:\\.saturday\\b)|(?:\\.thursday\\b)|(?:\\.wednesday\\b)|(?:\\s*[\\(\\=])|(?:\\s*\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "dayofweek",
-    "markdown": "Day of week for current bar time in exchange timezone.",
-    "remark": [
-       "Note that this variable returns the day based on the time of the bar's open. For overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this value can be lower by 1 than the day of the trading day. <p/>You can use [dayofweek.sunday]{0}, [dayofweek.monday]{1}, [dayofweek.tuesday]{2}, [dayofweek.wednesday]{3}, [dayofweek.thursday]{4}, [dayofweek.friday]{5} and [dayofweek.saturday]{6} variables for comparisons."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.sunday",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.monday",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.tuesday",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.wednesday",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.thursday",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.friday",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.saturday"
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(dividends\\.future_amount)\\b(?!\\s*\\()",
-    "codeblock": "dividends.future_amount",
-    "markdown": "Returns the payment amount of the upcoming dividend in the currency of the current instrument, or [na]{0} if this data isn't available.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "remark": [
-       "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected Payment date of the next dividend."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dividends.future_amount"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(dividends\\.future_ex_date)\\b(?!\\s*\\()",
-    "codeblock": "dividends.future_ex_date",
-    "markdown": "Returns the Ex-dividend date (Ex-date) of the current instrument's next dividend payment, or [na]{0} if this data isn't available. Ex-dividend date signifies when investors are no longer entitled to a payout from the most recent dividend. Only those who purchased shares before this day are entitled to the dividend payment.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "remark": [
-       "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected Payment date of the next dividend."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dividends.future_ex_date"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(dividends\\.future_pay_date)\\b(?!\\s*\\()",
-    "codeblock": "dividends.future_pay_date",
-    "markdown": "Returns the Payment date (Pay date) of the current instrument's next dividend payment, or [na]{0} if this data isn't available. Payment date signifies the day when eligible investors will receive the dividend payment.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "remark": [
-       "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected Payment date of the next dividend."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dividends.future_pay_date"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(earnings\\.future_eps)\\b(?!\\s*\\()",
-    "codeblock": "earnings.future_eps",
-    "markdown": "Returns the estimated Earnings per Share of the next earnings report in the currency of the instrument, or [na]{0} if this data isn't available.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "remark": [
-       "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected time of the next earnings report."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.future_eps"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(earnings\\.future_period_end_time)\\b(?!\\s*\\()",
-    "codeblock": "earnings.future_period_end_time",
-    "markdown": "Checks the data for the next earnings report and returns the UNIX timestamp of the day when the financial period covered by those earnings ends, or [na]{0} if this data isn't available.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "remark": [
-       "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected time of the next earnings report."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.future_period_end_time"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(earnings\\.future_revenue)\\b(?!\\s*\\()",
-    "codeblock": "earnings.future_revenue",
-    "markdown": "Returns the estimated Revenue of the next earnings report in the currency of the instrument, or [na]{0} if this data isn't available.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "remark": [
-       "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected time of the next earnings report."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.future_revenue"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(earnings\\.future_time)\\b(?!\\s*\\()",
-    "codeblock": "earnings.future_time",
-    "markdown": "Returns a UNIX timestamp indicating the expected time of the next earnings report, or [na]{0} if this data isn't available.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "remark": [
-       "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected time of the next earnings report."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.future_time"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(high)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "high",
-    "markdown": "Current high price.",
-    "remark": [
-       "Previous values may be accessed with square brackets operator `[]`, e.g. `high[1]`, `high[2]`."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_high"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(hl2)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "hl2",
-    "markdown": "Is a shortcut for (high + low)/2",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hl2"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(hlc3)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "hlc3",
-    "markdown": "Is a shortcut for (high + low + close)/3",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hlc3"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(hlcc4)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "hlcc4",
-    "markdown": "Is a shortcut for (high + low + close + close)/4",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hlcc4"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(hour)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "hour",
-    "markdown": "Current bar hour in exchange timezone.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hour"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(label\\.all)\\b(?!\\s*\\()",
-    "codeblock": "label.all",
-    "markdown": "Returns an array filled with all the current [label]{0} objects drawn by the script.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#type_label"
-    ],
-    "remark": [
-       "The array is read-only. Index zero of the array is the ID of the oldest object on the chart."
-    ],
-    "type": "label[]",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.all"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(last_bar_index)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "last_bar_index",
-    "markdown": "Bar index of the last chart bar. Bar indices begin at zero on the first bar.",
-    "remark": [
-       "Please note that using this variable can cause [indicator repainting]{0}."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_last_bar_index"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(last_bar_time)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "last_bar_time",
-    "markdown": "Time in UNIX format of the last chart bar. It is the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970.",
-    "remark": [
-       "Please note that using this variable/function can cause [indicator repainting]{0}. <p/>Note that this variable returns the timestamp based on the time of the bar's open."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_last_bar_time"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(line\\.all)\\b(?!\\s*\\()",
-    "codeblock": "line.all",
-    "markdown": "Returns an array filled with all the current [line]{0} objects drawn by the script.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#type_line"
-    ],
-    "remark": [
-       "The array is read-only. Index zero of the array is the ID of the oldest object on the chart."
-    ],
-    "type": "line[]",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.all"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(linefill\\.all)\\b(?!\\s*\\()",
-    "codeblock": "linefill.all",
-    "markdown": "Returns an array filled with all the current [linefill]{0} objects drawn by the script.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#type_linefill"
-    ],
-    "remark": [
-       "The array is read-only. Index zero of the array is the ID of the oldest object on the chart."
-    ],
-    "type": "linefill[]",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_linefill.all"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(low)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "low",
-    "markdown": "Current low price.",
-    "remark": [
-       "Previous values may be accessed with square brackets operator `[]`, e.g. `low[1]`, `low[2]`."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_low"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(minute)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "minute",
-    "markdown": "Current bar minute in exchange timezone.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_minute"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(month)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "month",
-    "markdown": "Current bar month in exchange timezone.",
-    "remark": [
-       "Note that this variable returns the month based on the time of the bar's open. For overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this value can be lower by 1 than the month of the trading day."
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_month"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(na)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "na",
-    "markdown": "A keyword signifying 'not available', indicating that a variable has no assigned value.",
-    "remark": [
-       "Do not use this variable with [comparison operators]{0} to test values for `na`, as it might lead to unexpected behavior. Instead, use the [na]{1} function. Note that `na` can be used to initialize variables when the initialization statement also specifies the variable's type."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/language/Operators.html#comparison-operators",
-       "https://www.tradingview.com/pine-script-reference/v5/#fun_na"
-    ],
-    "type": "simple na",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_na"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ohlc4)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "ohlc4",
-    "markdown": "Is a shortcut for (open + high + low + close)/4",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ohlc4"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(open)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "open",
-    "markdown": "Current open price.",
-    "remark": [
-       "Previous values may be accessed with square brackets operator `[]`, e.g. `open[1]`, `open[2]`."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_open"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(polyline\\.all)\\b(?!\\s*\\()",
-    "codeblock": "polyline.all",
-    "markdown": "Returns an array containing all current [polyline]{0} instances drawn by the script.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#type_polyline"
-    ],
-    "remark": [
-       "The array is read-only. Index zero of the array references the ID of the oldest polyline object on the chart."
-    ],
-    "type": "polyline[]",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_polyline.all"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(second)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "second",
-    "markdown": "Current bar second in exchange timezone.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_second"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(session\\.isfirstbar)\\b(?!\\s*\\()",
-    "codeblock": "session.isfirstbar",
-    "markdown": "Returns [true]{0} if the current bar is the first bar of the day's session, [false]{1} otherwise. If extended session information is used, only returns `true` on the first bar of the pre-market bars.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.isfirstbar"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(session\\.isfirstbar_regular)\\b(?!\\s*\\()",
-    "codeblock": "session.isfirstbar_regular",
-    "markdown": "Returns [true]{0} on the first regular session bar of the day, [false]{1} otherwise. The result is the same whether extended session information is used or not.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.isfirstbar_regular"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(session\\.islastbar)\\b(?!\\s*\\()",
-    "codeblock": "session.islastbar",
-    "markdown": "Returns [true]{0} if the current bar is the last bar of the day's session, [false]{1} otherwise. If extended session information is used, only returns `true` on the last bar of the post-market bars.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "remark": [
-       "This variable is not guaranteed to return [true]{0} once in every session because the last bar of the session might not exist if no trades occur during what should be the session's last bar. <p/>This variable is not guaranteed to work as expected on non-standard chart types, e.g., Renko."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.islastbar"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(session\\.islastbar_regular)\\b(?!\\s*\\()",
-    "codeblock": "session.islastbar_regular",
-    "markdown": "Returns [true]{0} on the last regular session bar of the day, [false]{1} otherwise. The result is the same whether extended session information is used or not.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "remark": [
-       "This variable is not guaranteed to return [true]{0} once in every session because the last bar of the session might not exist if no trades occur during what should be the session's last bar. <p/>This variable is not guaranteed to work as expected on non-standard chart types, e.g., Renko."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.islastbar_regular"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(session\\.ismarket)\\b(?!\\s*\\()",
-    "codeblock": "session.ismarket",
-    "markdown": "Returns [true]{0} if the current bar is a part of the regular trading hours (i.e. market hours), [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.ismarket"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(session\\.ispostmarket)\\b(?!\\s*\\()",
-    "codeblock": "session.ispostmarket",
-    "markdown": "Returns [true]{0} if the current bar is a part of the post-market, [false]{1} otherwise. On non-intraday charts always returns `false`.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.ispostmarket"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(session\\.ispremarket)\\b(?!\\s*\\()",
-    "codeblock": "session.ispremarket",
-    "markdown": "Returns [true]{0} if the current bar is a part of the pre-market, [false]{1} otherwise. On non-intraday charts always returns `false`.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "series bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.ispremarket"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.account_currency)\\b(?!\\s*\\()",
-    "codeblock": "strategy.account_currency",
-    "markdown": "Returns the currency used to calculate results, which can be set in the strategy's properties.",
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.account_currency"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_losing_trade)\\b(?!\\s*\\()",
-    "codeblock": "strategy.avg_losing_trade",
-    "markdown": "Returns the average amount of money lost per losing trade. Calculated as the sum of losses divided by the number of losing trades.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_losing_trade"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_losing_trade_percent)\\b(?!\\s*\\()",
-    "codeblock": "strategy.avg_losing_trade_percent",
-    "markdown": "Returns the average percentage loss per losing trade. Calculated as the sum of loss percentages divided by the number of losing trades.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_losing_trade_percent"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_trade)\\b(?!\\s*\\()",
-    "codeblock": "strategy.avg_trade",
-    "markdown": "Returns the average amount of money gained or lost per trade. Calculated as the sum of all profits and losses divided by the number of closed trades.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_trade"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_trade_percent)\\b(?!\\s*\\()",
-    "codeblock": "strategy.avg_trade_percent",
-    "markdown": "Returns the average percentage gain or loss per trade. Calculated as the sum of all profit and loss percentages divided by the number of closed trades.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_trade_percent"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_winning_trade)\\b(?!\\s*\\()",
-    "codeblock": "strategy.avg_winning_trade",
-    "markdown": "Returns the average amount of money gained per winning trade. Calculated as the sum of profits divided by the number of winning trades.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_winning_trade"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_winning_trade_percent)\\b(?!\\s*\\()",
-    "codeblock": "strategy.avg_winning_trade_percent",
-    "markdown": "Returns the average percentage gain per winning trade. Calculated as the sum of profit percentages divided by the number of winning trades.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_winning_trade_percent"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades)\\b(?!(?:(?:\\s*\\()|(?:\\.size\\b)|(?:\\.profit\\b)|(?:\\.exit_id\\b)|(?:\\.entry_id\\b)|(?:\\.exit_time\\b)|(?:\\.max_runup\\b)|(?:\\.commission\\b)|(?:\\.entry_time\\b)|(?:\\.exit_price\\b)|(?:\\.entry_price\\b)|(?:\\.exit_comment\\b)|(?:\\.max_drawdown\\b)|(?:\\.entry_comment\\b)|(?:\\.exit_bar_index\\b)|(?:\\.profit_percent\\b)|(?:\\.entry_bar_index\\b)|(?:\\.max_drawdown_percent\\b)|(?:\\.max_runup_percent\\b)|(?:\\.max_drawdown\\b)))",
-    "codeblock": "strategy.closedtrades",
-    "markdown": "Number of trades, which were closed for the whole trading interval.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.closedtrades"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.equity)\\b(?!\\s*\\()",
-    "codeblock": "strategy.equity",
-    "markdown": "Current equity ([strategy.initial_capital]{0} + [strategy.netprofit]{1} + [strategy.openprofit]{2}).",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.initial_capital",
-       "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.netprofit",
-       "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.openprofit"
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.equity"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.eventrades)\\b(?!\\s*\\()",
-    "codeblock": "strategy.eventrades",
-    "markdown": "Number of breakeven trades for the whole trading interval.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.eventrades"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossloss_percent)\\b(?!\\s*\\()",
-    "codeblock": "strategy.grossloss_percent",
-    "markdown": "The total value of all completed losing trades, expressed as a percentage of the initial capital.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossloss_percent"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossprofit_percent)\\b(?!\\s*\\()",
-    "codeblock": "strategy.grossprofit_percent",
-    "markdown": "The total currency value of all completed winning trades, expressed as a percentage of the initial capital.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossprofit_percent"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossloss)\\b(?!\\s*\\()",
-    "codeblock": "strategy.grossloss",
-    "markdown": "Total currency value of all completed losing trades.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossloss"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossprofit)\\b(?!\\s*\\()",
-    "codeblock": "strategy.grossprofit",
-    "markdown": "Total currency value of all completed winning trades.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossprofit"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.initial_capital)\\b(?!\\s*\\()",
-    "codeblock": "strategy.initial_capital",
-    "markdown": "The amount of initial capital set in the strategy properties.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.initial_capital"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.losstrades)\\b(?!\\s*\\()",
-    "codeblock": "strategy.losstrades",
-    "markdown": "Number of unprofitable trades for the whole trading interval.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.losstrades"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.margin_liquidation_price)\\b(?!\\s*\\()",
-    "codeblock": "strategy.margin_liquidation_price",
-    "markdown": "When margin is used in a strategy, returns the price point where a simulated margin call will occur and liquidate enough of the position to meet the margin requirements.",
-    "remark": [
-       "The variable returns [na]{0} if the strategy does not use margin, i.e., the [strategy]{1} declaration statement does not specify an argument for the `margin_long` or `margin_short` parameter."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na",
-       "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy"
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.margin_liquidation_price"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_contracts_held_all)\\b(?!\\s*\\()",
-    "codeblock": "strategy.max_contracts_held_all",
-    "markdown": "Maximum number of contracts/shares/lots/units in one trade for the whole trading interval.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_contracts_held_all"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_contracts_held_long)\\b(?!\\s*\\()",
-    "codeblock": "strategy.max_contracts_held_long",
-    "markdown": "Maximum number of contracts/shares/lots/units in one long trade for the whole trading interval.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_contracts_held_long"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_contracts_held_short)\\b(?!\\s*\\()",
-    "codeblock": "strategy.max_contracts_held_short",
-    "markdown": "Maximum number of contracts/shares/lots/units in one short trade for the whole trading interval.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_contracts_held_short"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_drawdown_percent)\\b(?!\\s*\\()",
-    "codeblock": "strategy.max_drawdown_percent",
-    "markdown": "The maximum equity drawdown value for the whole trading interval, expressed as a percentage and calculated by formula: `Lowest Value During Trade / (Entry Price x Quantity) * 100`.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_drawdown_percent"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_runup_percent)\\b(?!\\s*\\()",
-    "codeblock": "strategy.max_runup_percent",
-    "markdown": "The maximum equity run-up value for the whole trading interval, expressed as a percentage and calculated by formula: `Highest Value During Trade / (Entry Price x Quantity) * 100`.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_runup_percent"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.netprofit_percent)\\b(?!\\s*\\()",
-    "codeblock": "strategy.netprofit_percent",
-    "markdown": "The total value of all completed trades, expressed as a percentage of the initial capital.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.netprofit_percent"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.openprofit_percent)\\b(?!\\s*\\()",
-    "codeblock": "strategy.openprofit_percent",
-    "markdown": "The current unrealized profit or loss for all open positions, expressed as a percentage and calculated by formula: `openPL / realizedEquity * 100`.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.openprofit_percent"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_drawdown)\\b(?!\\s*\\()",
-    "codeblock": "strategy.max_drawdown",
-    "markdown": "Maximum equity drawdown value for the whole trading interval.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_drawdown"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_runup)\\b(?!\\s*\\()",
-    "codeblock": "strategy.max_runup",
-    "markdown": "Maximum equity run-up value for the whole trading interval.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_runup"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.netprofit)\\b(?!\\s*\\()",
-    "codeblock": "strategy.netprofit",
-    "markdown": "Total currency value of all completed trades.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.netprofit"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.openprofit)\\b(?!\\s*\\()",
-    "codeblock": "strategy.openprofit",
-    "markdown": "Current unrealized profit or loss for all open positions.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.openprofit"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades)\\b(?!(?:(?:\\s*\\()|(?:\\.capital_held\\b)|(?:\\.size\\b)|(?:\\.profit\\b)|(?:\\.entry_id\\b)|(?:\\.max_runup\\b)|(?:\\.commission\\b)|(?:\\.entry_time\\b)|(?:\\.entry_price\\b)|(?:\\.max_drawdown\\b)|(?:\\.entry_comment\\b)|(?:\\.profit_percent\\b)|(?:\\.entry_bar_index\\b)|(?:\\.max_drawdown_percent\\b)|(?:\\.max_runup_percent\\b)|(?:\\.exit_id\\b)))",
-    "codeblock": "strategy.opentrades",
-    "markdown": "Number of market position entries, which were not closed and remain opened. If there is no open market position, 0 is returned.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.opentrades"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades.capital_held)\\b(?!\\s*\\()",
-    "codeblock": "strategy.opentrades.capital_held",
-    "markdown": "Returns the capital amount currently held by open trades.",
-    "remark": [
-       "This variable returns [na]{0} if the strategy does not simulate funding trades with a portion of the hypothetical account, i.e., if the [strategy]{1} function does not include nonzero `margin_long` or `margin_short` arguments."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na",
-       "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy"
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.opentrades.capital_held"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.position_avg_price)\\b(?!\\s*\\()",
-    "codeblock": "strategy.position_avg_price",
-    "markdown": "Average entry price of current market position. If the market position is flat, 'NaN' is returned.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.position_avg_price"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.position_entry_name)\\b(?!\\s*\\()",
-    "codeblock": "strategy.position_entry_name",
-    "markdown": "Name of the order that initially opened current market position.",
-    "type": "series string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.position_entry_name"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.position_size)\\b(?!\\s*\\()",
-    "codeblock": "strategy.position_size",
-    "markdown": "Direction and size of the current market position. If the value is > 0, the market position is long. If the value is < 0, the market position is short. The absolute value is the number of contracts/shares/lots/units in trade (position size).",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.position_size"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(strategy\\.wintrades)\\b(?!\\s*\\()",
-    "codeblock": "strategy.wintrades",
-    "markdown": "Number of profitable trades for the whole trading interval.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.wintrades"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.basecurrency)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.basecurrency",
-    "markdown": "Returns a string containing the code representing the symbol's base currency (i.e., the traded currency or coin) if the instrument is a Forex or Crypto pair or a derivative based on such a pair. Otherwise, it returns an empty string. For example, this variable returns \"EUR\" for \"EURJPY\", \"BTC\" for \"BTCUSDT\", \"CAD\" for \"CME:6C1!\", and \"\" for \"NASDAQ:AAPL\".",
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.basecurrency"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.country)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.country",
-    "markdown": "Returns the two-letter code of the country where the symbol is traded, in the [ISO 3166-1 alpha-2]{0} format, or [na]{1} if the exchange is not directly tied to a specific country. For example, on \"NASDAQ:AAPL\" it will return \"US\", on \"LSE:AAPL\" it will return \"GB\", and on \"BITSTAMP:BTCUSD it will return [na]{2}.",
-    "descLink": [
-       "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2",
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na",
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.country"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.currency)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.currency",
-    "markdown": "Returns a string containing the code representing the currency of the symbol's prices. For example, this variable returns \"USD\" for \"NASDAQ:AAPL\" and \"JPY\" for \"EURJPY\".",
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.currency"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.description)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.description",
-    "markdown": "Description for the current symbol.",
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.description"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.employees)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.employees",
-    "markdown": "The number of employees the company has.",
-    "type": "simple int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.employees"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.expiration_date)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.expiration_date",
-    "markdown": "A UNIX timestamp representing the start of the last day of the current futures contract. This variable is only compatible with non-continuous futures symbols. On other symbols, it returns [na]{0}.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "type": "simple int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.expiration_date"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.industry)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.industry",
-    "markdown": "Returns the industry of the symbol, or [na]{0} if the symbol has no industry. Example: 'Internet Software/Services', 'Packaged software', 'Integrated Oil', 'Motor Vehicles', etc. These are the same values one can see in the chart's 'Symbol info' window.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.industry"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.minmove)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.minmove",
-    "markdown": "Returns a whole number used to calculate the smallest increment between a symbol's price movements ([syminfo.mintick]{0}). It is the numerator in the [syminfo.mintick]{1} formula: `syminfo.minmove / syminfo.pricescale = syminfo.mintick`.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick",
-       "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick"
-    ],
-    "type": "simple int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.minmove"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.mintick)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.mintick",
-    "markdown": "Min tick value for the current symbol.",
-    "type": "simple float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.pointvalue)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.pointvalue",
-    "markdown": "Point value for the current symbol.",
-    "type": "simple float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.pointvalue"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.prefix)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.prefix",
-    "markdown": "Prefix of current symbol name (i.e. for 'CME_EOD:TICKER' prefix is 'CME_EOD').",
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.prefix"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.pricescale)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.pricescale",
-    "markdown": "Returns a whole number used to calculate the smallest increment between a symbol's price movements ([syminfo.mintick]{0}). It is the denominator in the [syminfo.mintick]{1} formula: `syminfo.minmove / syminfo.pricescale = syminfo.mintick`.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick",
-       "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick"
-    ],
-    "type": "simple int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.pricescale"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_buy_strong)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.recommendations_buy_strong",
-    "markdown": "The number of analysts who gave the current symbol a \"Strong Buy\" rating.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_buy_strong"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_buy)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.recommendations_buy",
-    "markdown": "The number of analysts who gave the current symbol a \"Buy\" rating.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_buy"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_date)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.recommendations_date",
-    "markdown": "The starting date of the last set of recommendations for the current symbol.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_date"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_hold)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.recommendations_hold",
-    "markdown": "The number of analysts who gave the current symbol a \"Hold\" rating.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_hold"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_sell_strong)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.recommendations_sell_strong",
-    "markdown": "The number of analysts who gave the current symbol a \"Strong Sell\" rating.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_sell_strong"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_sell)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.recommendations_sell",
-    "markdown": "The number of analysts who gave the current symbol a \"Sell\" rating.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_sell"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_total)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.recommendations_total",
-    "markdown": "The total number of recommendations for the current symbol.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_total"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.root)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.root",
-    "markdown": "Root for derivatives like futures contract. For other symbols returns the same value as [syminfo.ticker]{0}.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.ticker"
-    ],
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.root"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.sector)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.sector",
-    "markdown": "Returns the sector of the symbol, or [na]{0} if the symbol has no sector. Example: \"Electronic Technology\", \"Technology services\", \"Energy Minerals\", \"Consumer Durables\", etc. These are the same values one can see in the chart's \"Symbol info\" window.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "remark": [
-       "A sector is a broad section of the economy. An industry is a narrower classification. NASDAQ:CAT (Caterpillar, Inc.) for example, belongs to the \"Producer Manufacturing\" sector and the \"Trucks/Construction/Farm Machinery\" industry."
-    ],
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.sector"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.session)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.session",
-    "markdown": "Session type of the chart main series. Possible values are [session.regular]{0}, [session.extended]{1}.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_session.regular",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_session.extended"
-    ],
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.session"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.shareholders)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.shareholders",
-    "markdown": "The number of shareholders the company has.",
-    "type": "simple int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.shareholders"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.shares_outstanding_float)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.shares_outstanding_float",
-    "markdown": "The total number of shares outstanding a company has available, excluding any of its restricted shares.",
-    "type": "simple float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.shares_outstanding_float"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.shares_outstanding_total)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.shares_outstanding_total",
-    "markdown": "The total number of shares outstanding a company has available, including restricted shares held by insiders, major shareholders, and employees.",
-    "type": "simple int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.shares_outstanding_total"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_average)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.target_price_average",
-    "markdown": "The average of the last yearly price targets for the symbol predicted by analysts.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_average"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_date)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.target_price_date",
-    "markdown": "The starting date of the last price target prediction for the current symbol.",
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_date"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_estimates)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.target_price_estimates",
-    "markdown": "The latest total number of price target predictions for the current symbol.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_estimates"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_high)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.target_price_high",
-    "markdown": "The last highest yearly price target for the symbol predicted by analysts.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_high"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_low)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.target_price_low",
-    "markdown": "The last lowest yearly price target for the symbol predicted by analysts.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_low"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_median)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.target_price_median",
-    "markdown": "The median of the last yearly price targets for the symbol predicted by analysts.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_median"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.ticker)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.ticker",
-    "markdown": "Symbol name without exchange prefix, e.g. 'MSFT'.",
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.ticker"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.tickerid)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.tickerid",
-    "markdown": "Returns the full form of the ticker ID representing a symbol, for use as an argument in functions with a `ticker` or `symbol` parameter. It always includes the prefix (exchange) and ticker separated by a colon (\"NASDAQ:AAPL\"), but it can also include other symbol data such as dividend adjustment, chart type, currency conversion, etc.",
-    "remark": [
-       "Because the value of this variable does not always use a simple \"prefix:ticker\" format, it is a poor candidate for use in boolean comparisons or string manipulation functions. In those contexts, run the variable's result through [ticker.standard]{0} to purify it. This will remove any extraneous information and return a ticker ID consistently formatted using the \"prefix:ticker\" structure."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.standard"
-    ],
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.tickerid"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.timezone)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.timezone",
-    "markdown": "Timezone of the exchange of the chart main series. Possible values see in [timestamp]{0}.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#fun_timestamp"
-    ],
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.timezone"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.type)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.type",
-    "markdown": "The type of market the symbol belongs to. The values are \"stock\", \"fund\", \"dr\", \"right\", \"bond\", \"warrant\", \"structured\", \"index\", \"forex\", \"futures\", \"spread\", \"economic\", \"fundamental\", \"crypto\", \"spot\", \"swap\", \"option\", \"commodity\".",
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.type"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.volumetype)\\b(?!\\s*\\()",
-    "codeblock": "syminfo.volumetype",
-    "markdown": "Volume type of the current symbol. Possible values are: \"base\" for base currency, \"quote\" for quote currency, \"tick\" for the number of transactions, and \"n/a\" when there is no volume or its type is not specified. ",
-    "remark": [
-       "Only some data feed suppliers provide information qualifying volume. As a result, the variable will return a value on some symbols only, mostly in the crypto sector."
-    ],
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.volumetype"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ta\\.accdist)\\b(?!\\s*\\()",
-    "codeblock": "ta.accdist",
-    "markdown": "Accumulation/distribution index.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.accdist"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ta\\.iii)\\b(?!\\s*\\()",
-    "codeblock": "ta.iii",
-    "markdown": "Intraday Intensity Index.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.iii"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ta\\.nvi)\\b(?!\\s*\\()",
-    "codeblock": "ta.nvi",
-    "markdown": "Negative Volume Index.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.nvi"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ta\\.obv)\\b(?!\\s*\\()",
-    "codeblock": "ta.obv",
-    "markdown": "On Balance Volume.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.obv"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ta\\.pvi)\\b(?!\\s*\\()",
-    "codeblock": "ta.pvi",
-    "markdown": "Positive Volume Index.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.pvi"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ta\\.pvt)\\b(?!\\s*\\()",
-    "codeblock": "ta.pvt",
-    "markdown": "Price-Volume Trend.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.pvt"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ta\\.tr)\\b(?!\\s*\\()",
-    "codeblock": "ta.tr",
-    "markdown": "True range, equivalent to `ta.tr(handle_na = false)`. It is calculated as `math.max(high - low, math.abs(high - close[1]), math.abs(low – close[1]))`.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.tr"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ta\\.vwap)\\b(?!\\s*\\()",
-    "codeblock": "ta.vwap",
-    "markdown": "Volume Weighted Average Price. It uses [hlc3]{0} as its source series.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_hlc3"
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.vwap"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ta\\.wad)\\b(?!\\s*\\()",
-    "codeblock": "ta.wad",
-    "markdown": "Williams Accumulation/Distribution.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.wad"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(ta\\.wvad)\\b(?!\\s*\\()",
-    "codeblock": "ta.wvad",
-    "markdown": "Williams Variable Accumulation/Distribution.",
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.wvad"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(table\\.all)\\b(?!\\s*\\()",
-    "codeblock": "table.all",
-    "markdown": "Returns an array filled with all the current [table]{0} objects drawn by the script.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#type_table"
-    ],
-    "remark": [
-       "The array is read-only. Index zero of the array is the ID of the oldest object on the chart."
-    ],
-    "type": "table[]",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_table.all"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(time)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "time",
-    "markdown": "Current bar time in UNIX format. It is the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970.",
-    "remark": [
-       "Note that this variable returns the timestamp based on the time of the bar's open. Because of that, for overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this variable can return time before the specified date of the trading day. For example, on EURUSD, `dayofmonth(time)` can be lower by 1 than the date of the trading day, because the bar for the current day actually opens one day prior."
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_time"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(time_close)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "time_close",
-    "markdown": "The time of the current bar's close in UNIX format. It represents the number of milliseconds elapsed since 00:00:00 UTC, 1 January 1970. On non-standard price-based chart types (Renko, Line break, Kagi, Point & Figure, and Range), this variable returns [na]{0} on the chart's realtime bars.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_na"
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_time_close"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(time_tradingday)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "time_tradingday",
-    "markdown": "The beginning time of the trading day the current bar belongs to, in UNIX format (the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970).",
-    "remark": [
-       "The variable is useful for overnight sessions, where the current day's session can start on the previous calendar day (e.g., on FXCM:EURUSD the Monday session will start on Sunday, 17:00 in the exchange timezone). Unlike [time]{0}, which would return the timestamp for Sunday at 17:00 for the Monday daily bar, `time_tradingday` will return the timestamp for Monday, 00:00 UTC. <p/>When used on timeframes higher than 1D, `time_tradingday` returns the trading day of the last day inside the bar (e.g. on 1W, it will return the last trading day of the week)."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#var_time"
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_time_tradingday"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isdaily)\\b(?!\\s*\\()",
-    "codeblock": "timeframe.isdaily",
-    "markdown": "Returns [true]{0} if current resolution is a daily resolution, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isdaily"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isdwm)\\b(?!\\s*\\()",
-    "codeblock": "timeframe.isdwm",
-    "markdown": "Returns [true]{0} if current resolution is a daily or weekly or monthly resolution, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isdwm"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isintraday)\\b(?!\\s*\\()",
-    "codeblock": "timeframe.isintraday",
-    "markdown": "Returns [true]{0} if current resolution is an intraday (minutes or seconds) resolution, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isintraday"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isminutes)\\b(?!\\s*\\()",
-    "codeblock": "timeframe.isminutes",
-    "markdown": "Returns [true]{0} if current resolution is a minutes resolution, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isminutes"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.ismonthly)\\b(?!\\s*\\()",
-    "codeblock": "timeframe.ismonthly",
-    "markdown": "Returns [true]{0} if current resolution is a monthly resolution, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.ismonthly"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isseconds)\\b(?!\\s*\\()",
-    "codeblock": "timeframe.isseconds",
-    "markdown": "Returns [true]{0} if current resolution is a seconds resolution, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isseconds"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isweekly)\\b(?!\\s*\\()",
-    "codeblock": "timeframe.isweekly",
-    "markdown": "Returns [true]{0} if current resolution is a weekly resolution, [false]{1} otherwise.",
-    "descLink": [
-       "https://www.tradingview.com/pine-script-reference/v5/#const_true",
-       "https://www.tradingview.com/pine-script-reference/v5/#const_false"
-    ],
-    "type": "simple bool",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isweekly"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.multiplier)\\b(?!\\s*\\()",
-    "codeblock": "timeframe.multiplier",
-    "markdown": "Multiplier of resolution, e.g. '60' - 60, 'D' - 1, '5D' - 5, '12M' - 12.",
-    "type": "simple int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.multiplier"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.period)\\b(?!\\s*\\()",
-    "codeblock": "timeframe.period",
-    "markdown": "A string representation of the chart's timeframe. The returned string's format is \"[<quantity>][<units>]\", where <quantity> and <units> are in some cases absent. <quantity> is the number of units, but it is absent if that number is 1. <unit> is \"S\" for seconds, \"D\" for days, \"W\" for weeks, \"M\" for months, but it is absent for minutes. No <unit> exists for hours. <p/>The variable will return: \"10S\" for 10 seconds, \"60\" for 60 minutes, \"D\" for one day, \"2W\" for two weeks, \"3M\" for one quarter. <p/>Can be used as an argument with any function containing a `timeframe` parameter.",
-    "type": "simple string",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.period"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(timenow)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "timenow",
-    "markdown": "Current time in UNIX format. It is the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970.",
-    "remark": [
-       "Please note that using this variable/function can cause [indicator repainting]{0}."
-    ],
-    "remarkLink": [
-       "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timenow"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(volume)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "volume",
-    "markdown": "Current bar volume.",
-    "remark": [
-       "Previous values may be accessed with square brackets operator `[]`, e.g. `volume[1]`, `volume[2]`."
-    ],
-    "type": "series float",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_volume"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(weekofyear)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "weekofyear",
-    "markdown": "Week number of current bar time in exchange timezone.",
-    "remark": [
-       "Note that this variable returns the week based on the time of the bar's open. For overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this value can be lower by 1 than the week of the trading day."
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_weekofyear"
- },
-  {
-    "pattern": "(?<![\\.]\\s*)\\b(year)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
-    "codeblock": "year",
-    "markdown": "Current bar year in exchange timezone.",
-    "remark": [
-       "Note that this variable returns the year based on the time of the bar's open. For overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this value can be lower by 1 than the year of the trading day."
-    ],
-    "type": "series int",
-    "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_year"
- }
- ]
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(bar_index)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "bar_index",
+     "markdown": "Current bar index. Numbering is zero-based, index of the first bar is 0.",
+     "remark": [
+        "Note that __bar_index__ has replaced __n__ variable in version 4. <p/>Note that bar indexing starts from 0 on the first historical bar. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_bar_index"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(barstate\\.isconfirmed)\\b(?!\\s*\\()",
+     "codeblock": "barstate.isconfirmed",
+     "markdown": "Returns true if the script is calculating the last (closing) update of the current bar. The next script calculation will be on the new bar data.",
+     "remark": [
+        "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>It is NOT recommended to use [barstate.isconfirmed]{0} in [request.security]{1} expression. Its value requested from [request.security]{2} is unpredictable. <p/>Please note that using this variable/function can cause [indicator repainting]{3}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.isconfirmed",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_request.security",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_request.security",
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.isconfirmed"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(barstate\\.isfirst)\\b(?!\\s*\\()",
+     "codeblock": "barstate.isfirst",
+     "markdown": "Returns true if current bar is first bar in barset, false otherwise.",
+     "remark": [
+        "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.isfirst"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(barstate\\.ishistory)\\b(?!\\s*\\()",
+     "codeblock": "barstate.ishistory",
+     "markdown": "Returns true if current bar is a historical bar, false otherwise.",
+     "remark": [
+        "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.ishistory"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(barstate\\.islast)\\b(?!\\s*\\()",
+     "codeblock": "barstate.islast",
+     "markdown": "Returns true if current bar is the last bar in barset, false otherwise. This condition is true for all real-time bars in barset.",
+     "remark": [
+        "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.islast"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(barstate\\.islastconfirmedhistory)\\b(?!\\s*\\()",
+     "codeblock": "barstate.islastconfirmedhistory",
+     "markdown": "Returns true if script is executing on the dataset's last bar when market is closed, or script is executing on the bar immediately preceding the real-time bar, if market is open. Returns false otherwise.",
+     "remark": [
+        "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.islastconfirmedhistory"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(barstate\\.isnew)\\b(?!\\s*\\()",
+     "codeblock": "barstate.isnew",
+     "markdown": "Returns true if script is currently calculating on new bar, false otherwise. This variable is true when calculating on historical bars or on first update of a newly generated real-time bar.",
+     "remark": [
+        "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.isnew"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(barstate\\.isrealtime)\\b(?!\\s*\\()",
+     "codeblock": "barstate.isrealtime",
+     "markdown": "Returns true if current bar is a real-time bar, false otherwise.",
+     "remark": [
+        "Pine Script® code that uses this variable could calculate differently on history and real-time data. <p/>Please note that using this variable/function can cause [indicator repainting]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_barstate.isrealtime"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(box\\.all)\\b(?!\\s*\\()",
+     "codeblock": "box.all",
+     "markdown": "Returns an array filled with all the current [box]{0} objects drawn by the script.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#type_box"
+     ],
+     "remark": [
+        "The array is read-only. Index zero of the array is the ID of the oldest object on the chart."
+     ],
+     "type": "box[]",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_box.all"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.bg_color)\\b(?!\\s*\\()",
+     "codeblock": "chart.bg_color",
+     "markdown": "Returns the color of the chart's background from the 'Chart settings/Appearance/Background' field. When a gradient is selected, the middle point of the gradient is returned.",
+     "type": "input color",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.bg_color"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.fg_color)\\b(?!\\s*\\()",
+     "codeblock": "chart.fg_color",
+     "markdown": "Returns a color providing optimal contrast with [chart.bg_color]{0}.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_chart.bg_color"
+     ],
+     "type": "input color",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.fg_color"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_heikinashi)\\b(?!\\s*\\()",
+     "codeblock": "chart.is_heikinashi",
+     "markdown": "Returns [true]{0} if the chart type is Heikin Ashi, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_heikinashi"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_kagi)\\b(?!\\s*\\()",
+     "codeblock": "chart.is_kagi",
+     "markdown": "Returns [true]{0} if the chart type is Kagi, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_kagi"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_linebreak)\\b(?!\\s*\\()",
+     "codeblock": "chart.is_linebreak",
+     "markdown": "Returns [true]{0} if the chart type is Line break, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_linebreak"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_pnf)\\b(?!\\s*\\()",
+     "codeblock": "chart.is_pnf",
+     "markdown": "Returns [true]{0} if the chart type is Point & figure, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_pnf"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_range)\\b(?!\\s*\\()",
+     "codeblock": "chart.is_range",
+     "markdown": "Returns [true]{0} if the chart type is Range, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_range"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_renko)\\b(?!\\s*\\()",
+     "codeblock": "chart.is_renko",
+     "markdown": "Returns [true]{0} if the chart type is Renko, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_renko"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.is_standard)\\b(?!\\s*\\()",
+     "codeblock": "chart.is_standard",
+     "markdown": "Returns [true]{0} if the chart type is bars, candles, hollow candles, line, area or baseline, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.is_standard"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.left_visible_bar_time)\\b(?!\\s*\\()",
+     "codeblock": "chart.left_visible_bar_time",
+     "markdown": "The [time]{0} of the leftmost bar currently visible on the chart.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_time"
+     ],
+     "remark": [
+        "Scripts using this variable will automatically re-execute when its value updates to reflect changes in the chart, which can be caused by users scrolling the chart, or new real-time bars. <p/>Alerts created on a script that includes this variable will only use the value assigned to the variable at the moment of the alert's creation, regardless of whether the value changes afterward, which may lead to repainting."
+     ],
+     "type": "input int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.left_visible_bar_time"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(chart\\.right_visible_bar_time)\\b(?!\\s*\\()",
+     "codeblock": "chart.right_visible_bar_time",
+     "markdown": "The [time]{0} of the rightmost bar currently visible on the chart.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_time"
+     ],
+     "remark": [
+        "Scripts using this variable will automatically re-execute when its value updates to reflect changes in the chart, which can be caused by users scrolling the chart, or new real-time bars. <p/>Alerts created on a script that includes this variable will only use the value assigned to the variable at the moment of the alert's creation, regardless of whether the value changes afterward, which may lead to repainting."
+     ],
+     "type": "input int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_chart.right_visible_bar_time"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(close)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "close",
+     "markdown": "Close price of the current bar when it has closed, or last traded price of a yet incomplete, realtime bar.",
+     "remark": [
+        "Previous values may be accessed with square brackets operator `[]`, e.g. `close[1]`, `close[2]`."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_close"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(dayofmonth)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "dayofmonth",
+     "markdown": "Date of current bar time in exchange timezone.",
+     "remark": [
+        "Note that this variable returns the day based on the time of the bar's open. For overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this value can be lower by 1 than the day of the trading day."
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofmonth"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(dayofweek)\\b(?=(?!(?:(?:\\.friday\\b)|(?:\\.monday\\b)|(?:\\.sunday\\b)|(?:\\.tuesday\\b)|(?:\\.saturday\\b)|(?:\\.thursday\\b)|(?:\\.wednesday\\b)|(?:\\s*[\\(\\=])|(?:\\s*\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "dayofweek",
+     "markdown": "Day of week for current bar time in exchange timezone.",
+     "remark": [
+        "Note that this variable returns the day based on the time of the bar's open. For overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this value can be lower by 1 than the day of the trading day. <p/>You can use [dayofweek.sunday]{0}, [dayofweek.monday]{1}, [dayofweek.tuesday]{2}, [dayofweek.wednesday]{3}, [dayofweek.thursday]{4}, [dayofweek.friday]{5} and [dayofweek.saturday]{6} variables for comparisons."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.sunday",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.monday",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.tuesday",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.wednesday",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.thursday",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.friday",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_dayofweek.saturday"
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dayofweek"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(dividends\\.future_amount)\\b(?!\\s*\\()",
+     "codeblock": "dividends.future_amount",
+     "markdown": "Returns the payment amount of the upcoming dividend in the currency of the current instrument, or [na]{0} if this data isn't available.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "remark": [
+        "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected Payment date of the next dividend."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dividends.future_amount"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(dividends\\.future_ex_date)\\b(?!\\s*\\()",
+     "codeblock": "dividends.future_ex_date",
+     "markdown": "Returns the Ex-dividend date (Ex-date) of the current instrument's next dividend payment, or [na]{0} if this data isn't available. Ex-dividend date signifies when investors are no longer entitled to a payout from the most recent dividend. Only those who purchased shares before this day are entitled to the dividend payment.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "remark": [
+        "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected Payment date of the next dividend."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dividends.future_ex_date"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(dividends\\.future_pay_date)\\b(?!\\s*\\()",
+     "codeblock": "dividends.future_pay_date",
+     "markdown": "Returns the Payment date (Pay date) of the current instrument's next dividend payment, or [na]{0} if this data isn't available. Payment date signifies the day when eligible investors will receive the dividend payment.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "remark": [
+        "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected Payment date of the next dividend."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_dividends.future_pay_date"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(earnings\\.future_eps)\\b(?!\\s*\\()",
+     "codeblock": "earnings.future_eps",
+     "markdown": "Returns the estimated Earnings per Share of the next earnings report in the currency of the instrument, or [na]{0} if this data isn't available.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "remark": [
+        "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected time of the next earnings report."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.future_eps"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(earnings\\.future_period_end_time)\\b(?!\\s*\\()",
+     "codeblock": "earnings.future_period_end_time",
+     "markdown": "Checks the data for the next earnings report and returns the UNIX timestamp of the day when the financial period covered by those earnings ends, or [na]{0} if this data isn't available.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "remark": [
+        "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected time of the next earnings report."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.future_period_end_time"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(earnings\\.future_revenue)\\b(?!\\s*\\()",
+     "codeblock": "earnings.future_revenue",
+     "markdown": "Returns the estimated Revenue of the next earnings report in the currency of the instrument, or [na]{0} if this data isn't available.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "remark": [
+        "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected time of the next earnings report."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.future_revenue"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(earnings\\.future_time)\\b(?!\\s*\\()",
+     "codeblock": "earnings.future_time",
+     "markdown": "Returns a UNIX timestamp indicating the expected time of the next earnings report, or [na]{0} if this data isn't available.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "remark": [
+        "This value is only fetched once during the script's initial calculation. The variable will return the same value until the script is recalculated, even after the expected time of the next earnings report."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_earnings.future_time"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(high)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "high",
+     "markdown": "Current high price.",
+     "remark": [
+        "Previous values may be accessed with square brackets operator `[]`, e.g. `high[1]`, `high[2]`."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_high"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(hl2)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "hl2",
+     "markdown": "Is a shortcut for (high + low)/2",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hl2"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(hlc3)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "hlc3",
+     "markdown": "Is a shortcut for (high + low + close)/3",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hlc3"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(hlcc4)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "hlcc4",
+     "markdown": "Is a shortcut for (high + low + close + close)/4",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hlcc4"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(hour)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "hour",
+     "markdown": "Current bar hour in exchange timezone.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_hour"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(label\\.all)\\b(?!\\s*\\()",
+     "codeblock": "label.all",
+     "markdown": "Returns an array filled with all the current [label]{0} objects drawn by the script.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#type_label"
+     ],
+     "remark": [
+        "The array is read-only. Index zero of the array is the ID of the oldest object on the chart."
+     ],
+     "type": "label[]",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_label.all"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(last_bar_index)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "last_bar_index",
+     "markdown": "Bar index of the last chart bar. Bar indices begin at zero on the first bar.",
+     "remark": [
+        "Please note that using this variable can cause [indicator repainting]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_last_bar_index"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(last_bar_time)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "last_bar_time",
+     "markdown": "Time in UNIX format of the last chart bar. It is the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970.",
+     "remark": [
+        "Please note that using this variable/function can cause [indicator repainting]{0}. <p/>Note that this variable returns the timestamp based on the time of the bar's open."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_last_bar_time"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(line\\.all)\\b(?!\\s*\\()",
+     "codeblock": "line.all",
+     "markdown": "Returns an array filled with all the current [line]{0} objects drawn by the script.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#type_line"
+     ],
+     "remark": [
+        "The array is read-only. Index zero of the array is the ID of the oldest object on the chart."
+     ],
+     "type": "line[]",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_line.all"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(linefill\\.all)\\b(?!\\s*\\()",
+     "codeblock": "linefill.all",
+     "markdown": "Returns an array filled with all the current [linefill]{0} objects drawn by the script.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#type_linefill"
+     ],
+     "remark": [
+        "The array is read-only. Index zero of the array is the ID of the oldest object on the chart."
+     ],
+     "type": "linefill[]",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_linefill.all"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(low)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "low",
+     "markdown": "Current low price.",
+     "remark": [
+        "Previous values may be accessed with square brackets operator `[]`, e.g. `low[1]`, `low[2]`."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_low"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(minute)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "minute",
+     "markdown": "Current bar minute in exchange timezone.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_minute"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(month)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "month",
+     "markdown": "Current bar month in exchange timezone.",
+     "remark": [
+        "Note that this variable returns the month based on the time of the bar's open. For overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this value can be lower by 1 than the month of the trading day."
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_month"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(na)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "na",
+     "markdown": "A keyword signifying 'not available', indicating that a variable has no assigned value.",
+     "remark": [
+        "Do not use this variable with [comparison operators]{0} to test values for `na`, as it might lead to unexpected behavior. Instead, use the [na]{1} function. Note that `na` can be used to initialize variables when the initialization statement also specifies the variable's type."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/language/Operators.html#comparison-operators",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_na"
+     ],
+     "type": "simple na",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ohlc4)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "ohlc4",
+     "markdown": "Is a shortcut for (open + high + low + close)/4",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ohlc4"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(open)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "open",
+     "markdown": "Current open price.",
+     "remark": [
+        "Previous values may be accessed with square brackets operator `[]`, e.g. `open[1]`, `open[2]`."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_open"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(polyline\\.all)\\b(?!\\s*\\()",
+     "codeblock": "polyline.all",
+     "markdown": "Returns an array containing all current [polyline]{0} instances drawn by the script.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#type_polyline"
+     ],
+     "remark": [
+        "The array is read-only. Index zero of the array references the ID of the oldest polyline object on the chart."
+     ],
+     "type": "polyline[]",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_polyline.all"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(second)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "second",
+     "markdown": "Current bar second in exchange timezone.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_second"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(session\\.isfirstbar)\\b(?!\\s*\\()",
+     "codeblock": "session.isfirstbar",
+     "markdown": "Returns [true]{0} if the current bar is the first bar of the day's session, [false]{1} otherwise. If extended session information is used, only returns `true` on the first bar of the pre-market bars.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.isfirstbar"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(session\\.isfirstbar_regular)\\b(?!\\s*\\()",
+     "codeblock": "session.isfirstbar_regular",
+     "markdown": "Returns [true]{0} on the first regular session bar of the day, [false]{1} otherwise. The result is the same whether extended session information is used or not.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.isfirstbar_regular"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(session\\.islastbar)\\b(?!\\s*\\()",
+     "codeblock": "session.islastbar",
+     "markdown": "Returns [true]{0} if the current bar is the last bar of the day's session, [false]{1} otherwise. If extended session information is used, only returns `true` on the last bar of the post-market bars.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "remark": [
+        "This variable is not guaranteed to return [true]{0} once in every session because the last bar of the session might not exist if no trades occur during what should be the session's last bar. <p/>This variable is not guaranteed to work as expected on non-standard chart types, e.g., Renko."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.islastbar"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(session\\.islastbar_regular)\\b(?!\\s*\\()",
+     "codeblock": "session.islastbar_regular",
+     "markdown": "Returns [true]{0} on the last regular session bar of the day, [false]{1} otherwise. The result is the same whether extended session information is used or not.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "remark": [
+        "This variable is not guaranteed to return [true]{0} once in every session because the last bar of the session might not exist if no trades occur during what should be the session's last bar. <p/>This variable is not guaranteed to work as expected on non-standard chart types, e.g., Renko."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.islastbar_regular"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(session\\.ismarket)\\b(?!\\s*\\()",
+     "codeblock": "session.ismarket",
+     "markdown": "Returns [true]{0} if the current bar is a part of the regular trading hours (i.e. market hours), [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.ismarket"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(session\\.ispostmarket)\\b(?!\\s*\\()",
+     "codeblock": "session.ispostmarket",
+     "markdown": "Returns [true]{0} if the current bar is a part of the post-market, [false]{1} otherwise. On non-intraday charts always returns `false`.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.ispostmarket"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(session\\.ispremarket)\\b(?!\\s*\\()",
+     "codeblock": "session.ispremarket",
+     "markdown": "Returns [true]{0} if the current bar is a part of the pre-market, [false]{1} otherwise. On non-intraday charts always returns `false`.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "series bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_session.ispremarket"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.account_currency)\\b(?!\\s*\\()",
+     "codeblock": "strategy.account_currency",
+     "markdown": "Returns the currency used to calculate results, which can be set in the strategy's properties.",
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.account_currency"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_losing_trade)\\b(?!\\s*\\()",
+     "codeblock": "strategy.avg_losing_trade",
+     "markdown": "Returns the average amount of money lost per losing trade. Calculated as the sum of losses divided by the number of losing trades.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_losing_trade"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_losing_trade_percent)\\b(?!\\s*\\()",
+     "codeblock": "strategy.avg_losing_trade_percent",
+     "markdown": "Returns the average percentage loss per losing trade. Calculated as the sum of loss percentages divided by the number of losing trades.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_losing_trade_percent"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_trade)\\b(?!\\s*\\()",
+     "codeblock": "strategy.avg_trade",
+     "markdown": "Returns the average amount of money gained or lost per trade. Calculated as the sum of all profits and losses divided by the number of closed trades.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_trade"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_trade_percent)\\b(?!\\s*\\()",
+     "codeblock": "strategy.avg_trade_percent",
+     "markdown": "Returns the average percentage gain or loss per trade. Calculated as the sum of all profit and loss percentages divided by the number of closed trades.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_trade_percent"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_winning_trade)\\b(?!\\s*\\()",
+     "codeblock": "strategy.avg_winning_trade",
+     "markdown": "Returns the average amount of money gained per winning trade. Calculated as the sum of profits divided by the number of winning trades.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_winning_trade"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.avg_winning_trade_percent)\\b(?!\\s*\\()",
+     "codeblock": "strategy.avg_winning_trade_percent",
+     "markdown": "Returns the average percentage gain per winning trade. Calculated as the sum of profit percentages divided by the number of winning trades.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.avg_winning_trade_percent"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.closedtrades)\\b(?!(?:(?:\\s*\\()|(?:\\.size\\b)|(?:\\.profit\\b)|(?:\\.exit_id\\b)|(?:\\.entry_id\\b)|(?:\\.exit_time\\b)|(?:\\.max_runup\\b)|(?:\\.commission\\b)|(?:\\.entry_time\\b)|(?:\\.exit_price\\b)|(?:\\.entry_price\\b)|(?:\\.exit_comment\\b)|(?:\\.max_drawdown\\b)|(?:\\.entry_comment\\b)|(?:\\.exit_bar_index\\b)|(?:\\.profit_percent\\b)|(?:\\.entry_bar_index\\b)|(?:\\.max_drawdown_percent\\b)|(?:\\.max_runup_percent\\b)|(?:\\.max_drawdown\\b)))",
+     "codeblock": "strategy.closedtrades",
+     "markdown": "Number of trades, which were closed for the whole trading interval.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.closedtrades"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.equity)\\b(?!\\s*\\()",
+     "codeblock": "strategy.equity",
+     "markdown": "Current equity ([strategy.initial_capital]{0} + [strategy.netprofit]{1} + [strategy.openprofit]{2}).",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.initial_capital",
+        "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.netprofit",
+        "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.openprofit"
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.equity"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.eventrades)\\b(?!\\s*\\()",
+     "codeblock": "strategy.eventrades",
+     "markdown": "Number of breakeven trades for the whole trading interval.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.eventrades"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossloss_percent)\\b(?!\\s*\\()",
+     "codeblock": "strategy.grossloss_percent",
+     "markdown": "The total value of all completed losing trades, expressed as a percentage of the initial capital.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossloss_percent"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossprofit_percent)\\b(?!\\s*\\()",
+     "codeblock": "strategy.grossprofit_percent",
+     "markdown": "The total currency value of all completed winning trades, expressed as a percentage of the initial capital.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossprofit_percent"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossloss)\\b(?!\\s*\\()",
+     "codeblock": "strategy.grossloss",
+     "markdown": "Total currency value of all completed losing trades.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossloss"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.grossprofit)\\b(?!\\s*\\()",
+     "codeblock": "strategy.grossprofit",
+     "markdown": "Total currency value of all completed winning trades.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.grossprofit"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.initial_capital)\\b(?!\\s*\\()",
+     "codeblock": "strategy.initial_capital",
+     "markdown": "The amount of initial capital set in the strategy properties.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.initial_capital"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.losstrades)\\b(?!\\s*\\()",
+     "codeblock": "strategy.losstrades",
+     "markdown": "Number of unprofitable trades for the whole trading interval.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.losstrades"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.margin_liquidation_price)\\b(?!\\s*\\()",
+     "codeblock": "strategy.margin_liquidation_price",
+     "markdown": "When margin is used in a strategy, returns the price point where a simulated margin call will occur and liquidate enough of the position to meet the margin requirements.",
+     "remark": [
+        "The variable returns [na]{0} if the strategy does not use margin, i.e., the [strategy]{1} declaration statement does not specify an argument for the `margin_long` or `margin_short` parameter."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy"
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.margin_liquidation_price"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_contracts_held_all)\\b(?!\\s*\\()",
+     "codeblock": "strategy.max_contracts_held_all",
+     "markdown": "Maximum number of contracts/shares/lots/units in one trade for the whole trading interval.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_contracts_held_all"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_contracts_held_long)\\b(?!\\s*\\()",
+     "codeblock": "strategy.max_contracts_held_long",
+     "markdown": "Maximum number of contracts/shares/lots/units in one long trade for the whole trading interval.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_contracts_held_long"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_contracts_held_short)\\b(?!\\s*\\()",
+     "codeblock": "strategy.max_contracts_held_short",
+     "markdown": "Maximum number of contracts/shares/lots/units in one short trade for the whole trading interval.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_contracts_held_short"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_drawdown_percent)\\b(?!\\s*\\()",
+     "codeblock": "strategy.max_drawdown_percent",
+     "markdown": "The maximum equity drawdown value for the whole trading interval, expressed as a percentage and calculated by formula: `Lowest Value During Trade / (Entry Price x Quantity) * 100`.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_drawdown_percent"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_runup_percent)\\b(?!\\s*\\()",
+     "codeblock": "strategy.max_runup_percent",
+     "markdown": "The maximum equity run-up value for the whole trading interval, expressed as a percentage and calculated by formula: `Highest Value During Trade / (Entry Price x Quantity) * 100`.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_runup_percent"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.netprofit_percent)\\b(?!\\s*\\()",
+     "codeblock": "strategy.netprofit_percent",
+     "markdown": "The total value of all completed trades, expressed as a percentage of the initial capital.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.netprofit_percent"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.openprofit_percent)\\b(?!\\s*\\()",
+     "codeblock": "strategy.openprofit_percent",
+     "markdown": "The current unrealized profit or loss for all open positions, expressed as a percentage and calculated by formula: `openPL / realizedEquity * 100`.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.openprofit_percent"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_drawdown)\\b(?!\\s*\\()",
+     "codeblock": "strategy.max_drawdown",
+     "markdown": "Maximum equity drawdown value for the whole trading interval.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_drawdown"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.max_runup)\\b(?!\\s*\\()",
+     "codeblock": "strategy.max_runup",
+     "markdown": "Maximum equity run-up value for the whole trading interval.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.max_runup"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.netprofit)\\b(?!\\s*\\()",
+     "codeblock": "strategy.netprofit",
+     "markdown": "Total currency value of all completed trades.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.netprofit"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.openprofit)\\b(?!\\s*\\()",
+     "codeblock": "strategy.openprofit",
+     "markdown": "Current unrealized profit or loss for all open positions.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.openprofit"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades)\\b(?!(?:(?:\\s*\\()|(?:\\.capital_held\\b)|(?:\\.size\\b)|(?:\\.profit\\b)|(?:\\.entry_id\\b)|(?:\\.max_runup\\b)|(?:\\.commission\\b)|(?:\\.entry_time\\b)|(?:\\.entry_price\\b)|(?:\\.max_drawdown\\b)|(?:\\.entry_comment\\b)|(?:\\.profit_percent\\b)|(?:\\.entry_bar_index\\b)|(?:\\.max_drawdown_percent\\b)|(?:\\.max_runup_percent\\b)|(?:\\.exit_id\\b)))",
+     "codeblock": "strategy.opentrades",
+     "markdown": "Number of market position entries, which were not closed and remain opened. If there is no open market position, 0 is returned.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.opentrades"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.opentrades.capital_held)\\b(?!\\s*\\()",
+     "codeblock": "strategy.opentrades.capital_held",
+     "markdown": "Returns the capital amount currently held by open trades.",
+     "remark": [
+        "This variable returns [na]{0} if the strategy does not simulate funding trades with a portion of the hypothetical account, i.e., if the [strategy]{1} function does not include nonzero `margin_long` or `margin_short` arguments."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy"
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.opentrades.capital_held"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.position_avg_price)\\b(?!\\s*\\()",
+     "codeblock": "strategy.position_avg_price",
+     "markdown": "Average entry price of current market position. If the market position is flat, 'NaN' is returned.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.position_avg_price"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.position_entry_name)\\b(?!\\s*\\()",
+     "codeblock": "strategy.position_entry_name",
+     "markdown": "Name of the order that initially opened current market position.",
+     "type": "series string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.position_entry_name"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.position_size)\\b(?!\\s*\\()",
+     "codeblock": "strategy.position_size",
+     "markdown": "Direction and size of the current market position. If the value is > 0, the market position is long. If the value is < 0, the market position is short. The absolute value is the number of contracts/shares/lots/units in trade (position size).",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.position_size"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(strategy\\.wintrades)\\b(?!\\s*\\()",
+     "codeblock": "strategy.wintrades",
+     "markdown": "Number of profitable trades for the whole trading interval.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_strategy.wintrades"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.basecurrency)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.basecurrency",
+     "markdown": "Returns a string containing the code representing the symbol's base currency (i.e., the traded currency or coin) if the instrument is a Forex or Crypto pair or a derivative based on such a pair. Otherwise, it returns an empty string. For example, this variable returns \"EUR\" for \"EURJPY\", \"BTC\" for \"BTCUSDT\", \"CAD\" for \"CME:6C1!\", and \"\" for \"NASDAQ:AAPL\".",
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.basecurrency"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.country)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.country",
+     "markdown": "Returns the two-letter code of the country where the symbol is traded, in the [ISO 3166-1 alpha-2]{0} format, or [na]{1} if the exchange is not directly tied to a specific country. For example, on \"NASDAQ:AAPL\" it will return \"US\", on \"LSE:AAPL\" it will return \"GB\", and on \"BITSTAMP:BTCUSD it will return [na]{2}.",
+     "descLink": [
+        "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2",
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.country"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.currency)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.currency",
+     "markdown": "Returns a string containing the code representing the currency of the symbol's prices. For example, this variable returns \"USD\" for \"NASDAQ:AAPL\" and \"JPY\" for \"EURJPY\".",
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.currency"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.description)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.description",
+     "markdown": "Description for the current symbol.",
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.description"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.employees)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.employees",
+     "markdown": "The number of employees the company has.",
+     "type": "simple int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.employees"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.expiration_date)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.expiration_date",
+     "markdown": "A UNIX timestamp representing the start of the last day of the current futures contract. This variable is only compatible with non-continuous futures symbols. On other symbols, it returns [na]{0}.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "type": "simple int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.expiration_date"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.industry)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.industry",
+     "markdown": "Returns the industry of the symbol, or [na]{0} if the symbol has no industry. Example: 'Internet Software/Services', 'Packaged software', 'Integrated Oil', 'Motor Vehicles', etc. These are the same values one can see in the chart's 'Symbol info' window.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.industry"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.minmove)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.minmove",
+     "markdown": "Returns a whole number used to calculate the smallest increment between a symbol's price movements ([syminfo.mintick]{0}). It is the numerator in the [syminfo.mintick]{1} formula: `syminfo.minmove / syminfo.pricescale = syminfo.mintick`.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick",
+        "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick"
+     ],
+     "type": "simple int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.minmove"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.mintick)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.mintick",
+     "markdown": "Min tick value for the current symbol.",
+     "type": "simple float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.pointvalue)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.pointvalue",
+     "markdown": "Point value for the current symbol.",
+     "type": "simple float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.pointvalue"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.prefix)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.prefix",
+     "markdown": "Prefix of current symbol name (i.e. for 'CME_EOD:TICKER' prefix is 'CME_EOD').",
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.prefix"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.pricescale)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.pricescale",
+     "markdown": "Returns a whole number used to calculate the smallest increment between a symbol's price movements ([syminfo.mintick]{0}). It is the denominator in the [syminfo.mintick]{1} formula: `syminfo.minmove / syminfo.pricescale = syminfo.mintick`.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick",
+        "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick"
+     ],
+     "type": "simple int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.pricescale"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_buy_strong)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.recommendations_buy_strong",
+     "markdown": "The number of analysts who gave the current symbol a \"Strong Buy\" rating.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_buy_strong"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_buy)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.recommendations_buy",
+     "markdown": "The number of analysts who gave the current symbol a \"Buy\" rating.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_buy"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_date)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.recommendations_date",
+     "markdown": "The starting date of the last set of recommendations for the current symbol.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_date"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_hold)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.recommendations_hold",
+     "markdown": "The number of analysts who gave the current symbol a \"Hold\" rating.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_hold"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_sell_strong)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.recommendations_sell_strong",
+     "markdown": "The number of analysts who gave the current symbol a \"Strong Sell\" rating.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_sell_strong"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_sell)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.recommendations_sell",
+     "markdown": "The number of analysts who gave the current symbol a \"Sell\" rating.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_sell"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.recommendations_total)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.recommendations_total",
+     "markdown": "The total number of recommendations for the current symbol.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.recommendations_total"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.root)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.root",
+     "markdown": "Root for derivatives like futures contract. For other symbols returns the same value as [syminfo.ticker]{0}.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.ticker"
+     ],
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.root"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.sector)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.sector",
+     "markdown": "Returns the sector of the symbol, or [na]{0} if the symbol has no sector. Example: \"Electronic Technology\", \"Technology services\", \"Energy Minerals\", \"Consumer Durables\", etc. These are the same values one can see in the chart's \"Symbol info\" window.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "remark": [
+        "A sector is a broad section of the economy. An industry is a narrower classification. NASDAQ:CAT (Caterpillar, Inc.) for example, belongs to the \"Producer Manufacturing\" sector and the \"Trucks/Construction/Farm Machinery\" industry."
+     ],
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.sector"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.session)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.session",
+     "markdown": "Session type of the chart main series. Possible values are [session.regular]{0}, [session.extended]{1}.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_session.regular",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_session.extended"
+     ],
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.session"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.shareholders)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.shareholders",
+     "markdown": "The number of shareholders the company has.",
+     "type": "simple int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.shareholders"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.shares_outstanding_float)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.shares_outstanding_float",
+     "markdown": "The total number of shares outstanding a company has available, excluding any of its restricted shares.",
+     "type": "simple float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.shares_outstanding_float"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.shares_outstanding_total)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.shares_outstanding_total",
+     "markdown": "The total number of shares outstanding a company has available, including restricted shares held by insiders, major shareholders, and employees.",
+     "type": "simple int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.shares_outstanding_total"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_average)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.target_price_average",
+     "markdown": "The average of the last yearly price targets for the symbol predicted by analysts.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_average"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_date)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.target_price_date",
+     "markdown": "The starting date of the last price target prediction for the current symbol.",
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_date"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_estimates)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.target_price_estimates",
+     "markdown": "The latest total number of price target predictions for the current symbol.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_estimates"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_high)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.target_price_high",
+     "markdown": "The last highest yearly price target for the symbol predicted by analysts.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_high"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_low)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.target_price_low",
+     "markdown": "The last lowest yearly price target for the symbol predicted by analysts.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_low"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.target_price_median)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.target_price_median",
+     "markdown": "The median of the last yearly price targets for the symbol predicted by analysts.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.target_price_median"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.ticker)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.ticker",
+     "markdown": "Symbol name without exchange prefix, e.g. 'MSFT'.",
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.ticker"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.tickerid)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.tickerid",
+     "markdown": "Returns the full form of the ticker ID representing a symbol, for use as an argument in functions with a `ticker` or `symbol` parameter. It always includes the prefix (exchange) and ticker separated by a colon (\"NASDAQ:AAPL\"), but it can also include other symbol data such as dividend adjustment, chart type, currency conversion, etc.",
+     "remark": [
+        "Because the value of this variable does not always use a simple \"prefix:ticker\" format, it is a poor candidate for use in boolean comparisons or string manipulation functions. In those contexts, run the variable's result through [ticker.standard]{0} to purify it. This will remove any extraneous information and return a ticker ID consistently formatted using the \"prefix:ticker\" structure."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.standard"
+     ],
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.tickerid"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.timezone)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.timezone",
+     "markdown": "Timezone of the exchange of the chart main series. Possible values see in [timestamp]{0}.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#fun_timestamp"
+     ],
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.timezone"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.type)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.type",
+     "markdown": "The type of market the symbol belongs to. The values are \"stock\", \"fund\", \"dr\", \"right\", \"bond\", \"warrant\", \"structured\", \"index\", \"forex\", \"futures\", \"spread\", \"economic\", \"fundamental\", \"crypto\", \"spot\", \"swap\", \"option\", \"commodity\".",
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.type"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(syminfo\\.volumetype)\\b(?!\\s*\\()",
+     "codeblock": "syminfo.volumetype",
+     "markdown": "Volume type of the current symbol. Possible values are: \"base\" for base currency, \"quote\" for quote currency, \"tick\" for the number of transactions, and \"n/a\" when there is no volume or its type is not specified. ",
+     "remark": [
+        "Only some data feed suppliers provide information qualifying volume. As a result, the variable will return a value on some symbols only, mostly in the crypto sector."
+     ],
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.volumetype"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ta\\.accdist)\\b(?!\\s*\\()",
+     "codeblock": "ta.accdist",
+     "markdown": "Accumulation/distribution index.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.accdist"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ta\\.iii)\\b(?!\\s*\\()",
+     "codeblock": "ta.iii",
+     "markdown": "Intraday Intensity Index.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.iii"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ta\\.nvi)\\b(?!\\s*\\()",
+     "codeblock": "ta.nvi",
+     "markdown": "Negative Volume Index.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.nvi"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ta\\.obv)\\b(?!\\s*\\()",
+     "codeblock": "ta.obv",
+     "markdown": "On Balance Volume.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.obv"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ta\\.pvi)\\b(?!\\s*\\()",
+     "codeblock": "ta.pvi",
+     "markdown": "Positive Volume Index.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.pvi"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ta\\.pvt)\\b(?!\\s*\\()",
+     "codeblock": "ta.pvt",
+     "markdown": "Price-Volume Trend.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.pvt"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ta\\.tr)\\b(?!\\s*\\()",
+     "codeblock": "ta.tr",
+     "markdown": "True range, equivalent to `ta.tr(handle_na = false)`. It is calculated as `math.max(high - low, math.abs(high - close[1]), math.abs(low – close[1]))`.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.tr"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ta\\.vwap)\\b(?!\\s*\\()",
+     "codeblock": "ta.vwap",
+     "markdown": "Volume Weighted Average Price. It uses [hlc3]{0} as its source series.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_hlc3"
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.vwap"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ta\\.wad)\\b(?!\\s*\\()",
+     "codeblock": "ta.wad",
+     "markdown": "Williams Accumulation/Distribution.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.wad"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(ta\\.wvad)\\b(?!\\s*\\()",
+     "codeblock": "ta.wvad",
+     "markdown": "Williams Variable Accumulation/Distribution.",
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_ta.wvad"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(table\\.all)\\b(?!\\s*\\()",
+     "codeblock": "table.all",
+     "markdown": "Returns an array filled with all the current [table]{0} objects drawn by the script.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#type_table"
+     ],
+     "remark": [
+        "The array is read-only. Index zero of the array is the ID of the oldest object on the chart."
+     ],
+     "type": "table[]",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_table.all"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(time)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "time",
+     "markdown": "Current bar time in UNIX format. It is the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970.",
+     "remark": [
+        "Note that this variable returns the timestamp based on the time of the bar's open. Because of that, for overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this variable can return time before the specified date of the trading day. For example, on EURUSD, `dayofmonth(time)` can be lower by 1 than the date of the trading day, because the bar for the current day actually opens one day prior."
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_time"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(time_close)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "time_close",
+     "markdown": "The time of the current bar's close in UNIX format. It represents the number of milliseconds elapsed since 00:00:00 UTC, 1 January 1970. On non-standard price-based chart types (Renko, Line break, Kagi, Point & Figure, and Range), this variable returns [na]{0} on the chart's realtime bars.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_time_close"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(time_tradingday)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "time_tradingday",
+     "markdown": "The beginning time of the trading day the current bar belongs to, in UNIX format (the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970).",
+     "remark": [
+        "The variable is useful for overnight sessions, where the current day's session can start on the previous calendar day (e.g., on FXCM:EURUSD the Monday session will start on Sunday, 17:00 in the exchange timezone). Unlike [time]{0}, which would return the timestamp for Sunday at 17:00 for the Monday daily bar, `time_tradingday` will return the timestamp for Monday, 00:00 UTC. <p/>When used on timeframes higher than 1D, `time_tradingday` returns the trading day of the last day inside the bar (e.g. on 1W, it will return the last trading day of the week)."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#var_time"
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_time_tradingday"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isdaily)\\b(?!\\s*\\()",
+     "codeblock": "timeframe.isdaily",
+     "markdown": "Returns [true]{0} if current resolution is a daily resolution, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isdaily"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isdwm)\\b(?!\\s*\\()",
+     "codeblock": "timeframe.isdwm",
+     "markdown": "Returns [true]{0} if current resolution is a daily or weekly or monthly resolution, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isdwm"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isintraday)\\b(?!\\s*\\()",
+     "codeblock": "timeframe.isintraday",
+     "markdown": "Returns [true]{0} if current resolution is an intraday (minutes or seconds) resolution, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isintraday"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isminutes)\\b(?!\\s*\\()",
+     "codeblock": "timeframe.isminutes",
+     "markdown": "Returns [true]{0} if current resolution is a minutes resolution, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isminutes"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.ismonthly)\\b(?!\\s*\\()",
+     "codeblock": "timeframe.ismonthly",
+     "markdown": "Returns [true]{0} if current resolution is a monthly resolution, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.ismonthly"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isseconds)\\b(?!\\s*\\()",
+     "codeblock": "timeframe.isseconds",
+     "markdown": "Returns [true]{0} if current resolution is a seconds resolution, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isseconds"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isticks)\\b(?!\\s*\\()",
+     "codeblock": "timeframe.isticks",
+     "markdown": "Returns [true]{0} if current resolution is a ticks resolution, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isticks"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.isweekly)\\b(?!\\s*\\()",
+     "codeblock": "timeframe.isweekly",
+     "markdown": "Returns [true]{0} if current resolution is a weekly resolution, [false]{1} otherwise.",
+     "descLink": [
+        "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+        "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+     ],
+     "type": "simple bool",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.isweekly"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.multiplier)\\b(?!\\s*\\()",
+     "codeblock": "timeframe.multiplier",
+     "markdown": "Multiplier of resolution, e.g. '60' - 60, 'D' - 1, '5D' - 5, '12M' - 12.",
+     "type": "simple int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.multiplier"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timeframe\\.period)\\b(?!\\s*\\()",
+     "codeblock": "timeframe.period",
+     "markdown": "A string representation of the chart's timeframe. The returned string's format is \"[<quantity>][<units>]\", where <quantity> and <units> are in some cases absent. <quantity> is the number of units, but it is absent if that number is 1. <unit> is \"S\" for seconds, \"D\" for days, \"W\" for weeks, \"M\" for months, but it is absent for minutes. No <unit> exists for hours. <p/>The variable will return: \"10S\" for 10 seconds, \"60\" for 60 minutes, \"D\" for one day, \"2W\" for two weeks, \"3M\" for one quarter. <p/>Can be used as an argument with any function containing a `timeframe` parameter.",
+     "type": "simple string",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.period"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(timenow)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "timenow",
+     "markdown": "Current time in UNIX format. It is the number of milliseconds that have elapsed since 00:00:00 UTC, 1 January 1970.",
+     "remark": [
+        "Please note that using this variable/function can cause [indicator repainting]{0}."
+     ],
+     "remarkLink": [
+        "https://www.tradingview.com/pine-script-docs/en/v5/concepts/Repainting.html"
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_timenow"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(volume)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "volume",
+     "markdown": "Current bar volume.",
+     "remark": [
+        "Previous values may be accessed with square brackets operator `[]`, e.g. `volume[1]`, `volume[2]`."
+     ],
+     "type": "series float",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_volume"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(weekofyear)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "weekofyear",
+     "markdown": "Week number of current bar time in exchange timezone.",
+     "remark": [
+        "Note that this variable returns the week based on the time of the bar's open. For overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this value can be lower by 1 than the week of the trading day."
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_weekofyear"
+  },
+   {
+     "pattern": "(?<![\\.]\\s*)\\b(year)\\b(?=(?!\\s*(?:[\\(\\=]|(?:\\:\\=)))|(?:\\s*\\=\\=))",
+     "codeblock": "year",
+     "markdown": "Current bar year in exchange timezone.",
+     "remark": [
+        "Note that this variable returns the year based on the time of the bar's open. For overnight sessions (e.g. EURUSD, where Monday session starts on Sunday, 17:00) this value can be lower by 1 than the year of the trading day."
+     ],
+     "type": "series int",
+     "manual": "https://www.tradingview.com/pine-script-reference/v5/#var_year"
+  }
+  ]

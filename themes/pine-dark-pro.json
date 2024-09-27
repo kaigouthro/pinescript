@@ -16,8 +16,8 @@
 		"breadcrumb.activeSelectionForeground": "#ffffff",
 		"breadcrumb.background": "#131623",
 		"breadcrumb.focusForeground": "#ffffff",
-		"breadcrumb.foreground": "#d1d4d280",
-		"breadcrumbPicker.background": "#383b423f",
+		"breadcrumb.foreground": "#d1d4d2",
+		"breadcrumbPicker.background": "#191d2e",
 	
 		"button.background": "#2862fe",
 		"button.foreground": "#D1D4DC",
@@ -114,7 +114,7 @@
 		"editorOverviewRuler.currentContentForeground": "#00574d",
 		"editorOverviewRuler.findMatchForeground": "#d1d4d279",
 		"editorOverviewRuler.incomingContentForeground": "#00574d",
-		"editorOverviewRuler.wordHighlightTextForeground": "#32C5FF53",
+		"editorOverviewRuler.wordHighlightTextForeground": "#FFFF3253",
 	
 		"editorRuler.foreground": "#d1d4d226",
 	
