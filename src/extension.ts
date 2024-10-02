@@ -1,15 +1,19 @@
 import * as vscode from 'vscode';
 import * as hover_func from './hover_built-in_functions.json';
+import * as hover_func_links from './hover_func_links.json';
 import * as hover_var from './hover_built-in_variables.json';
 import * as hover_const from './hover_built-in_constants.json';
 import * as hover_type from './hover_built-in_types.json';
 
 type Params = {
 	field: string;
-	description: string;
+	desc: string;
+	linkCount: number;
 };
 
 type FuncPopupBlock = {
+	id: number;
+	uuid: number;
 	pattern: string;
 	codeblock: string[];
 	markdown: string;
@@ -29,6 +33,11 @@ type ConstPopupBlock = {
 	manual: string;
 };
 
+type Fields = {
+	field: string;
+	description: string;
+};
+
 type TypePopupBlock = {
 	pattern: string;
 	codeblock: string;
@@ -37,10 +46,23 @@ type TypePopupBlock = {
 	remark: string[];
 	remarkLink: string[];
 	manual: string;
-	fields: Params[];
+	fields: Fields[];
+};
+
+type LinkFields = {
+	fno: number;
+	linkCount: number;
+	dlink: string[];
+};
+
+type FuncLinksBlock = {
+	id: number;
+	uuid: number;
+	fields: LinkFields[];
 };
 
 const BUILT_IN_FUNC = hover_func as FuncPopupBlock[];
+const FUNC_LINKS = hover_func_links as FuncLinksBlock[];
 const BUILT_IN_VAR = hover_var as ConstPopupBlock[];
 const BUILT_IN_CONST = hover_const as ConstPopupBlock[];
 const BUILT_IN_TYPE = hover_type as TypePopupBlock[];
@@ -126,7 +148,38 @@ export function activate(context: vscode.ExtensionContext) {
 						if (BUILT_IN_FUNC[index].param.length > 0){
 							popup.appendMarkdown("<h4>ARGUMENTS</h4>");
 							for (let i = 0; i < BUILT_IN_FUNC[index].param.length; i++) {
-								popup.appendMarkdown("<ul><li>__"+BUILT_IN_FUNC[index].param[i].field+"__ — "+BUILT_IN_FUNC[index].param[i].description+"</li></ul>");
+								let descStr = BUILT_IN_FUNC[index].param[i].desc;
+								// func links
+								if (BUILT_IN_FUNC[index].param[i].linkCount > 0){
+									// check uuid
+									if (FUNC_LINKS[index].uuid === BUILT_IN_FUNC[index].uuid){
+										// check fields
+										for (let j = 0; j < FUNC_LINKS[index].fields.length; j++){
+											if (typeof FUNC_LINKS[index].fields[j].fno === 'undefined'){
+												//console.log("fields not found at uuid "+FUNC_LINKS[index].uuid+"!");
+												break;
+											}
+											// check fno
+											if (FUNC_LINKS[index].fields[j].fno !== i){
+												continue;
+											}
+											// check linkCount
+											if (BUILT_IN_FUNC[index].param[i].linkCount === FUNC_LINKS[index].fields[j].linkCount){
+												// check dlink
+												if (BUILT_IN_FUNC[index].param[i].linkCount === FUNC_LINKS[index].fields[j].dlink.length){
+													descStr = applyLinks(descStr, FUNC_LINKS[index].fields[j].dlink);
+												}else{
+													console.log("dlink size not match at uuid "+FUNC_LINKS[index].uuid+"! linkCount:"+BUILT_IN_FUNC[index].param[FUNC_LINKS[index].fields[j].fno].linkCount+" dlink size:"+FUNC_LINKS[index].fields[j].dlink.length);
+												}
+											}else{
+												console.log("linkCount error at uuid "+FUNC_LINKS[index].uuid+"! BUILT_IN_FUNC linkCount:"+BUILT_IN_FUNC[index].param[FUNC_LINKS[index].fields[j].fno].linkCount+" FUNC_LINKS linkCount:"+FUNC_LINKS[index].fields[j].linkCount);
+											}
+										}
+									}else{
+										console.log("uuid error not match! FUNC_LINKS:"+FUNC_LINKS[index].uuid+" BUILT_IN_FUNC:"+BUILT_IN_FUNC[index].uuid);
+									}
+								}
+								popup.appendMarkdown("<ul><li>__"+BUILT_IN_FUNC[index].param[i].field+"__ — "+descStr+"</li></ul>");
 							}
 						}
 						if (BUILT_IN_FUNC[index].returns !== ''){

@@ -491,18 +491,19 @@
          " text_halign      = ${32| ,text.align_center,text.align_left,text.align_right|}}${33:,",
          " text_valign      = ${34| ,text.align_center,text.align_top,text.align_bottom|}}${35:,",
          " text_wrap        = ${36| ,text.wrap_none,text.wrap_auto|}}${37:,",
-         " text_font_family = ${38| ,font.family_default,font.family_monospace|}}}",
+         " text_font_family = ${38| ,font.family_default,font.family_monospace|}}${39:,",
+         " force_overlay    = ${40| ,false,true|}}}",
          " )",
          "${0}"
       ],
-      "description": "Creates new box object | Block ⇨ 𝑓 | box.new(left = int, top = int|float, right = int, bottom = int|float, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → box"
+      "description": "Creates new box object | Block ⇨ 𝑓 | box.new(left = int, top = int|float, right = int, bottom = int|float, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string, force_overlay = bool) → series box"
    },
    "box.new ⇨ 𝑓": {
       "prefix": "box.new",
       "body": [
-         "box.new(${1:left = ${2| ,bar_index,last_bar_index,time,last_bar_time|}, top = ${3| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, right = ${4| ,bar_index,last_bar_index,time,last_bar_time|}, bottom = ${5| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}${6:${7:, border_color = ${8:color.new(color = ${9| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${10:0})}}${11:, border_width = ${12| ,1,2,3,4,5|}}${13:, border_style = ${14| ,line.style_solid,line.style_dotted,line.style_dashed|}}${15:, extend = ${16| ,extend.none,extend.right,extend.left,extend.both|}}${17:, xloc = ${18| ,xloc.bar_index,xloc.bar_time|}}${19:, bgcolor = ${20:color.new(color = ${21| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${22:0})}}${23:, text = ${24:\"${25}\"}}${26:, text_size = ${27| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${28:, text_color = ${29:color.new(color = ${30| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${31:0})}}${32:, text_halign = ${33| ,text.align_center,text.align_left,text.align_right|}}${34:, text_valign = ${35| ,text.align_center,text.align_top,text.align_bottom|}}${36:, text_wrap = ${37| ,text.wrap_none,text.wrap_auto|}}${38:, text_font_family = ${39| ,font.family_default,font.family_monospace|}}}})${0}"
+         "box.new(${1:left = ${2| ,bar_index,last_bar_index,time,last_bar_time|}, top = ${3| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, right = ${4| ,bar_index,last_bar_index,time,last_bar_time|}, bottom = ${5| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}${6:${7:, border_color = ${8:color.new(color = ${9| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${10:0})}}${11:, border_width = ${12| ,1,2,3,4,5|}}${13:, border_style = ${14| ,line.style_solid,line.style_dotted,line.style_dashed|}}${15:, extend = ${16| ,extend.none,extend.right,extend.left,extend.both|}}${17:, xloc = ${18| ,xloc.bar_index,xloc.bar_time|}}${19:, bgcolor = ${20:color.new(color = ${21| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${22:0})}}${23:, text = ${24:\"${25}\"}}${26:, text_size = ${27| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${28:, text_color = ${29:color.new(color = ${30| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${31:0})}}${32:, text_halign = ${33| ,text.align_center,text.align_left,text.align_right|}}${34:, text_valign = ${35| ,text.align_center,text.align_top,text.align_bottom|}}${36:, text_wrap = ${37| ,text.wrap_none,text.wrap_auto|}}${38:, text_font_family = ${39| ,font.family_default,font.family_monospace|}}${40:, force_overlay = ${41| ,false,true|}}}})${0}"
       ],
-      "description": "Creates new box object ⇨ 𝑓 | box.new(left = int, top = int|float, right = int, bottom = int|float, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → box"
+      "description": "Creates new box object ⇨ 𝑓 | box.new(left = int, top = int|float, right = int, bottom = int|float, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string, force_overlay = bool) → series box"
    },
    "{b} box.new.point ⇨ 𝑓": {
       "prefix": "box.new.point",
@@ -522,18 +523,19 @@
          " text_halign      = ${30| ,text.align_center,text.align_left,text.align_right|}}${31:,",
          " text_valign      = ${32| ,text.align_center,text.align_top,text.align_bottom|}}${33:,",
          " text_wrap        = ${34| ,text.wrap_none,text.wrap_auto|}}${35:,",
-         " text_font_family = ${36| ,font.family_default,font.family_monospace|}}}",
+         " text_font_family = ${36| ,font.family_default,font.family_monospace|}}${37:,",
+         " force_overlay    = ${38| ,false,true|}}}",
          " )",
          "${0}"
       ],
-      "description": "Creates new box object by chart.point | Block ⇨ 𝑓 | box.new(top_left = chart.point, bottom_right = chart.point, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → box"
+      "description": "Creates new box object by chart.point | Block ⇨ 𝑓 | box.new(top_left = chart.point, bottom_right = chart.point, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string, force_overlay = bool) → series box"
    },
    "box.new.point ⇨ 𝑓": {
       "prefix": "box.new.point",
       "body": [
-         "box.new(${1:top_left = ${2:<chart.point>}, bottom_right = ${3:<chart.point>}${4:${5:, border_color = ${6:color.new(color = ${7| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${8:0})}}${9:, border_width = ${10| ,1,2,3,4,5|}}${11:, border_style = ${12| ,line.style_solid,line.style_dotted,line.style_dashed|}}${13:, extend = ${14| ,extend.none,extend.right,extend.left,extend.both|}}${15:, xloc = ${16| ,xloc.bar_index,xloc.bar_time|}}${17:, bgcolor = ${18:color.new(color = ${19| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${20:0})}}${21:, text = ${22:\"${23}\"}}${24:, text_size = ${25| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${26:, text_color = ${27:color.new(color = ${28| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${29:0})}}${30:, text_halign = ${31| ,text.align_center,text.align_left,text.align_right|}}${32:, text_valign = ${33| ,text.align_center,text.align_top,text.align_bottom|}}${34:, text_wrap = ${35| ,text.wrap_none,text.wrap_auto|}}${36:, text_font_family = ${37| ,font.family_default,font.family_monospace|}}}})${0}"
+         "box.new(${1:top_left = ${2:<chart.point>}, bottom_right = ${3:<chart.point>}${4:${5:, border_color = ${6:color.new(color = ${7| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${8:0})}}${9:, border_width = ${10| ,1,2,3,4,5|}}${11:, border_style = ${12| ,line.style_solid,line.style_dotted,line.style_dashed|}}${13:, extend = ${14| ,extend.none,extend.right,extend.left,extend.both|}}${15:, xloc = ${16| ,xloc.bar_index,xloc.bar_time|}}${17:, bgcolor = ${18:color.new(color = ${19| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${20:0})}}${21:, text = ${22:\"${23}\"}}${24:, text_size = ${25| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${26:, text_color = ${27:color.new(color = ${28| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${29:0})}}${30:, text_halign = ${31| ,text.align_center,text.align_left,text.align_right|}}${32:, text_valign = ${33| ,text.align_center,text.align_top,text.align_bottom|}}${34:, text_wrap = ${35| ,text.wrap_none,text.wrap_auto|}}${36:, text_font_family = ${37| ,font.family_default,font.family_monospace|}}${38:, force_overlay = ${39| ,false,true|}}}})${0}"
       ],
-      "description": "Creates new box object by chart.point ⇨ 𝑓 | box.new(top_left = chart.point, bottom_right = chart.point, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string) → box"
+      "description": "Creates new box object by chart.point ⇨ 𝑓 | box.new(top_left = chart.point, bottom_right = chart.point, border_color = color, border_width = int, border_style = string, extend = string, xloc = string, bgcolor = color, text = string, text_size = string, text_color = color, text_halign = string, text_valign = string, text_wrap = string, text_font_family = string, force_overlay = bool) → series box"
    },
    "box.set_bgcolor ⇨ 𝑓": {
       "prefix": "box.set_bgcolor",
@@ -1013,9 +1015,9 @@
    "label.new ⇨ 𝑓": {
       "prefix": "label.new",
       "body": [
-         "label.new(${1:x = ${2| ,bar_index,last_bar_index,time,last_bar_time|}, y = ${3| ,na,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, text = ${4:\"${5}\"}${6:${7:, xloc = ${8| ,xloc.bar_index,xloc.bar_time|}}${9:, yloc = ${10| ,yloc.price,yloc.abovebar,yloc.belowbar|}}${11:, color = ${12:color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}}${15:, style = ${16| ,label.style_none,label.style_xcross,label.style_cross,label.style_triangleup,label.style_triangledown,label.style_flag,label.style_circle,label.style_arrowup,label.style_arrowdown,label.style_label_up,label.style_label_down,label.style_label_left,label.style_label_right,label.style_label_lower_left,label.style_label_lower_right,label.style_label_upper_left,label.style_label_upper_right,label.style_label_center,label.style_square,label.style_diamond,label.style_text_outline|}}${17:, textcolor = ${18:color.new(color = ${19| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${20:0})}}${21:, size = ${22| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${23:, textalign = ${24| ,text.align_center,text.align_left,text.align_right|}}${25:, tooltip = ${26:\"${27}\"}}${28:, text_font_family = ${29| ,font.family_default,font.family_monospace|}}}})${0}"
+         "label.new(${1:x = ${2| ,bar_index,last_bar_index,time,last_bar_time|}, y = ${3| ,na,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, text = ${4:\"${5}\"}${6:${7:, xloc = ${8| ,xloc.bar_index,xloc.bar_time|}}${9:, yloc = ${10| ,yloc.price,yloc.abovebar,yloc.belowbar|}}${11:, color = ${12:color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}}${15:, style = ${16| ,label.style_none,label.style_xcross,label.style_cross,label.style_triangleup,label.style_triangledown,label.style_flag,label.style_circle,label.style_arrowup,label.style_arrowdown,label.style_label_up,label.style_label_down,label.style_label_left,label.style_label_right,label.style_label_lower_left,label.style_label_lower_right,label.style_label_upper_left,label.style_label_upper_right,label.style_label_center,label.style_square,label.style_diamond,label.style_text_outline|}}${17:, textcolor = ${18:color.new(color = ${19| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${20:0})}}${21:, size = ${22| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${23:, textalign = ${24| ,text.align_center,text.align_left,text.align_right|}}${25:, tooltip = ${26:\"${27}\"}}${28:, text_font_family = ${29| ,font.family_default,font.family_monospace|}}${30:, force_overlay = ${31| ,false,true|}}}})${0}"
       ],
-      "description": "Creates new label object ⇨ 𝑓 | label.new(x = int, y = int|float, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string) → label"
+      "description": "Creates new label object ⇨ 𝑓 | label.new(x = int, y = int|float, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string, force_overlay = bool) → series label"
    },
    "{b} label.new ⇨ 𝑓": {
       "prefix": "label.new",
@@ -1032,18 +1034,19 @@
          " size             = ${21| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${22:,",
          " textalign        = ${23| ,text.align_center,text.align_left,text.align_right|}}${24:,",
          " tooltip          = ${25:\"${26}\"}}${27:,",
-         " text_font_family = ${28| ,font.family_default,font.family_monospace|}}}",
+         " text_font_family = ${28| ,font.family_default,font.family_monospace|}}${29:,",
+         " force_overlay    = ${30| ,false,true|}}}",
          " )",
          "${0}"
       ],
-      "description": "Creates new label object | Block ⇨ 𝑓 | label.new(x = int, y = int|float, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string) → label"
+      "description": "Creates new label object | Block ⇨ 𝑓 | label.new(x = int, y = int|float, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string, force_overlay = bool) → series label"
    },
    "label.new.point ⇨ 𝑓": {
       "prefix": "label.new.point",
       "body": [
-         "label.new(${1:point = ${2:<chart.point>}, text = ${3:\"${4}\"}${5:${6:, xloc = ${7| ,xloc.bar_index,xloc.bar_time|}}${8:, yloc = ${9| ,yloc.price,yloc.abovebar,yloc.belowbar|}}${10:, color = ${11:color.new(color = ${12| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${13:0})}}${14:, style = ${15| ,label.style_none,label.style_xcross,label.style_cross,label.style_triangleup,label.style_triangledown,label.style_flag,label.style_circle,label.style_arrowup,label.style_arrowdown,label.style_label_up,label.style_label_down,label.style_label_left,label.style_label_right,label.style_label_lower_left,label.style_label_lower_right,label.style_label_upper_left,label.style_label_upper_right,label.style_label_center,label.style_square,label.style_diamond,label.style_text_outline|}}${16:, textcolor = ${17:color.new(color = ${18| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${19:0})}}${20:, size = ${21| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${22:, textalign = ${23| ,text.align_center,text.align_left,text.align_right|}}${24:, tooltip = ${25:\"${26}\"}}${27:, text_font_family = ${28| ,font.family_default,font.family_monospace|}}}})${0}"
+         "label.new(${1:point = ${2:<chart.point>}, text = ${3:\"${4}\"}${5:${6:, xloc = ${7| ,xloc.bar_index,xloc.bar_time|}}${8:, yloc = ${9| ,yloc.price,yloc.abovebar,yloc.belowbar|}}${10:, color = ${11:color.new(color = ${12| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${13:0})}}${14:, style = ${15| ,label.style_none,label.style_xcross,label.style_cross,label.style_triangleup,label.style_triangledown,label.style_flag,label.style_circle,label.style_arrowup,label.style_arrowdown,label.style_label_up,label.style_label_down,label.style_label_left,label.style_label_right,label.style_label_lower_left,label.style_label_lower_right,label.style_label_upper_left,label.style_label_upper_right,label.style_label_center,label.style_square,label.style_diamond,label.style_text_outline|}}${16:, textcolor = ${17:color.new(color = ${18| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${19:0})}}${20:, size = ${21| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${22:, textalign = ${23| ,text.align_center,text.align_left,text.align_right|}}${24:, tooltip = ${25:\"${26}\"}}${27:, text_font_family = ${28| ,font.family_default,font.family_monospace|}}${29:, force_overlay = ${30| ,false,true|}}}})${0}"
       ],
-      "description": "Creates new label object by chart.point ⇨ 𝑓 | label.new(point = chart.point, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string) → series label"
+      "description": "Creates new label object by chart.point ⇨ 𝑓 | label.new(point = chart.point, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string, force_overlay = bool) → series label"
    },
    "{b} label.new.point ⇨ 𝑓": {
       "prefix": "label.new.point",
@@ -1059,11 +1062,12 @@
          " size             = ${20| ,size.auto,size.tiny,size.small,size.normal,size.large,size.huge|}}${21:,",
          " textalign        = ${22| ,text.align_center,text.align_left,text.align_right|}}${23:,",
          " tooltip          = ${24:\"${25}\"}}${26:,",
-         " text_font_family = ${27| ,font.family_default,font.family_monospace|}}}",
+         " text_font_family = ${27| ,font.family_default,font.family_monospace|}}${28:,",
+         " force_overlay    = ${29| ,false,true|}}}",
          " )",
          "${0}"
       ],
-      "description": "Creates new label object by chart.point | Block ⇨ 𝑓 | label.new(point = chart.point, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string) → series label"
+      "description": "Creates new label object by chart.point | Block ⇨ 𝑓 | label.new(point = chart.point, text = string, xloc = string, yloc = string, color = color, style = string, textcolor = color, size = string , textalign = string, tooltip = string, text_font_family = string, force_overlay = bool) → series label"
    },
    "label.set_color ⇨ 𝑓": {
       "prefix": "label.set_color",
@@ -1229,50 +1233,52 @@
    "line.new ⇨ 𝑓": {
       "prefix": "line.new",
       "body": [
-         "line.new(${1:x1 = ${2| ,bar_index,last_bar_index,time,last_bar_time|}, y1 = ${3| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, x2 = ${4| ,bar_index,last_bar_index,time,last_bar_time|}, y2 = ${5| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}${6:${7:, xloc = ${8| ,xloc.bar_index,xloc.bar_time|}}${9:, extend = ${10| ,extend.none,extend.right,extend.left,extend.both|}}${11:, color = ${12:color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}}${15:, style = ${16| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${17:, width = ${18| ,1,2,3,4,5|}}}})${0}"
+         "line.new(${1:x1 = ${2| ,bar_index,last_bar_index,time,last_bar_time|}, y1 = ${3| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}, x2 = ${4| ,bar_index,last_bar_index,time,last_bar_time|}, y2 = ${5| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}${6:${7:, xloc = ${8| ,xloc.bar_index,xloc.bar_time|}}${9:, extend = ${10| ,extend.none,extend.right,extend.left,extend.both|}}${11:, color = ${12:color.new(color = ${13| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${14:0})}}${15:, style = ${16| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${17:, width = ${18| ,1,2,3,4,5|}}${19:, force_overlay = ${20| ,false,true|}}}})${0}"
       ],
-      "description": "Creates new line object ⇨ 𝑓 | line.new(x1 = int, y1 = int|float, x2 = int, y2 = int|float, xloc = string, extend = string, color = color, style = string, width = int) → series line"
+      "description": "Creates new line object ⇨ 𝑓 | line.new(x1 = int, y1 = int|float, x2 = int, y2 = int|float, xloc = string, extend = string, color = color, style = string, width = int, force_overlay = bool) → series line"
    },
    "{b} line.new ⇨ 𝑓": {
       "prefix": "line.new",
       "body": [
          "line.new(",
-         " x1     = ${1| ,bar_index,last_bar_index,time,last_bar_time|},",
-         " y1     = ${2| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|},",
-         " x2     = ${3| ,bar_index,last_bar_index,time,last_bar_time|},",
-         " y2     = ${4| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}${5:${6:,",
-         " xloc   = ${7| ,xloc.bar_index,xloc.bar_time|}}${8:,",
-         " extend = ${9| ,extend.none,extend.right,extend.left,extend.both|}}${10:,",
-         " color  = ${11:color.new(color = ${12| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${13:0})}}${14:,",
-         " style  = ${15| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${16:,",
-         " width  = ${17| ,1,2,3,4,5|}}}",
+         " x1            = ${1| ,bar_index,last_bar_index,time,last_bar_time|},",
+         " y1            = ${2| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|},",
+         " x2            = ${3| ,bar_index,last_bar_index,time,last_bar_time|},",
+         " y2            = ${4| ,open,high,low,close,hl2,hlc3,hlcc4,ohlc4|}${5:${6:,",
+         " xloc          = ${7| ,xloc.bar_index,xloc.bar_time|}}${8:,",
+         " extend        = ${9| ,extend.none,extend.right,extend.left,extend.both|}}${10:,",
+         " color         = ${11:color.new(color = ${12| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${13:0})}}${14:,",
+         " style         = ${15| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${16:,",
+         " width         = ${17| ,1,2,3,4,5|}}${18:,",
+         " force_overlay = ${19| ,false,true|}}}",
          " )",
          "${0}"
       ],
-      "description": "Creates new line object | Block ⇨ 𝑓 | line.new(x1 = int, y1 = int|float, x2 = int, y2 = int|float, xloc = string, extend = string, color = color, style = string, width = int) → series line"
+      "description": "Creates new line object | Block ⇨ 𝑓 | line.new(x1 = int, y1 = int|float, x2 = int, y2 = int|float, xloc = string, extend = string, color = color, style = string, width = int, force_overlay = bool) → series line"
    },
    "line.new.point ⇨ 𝑓": {
       "prefix": "line.new.point",
       "body": [
-         "line.new(${1:first_point = ${2:<chart.point>}, second_point = ${3:<chart.point>}${4:${5:, xloc = ${6| ,xloc.bar_index,xloc.bar_time|}}${7:, extend = ${8| ,extend.none,extend.right,extend.left,extend.both|}}${9:, color = ${10:color.new(color = ${11| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${12:0})}}${13:, style = ${14| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${15:, width = ${16| ,1,2,3,4,5|}}}})${0}"
+         "line.new(${1:first_point = ${2:<chart.point>}, second_point = ${3:<chart.point>}${4:${5:, xloc = ${6| ,xloc.bar_index,xloc.bar_time|}}${7:, extend = ${8| ,extend.none,extend.right,extend.left,extend.both|}}${9:, color = ${10:color.new(color = ${11| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${12:0})}}${13:, style = ${14| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${15:, width = ${16| ,1,2,3,4,5|}}${17:, force_overlay = ${18| ,false,true|}}}})${0}"
       ],
-      "description": "Creates new line object from chart.point ⇨ 𝑓 | line.new(first_point = chart.point, second_point = chart.point, xloc = string, extend = string, color = color, style = string, width = int) → series line"
+      "description": "Creates new line object from chart.point ⇨ 𝑓 | line.new(first_point = chart.point, second_point = chart.point, xloc = string, extend = string, color = color, style = string, width = int, force_overlay = bool) → series line"
    },
    "{b} line.new.point ⇨ 𝑓": {
       "prefix": "line.new.point",
       "body": [
          "line.new(",
-         " first_point  = ${1:<chart.point>},",
-         " second_point = ${2:<chart.point>}${3:${4:,",
-         " xloc         = ${5| ,xloc.bar_index,xloc.bar_time|}}${6:,",
-         " extend       = ${7| ,extend.none,extend.right,extend.left,extend.both|}}${8:,",
-         " color        = ${9:color.new(color = ${10| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${11:0})}}${12:,",
-         " style        = ${13| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${14:,",
-         " width        = ${15| ,1,2,3,4,5|}}}",
+         " first_point   = ${1:<chart.point>},",
+         " second_point  = ${2:<chart.point>}${3:${4:,",
+         " xloc          = ${5| ,xloc.bar_index,xloc.bar_time|}}${6:,",
+         " extend        = ${7| ,extend.none,extend.right,extend.left,extend.both|}}${8:,",
+         " color         = ${9:color.new(color = ${10| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${11:0})}}${12:,",
+         " style         = ${13| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${14:,",
+         " width         = ${15| ,1,2,3,4,5|}}${16:,",
+         " force_overlay = ${17| ,false,true|}}}",
          " )",
          "${0}"
       ],
-      "description": "Creates new line object from chart.point | Block ⇨ 𝑓 | line.new(first_point = chart.point, second_point = chart.point, xloc = string, extend = string, color = color, style = string, width = int) → series line"
+      "description": "Creates new line object from chart.point | Block ⇨ 𝑓 | line.new(first_point = chart.point, second_point = chart.point, xloc = string, extend = string, color = color, style = string, width = int, force_overlay = bool) → series line"
    },
    "line.set_color ⇨ 𝑓": {
       "prefix": "line.set_color",
@@ -2247,26 +2253,27 @@
    "polyline.new ⇨ 𝑓": {
       "prefix": "polyline.new",
       "body": [
-         "polyline.new(${1:points = ${2:array<chart.point>}${3:${4:, curved = ${5| ,false,true|}}${6:, closed = ${7| ,false,true|}}${8:, xloc = ${9| ,xloc.bar_index,xloc.bar_time|}}${10:, line_color = ${11:color.new(color = ${12| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${13:0})}}${14:, fill_color = ${15:color.new(color = ${16| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${17:0})}}${18:, line_style = ${19| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${20:, line_width = ${21| ,1,2,3,4,5|}}}})${0}"
+         "polyline.new(${1:points = ${2:array<chart.point>}${3:${4:, curved = ${5| ,false,true|}}${6:, closed = ${7| ,false,true|}}${8:, xloc = ${9| ,xloc.bar_index,xloc.bar_time|}}${10:, line_color = ${11:color.new(color = ${12| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${13:0})}}${14:, fill_color = ${15:color.new(color = ${16| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${17:0})}}${18:, line_style = ${19| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${20:, line_width = ${21| ,1,2,3,4,5|}}${22:, force_overlay = ${23| ,false,true|}}}})${0}"
       ],
-      "description": "Creates a new polyline instance ⇨ 𝑓 | polyline.new(points = chart.point[], curved = bool, closed = bool, xloc = string, line_color = color, fill_color = color, line_style = string, line_width = int) → series polyline"
+      "description": "Creates a new polyline instance ⇨ 𝑓 | polyline.new(points = chart.point[], curved = bool, closed = bool, xloc = string, line_color = color, fill_color = color, line_style = string, line_width = int, force_overlay = bool) → series polyline"
    },
    "{b} polyline.new ⇨ 𝑓": {
       "prefix": "polyline.new",
       "body": [
          "polyline.new(",
-         " points     = ${1:array<chart.point>}${2:${3:,",
-         " curved     = ${4| ,false,true|}}${5:,",
-         " closed     = ${6| ,false,true|}}${7:,",
-         " xloc       = ${8| ,xloc.bar_index,xloc.bar_time|}}${9:,",
-         " line_color = ${10:color.new(color = ${11| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${12:0})}}${13:,",
-         " fill_color = ${14:color.new(color = ${15| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${16:0})}}${17:,",
-         " line_style = ${18| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${19:,",
-         " line_width = ${20| ,1,2,3,4,5|}}}",
+         " points        = ${1:array<chart.point>}${2:${3:,",
+         " curved        = ${4| ,false,true|}}${5:,",
+         " closed        = ${6| ,false,true|}}${7:,",
+         " xloc          = ${8| ,xloc.bar_index,xloc.bar_time|}}${9:,",
+         " line_color    = ${10:color.new(color = ${11| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${12:0})}}${13:,",
+         " fill_color    = ${14:color.new(color = ${15| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${16:0})}}${17:,",
+         " line_style    = ${18| ,line.style_solid,line.style_dotted,line.style_dashed,line.style_arrow_left,line.style_arrow_right,line.style_arrow_both|}}${19:,",
+         " line_width    = ${20| ,1,2,3,4,5|}}${21:,",
+         " force_overlay = ${22| ,false,true|}}}",
          " )",
          "${0}"
       ],
-      "description": "Creates a new polyline instance | Block ⇨ 𝑓 | polyline.new(points = chart.point[], curved = bool, closed = bool, xloc = string, line_color = color, fill_color = color, line_style = string, line_width = int) → series polyline"
+      "description": "Creates a new polyline instance | Block ⇨ 𝑓 | polyline.new(points = chart.point[], curved = bool, closed = bool, xloc = string, line_color = color, fill_color = color, line_style = string, line_width = int, force_overlay = bool) → series polyline"
    },
    "request.currency_rate ⇨ 𝑓": {
       "prefix": "request.currency_rate",
@@ -3435,25 +3442,26 @@
       "prefix": "table.new",
       "body": [
          "table.new(",
-         " position     = ${1| ,position.top_left,position.top_center,position.top_right,position.middle_left,position.middle_center,position.middle_right,position.bottom_left,position.bottom_center,position.bottom_right|},",
-         " columns      = ${2| ,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20|},",
-         " rows         = ${3| ,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20|}${4:${5:,",
-         " bgcolor      = ${6:color.new(color = ${7| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${8:0})}}${9:,",
-         " frame_color  = ${10:color.new(color = ${11| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${12:0})}}${13:,",
-         " frame_width  = ${14| ,0,1,2,3,4,5|}}${15:,",
-         " border_color = ${16:color.new(color = ${17| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${18:0})}}${19:,",
-         " border_width = ${20| ,0,1,2,3,4,5|}}}",
+         " position      = ${1| ,position.top_left,position.top_center,position.top_right,position.middle_left,position.middle_center,position.middle_right,position.bottom_left,position.bottom_center,position.bottom_right|},",
+         " columns       = ${2| ,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20|},",
+         " rows          = ${3| ,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20|}${4:${5:,",
+         " bgcolor       = ${6:color.new(color = ${7| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${8:0})}}${9:,",
+         " frame_color   = ${10:color.new(color = ${11| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${12:0})}}${13:,",
+         " frame_width   = ${14| ,0,1,2,3,4,5|}}${15:,",
+         " border_color  = ${16:color.new(color = ${17| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${18:0})}}${19:,",
+         " border_width  = ${20| ,0,1,2,3,4,5|}}${21:,",
+         " force_overlay = ${22| ,false,true|}}}",
          " )",
          "${0}"
       ],
-      "description": "Creates a new table object | Block ⇨ 𝑓 | table.new(position = int, columns = int, rows = int, bgcolor = color, frame_color = color, frame_width = int, border_color = color, border_width = int) → series table"
+      "description": "Creates a new table object | Block ⇨ 𝑓 | table.new(position = int, columns = int, rows = int, bgcolor = color, frame_color = color, frame_width = int, border_color = color, border_width = int, force_overlay = bool) → series table"
    },
    "table.new ⇨ 𝑓": {
       "prefix": "table.new",
       "body": [
-         "table.new(${1:position = ${2| ,position.top_left,position.top_center,position.top_right,position.middle_left,position.middle_center,position.middle_right,position.bottom_left,position.bottom_center,position.bottom_right|}, columns = ${3| ,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20|}, rows = ${4| ,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20|}${5:${6:, bgcolor = ${7:color.new(color = ${8| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${9:0})}}${10:, frame_color = ${11:color.new(color = ${12| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${13:0})}}${14:, frame_width = ${15| ,0,1,2,3,4,5|}}${16:, border_color = ${17:color.new(color = ${18| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${19:0})}}${20:, border_width = ${21| ,0,1,2,3,4,5|}}}})${0}"
+         "table.new(${1:position = ${2| ,position.top_left,position.top_center,position.top_right,position.middle_left,position.middle_center,position.middle_right,position.bottom_left,position.bottom_center,position.bottom_right|}, columns = ${3| ,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20|}, rows = ${4| ,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20|}${5:${6:, bgcolor = ${7:color.new(color = ${8| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${9:0})}}${10:, frame_color = ${11:color.new(color = ${12| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${13:0})}}${14:, frame_width = ${15| ,0,1,2,3,4,5|}}${16:, border_color = ${17:color.new(color = ${18| ,color.aqua,color.black,color.blue,color.fuchsia,color.gray,color.green,color.lime,color.maroon,color.navy,color.olive,color.orange,color.purple,color.red,color.silver,color.teal,color.white,color.yellow|}, transp = ${19:0})}}${20:, border_width = ${21| ,0,1,2,3,4,5|}}${22:, force_overlay = ${23| ,false,true|}}}})${0}"
       ],
-      "description": "Creates a new table object ⇨ 𝑓 | table.new(position = int, columns = int, rows = int, bgcolor = color, frame_color = color, frame_width = int, border_color = color, border_width = int) → series table"
+      "description": "Creates a new table object ⇨ 𝑓 | table.new(position = int, columns = int, rows = int, bgcolor = color, frame_color = color, frame_width = int, border_color = color, border_width = int, force_overlay = bool) → series table"
    },
    "table.set_bgcolor ⇨ 𝑓": {
       "prefix": "table.set_bgcolor",

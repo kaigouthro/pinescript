@@ -1,0 +1,4016 @@
+[
+   {
+     "id": 0,
+     "prefix": "alert",
+     "uuid": 0,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_alert.freq_all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_alert.freq_once_per_bar",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_alert.freq_once_per_bar_close",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_alert.freq_once_per_bar"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 1,
+     "prefix": "alertcondition",
+     "uuid": 1,
+     "fields": []
+  },
+   {
+     "id": 2,
+     "prefix": "array.abs",
+     "uuid": 2,
+     "fields": []
+  },
+   {
+     "id": 3,
+     "prefix": "array.avg",
+     "uuid": 3,
+     "fields": []
+  },
+   {
+     "id": 4,
+     "prefix": "array.binary_search",
+     "uuid": 4,
+     "fields": []
+  },
+   {
+     "id": 5,
+     "prefix": "array.binary_search_leftmost",
+     "uuid": 5,
+     "fields": []
+  },
+   {
+     "id": 6,
+     "prefix": "array.binary_search_rightmost",
+     "uuid": 6,
+     "fields": []
+  },
+   {
+     "id": 7,
+     "prefix": "array.clear",
+     "uuid": 7,
+     "fields": []
+  },
+   {
+     "id": 8,
+     "prefix": "array.concat",
+     "uuid": 8,
+     "fields": []
+  },
+   {
+     "id": 9,
+     "prefix": "array.copy",
+     "uuid": 9,
+     "fields": []
+  },
+   {
+     "id": 10,
+     "prefix": "array.covariance",
+     "uuid": 10,
+     "fields": []
+  },
+   {
+     "id": 11,
+     "prefix": "array.every",
+     "uuid": 11,
+     "fields": []
+  },
+   {
+     "id": 12,
+     "prefix": "array.fill",
+     "uuid": 12,
+     "fields": []
+  },
+   {
+     "id": 13,
+     "prefix": "array.first",
+     "uuid": 13,
+     "fields": []
+  },
+   {
+     "id": 14,
+     "prefix": "array.from",
+     "uuid": 14,
+     "fields": []
+  },
+   {
+     "id": 15,
+     "prefix": "array.get",
+     "uuid": 15,
+     "fields": []
+  },
+   {
+     "id": 16,
+     "prefix": "array.includes",
+     "uuid": 16,
+     "fields": []
+  },
+   {
+     "id": 17,
+     "prefix": "array.indexof",
+     "uuid": 17,
+     "fields": []
+  },
+   {
+     "id": 18,
+     "prefix": "array.insert",
+     "uuid": 18,
+     "fields": []
+  },
+   {
+     "id": 19,
+     "prefix": "array.join",
+     "uuid": 19,
+     "fields": []
+  },
+   {
+     "id": 20,
+     "prefix": "array.last",
+     "uuid": 20,
+     "fields": []
+  },
+   {
+     "id": 21,
+     "prefix": "array.lastindexof",
+     "uuid": 21,
+     "fields": []
+  },
+   {
+     "id": 22,
+     "prefix": "array.max",
+     "uuid": 22,
+     "fields": []
+  },
+   {
+     "id": 23,
+     "prefix": "array.median",
+     "uuid": 23,
+     "fields": []
+  },
+   {
+     "id": 24,
+     "prefix": "array.min",
+     "uuid": 24,
+     "fields": []
+  },
+   {
+     "id": 25,
+     "prefix": "array.mode",
+     "uuid": 25,
+     "fields": []
+  },
+   {
+     "id": 26,
+     "prefix": "array.new_bool",
+     "uuid": 26,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 27,
+     "prefix": "array.new_box",
+     "uuid": 27,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 28,
+     "prefix": "array.new_color",
+     "uuid": 28,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 29,
+     "prefix": "array.new_float",
+     "uuid": 29,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 30,
+     "prefix": "array.new_int",
+     "uuid": 30,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 31,
+     "prefix": "array.new_label",
+     "uuid": 31,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 32,
+     "prefix": "array.new_line",
+     "uuid": 32,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 33,
+     "prefix": "array.new_linefill",
+     "uuid": 33,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 34,
+     "prefix": "array.new_string",
+     "uuid": 34,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 35,
+     "prefix": "array.new_table",
+     "uuid": 35,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 36,
+     "prefix": "array.new<type>",
+     "uuid": 36,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 37,
+     "prefix": "array.percentile_linear_interpolation",
+     "uuid": 37,
+     "fields": []
+  },
+   {
+     "id": 38,
+     "prefix": "array.percentile_nearest_rank",
+     "uuid": 38,
+     "fields": []
+  },
+   {
+     "id": 39,
+     "prefix": "array.percentrank",
+     "uuid": 39,
+     "fields": []
+  },
+   {
+     "id": 40,
+     "prefix": "array.pop",
+     "uuid": 40,
+     "fields": []
+  },
+   {
+     "id": 41,
+     "prefix": "array.push",
+     "uuid": 41,
+     "fields": []
+  },
+   {
+     "id": 42,
+     "prefix": "array.range",
+     "uuid": 42,
+     "fields": []
+  },
+   {
+     "id": 43,
+     "prefix": "array.remove",
+     "uuid": 43,
+     "fields": []
+  },
+   {
+     "id": 44,
+     "prefix": "array.reverse",
+     "uuid": 44,
+     "fields": []
+  },
+   {
+     "id": 45,
+     "prefix": "array.set",
+     "uuid": 45,
+     "fields": []
+  },
+   {
+     "id": 46,
+     "prefix": "array.shift",
+     "uuid": 46,
+     "fields": []
+  },
+   {
+     "id": 47,
+     "prefix": "array.size",
+     "uuid": 47,
+     "fields": []
+  },
+   {
+     "id": 48,
+     "prefix": "array.slice",
+     "uuid": 48,
+     "fields": []
+  },
+   {
+     "id": 49,
+     "prefix": "array.some",
+     "uuid": 49,
+     "fields": []
+  },
+   {
+     "id": 50,
+     "prefix": "array.sort",
+     "uuid": 50,
+     "fields": []
+  },
+   {
+     "id": 51,
+     "prefix": "array.sort_indices",
+     "uuid": 51,
+     "fields": []
+  },
+   {
+     "id": 52,
+     "prefix": "array.standardize",
+     "uuid": 52,
+     "fields": []
+  },
+   {
+     "id": 53,
+     "prefix": "array.stdev",
+     "uuid": 53,
+     "fields": []
+  },
+   {
+     "id": 54,
+     "prefix": "array.sum",
+     "uuid": 54,
+     "fields": []
+  },
+   {
+     "id": 55,
+     "prefix": "array.unshift",
+     "uuid": 55,
+     "fields": []
+  },
+   {
+     "id": 56,
+     "prefix": "array.variance",
+     "uuid": 56,
+     "fields": []
+  },
+   {
+     "id": 57,
+     "prefix": "barcolor",
+     "uuid": 57,
+     "fields": [
+        {
+           "fno": 2,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 58,
+     "prefix": "bgcolor",
+     "uuid": 58,
+     "fields": [
+        {
+           "fno": 2,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 59,
+     "prefix": "bool",
+     "uuid": 59,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 60,
+     "prefix": "box",
+     "uuid": 60,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 61,
+     "prefix": "box.copy",
+     "uuid": 61,
+     "fields": []
+  },
+   {
+     "id": 62,
+     "prefix": "box.delete",
+     "uuid": 62,
+     "fields": []
+  },
+   {
+     "id": 63,
+     "prefix": "box.get_bottom",
+     "uuid": 63,
+     "fields": []
+  },
+   {
+     "id": 64,
+     "prefix": "box.get_left",
+     "uuid": 64,
+     "fields": []
+  },
+   {
+     "id": 65,
+     "prefix": "box.get_right",
+     "uuid": 65,
+     "fields": []
+  },
+   {
+     "id": 66,
+     "prefix": "box.get_top",
+     "uuid": 66,
+     "fields": []
+  },
+   {
+     "id": 67,
+     "prefix": "box.new",
+     "uuid": 67,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_time",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_time",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_color.blue"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_solid",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_dotted",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_dashed",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_solid"
+           ]
+        },
+        {
+           "fno": 7,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_extend.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_extend.left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_extend.right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_extend.both",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_extend.none"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_time",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_time",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_color.blue"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.auto",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.auto",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.tiny",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.small",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.normal",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.large",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.huge"
+           ]
+        },
+        {
+           "fno": 12,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_color.black"
+           ]
+        },
+        {
+           "fno": 13,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_right"
+           ]
+        },
+        {
+           "fno": 14,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_top",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_bottom"
+           ]
+        },
+        {
+           "fno": 15,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.wrap_none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.wrap_none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.wrap_auto"
+           ]
+        },
+        {
+           "fno": 16,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_font.family_default",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_font.family_default",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_font.family_monospace"
+           ]
+        },
+        {
+           "fno": 17,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 18,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_chart.point"
+           ]
+        },
+        {
+           "fno": 19,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_chart.point"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 68,
+     "prefix": "box.set_bgcolor",
+     "uuid": 68,
+     "fields": []
+  },
+   {
+     "id": 69,
+     "prefix": "box.set_border_color",
+     "uuid": 69,
+     "fields": []
+  },
+   {
+     "id": 70,
+     "prefix": "box.set_border_style",
+     "uuid": 70,
+     "fields": []
+  },
+   {
+     "id": 71,
+     "prefix": "box.set_border_width",
+     "uuid": 71,
+     "fields": []
+  },
+   {
+     "id": 72,
+     "prefix": "box.set_bottom",
+     "uuid": 72,
+     "fields": []
+  },
+   {
+     "id": 73,
+     "prefix": "box.set_bottom_right_point",
+     "uuid": 73,
+     "fields": []
+  },
+   {
+     "id": 74,
+     "prefix": "box.set_extend",
+     "uuid": 74,
+     "fields": []
+  },
+   {
+     "id": 75,
+     "prefix": "box.set_left",
+     "uuid": 75,
+     "fields": []
+  },
+   {
+     "id": 76,
+     "prefix": "box.set_lefttop",
+     "uuid": 76,
+     "fields": []
+  },
+   {
+     "id": 77,
+     "prefix": "box.set_right",
+     "uuid": 77,
+     "fields": []
+  },
+   {
+     "id": 78,
+     "prefix": "box.set_rightbottom",
+     "uuid": 78,
+     "fields": []
+  },
+   {
+     "id": 79,
+     "prefix": "box.set_text",
+     "uuid": 79,
+     "fields": []
+  },
+   {
+     "id": 80,
+     "prefix": "box.set_text_color",
+     "uuid": 80,
+     "fields": []
+  },
+   {
+     "id": 81,
+     "prefix": "box.set_text_font_family",
+     "uuid": 81,
+     "fields": []
+  },
+   {
+     "id": 82,
+     "prefix": "box.set_text_halign",
+     "uuid": 82,
+     "fields": []
+  },
+   {
+     "id": 83,
+     "prefix": "box.set_text_size",
+     "uuid": 83,
+     "fields": []
+  },
+   {
+     "id": 84,
+     "prefix": "box.set_text_valign",
+     "uuid": 84,
+     "fields": []
+  },
+   {
+     "id": 85,
+     "prefix": "box.set_text_wrap",
+     "uuid": 85,
+     "fields": []
+  },
+   {
+     "id": 86,
+     "prefix": "box.set_top",
+     "uuid": 86,
+     "fields": []
+  },
+   {
+     "id": 87,
+     "prefix": "box.set_top_left_point",
+     "uuid": 87,
+     "fields": []
+  },
+   {
+     "id": 88,
+     "prefix": "chart.point.copy",
+     "uuid": 88,
+     "fields": []
+  },
+   {
+     "id": 89,
+     "prefix": "chart.point.from_index",
+     "uuid": 89,
+     "fields": []
+  },
+   {
+     "id": 90,
+     "prefix": "chart.point.from_time",
+     "uuid": 90,
+     "fields": []
+  },
+   {
+     "id": 91,
+     "prefix": "chart.point.new",
+     "uuid": 91,
+     "fields": []
+  },
+   {
+     "id": 92,
+     "prefix": "chart.point.now",
+     "uuid": 92,
+     "fields": []
+  },
+   {
+     "id": 93,
+     "prefix": "color",
+     "uuid": 93,
+     "fields": []
+  },
+   {
+     "id": 94,
+     "prefix": "color.b",
+     "uuid": 94,
+     "fields": []
+  },
+   {
+     "id": 95,
+     "prefix": "color.from_gradient",
+     "uuid": 95,
+     "fields": []
+  },
+   {
+     "id": 96,
+     "prefix": "color.g",
+     "uuid": 96,
+     "fields": []
+  },
+   {
+     "id": 97,
+     "prefix": "color.new",
+     "uuid": 97,
+     "fields": []
+  },
+   {
+     "id": 98,
+     "prefix": "color.r",
+     "uuid": 98,
+     "fields": []
+  },
+   {
+     "id": 99,
+     "prefix": "color.rgb",
+     "uuid": 99,
+     "fields": []
+  },
+   {
+     "id": 100,
+     "prefix": "color.t",
+     "uuid": 100,
+     "fields": []
+  },
+   {
+     "id": 101,
+     "prefix": "dayofmonth",
+     "uuid": 101,
+     "fields": []
+  },
+   {
+     "id": 102,
+     "prefix": "dayofweek",
+     "uuid": 102,
+     "fields": []
+  },
+   {
+     "id": 103,
+     "prefix": "fill",
+     "uuid": 103,
+     "fields": []
+  },
+   {
+     "id": 104,
+     "prefix": "fixnan",
+     "uuid": 104,
+     "fields": []
+  },
+   {
+     "id": 105,
+     "prefix": "float",
+     "uuid": 105,
+     "fields": []
+  },
+   {
+     "id": 106,
+     "prefix": "hline",
+     "uuid": 106,
+     "fields": []
+  },
+   {
+     "id": 107,
+     "prefix": "hour",
+     "uuid": 107,
+     "fields": []
+  },
+   {
+     "id": 108,
+     "prefix": "indicator",
+     "uuid": 108,
+     "fields": [
+        {
+           "fno": 2,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.percent",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.inherit"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_scale.right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_scale.left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_scale.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_scale.none"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/chart/?solution=43000587849"
+           ]
+        },
+        {
+           "fno": 7,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-docs/concepts/timeframes/#timeframe-string-specifications",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.period",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.period"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_fill",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_hline",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 10,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_line"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_label"
+           ]
+        },
+        {
+           "fno": 12,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_box"
+           ]
+        },
+        {
+           "fno": 14,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_polyline"
+           ]
+        },
+        {
+           "fno": 15,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#kw_if",
+              "https://www.tradingview.com/pine-script-reference/v5/#kw_for",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-docs/concepts/other-timeframes-and-data/#dynamic-requests"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 109,
+     "prefix": "input",
+     "uuid": 109,
+     "fields": []
+  },
+   {
+     "id": 110,
+     "prefix": "input.bool",
+     "uuid": 110,
+     "fields": []
+  },
+   {
+     "id": 111,
+     "prefix": "input.color",
+     "uuid": 111,
+     "fields": []
+  },
+   {
+     "id": 112,
+     "prefix": "input.enum",
+     "uuid": 112,
+     "fields": []
+  },
+   {
+     "id": 113,
+     "prefix": "input.float",
+     "uuid": 113,
+     "fields": []
+  },
+   {
+     "id": 114,
+     "prefix": "input.int",
+     "uuid": 114,
+     "fields": []
+  },
+   {
+     "id": 115,
+     "prefix": "input.price",
+     "uuid": 115,
+     "fields": []
+  },
+   {
+     "id": 116,
+     "prefix": "input.session",
+     "uuid": 116,
+     "fields": []
+  },
+   {
+     "id": 117,
+     "prefix": "input.source",
+     "uuid": 117,
+     "fields": []
+  },
+   {
+     "id": 118,
+     "prefix": "input.string",
+     "uuid": 118,
+     "fields": []
+  },
+   {
+     "id": 119,
+     "prefix": "input.symbol",
+     "uuid": 119,
+     "fields": []
+  },
+   {
+     "id": 120,
+     "prefix": "input.text_area",
+     "uuid": 120,
+     "fields": []
+  },
+   {
+     "id": 121,
+     "prefix": "input.time",
+     "uuid": 121,
+     "fields": []
+  },
+   {
+     "id": 122,
+     "prefix": "input.timeframe",
+     "uuid": 122,
+     "fields": []
+  },
+   {
+     "id": 123,
+     "prefix": "int",
+     "uuid": 123,
+     "fields": []
+  },
+   {
+     "id": 124,
+     "prefix": "label",
+     "uuid": 124,
+     "fields": []
+  },
+   {
+     "id": 125,
+     "prefix": "label.copy",
+     "uuid": 125,
+     "fields": []
+  },
+   {
+     "id": 126,
+     "prefix": "label.delete",
+     "uuid": 126,
+     "fields": []
+  },
+   {
+     "id": 127,
+     "prefix": "label.get_text",
+     "uuid": 127,
+     "fields": []
+  },
+   {
+     "id": 128,
+     "prefix": "label.get_x",
+     "uuid": 128,
+     "fields": []
+  },
+   {
+     "id": 129,
+     "prefix": "label.get_y",
+     "uuid": 129,
+     "fields": []
+  },
+   {
+     "id": 130,
+     "prefix": "label.new",
+     "uuid": 130,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_time",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index"
+           ]
+        },
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_yloc.price"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_time",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_yloc.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_yloc.abovebar",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_yloc.belowbar",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_yloc.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_yloc.abovebar",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_yloc.belowbar",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_yloc.price"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 22,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_xcross",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_cross",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_triangleup",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_triangledown",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_flag",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_circle",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_arrowup",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_arrowdown",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_label_up",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_label_down",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_label_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_label_right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_label_lower_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_label_lower_right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_label_upper_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_label_upper_right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_label_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_square",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_diamond",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_text_outline",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_label.style_label_down"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.auto",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.tiny",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.small",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.normal",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.large",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.huge",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.normal"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_center"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_font.family_default",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_font.family_default",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_font.family_monospace"
+           ]
+        },
+        {
+           "fno": 12,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 13,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_chart.point"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 131,
+     "prefix": "label.set_color",
+     "uuid": 131,
+     "fields": []
+  },
+   {
+     "id": 132,
+     "prefix": "label.set_point",
+     "uuid": 132,
+     "fields": []
+  },
+   {
+     "id": 133,
+     "prefix": "label.set_size",
+     "uuid": 133,
+     "fields": []
+  },
+   {
+     "id": 134,
+     "prefix": "label.set_style",
+     "uuid": 134,
+     "fields": []
+  },
+   {
+     "id": 135,
+     "prefix": "label.set_text",
+     "uuid": 135,
+     "fields": []
+  },
+   {
+     "id": 136,
+     "prefix": "label.set_text_font_family",
+     "uuid": 136,
+     "fields": []
+  },
+   {
+     "id": 137,
+     "prefix": "label.set_textalign",
+     "uuid": 137,
+     "fields": []
+  },
+   {
+     "id": 138,
+     "prefix": "label.set_textcolor",
+     "uuid": 138,
+     "fields": []
+  },
+   {
+     "id": 139,
+     "prefix": "label.set_tooltip",
+     "uuid": 139,
+     "fields": []
+  },
+   {
+     "id": 140,
+     "prefix": "label.set_x",
+     "uuid": 140,
+     "fields": []
+  },
+   {
+     "id": 141,
+     "prefix": "label.set_xloc",
+     "uuid": 141,
+     "fields": []
+  },
+   {
+     "id": 142,
+     "prefix": "label.set_xy",
+     "uuid": 142,
+     "fields": []
+  },
+   {
+     "id": 143,
+     "prefix": "label.set_y",
+     "uuid": 143,
+     "fields": []
+  },
+   {
+     "id": 144,
+     "prefix": "label.set_yloc",
+     "uuid": 144,
+     "fields": []
+  },
+   {
+     "id": 145,
+     "prefix": "library",
+     "uuid": 145,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#kw_import"
+           ]
+        },
+        {
+           "fno": 1,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#kw_if",
+              "https://www.tradingview.com/pine-script-reference/v5/#kw_for",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-docs/concepts/other-timeframes-and-data/#dynamic-requests"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 146,
+     "prefix": "line",
+     "uuid": 146,
+     "fields": []
+  },
+   {
+     "id": 147,
+     "prefix": "line.copy",
+     "uuid": 147,
+     "fields": []
+  },
+   {
+     "id": 148,
+     "prefix": "line.delete",
+     "uuid": 148,
+     "fields": []
+  },
+   {
+     "id": 149,
+     "prefix": "line.get_price",
+     "uuid": 149,
+     "fields": []
+  },
+   {
+     "id": 150,
+     "prefix": "line.get_x1",
+     "uuid": 150,
+     "fields": []
+  },
+   {
+     "id": 151,
+     "prefix": "line.get_x2",
+     "uuid": 151,
+     "fields": []
+  },
+   {
+     "id": 152,
+     "prefix": "line.get_y1",
+     "uuid": 152,
+     "fields": []
+  },
+   {
+     "id": 153,
+     "prefix": "line.get_y2",
+     "uuid": 153,
+     "fields": []
+  },
+   {
+     "id": 154,
+     "prefix": "line.new",
+     "uuid": 154,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_time",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_time",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_time",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_extend.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_extend.right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_extend.left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_extend.both",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_extend.none"
+           ]
+        },
+        {
+           "fno": 7,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_solid",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_dotted",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_dashed",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_arrow_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_arrow_right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_arrow_both"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 10,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_chart.point"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_chart.point"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 155,
+     "prefix": "line.set_color",
+     "uuid": 155,
+     "fields": []
+  },
+   {
+     "id": 156,
+     "prefix": "line.set_extend",
+     "uuid": 156,
+     "fields": []
+  },
+   {
+     "id": 157,
+     "prefix": "line.set_first_point",
+     "uuid": 157,
+     "fields": []
+  },
+   {
+     "id": 158,
+     "prefix": "line.set_second_point",
+     "uuid": 158,
+     "fields": []
+  },
+   {
+     "id": 159,
+     "prefix": "line.set_style",
+     "uuid": 159,
+     "fields": []
+  },
+   {
+     "id": 160,
+     "prefix": "line.set_width",
+     "uuid": 160,
+     "fields": []
+  },
+   {
+     "id": 161,
+     "prefix": "line.set_x1",
+     "uuid": 161,
+     "fields": []
+  },
+   {
+     "id": 162,
+     "prefix": "line.set_x2",
+     "uuid": 162,
+     "fields": []
+  },
+   {
+     "id": 163,
+     "prefix": "line.set_xloc",
+     "uuid": 163,
+     "fields": []
+  },
+   {
+     "id": 164,
+     "prefix": "line.set_xy1",
+     "uuid": 164,
+     "fields": []
+  },
+   {
+     "id": 165,
+     "prefix": "line.set_xy2",
+     "uuid": 165,
+     "fields": []
+  },
+   {
+     "id": 166,
+     "prefix": "line.set_y1",
+     "uuid": 166,
+     "fields": []
+  },
+   {
+     "id": 167,
+     "prefix": "line.set_y2",
+     "uuid": 167,
+     "fields": []
+  },
+   {
+     "id": 168,
+     "prefix": "linefill",
+     "uuid": 168,
+     "fields": []
+  },
+   {
+     "id": 169,
+     "prefix": "linefill.delete",
+     "uuid": 169,
+     "fields": []
+  },
+   {
+     "id": 170,
+     "prefix": "linefill.get_line1",
+     "uuid": 170,
+     "fields": []
+  },
+   {
+     "id": 171,
+     "prefix": "linefill.get_line2",
+     "uuid": 171,
+     "fields": []
+  },
+   {
+     "id": 172,
+     "prefix": "linefill.new",
+     "uuid": 172,
+     "fields": []
+  },
+   {
+     "id": 173,
+     "prefix": "linefill.set_color",
+     "uuid": 173,
+     "fields": []
+  },
+   {
+     "id": 174,
+     "prefix": "log.error",
+     "uuid": 174,
+     "fields": []
+  },
+   {
+     "id": 175,
+     "prefix": "log.info",
+     "uuid": 175,
+     "fields": []
+  },
+   {
+     "id": 176,
+     "prefix": "log.warning",
+     "uuid": 176,
+     "fields": []
+  },
+   {
+     "id": 177,
+     "prefix": "map.clear",
+     "uuid": 177,
+     "fields": []
+  },
+   {
+     "id": 178,
+     "prefix": "map.contains",
+     "uuid": 178,
+     "fields": []
+  },
+   {
+     "id": 179,
+     "prefix": "map.copy",
+     "uuid": 179,
+     "fields": []
+  },
+   {
+     "id": 180,
+     "prefix": "map.get",
+     "uuid": 180,
+     "fields": []
+  },
+   {
+     "id": 181,
+     "prefix": "map.keys",
+     "uuid": 181,
+     "fields": []
+  },
+   {
+     "id": 182,
+     "prefix": "map.new<keyType, valueType>",
+     "uuid": 182,
+     "fields": []
+  },
+   {
+     "id": 183,
+     "prefix": "map.put",
+     "uuid": 183,
+     "fields": []
+  },
+   {
+     "id": 184,
+     "prefix": "map.put_all",
+     "uuid": 184,
+     "fields": []
+  },
+   {
+     "id": 185,
+     "prefix": "map.remove",
+     "uuid": 185,
+     "fields": []
+  },
+   {
+     "id": 186,
+     "prefix": "map.size",
+     "uuid": 186,
+     "fields": []
+  },
+   {
+     "id": 187,
+     "prefix": "map.values",
+     "uuid": 187,
+     "fields": []
+  },
+   {
+     "id": 188,
+     "prefix": "math.abs",
+     "uuid": 188,
+     "fields": []
+  },
+   {
+     "id": 189,
+     "prefix": "math.acos",
+     "uuid": 189,
+     "fields": []
+  },
+   {
+     "id": 190,
+     "prefix": "math.asin",
+     "uuid": 190,
+     "fields": []
+  },
+   {
+     "id": 191,
+     "prefix": "math.atan",
+     "uuid": 191,
+     "fields": []
+  },
+   {
+     "id": 192,
+     "prefix": "math.avg",
+     "uuid": 192,
+     "fields": []
+  },
+   {
+     "id": 193,
+     "prefix": "math.ceil",
+     "uuid": 193,
+     "fields": []
+  },
+   {
+     "id": 194,
+     "prefix": "math.cos",
+     "uuid": 194,
+     "fields": []
+  },
+   {
+     "id": 195,
+     "prefix": "math.exp",
+     "uuid": 195,
+     "fields": []
+  },
+   {
+     "id": 196,
+     "prefix": "math.floor",
+     "uuid": 196,
+     "fields": []
+  },
+   {
+     "id": 197,
+     "prefix": "math.log",
+     "uuid": 197,
+     "fields": []
+  },
+   {
+     "id": 198,
+     "prefix": "math.log10",
+     "uuid": 198,
+     "fields": []
+  },
+   {
+     "id": 199,
+     "prefix": "math.max",
+     "uuid": 199,
+     "fields": []
+  },
+   {
+     "id": 200,
+     "prefix": "math.min",
+     "uuid": 200,
+     "fields": []
+  },
+   {
+     "id": 201,
+     "prefix": "math.pow",
+     "uuid": 201,
+     "fields": []
+  },
+   {
+     "id": 202,
+     "prefix": "math.random",
+     "uuid": 202,
+     "fields": []
+  },
+   {
+     "id": 203,
+     "prefix": "math.round",
+     "uuid": 203,
+     "fields": []
+  },
+   {
+     "id": 204,
+     "prefix": "math.round_to_mintick",
+     "uuid": 204,
+     "fields": []
+  },
+   {
+     "id": 205,
+     "prefix": "math.sign",
+     "uuid": 205,
+     "fields": []
+  },
+   {
+     "id": 206,
+     "prefix": "math.sin",
+     "uuid": 206,
+     "fields": []
+  },
+   {
+     "id": 207,
+     "prefix": "math.sqrt",
+     "uuid": 207,
+     "fields": []
+  },
+   {
+     "id": 208,
+     "prefix": "math.sum",
+     "uuid": 208,
+     "fields": []
+  },
+   {
+     "id": 209,
+     "prefix": "math.tan",
+     "uuid": 209,
+     "fields": []
+  },
+   {
+     "id": 210,
+     "prefix": "math.todegrees",
+     "uuid": 210,
+     "fields": []
+  },
+   {
+     "id": 211,
+     "prefix": "math.toradians",
+     "uuid": 211,
+     "fields": []
+  },
+   {
+     "id": 212,
+     "prefix": "matrix.add_col",
+     "uuid": 212,
+     "fields": []
+  },
+   {
+     "id": 213,
+     "prefix": "matrix.add_row",
+     "uuid": 213,
+     "fields": []
+  },
+   {
+     "id": 214,
+     "prefix": "matrix.avg",
+     "uuid": 214,
+     "fields": []
+  },
+   {
+     "id": 215,
+     "prefix": "matrix.col",
+     "uuid": 215,
+     "fields": []
+  },
+   {
+     "id": 216,
+     "prefix": "matrix.columns",
+     "uuid": 216,
+     "fields": []
+  },
+   {
+     "id": 217,
+     "prefix": "matrix.concat",
+     "uuid": 217,
+     "fields": []
+  },
+   {
+     "id": 218,
+     "prefix": "matrix.copy",
+     "uuid": 218,
+     "fields": []
+  },
+   {
+     "id": 219,
+     "prefix": "matrix.det",
+     "uuid": 219,
+     "fields": []
+  },
+   {
+     "id": 220,
+     "prefix": "matrix.diff",
+     "uuid": 220,
+     "fields": []
+  },
+   {
+     "id": 221,
+     "prefix": "matrix.eigenvalues",
+     "uuid": 221,
+     "fields": []
+  },
+   {
+     "id": 222,
+     "prefix": "matrix.eigenvectors",
+     "uuid": 222,
+     "fields": []
+  },
+   {
+     "id": 223,
+     "prefix": "matrix.elements_count",
+     "uuid": 223,
+     "fields": []
+  },
+   {
+     "id": 224,
+     "prefix": "matrix.fill",
+     "uuid": 224,
+     "fields": []
+  },
+   {
+     "id": 225,
+     "prefix": "matrix.get",
+     "uuid": 225,
+     "fields": []
+  },
+   {
+     "id": 226,
+     "prefix": "matrix.inv",
+     "uuid": 226,
+     "fields": []
+  },
+   {
+     "id": 227,
+     "prefix": "matrix.is_antidiagonal",
+     "uuid": 227,
+     "fields": []
+  },
+   {
+     "id": 228,
+     "prefix": "matrix.is_antisymmetric",
+     "uuid": 228,
+     "fields": []
+  },
+   {
+     "id": 229,
+     "prefix": "matrix.is_binary",
+     "uuid": 229,
+     "fields": []
+  },
+   {
+     "id": 230,
+     "prefix": "matrix.is_diagonal",
+     "uuid": 230,
+     "fields": []
+  },
+   {
+     "id": 231,
+     "prefix": "matrix.is_identity",
+     "uuid": 231,
+     "fields": []
+  },
+   {
+     "id": 232,
+     "prefix": "matrix.is_square",
+     "uuid": 232,
+     "fields": []
+  },
+   {
+     "id": 233,
+     "prefix": "matrix.is_stochastic",
+     "uuid": 233,
+     "fields": []
+  },
+   {
+     "id": 234,
+     "prefix": "matrix.is_symmetric",
+     "uuid": 234,
+     "fields": []
+  },
+   {
+     "id": 235,
+     "prefix": "matrix.is_triangular",
+     "uuid": 235,
+     "fields": []
+  },
+   {
+     "id": 236,
+     "prefix": "matrix.is_zero",
+     "uuid": 236,
+     "fields": []
+  },
+   {
+     "id": 237,
+     "prefix": "matrix.kron",
+     "uuid": 237,
+     "fields": []
+  },
+   {
+     "id": 238,
+     "prefix": "matrix.max",
+     "uuid": 238,
+     "fields": []
+  },
+   {
+     "id": 239,
+     "prefix": "matrix.median",
+     "uuid": 239,
+     "fields": []
+  },
+   {
+     "id": 240,
+     "prefix": "matrix.min",
+     "uuid": 240,
+     "fields": []
+  },
+   {
+     "id": 241,
+     "prefix": "matrix.mode",
+     "uuid": 241,
+     "fields": []
+  },
+   {
+     "id": 242,
+     "prefix": "matrix.mult",
+     "uuid": 242,
+     "fields": []
+  },
+   {
+     "id": 243,
+     "prefix": "matrix.new<type>",
+     "uuid": 243,
+     "fields": [
+        {
+           "fno": 2,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 244,
+     "prefix": "matrix.pinv",
+     "uuid": 244,
+     "fields": []
+  },
+   {
+     "id": 245,
+     "prefix": "matrix.pow",
+     "uuid": 245,
+     "fields": []
+  },
+   {
+     "id": 246,
+     "prefix": "matrix.rank",
+     "uuid": 246,
+     "fields": []
+  },
+   {
+     "id": 247,
+     "prefix": "matrix.remove_col",
+     "uuid": 247,
+     "fields": []
+  },
+   {
+     "id": 248,
+     "prefix": "matrix.remove_row",
+     "uuid": 248,
+     "fields": []
+  },
+   {
+     "id": 249,
+     "prefix": "matrix.reshape",
+     "uuid": 249,
+     "fields": []
+  },
+   {
+     "id": 250,
+     "prefix": "matrix.reverse",
+     "uuid": 250,
+     "fields": []
+  },
+   {
+     "id": 251,
+     "prefix": "matrix.row",
+     "uuid": 251,
+     "fields": []
+  },
+   {
+     "id": 252,
+     "prefix": "matrix.rows",
+     "uuid": 252,
+     "fields": []
+  },
+   {
+     "id": 253,
+     "prefix": "matrix.set",
+     "uuid": 253,
+     "fields": []
+  },
+   {
+     "id": 254,
+     "prefix": "matrix.sort",
+     "uuid": 254,
+     "fields": []
+  },
+   {
+     "id": 255,
+     "prefix": "matrix.submatrix",
+     "uuid": 255,
+     "fields": []
+  },
+   {
+     "id": 256,
+     "prefix": "matrix.sum",
+     "uuid": 256,
+     "fields": []
+  },
+   {
+     "id": 257,
+     "prefix": "matrix.swap_columns",
+     "uuid": 257,
+     "fields": []
+  },
+   {
+     "id": 258,
+     "prefix": "matrix.swap_rows",
+     "uuid": 258,
+     "fields": []
+  },
+   {
+     "id": 259,
+     "prefix": "matrix.trace",
+     "uuid": 259,
+     "fields": []
+  },
+   {
+     "id": 260,
+     "prefix": "matrix.transpose",
+     "uuid": 260,
+     "fields": []
+  },
+   {
+     "id": 261,
+     "prefix": "max_bars_back",
+     "uuid": 261,
+     "fields": []
+  },
+   {
+     "id": 262,
+     "prefix": "minute",
+     "uuid": 262,
+     "fields": []
+  },
+   {
+     "id": 263,
+     "prefix": "month",
+     "uuid": 263,
+     "fields": []
+  },
+   {
+     "id": 264,
+     "prefix": "na",
+     "uuid": 264,
+     "fields": []
+  },
+   {
+     "id": 265,
+     "prefix": "nz",
+     "uuid": 265,
+     "fields": []
+  },
+   {
+     "id": 266,
+     "prefix": "plot",
+     "uuid": 266,
+     "fields": []
+  },
+   {
+     "id": 267,
+     "prefix": "plotarrow",
+     "uuid": 267,
+     "fields": []
+  },
+   {
+     "id": 268,
+     "prefix": "plotbar",
+     "uuid": 268,
+     "fields": []
+  },
+   {
+     "id": 269,
+     "prefix": "plotcandle",
+     "uuid": 269,
+     "fields": []
+  },
+   {
+     "id": 270,
+     "prefix": "plotchar",
+     "uuid": 270,
+     "fields": []
+  },
+   {
+     "id": 271,
+     "prefix": "plotshape",
+     "uuid": 271,
+     "fields": []
+  },
+   {
+     "id": 272,
+     "prefix": "polyline.delete",
+     "uuid": 272,
+     "fields": []
+  },
+   {
+     "id": 273,
+     "prefix": "polyline.new",
+     "uuid": 273,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_chart.point"
+           ]
+        },
+        {
+           "fno": 1,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_chart.point",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_time",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_xloc.bar_index"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_color.blue"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_solid",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_dotted",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_dashed",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_arrow_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_arrow_right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_arrow_both",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_line.style_solid"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 274,
+     "prefix": "request.currency_rate",
+     "uuid": 274,
+     "fields": []
+  },
+   {
+     "id": 275,
+     "prefix": "request.dividends",
+     "uuid": 275,
+     "fields": []
+  },
+   {
+     "id": 276,
+     "prefix": "request.earnings",
+     "uuid": 276,
+     "fields": []
+  },
+   {
+     "id": 277,
+     "prefix": "request.economic",
+     "uuid": 277,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/chart/?solution=43000665359",
+              "https://www.tradingview.com/support/folders/43000581956-list-of-available-economic-indicators/"
+           ]
+        },
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/chart/?solution=43000665359"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_off",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_on",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_on",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_off",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_off"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 278,
+     "prefix": "request.financial",
+     "uuid": 278,
+     "fields": [
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/?solution=43000564727"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_on",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_off",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_on",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_off",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_off"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.currency",
+              "https://en.wikipedia.org/wiki/ISO_4217#Active_codes",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_currency.USD"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 279,
+     "prefix": "request.quandl",
+     "uuid": 279,
+     "fields": []
+  },
+   {
+     "id": 280,
+     "prefix": "request.security",
+     "uuid": 280,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.tickerid"
+           ]
+        },
+        {
+           "fno": 1,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.period",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-docs/concepts/timeframes/#timeframe-string-specifications"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_close",
+              "https://www.tradingview.com/pine-script-docs/language/objects",
+              "https://www.tradingview.com/pine-script-docs/language/type-system/#collections",
+              "https://www.tradingview.com/pine-script-docs/language/type-system/#tuples"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_on",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_off",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_on",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_off",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.gaps_off"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.lookahead_on",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.lookahead_off",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.lookahead_off",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.lookahead_on",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_barmerge.lookahead_on",
+              "https://www.tradingview.com/pine-script-docs/concepts/repainting/#future-leak-with-request-security"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_open",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_high",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_low",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_close",
+              "https://en.wikipedia.org/wiki/ISO_4217#Active_codes",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_currency.USD",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.currency"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 281,
+     "prefix": "request.security_lower_tf",
+     "uuid": 281,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.tickerid"
+           ]
+        },
+        {
+           "fno": 1,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_timeframe.period",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-docs/concepts/timeframes/#timeframe-string-specifications"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_close",
+              "https://www.tradingview.com/pine-script-docs/language/objects",
+              "https://www.tradingview.com/pine-script-docs/language/type-system/#collections",
+              "https://www.tradingview.com/pine-script-docs/language/type-system/#tuples"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_open",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_high",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_low",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_close",
+              "https://en.wikipedia.org/wiki/ISO_4217#Active_codes",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_currency.USD",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.currency"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_na",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 282,
+     "prefix": "request.seed",
+     "uuid": 282,
+     "fields": []
+  },
+   {
+     "id": 283,
+     "prefix": "request.splits",
+     "uuid": 283,
+     "fields": []
+  },
+   {
+     "id": 284,
+     "prefix": "runtime.error",
+     "uuid": 284,
+     "fields": []
+  },
+   {
+     "id": 285,
+     "prefix": "second",
+     "uuid": 285,
+     "fields": []
+  },
+   {
+     "id": 286,
+     "prefix": "str.contains",
+     "uuid": 286,
+     "fields": []
+  },
+   {
+     "id": 287,
+     "prefix": "str.endswith",
+     "uuid": 287,
+     "fields": []
+  },
+   {
+     "id": 288,
+     "prefix": "str.format",
+     "uuid": 288,
+     "fields": []
+  },
+   {
+     "id": 289,
+     "prefix": "str.format_time",
+     "uuid": 289,
+     "fields": []
+  },
+   {
+     "id": 290,
+     "prefix": "str.length",
+     "uuid": 290,
+     "fields": []
+  },
+   {
+     "id": 291,
+     "prefix": "str.lower",
+     "uuid": 291,
+     "fields": []
+  },
+   {
+     "id": 292,
+     "prefix": "str.match",
+     "uuid": 292,
+     "fields": []
+  },
+   {
+     "id": 293,
+     "prefix": "str.pos",
+     "uuid": 293,
+     "fields": []
+  },
+   {
+     "id": 294,
+     "prefix": "str.repeat",
+     "uuid": 294,
+     "fields": []
+  },
+   {
+     "id": 295,
+     "prefix": "str.replace",
+     "uuid": 295,
+     "fields": []
+  },
+   {
+     "id": 296,
+     "prefix": "str.replace_all",
+     "uuid": 296,
+     "fields": []
+  },
+   {
+     "id": 297,
+     "prefix": "str.split",
+     "uuid": 297,
+     "fields": []
+  },
+   {
+     "id": 298,
+     "prefix": "str.startswith",
+     "uuid": 298,
+     "fields": []
+  },
+   {
+     "id": 299,
+     "prefix": "str.substring",
+     "uuid": 299,
+     "fields": []
+  },
+   {
+     "id": 300,
+     "prefix": "str.tonumber",
+     "uuid": 300,
+     "fields": []
+  },
+   {
+     "id": 301,
+     "prefix": "str.tostring",
+     "uuid": 301,
+     "fields": []
+  },
+   {
+     "id": 302,
+     "prefix": "str.trim",
+     "uuid": 302,
+     "fields": []
+  },
+   {
+     "id": 303,
+     "prefix": "str.upper",
+     "uuid": 303,
+     "fields": []
+  },
+   {
+     "id": 304,
+     "prefix": "strategy",
+     "uuid": 304,
+     "fields": [
+        {
+           "fno": 2,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.percent",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.inherit"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_scale.right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_scale.left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_scale.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_scale.none"
+           ]
+        },
+        {
+           "fno": 7,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/chart/?solution=43000587849"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_strategy.fixed",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_strategy.cash",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_strategy.percent_of_equity",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_strategy.fixed"
+           ]
+        },
+        {
+           "fno": 14,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_currency.NONE",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_currency.USD"
+           ]
+        },
+        {
+           "fno": 15,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.mintick"
+           ]
+        },
+        {
+           "fno": 16,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_strategy.commission.percent",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_strategy.commission.cash_per_contract",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_strategy.commission.cash_per_order",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_strategy.commission.percent"
+           ]
+        },
+        {
+           "fno": 18,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 19,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy.exit"
+           ]
+        },
+        {
+           "fno": 20,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/chart/?solution=43000628599"
+           ]
+        },
+        {
+           "fno": 21,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/chart/?solution=43000628599"
+           ]
+        },
+        {
+           "fno": 22,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_fill",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_hline",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 23,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_line"
+           ]
+        },
+        {
+           "fno": 24,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_label"
+           ]
+        },
+        {
+           "fno": 25,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_box"
+           ]
+        },
+        {
+           "fno": 27,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/support/solutions/43000681694",
+              "https://www.tradingview.com/support/solutions/43000681697"
+           ]
+        },
+        {
+           "fno": 28,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-docs/concepts/strategies/#broker-emulator",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/gopro/"
+           ]
+        },
+        {
+           "fno": 29,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 30,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#type_polyline"
+           ]
+        },
+        {
+           "fno": 31,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#kw_if",
+              "https://www.tradingview.com/pine-script-reference/v5/#kw_for",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-docs/concepts/other-timeframes-and-data/#dynamic-requests"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 305,
+     "prefix": "strategy.cancel",
+     "uuid": 305,
+     "fields": []
+  },
+   {
+     "id": 306,
+     "prefix": "strategy.cancel_all",
+     "uuid": 306,
+     "fields": []
+  },
+   {
+     "id": 307,
+     "prefix": "strategy.close",
+     "uuid": 307,
+     "fields": []
+  },
+   {
+     "id": 308,
+     "prefix": "strategy.close_all",
+     "uuid": 308,
+     "fields": []
+  },
+   {
+     "id": 309,
+     "prefix": "strategy.closedtrades.commission",
+     "uuid": 309,
+     "fields": []
+  },
+   {
+     "id": 310,
+     "prefix": "strategy.closedtrades.entry_bar_index",
+     "uuid": 310,
+     "fields": []
+  },
+   {
+     "id": 311,
+     "prefix": "strategy.closedtrades.entry_comment",
+     "uuid": 311,
+     "fields": []
+  },
+   {
+     "id": 312,
+     "prefix": "strategy.closedtrades.entry_id",
+     "uuid": 312,
+     "fields": []
+  },
+   {
+     "id": 313,
+     "prefix": "strategy.closedtrades.entry_price",
+     "uuid": 313,
+     "fields": []
+  },
+   {
+     "id": 314,
+     "prefix": "strategy.closedtrades.entry_time",
+     "uuid": 314,
+     "fields": []
+  },
+   {
+     "id": 315,
+     "prefix": "strategy.closedtrades.exit_bar_index",
+     "uuid": 315,
+     "fields": []
+  },
+   {
+     "id": 316,
+     "prefix": "strategy.closedtrades.exit_comment",
+     "uuid": 316,
+     "fields": []
+  },
+   {
+     "id": 317,
+     "prefix": "strategy.closedtrades.exit_id",
+     "uuid": 317,
+     "fields": []
+  },
+   {
+     "id": 318,
+     "prefix": "strategy.closedtrades.exit_price",
+     "uuid": 318,
+     "fields": []
+  },
+   {
+     "id": 319,
+     "prefix": "strategy.closedtrades.exit_time",
+     "uuid": 319,
+     "fields": []
+  },
+   {
+     "id": 320,
+     "prefix": "strategy.closedtrades.max_drawdown_percent",
+     "uuid": 320,
+     "fields": []
+  },
+   {
+     "id": 321,
+     "prefix": "strategy.closedtrades.max_runup_percent",
+     "uuid": 321,
+     "fields": []
+  },
+   {
+     "id": 322,
+     "prefix": "strategy.closedtrades.profit_percent",
+     "uuid": 322,
+     "fields": []
+  },
+   {
+     "id": 323,
+     "prefix": "strategy.closedtrades.max_drawdown",
+     "uuid": 323,
+     "fields": []
+  },
+   {
+     "id": 324,
+     "prefix": "strategy.closedtrades.max_runup",
+     "uuid": 324,
+     "fields": []
+  },
+   {
+     "id": 325,
+     "prefix": "strategy.closedtrades.profit",
+     "uuid": 325,
+     "fields": []
+  },
+   {
+     "id": 326,
+     "prefix": "strategy.closedtrades.size",
+     "uuid": 326,
+     "fields": []
+  },
+   {
+     "id": 327,
+     "prefix": "strategy.convert_to_account",
+     "uuid": 327,
+     "fields": []
+  },
+   {
+     "id": 328,
+     "prefix": "strategy.convert_to_symbol",
+     "uuid": 328,
+     "fields": []
+  },
+   {
+     "id": 329,
+     "prefix": "strategy.default_entry_qty",
+     "uuid": 329,
+     "fields": []
+  },
+   {
+     "id": 330,
+     "prefix": "strategy.entry",
+     "uuid": 330,
+     "fields": []
+  },
+   {
+     "id": 331,
+     "prefix": "strategy.exit",
+     "uuid": 331,
+     "fields": []
+  },
+   {
+     "id": 332,
+     "prefix": "strategy.opentrades.commission",
+     "uuid": 332,
+     "fields": []
+  },
+   {
+     "id": 333,
+     "prefix": "strategy.opentrades.entry_bar_index",
+     "uuid": 333,
+     "fields": []
+  },
+   {
+     "id": 334,
+     "prefix": "strategy.opentrades.entry_comment",
+     "uuid": 334,
+     "fields": []
+  },
+   {
+     "id": 335,
+     "prefix": "strategy.opentrades.entry_id",
+     "uuid": 335,
+     "fields": []
+  },
+   {
+     "id": 336,
+     "prefix": "strategy.opentrades.entry_price",
+     "uuid": 336,
+     "fields": []
+  },
+   {
+     "id": 337,
+     "prefix": "strategy.opentrades.entry_time",
+     "uuid": 337,
+     "fields": []
+  },
+   {
+     "id": 338,
+     "prefix": "strategy.opentrades.max_drawdown_percent",
+     "uuid": 338,
+     "fields": []
+  },
+   {
+     "id": 339,
+     "prefix": "strategy.opentrades.max_runup_percent",
+     "uuid": 339,
+     "fields": []
+  },
+   {
+     "id": 340,
+     "prefix": "strategy.opentrades.profit_percent",
+     "uuid": 340,
+     "fields": []
+  },
+   {
+     "id": 341,
+     "prefix": "strategy.opentrades.max_drawdown",
+     "uuid": 341,
+     "fields": []
+  },
+   {
+     "id": 342,
+     "prefix": "strategy.opentrades.max_runup",
+     "uuid": 342,
+     "fields": []
+  },
+   {
+     "id": 343,
+     "prefix": "strategy.opentrades.profit",
+     "uuid": 343,
+     "fields": []
+  },
+   {
+     "id": 344,
+     "prefix": "strategy.opentrades.size",
+     "uuid": 344,
+     "fields": []
+  },
+   {
+     "id": 345,
+     "prefix": "strategy.order",
+     "uuid": 345,
+     "fields": []
+  },
+   {
+     "id": 346,
+     "prefix": "strategy.risk.allow_entry_in",
+     "uuid": 346,
+     "fields": []
+  },
+   {
+     "id": 347,
+     "prefix": "strategy.risk.max_cons_loss_days",
+     "uuid": 347,
+     "fields": []
+  },
+   {
+     "id": 348,
+     "prefix": "strategy.risk.max_drawdown",
+     "uuid": 348,
+     "fields": []
+  },
+   {
+     "id": 349,
+     "prefix": "strategy.risk.max_intraday_filled_orders",
+     "uuid": 349,
+     "fields": []
+  },
+   {
+     "id": 350,
+     "prefix": "strategy.risk.max_intraday_loss",
+     "uuid": 350,
+     "fields": []
+  },
+   {
+     "id": 351,
+     "prefix": "strategy.risk.max_position_size",
+     "uuid": 351,
+     "fields": []
+  },
+   {
+     "id": 352,
+     "prefix": "string",
+     "uuid": 352,
+     "fields": []
+  },
+   {
+     "id": 353,
+     "prefix": "syminfo.prefix",
+     "uuid": 353,
+     "fields": []
+  },
+   {
+     "id": 354,
+     "prefix": "syminfo.ticker",
+     "uuid": 354,
+     "fields": []
+  },
+   {
+     "id": 355,
+     "prefix": "ta.alma",
+     "uuid": 355,
+     "fields": []
+  },
+   {
+     "id": 356,
+     "prefix": "ta.atr",
+     "uuid": 356,
+     "fields": []
+  },
+   {
+     "id": 357,
+     "prefix": "ta.barssince",
+     "uuid": 357,
+     "fields": []
+  },
+   {
+     "id": 358,
+     "prefix": "ta.bb",
+     "uuid": 358,
+     "fields": []
+  },
+   {
+     "id": 359,
+     "prefix": "ta.bbw",
+     "uuid": 359,
+     "fields": []
+  },
+   {
+     "id": 360,
+     "prefix": "ta.cci",
+     "uuid": 360,
+     "fields": []
+  },
+   {
+     "id": 361,
+     "prefix": "ta.change",
+     "uuid": 361,
+     "fields": []
+  },
+   {
+     "id": 362,
+     "prefix": "ta.cmo",
+     "uuid": 362,
+     "fields": []
+  },
+   {
+     "id": 363,
+     "prefix": "ta.cog",
+     "uuid": 363,
+     "fields": []
+  },
+   {
+     "id": 364,
+     "prefix": "ta.correlation",
+     "uuid": 364,
+     "fields": []
+  },
+   {
+     "id": 365,
+     "prefix": "ta.cross",
+     "uuid": 365,
+     "fields": []
+  },
+   {
+     "id": 366,
+     "prefix": "ta.crossover",
+     "uuid": 366,
+     "fields": []
+  },
+   {
+     "id": 367,
+     "prefix": "ta.crossunder",
+     "uuid": 367,
+     "fields": []
+  },
+   {
+     "id": 368,
+     "prefix": "ta.cum",
+     "uuid": 368,
+     "fields": []
+  },
+   {
+     "id": 369,
+     "prefix": "ta.dev",
+     "uuid": 369,
+     "fields": []
+  },
+   {
+     "id": 370,
+     "prefix": "ta.dmi",
+     "uuid": 370,
+     "fields": []
+  },
+   {
+     "id": 371,
+     "prefix": "ta.ema",
+     "uuid": 371,
+     "fields": []
+  },
+   {
+     "id": 372,
+     "prefix": "ta.falling",
+     "uuid": 372,
+     "fields": []
+  },
+   {
+     "id": 373,
+     "prefix": "ta.highest",
+     "uuid": 373,
+     "fields": []
+  },
+   {
+     "id": 374,
+     "prefix": "ta.highestbars",
+     "uuid": 374,
+     "fields": []
+  },
+   {
+     "id": 375,
+     "prefix": "ta.hma",
+     "uuid": 375,
+     "fields": []
+  },
+   {
+     "id": 376,
+     "prefix": "ta.kc",
+     "uuid": 376,
+     "fields": []
+  },
+   {
+     "id": 377,
+     "prefix": "ta.kcw",
+     "uuid": 377,
+     "fields": []
+  },
+   {
+     "id": 378,
+     "prefix": "ta.linreg",
+     "uuid": 378,
+     "fields": []
+  },
+   {
+     "id": 379,
+     "prefix": "ta.lowest",
+     "uuid": 379,
+     "fields": []
+  },
+   {
+     "id": 380,
+     "prefix": "ta.lowestbars",
+     "uuid": 380,
+     "fields": []
+  },
+   {
+     "id": 381,
+     "prefix": "ta.macd",
+     "uuid": 381,
+     "fields": []
+  },
+   {
+     "id": 382,
+     "prefix": "ta.max",
+     "uuid": 382,
+     "fields": []
+  },
+   {
+     "id": 383,
+     "prefix": "ta.median",
+     "uuid": 383,
+     "fields": []
+  },
+   {
+     "id": 384,
+     "prefix": "ta.mfi",
+     "uuid": 384,
+     "fields": []
+  },
+   {
+     "id": 385,
+     "prefix": "ta.min",
+     "uuid": 385,
+     "fields": []
+  },
+   {
+     "id": 386,
+     "prefix": "ta.mode",
+     "uuid": 386,
+     "fields": []
+  },
+   {
+     "id": 387,
+     "prefix": "ta.mom",
+     "uuid": 387,
+     "fields": []
+  },
+   {
+     "id": 388,
+     "prefix": "ta.percentile_linear_interpolation",
+     "uuid": 388,
+     "fields": []
+  },
+   {
+     "id": 389,
+     "prefix": "ta.percentile_nearest_rank",
+     "uuid": 389,
+     "fields": []
+  },
+   {
+     "id": 390,
+     "prefix": "ta.percentrank",
+     "uuid": 390,
+     "fields": []
+  },
+   {
+     "id": 391,
+     "prefix": "ta.pivot_point_levels",
+     "uuid": 391,
+     "fields": []
+  },
+   {
+     "id": 392,
+     "prefix": "ta.pivothigh",
+     "uuid": 392,
+     "fields": []
+  },
+   {
+     "id": 393,
+     "prefix": "ta.pivotlow",
+     "uuid": 393,
+     "fields": []
+  },
+   {
+     "id": 394,
+     "prefix": "ta.range",
+     "uuid": 394,
+     "fields": []
+  },
+   {
+     "id": 395,
+     "prefix": "ta.rising",
+     "uuid": 395,
+     "fields": []
+  },
+   {
+     "id": 396,
+     "prefix": "ta.rma",
+     "uuid": 396,
+     "fields": []
+  },
+   {
+     "id": 397,
+     "prefix": "ta.roc",
+     "uuid": 397,
+     "fields": []
+  },
+   {
+     "id": 398,
+     "prefix": "ta.rsi",
+     "uuid": 398,
+     "fields": []
+  },
+   {
+     "id": 399,
+     "prefix": "ta.sar",
+     "uuid": 399,
+     "fields": []
+  },
+   {
+     "id": 400,
+     "prefix": "ta.sma",
+     "uuid": 400,
+     "fields": []
+  },
+   {
+     "id": 401,
+     "prefix": "ta.stdev",
+     "uuid": 401,
+     "fields": []
+  },
+   {
+     "id": 402,
+     "prefix": "ta.stoch",
+     "uuid": 402,
+     "fields": []
+  },
+   {
+     "id": 403,
+     "prefix": "ta.supertrend",
+     "uuid": 403,
+     "fields": []
+  },
+   {
+     "id": 404,
+     "prefix": "ta.swma",
+     "uuid": 404,
+     "fields": []
+  },
+   {
+     "id": 405,
+     "prefix": "ta.tr",
+     "uuid": 405,
+     "fields": []
+  },
+   {
+     "id": 406,
+     "prefix": "ta.tsi",
+     "uuid": 406,
+     "fields": []
+  },
+   {
+     "id": 407,
+     "prefix": "ta.valuewhen",
+     "uuid": 407,
+     "fields": []
+  },
+   {
+     "id": 408,
+     "prefix": "ta.variance",
+     "uuid": 408,
+     "fields": []
+  },
+   {
+     "id": 409,
+     "prefix": "ta.vwap",
+     "uuid": 409,
+     "fields": []
+  },
+   {
+     "id": 410,
+     "prefix": "ta.vwma",
+     "uuid": 410,
+     "fields": []
+  },
+   {
+     "id": 411,
+     "prefix": "ta.wma",
+     "uuid": 411,
+     "fields": []
+  },
+   {
+     "id": 412,
+     "prefix": "ta.wpr",
+     "uuid": 412,
+     "fields": []
+  },
+   {
+     "id": 413,
+     "prefix": "table",
+     "uuid": 413,
+     "fields": []
+  },
+   {
+     "id": 414,
+     "prefix": "table.cell",
+     "uuid": 414,
+     "fields": [
+        {
+           "fno": 6,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_color.black"
+           ]
+        },
+        {
+           "fno": 7,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_right"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_top",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_text.align_bottom"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.normal",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.auto",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.tiny",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.small",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.normal",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.large",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.huge"
+           ]
+        },
+        {
+           "fno": 12,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_font.family_default",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_font.family_default",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_font.family_monospace"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 415,
+     "prefix": "table.cell_set_bgcolor",
+     "uuid": 415,
+     "fields": []
+  },
+   {
+     "id": 416,
+     "prefix": "table.cell_set_height",
+     "uuid": 416,
+     "fields": []
+  },
+   {
+     "id": 417,
+     "prefix": "table.cell_set_text",
+     "uuid": 417,
+     "fields": []
+  },
+   {
+     "id": 418,
+     "prefix": "table.cell_set_text_color",
+     "uuid": 418,
+     "fields": []
+  },
+   {
+     "id": 419,
+     "prefix": "table.cell_set_text_font_family",
+     "uuid": 419,
+     "fields": []
+  },
+   {
+     "id": 420,
+     "prefix": "table.cell_set_text_halign",
+     "uuid": 420,
+     "fields": []
+  },
+   {
+     "id": 421,
+     "prefix": "table.cell_set_text_size",
+     "uuid": 421,
+     "fields": []
+  },
+   {
+     "id": 422,
+     "prefix": "table.cell_set_text_valign",
+     "uuid": 422,
+     "fields": []
+  },
+   {
+     "id": 423,
+     "prefix": "table.cell_set_tooltip",
+     "uuid": 423,
+     "fields": []
+  },
+   {
+     "id": 424,
+     "prefix": "table.cell_set_width",
+     "uuid": 424,
+     "fields": []
+  },
+   {
+     "id": 425,
+     "prefix": "table.clear",
+     "uuid": 425,
+     "fields": []
+  },
+   {
+     "id": 426,
+     "prefix": "table.delete",
+     "uuid": 426,
+     "fields": []
+  },
+   {
+     "id": 427,
+     "prefix": "table.merge_cells",
+     "uuid": 427,
+     "fields": []
+  },
+   {
+     "id": 428,
+     "prefix": "table.new",
+     "uuid": 428,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 9,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_position.top_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_position.top_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_position.top_right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_position.middle_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_position.middle_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_position.middle_right",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_position.bottom_left",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_position.bottom_center",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_position.bottom_right"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 429,
+     "prefix": "table.set_bgcolor",
+     "uuid": 429,
+     "fields": []
+  },
+   {
+     "id": 430,
+     "prefix": "table.set_border_color",
+     "uuid": 430,
+     "fields": []
+  },
+   {
+     "id": 431,
+     "prefix": "table.set_border_width",
+     "uuid": 431,
+     "fields": []
+  },
+   {
+     "id": 432,
+     "prefix": "table.set_frame_color",
+     "uuid": 432,
+     "fields": []
+  },
+   {
+     "id": 433,
+     "prefix": "table.set_frame_width",
+     "uuid": 433,
+     "fields": []
+  },
+   {
+     "id": 434,
+     "prefix": "table.set_position",
+     "uuid": 434,
+     "fields": []
+  },
+   {
+     "id": 435,
+     "prefix": "ticker.heikinashi",
+     "uuid": 435,
+     "fields": []
+  },
+   {
+     "id": 436,
+     "prefix": "ticker.inherit",
+     "uuid": 436,
+     "fields": []
+  },
+   {
+     "id": 437,
+     "prefix": "ticker.kagi",
+     "uuid": 437,
+     "fields": []
+  },
+   {
+     "id": 438,
+     "prefix": "ticker.linebreak",
+     "uuid": 438,
+     "fields": []
+  },
+   {
+     "id": 439,
+     "prefix": "ticker.modify",
+     "uuid": 439,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_ticker.new"
+           ]
+        },
+        {
+           "fno": 1,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_session.regular",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_session.extended",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.session",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.session"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_adjustment.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_adjustment.splits",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_adjustment.dividends"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.on",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.off"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_close",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.on",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.off"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 440,
+     "prefix": "ticker.new",
+     "uuid": 440,
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.prefix"
+           ]
+        },
+        {
+           "fno": 1,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.ticker"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_session.regular",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_session.extended",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.session",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_syminfo.session"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_adjustment.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_adjustment.splits",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_adjustment.dividends"
+           ]
+        },
+        {
+           "fno": 4,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.on",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_backadjustment.off"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_close",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.inherit",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.on",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_settlement_as_close.off"
+           ]
+        }
+     ]
+  },
+   {
+     "id": 441,
+     "prefix": "ticker.pointfigure",
+     "uuid": 441,
+     "fields": []
+  },
+   {
+     "id": 442,
+     "prefix": "ticker.renko",
+     "uuid": 442,
+     "fields": []
+  },
+   {
+     "id": 443,
+     "prefix": "ticker.standard",
+     "uuid": 443,
+     "fields": []
+  },
+   {
+     "id": 444,
+     "prefix": "time",
+     "uuid": 444,
+     "fields": []
+  },
+   {
+     "id": 445,
+     "prefix": "time_close",
+     "uuid": 445,
+     "fields": []
+  },
+   {
+     "id": 446,
+     "prefix": "timeframe.change",
+     "uuid": 446,
+     "fields": []
+  },
+   {
+     "id": 447,
+     "prefix": "timeframe.from_seconds",
+     "uuid": 447,
+     "fields": []
+  },
+   {
+     "id": 448,
+     "prefix": "timeframe.in_seconds",
+     "uuid": 448,
+     "fields": []
+  },
+   {
+     "id": 449,
+     "prefix": "timestamp",
+     "uuid": 449,
+     "fields": []
+  },
+   {
+     "id": 450,
+     "prefix": "weekofyear",
+     "uuid": 450,
+     "fields": []
+  },
+   {
+     "id": 451,
+     "prefix": "year",
+     "uuid": 451,
+     "fields": []
+  }
+  ]
