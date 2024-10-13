@@ -1,7 +1,7 @@
 # Change Log
 #### **3.4.2**
 
-*02.13.2024 **Update***
+*13.10.2024 **Update***
 - Snippets for built-in variables, functions and constants updated to Pinescript release August 2024.
 - Hover pop-up for functions refactored. Now started to include reference links for parameters.
 - New parameter `force_overlay` added to built-in object functions.
