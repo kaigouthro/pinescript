@@ -2706,18 +2706,18 @@
      "codeblock": [
         "input(defval, title, tooltip, inline, group, display) → input color|string|int|float|bool"
      ],
-     "markdown": "Adds an input to the Inputs tab of your script's Settings, which allows you to provide configuration options to script users. This function automatically detects the type of the argument used for 'defval' and uses the corresponding input widget.",
+     "markdown": "Adds an input to the Inputs tab of your script's Settings, which allows you to provide configuration options to script users. This function automatically detects the type of the argument used for `defval` and uses the corresponding input widget.",
      "returns": "Value of input variable.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_input",
      "param": [
         {
            "field": "defval (const int|float|bool|string|color or source-type built-ins)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where script users can change it. Source-type built-ins are built-in series float variables that specify the source of the calculation: `close`, `hlc3`, etc.",
            "linkCount": 0
         },
         {
            "field": "title (const string)",
-           "desc": "Title of the input. If not specified, the variable name is used as the input's title. If the title is specified, but it is empty, the name will be an empty string.",
+           "desc": "Title of the input. If not specified, the variable name is used as the input's title. If the title is specified, but it is empty, the name will be an empty string. ",
            "linkCount": 0
         },
         {
@@ -2737,8 +2737,8 @@
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default depends on the type of the value passed to `defval`: [display.none]{4} for [bool]{5} and [color]{6} values, [display.all]{7} for everything else.",
+           "linkCount": 8
         }
      ]
   },
@@ -2755,7 +2755,7 @@
      "param": [
         {
            "field": "defval (const bool)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where the user can change it.",
            "linkCount": 0
         },
         {
@@ -2780,13 +2780,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.none.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.none]{4}.",
+           "linkCount": 5
         }
      ]
   },
@@ -2803,7 +2803,7 @@
      "param": [
         {
            "field": "defval (const color)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where the user can change it.",
            "linkCount": 0
         },
         {
@@ -2828,13 +2828,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.none.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.none]{4}.",
+           "linkCount": 5
         }
      ]
   },
@@ -2881,13 +2881,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.all]{4}.",
+           "linkCount": 5
         }
      ]
   },
@@ -2905,7 +2905,7 @@
      "param": [
         {
            "field": "defval (const int|float)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where script users can change it. When a list of values is used with the `options` parameter, the value must be one of them.",
            "linkCount": 0
         },
         {
@@ -2945,13 +2945,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.all]{4}.",
+           "linkCount": 5
         },
         {
            "field": "options (tuple of const int|float values: [val1, val2, ...])",
@@ -2974,7 +2974,7 @@
      "param": [
         {
            "field": "defval (const int)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where script users can change it. When a list of values is used with the `options` parameter, the value must be one of them.",
            "linkCount": 0
         },
         {
@@ -3014,13 +3014,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.all]{4}.",
+           "linkCount": 5
         },
         {
            "field": "options (tuple of const int values: [val1, val2, ...])",
@@ -3036,13 +3036,13 @@
      "codeblock": [
         "input.price(defval, title, tooltip, inline, group, confirm, display) → input float"
      ],
-     "markdown": "Adds a price input to the Inputs tab of your script's Settings. Using `confirm = true` activates the interactive input mode where a price is selected by clicking on the chart.",
+     "markdown": "Adds a price input to the script's \"Settings/Inputs\" tab. Using `confirm = true` activates the interactive input mode where a price is selected by clicking on the chart.",
      "returns": "Value of input variable.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_input.price",
      "param": [
         {
            "field": "defval (const int|float)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where the user can change it.",
            "linkCount": 0
         },
         {
@@ -3067,13 +3067,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, the interactive input mode is enabled and the selection is done by clicking on the chart when the indicator is added to the chart, or by selecting the indicator and moving the selection after that. Optional. The default is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, the interactive input mode is enabled and the selection is done by clicking on the chart when the indicator is added to the chart, or by selecting the indicator and moving the selection after that. Optional. The default is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.all]{4}.",
+           "linkCount": 5
         }
      ]
   },
@@ -3090,7 +3090,7 @@
      "param": [
         {
            "field": "defval (const string)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab. When a list of values is used with the `options` parameter, the value must be one of them.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where the user can change it. When a list of values is used with the `options` parameter, the value must be one of them.",
            "linkCount": 0
         },
         {
@@ -3120,13 +3120,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.all]{4}.",
+           "linkCount": 5
         }
      ]
   },
@@ -3137,13 +3137,13 @@
      "codeblock": [
         "input.source(defval, title, tooltip, inline, group, display, confirm) → series float"
      ],
-     "markdown": "Adds an input to the Inputs tab of your script's Settings, which allows you to provide configuration options to script users. This function adds a dropdown that allows the user to select a source for the calculation, e.g. close, hl2, etc. The user can also select an output from another indicator on their chart as the source.",
+     "markdown": "Adds an input to the Inputs tab of your script's Settings, which allows you to provide configuration options to script users. This function adds a dropdown that allows the user to select a source for the calculation, e.g. `close`, `hl2`, etc. The user can also select an output from another indicator on their chart as the source.",
      "returns": "Value of input variable.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_input.source",
      "param": [
         {
            "field": "defval (source-type built-ins)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where the user can change it.",
            "linkCount": 0
         },
         {
@@ -3168,13 +3168,13 @@
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.all]{4}.",
+           "linkCount": 5
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -3191,7 +3191,7 @@
      "param": [
         {
            "field": "defval (const string)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab. When a list of values is used with the `options` parameter, the value must be one of them.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where the user can change it. When a list of values is used with the `options` parameter, the value must be one of them.",
            "linkCount": 0
         },
         {
@@ -3221,13 +3221,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.all]{4}.",
+           "linkCount": 5
         }
      ]
   },
@@ -3244,7 +3244,7 @@
      "param": [
         {
            "field": "defval (const string)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where the user can change it.",
            "linkCount": 0
         },
         {
@@ -3269,13 +3269,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.all]{4}.",
+           "linkCount": 5
         }
      ]
   },
@@ -3292,7 +3292,7 @@
      "param": [
         {
            "field": "defval (const string)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where the user can change it.",
            "linkCount": 0
         },
         {
@@ -3312,13 +3312,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.none.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.none]{4}.",
+           "linkCount": 5
         }
      ]
   },
@@ -3329,14 +3329,14 @@
      "codeblock": [
         "input.time(defval, title, tooltip, inline, group, confirm, display) → input int"
      ],
-     "markdown": "Adds a time input to the Inputs tab of your script's Settings. This function adds two input widgets on the same line: one for the date and one for the time. The function returns a date/time value in UNIX format. Using `confirm = true` activates the interactive input mode where a point in time is selected by clicking on the chart.",
+     "markdown": "Adds a time input to the script's \"Settings/Inputs\" tab. This function adds two input widgets on the same line: one for the date and one for the time. The function returns a date/time value in UNIX format. Using `confirm = true` activates the interactive input mode where a point in time is selected by clicking on the chart.",
      "returns": "Value of input variable.",
      "manual": "https://www.tradingview.com/pine-script-reference/v5/#fun_input.time",
      "param": [
         {
            "field": "defval (const int)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab. The value can be a `timestamp` function, but only if it uses a date argument in const string format.",
-           "linkCount": 0
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where the user can change it. The value can be a [timestamp]{0} function, but only if it uses a date argument in const string format.",
+           "linkCount": 1
         },
         {
            "field": "title (const string)",
@@ -3360,13 +3360,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, the interactive input mode is enabled and the selection is done by clicking on the chart when the indicator is added to the chart, or by selecting the indicator and moving the selection after that. Optional. The default is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, the interactive input mode is enabled and the selection is done by clicking on the chart when the indicator is added to the chart, or by selecting the indicator and moving the selection after that. Optional. The default is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.none.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.none]{4}.",
+           "linkCount": 5
         }
      ]
   },
@@ -3383,7 +3383,7 @@
      "param": [
         {
            "field": "defval (const string)",
-           "desc": "Determines the default value of the input variable proposed in the script's ‘Settings/Inputs’ tab. When a list of values is used with the `options` parameter, the value must be one of them.",
+           "desc": "Determines the default value of the input variable proposed in the script's \"Settings/Inputs\" tab, from where the user can change it. When a list of values is used with the `options` parameter, the value must be one of them.",
            "linkCount": 0
         },
         {
@@ -3413,13 +3413,13 @@
         },
         {
            "field": "confirm (const bool)",
-           "desc": "If true, then user will be asked to confirm input value before indicator is added to chart. Default value is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, then user will be asked to confirm input value before indicator is added to chart. Default value is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "display (const plot_display)",
-           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the script will display the input's information, aside from within the script's settings. This option allows one to remove a specific input from the script's status line or the Data Window to ensure only the most necessary inputs are displayed there. Possible values: [display.none]{0}, [display.data_window]{1}, [display.status_line]{2}, [display.all]{3}. Optional. The default is [display.all]{4}.",
+           "linkCount": 5
         }
      ]
   },
@@ -6629,7 +6629,7 @@
         },
         {
            "field": "color (series color)",
-           "desc": "Color of the plot.",
+           "desc": "Color of the plot. You can use constants like `color=color.red` or `color=#ff001a` as well as complex expressions like `color = close >= open ? color.green : color.red`. Optional.",
            "linkCount": 0
         },
         {
@@ -6639,18 +6639,18 @@
         },
         {
            "field": "style (input plot_style)",
-           "desc": "Type of plot. Default value is plot.style_line.",
-           "linkCount": 0
+           "desc": "Type of plot. Possible values are: [plot.style_line]{0}, [plot.style_stepline]{1}, [plot.style_stepline_diamond]{2}, [plot.style_histogram]{3}, [plot.style_cross]{4}, [plot.style_area]{5}, [plot.style_columns]{6}, [plot.style_circles]{7}, [plot.style_linebr]{8}, [plot.style_areabr]{9}, [plot.style_steplinebr]{10}. Default value is [plot.style_line]{11}.",
+           "linkCount": 12
         },
         {
            "field": "trackprice (input bool)",
-           "desc": "If true then a horizontal price line will be shown at the level of the last indicator value. Default is false.",
-           "linkCount": 0
+           "desc": "If [true]{0} then a horizontal price line will be shown at the level of the last indicator value. Default is [false]{1}.",
+           "linkCount": 2
         },
         {
            "field": "histbase (input int|float)",
-           "desc": "The price value used as the reference level when rendering plot with plot.style_histogram, plot.style_columns or plot.style_area style. Default is 0.0.",
-           "linkCount": 0
+           "desc": "The price value used as the reference level when rendering plot with [plot.style_histogram]{0}, [plot.style_columns]{1} or [plot.style_area]{2} style. Default is 0.0.",
+           "linkCount": 3
         },
         {
            "field": "offset (series int)",
@@ -6659,13 +6659,13 @@
         },
         {
            "field": "join (input bool)",
-           "desc": "If true then plot points will be joined with line, applicable only to plot.style_cross and plot.style_circles styles. Default is false.",
-           "linkCount": 0
+           "desc": "If [true]{2} then plot points will be joined with line, applicable only to [plot.style_cross]{0} and [plot.style_circles]{1} styles. Default is [false]{3}.",
+           "linkCount": 4
         },
         {
            "field": "editable (const bool)",
-           "desc": "If true then plot style will be editable in Format dialog. Default is true.",
-           "linkCount": 0
+           "desc": "If [true]{0} then plot style will be editable in Format dialog. Default is [true]{1}.",
+           "linkCount": 2
         },
         {
            "field": "show_last (input int)",
@@ -6674,23 +6674,23 @@
         },
         {
            "field": "display (input plot_display)",
-           "desc": "Controls where the plot's information is displayed. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the plot's information is displayed. Display options support addition and subtraction, meaning that using `display.all - display.status_line` will display the plot's information everywhere except in the script's status line. `display.price_scale + display.status_line` will display the plot only in the price scale and status line. When `display` arguments such as `display.price_scale` have user-controlled chart settings equivalents, the relevant plot information will only appear when all settings allow for it. Possible values: [display.none]{0}, [display.pane]{1}, [display.data_window]{2}, [display.price_scale]{3}, [display.status_line]{4}, [display.all]{5}. Optional. The default is [display.all]{6}.",
+           "linkCount": 7
         },
         {
            "field": "format (input string)",
-           "desc": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "Determines whether the script formats the plot's values as prices, percentages, or volume values. The argument passed to this parameter supersedes the `format` parameter of the [indicator]{0}, and [strategy]{1} functions. Optional. The default is the `format` value used by the [indicator]{2}/[strategy]{3} function. Possible values: [format.price]{4}, [format.percent]{5}, [format.volume]{6}.",
+           "linkCount": 7
         },
         {
            "field": "precision (input int)",
-           "desc": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "The number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts a non-negative integer less than or equal to 16. The argument passed to this parameter supersedes the `precision` parameter of the [indicator]{0} and [strategy]{1} functions. When the function's `format` parameter uses [format.volume]{2}, the `precision` parameter will not affect the result, as the decimal precision rules defined by [format.volume]{3} supersede other precision settings. Optional. The default is the `precision` value used by the [indicator]{4}/[strategy]{5} function.",
+           "linkCount": 6
         },
         {
            "field": "force_overlay (const bool)",
-           "desc": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is [false]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -6742,8 +6742,8 @@
         },
         {
            "field": "editable (const bool)",
-           "desc": "If true then plotarrow style will be editable in Format dialog. Default is true.",
-           "linkCount": 0
+           "desc": "If [true]{0} then plotarrow style will be editable in Format dialog. Default is [true]{1}.",
+           "linkCount": 2
         },
         {
            "field": "show_last (input int)",
@@ -6752,23 +6752,23 @@
         },
         {
            "field": "display (input plot_display)",
-           "desc": "Controls where the plot's information is displayed. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the plot's information is displayed. Display options support addition and subtraction, meaning that using `display.all – display.status_line` will display the plot's information everywhere except in the script's status line. `display.price_scale + display.status_line` will display the plot only in the price scale and status line. When `display` arguments such as `display.price_scale` have user-controlled chart settings equivalents, the relevant plot information will only appear when all settings allow for it. Possible values: [display.none]{0}, [display.pane]{1}, [display.data_window]{2}, [display.price_scale]{3}, [display.status_line]{4}, [display.all]{5}. Optional. The default is [display.all]{6}.",
+           "linkCount": 7
         },
         {
            "field": "format (input string)",
-           "desc": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "Determines whether the script formats the plot's values as prices, percentages, or volume values. The argument passed to this parameter supersedes the `format` parameter of the [indicator]{0}, and [strategy]{1} functions. Optional. The default is the `format` value used by the [indicator]{2}/[strategy]{3} function. Possible values: [format.price]{4}, [format.percent]{5}, [format.volume]{6}.",
+           "linkCount": 7
         },
         {
            "field": "precision (input int)",
-           "desc": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "The number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts a non-negative integer less than or equal to 16. The argument passed to this parameter supersedes the `precision` parameter of the [indicator]{0} and [strategy]{1} functions. When the function's `format` parameter uses [format.volume]{2}, the `precision` parameter will not affect the result, as the decimal precision rules defined by [format.volume]{3} supersede other precision settings. Optional. The default is the `precision` value used by the [indicator]{4}/[strategy]{5} function.",
+           "linkCount": 6
         },
         {
            "field": "force_overlay (const bool)",
-           "desc": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is [false]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -6785,23 +6785,23 @@
      "param": [
         {
            "field": "open (series int|float)",
-           "desc": "Open series of data to be used as open values of bars. Required argument.",
-           "linkCount": 0
+           "desc": "[Open]{0} series of data to be used as [open]{1} values of bars. Required argument.",
+           "linkCount": 2
         },
         {
            "field": "high (series int|float)",
-           "desc": "High series of data to be used as high values of bars. Required argument.",
-           "linkCount": 0
+           "desc": "[High]{0} series of data to be used as [high]{1} values of bars. Required argument.",
+           "linkCount": 2
         },
         {
            "field": "low (series int|float)",
-           "desc": "Low series of data to be used as low values of bars. Required argument.",
-           "linkCount": 0
+           "desc": "[Low]{0} series of data to be used as [low]{1} values of bars. Required argument.",
+           "linkCount": 2
         },
         {
            "field": "close (series int|float)",
-           "desc": "Close series of data to be used as close values of bars. Required argument.",
-           "linkCount": 0
+           "desc": "[Close]{0} series of data to be used as [close]{1} values of bars. Required argument.",
+           "linkCount": 2
         },
         {
            "field": "title (const string)",
@@ -6810,13 +6810,13 @@
         },
         {
            "field": "color (series color)",
-           "desc": "Color of the ohlc bars. Optional.",
+           "desc": "Color of the ohlc bars. You can use constants like `color=color.red` or `color=#ff001a` as well as complex expressions like `color = close >= open ? color.green : color.red`. Optional.",
            "linkCount": 0
         },
         {
            "field": "editable (const bool)",
-           "desc": "If true then plotbar style will be editable in Format dialog. Default is true.",
-           "linkCount": 0
+           "desc": "If [true]{0} then plotbar style will be editable in Format dialog. Default is [true]{1}.",
+           "linkCount": 2
         },
         {
            "field": "show_last (input int)",
@@ -6825,23 +6825,23 @@
         },
         {
            "field": "display (input plot_display)",
-           "desc": "Controls where the plot's information is displayed. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the plot's information is displayed. Display options support addition and subtraction, meaning that using `display.all – display.status_line` will display the plot's information everywhere except in the script's status line. `display.price_scale + display.status_line` will display the plot only in the price scale and status line. When `display` arguments such as `display.price_scale` have user-controlled chart settings equivalents, the relevant plot information will only appear when all settings allow for it. Possible values: [display.none]{0}, [display.pane]{1}, [display.data_window]{2}, [display.price_scale]{3}, [display.status_line]{4}, [display.all]{5}. Optional. The default is [display.all]{6}.",
+           "linkCount": 7
         },
         {
            "field": "format (input string)",
-           "desc": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "Determines whether the script formats the plot's values as prices, percentages, or volume values. The argument passed to this parameter supersedes the `format` parameter of the [indicator]{0}, and [strategy]{1} functions. Optional. The default is the `format` value used by the [indicator]{2}/[strategy]{3} function. Possible values: [format.price]{4}, [format.percent]{5}, [format.volume]{6}.",
+           "linkCount": 7
         },
         {
            "field": "precision (input int)",
-           "desc": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "The number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts a non-negative integer less than or equal to 16. The argument passed to this parameter supersedes the `precision` parameter of the [indicator]{0} and [strategy]{1} functions. When the function's `format` parameter uses [format.volume]{2}, the `precision` parameter will not affect the result, as the decimal precision rules defined by [format.volume]{3} supersede other precision settings. Optional. The default is the `precision` value used by the [indicator]{4}/[strategy]{5} function.",
+           "linkCount": 6
         },
         {
            "field": "force_overlay (const bool)",
-           "desc": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is [false]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -6858,23 +6858,23 @@
      "param": [
         {
            "field": "open (series int|float)",
-           "desc": "Open series of data to be used as open values of candles. Required argument.",
-           "linkCount": 0
+           "desc": "[Open]{0} series of data to be used as [open]{1} values of candles. Required argument.",
+           "linkCount": 2
         },
         {
            "field": "high (series int|float)",
-           "desc": "High series of data to be used as high values of candles. Required argument.",
-           "linkCount": 0
+           "desc": "[High]{0} series of data to be used as [high]{1} values of candles. Required argument.",
+           "linkCount": 2
         },
         {
            "field": "low (series int|float)",
-           "desc": "Low series of data to be used as low values of candles. Required argument.",
-           "linkCount": 0
+           "desc": "[Low]{0} series of data to be used as [low]{1} values of candles. Required argument.",
+           "linkCount": 2
         },
         {
            "field": "close (series int|float)",
-           "desc": "Close series of data to be used as close values of candles. Required argument.",
-           "linkCount": 0
+           "desc": "[Close]{0} series of data to be used as [close]{1} values of candles. Required argument.",
+           "linkCount": 2
         },
         {
            "field": "title (const string)",
@@ -6883,7 +6883,7 @@
         },
         {
            "field": "color (series color)",
-           "desc": "Color of the candles. Optional.",
+           "desc": "Color of the candles. You can use constants like `color=color.red` or `color=#ff001a` as well as complex expressions like `color = close >= open ? color.green : color.red`. Optional.",
            "linkCount": 0
         },
         {
@@ -6893,8 +6893,8 @@
         },
         {
            "field": "editable (const bool)",
-           "desc": "If true then plotcandle style will be editable in Format dialog. Default is true.",
-           "linkCount": 0
+           "desc": "If [true]{0} then plotcandle style will be editable in Format dialog. Default is [true]{1}.",
+           "linkCount": 2
         },
         {
            "field": "show_last (input int)",
@@ -6908,23 +6908,23 @@
         },
         {
            "field": "display (input plot_display)",
-           "desc": "Controls where the plot's information is displayed. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the plot's information is displayed. Display options support addition and subtraction, meaning that using `display.all – display.status_line` will display the plot's information everywhere except in the script's status line. `display.price_scale + display.status_line` will display the plot only in the price scale and status line. When `display` arguments such as `display.price_scale` have user-controlled chart settings equivalents, the relevant plot information will only appear when all settings allow for it. Possible values: [display.none]{0}, [display.pane]{1}, [display.data_window]{2}, [display.price_scale]{3}, [display.status_line]{4}, [display.all]{5}. Optional. The default is [display.all]{6}.",
+           "linkCount": 7
         },
         {
            "field": "format (input string)",
-           "desc": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "Determines whether the script formats the plot's values as prices, percentages, or volume values. The argument passed to this parameter supersedes the `format` parameter of the [indicator]{0}, and [strategy]{1} functions. Optional. The default is the `format` value used by the [indicator]{2}/[strategy]{3} function. Possible values: [format.price]{4}, [format.percent]{5}, [format.volume]{6}.",
+           "linkCount": 7
         },
         {
            "field": "precision (input int)",
-           "desc": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "The number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts a non-negative integer less than or equal to 16. The argument passed to this parameter supersedes the `precision` parameter of the [indicator]{0} and [strategy]{1} functions. When the function's `format` parameter uses [format.volume]{2}, the `precision` parameter will not affect the result, as the decimal precision rules defined by [format.volume]{3} supersede other precision settings. Optional. The default is the `precision` value used by the [indicator]{4}/[strategy]{5} function.",
+           "linkCount": 6
         },
         {
            "field": "force_overlay (const bool)",
-           "desc": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is [false]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -6941,8 +6941,8 @@
      "param": [
         {
            "field": "series (series int|float|bool)",
-           "desc": "Series of data to be plotted as shapes. Series is treated as a series of boolean values for all location values except location.absolute. Required argument.",
-           "linkCount": 0
+           "desc": "Series of data to be plotted as shapes. Series is treated as a series of boolean values for all location values except [location.absolute]{0}. Required argument.",
+           "linkCount": 1
         },
         {
            "field": "title (const string)",
@@ -6956,12 +6956,12 @@
         },
         {
            "field": "location (input string)",
-           "desc": "Location of shapes on the chart. Default value is location.abovebar.",
-           "linkCount": 0
+           "desc": "Location of shapes on the chart. Possible values are: [location.abovebar]{0}, [location.belowbar]{1}, [location.top]{2}, [location.bottom]{3}, [location.absolute]{4}. Default value is [location.abovebar]{5}.",
+           "linkCount": 6
         },
         {
            "field": "color (series color)",
-           "desc": "Color of the shapes. Optional.",
+           "desc": "Color of the shapes. You can use constants like `color=color.red` or `color=#ff001a` as well as complex expressions like `color = close >= open ? color.green : color.red`. Optional.",
            "linkCount": 0
         },
         {
@@ -6971,23 +6971,23 @@
         },
         {
            "field": "text (const string)",
-           "desc": "Text to display with the shape.",
+           "desc": "Text to display with the shape. You can use multiline text, to separate lines use `\\n` escape sequence. Example: `'line one\\nline two'`.",
            "linkCount": 0
         },
         {
            "field": "textcolor (series color)",
-           "desc": "Color of the text. Optional.",
+           "desc": "Color of the text. You can use constants like `textcolor=color.red` or `textcolor=#ff001a` as well as complex expressions like `textcolor = close >= open ? color.green : color.red`. Optional.",
            "linkCount": 0
         },
         {
            "field": "editable (const bool)",
-           "desc": "If true then plotchar style will be editable in Format dialog. Default is true.",
-           "linkCount": 0
+           "desc": "If [true]{0} then plotchar style will be editable in Format dialog. Default is [true]{1}.",
+           "linkCount": 2
         },
         {
            "field": "size (const string)",
-           "desc": "Size of characters on the chart. Default is size.auto.",
-           "linkCount": 0
+           "desc": "Size of characters on the chart. Possible values are: [size.auto]{0}, [size.tiny]{1}, [size.small]{2}, [size.normal]{3}, [size.large]{4}, [size.huge]{5}. Default is [size.auto]{6}.",
+           "linkCount": 7
         },
         {
            "field": "show_last (input int)",
@@ -6996,23 +6996,23 @@
         },
         {
            "field": "display (input plot_display)",
-           "desc": "Controls where the plot's information is displayed. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the plot's information is displayed. Display options support addition and subtraction, meaning that using `display.all – display.status_line` will display the plot's information everywhere except in the script's status line. `display.price_scale + display.status_line` will display the plot only in the price scale and status line. When `display` arguments such as `display.price_scale` have user-controlled chart settings equivalents, the relevant plot information will only appear when all settings allow for it. Possible values: [display.none]{0}, [display.pane]{1}, [display.data_window]{2}, [display.price_scale]{3}, [display.status_line]{4}, [display.all]{5}. Optional. The default is [display.all]{6}.",
+           "linkCount": 7
         },
         {
            "field": "format (input string)",
-           "desc": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "Determines whether the script formats the plot's values as prices, percentages, or volume values. The argument passed to this parameter supersedes the `format` parameter of the [indicator]{0}, and [strategy]{1} functions. Optional. The default is the `format` value used by the [indicator]{2}/[strategy]{3} function. Possible values: [format.price]{4}, [format.percent]{5}, [format.volume]{6}.",
+           "linkCount": 7
         },
         {
            "field": "precision (input int)",
-           "desc": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "The number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts a non-negative integer less than or equal to 16. The argument passed to this parameter supersedes the `precision` parameter of the [indicator]{0} and [strategy]{1} functions. When the function's `format` parameter uses [format.volume]{2}, the `precision` parameter will not affect the result, as the decimal precision rules defined by [format.volume]{3} supersede other precision settings. Optional. The default is the `precision` value used by the [indicator]{4}/[strategy]{5} function.",
+           "linkCount": 6
         },
         {
            "field": "force_overlay (const bool)",
-           "desc": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is [false]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -7029,8 +7029,8 @@
      "param": [
         {
            "field": "series (series int|float|bool)",
-           "desc": "Series of data to be plotted as shapes. Series is treated as a series of boolean values for all location values except location.absolute. Required argument.",
-           "linkCount": 0
+           "desc": "Series of data to be plotted as shapes. Series is treated as a series of boolean values for all location values except [location.absolute]{0}. Required argument.",
+           "linkCount": 1
         },
         {
            "field": "title (const string)",
@@ -7039,17 +7039,17 @@
         },
         {
            "field": "style (input string)",
-           "desc": "Type of plot. Default value is shape.xcross.",
-           "linkCount": 0
+           "desc": "Type of plot. Possible values are: [shape.xcross]{0}, [shape.cross]{1}, [shape.triangleup]{2}, [shape.triangledown]{3}, [shape.flag]{4}, [shape.circle]{5}, [shape.arrowup]{6}, [shape.arrowdown]{7}, [shape.labelup]{8}, [shape.labeldown]{9}, [shape.square]{10}, [shape.diamond]{11}. Default value is [shape.xcross]{12}.",
+           "linkCount": 13
         },
         {
            "field": "location (input string)",
-           "desc": "Location of shapes on the chart. Default value is location.abovebar.",
-           "linkCount": 0
+           "desc": "Location of shapes on the chart. Possible values are: [location.abovebar]{0}, [location.belowbar]{1}, [location.top]{2}, [location.bottom]{3}, [location.absolute]{4}. Default value is [location.abovebar]{5}.",
+           "linkCount": 6
         },
         {
            "field": "color (series color)",
-           "desc": "Color of the shapes. Optional.",
+           "desc": "Color of the shapes. You can use constants like `color=color.red` or `color=#ff001a` as well as complex expressions like `color = close >= open ? color.green : color.red`. Optional.",
            "linkCount": 0
         },
         {
@@ -7059,23 +7059,23 @@
         },
         {
            "field": "text (const string)",
-           "desc": "Text to display with the shape.",
+           "desc": "Text to display with the shape. You can use multiline text, to separate lines use `\\n` escape sequence. Example: `'line one\\nline two'`.",
            "linkCount": 0
         },
         {
            "field": "textcolor (series color)",
-           "desc": "Color of the text. Optional.",
+           "desc": "Color of the text. You can use constants like `textcolor=color.red` or `textcolor=#ff001a` as well as complex expressions like `textcolor = close >= open ? color.green : color.red`. Optional.",
            "linkCount": 0
         },
         {
            "field": "editable (const bool)",
-           "desc": "If true then plotshape style will be editable in Format dialog. Default is true.",
-           "linkCount": 0
+           "desc": "If [true]{0} then plotchar style will be editable in Format dialog. Default is [true]{1}.",
+           "linkCount": 2
         },
         {
            "field": "size (const string)",
-           "desc": "Size of shapes on the chart. Default is size.auto.",
-           "linkCount": 0
+           "desc": "Size of shapes on the chart. Possible values are: [size.auto]{0}, [size.tiny]{1}, [size.small]{2}, [size.normal]{3}, [size.large]{4}, [size.huge]{5}. Default is [size.auto]{6}.",
+           "linkCount": 7
         },
         {
            "field": "show_last (input int)",
@@ -7084,23 +7084,23 @@
         },
         {
            "field": "display (input plot_display)",
-           "desc": "Controls where the plot's information is displayed. Optional. The default is display.all.",
-           "linkCount": 0
+           "desc": "Controls where the plot's information is displayed. Display options support addition and subtraction, meaning that using `display.all – display.status_line` will display the plot's information everywhere except in the script's status line. `display.price_scale + display.status_line` will display the plot only in the price scale and status line. When `display` arguments such as `display.price_scale` have user-controlled chart settings equivalents, the relevant plot information will only appear when all settings allow for it. Possible values: [display.none]{0}, [display.pane]{1}, [display.data_window]{2}, [display.price_scale]{3}, [display.status_line]{4}, [display.all]{5}. Optional. The default is [display.all]{6}.",
+           "linkCount": 7
         },
         {
            "field": "format (input string)",
-           "desc": "Determines format of plot's values. Supersedes the `format` parameter of the indicator or strategy functions. Optional. The default is the `format` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "Determines whether the script formats the plot's values as prices, percentages, or volume values. The argument passed to this parameter supersedes the `format` parameter of the [indicator]{0}, and [strategy]{1} functions. Optional. The default is the `format` value used by the [indicator]{2}/[strategy]{3} function. Possible values: [format.price]{4}, [format.percent]{5}, [format.volume]{6}.",
+           "linkCount": 7
         },
         {
            "field": "precision (input int)",
-           "desc": "Number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts an integer in range 0 to 16. Supersedes the `precision` parameter of the indicator or strategy functions. Optional. The default is the `precision` value used by the indicator or strategy function.",
-           "linkCount": 0
+           "desc": "The number of digits after the decimal point the plot's values show on the chart pane's y-axis, the script's status line, and the Data Window. Accepts a non-negative integer less than or equal to 16. The argument passed to this parameter supersedes the `precision` parameter of the [indicator]{0} and [strategy]{1} functions. When the function's `format` parameter uses [format.volume]{2}, the `precision` parameter will not affect the result, as the decimal precision rules defined by [format.volume]{3} supersede other precision settings. Optional. The default is the `precision` value used by the [indicator]{4}/[strategy]{5} function.",
+           "linkCount": 6
         },
         {
            "field": "force_overlay (const bool)",
-           "desc": "If true, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is false.",
-           "linkCount": 0
+           "desc": "If [true]{0}, the plotted results will display on the main chart pane, even when the script occupies a separate pane. Optional. The default is [false]{1}.",
+           "linkCount": 2
         }
      ]
   },

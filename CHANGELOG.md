@@ -1,4 +1,21 @@
 # Change Log
+#### **3.4.2**
+
+*02.13.2024 **Update***
+- Snippets for built-in variables, functions and constants updated to Pinescript release August 2024.
+- Hover pop-up for functions refactored. Now started to include reference links for parameters.
+- New parameter `force_overlay` added to built-in object functions.
+- New variable `timeframe.isticks` added.
+- New properties for functions ticker.new() and ticker.modify() added.
+- Property `dynamic_requests` added to functions indicator(), library() and strategy().
+- Parameter list of `log.*` namespaces were fixed.
+- Syntax of variable declaration were fixed.
+- popup for indicator(), strategy(), library() fixed.
+- Reference links added for some hover functions.
+- Descriptions updated for some hover functions.
+- Change color of editorOverviewRuler to a yellowish color for some themes.
+- Breadcrumb menu in some themes fixed.
+
 #### **3.4.1**
 
 *27.06.2024 **Update***

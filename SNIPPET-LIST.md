@@ -1,4 +1,4 @@
-*Version 3.4.1*
+*Version 3.4.2*
 # Snippet's Prefix's
 
 - [Snippet's Prefix's](#snippets-prefixs)
@@ -165,6 +165,7 @@
 |`timeframe.isminutes`              |
 |`timeframe.ismonthly`              |
 |`timeframe.isseconds`              |
+|`timeframe.isticks` _**new!**_                                          |
 |`timeframe.isweekly`               |
 |`timeframe.multiplier`             |
 |`timeframe.period`                 |
@@ -340,7 +341,7 @@
 |`input`                                   |
 |`input.bool`                              |
 |`input.color`                             |
-|`input.enum` _**new!**_                                                 |
+|`input.enum`                              |
 |`input.float`                             |
 |`input.float.options`                     |
 |`input.int`                               |
@@ -659,6 +660,9 @@
 |`alert.freq_all`                          |
 |`alert.freq_once_per_bar`                 |
 |`alert.freq_once_per_bar_close`           |
+|`backadjustment.inherit` _**new!**_                                        |
+|`backadjustment.off` _**new!**_                                            |
+|`backadjustment.inheonrit` _**new!**_                                      |
 |`barmerge.gaps_off`                       |
 |`barmerge.gaps_on`                        |
 |`barmerge.lookahead_off`                  |
@@ -797,6 +801,9 @@
 |`scale.right`                             |
 |`session.extended`                        |
 |`session.regular`                         |
+|`settlement_as_close.inherit` _**new!**_                            |
+|`settlement_as_close.off` _**new!**_                                |
+|`settlement_as_close.on` _**new!**_                                 |
 |`shape.arrowdown`                         |
 |`shape.arrowup`                           |
 |`shape.circle`                            |
@@ -915,7 +922,7 @@
 |   `false`    |
 |   `continue` |
 |   `break`    |
-|   `enum` _**new!**_                                                 |
+|   `enum`     |
 
 -----
 

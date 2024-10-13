@@ -1077,85 +1077,367 @@
      "id": 109,
      "prefix": "input",
      "uuid": 109,
-     "fields": []
+     "fields": [
+        {
+           "fno": 5,
+           "linkCount": 8,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#type_bool",
+              "https://www.tradingview.com/pine-script-reference/v5/#type_color",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        }
+     ]
   },
    {
      "id": 110,
      "prefix": "input.bool",
      "uuid": 110,
-     "fields": []
+     "fields": [
+        {
+           "fno": 5,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none"
+           ]
+        }
+     ]
   },
    {
      "id": 111,
      "prefix": "input.color",
      "uuid": 111,
-     "fields": []
+     "fields": [
+        {
+           "fno": 5,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none"
+           ]
+        }
+     ]
   },
    {
      "id": 112,
      "prefix": "input.enum",
      "uuid": 112,
-     "fields": []
+     "fields": [
+        {
+           "fno": 6,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 7,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        }
+     ]
   },
    {
      "id": 113,
      "prefix": "input.float",
      "uuid": 113,
-     "fields": []
+     "fields": [
+        {
+           "fno": 8,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        }
+     ]
   },
    {
      "id": 114,
      "prefix": "input.int",
      "uuid": 114,
-     "fields": []
+     "fields": [
+        {
+           "fno": 8,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        }
+     ]
   },
    {
      "id": 115,
      "prefix": "input.price",
      "uuid": 115,
-     "fields": []
+     "fields": [
+        {
+           "fno": 5,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        }
+     ]
   },
    {
      "id": 116,
      "prefix": "input.session",
      "uuid": 116,
-     "fields": []
+     "fields": [
+        {
+           "fno": 6,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 7,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        }
+     ]
   },
    {
      "id": 117,
      "prefix": "input.source",
      "uuid": 117,
-     "fields": []
+     "fields": [
+        {
+           "fno": 5,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
   },
    {
      "id": 118,
      "prefix": "input.string",
      "uuid": 118,
-     "fields": []
+     "fields": [
+        {
+           "fno": 6,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 7,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        }
+     ]
   },
    {
      "id": 119,
      "prefix": "input.symbol",
      "uuid": 119,
-     "fields": []
+     "fields": [
+        {
+           "fno": 5,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        }
+     ]
   },
    {
      "id": 120,
      "prefix": "input.text_area",
      "uuid": 120,
-     "fields": []
+     "fields": [
+        {
+           "fno": 4,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none"
+           ]
+        }
+     ]
   },
    {
      "id": 121,
      "prefix": "input.time",
      "uuid": 121,
-     "fields": []
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_timestamp"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none"
+           ]
+        }
+     ]
   },
    {
      "id": 122,
      "prefix": "input.timeframe",
      "uuid": 122,
-     "fields": []
+     "fields": [
+        {
+           "fno": 6,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 7,
+           "linkCount": 5,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        }
+     ]
   },
    {
      "id": 123,
@@ -2241,37 +2523,559 @@
      "id": 266,
      "prefix": "plot",
      "uuid": 266,
-     "fields": []
+     "fields": [
+        {
+           "fno": 4,
+           "linkCount": 12,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_stepline",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_stepline_diamond",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_histogram",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_cross",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_area",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_columns",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_circles",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_linebr",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_areabr",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_steplinebr",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_line"
+           ]
+        },
+        {
+           "fno": 5,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_histogram",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_columns",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_area"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 4,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_cross",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_plot.style_circles",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.pane",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.price_scale",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        },
+        {
+           "fno": 12,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.percent",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume"
+           ]
+        },
+        {
+           "fno": 13,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy"
+           ]
+        },
+        {
+           "fno": 14,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
   },
    {
      "id": 267,
      "prefix": "plotarrow",
      "uuid": 267,
-     "fields": []
+     "fields": [
+        {
+           "fno": 7,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.pane",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.price_scale",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        },
+        {
+           "fno": 10,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.percent",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy"
+           ]
+        },
+        {
+           "fno": 12,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
   },
    {
      "id": 268,
      "prefix": "plotbar",
      "uuid": 268,
-     "fields": []
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_open",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_open"
+           ]
+        },
+        {
+           "fno": 1,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_high",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_high"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_low",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_low"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_close",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_close"
+           ]
+        },
+        {
+           "fno": 6,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.pane",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.price_scale",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.percent",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume"
+           ]
+        },
+        {
+           "fno": 10,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
   },
    {
      "id": 269,
      "prefix": "plotcandle",
      "uuid": 269,
-     "fields": []
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_open",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_open"
+           ]
+        },
+        {
+           "fno": 1,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_high",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_high"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_low",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_low"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#var_close",
+              "https://www.tradingview.com/pine-script-reference/v5/#var_close"
+           ]
+        },
+        {
+           "fno": 7,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+           ]
+        },
+        {
+           "fno": 10,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.pane",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.price_scale",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.percent",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume"
+           ]
+        },
+        {
+           "fno": 12,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy"
+           ]
+        },
+        {
+           "fno": 13,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
   },
    {
      "id": 270,
      "prefix": "plotchar",
      "uuid": 270,
-     "fields": []
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.absolute"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.abovebar",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.belowbar",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.top",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.bottom",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.absolute",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.abovebar"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.auto",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.tiny",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.small",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.normal",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.large",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.huge",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.auto"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.pane",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.price_scale",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        },
+        {
+           "fno": 12,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.percent",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume"
+           ]
+        },
+        {
+           "fno": 13,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy"
+           ]
+        },
+        {
+           "fno": 14,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
   },
    {
      "id": 271,
      "prefix": "plotshape",
      "uuid": 271,
-     "fields": []
+     "fields": [
+        {
+           "fno": 0,
+           "linkCount": 1,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.absolute"
+           ]
+        },
+        {
+           "fno": 2,
+           "linkCount": 13,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.xcross",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.cross",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.triangleup",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.triangledown",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.flag",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.circle",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.arrowup",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.arrowdown",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.labelup",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.labeldown",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.square",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.diamond",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_shape.xcross"
+           ]
+        },
+        {
+           "fno": 3,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.abovebar",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.belowbar",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.top",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.bottom",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.absolute",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_location.abovebar"
+           ]
+        },
+        {
+           "fno": 8,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+           ]
+        },
+        {
+           "fno": 9,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.auto",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.tiny",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.small",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.normal",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.large",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.huge",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_size.auto"
+           ]
+        },
+        {
+           "fno": 11,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.none",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.pane",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.data_window",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.price_scale",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.status_line",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_display.all"
+           ]
+        },
+        {
+           "fno": 12,
+           "linkCount": 7,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.price",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.percent",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume"
+           ]
+        },
+        {
+           "fno": 13,
+           "linkCount": 6,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_format.volume",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_indicator",
+              "https://www.tradingview.com/pine-script-reference/v5/#fun_strategy"
+           ]
+        },
+        {
+           "fno": 14,
+           "linkCount": 2,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false"
+           ]
+        }
+     ]
   },
    {
      "id": 272,
