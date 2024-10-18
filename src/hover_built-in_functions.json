@@ -63,8 +63,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -81,8 +81,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -99,8 +99,8 @@
      "param": [
         {
            "field": "id (float[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "val (series int|float)",
@@ -122,8 +122,8 @@
      "param": [
         {
            "field": "id (float[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "val (series int|float)",
@@ -145,8 +145,8 @@
      "param": [
         {
            "field": "id (float[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "val (series int|float)",
@@ -168,8 +168,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -186,13 +186,13 @@
      "param": [
         {
            "field": "id1 (any array type)",
-           "desc": "The 1st array object.",
-           "linkCount": 0
+           "desc": "The 1st [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "id2 (any array type)",
-           "desc": "The 2nd array object.",
-           "linkCount": 0
+           "desc": "The 2nd [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -209,8 +209,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -227,13 +227,13 @@
      "param": [
         {
            "field": "id1 (int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "id2 (int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "biased (series bool)",
@@ -255,8 +255,8 @@
      "param": [
         {
            "field": "id (bool[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -273,8 +273,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "value (series <type of the array's elements>)",
@@ -288,8 +288,8 @@
         },
         {
            "field": "index_to (series int)",
-           "desc": "End index, default is na. Must be one greater than the index of the last element to set.",
-           "linkCount": 0
+           "desc": "End index, default is [na]{0}. Must be one greater than the index of the last element to set.",
+           "linkCount": 1
         }
      ]
   },
@@ -306,8 +306,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -342,8 +342,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "index (series int)",
@@ -365,8 +365,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "value (series <type of the array's elements>)",
@@ -388,8 +388,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "value (series <type of the array's elements>)",
@@ -411,8 +411,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "index (series int)",
@@ -439,8 +439,8 @@
      "param": [
         {
            "field": "id (float[]|int[]|string[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "separator (series string)",
@@ -462,8 +462,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -480,8 +480,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "value (series <type of the array's elements>)",
@@ -503,8 +503,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "nth (series int)",
@@ -526,8 +526,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -544,8 +544,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "nth (series int)",
@@ -567,8 +567,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -838,8 +838,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "percentage (series int|float)",
@@ -861,8 +861,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "percentage (series int|float)",
@@ -884,8 +884,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "index (series int)",
@@ -907,8 +907,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -925,8 +925,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "value (series <type of the array's elements>)",
@@ -948,8 +948,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -966,8 +966,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "index (series int)",
@@ -989,8 +989,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1007,8 +1007,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "index (series int)",
@@ -1035,8 +1035,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1053,8 +1053,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1071,8 +1071,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "index_from (series int)",
@@ -1099,8 +1099,8 @@
      "param": [
         {
            "field": "id (bool[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1117,8 +1117,8 @@
      "param": [
         {
            "field": "id (float[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "order (simple sort_order)",
@@ -1140,8 +1140,8 @@
      "param": [
         {
            "field": "id (float[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "order (series sort_order)",
@@ -1163,8 +1163,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1181,8 +1181,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "biased (series bool)",
@@ -1204,8 +1204,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1222,8 +1222,8 @@
      "param": [
         {
            "field": "id (any array type)",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "value (series <type of the array's elements>)",
@@ -1245,8 +1245,8 @@
      "param": [
         {
            "field": "id (float[]|int[])",
-           "desc": "An array object.",
-           "linkCount": 0
+           "desc": "An [array]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "biased (series bool)",
@@ -1395,8 +1395,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "Box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1413,8 +1413,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object to delete.",
-           "linkCount": 0
+           "desc": "A [box]{0} object to delete.",
+           "linkCount": 1
         }
      ]
   },
@@ -1431,8 +1431,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1449,8 +1449,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1467,8 +1467,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1485,8 +1485,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1539,8 +1539,8 @@
         },
         {
            "field": "extend (series string)",
-           "desc": "Extending type of the border of box object. When [extend.none]{0} is used, the horizontal borders start at the left border and end at the right border. With [extend.left]{1} or [extend.right]{2}, the horizontal borders are extended indefinitely to the left or right of the box, respectively. With [extend.both]{3}, the horizontal borders are extended on both sides. Optional. The default value is [extend.none]{4}.",
-           "linkCount": 5
+           "desc": "Extending type of the border of [box]{5} object. When [extend.none]{0} is used, the horizontal borders start at the left border and end at the right border. With [extend.left]{1} or [extend.right]{2}, the horizontal borders are extended indefinitely to the left or right of the box, respectively. With [extend.both]{3}, the horizontal borders are extended on both sides. Optional. The default value is [extend.none]{4}.",
+           "linkCount": 6
         },
         {
            "field": "xloc (series string)",
@@ -1617,8 +1617,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "color (series color)",
@@ -1640,8 +1640,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "color (series color)",
@@ -1663,8 +1663,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "style (series string)",
@@ -1686,8 +1686,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "width (series int)",
@@ -1709,8 +1709,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "bottom (series int|float)",
@@ -1732,13 +1732,13 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "point (chart.point)",
-           "desc": "A chart.point object.",
-           "linkCount": 0
+           "desc": "A [chart.point]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -1755,8 +1755,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "extend (series string)",
@@ -1778,8 +1778,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "left (series int)",
@@ -1801,8 +1801,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "left (series int)",
@@ -1829,8 +1829,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "right (series int)",
@@ -1852,8 +1852,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "right (series int)",
@@ -1880,8 +1880,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "text (series string)",
@@ -1903,8 +1903,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "text_color (series color)",
@@ -1926,8 +1926,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "text_font_family (series string)",
@@ -1949,8 +1949,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "text_halign (series string)",
@@ -1972,8 +1972,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "text_size (series string)",
@@ -1995,8 +1995,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "text_valign (series string)",
@@ -2018,8 +2018,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "text_wrap (series string)",
@@ -2041,8 +2041,8 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "top (series int|float)",
@@ -2064,13 +2064,13 @@
      "param": [
         {
            "field": "id (series box)",
-           "desc": "A box object.",
-           "linkCount": 0
+           "desc": "A [box]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "point (chart.point)",
-           "desc": "A chart.point object.",
-           "linkCount": 0
+           "desc": "A [chart.point]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -2087,8 +2087,8 @@
      "param": [
         {
            "field": "id (chart.point)",
-           "desc": "A chart.point object.",
-           "linkCount": 0
+           "desc": "A [chart.point]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -2197,8 +2197,8 @@
      "param": [
         {
            "field": "x (color)",
-           "desc": "The value to convert to the specified type, usually na.",
-           "linkCount": 0
+           "desc": "The value to convert to the specified type, usually [na]{0}.",
+           "linkCount": 1
         }
      ]
   },
@@ -2386,8 +2386,8 @@
         },
         {
            "field": "timezone (series string)",
-           "desc": "A time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an IANA time zone database name (e.g., \"America/New_York\"). Optional. The default is syminfo.timezone.",
-           "linkCount": 0
+           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an [IANA time zone database name]{0} (e.g., \"America/New_York\"). Optional. The default is [syminfo.timezone]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -2409,8 +2409,8 @@
         },
         {
            "field": "timezone (series string)",
-           "desc": "A time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an IANA time zone database name (e.g., \"America/New_York\"). Optional. The default is syminfo.timezone.",
-           "linkCount": 0
+           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an [IANA time zone database name]{0} (e.g., \"America/New_York\"). Optional. The default is [syminfo.timezone]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -2530,8 +2530,8 @@
      "param": [
         {
            "field": "x (int|float)",
-           "desc": "The value to convert to the specified type, usually na.",
-           "linkCount": 0
+           "desc": "The value to convert to the specified type, usually [na]{0}.",
+           "linkCount": 1
         }
      ]
   },
@@ -2601,8 +2601,8 @@
         },
         {
            "field": "timezone (series string)",
-           "desc": "A time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an IANA time zone database name (e.g., \"America/New_York\"). Optional. The default is syminfo.timezone.",
-           "linkCount": 0
+           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an [IANA time zone database name]{0} (e.g., \"America/New_York\"). Optional. The default is [syminfo.timezone]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -3436,8 +3436,8 @@
      "param": [
         {
            "field": "x (int|float)",
-           "desc": "The value to convert to the specified type, usually na.",
-           "linkCount": 0
+           "desc": "The value to convert to the specified type, usually [na]{0}.",
+           "linkCount": 1
         }
      ]
   },
@@ -3454,8 +3454,8 @@
      "param": [
         {
            "field": "x (series label)",
-           "desc": "The value to convert to the specified type, usually na.",
-           "linkCount": 0
+           "desc": "The value to convert to the specified type, usually [na]{0}.",
+           "linkCount": 1
         }
      ]
   },
@@ -3472,8 +3472,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -3490,8 +3490,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object to delete.",
-           "linkCount": 0
+           "desc": "A [label]{0} object to delete.",
+           "linkCount": 1
         }
      ]
   },
@@ -3508,8 +3508,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -3526,8 +3526,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -3544,8 +3544,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -3646,8 +3646,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "color (series color)",
@@ -3669,13 +3669,13 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "point (chart.point)",
-           "desc": "A chart.point object.",
-           "linkCount": 0
+           "desc": "A [chart.point]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -3692,8 +3692,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "size (series string)",
@@ -3715,8 +3715,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "style (series string)",
@@ -3738,8 +3738,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "text (series string)",
@@ -3761,8 +3761,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "text_font_family (series string)",
@@ -3784,8 +3784,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "textalign (series string)",
@@ -3807,8 +3807,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "textcolor (series color)",
@@ -3830,8 +3830,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "tooltip (series string)",
@@ -3853,8 +3853,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "x (series int)",
@@ -3876,8 +3876,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "x (series int)",
@@ -3904,8 +3904,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "x (series int)",
@@ -3932,8 +3932,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "y (series int|float)",
@@ -3955,8 +3955,8 @@
      "param": [
         {
            "field": "id (series label)",
-           "desc": "Label object.",
-           "linkCount": 0
+           "desc": "A [label]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "yloc (series string)",
@@ -4006,8 +4006,8 @@
      "param": [
         {
            "field": "x (series line)",
-           "desc": "The value to convert to the specified type, usually na.",
-           "linkCount": 0
+           "desc": "The value to convert to the specified type, usually [na]{0}.",
+           "linkCount": 1
         }
      ]
   },
@@ -4024,8 +4024,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4042,8 +4042,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object to delete.",
-           "linkCount": 0
+           "desc": "A [line]{0} object to delete.",
+           "linkCount": 1
         }
      ]
   },
@@ -4060,8 +4060,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "x (series int)",
@@ -4083,8 +4083,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4101,8 +4101,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4119,8 +4119,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4137,8 +4137,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4181,8 +4181,8 @@
         },
         {
            "field": "extend (series string)",
-           "desc": "Extending type of line object. If extend = [extend.none]{0}, draws segment starting at point (x1, y1) and ending at point (x2, y2). If extend is equal to [extend.right]{1} or [extend.left]{2}, draws a ray starting at point (x1, y1) or (x2, y2), respectively. If extend = [extend.both]{3}, draws a straight line that goes through these points. Optional. Default value is [extend.none]{4}.",
-           "linkCount": 5
+           "desc": "Extending type of [line]{5} object. If extend = [extend.none]{0}, draws segment starting at point (x1, y1) and ending at point (x2, y2). If extend is equal to [extend.right]{1} or [extend.left]{2}, draws a ray starting at point (x1, y1) or (x2, y2), respectively. If extend = [extend.both]{3}, draws a straight line that goes through these points. Optional. Default value is [extend.none]{4}.",
+           "linkCount": 6
         },
         {
            "field": "color (series color)",
@@ -4229,8 +4229,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "color (series color)",
@@ -4252,8 +4252,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "extend (series string)",
@@ -4275,13 +4275,13 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "point (chart.point)",
-           "desc": "A chart.point object.",
-           "linkCount": 0
+           "desc": "A [chart.point]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4298,13 +4298,13 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "point (chart.point)",
-           "desc": "A chart.point object.",
-           "linkCount": 0
+           "desc": "A [chart.point]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4321,8 +4321,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "style (series string)",
@@ -4344,8 +4344,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "width (series int)",
@@ -4367,8 +4367,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "x (series int)",
@@ -4390,8 +4390,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "x (series int)",
@@ -4413,8 +4413,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "x1 (series int)",
@@ -4446,8 +4446,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "x (series int)",
@@ -4474,8 +4474,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "x (series int)",
@@ -4502,8 +4502,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "y (series int|float)",
@@ -4525,8 +4525,8 @@
      "param": [
         {
            "field": "id (series line)",
-           "desc": "Line object.",
-           "linkCount": 0
+           "desc": "A [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "y (series int|float)",
@@ -4548,8 +4548,8 @@
      "param": [
         {
            "field": "x (series linefill)",
-           "desc": "The value to convert to the specified type, usually na.",
-           "linkCount": 0
+           "desc": "The value to convert to the specified type, usually [na]{0}.",
+           "linkCount": 1
         }
      ]
   },
@@ -4566,8 +4566,8 @@
      "param": [
         {
            "field": "id (series linefill)",
-           "desc": "A linefill object.",
-           "linkCount": 0
+           "desc": "A [linefill]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4584,8 +4584,8 @@
      "param": [
         {
            "field": "id (series linefill)",
-           "desc": "A linefill object.",
-           "linkCount": 0
+           "desc": "A [linefill]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4602,8 +4602,8 @@
      "param": [
         {
            "field": "id (series linefill)",
-           "desc": "A linefill object.",
-           "linkCount": 0
+           "desc": "A [linefill]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4620,13 +4620,13 @@
      "param": [
         {
            "field": "line1 (series line)",
-           "desc": "1st line object.",
-           "linkCount": 0
+           "desc": "1st [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "line2 (series line)",
-           "desc": "2nd line object.",
-           "linkCount": 0
+           "desc": "2nd [line]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "color (series color)",
@@ -4648,13 +4648,13 @@
      "param": [
         {
            "field": "id (series linefill)",
-           "desc": "A linefill object.",
-           "linkCount": 0
+           "desc": "A [linefill]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "color (series color)",
-           "desc": "The color of the linefill object.",
-           "linkCount": 0
+           "desc": "The color of the [linefill]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4758,8 +4758,8 @@
      "param": [
         {
            "field": "id (any map type)",
-           "desc": "A map object.",
-           "linkCount": 0
+           "desc": "A [map]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4776,8 +4776,8 @@
      "param": [
         {
            "field": "id (any map type)",
-           "desc": "A map object.",
-           "linkCount": 0
+           "desc": "A [map]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "key (series <type of the map's elements>)",
@@ -4799,8 +4799,8 @@
      "param": [
         {
            "field": "id (any map type)",
-           "desc": "A map object to copy.",
-           "linkCount": 0
+           "desc": "A [map]{0} object to copy.",
+           "linkCount": 1
         }
      ]
   },
@@ -4817,8 +4817,8 @@
      "param": [
         {
            "field": "id (any map type)",
-           "desc": "A map object.",
-           "linkCount": 0
+           "desc": "A [map]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "key (series <type of the map's elements>)",
@@ -4840,8 +4840,8 @@
      "param": [
         {
            "field": "id (any map type)",
-           "desc": "A map object.",
-           "linkCount": 0
+           "desc": "A [map]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4870,8 +4870,8 @@
      "param": [
         {
            "field": "id (any map type)",
-           "desc": "A map object.",
-           "linkCount": 0
+           "desc": "A [map]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "key (series <type of the map's elements>)",
@@ -4898,13 +4898,13 @@
      "param": [
         {
            "field": "id (any map type)",
-           "desc": "A map object to append to.",
-           "linkCount": 0
+           "desc": "A [map]{0} object to append to.",
+           "linkCount": 1
         },
         {
            "field": "id2 (any map type)",
-           "desc": "A map object to be appended.",
-           "linkCount": 0
+           "desc": "A [map]{0} object to be appended.",
+           "linkCount": 1
         }
      ]
   },
@@ -4921,8 +4921,8 @@
      "param": [
         {
            "field": "id (any map type)",
-           "desc": "A map object.",
-           "linkCount": 0
+           "desc": "A [map]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "key (series <type of the map's elements>)",
@@ -4944,8 +4944,8 @@
      "param": [
         {
            "field": "id (any map type)",
-           "desc": "A map object.",
-           "linkCount": 0
+           "desc": "A [map]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -4962,8 +4962,8 @@
      "param": [
         {
            "field": "id (any map type)",
-           "desc": "A map object.",
-           "linkCount": 0
+           "desc": "A [map]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -5437,8 +5437,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -5465,8 +5465,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "row (series int)",
@@ -5493,8 +5493,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -5511,8 +5511,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -5534,8 +5534,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -5552,13 +5552,13 @@
      "param": [
         {
            "field": "id1 (any matrix type)",
-           "desc": "Matrix object to concatenate into.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to concatenate into.",
+           "linkCount": 1
         },
         {
            "field": "id2 (any matrix type)",
-           "desc": "Matrix object whose elements will be appended to `id1`.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object whose elements will be appended to `id1`.",
+           "linkCount": 1
         }
      ]
   },
@@ -5575,8 +5575,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object to copy.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to copy.",
+           "linkCount": 1
         }
      ]
   },
@@ -5593,8 +5593,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -5611,13 +5611,13 @@
      "param": [
         {
            "field": "id1 (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "Matrix to subtract from.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to subtract from.",
+           "linkCount": 1
         },
         {
            "field": "id2 (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "Matrix object or a scalar value to be subtracted.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object or a scalar value to be subtracted.",
+           "linkCount": 1
         }
      ]
   },
@@ -5634,8 +5634,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -5652,8 +5652,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -5670,8 +5670,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -5688,8 +5688,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "value (series <type of the matrix's elements>)",
@@ -5731,8 +5731,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "row (series int)",
@@ -5759,8 +5759,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -5777,8 +5777,8 @@
      "param": [
         {
            "field": "id (matrix\\<float\\>)",
-           "desc": "Matrix object to test.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to test.",
+           "linkCount": 1
         }
      ]
   },
@@ -5795,8 +5795,8 @@
      "param": [
         {
            "field": "id (matrix\\<float\\>)",
-           "desc": "Matrix object to test.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to test.",
+           "linkCount": 1
         }
      ]
   },
@@ -5813,8 +5813,8 @@
      "param": [
         {
            "field": "id (matrix\\<float\\>)",
-           "desc": "Matrix object to test.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to test.",
+           "linkCount": 1
         }
      ]
   },
@@ -5831,8 +5831,8 @@
      "param": [
         {
            "field": "id (matrix\\<float\\>)",
-           "desc": "Matrix object to test.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to test.",
+           "linkCount": 1
         }
      ]
   },
@@ -5849,8 +5849,8 @@
      "param": [
         {
            "field": "id (matrix\\<float\\>)",
-           "desc": "Matrix object to test.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to test.",
+           "linkCount": 1
         }
      ]
   },
@@ -5867,8 +5867,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "Matrix object to test.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to test.",
+           "linkCount": 1
         }
      ]
   },
@@ -5885,8 +5885,8 @@
      "param": [
         {
            "field": "id (matrix\\<float\\>)",
-           "desc": "Matrix object to test.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to test.",
+           "linkCount": 1
         }
      ]
   },
@@ -5903,8 +5903,8 @@
      "param": [
         {
            "field": "id (matrix\\<float\\>)",
-           "desc": "Matrix object to test.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to test.",
+           "linkCount": 1
         }
      ]
   },
@@ -5921,8 +5921,8 @@
      "param": [
         {
            "field": "id (matrix\\<float\\>)",
-           "desc": "Matrix object to test.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to test.",
+           "linkCount": 1
         }
      ]
   },
@@ -5939,8 +5939,8 @@
      "param": [
         {
            "field": "id (matrix\\<float\\>)",
-           "desc": "Matrix object to check.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to check.",
+           "linkCount": 1
         }
      ]
   },
@@ -5957,13 +5957,13 @@
      "param": [
         {
            "field": "id1 (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "1st matrix object.",
-           "linkCount": 0
+           "desc": "1st [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "id2 (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "2nd matrix object.",
-           "linkCount": 0
+           "desc": "2nd [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -5980,8 +5980,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -5998,8 +5998,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -6016,8 +6016,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -6034,8 +6034,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -6052,13 +6052,13 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "1st matrix object.",
-           "linkCount": 0
+           "desc": "1st [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "id2 (matrix\\<int\\>|matrix\\<float\\>|int[]|float[])",
-           "desc": "2nd matrix object, value or array.",
-           "linkCount": 0
+           "desc": "2nd [matrix]{0} object, value or array.",
+           "linkCount": 1
         }
      ]
   },
@@ -6103,8 +6103,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -6121,8 +6121,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "power (series int)",
@@ -6144,8 +6144,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -6162,8 +6162,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -6185,8 +6185,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "row (series int)",
@@ -6208,8 +6208,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "rows (series int)",
@@ -6236,8 +6236,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -6254,8 +6254,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "row (series int)",
@@ -6277,8 +6277,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -6295,8 +6295,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "row (series int)",
@@ -6328,8 +6328,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>)",
-           "desc": "A matrix object to be sorted.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object to be sorted.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -6356,8 +6356,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "from_row (series int)",
@@ -6394,13 +6394,13 @@
      "param": [
         {
            "field": "id1 (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "1st matrix object.",
-           "linkCount": 0
+           "desc": "1st [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "id2 (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "2nd matrix object, or scalar value.",
-           "linkCount": 0
+           "desc": "2nd [matrix]{0} object, or scalar value.",
+           "linkCount": 1
         }
      ]
   },
@@ -6417,8 +6417,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column1 (series int)",
@@ -6445,8 +6445,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "row1 (series int)",
@@ -6473,8 +6473,8 @@
      "param": [
         {
            "field": "id (matrix\\<int\\>|matrix\\<float\\>)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -6491,8 +6491,8 @@
      "param": [
         {
            "field": "id (any matrix type)",
-           "desc": "A matrix object.",
-           "linkCount": 0
+           "desc": "A [matrix]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -6537,8 +6537,8 @@
         },
         {
            "field": "timezone (series string)",
-           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an IANA time zone database name (e.g., \"America/New_York\"). Optional. The default is syminfo.timezone.",
-           "linkCount": 0
+           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an [IANA time zone database name]{0} (e.g., \"America/New_York\"). Optional. The default is [syminfo.timezone]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -6560,8 +6560,8 @@
         },
         {
            "field": "timezone (series string)",
-           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an IANA time zone database name (e.g., \"America/New_York\"). Optional. The default is syminfo.timezone.",
-           "linkCount": 0
+           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an [IANA time zone database name]{0} (e.g., \"America/New_York\"). Optional. The default is [syminfo.timezone]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -7117,8 +7117,8 @@
      "param": [
         {
            "field": "id (series polyline)",
-           "desc": "The polyline ID to delete.",
-           "linkCount": 0
+           "desc": "A [polyline]{0} object to delete.",
+           "linkCount": 1
         }
      ]
   },
@@ -7193,18 +7193,18 @@
      "param": [
         {
            "field": "from (series string)",
-           "desc": "The currency in which the value to be converted is expressed.",
-           "linkCount": 0
+           "desc": "The currency in which the value to be converted is expressed. Possible values: a three-letter string with the [currency code in the ISO 4217 format]{0} (e.g. \"USD\"), or one of the built-in variables that return currency codes, like [syminfo.currency]{1} or [currency.USD]{2}.",
+           "linkCount": 3
         },
         {
            "field": "to (series string)",
-           "desc": "The currency in which the value is to be converted.",
-           "linkCount": 0
+           "desc": "The currency in which the value is to be converted. Possible values: a three-letter string with the [currency code in the ISO 4217 format]{0} (e.g. \"USD\"), or one of the built-in variables that return currency codes, like [syminfo.currency]{1} or [currency.USD]{2}.",
+           "linkCount": 3
         },
         {
            "field": "ignore_invalid_currency (series bool)",
-           "desc": "Determines the behavior of the function if a conversion rate between the two currencies cannot be calculated: if false, the script will halt and return a runtime error; if true, the function will return na and execution will continue. Optional. The default is false.",
-           "linkCount": 0
+           "desc": "Determines the behavior of the function if a conversion rate between the two currencies cannot be calculated: if [false]{0}, the script will halt and return a runtime error; if [true]{1}, the function will return [na]{2} and execution will continue. Optional. The default is [false]{3}.",
+           "linkCount": 4
         }
      ]
   },
@@ -7221,33 +7221,33 @@
      "param": [
         {
            "field": "ticker (series string)",
-           "desc": "Symbol. Note that the symbol should be passed with a prefix.",
-           "linkCount": 0
+           "desc": "Symbol. Note that the symbol should be passed with a prefix. For example: \"NASDAQ:AAPL\" instead of \"AAPL\". Using [syminfo.ticker]{0} will cause an error. Use [syminfo.tickerid]{1} instead.",
+           "linkCount": 2
         },
         {
            "field": "field (series string)",
-           "desc": "Input string. Default value is dividends.gross.",
-           "linkCount": 0
+           "desc": "Input string. Possible values include: [dividends.net]{0}, [dividends.gross]{1}. Default value is [dividends.gross]{2}.",
+           "linkCount": 3
         },
         {
            "field": "gaps (simple barmerge_gaps)",
-           "desc": "Merge strategy for the requested data. Default value is barmerge.gaps_off.",
-           "linkCount": 0
+           "desc": "Merge strategy for the requested data (requested data automatically merges with the main series OHLC data). Possible values: [barmerge.gaps_on]{0}, [barmerge.gaps_off]{1}. [barmerge.gaps_on]{2} - requested data is merged with possible gaps ([na]{3} values). [barmerge.gaps_off]{4} - requested data is merged continuously without gaps, all the gaps are filled with the previous nearest existing values. Default value is [barmerge.gaps_off]{5}.",
+           "linkCount": 6
         },
         {
            "field": "lookahead (simple barmerge_lookahead)",
-           "desc": "Merge strategy for the requested data position. Default value is barmerge.lookahead_off.",
-           "linkCount": 0
+           "desc": "Merge strategy for the requested data position. Possible values: [barmerge.lookahead_on]{0}, [barmerge.lookahead_off]{1}. Default value is [barmerge.lookahead_off]{2} starting from version 3. Note that behavour is the same on real-time, and differs only on history.",
+           "linkCount": 3
         },
         {
            "field": "ignore_invalid_symbol (input bool)",
-           "desc": "Determines the behavior of the function if the specified symbol is not found: if false, the script will halt and return a runtime error; if true, the function will return na and execution will continue. Optional. The default value is false.",
-           "linkCount": 0
+           "desc": "Determines the behavior of the function if the specified symbol is not found: if [false]{0}, the script will halt and return a runtime error; if [true]{1}, the function will return [na]{2} and execution will continue. Optional. The default value is [false]{3}.",
+           "linkCount": 4
         },
         {
            "field": "currency (series string)",
-           "desc": "Currency into which the symbol's currency-related dividends values are to be converted. The conversion rates used are based on the FX_IDC pairs' daily rates of the previous day. Optional. The default is syminfo.currency.",
-           "linkCount": 0
+           "desc": "Currency into which the symbol's currency-related dividends values (e.g. [dividends.gross]{0}) are to be converted. The conversion rates used are based on the FX_IDC pairs' daily rates of the previous day (relative to the bar where the calculation is done). Optional. The default is [syminfo.currency]{1}. Possible values: a three-letter string with the [currency code in the ISO 4217 format]{2} (e.g. \"USD\") or one of the constants in the `currency.*` namespace, e.g. [currency.USD]{3}.",
+           "linkCount": 4
         }
      ]
   },
@@ -7264,33 +7264,33 @@
      "param": [
         {
            "field": "ticker (series string)",
-           "desc": "Symbol. Note that the symbol should be passed with a prefix.",
-           "linkCount": 0
+           "desc": "Symbol. Note that the symbol should be passed with a prefix. For example: \"NASDAQ:AAPL\" instead of \"AAPL\". Using [syminfo.ticker]{0} will cause an error. Use [syminfo.tickerid]{1} instead.",
+           "linkCount": 2
         },
         {
            "field": "field (series string)",
-           "desc": "Input string. Default value is earnings.actual.",
-           "linkCount": 0
+           "desc": "Input string. Possible values include: [earnings.actual]{0}, [earnings.estimate]{1}, [earnings.standardized]{2}. Default value is [earnings.actual]{3}.",
+           "linkCount": 4
         },
         {
            "field": "gaps (simple barmerge_gaps)",
-           "desc": "Merge strategy for the requested data. Default value is barmerge.gaps_off.",
-           "linkCount": 0
+           "desc": "Merge strategy for the requested data (requested data automatically merges with the main series OHLC data). Possible values: [barmerge.gaps_on]{0}, [barmerge.gaps_off]{1}. [barmerge.gaps_on]{2} - requested data is merged with possible gaps ([na]{3} values). [barmerge.gaps_off]{4} - requested data is merged continuously without gaps, all the gaps are filled with the previous nearest existing values. Default value is [barmerge.gaps_off]{5}.",
+           "linkCount": 6
         },
         {
            "field": "lookahead (simple barmerge_lookahead)",
-           "desc": "Merge strategy for the requested data position. Default value is barmerge.lookahead_off.",
-           "linkCount": 0
+           "desc": "Merge strategy for the requested data position. Possible values: [barmerge.lookahead_on]{0}, [barmerge.lookahead_off]{1}. Default value is [barmerge.lookahead_off]{2} starting from version 3. Note that behavour is the same on real-time, and differs only on history.",
+           "linkCount": 3
         },
         {
            "field": "ignore_invalid_symbol (input bool)",
-           "desc": "Determines the behavior of the function if the specified symbol is not found: if false, the script will halt and return a runtime error; if true, the function will return na and execution will continue. Optional. The default value is false.",
-           "linkCount": 0
+           "desc": "Determines the behavior of the function if the specified symbol is not found: if [false]{0}, the script will halt and return a runtime error; if [true]{1}, the function will return [na]{2} and execution will continue. Optional. The default value is [false]{3}.",
+           "linkCount": 4
         },
         {
            "field": "currency (series string)",
-           "desc": "Currency into which the symbol's currency-related earnings values are to be converted. The conversion rates used are based on the FX_IDC pairs' daily rates of the previous day. Optional. The default is syminfo.currency.",
-           "linkCount": 0
+           "desc": "Currency into which the symbol's currency-related earnings values (e.g. [earnings.actual]{0}) are to be converted. The conversion rates used are based on the FX_IDC pairs' daily rates of the previous day (relative to the bar where the calculation is done). Optional. The default is [syminfo.currency]{1}. Possible values: a three-letter string with the [currency code in the ISO 4217 format]{2} (e.g. \"USD\") or one of the constants in the `currency.*` namespace, e.g. [currency.USD]{3}.",
+           "linkCount": 4
         }
      ]
   },
@@ -7340,8 +7340,8 @@
      "param": [
         {
            "field": "symbol (series string)",
-           "desc": "Symbol. Note that the symbol should be passed with a prefix. For example: \"NASDAQ:AAPL\" instead of \"AAPL\".",
-           "linkCount": 0
+           "desc": "Symbol. Note that the symbol should be passed with a prefix. For example: \"NASDAQ:AAPL\" instead of \"AAPL\". Using [syminfo.ticker]{0} will cause an error. Use [syminfo.tickerid]{1} instead.",
+           "linkCount": 2
         },
         {
            "field": "financial_id (series string)",
@@ -7360,8 +7360,8 @@
         },
         {
            "field": "ignore_invalid_symbol (input bool)",
-           "desc": "Determines the behavior of the function if the specified symbol is not found: if [false]{0}, the script will halt and return a runtime error; if [true]{1}, the function will return na and execution will continue. Optional. The default value is [false]{2}.",
-           "linkCount": 3
+           "desc": "Determines the behavior of the function if the specified symbol is not found: if [false]{0}, the script will halt and return a runtime error; if [true]{1}, the function will return [na]{2} and execution will continue. Optional. The default value is [false]{3}.",
+           "linkCount": 4
         },
         {
            "field": "currency (series string)",
@@ -7383,13 +7383,13 @@
      "param": [
         {
            "field": "ticker (series string)",
-           "desc": "Symbol. Note that the name of a time series and Quandl data feed should be divided by a forward slash.",
+           "desc": "Symbol. Note that the name of a time series and Quandl data feed should be divided by a forward slash. For example: \"CFTC/SB_FO_ALL\".",
            "linkCount": 0
         },
         {
            "field": "gaps (simple barmerge_gaps)",
-           "desc": "Merge strategy for the requested data. Default value is barmerge.gaps_off.",
-           "linkCount": 0
+           "desc": "Merge strategy for the requested data (requested data automatically merges with the main series: OHLC data). Possible values include: [barmerge.gaps_on]{0}, [barmerge.gaps_off]{1}. [barmerge.gaps_on]{2} - requested data is merged with possible gaps ([na]{3} values). [barmerge.gaps_off]{4} - requested data is merged continuously without gaps, all the gaps are filled with the previous, nearest existing values. Default value is [barmerge.gaps_off]{5}.",
+           "linkCount": 6
         },
         {
            "field": "index (series int)",
@@ -7398,8 +7398,8 @@
         },
         {
            "field": "ignore_invalid_symbol (input bool)",
-           "desc": "Determines the behavior of the function if the specified symbol is not found: if false, the script will halt and return a runtime error; if true, the function will return na and execution will continue. Optional. The default value is false.",
-           "linkCount": 0
+           "desc": "Determines the behavior of the function if the specified symbol is not found: if [false]{0}, the script will halt and return a runtime error; if [true]{1}, the function will return [na]{2} and execution will continue. Optional. The default value is [false]{3}.",
+           "linkCount": 4
         }
      ]
   },
@@ -7527,17 +7527,17 @@
         },
         {
            "field": "expression (\\<arg_expr_type\\>)",
-           "desc": "An expression to be calculated and returned from the requested symbol's context.",
-           "linkCount": 0
+           "desc": "An expression to be calculated and returned from the requested symbol's context. It can be a built-in variable like [close]{0}, an expression such as `ta.sma(close, 100)`, a non-mutable variable previously calculated in the script, a function call that does not use Pine Script® drawings, an [array]{1}, a [matrix]{2}, or a [tuple]{3}. Mutable variables are not allowed, unless they are enclosed in the body of a function used in the expression.",
+           "linkCount": 4
         },
         {
            "field": "ignore_invalid_symbol (input bool)",
-           "desc": "Determines the behavior of the function if the specified symbol is not found: if false, the script will halt and throw a runtime error; if true, the function will return na and execution will continue. Optional. The default is false.",
-           "linkCount": 0
+           "desc": "Determines the behavior of the function if the specified symbol is not found: if [false]{0}, the script will halt and throw a runtime error; if [true]{1}, the function will return [na]{2} and execution will continue. Optional. The default is [false]{3}.",
+           "linkCount": 4
         },
         {
            "field": "calc_bars_count (simple int)",
-           "desc": "If specified, the function will only request this number of values from the end of the symbol's history and calculate `expression` as if these values are the only available data, which might improve calculation speed in some cases. Optional. The default is na.",
+           "desc": "If specified, the function will only request this number of values from the end of the symbol's history and calculate `expression` as if these values are the only available data, which might improve calculation speed in some cases. Optional. The default is 100,000, which is the limit for all non-professional TradingView plans.",
            "linkCount": 0
         }
      ]
@@ -7555,28 +7555,28 @@
      "param": [
         {
            "field": "ticker (series string)",
-           "desc": "Symbol. Note that the symbol should be passed with a prefix.",
-           "linkCount": 0
+           "desc": "Symbol. Note that the symbol should be passed with a prefix. For example: \"NASDAQ:AAPL\" instead of \"AAPL\". Using [syminfo.ticker]{0} will cause an error. Use [syminfo.tickerid]{1} instead.",
+           "linkCount": 2
         },
         {
            "field": "field (series string)",
-           "desc": "Input string.",
-           "linkCount": 0
+           "desc": "Input string. Possible values include: [splits.denominator]{0}, [splits.numerator]{1}.",
+           "linkCount": 2
         },
         {
            "field": "gaps (simple barmerge_gaps)",
-           "desc": "Merge strategy for the requested data. Default value is barmerge.gaps_off.",
-           "linkCount": 0
+           "desc": "Merge strategy for the requested data (requested data automatically merges with the main series OHLC data). Possible values: [barmerge.gaps_on]{0}, [barmerge.gaps_off]{1}. [barmerge.gaps_on]{2} - requested data is merged with possible gaps ([na]{3} values). [barmerge.gaps_off]{4} - requested data is merged continuously without gaps, all the gaps are filled with the previous nearest existing values. Default value is [barmerge.gaps_off]{5}.",
+           "linkCount": 6
         },
         {
            "field": "lookahead (simple barmerge_lookahead)",
-           "desc": "Merge strategy for the requested data position. Default value is barmerge.lookahead_off.",
-           "linkCount": 0
+           "desc": "Merge strategy for the requested data position. Possible values: [barmerge.lookahead_on]{0}, [barmerge.lookahead_off]{1}. Default value is [barmerge.lookahead_off]{2} starting from version 3. Note that behavour is the same on real-time, and differs only on history.",
+           "linkCount": 3
         },
         {
            "field": "ignore_invalid_symbol (input bool)",
-           "desc": "Determines the behavior of the function if the specified symbol is not found: if false, the script will halt and return a runtime error; if true, the function will return na and execution will continue. Optional. The default value is false.",
-           "linkCount": 0
+           "desc": "Determines the behavior of the function if the specified symbol is not found: if [false]{0}, the script will halt and return a runtime error; if [true]{1}, the function will return [na]{2} and execution will continue. Optional. The default value is [false]{3}.",
+           "linkCount": 4
         }
      ]
   },
@@ -7616,8 +7616,8 @@
         },
         {
            "field": "timezone (series string)",
-           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an IANA time zone database name (e.g., \"America/New_York\"). Optional. The default is syminfo.timezone.",
-           "linkCount": 0
+           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an [IANA time zone database name]{0} (e.g., \"America/New_York\"). Optional. The default is [syminfo.timezone]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -9331,8 +9331,8 @@
      "param": [
         {
            "field": "x (string)",
-           "desc": "The value to convert to the specified type, usually na.",
-           "linkCount": 0
+           "desc": "The value to convert to the specified type, usually [na]{0}.",
+           "linkCount": 1
         }
      ]
   },
@@ -10809,8 +10809,8 @@
      "param": [
         {
            "field": "x (series table)",
-           "desc": "The value to convert to the specified type, usually na.",
-           "linkCount": 0
+           "desc": "The value to convert to the specified type, usually [na]{0}.",
+           "linkCount": 1
         }
      ]
   },
@@ -10827,8 +10827,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -10905,8 +10905,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -10938,8 +10938,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -10971,8 +10971,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -11004,8 +11004,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -11037,8 +11037,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -11070,8 +11070,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -11103,8 +11103,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -11136,8 +11136,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -11169,8 +11169,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -11202,8 +11202,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "column (series int)",
@@ -11235,8 +11235,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "start_column (series int)",
@@ -11273,8 +11273,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         }
      ]
   },
@@ -11291,8 +11291,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "start_column (series int)",
@@ -11387,8 +11387,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "bgcolor (series color)",
@@ -11410,8 +11410,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "border_color (series color)",
@@ -11433,8 +11433,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "border_width (series int)",
@@ -11456,8 +11456,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "frame_color (series color)",
@@ -11479,8 +11479,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "frame_width (series int)",
@@ -11502,8 +11502,8 @@
      "param": [
         {
            "field": "table_id (series table)",
-           "desc": "A table object.",
-           "linkCount": 0
+           "desc": "A [table]{0} object.",
+           "linkCount": 1
         },
         {
            "field": "position (series string)",
@@ -11792,13 +11792,13 @@
         },
         {
            "field": "session (simple string)",
-           "desc": "Session specification. An empty string is interpreted as the session of the symbol. Optional. The default is an empty string.",
+           "desc": "Session specification. An empty string is interpreted as the session of the symbol. Optional. The default is session of the symbol.",
            "linkCount": 0
         },
         {
            "field": "timezone (simple string)",
-           "desc": "Timezone of the `session` argument. Can only be used when a `session` is specified. Optional. The default is syminfo.timezone. Can be specified in GMT notation (e.g. \"GMT-5\") or as an IANA time zone database name (e.g. \"America/New_York\").",
-           "linkCount": 0
+           "desc": "Timezone of the `session` argument. Can only be used when a `session` is specified. Optional. The default is [syminfo.timezone]{0}. Can be specified in GMT notation (e.g. \"GMT-5\") or as an [IANA time zone database name]{1} (e.g. \"America/New_York\").",
+           "linkCount": 2
         },
         {
            "field": "bars_back (series int)",
@@ -11825,13 +11825,13 @@
         },
         {
            "field": "session (simple string)",
-           "desc": "Session specification. An empty string is interpreted as the session of the symbol. Optional. The default is an empty string.",
+           "desc": "Session specification. An empty string is interpreted as the session of the symbol. Optional. The default is session of the symbol.",
            "linkCount": 0
         },
         {
            "field": "timezone (simple string)",
-           "desc": "Timezone of the `session` argument. Can only be used when a `session` is specified. Optional. The default is syminfo.timezone. Can be specified in GMT notation (e.g. \"GMT-5\") or as an IANA time zone database name (e.g. \"America/New_York\").",
-           "linkCount": 0
+           "desc": "Timezone of the `session` argument. Can only be used when a `session` is specified. Optional. The default is [syminfo.timezone]{0}. Can be specified in GMT notation (e.g. \"GMT-5\") or as an [IANA time zone database name]{1} (e.g. \"America/New_York\").",
+           "linkCount": 2
         },
         {
            "field": "bars_back (series int)",
@@ -11853,8 +11853,8 @@
      "param": [
         {
            "field": "timeframe (simple string)",
-           "desc": "Timeframe string compliant with timeframe string specifications.",
-           "linkCount": 0
+           "desc": "String formatted according to the User manual's [timeframe string specifications]{0}.",
+           "linkCount": 1
         }
      ]
   },
@@ -11889,8 +11889,8 @@
      "param": [
         {
            "field": "timeframe (simple string)",
-           "desc": "Timeframe string in timeframe string specifications format. Optional. The default is timeframe.period.",
-           "linkCount": 0
+           "desc": "Timeframe string in [timeframe string specifications]{0} format. Optional. The default is [timeframe.period]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -11908,8 +11908,8 @@
      "param": [
         {
            "field": "timezone (series string)",
-           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an IANA time zone database name (e.g., \"America/New_York\"). Optional. The default is syminfo.timezone.",
-           "linkCount": 0
+           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an [IANA time zone database name]{0} (e.g., \"America/New_York\"). Optional. The default is [syminfo.timezone]{1}.",
+           "linkCount": 2
         },
         {
            "field": "year (series int)",
@@ -11943,8 +11943,8 @@
         },
         {
            "field": "dateString (const string)",
-           "desc": "A string containing the date and, optionally, the time and time zone. Its format must comply with either the IETF RFC 2822 or ISO 8601 standards (\"DD MMM YYYY hh:mm:ss ±hhmm\" or \"YYYY-MM-DDThh:mm:ss±hh:mm\", so \"20 Feb 2020\" or \"2020-02-20\"). If no time is supplied, \"00:00\" is used. If no time zone is supplied, GMT+0 will be used.",
-           "linkCount": 0
+           "desc": "A string containing the date and, optionally, the time and time zone. Its format must comply with either the [IETF RFC 2822]{0} or [ISO 8601]{1} standards (`\"DD MMM YYYY hh:mm:ss ±hhmm\"` or `\"YYYY-MM-DDThh:mm:ss±hh:mm\"`, so `\"20 Feb 2020\"` or `\"2020-02-20\"`). If no time is supplied, `\"00:00\"` is used. If no time zone is supplied, `GMT+0` will be used. Note that this diverges from the usual behavior of the function where it returns time in the exchange's timezone.",
+           "linkCount": 2
         }
      ]
   },
@@ -11966,8 +11966,8 @@
         },
         {
            "field": "timezone (series string)",
-           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an IANA time zone database name (e.g., \"America/New_York\"). Optional. The default is syminfo.timezone.",
-           "linkCount": 0
+           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an [IANA time zone database name]{0} (e.g., \"America/New_York\"). Optional. The default is [syminfo.timezone]{1}.",
+           "linkCount": 2
         }
      ]
   },
@@ -11989,8 +11989,8 @@
         },
         {
            "field": "timezone (series string)",
-           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an IANA time zone database name (e.g., \"America/New_York\"). Optional. The default is syminfo.timezone.",
-           "linkCount": 0
+           "desc": "Allows adjusting the returned value to a time zone specified in either UTC/GMT notation (e.g., \"UTC-5\", \"GMT+0530\") or as an [IANA time zone database name]{0} (e.g., \"America/New_York\"). Optional. The default is [syminfo.timezone]{1}.",
+           "linkCount": 2
         }
      ]
   }
