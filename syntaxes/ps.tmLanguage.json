@@ -161,7 +161,7 @@
             {
               "match": "(\\{)([^\"\\{\\}]+)(\\})",
               "captures": {
-                "0": {"name": "variable.parameter.ps"},
+                "0": {"name": "variable.parameter.placeholder.ps"},
                 "1": {"name": "constant.character.format.placeholder.other.ps"},
                 "3": {"name": "constant.character.format.placeholder.other.ps"},
                 "2": {"patterns": [{"include": "#format_placeholders"}]}
@@ -183,7 +183,7 @@
             {
               "match": "(\\{)([^'\\{\\}]+)(\\})",
               "captures": {
-                "0": {"name": "variable.parameter.ps"},
+                "0": {"name": "variable.parameter.placeholder.ps"},
                 "1": {"name": "constant.character.format.placeholder.other.ps"},
                 "3": {"name": "constant.character.format.placeholder.other.ps"},
                 "2": {"patterns": [{"include": "#format_placeholders"}]}
@@ -197,15 +197,15 @@
       "patterns": [
         {
           "match": "\\,",
-          "name": "punctuation.separator.comma.ps"
+          "name": "punctuation.separator.comma.placeholder.ps"
         },
         {
           "match": "\\b([0-9]+)\\b(?!\\.)",
-          "name": "constant.numeric.decimal.ps"
+          "name": "constant.numeric.decimal.placeholder.ps"
         },
         {
           "match": "[^\\s,]+",
-          "name": "variable.parameter.ps"
+          "name": "variable.parameter.placeholder.ps"
         }
       ]
     },
@@ -221,7 +221,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -235,7 +235,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -249,7 +249,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -263,7 +263,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -277,7 +277,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -291,7 +291,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -305,7 +305,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -319,7 +319,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -333,7 +333,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -347,7 +347,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -361,7 +361,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -375,7 +375,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -389,7 +389,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -403,7 +403,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -417,7 +417,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -431,7 +431,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -445,7 +445,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -459,7 +459,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -473,7 +473,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -487,7 +487,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -501,7 +501,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -515,7 +515,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -529,7 +529,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -543,7 +543,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -557,7 +557,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -571,7 +571,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -585,7 +585,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -599,7 +599,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -613,7 +613,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -627,7 +627,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -641,13 +641,13 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             },
             "3": {
               "name": "support.constant.ps"
             },
             "4": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -661,13 +661,13 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             },
             "3": {
               "name": "support.constant.ps"
             },
             "4": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -681,13 +681,13 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             },
             "3": {
               "name": "support.constant.ps"
             },
             "4": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -701,13 +701,13 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             },
             "3": {
               "name": "support.constant.ps"
             },
             "4": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -721,7 +721,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -735,7 +735,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -749,7 +749,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -763,7 +763,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -777,7 +777,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -791,7 +791,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -805,7 +805,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         },
@@ -818,16 +818,16 @@
           "name": "constant.language.boolean.false.ps"
         },
         {
-          "match": "\\b([0-9]+)\\b",
+          "match": "(?<![\\w\\.])(\\d+\\.?\\d*)(?![\\w\\.])",
           "name": "constant.numeric.decimal.ps"
         },
         {
           "match": "(?<!\\w)#[a-fA-F0-9]{6}\\b",
-          "name": "constant.numeric.decimal.ps"
+          "name": "constant.numeric.decimal.hex.ps"
         },
         {
           "match": "(?<!\\w)#[a-fA-F0-9]{8}\\b",
-          "name": "constant.numeric.decimal.ps"
+          "name": "constant.numeric.decimal.hex.ps"
         }
       ]
     },
@@ -847,7 +847,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -861,7 +861,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -872,10 +872,10 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             },
             "3": {
-              "name": "keyword.operator.new.ps"
+              "name": "keyword.operator.new.support.ps"
             },
             "4": {
               "name": "punctuation.definition.generic.begin.ps"
@@ -898,7 +898,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -906,13 +906,16 @@
           "match": "\\b(box|color|label|line|linefill|table|ticker|chart.point|polyline)(\\.)(new)\\b(?=\\s*\\()",
           "captures": {
             "0": {
-              "name": "keyword.operator.new.ps"
+              "name": "support.function.property.ps"
             },
             "1": {
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
+            },
+            "3": {
+              "name": "keyword.operator.new.support.ps"
             }
           }
         },
@@ -926,13 +929,13 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             },
             "3": {
               "name": "support.function.ps"
             },
             "4": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -946,7 +949,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -960,7 +963,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -974,7 +977,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -988,7 +991,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1002,7 +1005,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1016,7 +1019,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1030,7 +1033,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1041,10 +1044,10 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             },
             "3": {
-              "name": "keyword.operator.new.ps"
+              "name": "keyword.operator.new.support.ps"
             },
             "4": {
               "name": "punctuation.definition.generic.begin.ps"
@@ -1073,7 +1076,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1087,7 +1090,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1101,7 +1104,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1115,7 +1118,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1129,7 +1132,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1143,13 +1146,13 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             },
             "3": {
               "name": "support.function.ps"
             },
             "4": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1163,13 +1166,13 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             },
             "3": {
               "name": "support.function.ps"
             },
             "4": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1183,13 +1186,13 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             },
             "3": {
               "name": "support.function.ps"
             },
             "4": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1203,7 +1206,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1217,7 +1220,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1231,7 +1234,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1245,7 +1248,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1259,7 +1262,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1273,7 +1276,7 @@
               "name": "support.function.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.function.ps"
             }
           }
         },
@@ -1299,11 +1302,19 @@
     "user_defined_functions": {
         "patterns": [
         {
-          "match": "(?<=^|[^\\w])(?!array\\.new|matrix\\.new|map\\.new)([\\w\\.]*)(\\.)(new|copy)\\b(?=\\s*\\()",
+          "match": "(?<=^|[^\\w\\.])(?!array\\.new|matrix\\.new|map\\.new)([\\w]+)(\\.)(new|copy)\\b(?=\\s*\\()",
           "captures": {
-            "1": {"name": "support.type.primitive.ps"},
-            "2": {"name": "punctuation.accessor.ps"},
+            "1": {"name": "support.type.primitive.entity.ps"},
+            "2": {"name": "punctuation.accessor.entity.ps"},
             "3": {"name": "keyword.operator.new.ps"}
+          }
+        },
+        {
+          "match": "(?<=^|[^\\w])(?!array\\.new|matrix\\.new|map\\.new)([\\w\\.]+)(\\.)(new|copy)\\b(?=\\s*\\()",
+          "captures": {
+            "1": {"name": "support.type.primitive.import.ps"},
+            "2": {"name": "punctuation.accessor.import.ps"},
+            "3": {"name": "keyword.operator.new.import.ps"}
           }
         },
         {
@@ -1607,6 +1618,14 @@
             "2":{"name":"storage.type.function.arrow.ps"},
             "3":{
               "patterns": [
+                {
+                  "match": "<",
+                  "name": "punctuation.definition.generic.begin.ps"
+                },
+                {
+                  "match": ">",
+                  "name": "punctuation.definition.generic.end.ps"
+                },
                 {"include": "#operators"},
                 {
                   "match": "\\b(void|input|map|keyType|valueType|value_type)\\b",
@@ -1956,7 +1975,7 @@
               "name": "support.constant.ps"
             },
             "2": {
-              "name": "punctuation.accessor.ps"
+              "name": "punctuation.accessor.constant.ps"
             }
           }
         }

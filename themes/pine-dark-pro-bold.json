@@ -66,7 +66,7 @@
 	
 		"editorGhostText.background": "#00000000",
 		"editorGhostText.border": "#027f8300",
-		"editorGhostText.foreground": "#00b6bd85",
+		"editorGhostText.foreground": "#A3A5A796",
 	
 		"editorGroup.border": "#2a2e39",
 		"editorGroup.dropBackground": "#1e53e552",
@@ -92,7 +92,6 @@
 		"editorIndentGuide.activeBackground1": "#7C899C",
 		"editorIndentGuide.background1": "#3b4048",
 	
-		"editorInfo.foreground": "#D1D4DC",
 	
 		"editorInlayHint.background": "#272c36",
 		"editorInlayHint.foreground": "#d1d4d2",
@@ -878,6 +877,8 @@
 		{
 			"name": "keyword operator new ps",
 			"scope": [
+			"keyword.operator.new.import.ps",
+			"keyword.operator.new.support.ps",
 			"keyword.operator.new.ps"
 			],
 			"settings": {
@@ -920,6 +921,8 @@
 			"scope": [
 			"constant.numeric.ps",
 			"constant.numeric.decimal.ps",
+			"constant.numeric.decimal.hex.ps",
+			"constant.numeric.decimal.placeholder.ps",
 			"constant.language.boolean.true.ps",
 			"constant.language.boolean.false.ps",
 			"meta.numeric.ps"
@@ -942,6 +945,8 @@
 		{
 			"name": "support type ps",
 			"scope": [
+			"support.type.primitive.entity.ps",
+			"support.type.primitive.import.ps",
 			"support.type.primitive.ps",
 			"storage.type.function.ps",
 			"storage.type.type.ps",
@@ -979,7 +984,12 @@
 			"name": "punctuation ps",
 			"scope": [
 			"punctuation.separator.comma.ps",
-			"punctuation.accessor.ps"
+			"punctuation.separator.comma.placeholder.ps",
+			"punctuation.accessor.ps",
+			"punctuation.accessor.entity.ps",
+			"punctuation.accessor.import.ps",
+			"punctuation.accessor.constant.ps",
+			"punctuation.accessor.function.ps"
 			],
 			"settings": {
 			"fontStyle" : "bold",
@@ -1037,6 +1047,7 @@
 		{
 			"name": "variable parameter ps",
 			"scope": [
+			"variable.parameter.placeholder.ps",
 			"variable.parameter.ps"
 			],
 			"settings": {

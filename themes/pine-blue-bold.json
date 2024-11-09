@@ -1983,6 +1983,8 @@
       {
         "name": "keyword operator new ps",
         "scope": [
+          "keyword.operator.new.support.ps",
+          "keyword.operator.new.import.ps",
           "keyword.operator.new.ps"
         ],
         "settings": {
@@ -2025,6 +2027,8 @@
         "scope": [
           "constant.numeric.ps",
           "constant.numeric.decimal.ps",
+          "constant.numeric.decimal.hex.ps",
+          "constant.numeric.decimal.placeholder.ps",
           "constant.language.boolean.true.ps",
           "constant.language.boolean.false.ps",
           "meta.numeric.ps"
@@ -2047,6 +2051,8 @@
       {
         "name": "support type ps",
         "scope": [
+          "support.type.primitive.entity.ps",
+          "support.type.primitive.import.ps",
           "support.type.primitive.ps",
           "storage.type.function.ps",
           "storage.type.type.ps",
@@ -2076,7 +2082,12 @@
         "name": "punctuation ps",
         "scope": [
           "punctuation.separator.comma.ps",
-          "punctuation.accessor.ps"
+          "punctuation.separator.comma.placeholder.ps",
+          "punctuation.accessor.ps",
+          "punctuation.accessor.entity.ps",
+          "punctuation.accessor.import.ps",
+          "punctuation.accessor.constant.ps",
+          "punctuation.accessor.function.ps"
         ],
         "settings": {
           "fontStyle" : "bold",
@@ -2134,6 +2145,7 @@
       {
         "name": "variable parameter ps",
         "scope": [
+          "variable.parameter.placeholder.ps",
           "variable.parameter.ps"
         ],
         "settings": {

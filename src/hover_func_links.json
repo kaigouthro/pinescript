@@ -1709,6 +1709,15 @@
               "https://www.tradingview.com/pine-script-reference/v5/#const_false",
               "https://www.tradingview.com/pine-script-docs/concepts/other-timeframes-and-data/#dynamic-requests"
            ]
+        },
+        {
+           "fno": 16,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
+           ]
         }
      ]
   },
@@ -5603,6 +5612,15 @@
               "https://www.tradingview.com/pine-script-reference/v5/#kw_for",
               "https://www.tradingview.com/pine-script-reference/v5/#const_false",
               "https://www.tradingview.com/pine-script-docs/concepts/other-timeframes-and-data/#dynamic-requests"
+           ]
+        },
+        {
+           "fno": 32,
+           "linkCount": 3,
+           "dlink": [
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_false",
+              "https://www.tradingview.com/pine-script-reference/v5/#const_true"
            ]
         }
      ]

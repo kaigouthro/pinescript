@@ -1,4 +1,11 @@
 # Change Log
+#### **3.4.3**
+
+*09.11.2024 **Update***
+- Snippets for built-in variables, functions and constants updated to Pinescript release October 2024.
+- `Pine Theme Original Dark` now better match with TradingView default theme. The previous `Pine Theme Original Dark` changed to `Pine Theme Original Dark Extend`.
+
+---
 #### **3.4.2**
 
 *18.10.2024 **Update***

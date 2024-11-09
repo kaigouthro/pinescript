@@ -5,7 +5,7 @@
 	"icon": "images/pineicon.png",
 	"publisher": "salbert11",
 	"license": "MIT",
-	"version": "3.4.2",
+	"version": "3.4.3-beta-4",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
@@ -126,6 +126,11 @@
 				"label": "Pine Theme Original Dark",
 				"uiTheme": "vs-dark",
 				"path": "./themes/pine-original-dark.json"
+			},
+			{
+				"label": "Pine Theme Original Dark Extend",
+				"uiTheme": "vs-dark",
+				"path": "./themes/pine-original-dark-extend.json"
 			},
 			{
 				"label": "Pine Theme Dark Pro Bold",

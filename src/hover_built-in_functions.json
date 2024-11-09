@@ -2611,7 +2611,7 @@
      "uuid": 108,
      "pattern": "(?<![\\.]\\s*)\\b(indicator)(?=\\s*\\()",
      "codeblock": [
-        "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count, dynamic_requests) → void"
+        "indicator(title, shorttitle, overlay, format, precision, scale, max_bars_back, timeframe, timeframe_gaps, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, max_polylines_count, dynamic_requests, behind_chart) → void"
      ],
      "markdown": "This declaration statement designates the script as an indicator and sets a number of indicator-related properties.",
      "returns": "void",
@@ -2696,6 +2696,11 @@
            "field": "dynamic_requests (const bool)",
            "desc": "Specifies whether the script can dynamically call functions from the `request.*()` namespace. Dynamic `request.*()` calls are allowed within the local scopes of conditional structures (e.g., [if]{0}), loops (e.g., [for]{1}), and exported functions. Additionally, such calls allow \"series\" arguments for many of their parameters. Optional. The default is [false]{2}. See the User Manual's [Dynamic requests]{3} section for more information.",
            "linkCount": 4
+        },
+        {
+           "field": "behind_chart (const bool)",
+           "desc": "Controls whether the script's plots and drawings in the main chart pane appear behind the chart display (if [true]{0}), or in front of it (if [false]{1}). Optional. The default is [true]{1}.",
+           "linkCount": 3
         }
      ]
   },
@@ -8045,7 +8050,7 @@
      "uuid": 304,
      "pattern": "(?<![\\.]\\s*)\\b(strategy)(?=\\s*\\()",
      "codeblock": [
-        "strategy(title, shorttitle, overlay, format, precision, scale, pyramiding, calc_on_order_fills, calc_on_every_tick, max_bars_back, backtest_fill_limits_assumption, default_qty_type, default_qty_value, initial_capital, currency, slippage, commission_type, commission_value, process_orders_on_close, close_entries_rule, margin_long, margin_short, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, risk_free_rate, use_bar_magnifier, fill_orders_on_standard_ohlc, max_polylines_count, dynamic_requests) → void"
+        "strategy(title, shorttitle, overlay, format, precision, scale, pyramiding, calc_on_order_fills, calc_on_every_tick, max_bars_back, backtest_fill_limits_assumption, default_qty_type, default_qty_value, initial_capital, currency, slippage, commission_type, commission_value, process_orders_on_close, close_entries_rule, margin_long, margin_short, explicit_plot_zorder, max_lines_count, max_labels_count, max_boxes_count, calc_bars_count, risk_free_rate, use_bar_magnifier, fill_orders_on_standard_ohlc, max_polylines_count, dynamic_requests, behind_chart) → void"
      ],
      "markdown": "This declaration statement designates the script as a strategy and sets a number of strategy-related properties.",
      "returns": "void",
@@ -8210,6 +8215,11 @@
            "field": "dynamic_requests (const bool)",
            "desc": "Specifies whether the script can dynamically call functions from the `request.*()` namespace. Dynamic `request.*()` calls are allowed within the local scopes of conditional structures (e.g., [if]{0}), loops (e.g., [for]{1}), and exported functions. Additionally, such calls allow \"series\" arguments for many of their parameters. Optional. The default is [false]{2}. See the User Manual's [Dynamic requests]{3} section for more information.",
            "linkCount": 4
+        },
+        {
+           "field": "behind_chart (const bool)",
+           "desc": "Controls whether the script's plots and drawings in the main chart pane appear behind the chart display (if [true]{0}), or in front of it (if [false]{1}). Optional. The default is [true]{2}.",
+           "linkCount": 3
         }
      ]
   },
