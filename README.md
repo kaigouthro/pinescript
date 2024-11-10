@@ -40,6 +40,7 @@ PineScript Helper provides language support for PineScript, the scripting langua
 
 - ***PineScript Color Themes** : The extension provides a collection of editor themes tailored for PineScript development, offering a visually pleasing environment for writing PineScript code.
   - Pine Theme Original Dark
+  - Pine Theme Original Dark Extend
   - Pine Theme Dark Pro
   - Pine Theme Dark Pro Bold
   - Pine Theme Monokai Dark
